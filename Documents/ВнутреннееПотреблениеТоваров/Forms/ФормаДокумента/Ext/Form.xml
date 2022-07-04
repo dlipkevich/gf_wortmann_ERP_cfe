@@ -1620,9 +1620,13 @@
 							<DataPath>Объект.гф_Контрагент</DataPath>
 							<ContextMenu name="гф_КонтрагентКонтекстноеМеню" id="434"/>
 							<ExtendedTooltip name="гф_КонтрагентРасширеннаяПодсказка" id="435"/>
+							<Events>
+								<Event name="OnChange" callType="After">гф_гф_КонтрагентПриИзмененииПосле</Event>
+							</Events>
 						</InputField>
 						<InputField name="гф_АдресДоставки" id="436">
 							<DataPath>Объект.гф_АдресДоставки</DataPath>
+							<DropListButton>true</DropListButton>
 							<ContextMenu name="гф_АдресДоставкиКонтекстноеМеню" id="437"/>
 							<ExtendedTooltip name="гф_АдресДоставкиРасширеннаяПодсказка" id="438"/>
 						</InputField>
