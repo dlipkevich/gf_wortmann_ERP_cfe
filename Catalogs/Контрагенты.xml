@@ -38,10 +38,170 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>ce59e7d4-ce32-4e73-8b06-cda594aec2b3</ExtendedConfigurationObject>
 					<Type>
-						<v8:TypeId>7feac125-28d2-478b-a14f-d68749c1a574</v8:TypeId>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="a75848bf-a397-4668-9ece-df9437a72477">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_Код</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6201ad48-367c-43fa-b678-d89b3d6d8492</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a7d1c6ad-cc3e-4751-9184-1b428d7f5c28">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_ОсновнойКонтрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0da3f7d0-26f2-450d-a98b-00bca8abc4cf</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="7f661652-47a7-4deb-8edd-608f626ad286">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_Логистика</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>83c4a682-3deb-4dcc-a1f8-875312317858</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="89deab8e-e0b5-44ee-966e-a716a6956452">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_RC_GLN_номер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c2adc8ad-f88d-4ccc-8f2b-3b39547e9a29</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>13</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4bfa7eaa-74c7-4650-aa8c-03b29140f626">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_Комментарий</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e66d4ef6-d5d3-410b-a52c-8db70e8960a3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2b63f9d0-48e3-4604-8320-8695cc692692">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_Зарегистрирован</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9ac65a3c-f214-4d94-a881-1b209697b5e1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="c33fca3e-844d-401f-8d75-49b6b76fed3e">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_АдресаДоставки" category="TabularSection">
+						<xr:TypeId>ccc80606-4334-4bd6-9e10-daec8e061ac1</xr:TypeId>
+						<xr:ValueId>cdeee4b8-0cfa-4f9e-a870-31301f8765e8</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.гф_АдресаДоставки" category="TabularSectionRow">
+						<xr:TypeId>55277614-8bdc-45ae-aa25-f6742a620b89</xr:TypeId>
+						<xr:ValueId>1a438e25-e70c-4b97-bb4b-c3637eb54b94</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_АдресаДоставки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6db3e316-af1f-4f16-bed8-3b391350c1b7</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="cf4f1ac7-94ba-43db-a6c5-669a69c80281">
+						<InternalInfo/>
+						<Properties>
+							<Name>Адрес</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>78d0cac5-be81-4bb2-86fd-003c05d9583c</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.гф_АдресаДоставки</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="961e9949-7357-45e0-adc1-21615d9ff772">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_ОтветственныйМенеджер" category="TabularSection">
+						<xr:TypeId>b0b5ff90-6448-4fa8-be6c-b37898695070</xr:TypeId>
+						<xr:ValueId>7f02a2b4-de83-4aa3-a6aa-19bf6b9977a9</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.гф_ОтветственныйМенеджер" category="TabularSectionRow">
+						<xr:TypeId>b9e9cc75-05fd-4003-9130-c87e42f6e137</xr:TypeId>
+						<xr:ValueId>098b9543-8f8d-4a30-bcb9-4369415b341f</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ОтветственныйМенеджер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>055fe92e-5489-46ba-81f6-d9f02e3a7dd6</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="d1e914b4-5cb9-438d-9d04-1fffcdbacb14">
+						<InternalInfo/>
+						<Properties>
+							<Name>Организация</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>55d7bedd-77b8-4642-ba8e-3162654f3f31</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="e95dc6a7-df88-442d-a6d2-e3c517a282f4">
+						<InternalInfo/>
+						<Properties>
+							<Name>Пользователь</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>67fcdd8b-4672-4d90-adb8-f0962751b180</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
