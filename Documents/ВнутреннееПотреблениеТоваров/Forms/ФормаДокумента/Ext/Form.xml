@@ -809,9 +809,6 @@
 											</ChoiceList>
 											<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="135"/>
 											<ExtendedTooltip name="ХозяйственнаяОперацияExtendedTooltip" id="186"/>
-											<Events>
-												<Event name="OnChange" callType="After">гф_ХозяйственнаяОперацияПриИзмененииПосле</Event>
-											</Events>
 										</InputField>
 										<InputField name="Склад" id="5">
 											<DataPath>Объект.Склад</DataPath>
@@ -1620,9 +1617,6 @@
 							<DataPath>Объект.гф_Контрагент</DataPath>
 							<ContextMenu name="гф_КонтрагентКонтекстноеМеню" id="434"/>
 							<ExtendedTooltip name="гф_КонтрагентРасширеннаяПодсказка" id="435"/>
-							<Events>
-								<Event name="OnChange" callType="After">гф_гф_КонтрагентПриИзмененииПосле</Event>
-							</Events>
 						</InputField>
 						<InputField name="гф_АдресДоставки" id="436">
 							<DataPath>Объект.гф_АдресДоставки</DataPath>
