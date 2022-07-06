@@ -244,6 +244,11 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="Код" id="549">
+					<DataPath>Объект.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="550"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="551"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаСтраницы" id="52">
@@ -1326,83 +1331,16 @@
 											<ContextMenu name="гф_ОрганизацияКонтекстноеМеню" id="502"/>
 											<ExtendedTooltip name="гф_ОрганизацияРасширеннаяПодсказка" id="503"/>
 										</InputField>
-										<InputField name="гф_DepartmentID" id="504">
-											<DataPath>Объект.гф_DepartmentID</DataPath>
-											<ContextMenu name="гф_DepartmentIDКонтекстноеМеню" id="505"/>
-											<ExtendedTooltip name="гф_DepartmentIDРасширеннаяПодсказка" id="506"/>
-										</InputField>
-										<InputField name="гф_DepartmentName" id="507">
-											<DataPath>Объект.гф_DepartmentName</DataPath>
-											<ContextMenu name="гф_DepartmentNameКонтекстноеМеню" id="508"/>
-											<ExtendedTooltip name="гф_DepartmentNameРасширеннаяПодсказка" id="509"/>
-										</InputField>
-										<InputField name="гф_ДобавитьКЦене" id="510">
-											<DataPath>Объект.гф_ДобавитьКЦене</DataPath>
-											<ContextMenu name="гф_ДобавитьКЦенеКонтекстноеМеню" id="511"/>
-											<ExtendedTooltip name="гф_ДобавитьКЦенеРасширеннаяПодсказка" id="512"/>
-										</InputField>
-										<InputField name="гф_КодВладельца" id="513">
-											<DataPath>Объект.гф_КодВладельца</DataPath>
-											<ContextMenu name="гф_КодВладельцаКонтекстноеМеню" id="514"/>
-											<ExtendedTooltip name="гф_КодВладельцаРасширеннаяПодсказка" id="515"/>
-										</InputField>
-										<InputField name="гф_КодКлиентаТК" id="516">
-											<DataPath>Объект.гф_КодКлиентаТК</DataPath>
-											<ContextMenu name="гф_КодКлиентаТККонтекстноеМеню" id="517"/>
-											<ExtendedTooltip name="гф_КодКлиентаТКРасширеннаяПодсказка" id="518"/>
-										</InputField>
 										<InputField name="гф_Контрагент" id="519">
 											<DataPath>Объект.гф_Контрагент</DataPath>
 											<ContextMenu name="гф_КонтрагентКонтекстноеМеню" id="520"/>
 											<ExtendedTooltip name="гф_КонтрагентРасширеннаяПодсказка" id="521"/>
 										</InputField>
-										<CheckBoxField name="гф_СкладМаркетплейс" id="522">
-											<DataPath>Объект.гф_СкладМаркетплейс</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_СкладМаркетплейсКонтекстноеМеню" id="523"/>
-											<ExtendedTooltip name="гф_СкладМаркетплейсРасширеннаяПодсказка" id="524"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_ВыгружатьОрдера" id="525">
-											<DataPath>Объект.гф_ВыгружатьОрдера</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_ВыгружатьОрдераКонтекстноеМеню" id="526"/>
-											<ExtendedTooltip name="гф_ВыгружатьОрдераРасширеннаяПодсказка" id="527"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_ИспользоватьСерийныйНомерВместоКМ" id="528">
-											<DataPath>Объект.гф_ИспользоватьСерийныйНомерВместоКМ</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_ИспользоватьСерийныйНомерВместоКМКонтекстноеМеню" id="529"/>
-											<ExtendedTooltip name="гф_ИспользоватьСерийныйНомерВместоКМРасширеннаяПодсказка" id="530"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_КодОрганизацииВместоАртикула" id="531">
-											<DataPath>Объект.гф_КодОрганизацииВместоАртикула</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_КодОрганизацииВместоАртикулаКонтекстноеМеню" id="532"/>
-											<ExtendedTooltip name="гф_КодОрганизацииВместоАртикулаРасширеннаяПодсказка" id="533"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_ТоварыВКоробках" id="534">
-											<DataPath>Объект.гф_ТоварыВКоробках</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_ТоварыВКоробкахКонтекстноеМеню" id="535"/>
-											<ExtendedTooltip name="гф_ТоварыВКоробкахРасширеннаяПодсказка" id="536"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_ИспользоватьАдресДоставкиВместоАртикула" id="537">
-											<DataPath>Объект.гф_ИспользоватьАдресДоставкиВместоАртикула</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_ИспользоватьАдресДоставкиВместоАртикулаКонтекстноеМеню" id="538"/>
-											<ExtendedTooltip name="гф_ИспользоватьАдресДоставкиВместоАртикулаРасширеннаяПодсказка" id="539"/>
-										</CheckBoxField>
 										<CheckBoxField name="гф_БезРезерва" id="540">
 											<DataPath>Объект.гф_БезРезерва</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="гф_БезРезерваКонтекстноеМеню" id="541"/>
 											<ExtendedTooltip name="гф_БезРезерваРасширеннаяПодсказка" id="542"/>
-										</CheckBoxField>
-										<CheckBoxField name="гф_ТоварыВПути" id="543">
-											<DataPath>Объект.гф_ТоварыВПути</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_ТоварыВПутиКонтекстноеМеню" id="544"/>
-											<ExtendedTooltip name="гф_ТоварыВПутиРасширеннаяПодсказка" id="545"/>
 										</CheckBoxField>
 									</ChildItems>
 								</UsualGroup>
