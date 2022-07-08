@@ -27,14 +27,14 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="ГруппаДоступаКонтрагента" id="23">
+		<LabelField name="ГруппаДоступаКонтрагента" id="23">
 			<DataPath>ГруппаДоступаПартнера</DataPath>
 			<ContextMenu name="ГруппаДоступаКонтрагентаКонтекстноеМеню" id="24"/>
 			<ExtendedTooltip name="ГруппаДоступаКонтрагентаРасширеннаяПодсказка" id="25"/>
 			<Events>
 				<Event name="OnChange">ГруппаДоступаКонтрагентаПриИзменении</Event>
 			</Events>
-		</InputField>
+		</LabelField>
 		<Table name="ТаблицаОрганизацийГрупп" id="4">
 			<Representation>List</Representation>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -116,19 +116,6 @@
 		</Table>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Объект" id="1">
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<MainAttribute>true</MainAttribute>
-			<Save>
-				<Field>1/0:69365d8c-f007-4d7a-baf3-bb5a7dc909be</Field>
-			</Save>
-		</Attribute>
 		<Attribute name="ГруппаДоступаПартнера" id="2">
 			<Title>
 				<v8:item>
@@ -137,11 +124,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>cfg:CatalogRef.ГруппыДоступаПартнеров</v8:Type>
 			</Type>
 			<Save>
 				<Field>ГруппаДоступаПартнера</Field>
@@ -166,11 +149,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Группа" id="2">
@@ -181,11 +160,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -209,11 +184,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Группа" id="2">
@@ -224,11 +195,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
