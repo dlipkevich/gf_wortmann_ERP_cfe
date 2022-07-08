@@ -1620,6 +1620,13 @@
 						</InputField>
 						<InputField name="гф_АдресДоставки" id="436">
 							<DataPath>Объект.гф_АдресДоставки</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>гф_Контрагент</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.гф_Контрагент</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ContextMenu name="гф_АдресДоставкиКонтекстноеМеню" id="437"/>
 							<ExtendedTooltip name="гф_АдресДоставкиРасширеннаяПодсказка" id="438"/>
 						</InputField>
