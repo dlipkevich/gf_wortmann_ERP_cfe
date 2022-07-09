@@ -198,6 +198,9 @@
 			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="79">
 			<Group>Horizontal</Group>
@@ -1308,42 +1311,6 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
-								<UsualGroup name="гф_ГруппаДополнительно" id="499">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа дополнительно</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Гф группа дополнительно</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="гф_ГруппаДополнительноРасширеннаяПодсказка" id="500"/>
-									<ChildItems>
-										<InputField name="гф_Организация" id="501">
-											<DataPath>Объект.гф_Организация</DataPath>
-											<ContextMenu name="гф_ОрганизацияКонтекстноеМеню" id="502"/>
-											<ExtendedTooltip name="гф_ОрганизацияРасширеннаяПодсказка" id="503"/>
-										</InputField>
-										<InputField name="гф_Контрагент" id="519">
-											<DataPath>Объект.гф_Контрагент</DataPath>
-											<ContextMenu name="гф_КонтрагентКонтекстноеМеню" id="520"/>
-											<ExtendedTooltip name="гф_КонтрагентРасширеннаяПодсказка" id="521"/>
-										</InputField>
-										<CheckBoxField name="гф_БезРезерва" id="540">
-											<DataPath>Объект.гф_БезРезерва</DataPath>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="гф_БезРезерваКонтекстноеМеню" id="541"/>
-											<ExtendedTooltip name="гф_БезРезерваРасширеннаяПодсказка" id="542"/>
-										</CheckBoxField>
-									</ChildItems>
-								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -2173,11 +2140,6 @@ All inventory counts must be documented before utilizing the warerooms.</v8:cont
 				</Page>
 			</ChildItems>
 		</Pages>
-		<InputField name="гф_Комментарий" id="546">
-			<DataPath>Объект.гф_Комментарий</DataPath>
-			<ContextMenu name="гф_КомментарийКонтекстноеМеню" id="547"/>
-			<ExtendedTooltip name="гф_КомментарийРасширеннаяПодсказка" id="548"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1000001">

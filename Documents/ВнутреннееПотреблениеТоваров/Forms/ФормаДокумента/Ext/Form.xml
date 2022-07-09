@@ -809,6 +809,9 @@
 											</ChoiceList>
 											<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="135"/>
 											<ExtendedTooltip name="ХозяйственнаяОперацияExtendedTooltip" id="186"/>
+											<Events>
+												<Event name="OnChange" callType="After">гф_ХозяйственнаяОперацияПриИзмененииПосле</Event>
+											</Events>
 										</InputField>
 										<InputField name="Склад" id="5">
 											<DataPath>Объект.Склад</DataPath>
@@ -1612,23 +1615,6 @@
 							<MaxWidth>28</MaxWidth>
 							<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="358"/>
 							<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="359"/>
-						</InputField>
-						<InputField name="гф_Контрагент" id="433">
-							<DataPath>Объект.гф_Контрагент</DataPath>
-							<ContextMenu name="гф_КонтрагентКонтекстноеМеню" id="434"/>
-							<ExtendedTooltip name="гф_КонтрагентРасширеннаяПодсказка" id="435"/>
-						</InputField>
-						<InputField name="гф_АдресДоставки" id="436">
-							<DataPath>Объект.гф_АдресДоставки</DataPath>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>гф_Контрагент</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Объект.гф_Контрагент</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="гф_АдресДоставкиКонтекстноеМеню" id="437"/>
-							<ExtendedTooltip name="гф_АдресДоставкиРасширеннаяПодсказка" id="438"/>
 						</InputField>
 						<UsualGroup name="ГруппаДополнительныеРеквизиты" id="380">
 							<Title>
