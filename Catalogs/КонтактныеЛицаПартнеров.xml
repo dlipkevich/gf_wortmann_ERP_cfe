@@ -32,6 +32,40 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Партнеры</xr:Item>
 			</Owners>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<TabularSection uuid="032218df-6c7a-4b30-84c2-e19b742cbd06">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.КонтактныеЛицаПартнеров.гф_ГруппыДоступа" category="TabularSection">
+						<xr:TypeId>af5fd6cb-4bab-4c28-b6ac-9b33d127113e</xr:TypeId>
+						<xr:ValueId>8f78f77d-93d9-478c-ba27-55812df8f844</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.КонтактныеЛицаПартнеров.гф_ГруппыДоступа" category="TabularSectionRow">
+						<xr:TypeId>46a04898-34a9-483c-a65f-a50068b51a91</xr:TypeId>
+						<xr:ValueId>e0498be2-c72c-439b-94d6-addc5cbc7cf4</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ГруппыДоступа</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ed31d02d-0ed6-47bd-9f17-bd91beff58a7</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="13d4ada0-9f53-4c96-9de5-d2d99f33b802">
+						<InternalInfo/>
+						<Properties>
+							<Name>ГруппаДоступа</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a446ad25-ba59-45e2-9491-3a8e5aa5655f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ФормаЭлемента</Form>
+		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
