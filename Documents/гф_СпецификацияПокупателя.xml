@@ -28,8 +28,109 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>1c926166-08ad-4ceb-b51e-a6c482dce9a5</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_СпецификацияПокупателя.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_СпецификацияПокупателя.Form.гф_ФормаСписка</DefaultListForm>
 			<RegisterRecords/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Attribute uuid="2b8b162b-e883-4b00-9fed-b0bfe37e4e78">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>be705c47-c8df-4135-adf1-b6337ff5dcbd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a73bb985-20db-4895-b93e-41670442ecbf">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3a088cdb-e67e-4436-8c4c-aa64283c0851</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="23466b9b-ea2e-4c1e-92ed-d43669b2e9c0">
+				<InternalInfo/>
+				<Properties>
+					<Name>Договор</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9f7db589-37fa-4cec-b0f1-656ad714c3a0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="97b0e1f2-d85a-465e-a29d-d5a874e8ea68">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>09fcd35a-c6aa-434b-86e3-a2efc08cf6dc</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d5aea61d-eb0a-4eae-b5f6-0f72151dbf03">
+				<InternalInfo/>
+				<Properties>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4dbdcc19-9a73-4837-b83b-250b7e41a4c8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаДокумента</Form>
+			<Form>гф_ФормаСписка</Form>
+			<TabularSection uuid="27241938-136d-4e97-9b95-e7cd590a4792">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.гф_СпецификацияПокупателя.ЗаказыКлиентов" category="TabularSection">
+						<xr:TypeId>a7d6bedf-bb9d-4c56-b2e7-f525c40363e7</xr:TypeId>
+						<xr:ValueId>6d0fe278-dba4-4393-b567-a4e7b4dc646d</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.гф_СпецификацияПокупателя.ЗаказыКлиентов" category="TabularSectionRow">
+						<xr:TypeId>eaa1777c-f789-45aa-ab87-30ba8752c959</xr:TypeId>
+						<xr:ValueId>802e0fb1-9c96-4f1f-8eed-5926d9169687</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ЗаказыКлиентов</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>03967034-078c-4d7d-bdcd-f15adc049165</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="b9c2a95d-2df4-4d38-aed1-68a25182c988">
+						<InternalInfo/>
+						<Properties>
+							<Name>ЗаказКлиента</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>c3d13b89-cc2d-4ccd-bf76-b02e220f081f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
 	</Document>
 </MetaDataObject>
