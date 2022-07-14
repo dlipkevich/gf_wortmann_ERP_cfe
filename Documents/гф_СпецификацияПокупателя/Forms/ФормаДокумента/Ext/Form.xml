@@ -3,7 +3,154 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="ФормаГлобальныеКоманды" id="69">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма глобальные команды</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Global commands form</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаГлобальныеКомандыРасширеннаяПодсказка" id="70"/>
+			</ButtonGroup>
+			<Popup name="ПодменюПечать" id="59">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Print</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды печати</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Print commands</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="60"/>
+			</Popup>
+			<Popup name="ПодменюОтчеты" id="61">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отчеты</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Reports</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="62"/>
+				<ChildItems>
+					<ButtonGroup name="ПодменюОтчетыВажное" id="63">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Important reports submenu</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПодменюОтчетыВажноеРасширеннаяПодсказка" id="64"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюОтчетыОбычное" id="65">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты обычное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Standard reports submenu</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Important reports submenu</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПодменюОтчетыОбычноеРасширеннаяПодсказка" id="66"/>
+					</ButtonGroup>
+					<ButtonGroup name="ПодменюОтчетыСмТакже" id="67">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты см также</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>See also reports submenu</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю отчеты важное</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Important reports submenu</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПодменюОтчетыСмТакжеРасширеннаяПодсказка" id="68"/>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<Popup name="ПодменюЭДО" id="71">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЭДО</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>EDI</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды электронного документооборота</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Data interchange commands</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ПодменюЭДОРасширеннаяПодсказка" id="72"/>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
@@ -12,23 +159,23 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГпуппаДатаНомер" id="7">
+		<UsualGroup name="ГруппаДатаНомер" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Гпуппа дата номер</v8:content>
+					<v8:content>Группа дата номер</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Гпуппа дата номер</v8:content>
+					<v8:content>Группа дата номер</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГпуппаДатаНомерРасширеннаяПодсказка" id="8"/>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
 				<InputField name="Номер" id="1">
 					<DataPath>Объект.Number</DataPath>
