@@ -219,6 +219,9 @@
 					<DataPath>Объект.Контрагент</DataPath>
 					<ContextMenu name="КонтрагентКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">КонтрагентПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="Договор" id="40">
 					<DataPath>Объект.Договор</DataPath>
@@ -320,10 +323,12 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInFooter>false</ShowInFooter>
+									<CreateButton>false</CreateButton>
 									<ContextMenu name="ЗаказыКлиентовЗаказКлиентаКонтекстноеМеню" id="32"/>
 									<ExtendedTooltip name="ЗаказыКлиентовЗаказКлиентаРасширеннаяПодсказка" id="33"/>
 									<Events>
 										<Event name="OnChange">ЗаказыКлиентовЗаказКлиентаПриИзменении</Event>
+										<Event name="StartChoice">ЗаказыКлиентовЗаказКлиентаНачалоВыбора</Event>
 									</Events>
 								</InputField>
 								<LabelField name="ЗаказыКлиентовСумма" id="45">
@@ -476,6 +481,17 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Партнер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Сезон" id="4">
+			<DataPath>Объект.Сезон</DataPath>
+			<ContextMenu name="СезонКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Склад" id="7">
+			<DataPath>Объект.Склад</DataPath>
+			<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВидНоменлклатуры" id="10">
+			<DataPath>Объект.ВидНоменлклатуры</DataPath>
+			<ContextMenu name="ВидНоменлклатурыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидНоменлклатурыРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="Спецификации" id="13">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Спецификации</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СпецификацииКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="СпецификацииКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="СпецификацииРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="СпецификацииСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>Спецификации</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СпецификацииСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СпецификацииСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СпецификацииСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Спецификации</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СпецификацииСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="СпецификацииСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СпецификацииУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>Спецификации</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СпецификацииУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="СпецификацииУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СпецификацииНомерСтроки" id="26">
+					<DataPath>Объект.Спецификации.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СпецификацииНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СпецификацииНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<CheckBoxField name="СпецификацииФлаг" id="29">
+					<DataPath>Объект.Спецификации.Флаг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СпецификацииФлагКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СпецификацииФлагРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="СпецификацииКонтрагент" id="32">
+					<DataPath>Объект.Спецификации.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СпецификацииКонтрагентКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="СпецификацииКонтрагентРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="СпецификацииДоговорКонтрагента" id="35">
+					<DataPath>Объект.Спецификации.ДоговорКонтрагента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СпецификацииДоговорКонтрагентаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СпецификацииДоговорКонтрагентаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="СпецификацииСпецификацияПокупателя" id="38">
+					<DataPath>Объект.Спецификации.СпецификацияПокупателя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СпецификацииСпецификацияПокупателяКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СпецификацииСпецификацияПокупателяРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ФормированиеСпецификацийПокупателя</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>
