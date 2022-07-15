@@ -29,7 +29,20 @@
 			<DataPath>Объект.Спецификации</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СпецификацииКонтекстноеМеню" id="14"/>
-			<AutoCommandBar name="СпецификацииКоманднаяПанель" id="15"/>
+			<AutoCommandBar name="СпецификацииКоманднаяПанель" id="15">
+				<ChildItems>
+					<Button name="КнопкаОтметитьВсе" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОтметитьВсе</CommandName>
+						<ExtendedTooltip name="КнопкаОтметитьВсеРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="СпецификацииКомандаСнятьВсеОтметки" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаСнятьВсеОтметки</CommandName>
+						<ExtendedTooltip name="СпецификацииКомандаСнятьВсеОтметкиРасширеннаяПодсказка" id="44"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="СпецификацииРасширеннаяПодсказка" id="16"/>
 			<SearchStringAddition name="СпецификацииСтрокаПоиска" id="17">
 				<AdditionSource>
@@ -56,19 +69,20 @@
 				<ExtendedTooltip name="СпецификацииУправлениеПоискомРасширеннаяПодсказка" id="25"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<CheckBoxField name="СпецификацииФлаг" id="29">
+					<DataPath>Объект.Спецификации.Флаг</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СпецификацииФлагКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СпецификацииФлагРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
 				<LabelField name="СпецификацииНомерСтроки" id="26">
 					<DataPath>Объект.Спецификации.LineNumber</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СпецификацииНомерСтрокиКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="СпецификацииНомерСтрокиРасширеннаяПодсказка" id="28"/>
 				</LabelField>
-				<CheckBoxField name="СпецификацииФлаг" id="29">
-					<DataPath>Объект.Спецификации.Флаг</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СпецификацииФлагКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="СпецификацииФлагРасширеннаяПодсказка" id="31"/>
-				</CheckBoxField>
 				<InputField name="СпецификацииКонтрагент" id="32">
 					<DataPath>Объект.Спецификации.Контрагент</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -98,4 +112,44 @@
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="КомандаОтметитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОтметитьВсе</Action>
+		</Command>
+		<Command name="КомандаСнятьВсеОтметки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда снять все отметки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда снять все отметки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСнятьВсеОтметки</Action>
+		</Command>
+	</Commands>
 </Form>
