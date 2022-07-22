@@ -276,6 +276,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<LabelField name="СтрокаИсправление" id="1869">
 			<TitleLocation>None</TitleLocation>
