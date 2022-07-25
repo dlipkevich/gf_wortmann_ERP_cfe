@@ -196,25 +196,46 @@
 					<ContextMenu name="СпецификацииДоговорКонтрагентаКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="СпецификацииДоговорКонтрагентаРасширеннаяПодсказка" id="37"/>
 				</InputField>
-				<InputField name="СпецификацииСпецификацияПокупателя" id="38">
-					<DataPath>Объект.Спецификации.СпецификацияПокупателя</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<DropListButton>false</DropListButton>
-					<ChoiceButton>false</ChoiceButton>
-					<CreateButton>false</CreateButton>
-					<TextEdit>false</TextEdit>
-					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
-					<ContextMenu name="СпецификацииСпецификацияПокупателяКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="СпецификацииСпецификацияПокупателяРасширеннаяПодсказка" id="40"/>
-				</InputField>
-				<CheckBoxField name="СпецификацииПроведен" id="49">
-					<DataPath>Объект.Спецификации.Проведен</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СпецификацииПроведенКонтекстноеМеню" id="50"/>
-					<ExtendedTooltip name="СпецификацииПроведенРасширеннаяПодсказка" id="51"/>
-				</CheckBoxField>
+				<ColumnGroup name="СпецификацииГруппаДокумент" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спецификации группа документ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ спецификация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="СпецификацииГруппаДокументРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<PictureField name="СпецификацииПолеКартинуи" id="66">
+							<DataPath>Объект.Спецификации.ИндексКартинки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="СпецификацииПолеКартинуиКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="СпецификацииПолеКартинуиРасширеннаяПодсказка" id="68"/>
+						</PictureField>
+						<InputField name="СпецификацииСпецификацияПокупателя" id="38">
+							<DataPath>Объект.Спецификации.СпецификацияПокупателя</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<CreateButton>false</CreateButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="СпецификацииСпецификацияПокупателяКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="СпецификацииСпецификацияПокупателяРасширеннаяПодсказка" id="40"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
