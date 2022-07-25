@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<ChildItems>
 		<InputField name="Организация" id="1">
 			<DataPath>Объект.Организация</DataPath>
@@ -17,12 +20,13 @@
 			<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
 		</InputField>
-		<InputField name="ВидНоменлклатуры" id="10">
-			<DataPath>Объект.ВидНоменлклатуры</DataPath>
-			<ContextMenu name="ВидНоменлклатурыКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ВидНоменлклатурыРасширеннаяПодсказка" id="12"/>
+		<InputField name="ВидНоменклатуры" id="10">
+			<DataPath>Объект.ВидНоменклатуры</DataPath>
+			<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="12"/>
 		</InputField>
 		<Table name="Спецификации" id="13">
+			<ChangeRowSet>false</ChangeRowSet>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -30,17 +34,102 @@
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СпецификацииКонтекстноеМеню" id="14"/>
 			<AutoCommandBar name="СпецификацииКоманднаяПанель" id="15">
+				<Autofill>false</Autofill>
 				<ChildItems>
-					<Button name="КнопкаОтметитьВсе" id="41">
+					<ButtonGroup name="СпецификацииГруппаОтметки" id="45">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа отметки</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа отметки</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СпецификацииГруппаОтметкиРасширеннаяПодсказка" id="46"/>
+						<ChildItems>
+							<Button name="КнопкаОтметитьВсе" id="41">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаОтметитьВсе</CommandName>
+								<ExtendedTooltip name="КнопкаОтметитьВсеРасширеннаяПодсказка" id="42"/>
+							</Button>
+							<Button name="СпецификацииКомандаСнятьВсеОтметки" id="43">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаСнятьВсеОтметки</CommandName>
+								<ExtendedTooltip name="СпецификацииКомандаСнятьВсеОтметкиРасширеннаяПодсказка" id="44"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СпецификацииКомандаЗаполнить" id="47">
 						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаОтметитьВсе</CommandName>
-						<ExtendedTooltip name="КнопкаОтметитьВсеРасширеннаяПодсказка" id="42"/>
+						<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+						<ExtendedTooltip name="СпецификацииКомандаЗаполнитьРасширеннаяПодсказка" id="48"/>
 					</Button>
-					<Button name="СпецификацииКомандаСнятьВсеОтметки" id="43">
+					<Button name="СпецификацииКомандаСоздатьСпецификации" id="52">
 						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаСнятьВсеОтметки</CommandName>
-						<ExtendedTooltip name="СпецификацииКомандаСнятьВсеОтметкиРасширеннаяПодсказка" id="44"/>
+						<CommandName>Form.Command.КомандаСоздатьСпецификации</CommandName>
+						<ExtendedTooltip name="СпецификацииКомандаСоздатьСпецификацииРасширеннаяПодсказка" id="53"/>
 					</Button>
+					<ButtonGroup name="СпецификацииГруппаПроведение" id="62">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа проведение</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа проведение</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СпецификацииГруппаПроведениеРасширеннаяПодсказка" id="63"/>
+						<ChildItems>
+							<Button name="СпецификацииКомандаПровести" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаПровести</CommandName>
+								<ExtendedTooltip name="СпецификацииКомандаПровестиРасширеннаяПодсказка" id="55"/>
+							</Button>
+							<Button name="СпецификацииКомандаОтменитьПроведение" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаОтменитьПроведение</CommandName>
+								<ExtendedTooltip name="СпецификацииКомандаОтменитьПроведениеРасширеннаяПодсказка" id="57"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="СпецификацииГруппаПометкаНаУдаление" id="64">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа пометка на удаление</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Спецификации группа пометка на удаление</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="СпецификацииГруппаПометкаНаУдалениеРасширеннаяПодсказка" id="65"/>
+						<ChildItems>
+							<Button name="СпецификацииКомандаПометитьНаУдаление" id="58">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаПометитьНаУдаление</CommandName>
+								<ExtendedTooltip name="СпецификацииКомандаПометитьНаУдалениеРасширеннаяПодсказка" id="59"/>
+							</Button>
+							<Button name="СпецификацииКомандаСнятьПометкиНаУдаление" id="60">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаСнятьПометкиНаУдаление</CommandName>
+								<ExtendedTooltip name="СпецификацииКомандаСнятьПометкиНаУдалениеРасширеннаяПодсказка" id="61"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СпецификацииРасширеннаяПодсказка" id="16"/>
@@ -79,6 +168,8 @@
 				</CheckBoxField>
 				<LabelField name="СпецификацииНомерСтроки" id="26">
 					<DataPath>Объект.Спецификации.LineNumber</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СпецификацииНомерСтрокиКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="СпецификацииНомерСтрокиРасширеннаяПодсказка" id="28"/>
@@ -86,21 +177,44 @@
 				<InputField name="СпецификацииКонтрагент" id="32">
 					<DataPath>Объект.Спецификации.Контрагент</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="СпецификацииКонтрагентКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="СпецификацииКонтрагентРасширеннаяПодсказка" id="34"/>
 				</InputField>
 				<InputField name="СпецификацииДоговорКонтрагента" id="35">
 					<DataPath>Объект.Спецификации.ДоговорКонтрагента</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="СпецификацииДоговорКонтрагентаКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="СпецификацииДоговорКонтрагентаРасширеннаяПодсказка" id="37"/>
 				</InputField>
 				<InputField name="СпецификацииСпецификацияПокупателя" id="38">
 					<DataPath>Объект.Спецификации.СпецификацияПокупателя</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 					<ContextMenu name="СпецификацииСпецификацияПокупателяКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="СпецификацииСпецификацияПокупателяРасширеннаяПодсказка" id="40"/>
 				</InputField>
+				<CheckBoxField name="СпецификацииПроведен" id="49">
+					<DataPath>Объект.Спецификации.Проведен</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СпецификацииПроведенКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СпецификацииПроведенРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -110,6 +224,12 @@
 				<v8:Type>cfg:DataProcessorObject.гф_ФормированиеСпецификацийПокупателя</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.ВидНоменклатуры</Field>
+				<Field>Объект.Организация</Field>
+				<Field>Объект.Сезон</Field>
+				<Field>Объект.Склад</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -150,6 +270,116 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаСнятьВсеОтметки</Action>
+		</Command>
+		<Command name="КомандаЗаполнить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаСоздатьСпецификации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать спецификации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда создать спецификации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСоздатьСпецификации</Action>
+		</Command>
+		<Command name="КомандаПровести" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда провести</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПровести</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаОтменитьПроведение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить проведение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отменить проведение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОтменитьПроведение</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаПометитьНаУдаление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда пометить на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПометитьНаУдаление</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаСнятьПометкиНаУдаление" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда снять пометки на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСнятьПометкиНаУдаление</Action>
 		</Command>
 	</Commands>
 </Form>

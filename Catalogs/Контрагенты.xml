@@ -347,6 +347,54 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<TabularSection uuid="ce604b38-6ec7-4d4b-b81a-e5a0a6a94e54">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.КонтактнаяИнформация" category="TabularSection">
+						<xr:TypeId>6783f047-3b34-437f-a529-cac816fef197</xr:TypeId>
+						<xr:ValueId>f7fd4a15-4ac5-4210-8fce-42ccd636d3d3</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.КонтактнаяИнформация" category="TabularSectionRow">
+						<xr:TypeId>690162be-3c89-46d9-8183-6e1f606793dd</xr:TypeId>
+						<xr:ValueId>e12382d7-ddf2-4768-b1d6-63ffe201ee67</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>КонтактнаяИнформация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2629d638-1c9b-4112-b68e-0560bb2d997b</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="3f7cfbcc-3dbd-4f9d-a491-84301e08f3cd">
+						<InternalInfo/>
+						<Properties>
+							<Name>Представление</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>21ef8fb5-99ad-409e-9d21-398379db456f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>500</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d12c37c1-7ca6-4721-8d5e-c7e87fa922c2">
+						<InternalInfo/>
+						<Properties>
+							<Name>Вид</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a9a6552a-9493-4353-953b-2f7c777b2f61</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>гф_ФормаСпискаАдресаДоставки</Form>
 		</ChildObjects>

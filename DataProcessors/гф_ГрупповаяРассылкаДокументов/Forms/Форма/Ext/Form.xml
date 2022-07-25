@@ -109,7 +109,7 @@
 												<v8:content>Документ PDF (.pdf)</v8:content>
 											</v8:item>
 										</Presentation>
-										<Value xsi:type="xr:DesignTimeRef">c44e972f-3458-4917-a955-4922c66a1270.9ef3b72c-caa3-486b-9917-04c00f6689c1</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.PDF</Value>
 									</xr:Value>
 								</xr:Item>
 								<xr:Item>
@@ -122,7 +122,7 @@
 												<v8:content>Лист Microsoft Excel 2007 (.xlsx)</v8:content>
 											</v8:item>
 										</Presentation>
-										<Value xsi:type="xr:DesignTimeRef">c44e972f-3458-4917-a955-4922c66a1270.eeb0571b-1b74-4889-b8b5-f94186d692d7</Value>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.XLSX</Value>
 									</xr:Value>
 								</xr:Item>
 							</ChoiceList>
@@ -507,11 +507,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоИсходящее</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
