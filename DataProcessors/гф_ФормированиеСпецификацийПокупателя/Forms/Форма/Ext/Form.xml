@@ -5,26 +5,88 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<ChildItems>
-		<InputField name="Организация" id="1">
-			<DataPath>Объект.Организация</DataPath>
-			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="Сезон" id="4">
-			<DataPath>Объект.Сезон</DataPath>
-			<ContextMenu name="СезонКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="Склад" id="7">
-			<DataPath>Объект.Склад</DataPath>
-			<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
-		</InputField>
-		<InputField name="ВидНоменклатуры" id="10">
-			<DataPath>Объект.ВидНоменклатуры</DataPath>
-			<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="12"/>
-		</InputField>
+		<UsualGroup name="ГруппаШапка" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="73">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Склад" id="7">
+							<DataPath>Объект.Склад</DataPath>
+							<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<InputField name="Сезон" id="4">
+							<DataPath>Объект.Сезон</DataPath>
+							<ContextMenu name="СезонКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ВидНоменклатуры" id="10">
+							<DataPath>Объект.ВидНоменклатуры</DataPath>
+							<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Спецификации" id="13">
 			<ChangeRowSet>false</ChangeRowSet>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -217,6 +279,10 @@
 							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<Width>1</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КартинкаСтрокиСпискаДокументов</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
 							<Border width="1">
 								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 							</Border>

@@ -153,6 +153,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
@@ -275,7 +276,15 @@
 							<DataPath>Объект.ЗаказыКлиентов</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ЗаказыКлиентовКонтекстноеМеню" id="16"/>
-							<AutoCommandBar name="ЗаказыКлиентовКоманднаяПанель" id="17"/>
+							<AutoCommandBar name="ЗаказыКлиентовКоманднаяПанель" id="17">
+								<ChildItems>
+									<Button name="ЗаказыКлиентовКомандаПодбор" id="92">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаПодбор</CommandName>
+										<ExtendedTooltip name="ЗаказыКлиентовКомандаПодборРасширеннаяПодсказка" id="93"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ЗаказыКлиентовРасширеннаяПодсказка" id="18"/>
 							<SearchStringAddition name="ЗаказыКлиентовСтрокаПоиска" id="19">
 								<AdditionSource>
@@ -480,7 +489,12 @@
 							</v8:item>
 						</Title>
 						<Type>
-							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>2</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
 						</Type>
 					</Column>
 					<Column name="СуммаНДС" id="2">
@@ -610,4 +624,21 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="КомандаПодбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор заказов клиента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодбор</Action>
+		</Command>
+	</Commands>
 </Form>
