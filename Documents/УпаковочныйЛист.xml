@@ -31,9 +31,83 @@
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="9c87f517-7b4a-4896-b078-f0a0f85a53a8">
+				<InternalInfo/>
+				<Properties>
+					<Name>СкладУпаковки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c28b6a3e-885f-4135-be15-70237898a4f8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
+			<Form>гф_ФормаПодбора</Form>
+			<TabularSection uuid="ccce9f65-7930-4433-8ae5-ac0a2883c26a">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.УпаковочныйЛист.Товары" category="TabularSection">
+						<xr:TypeId>927a2556-c36d-486c-ad54-aca3b36d9cba</xr:TypeId>
+						<xr:ValueId>83ec9788-fa25-48a6-8995-b8984853e6b0</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.УпаковочныйЛист.Товары" category="TabularSectionRow">
+						<xr:TypeId>5c298e32-49e5-4afd-91fd-4db34ea8753f</xr:TypeId>
+						<xr:ValueId>afdbce18-db88-4b85-9b73-1872d4b11e3a</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>137118f7-2a9a-4617-98b9-d1d8ca93edf4</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="b291bec7-258b-4331-81ff-8199b69dffd9">
+						<InternalInfo/>
+						<Properties>
+							<Name>Номенклатура</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a4d3e2fd-d990-4763-9f04-8624b3395580</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="8c3de8df-e7b0-46a8-9b75-708d48b996d7">
+						<InternalInfo/>
+						<Properties>
+							<Name>Характеристика</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>9920d359-6eec-4c87-8a41-83bf45da9c55</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="5c32dbf1-6f22-430d-a6f2-20f8ca5f11da">
+						<InternalInfo/>
+						<Properties>
+							<Name>Количество</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>9e29e575-e24a-48b3-9a5c-d03cbc6bec8d</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Document uuid="aebc4a9f-9fa5-4e1f-b9c0-d550cc893f4c">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ПеремещениеТоваров" category="Object">
+				<xr:TypeId>d623e8bb-f17c-4955-acac-cb4e1fc3eeea</xr:TypeId>
+				<xr:ValueId>7377eb62-dc51-4c3a-b2ff-aace85bf29b7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ПеремещениеТоваров" category="Ref">
+				<xr:TypeId>fe377c9a-6fca-47be-9796-de66180fbba8</xr:TypeId>
+				<xr:ValueId>6eba8483-938f-4081-8915-3c22626a71a8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ПеремещениеТоваров" category="Selection">
+				<xr:TypeId>fb3446ae-a67d-4ca1-8d52-c57e607c093e</xr:TypeId>
+				<xr:ValueId>4532766f-fac5-4703-bb25-11df4a7285c3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ПеремещениеТоваров" category="List">
+				<xr:TypeId>72afe79f-46a3-4e74-b102-3c1fc60ac8ef</xr:TypeId>
+				<xr:ValueId>2066bc20-60b5-4965-ad10-da0458b04c37</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ПеремещениеТоваров" category="Manager">
+				<xr:TypeId>0c7f7c4e-7b6a-4ea7-8df5-46fb0bb22dac</xr:TypeId>
+				<xr:ValueId>18cef9fb-4d1b-437d-b7c6-58e4daf02967</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПеремещениеТоваров</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>050b09a5-e36c-42b6-b337-cdddd2968bea</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="b4d45d93-1e65-450b-b393-6e296dc4e7cb">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_КонтрагентПолучатель</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>122d4041-9c56-4401-b344-a079a213f47d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаДокумента</Form>
+			<TabularSection uuid="c24e5b6d-359f-489c-8250-f987de150482">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ПеремещениеТоваров.гф_ТоварыВКоробах" category="TabularSection">
+						<xr:TypeId>a056267c-cb20-4195-a011-631be70d1299</xr:TypeId>
+						<xr:ValueId>68ad0b92-efef-4e3d-8627-5b3cecf30f32</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ПеремещениеТоваров.гф_ТоварыВКоробах" category="TabularSectionRow">
+						<xr:TypeId>8ad2d687-b331-4d24-9c50-27f01d4ab5d7</xr:TypeId>
+						<xr:ValueId>8a891227-e920-4a97-923c-ae9f5ddb62f3</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ТоварыВКоробах</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>371ad4a2-a3fe-4fee-b83c-3ec22cf9a85f</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="e38a669f-a2af-4ce3-ad75-9edef68ceb45">
+						<InternalInfo/>
+						<Properties>
+							<Name>УпаковочныйЛист</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a9e5a36f-5944-4d26-b61c-1afe0b800cb5</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="cd485bf2-7a5a-4f02-b1c4-2ec47a6c22c5">
+						<InternalInfo/>
+						<Properties>
+							<Name>Артикул</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>96ce4dab-2137-411e-82b4-8cbe1bd7095e</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>50</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d5d2bd3a-8672-4c21-a3fc-c02587247849">
+						<InternalInfo/>
+						<Properties>
+							<Name>IDКороба</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>71b0fd23-69d0-4b4a-9798-932cef7d3757</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>200</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="47bfcaa2-5214-49ee-827f-218f128fa8d8">
+						<InternalInfo/>
+						<Properties>
+							<Name>КоличествоПар</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0e9c5b18-e3b5-41e3-b0c7-fb6899d51b5c</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
