@@ -156,6 +156,89 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<TabularSection uuid="051d2c51-b7a3-4773-9f27-6917edf49b9d">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЗаказКлиента.гф_ТоварыВКоробах" category="TabularSection">
+						<xr:TypeId>1eb173c9-5910-4245-a85c-098682c37dec</xr:TypeId>
+						<xr:ValueId>5741e665-e7db-46ed-976b-9fbab148d11e</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЗаказКлиента.гф_ТоварыВКоробах" category="TabularSectionRow">
+						<xr:TypeId>ce955867-ae68-4d13-bcba-bbd9d990714e</xr:TypeId>
+						<xr:ValueId>fa9b46c0-3503-4f83-a0de-1a91c35f8683</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ТоварыВКоробах</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4614b387-1561-498c-917f-283b25475de6</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="90724825-beb2-460c-99e6-058c01f27213">
+						<InternalInfo/>
+						<Properties>
+							<Name>ВариантКомплектации</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>b7a4858d-b385-46d6-b5d4-d8e560a636a5</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="60fedb2c-e068-4f66-889c-457d8accc7fa">
+						<InternalInfo/>
+						<Properties>
+							<Name>Количество</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>b45ee756-ee46-4448-8d6f-c60afdd029da</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0aab8d9c-b38f-499d-ad99-4963806b625c">
+						<InternalInfo/>
+						<Properties>
+							<Name>ЦенаКороба</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a26a9218-cc61-46b3-9ef6-4fcf1aaa0390</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="386813cd-55ae-46d4-ba11-92bf919db458">
+						<InternalInfo/>
+						<Properties>
+							<Name>Сумма</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>95b06693-c8dd-450a-b4ca-690ecdef60fd</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
