@@ -36,10 +36,28 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>7b249687-d334-4054-aaf7-962d7996bb09</ExtendedConfigurationObject>
+			<DefaultRecordForm>InformationRegister.гф_ОтслеживаемыеОригиналыПервичныхДокументов.Form.гф_ФормаЗаписи</DefaultRecordForm>
+			<DefaultListForm>InformationRegister.гф_ОтслеживаемыеОригиналыПервичныхДокументов.Form.гф_ФормаСписка</DefaultListForm>
 			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
 			<WriteMode>Independent</WriteMode>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="9b77ccb0-7652-4633-b642-219199acab0c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПредставлениеПервичногоДокумента</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b52b134c-46f9-47f3-9451-c05e39fe466e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Dimension uuid="02ff079b-360d-4d9c-91b5-5b0ea3bacfb1">
 				<InternalInfo/>
 				<Properties>
@@ -68,6 +86,8 @@
 					</Type>
 				</Properties>
 			</Dimension>
+			<Form>гф_ФормаСписка</Form>
+			<Form>гф_ФормаЗаписи</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>
