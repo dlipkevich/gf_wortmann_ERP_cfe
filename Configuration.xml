@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>171</Version>
+			<Version>203</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -111,6 +111,9 @@
 			<Role>гф_УстановкаГруппДоступа</Role>
 			<Role>гф_ВыставлениеСчетов</Role>
 			<Role>гф_СозданиеДоговоровКонтрагентовНаСезон</Role>
+			<Role>гф_ЧтениеПриоритетовРезервов</Role>
+			<Role>гф_ДобавлениеИзменениПриоритетовРезервов</Role>
+			<Role>гф_ИспользованиеРезервированиеТоваровПоПриоритетам</Role>
 			<CommonModule>_омОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
 			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
@@ -175,6 +178,7 @@
 			<Document>ЗаданиеНаПеревозку</Document>
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ПроизводствоБезЗаказа</Document>
+			<Document>КорректировкаНазначенияТоваров</Document>
 			<Enum>ИсточникиИнформацииОЦенахДляПечати</Enum>
 			<Enum>ТипыСкладов</Enum>
 			<Enum>СтатусыДействияВидовЦен</Enum>
@@ -200,6 +204,7 @@
 			<Enum>СтатусыЗаданийНаПеревозку</Enum>
 			<Enum>СостоянияДоговоровКонтрагентов</Enum>
 			<Enum>гф_Интерфейсы</Enum>
+			<Enum>ВидыОперацийКорректировкиНазначения</Enum>
 			<DataProcessor>гф_ФормированиеСпецификацийПокупателя</DataProcessor>
 			<DataProcessor>гф_ВыставлениеСчетов</DataProcessor>
 			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
@@ -207,7 +212,9 @@
 			<DataProcessor>гф_ЗаявкиНаДоставку</DataProcessor>
 			<DataProcessor>ЖурналУчетаОригиналовПервичныхДокументов</DataProcessor>
 			<DataProcessor>ПанельАдминистрированияБСП</DataProcessor>
+			<DataProcessor>гф_РезервированиеТоваровПоПриоритетам</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
+			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
 			<ChartOfCharacteristicTypes>гф_ГлобальныеЗначения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>СтатьиАктивовПассивов</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>СтатьиРасходов</ChartOfCharacteristicTypes>

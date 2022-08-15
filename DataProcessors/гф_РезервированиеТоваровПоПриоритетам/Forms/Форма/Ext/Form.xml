@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаРеквизиты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="Дата" id="1">
+					<DataPath>Объект.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Организация" id="4">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Склад" id="7">
+					<DataPath>Объект.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">СкладПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаТекущиеПриоритеты" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущие приоритеты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница текущие приоритеты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаТекущиеПриоритетыРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Table name="ТекущиеПриоритеты" id="16">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТекущиеПриоритеты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТекущиеПриоритетыКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ТекущиеПриоритетыКоманднаяПанель" id="18">
+								<ChildItems>
+									<Button name="ФормаЗаполнитьПриоритеты" id="50">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПриоритеты</CommandName>
+										<ExtendedTooltip name="ФормаЗаполнитьПриоритетыРасширеннаяПодсказка" id="51"/>
+									</Button>
+									<Button name="ТекущиеПриоритетыСохранить" id="55">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Сохранить</CommandName>
+										<ExtendedTooltip name="ТекущиеПриоритетыСохранитьРасширеннаяПодсказка" id="56"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТекущиеПриоритетыРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ТекущиеПриоритетыСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ТекущиеПриоритеты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущиеПриоритетыСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ТекущиеПриоритетыСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТекущиеПриоритетыСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ТекущиеПриоритеты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущиеПриоритетыСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ТекущиеПриоритетыСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТекущиеПриоритетыУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ТекущиеПриоритеты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТекущиеПриоритетыУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ТекущиеПриоритетыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ТекущиеПриоритетыПередНачаломДобавления</Event>
+								<Event name="BeforeEditEnd">ТекущиеПриоритетыПередОкончаниемРедактирования</Event>
+								<Event name="OnChange">ТекущиеПриоритетыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ТекущиеПриоритетыНомерСтроки" id="29">
+									<DataPath>Объект.ТекущиеПриоритеты.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыНомерСтрокиКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыНомерСтрокиРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<InputField name="ТекущиеПриоритетыКонтрагент" id="32">
+									<DataPath>Объект.ТекущиеПриоритеты.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыКонтрагентКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыКонтрагентРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыОрганизация" id="35">
+									<DataPath>Объект.ТекущиеПриоритеты.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыОрганизацияКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыОрганизацияРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыСклад" id="38">
+									<DataPath>Объект.ТекущиеПриоритеты.Склад</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыСкладКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыСкладРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыЗаказ" id="41">
+									<DataPath>Объект.ТекущиеПриоритеты.Заказ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Контрагент</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ТекущиеПриоритеты.CurrentData.Контрагент</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+										<xr:Link>
+											<xr:Name>Отбор.Организация</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ТекущиеПриоритеты.CurrentData.Организация</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+										<xr:Link>
+											<xr:Name>Отбор.Склад</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ТекущиеПриоритеты.CurrentData.Склад</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТекущиеПриоритетыЗаказКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыЗаказРасширеннаяПодсказка" id="43"/>
+									<Events>
+										<Event name="StartChoice">ТекущиеПриоритетыЗаказНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыТекущийПриоритет" id="44">
+									<DataPath>Объект.ТекущиеПриоритеты.ТекущийПриоритет</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыТекущийПриоритетКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыТекущийПриоритетРасширеннаяПодсказка" id="46"/>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыНовыйПриоритет" id="47">
+									<DataPath>Объект.ТекущиеПриоритеты.НовыйПриоритет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыНовыйПриоритетКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыНовыйПриоритетРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">ТекущиеПриоритетыНовыйПриоритетПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТекущиеПриоритетыПервоначальныйНомерСтроки" id="52">
+									<DataPath>Объект.ТекущиеПриоритеты.ПервоначальныйНомерСтроки</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТекущиеПриоритетыПервоначальныйНомерСтрокиКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ТекущиеПриоритетыПервоначальныйНомерСтрокиРасширеннаяПодсказка" id="54"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаРаспределениеРезервов" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение резервов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница распределение резервов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаРаспределениеРезервовРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<InputField name="ИсходноеНазначение" id="59">
+							<DataPath>ИсходноеНазначение</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxHeight>2</MaxHeight>
+							<ClearButton>true</ClearButton>
+							<HeightControlVariant>UseContentHeight</HeightControlVariant>
+							<ContextMenu name="ИсходноеНазначениеКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ИсходноеНазначениеРасширеннаяПодсказка" id="61"/>
+							<Events>
+								<Event name="StartChoice">ИсходноеНазначениеНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<Table name="РаспределениеРезервов" id="62">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РаспределениеРезервов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РаспределениеРезервовКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="РаспределениеРезервовКоманднаяПанель" id="64">
+								<ChildItems>
+									<Button name="РаспределениеРезервовЗаполнитьНераспределеннымиОстатками" id="87">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьНераспределеннымиОстатками</CommandName>
+										<ExtendedTooltip name="РаспределениеРезервовЗаполнитьНераспределеннымиОстаткамиРасширеннаяПодсказка" id="88"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РаспределениеРезервовРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="РаспределениеРезервовСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>РаспределениеРезервов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРезервовСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="РаспределениеРезервовСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РаспределениеРезервовСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>РаспределениеРезервов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРезервовСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="РаспределениеРезервовСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РаспределениеРезервовУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>РаспределениеРезервов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РаспределениеРезервовУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="РаспределениеРезервовУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РаспределениеРезервовНомерСтроки" id="75">
+									<DataPath>Объект.РаспределениеРезервов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРезервовНомерСтрокиКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="РаспределениеРезервовНомерСтрокиРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+								<InputField name="РаспределениеРезервовНоменклатура" id="78">
+									<DataPath>Объект.РаспределениеРезервов.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРезервовНоменклатураКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="РаспределениеРезервовНоменклатураРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="РаспределениеРезервовIDКороба" id="81">
+									<DataPath>Объект.РаспределениеРезервов.IDКороба</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРезервовIDКоробаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="РаспределениеРезервовIDКоробаРасширеннаяПодсказка" id="83"/>
+								</InputField>
+								<InputField name="РаспределениеРезервовНовоеНазначение" id="84">
+									<DataPath>Объект.РаспределениеРезервов.НовоеНазначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РаспределениеРезервовНовоеНазначениеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="РаспределениеРезервовНовоеНазначениеРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_РезервированиеТоваровПоПриоритетам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:3bbd66db-4a56-4f49-a5f0-e6c628b6c1b3</Field>
+				<Field>Объект.Организация</Field>
+				<Field>Объект.Склад</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ИзмененПриоритетВручную" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменен приоритет вручную</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторРучногоИзменения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор ручного изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсходноеНазначение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходное назначение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПриоритеты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить приоритеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить приоритеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПриоритеты</Action>
+		</Command>
+		<Command name="Сохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+		<Command name="ЗаполнитьНераспределеннымиОстатками" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нераспределенными остатками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нераспределенными остатками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНераспределеннымиОстатками</Action>
+		</Command>
+	</Commands>
+</Form>
