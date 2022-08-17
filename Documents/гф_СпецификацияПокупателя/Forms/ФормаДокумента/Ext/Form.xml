@@ -232,6 +232,18 @@
 							<v8:content>Договор контрагента</v8:content>
 						</v8:item>
 					</Title>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Контрагент</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+						<xr:Link>
+							<xr:Name>Отбор.Организация</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
 					<ContextMenu name="ДоговорКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="42"/>
 				</InputField>
