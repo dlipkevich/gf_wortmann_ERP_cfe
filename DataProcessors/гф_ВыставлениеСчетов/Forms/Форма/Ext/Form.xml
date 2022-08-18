@@ -121,6 +121,11 @@
 										<CommandName>Form.Command.СнятьФлажки</CommandName>
 										<ExtendedTooltip name="ТаблицаСпецификацийСнятьФлажкиРасширеннаяПодсказка" id="55"/>
 									</Button>
+									<Button name="ТаблицаСпецификацийАвансаКоманда1" id="160">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Команда1</CommandName>
+										<ExtendedTooltip name="ТаблицаСпецификацийАвансаКоманда1РасширеннаяПодсказка" id="161"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаСпецификацийАвансаРасширеннаяПодсказка" id="13"/>
@@ -1016,6 +1021,9 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="Команда1" id="5">
+			<Action>Команда1</Action>
 		</Command>
 	</Commands>
 </Form>
