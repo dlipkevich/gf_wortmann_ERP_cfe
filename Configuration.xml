@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>203</Version>
+			<Version>213</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -125,6 +125,8 @@
 			<CommonModule>УправлениеДоступомПереопределяемый</CommonModule>
 			<CommonModule>гф_РегламентныеЗадания</CommonModule>
 			<CommonModule>УчетОригиналовПервичныхДокументов</CommonModule>
+			<CommonModule>гф_ОбработкаПроведения</CommonModule>
+			<EventSubscription>гф_ОбработкаПроведенияДвижениеКодовМаркировкиОрганизации</EventSubscription>
 			<DefinedType>Артикул</DefinedType>
 			<DefinedType>ИнвентарныйНомерТМЦВЭксплуатации</DefinedType>
 			<DefinedType>ИНН</DefinedType>
@@ -132,6 +134,7 @@
 			<DefinedType>ДенежнаяСуммаЛюбогоЗнака</DefinedType>
 			<DefinedType>ОбъектСУчетомОригиналовПервичныхДокументов</DefinedType>
 			<DefinedType>Сотрудник</DefinedType>
+			<DefinedType>ОснованиеМаркировкаТоваровИСМП</DefinedType>
 			<CommonCommand>гф_СвязанныеДокументы</CommonCommand>
 			<Constant>гф_ГруппыДоступаДляКонтрагентов</Constant>
 			<CommonForm>гф_УстановкаГруппДоступа</CommonForm>
@@ -172,6 +175,7 @@
 			<Catalog>гф_ПоследовательностьПроведения</Catalog>
 			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
 			<Catalog>СостоянияОригиналовПервичныхДокументов</Catalog>
+			<Catalog>ШтрихкодыУпаковокТоваров</Catalog>
 			<Document>ВнутреннееПотреблениеТоваров</Document>
 			<Document>ПриобретениеТоваровУслуг</Document>
 			<Document>ПриходныйОрдерНаТовары</Document>
@@ -185,6 +189,12 @@
 			<Document>ПеремещениеТоваров</Document>
 			<Document>ПроизводствоБезЗаказа</Document>
 			<Document>КорректировкаНазначенияТоваров</Document>
+			<Document>гф_АгрегацияКМ</Document>
+			<Document>МаркировкаТоваровИСМП</Document>
+			<Document>РеализацияТоваровУслуг</Document>
+			<Document>ВозвратТоваровОтКлиента</Document>
+			<Document>ПересортицаТоваров</Document>
+			<Document>СписаниеНедостачТоваров</Document>
 			<Enum>ИсточникиИнформацииОЦенахДляПечати</Enum>
 			<Enum>ТипыСкладов</Enum>
 			<Enum>СтатусыДействияВидовЦен</Enum>
