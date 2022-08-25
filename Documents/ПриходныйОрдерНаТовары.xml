@@ -31,7 +31,50 @@
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="51ab32ee-e1f7-4760-b73d-69757e3580ad">
+				<InternalInfo/>
+				<Properties>
+					<Name>Распоряжение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5dcdee8c-9444-4bd3-ae94-e55f618ed216</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.РаспоряжениеНаПоступление</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="11b43d2f-726b-4999-8f4c-f169481cf37a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Отправитель</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5a3dfe1b-75d0-4247-8d64-84bab203cf9c</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОтправительПолучательТоваров</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
+			<TabularSection uuid="501a3844-0fed-4397-b35e-ccaf1561f5ed">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ПриходныйОрдерНаТовары.Товары" category="TabularSection">
+						<xr:TypeId>3af615eb-0761-4dd8-bd8c-6200d978ea94</xr:TypeId>
+						<xr:ValueId>77483999-58c3-40e5-b2f9-8625daf7fa18</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ПриходныйОрдерНаТовары.Товары" category="TabularSectionRow">
+						<xr:TypeId>04d0a9e1-bb89-45f6-aa89-3b7cb03db2e0</xr:TypeId>
+						<xr:ValueId>6c3764ac-6e8f-4294-8bf0-58bde1ac599e</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4c33a3ea-7a9b-4d40-8f7d-a7581e73da16</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
