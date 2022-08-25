@@ -174,6 +174,22 @@
 											<CommandName>Form.Command.СвязанныеДокументы</CommandName>
 											<ExtendedTooltip name="ПоставкаСвязанныеДокументыРасширеннаяПодсказка" id="159"/>
 										</Button>
+										<Button name="ПоставкаВывестиСписок" id="224">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Item.Поставка.StandardCommand.OutputList</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.OutputList</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ПоставкаВывестиСписокРасширеннаяПодсказка" id="225"/>
+										</Button>
+										<Button name="ИзменитьСтатусыПО" id="230">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИзменитьСтатусыПО</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусыПОРасширеннаяПодсказка" id="231"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -565,6 +581,17 @@
 											<CommandName>Form.Command.СвязанныеДокументы</CommandName>
 											<ExtendedTooltip name="ОтгрузкаСвязанныеДокументыРасширеннаяПодсказка" id="161"/>
 										</Button>
+										<Button name="ОтгрузкаВывестиСписок" id="226">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Item.Отгрузка.StandardCommand.OutputList</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.OutputList</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ОтгрузкаВывестиСписокРасширеннаяПодсказка" id="227"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -753,6 +780,17 @@
 											<CommandName>Form.Command.СвязанныеДокументы</CommandName>
 											<ExtendedTooltip name="ПеремещениеСвязанныеДокументыРасширеннаяПодсказка" id="163"/>
 										</Button>
+										<Button name="ПеремещениеВывестиСписок" id="228">
+											<Type>CommandBarButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Item.Перемещение.StandardCommand.OutputList</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.OutputList</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ПеремещениеВывестиСписокРасширеннаяПодсказка" id="229"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -850,10 +888,11 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаСтраницаНастройкиРасширеннаяПодсказка" id="188"/>
 					<ChildItems>
-						<InputField name="ВидЦен" id="189">
+						<InputField name="ВидЦены" id="189">
 							<DataPath>Объект.ВидЦены</DataPath>
-							<ContextMenu name="ВидЦенКонтекстноеМеню" id="190"/>
-							<ExtendedTooltip name="ВидЦенРасширеннаяПодсказка" id="191"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="ВидЦеныКонтекстноеМеню" id="190"/>
+							<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="191"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -952,6 +991,21 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СвязанныеДокументы</Action>
+		</Command>
+		<Command name="ИзменитьСтатусыПО" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить статусы ПО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить статусы ПО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьСтатусыПО</Action>
 		</Command>
 	</Commands>
 </Form>
