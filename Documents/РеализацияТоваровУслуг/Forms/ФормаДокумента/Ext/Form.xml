@@ -1314,6 +1314,9 @@
 													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 													<ContextMenu name="СкладКонтекстноеМеню" id="16"/>
 													<ExtendedTooltip name="СкладExtendedTooltip" id="754"/>
+													<Events>
+														<Event name="OnChange" callType="After">гф_СкладПриИзмененииПосле</Event>
+													</Events>
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
