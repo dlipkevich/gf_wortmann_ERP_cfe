@@ -201,12 +201,12 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="СтрокиРСТэг" id="53">
-					<DataPath>~СтрокиРС.Тэг</DataPath>
+					<DataPath>СтрокиРС.Тэг</DataPath>
 					<ContextMenu name="СтрокиРСТэгКонтекстноеМеню" id="54"/>
 					<ExtendedTooltip name="СтрокиРСТэгРасширеннаяПодсказка" id="55"/>
 				</LabelField>
 				<LabelField name="СтрокиРССтатусПоля" id="56">
-					<DataPath>~СтрокиРС.СтатусПоля</DataPath>
+					<DataPath>СтрокиРС.СтатусПоля</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -217,12 +217,12 @@
 					<ExtendedTooltip name="СтрокиРССтатусПоляРасширеннаяПодсказка" id="58"/>
 				</LabelField>
 				<LabelField name="СтрокиРСЗначение" id="59">
-					<DataPath>~СтрокиРС.Значение</DataPath>
+					<DataPath>СтрокиРС.Значение</DataPath>
 					<ContextMenu name="СтрокиРСЗначениеКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="СтрокиРСЗначениеРасширеннаяПодсказка" id="61"/>
 				</LabelField>
 				<LabelField name="СтрокиРСПолеЗагрузки" id="62">
-					<DataPath>~СтрокиРС.ПолеЗагрузки</DataPath>
+					<DataPath>СтрокиРС.ПолеЗагрузки</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -233,12 +233,12 @@
 					<ExtendedTooltip name="СтрокиРСПолеЗагрузкиРасширеннаяПодсказка" id="64"/>
 				</LabelField>
 				<LabelField name="СтрокиРСКомментарий" id="65">
-					<DataPath>~СтрокиРС.Комментарий</DataPath>
+					<DataPath>СтрокиРС.Комментарий</DataPath>
 					<ContextMenu name="СтрокиРСКомментарийКонтекстноеМеню" id="66"/>
 					<ExtendedTooltip name="СтрокиРСКомментарийРасширеннаяПодсказка" id="67"/>
 				</LabelField>
 				<LabelField name="СтрокиРСНомерСтрокиРодителя" id="68">
-					<DataPath>~СтрокиРС.НомерСтрокиРодителя</DataPath>
+					<DataPath>СтрокиРС.НомерСтрокиРодителя</DataPath>
 					<ContextMenu name="СтрокиРСНомерСтрокиРодителяКонтекстноеМеню" id="69"/>
 					<ExtendedTooltip name="СтрокиРСНомерСтрокиРодителяРасширеннаяПодсказка" id="70"/>
 				</LabelField>
@@ -274,14 +274,9 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>1:3089a8bc-ff4a-47dd-8e10-555e0412fae8</MainTable>
+				<MainTable>InformationRegister.гф_СтрокиДокументаДанныеЗагрузки</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:use>false</dcsset:use>
-							<dcsset:left xsi:type="dcscor:Field">Документ</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
