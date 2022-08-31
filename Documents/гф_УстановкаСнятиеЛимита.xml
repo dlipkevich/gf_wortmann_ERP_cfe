@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Document uuid="66e0032d-f04f-40fe-80eb-64590b551eb6">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.гф_УстановкаСнятиеЛимита" category="Object">
+				<xr:TypeId>34ebea1d-132d-4c5b-b22b-b35185d03ab6</xr:TypeId>
+				<xr:ValueId>d35c2bca-8b3c-4afe-acc8-e86c8c8abfbe</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.гф_УстановкаСнятиеЛимита" category="Ref">
+				<xr:TypeId>9b85e1fe-7d4b-46e9-aacc-cafcf05d6ebf</xr:TypeId>
+				<xr:ValueId>5e30d7c4-f0a0-4f67-b574-9d55551129fe</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.гф_УстановкаСнятиеЛимита" category="Selection">
+				<xr:TypeId>d7874356-acea-4f15-b81e-81614edac878</xr:TypeId>
+				<xr:ValueId>c10b2331-1e10-4efd-957c-810ffe866be9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.гф_УстановкаСнятиеЛимита" category="List">
+				<xr:TypeId>a8dc381b-6ae8-42db-8e01-47a891b76c0e</xr:TypeId>
+				<xr:ValueId>55cb67bd-0ba7-4324-906a-6c3a8e368e28</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.гф_УстановкаСнятиеЛимита" category="Manager">
+				<xr:TypeId>87664379-e63d-4188-a4c1-9fc1811ab8ba</xr:TypeId>
+				<xr:ValueId>78173dd3-6895-41a2-8fbb-201bcb65cb70</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_УстановкаСнятиеЛимита</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>864531b3-f806-4719-8fc5-cd08b849bbcc</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_УстановкаСнятиеЛимита.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="40434bb7-1d52-4e12-bf97-95986e7af990">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидОперации</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f0f515a8-1a3c-41f0-b8be-973b01e32ceb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_ВидыОперацийЛимита</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b5ee24c8-1b1d-4cb5-9c72-17d4d9b6df4c">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b0c0fc8d-2552-42a0-a851-9ab1f3983978</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_СтатусыЛимитов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="62af377e-ba1d-4d52-bef0-782cb0523e7c">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4f522631-f627-4763-be0d-ea2b388f815c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="37856320-999d-45d3-bdae-34901d508cfe">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>037e9bc3-0fbc-48e5-827a-55988b49b821</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="467fefcb-5fb0-4754-a6e0-c31bddc02b37">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидЛимита</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c07ea6e8-0ed8-499e-b7c1-86c7b78db23a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыЛимитов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c955bdbb-176e-492a-a15e-b15f9d3b4bae">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сумма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8cb36138-aa5d-4412-b8ae-7289671632a0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="109f41f7-bdbc-462e-bbff-09b36d79b59a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5c7f490a-f285-43d8-9e14-d314612f05b0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cfd1e4ed-2b8d-41ad-8d34-b899f8718a6a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0d3fe4a8-c462-480e-be1a-03c74b83e0f0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаДокумента</Form>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
