@@ -12,6 +12,9 @@
 			<OpenButton>false</OpenButton>
 			<ContextMenu name="СтатусКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="StartChoice">СтатусНачалоВыбора</Event>
+			</Events>
 		</InputField>
 		<Pages name="ГруппаДокумента" id="31">
 			<Title>
@@ -157,7 +160,9 @@
 						<InputField name="Комментарий" id="25">
 							<DataPath>Объект.Комментарий</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<Height>10</Height>
+							<Height>5</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>false</VerticalStretch>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
