@@ -121,6 +121,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="a8f5a49f-5181-4e0a-8d36-932ec84f3f00">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a8d06692-73f7-469f-a6a7-388a13d421d2</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЗаказовКлиентов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаВыбора</Form>
 			<Form>ФормаДокумента</Form>
 			<Form>гф_ФормаЗагрузкиИзЕксель</Form>
@@ -235,6 +247,174 @@
 							<ExtendedConfigurationObject>4ee7b1a1-d03a-410e-bd5e-a77a57f5c3ef</ExtendedConfigurationObject>
 							<Type>
 								<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="da2d9fae-d7c5-409d-b76b-c76c47d90271">
+						<InternalInfo/>
+						<Properties>
+							<Name>КоличествоУпаковок</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>4bca1976-4244-47db-9333-d6f0a0945532</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="75c13bab-3caa-4420-88c5-43e06f96d3f8">
+						<InternalInfo/>
+						<Properties>
+							<Name>Количество</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>89c8c32c-ef8a-46f1-a7b4-75b2e1524d3f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="8753cd3f-d311-4189-9204-23046d51e52a">
+						<InternalInfo/>
+						<Properties>
+							<Name>КодСтроки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>5c903d97-280f-4725-81a1-6c46aa3d2e39</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="67900dc3-c992-4d9d-9284-52bfcddb5873">
+						<InternalInfo/>
+						<Properties>
+							<Name>ПричинаОтмены</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a0952e09-6f01-42b1-a300-c940c3316f7f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ПричиныОтменыЗаказовКлиентов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="6b84adea-74bf-4135-bedf-b1ce203f9c0a">
+						<InternalInfo/>
+						<Properties>
+							<Name>Отменено</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>ffeb3fd7-4078-4908-9b27-a77155e26744</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0eb65f26-7958-4d8e-bcb7-f6c38ce60119">
+						<InternalInfo/>
+						<Properties>
+							<Name>КлючСвязи</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>fdad542e-6705-49b1-84a5-84e5041eed4e</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="1f2cb2eb-4191-4010-a96c-3bd56bc0ea00">
+						<InternalInfo/>
+						<Properties>
+							<Name>Склад</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>60d47e52-6b3e-4f62-8337-412bddf599d2</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="99488754-a94c-4b75-8163-fa4dd7b82ca5">
+						<InternalInfo/>
+						<Properties>
+							<Name>ИдентификаторСтроки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>e564399f-eced-445c-b0f4-3548ef45bfcd</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>36</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="e6409fa1-9920-4152-8e23-2b76b0c41f1d">
+						<InternalInfo/>
+						<Properties>
+							<Name>гф_ДобавленоПоПричине</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0a49a2be-df5a-4c45-862e-7d0672b78327</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="c0cd8a3d-2535-4c16-9785-03677c2c6579">
+						<InternalInfo/>
+						<Properties>
+							<Name>гф_ПричинаДобавления</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>9b0d94ce-7dca-458c-94e3-b306e9930c22</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ПричиныОтменыЗаказовКлиентов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="60f307a2-4d84-47a5-b613-8cffb89168a3">
+						<InternalInfo/>
+						<Properties>
+							<Name>СтавкаНДС</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>8d858c66-da95-4821-bb40-fa943a0ee507</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="537cd517-702c-4822-808e-790ab5a94992">
+						<InternalInfo/>
+						<Properties>
+							<Name>СуммаСНДС</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>56ee214a-9ba3-4066-89e9-3b53a7af29bc</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
 							</Type>
 						</Properties>
 					</Attribute>
