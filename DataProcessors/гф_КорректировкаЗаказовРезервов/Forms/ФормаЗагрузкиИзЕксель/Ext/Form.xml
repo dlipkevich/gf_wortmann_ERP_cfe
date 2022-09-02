@@ -22,6 +22,55 @@
 				<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
 			</Events>
 		</InputField>
+		<InputField name="КолонкаАртикул" id="4">
+			<DataPath>КолонкаАртикул</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="КолонкаАртикулКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КолонкаАртикулРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="СтрокаНаименованияРостовки" id="7">
+			<DataPath>СтрокаНаименованияРостовки</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="СтрокаНаименованияРостовкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СтрокаНаименованияРостовкиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаЗагружатьСПо" id="10">
+			<Visible>false</Visible>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загружать с по</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗагружатьСПоРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<InputField name="ЗагружатьС" id="12">
+					<DataPath>ЗагружатьС</DataPath>
+					<ContextMenu name="ЗагружатьСКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЗагружатьСРасширеннаяПодсказка" id="14"/>
+				</InputField>
+				<InputField name="ЗагружатьПо" id="15">
+					<DataPath>ЗагружатьПо</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗагружатьПоКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ЗагружатьПоРасширеннаяПодсказка" id="17"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СтрокаЗагрузки" id="18">
+			<DataPath>СтрокаЗагрузки</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="СтрокаЗагрузкиКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="СтрокаЗагрузкиРасширеннаяПодсказка" id="20"/>
+		</InputField>
 		<Button name="ПрочитатьФайл" id="127">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.ПрочитатьФайл</CommandName>
@@ -180,6 +229,76 @@
 			</Type>
 			<FillCheck>ShowError</FillCheck>
 		</Attribute>
+		<Attribute name="КолонкаАртикул" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка артикул</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СтрокаНаименованияРостовки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка наименования ростовки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЗагружатьС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ЗагружатьПо" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружать по</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
 		<Attribute name="СтрокаЗагрузки" id="6">
 			<Title>
 				<v8:item>
@@ -302,6 +421,56 @@
 					</Title>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТипЦеныЗакупочная" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип цены закупочная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЧистыйАртикул" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чистый артикул</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
