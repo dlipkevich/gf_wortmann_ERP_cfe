@@ -97,6 +97,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="40bfeb57-d583-43d7-8fe6-147c6ce559aa">
+				<InternalInfo/>
+				<Properties>
+					<Name>Партнер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>20cec9ef-1251-4a81-800d-2157080b4a96</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ПараметрыСпецификацииПоНовойЦене</Form>
@@ -127,6 +139,30 @@
 							<ExtendedConfigurationObject>c3d13b89-cc2d-4ccd-bf76-b02e220f081f</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="bc0b90df-64da-48f1-9705-a0f3f1628160">
+						<InternalInfo/>
+						<Properties>
+							<Name>Сумма</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a875ee89-624f-4dfc-bd20-c582affc0d0c</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="eb695190-6f3f-4bec-a278-7e116d41e68f">
+						<InternalInfo/>
+						<Properties>
+							<Name>СуммаНДС</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>54dabb0f-1aad-448e-8893-ce588c076a69</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
 							</Type>
 						</Properties>
 					</Attribute>

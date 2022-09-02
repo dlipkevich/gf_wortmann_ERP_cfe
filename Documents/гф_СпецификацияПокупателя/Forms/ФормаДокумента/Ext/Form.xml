@@ -352,20 +352,28 @@
 										<Event name="StartChoice">ЗаказыКлиентовЗаказКлиентаНачалоВыбора</Event>
 									</Events>
 								</InputField>
-								<LabelField name="ЗаказыКлиентовСумма" id="45">
+								<InputField name="ЗаказыКлиентовСумма" id="94">
 									<DataPath>Объект.ЗаказыКлиентов.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>ИтогСумма</FooterDataPath>
-									<ContextMenu name="ЗаказыКлиентовСуммаКонтекстноеМеню" id="46"/>
-									<ExtendedTooltip name="ЗаказыКлиентовСуммаРасширеннаяПодсказка" id="47"/>
-								</LabelField>
-								<LabelField name="ЗаказыКлиентовСуммаНДС" id="48">
+									<ContextMenu name="ЗаказыКлиентовСуммаКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ЗаказыКлиентовСуммаРасширеннаяПодсказка" id="96"/>
+									<Events>
+										<Event name="OnChange">ЗаказыКлиентовСуммаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЗаказыКлиентовСуммаНДС" id="97">
 									<DataPath>Объект.ЗаказыКлиентов.СуммаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>ИтогСуммаНДС</FooterDataPath>
-									<ContextMenu name="ЗаказыКлиентовСуммаНДСКонтекстноеМеню" id="49"/>
-									<ExtendedTooltip name="ЗаказыКлиентовСуммаНДСРасширеннаяПодсказка" id="50"/>
-								</LabelField>
+									<ContextMenu name="ЗаказыКлиентовСуммаНДСКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ЗаказыКлиентовСуммаНДСРасширеннаяПодсказка" id="99"/>
+									<Events>
+										<Event name="OnChange">ЗаказыКлиентовСуммаНДСПриИзменении</Event>
+									</Events>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -492,40 +500,7 @@
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
 			<Columns>
-				<AdditionalColumns table="Объект.ЗаказыКлиентов">
-					<Column name="Сумма" id="1">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Сумма</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>15</v8:Digits>
-								<v8:FractionDigits>2</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="СуммаНДС" id="2">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Сумма НДС</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>15</v8:Digits>
-								<v8:FractionDigits>2</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-				</AdditionalColumns>
+				<AdditionalColumns table="Объект.ЗаказыКлиентов"/>
 			</Columns>
 		</Attribute>
 		<Attribute name="ИтогСумма" id="2">
