@@ -1126,6 +1126,34 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ПеремещениеВывестиСписокРасширеннаяПодсказка" id="229"/>
 										</Button>
+										<ButtonGroup name="ГруппаПеремещениеИзменитьСтатусы" id="390">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа перемещение изменить статусы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа перемещение изменить статусы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>Compact</Representation>
+											<ExtendedTooltip name="ГруппаПеремещениеИзменитьСтатусыРасширеннаяПодсказка" id="391"/>
+											<ChildItems>
+												<Button name="ПеремещениеИзменитьСтатусыРО" id="386">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ИзменитьСтатусыРО</CommandName>
+													<ExtendedTooltip name="ПеремещениеИзменитьСтатусыРОРасширеннаяПодсказка" id="387"/>
+												</Button>
+												<Button name="ПеремещениеИзменитьСтатусыПО" id="388">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ИзменитьСтатусыПО</CommandName>
+													<ExtendedTooltip name="ПеремещениеИзменитьСтатусыПОРасширеннаяПодсказка" id="389"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
