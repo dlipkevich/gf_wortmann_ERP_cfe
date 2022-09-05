@@ -317,6 +317,59 @@
 									<ContextMenu name="ПоставкаДокументКонтекстноеМеню" id="33"/>
 									<ExtendedTooltip name="ПоставкаДокументРасширеннаяПодсказка" id="34"/>
 								</InputField>
+								<ColumnGroup name="ПоставкаГруппаПО" id="220">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поставка группа ПО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поставка группа ПО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПоставкаГруппаПОРасширеннаяПодсказка" id="221"/>
+									<ChildItems>
+										<ColumnGroup name="ПоставкаГруппаПОДатаНомер" id="222">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа ПОДата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа ПОДата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПоставкаГруппаПОДатаНомерРасширеннаяПодсказка" id="223"/>
+											<ChildItems>
+												<InputField name="ПоставкаДатаПО" id="195">
+													<DataPath>Объект.Поставка.ДатаПО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаДатаПОКонтекстноеМеню" id="196"/>
+													<ExtendedTooltip name="ПоставкаДатаПОРасширеннаяПодсказка" id="197"/>
+												</InputField>
+												<InputField name="ПоставкаНомерПО" id="198">
+													<DataPath>Объект.Поставка.НомерПО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаНомерПОКонтекстноеМеню" id="199"/>
+													<ExtendedTooltip name="ПоставкаНомерПОРасширеннаяПодсказка" id="200"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ПоставкаСтатусПО" id="201">
+											<DataPath>Объект.Поставка.СтатусПО</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПоставкаСтатусПОКонтекстноеМеню" id="202"/>
+											<ExtendedTooltip name="ПоставкаСтатусПОРасширеннаяПодсказка" id="203"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<ColumnGroup name="ПоставкаГруппаСумма" id="214">
 									<Title>
 										<v8:item>
@@ -417,59 +470,6 @@
 									<ContextMenu name="ПоставкаДокументМаркировкаКонтекстноеМеню" id="183"/>
 									<ExtendedTooltip name="ПоставкаДокументМаркировкаРасширеннаяПодсказка" id="184"/>
 								</InputField>
-								<ColumnGroup name="ПоставкаГруппаПО" id="220">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Поставка группа ПО</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Поставка группа ПО</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="ПоставкаГруппаПОРасширеннаяПодсказка" id="221"/>
-									<ChildItems>
-										<ColumnGroup name="ПоставкаГруппаПОДатаНомер" id="222">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Поставка группа ПОДата номер</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Поставка группа ПОДата номер</v8:content>
-												</v8:item>
-											</ToolTip>
-											<Group>Horizontal</Group>
-											<ExtendedTooltip name="ПоставкаГруппаПОДатаНомерРасширеннаяПодсказка" id="223"/>
-											<ChildItems>
-												<InputField name="ПоставкаДатаПО" id="195">
-													<DataPath>Объект.Поставка.ДатаПО</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПоставкаДатаПОКонтекстноеМеню" id="196"/>
-													<ExtendedTooltip name="ПоставкаДатаПОРасширеннаяПодсказка" id="197"/>
-												</InputField>
-												<InputField name="ПоставкаНомерПО" id="198">
-													<DataPath>Объект.Поставка.НомерПО</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПоставкаНомерПОКонтекстноеМеню" id="199"/>
-													<ExtendedTooltip name="ПоставкаНомерПОРасширеннаяПодсказка" id="200"/>
-												</InputField>
-											</ChildItems>
-										</ColumnGroup>
-										<InputField name="ПоставкаСтатусПО" id="201">
-											<DataPath>Объект.Поставка.СтатусПО</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПоставкаСтатусПОКонтекстноеМеню" id="202"/>
-											<ExtendedTooltip name="ПоставкаСтатусПОРасширеннаяПодсказка" id="203"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
 								<InputField name="ПоставкаПриходныйОрдер" id="192">
 									<DataPath>Объект.Поставка.ПриходныйОрдер</DataPath>
 									<Visible>false</Visible>
@@ -652,35 +652,365 @@
 									<ContextMenu name="ОтгрузкаФлагКонтекстноеМеню" id="74"/>
 									<ExtendedTooltip name="ОтгрузкаФлагРасширеннаяПодсказка" id="75"/>
 								</CheckBoxField>
+								<ColumnGroup name="ОтгрузкаГруппаДокумент" id="232">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа документ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаДокументРасширеннаяПодсказка" id="233"/>
+									<ChildItems>
+										<ColumnGroup name="ОтгрузкаГруппаДатаНомер" id="234">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа дата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа дата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОтгрузкаГруппаДатаНомерРасширеннаяПодсказка" id="235"/>
+											<ChildItems>
+												<InputField name="ОтгрузкаДата" id="236">
+													<DataPath>Объект.Отгрузка.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаДатаКонтекстноеМеню" id="237"/>
+													<ExtendedTooltip name="ОтгрузкаДатаРасширеннаяПодсказка" id="238"/>
+												</InputField>
+												<InputField name="ОтгрузкаНомер" id="239">
+													<DataPath>Объект.Отгрузка.Номер</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаНомерКонтекстноеМеню" id="240"/>
+													<ExtendedTooltip name="ОтгрузкаНомерРасширеннаяПодсказка" id="241"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ОтгрузкаТипДокумента" id="242">
+											<DataPath>Объект.Отгрузка.ТипДокумента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Документ</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаТипДокументаКонтекстноеМеню" id="243"/>
+											<ExtendedTooltip name="ОтгрузкаТипДокументаРасширеннаяПодсказка" id="244"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="ОтгрузкаДокумент" id="76">
 									<DataPath>Объект.Отгрузка.Документ</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОтгрузкаДокументКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="ОтгрузкаДокументРасширеннаяПодсказка" id="78"/>
 								</InputField>
-								<InputField name="ОтгрузкаСумма" id="79">
-									<DataPath>Объект.Отгрузка.Сумма</DataPath>
+								<ColumnGroup name="ОтгрузкаГруппаРО" id="297">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа РО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа РО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаРОРасширеннаяПодсказка" id="298"/>
+									<ChildItems>
+										<ColumnGroup name="ОтгрузкаГруппаРОДатаНомер" id="302">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа РОДата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа РОДата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОтгрузкаГруппаРОДатаНомерРасширеннаяПодсказка" id="303"/>
+											<ChildItems>
+												<InputField name="ОтгрузкаДатаРО" id="304">
+													<DataPath>Объект.Отгрузка.ДатаРО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаДатаРОКонтекстноеМеню" id="305"/>
+													<ExtendedTooltip name="ОтгрузкаДатаРОРасширеннаяПодсказка" id="306"/>
+												</InputField>
+												<InputField name="ОтгрузкаНомерРО" id="307">
+													<DataPath>Объект.Отгрузка.НомерРО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаНомерРОКонтекстноеМеню" id="308"/>
+													<ExtendedTooltip name="ОтгрузкаНомерРОРасширеннаяПодсказка" id="309"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ОтгрузкаРасходныйОрдер" id="299">
+											<DataPath>Объект.Отгрузка.РасходныйОрдер</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаРасходныйОрдерКонтекстноеМеню" id="300"/>
+											<ExtendedTooltip name="ОтгрузкаРасходныйОрдерРасширеннаяПодсказка" id="301"/>
+										</InputField>
+										<InputField name="ОтгрузкаСтатусРО" id="310">
+											<DataPath>Объект.Отгрузка.СтатусРО</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаСтатусРОКонтекстноеМеню" id="311"/>
+											<ExtendedTooltip name="ОтгрузкаСтатусРОРасширеннаяПодсказка" id="312"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаСумма" id="245">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа сумма</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа сумма</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаСуммаРасширеннаяПодсказка" id="246"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаСумма" id="79">
+											<DataPath>Объект.Отгрузка.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаСуммаКонтекстноеМеню" id="80"/>
+											<ExtendedTooltip name="ОтгрузкаСуммаРасширеннаяПодсказка" id="81"/>
+										</InputField>
+										<InputField name="ОтгрузкаВалюта" id="82">
+											<DataPath>Объект.Отгрузка.Валюта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаВалютаКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ОтгрузкаВалютаРасширеннаяПодсказка" id="84"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаКонтрагентСклад" id="247">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа контрагент склад</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа контрагент склад</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаКонтрагентСкладРасширеннаяПодсказка" id="248"/>
+									<ChildItems>
+										<ColumnGroup name="ОтгрузкаГруппаКонтрагент" id="251">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа контрагент</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа контрагент</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ОтгрузкаГруппаКонтрагентРасширеннаяПодсказка" id="252"/>
+											<ChildItems>
+												<InputField name="ОтгрузкаКонтрагент" id="85">
+													<DataPath>Объект.Отгрузка.Контрагент</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаКонтрагентКонтекстноеМеню" id="86"/>
+													<ExtendedTooltip name="ОтгрузкаКонтрагентРасширеннаяПодсказка" id="87"/>
+												</InputField>
+												<InputField name="ОтгрузкаКодКлиента" id="256">
+													<DataPath>Объект.Отгрузка.КодКлиента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаКодКлиентаКонтекстноеМеню" id="257"/>
+													<ExtendedTooltip name="ОтгрузкаКодКлиентаРасширеннаяПодсказка" id="258"/>
+												</InputField>
+												<InputField name="ОтгрузкаНерезидент" id="253">
+													<DataPath>Объект.Отгрузка.Нерезидент</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаНерезидентКонтекстноеМеню" id="254"/>
+													<ExtendedTooltip name="ОтгрузкаНерезидентРасширеннаяПодсказка" id="255"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ОтгрузкаСклад" id="88">
+											<DataPath>Объект.Отгрузка.Склад</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаСкладКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="ОтгрузкаСкладРасширеннаяПодсказка" id="90"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаАдрес" id="265">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа адрес</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа адрес</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаАдресРасширеннаяПодсказка" id="266"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаАдресДоставки" id="278">
+											<DataPath>Объект.Отгрузка.АдресДоставки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаАдресДоставкиКонтекстноеМеню" id="279"/>
+											<ExtendedTooltip name="ОтгрузкаАдресДоставкиРасширеннаяПодсказка" id="280"/>
+										</InputField>
+										<ColumnGroup name="ОтгрузкаГруппаРегион" id="267">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа регион</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа регион</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОтгрузкаГруппаРегионРасширеннаяПодсказка" id="268"/>
+											<ChildItems>
+												<InputField name="ОтгрузкаКодРегиона" id="272">
+													<DataPath>Объект.Отгрузка.КодРегиона</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаКодРегионаКонтекстноеМеню" id="273"/>
+													<ExtendedTooltip name="ОтгрузкаКодРегионаРасширеннаяПодсказка" id="274"/>
+												</InputField>
+												<InputField name="ОтгрузкаРегион" id="275">
+													<DataPath>Объект.Отгрузка.Регион</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаРегионКонтекстноеМеню" id="276"/>
+													<ExtendedTooltip name="ОтгрузкаРегионРасширеннаяПодсказка" id="277"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаКоличество" id="249">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа количество</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа количество</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаКоличествоРасширеннаяПодсказка" id="250"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаКоличествоКоробов" id="259">
+											<DataPath>Объект.Отгрузка.КоличествоКоробов</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаКоличествоКоробовКонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="ОтгрузкаКоличествоКоробовРасширеннаяПодсказка" id="261"/>
+										</InputField>
+										<InputField name="ОтгрузкаКоличествоПар" id="262">
+											<DataPath>Объект.Отгрузка.КоличествоПар</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаКоличествоПарКонтекстноеМеню" id="263"/>
+											<ExtendedTooltip name="ОтгрузкаКоличествоПарРасширеннаяПодсказка" id="264"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаТК" id="281">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа ТК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа ТК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаТКРасширеннаяПодсказка" id="282"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаТК" id="283">
+											<DataPath>Объект.Отгрузка.ТК</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаТККонтекстноеМеню" id="284"/>
+											<ExtendedTooltip name="ОтгрузкаТКРасширеннаяПодсказка" id="285"/>
+										</InputField>
+										<InputField name="ОтгрузкаТипПрайсЛистаТК" id="286">
+											<DataPath>Объект.Отгрузка.ТипПрайсЛистаТК</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаТипПрайсЛистаТККонтекстноеМеню" id="287"/>
+											<ExtendedTooltip name="ОтгрузкаТипПрайсЛистаТКРасширеннаяПодсказка" id="288"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОтгрузкаГруппаДатаОтгрузки" id="289">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа дата отгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа дата отгрузки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаДатаОтгрузкиРасширеннаяПодсказка" id="290"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаДниЗадержкиОтгрузки" id="291">
+											<DataPath>Объект.Отгрузка.ДниЗадержкиОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаДниЗадержкиОтгрузкиКонтекстноеМеню" id="292"/>
+											<ExtendedTooltip name="ОтгрузкаДниЗадержкиОтгрузкиРасширеннаяПодсказка" id="293"/>
+										</InputField>
+										<InputField name="ОтгрузкаДатаОтгрузки" id="294">
+											<DataPath>Объект.Отгрузка.ДатаОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаДатаОтгрузкиКонтекстноеМеню" id="295"/>
+											<ExtendedTooltip name="ОтгрузкаДатаОтгрузкиРасширеннаяПодсказка" id="296"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ОтгрузкаОтгрузил" id="313">
+									<DataPath>Объект.Отгрузка.Отгрузил</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ОтгрузкаСуммаКонтекстноеМеню" id="80"/>
-									<ExtendedTooltip name="ОтгрузкаСуммаРасширеннаяПодсказка" id="81"/>
-								</InputField>
-								<InputField name="ОтгрузкаВалюта" id="82">
-									<DataPath>Объект.Отгрузка.Валюта</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ОтгрузкаВалютаКонтекстноеМеню" id="83"/>
-									<ExtendedTooltip name="ОтгрузкаВалютаРасширеннаяПодсказка" id="84"/>
-								</InputField>
-								<InputField name="ОтгрузкаКонтрагент" id="85">
-									<DataPath>Объект.Отгрузка.Контрагент</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ОтгрузкаКонтрагентКонтекстноеМеню" id="86"/>
-									<ExtendedTooltip name="ОтгрузкаКонтрагентРасширеннаяПодсказка" id="87"/>
-								</InputField>
-								<InputField name="ОтгрузкаСклад" id="88">
-									<DataPath>Объект.Отгрузка.Склад</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ОтгрузкаСкладКонтекстноеМеню" id="89"/>
-									<ExtendedTooltip name="ОтгрузкаСкладРасширеннаяПодсказка" id="90"/>
+									<ContextMenu name="ОтгрузкаОтгрузилКонтекстноеМеню" id="314"/>
+									<ExtendedTooltip name="ОтгрузкаОтгрузилРасширеннаяПодсказка" id="315"/>
 								</InputField>
 							</ChildItems>
 						</Table>
