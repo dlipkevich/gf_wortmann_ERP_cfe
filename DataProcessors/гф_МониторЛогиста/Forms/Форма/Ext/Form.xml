@@ -592,6 +592,11 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ОтгрузкаВывестиСписокРасширеннаяПодсказка" id="227"/>
 										</Button>
+										<Button name="ИзменитьСтатусыРО" id="316">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИзменитьСтатусыРО</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусыРОРасширеннаяПодсказка" id="317"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -1181,24 +1186,302 @@
 									<ContextMenu name="ПеремещениеФлагКонтекстноеМеню" id="118"/>
 									<ExtendedTooltip name="ПеремещениеФлагРасширеннаяПодсказка" id="119"/>
 								</CheckBoxField>
+								<ColumnGroup name="ПеремещениеГруппаДокумент" id="318">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа документ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаДокументРасширеннаяПодсказка" id="319"/>
+									<ChildItems>
+										<ColumnGroup name="ПеремещениеГруппаДатаНомер" id="320">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа дата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа дата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПеремещениеГруппаДатаНомерРасширеннаяПодсказка" id="321"/>
+											<ChildItems>
+												<InputField name="ПеремещениеДата" id="322">
+													<DataPath>Объект.Перемещение.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеДатаКонтекстноеМеню" id="323"/>
+													<ExtendedTooltip name="ПеремещениеДатаРасширеннаяПодсказка" id="324"/>
+												</InputField>
+												<InputField name="ПеремещениеНомер" id="325">
+													<DataPath>Объект.Перемещение.Номер</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеНомерКонтекстноеМеню" id="326"/>
+													<ExtendedTooltip name="ПеремещениеНомерРасширеннаяПодсказка" id="327"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ПеремещениеГруппаДокументСтатус" id="346">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа документ статус</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа документ статус</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПеремещениеГруппаДокументСтатусРасширеннаяПодсказка" id="347"/>
+											<ChildItems>
+												<InputField name="ПеремещениеТипДокумента" id="328">
+													<DataPath>Объект.Перемещение.ТипДокумента</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документ</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеТипДокументаКонтекстноеМеню" id="329"/>
+													<ExtendedTooltip name="ПеремещениеТипДокументаРасширеннаяПодсказка" id="330"/>
+												</InputField>
+												<InputField name="ПеремещениеСтатус" id="348">
+													<DataPath>Объект.Перемещение.Статус</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеСтатусКонтекстноеМеню" id="349"/>
+													<ExtendedTooltip name="ПеремещениеСтатусРасширеннаяПодсказка" id="350"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="ПеремещениеДокумент" id="120">
 									<DataPath>Объект.Перемещение.Документ</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПеремещениеДокументКонтекстноеМеню" id="121"/>
 									<ExtendedTooltip name="ПеремещениеДокументРасширеннаяПодсказка" id="122"/>
 								</InputField>
-								<InputField name="ПеремещениеСкладОтправитель" id="123">
-									<DataPath>Объект.Перемещение.СкладОтправитель</DataPath>
+								<ColumnGroup name="ПеремещениеГруппаРО" id="333">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа РО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа РО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаРОРасширеннаяПодсказка" id="334"/>
+									<ChildItems>
+										<ColumnGroup name="ПеремещениеГруппаРОДатаНомер" id="335">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа РОДата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа РОДата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПеремещениеГруппаРОДатаНомерРасширеннаяПодсказка" id="336"/>
+											<ChildItems>
+												<InputField name="ПеремещениеНомерРО" id="340">
+													<DataPath>Объект.Перемещение.НомерРО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеНомерРОКонтекстноеМеню" id="341"/>
+													<ExtendedTooltip name="ПеремещениеНомерРОРасширеннаяПодсказка" id="342"/>
+												</InputField>
+												<InputField name="ПеремещениеДатаРО" id="337">
+													<DataPath>Объект.Перемещение.ДатаРО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеДатаРОКонтекстноеМеню" id="338"/>
+													<ExtendedTooltip name="ПеремещениеДатаРОРасширеннаяПодсказка" id="339"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ПеремещениеСтатусРО" id="343">
+											<DataPath>Объект.Перемещение.СтатусРО</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеСтатусРОКонтекстноеМеню" id="344"/>
+											<ExtendedTooltip name="ПеремещениеСтатусРОРасширеннаяПодсказка" id="345"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ПеремещениеРасходныйОрдер" id="351">
+									<DataPath>Объект.Перемещение.РасходныйОрдер</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПеремещениеСкладОтправительКонтекстноеМеню" id="124"/>
-									<ExtendedTooltip name="ПеремещениеСкладОтправительРасширеннаяПодсказка" id="125"/>
+									<ContextMenu name="ПеремещениеРасходныйОрдерКонтекстноеМеню" id="352"/>
+									<ExtendedTooltip name="ПеремещениеРасходныйОрдерРасширеннаяПодсказка" id="353"/>
 								</InputField>
-								<InputField name="ПеремещениеСкладПолучатель" id="126">
-									<DataPath>Объект.Перемещение.СкладПолучатель</DataPath>
+								<ColumnGroup name="ПеремещениеГруппаПО" id="354">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа ПО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа ПО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаПОРасширеннаяПодсказка" id="355"/>
+									<ChildItems>
+										<ColumnGroup name="ПеремещениеГруппаПОДатаНомер" id="356">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа ПОДата номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Перемещение группа ПОДата номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПеремещениеГруппаПОДатаНомерРасширеннаяПодсказка" id="357"/>
+											<ChildItems>
+												<InputField name="ПеремещениеДатаПО" id="361">
+													<DataPath>Объект.Перемещение.ДатаПО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеДатаПОКонтекстноеМеню" id="362"/>
+													<ExtendedTooltip name="ПеремещениеДатаПОРасширеннаяПодсказка" id="363"/>
+												</InputField>
+												<InputField name="ПеремещениеНомерПО" id="364">
+													<DataPath>Объект.Перемещение.НомерПО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПеремещениеНомерПОКонтекстноеМеню" id="365"/>
+													<ExtendedTooltip name="ПеремещениеНомерПОРасширеннаяПодсказка" id="366"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ПеремещениеСтатусПО" id="367">
+											<DataPath>Объект.Перемещение.СтатусПО</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеСтатусПОКонтекстноеМеню" id="368"/>
+											<ExtendedTooltip name="ПеремещениеСтатусПОРасширеннаяПодсказка" id="369"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ПеремещениеПриходныйОрдер" id="358">
+									<DataPath>Объект.Перемещение.ПриходныйОрдер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПеремещениеСкладПолучательКонтекстноеМеню" id="127"/>
-									<ExtendedTooltip name="ПеремещениеСкладПолучательРасширеннаяПодсказка" id="128"/>
+									<ContextMenu name="ПеремещениеПриходныйОрдерКонтекстноеМеню" id="359"/>
+									<ExtendedTooltip name="ПеремещениеПриходныйОрдерРасширеннаяПодсказка" id="360"/>
 								</InputField>
+								<ColumnGroup name="ПеремещениеГруппаСклады" id="331">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа склады</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа склады</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаСкладыРасширеннаяПодсказка" id="332"/>
+									<ChildItems>
+										<InputField name="ПеремещениеСкладОтправитель" id="123">
+											<DataPath>Объект.Перемещение.СкладОтправитель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеСкладОтправительКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ПеремещениеСкладОтправительРасширеннаяПодсказка" id="125"/>
+										</InputField>
+										<InputField name="ПеремещениеСкладПолучатель" id="126">
+											<DataPath>Объект.Перемещение.СкладПолучатель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеСкладПолучательКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="ПеремещениеСкладПолучательРасширеннаяПодсказка" id="128"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПеремещениеГруппаДаты" id="370">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа даты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа даты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаДатыРасширеннаяПодсказка" id="371"/>
+									<ChildItems>
+										<InputField name="ПеремещениеДатаОтгрузки" id="374">
+											<DataPath>Объект.Перемещение.ДатаОтгрузки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеДатаОтгрузкиКонтекстноеМеню" id="375"/>
+											<ExtendedTooltip name="ПеремещениеДатаОтгрузкиРасширеннаяПодсказка" id="376"/>
+										</InputField>
+										<InputField name="ПеремещениеДатаОприходования" id="377">
+											<DataPath>Объект.Перемещение.ДатаОприходования</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеДатаОприходованияКонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="ПеремещениеДатаОприходованияРасширеннаяПодсказка" id="379"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПеремещениеГруппаОприходовалОтпустил" id="372">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа даты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа даты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаОприходовалОтпустилРасширеннаяПодсказка" id="373"/>
+									<ChildItems>
+										<InputField name="ПеремещениеОтгрузил" id="380">
+											<DataPath>Объект.Перемещение.Отгрузил</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеОтгрузилКонтекстноеМеню" id="381"/>
+											<ExtendedTooltip name="ПеремещениеОтгрузилРасширеннаяПодсказка" id="382"/>
+										</InputField>
+										<InputField name="ПеремещениеОприходовал" id="383">
+											<DataPath>Объект.Перемещение.Оприходовал</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеОприходовалКонтекстноеМеню" id="384"/>
+											<ExtendedTooltip name="ПеремещениеОприходовалРасширеннаяПодсказка" id="385"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -1336,6 +1619,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьСтатусыПО</Action>
+		</Command>
+		<Command name="ИзменитьСтатусыРО" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить статусы РО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить статусы РО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьСтатусыРО</Action>
 		</Command>
 	</Commands>
 </Form>
