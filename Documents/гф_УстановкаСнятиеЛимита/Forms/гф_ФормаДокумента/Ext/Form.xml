@@ -4,12 +4,20 @@
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Статус" id="10">
 			<DataPath>Объект.Статус</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<DropListButton>true</DropListButton>
+			<Width>16</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<DropListButton>false</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 			<OpenButton>false</OpenButton>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 			<ContextMenu name="СтатусКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="12"/>
 			<Events>
@@ -94,6 +102,9 @@
 									<BackColor>style:ЦветФонаВыделения</BackColor>
 									<ContextMenu name="ВидОперацииКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ВидОперацииПриИзменении</Event>
+									</Events>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>

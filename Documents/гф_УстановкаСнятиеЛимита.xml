@@ -29,6 +29,7 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>864531b3-f806-4719-8fc5-cd08b849bbcc</ExtendedConfigurationObject>
 			<DefaultObjectForm>Document.гф_УстановкаСнятиеЛимита.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_УстановкаСнятиеЛимита.Form.гф_ФормаСписка</DefaultListForm>
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
@@ -138,6 +139,30 @@
 				</Properties>
 			</Attribute>
 			<Form>гф_ФормаДокумента</Form>
+			<Form>гф_ФормаСписка</Form>
+			<Command uuid="52794990-d13e-4103-bb18-e02ea0a6066f">
+				<Properties>
+					<Name>гф_ЛимитыКонтрагентов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лимиты контрагентов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
