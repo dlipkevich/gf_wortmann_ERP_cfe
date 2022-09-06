@@ -28,6 +28,8 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>a4c5be1b-d7d6-49d6-b884-d38087c77e38</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_БлокировкаРазблокировкаОтгрузок.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_БлокировкаРазблокировкаОтгрузок.Form.гф_ФормаСписка</DefaultListForm>
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
@@ -174,6 +176,31 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Form>гф_ФормаДокумента</Form>
+			<Form>гф_ФормаСписка</Form>
+			<Command uuid="2c63fd4f-e85c-497a-8c1b-7c3fe9faa64e">
+				<Properties>
+					<Name>гф_Блокировки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Блокировки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelGoTo</Group>
+					<CommandParameterType>
+						<v8:TypeId>4ab90c09-637d-4b5a-803e-3fd214870c9c</v8:TypeId>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
