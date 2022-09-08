@@ -136,6 +136,7 @@
 			<Form>ФормаВыбора</Form>
 			<Form>ФормаДокумента</Form>
 			<Form>гф_ФормаЗагрузкиИзЕксель</Form>
+			<Form>гф_ФормаПросмотраУЛ</Form>
 			<TabularSection uuid="e20fd6be-378f-4e85-a0df-08350ecd7cc3">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ЗаказКлиента.Товары" category="TabularSection">
@@ -525,7 +526,42 @@
 							</Type>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="3f61b6a9-fe7c-43f6-943e-464aabde1799">
+						<InternalInfo/>
+						<Properties>
+							<Name>ИдентификаторСтроки</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>3c711f5b-7e7b-4654-b641-449303a42d59</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>36</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="a622190f-bb5a-4f61-9293-7dcbe8424869">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЗаказКлиента.гф_УпаковочныеЛисты" category="TabularSection">
+						<xr:TypeId>18bc0797-971f-449e-9697-8e1aeebfcd5d</xr:TypeId>
+						<xr:ValueId>e4e036bd-8785-4c52-b5b9-51f52910f258</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЗаказКлиента.гф_УпаковочныеЛисты" category="TabularSectionRow">
+						<xr:TypeId>dab40446-9b6c-430e-832b-8af662649322</xr:TypeId>
+						<xr:ValueId>0f72912d-a552-4e4e-ab04-73aa8919a209</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_УпаковочныеЛисты</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>729317b7-6964-4b07-b2fe-202f83baeaae</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
 			</TabularSection>
 		</ChildObjects>
 	</Document>
