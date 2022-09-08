@@ -82,7 +82,6 @@
 					</Button>
 					<Button name="БлокировкаУстановитьЗначения" id="71">
 						<Type>CommandBarButton</Type>
-						<Visible>false</Visible>
 						<CommandName>Form.Command.УстановитьЗначения</CommandName>
 						<ExtendedTooltip name="БлокировкаУстановитьЗначенияРасширеннаяПодсказка" id="72"/>
 					</Button>
@@ -132,7 +131,10 @@
 				<ExtendedTooltip name="БлокировкаУправлениеПоискомРасширеннаяПодсказка" id="16"/>
 			</SearchControlAddition>
 			<Events>
+				<Event name="OnEditEnd">БлокировкаПриОкончанииРедактирования</Event>
+				<Event name="BeforeEditEnd">БлокировкаПередОкончаниемРедактирования</Event>
 				<Event name="OnActivateField">БлокировкаПриАктивизацииПоля</Event>
+				<Event name="OnActivateCell">БлокировкаПриАктивизацииЯчейки</Event>
 			</Events>
 			<ChildItems>
 				<CheckBoxField name="БлокировкаФлаг" id="50">
@@ -153,12 +155,18 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="БлокировкаОрганизацияКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="БлокировкаОрганизацияРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="TextEditEnd">БлокировкаОрганизацияОкончаниеВводаТекста</Event>
+					</Events>
 				</InputField>
 				<InputField name="БлокировкаДоговорКонтрагента" id="26">
 					<DataPath>Объект.Блокировка.ДоговорКонтрагента</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="БлокировкаДоговорКонтрагентаКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="БлокировкаДоговорКонтрагентаРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="StartChoice">БлокировкаДоговорКонтрагентаНачалоВыбора</Event>
+					</Events>
 				</InputField>
 				<InputField name="БлокировкаВидБлокировки" id="29">
 					<DataPath>Объект.Блокировка.ВидБлокировки</DataPath>
@@ -226,6 +234,21 @@
 				<v8:DateQualifiers>
 					<v8:DateFractions>Date</v8:DateFractions>
 				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеВвода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле ввода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
