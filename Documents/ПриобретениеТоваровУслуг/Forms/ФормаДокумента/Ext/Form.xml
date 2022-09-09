@@ -1092,6 +1092,9 @@
 											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 											<ContextMenu name="СкладКонтекстноеМеню" id="18"/>
 											<ExtendedTooltip name="СкладExtendedTooltip" id="1037"/>
+											<Events>
+												<Event name="OnChange" callType="After">гф_СкладПриИзмененииПосле</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
