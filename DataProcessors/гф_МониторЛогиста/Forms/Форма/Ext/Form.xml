@@ -3,6 +3,13 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСоздатьЗаявкиНаДоставку" id="392">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьЗаявкиНаДоставку</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьЗаявкиНаДоставкуРасширеннаяПодсказка" id="393"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -1662,6 +1669,26 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзменитьСтатусыРО</Action>
+		</Command>
+		<Command name="СоздатьЗаявкиНаДоставку" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать заявки на доставку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать заявки на доставку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЭлектронноеПисьмоИсходящее</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьЗаявкиНаДоставку</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
