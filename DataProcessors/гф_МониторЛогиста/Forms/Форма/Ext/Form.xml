@@ -4,10 +4,10 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ФормаСоздатьЗаявкиНаДоставку" id="392">
+			<Button name="ФормаСоздатьЗаявкиНаДоставку" id="407">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.СоздатьЗаявкиНаДоставку</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьЗаявкиНаДоставкуРасширеннаяПодсказка" id="393"/>
+				<ExtendedTooltip name="ФормаСоздатьЗаявкиНаДоставкуРасширеннаяПодсказка" id="408"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -191,6 +191,11 @@
 											</Picture>
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ПоставкаВывестиСписокРасширеннаяПодсказка" id="225"/>
+										</Button>
+										<Button name="СоздатьПО" id="397">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СоздатьПО</CommandName>
+											<ExtendedTooltip name="СоздатьПОРасширеннаяПодсказка" id="398"/>
 										</Button>
 										<Button name="ИзменитьСтатусыПО" id="230">
 											<Type>CommandBarButton</Type>
@@ -428,7 +433,7 @@
 											<ExtendedTooltip name="ПоставкаКонтрагентРасширеннаяПодсказка" id="43"/>
 										</InputField>
 										<InputField name="ПоставкаСклад" id="44">
-											<DataPath>Объект.Поставка.Склад</DataPath>
+											<DataPath>Объект.Поставка.СкладПолучатель</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПоставкаСкладКонтекстноеМеню" id="45"/>
 											<ExtendedTooltip name="ПоставкаСкладРасширеннаяПодсказка" id="46"/>
@@ -489,6 +494,12 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПоставкаОприходовалКонтекстноеМеню" id="208"/>
 									<ExtendedTooltip name="ПоставкаОприходовалРасширеннаяПодсказка" id="209"/>
+								</InputField>
+								<InputField name="ПоставкаХозяйственнаяОперация" id="401">
+									<DataPath>Объект.Поставка.ХозяйственнаяОперация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПоставкаХозяйственнаяОперацияКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="ПоставкаХозяйственнаяОперацияРасширеннаяПодсказка" id="403"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1133,6 +1144,11 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ПеремещениеВывестиСписокРасширеннаяПодсказка" id="229"/>
 										</Button>
+										<Button name="СоздатьПО1" id="399">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СоздатьПО</CommandName>
+											<ExtendedTooltip name="СоздатьПО1РасширеннаяПодсказка" id="400"/>
+										</Button>
 										<ButtonGroup name="ГруппаПеремещениеИзменитьСтатусы" id="390">
 											<Title>
 												<v8:item>
@@ -1371,12 +1387,6 @@
 									<ContextMenu name="ПеремещениеРасходныйОрдерКонтекстноеМеню" id="352"/>
 									<ExtendedTooltip name="ПеремещениеРасходныйОрдерРасширеннаяПодсказка" id="353"/>
 								</InputField>
-								<InputField name="ПеремещениеТК" id="394">
-									<DataPath>Объект.Перемещение.ТК</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПеремещениеТККонтекстноеМеню" id="395"/>
-									<ExtendedTooltip name="ПеремещениеТКРасширеннаяПодсказка" id="396"/>
-								</InputField>
 								<ColumnGroup name="ПеремещениеГруппаПО" id="354">
 									<Title>
 										<v8:item>
@@ -1465,6 +1475,29 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<ColumnGroup name="ПеремещениеГруппаТК" id="392">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа ТК</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа ТК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаТКРасширеннаяПодсказка" id="393"/>
+									<ChildItems>
+										<InputField name="ПеремещениеТК" id="394">
+											<DataPath>Объект.Перемещение.ТК</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеТККонтекстноеМеню" id="395"/>
+											<ExtendedTooltip name="ПеремещениеТКРасширеннаяПодсказка" id="396"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<ColumnGroup name="ПеремещениеГруппаДаты" id="370">
 									<Title>
 										<v8:item>
@@ -1523,6 +1556,12 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<InputField name="ПеремещениеХозяйственнаяОперация" id="404">
+									<DataPath>Объект.Перемещение.ХозяйственнаяОперация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПеремещениеХозяйственнаяОперацияКонтекстноеМеню" id="405"/>
+									<ExtendedTooltip name="ПеремещениеХозяйственнаяОперацияРасширеннаяПодсказка" id="406"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -1676,7 +1715,22 @@
 			</ToolTip>
 			<Action>ИзменитьСтатусыРО</Action>
 		</Command>
-		<Command name="СоздатьЗаявкиНаДоставку" id="7">
+		<Command name="СоздатьПО" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ПО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ПО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПО</Action>
+		</Command>
+		<Command name="СоздатьЗаявкиНаДоставку" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
