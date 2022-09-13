@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<InformationRegister uuid="7dd191fd-1afa-4845-90e6-3ef8f41d6079">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ИсторияСтатусовПриходныхОрдеров" category="Record">
+				<xr:TypeId>b5c623e9-408d-4ad1-a873-8d886a15b574</xr:TypeId>
+				<xr:ValueId>584c2def-fe50-421c-82e7-11451c9d376c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ИсторияСтатусовПриходныхОрдеров" category="Manager">
+				<xr:TypeId>555e2384-7bc0-4cbb-8b46-5cafc291f4a5</xr:TypeId>
+				<xr:ValueId>977c331c-2ae0-4a4f-8b78-16293546a6de</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ИсторияСтатусовПриходныхОрдеров" category="Selection">
+				<xr:TypeId>19bff288-641c-4651-bf39-3712561f5063</xr:TypeId>
+				<xr:ValueId>e6c95ef3-d2f1-4d06-b240-0bcf0718417c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ИсторияСтатусовПриходныхОрдеров" category="List">
+				<xr:TypeId>f5fbfcd5-9d7c-45fe-853d-d39a1d5125b5</xr:TypeId>
+				<xr:ValueId>2135a0de-23c4-4225-96cd-46317cf1baac</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ИсторияСтатусовПриходныхОрдеров" category="RecordSet">
+				<xr:TypeId>31ce460d-257d-4c9a-9465-3b552c2904d9</xr:TypeId>
+				<xr:ValueId>6efd9921-7e8c-4e68-acd2-94813e3a54b3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ИсторияСтатусовПриходныхОрдеров" category="RecordKey">
+				<xr:TypeId>407999e4-38f2-4c06-b3d9-a078052edd9f</xr:TypeId>
+				<xr:ValueId>2c8108fa-a90e-43be-8cdc-b4b1cbaa9d8a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ИсторияСтатусовПриходныхОрдеров" category="RecordManager">
+				<xr:TypeId>12cda35c-8307-4e2c-ae0d-0fee2c7b2f03</xr:TypeId>
+				<xr:ValueId>a3a139bf-43dd-4a9a-bfff-7b111db0031f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ИсторияСтатусовПриходныхОрдеров</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>db8b7b19-1a7c-42f8-aca8-358b9213ca89</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="f3d27f14-9ee3-42c1-be86-fc11c1b33353">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>41dc6358-3cf9-4483-839e-0bdb7edaade1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыПриходныхОрдеров</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="4294e35e-a6e8-40d3-9a2c-3d2ce849603b">
+				<InternalInfo/>
+				<Properties>
+					<Name>Объект</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>41018d5e-89d7-456a-9067-0d8e35da2186</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйОрдерНаТовары</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
