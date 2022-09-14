@@ -4,17 +4,6 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Catalog.Контрагенты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.гф_СпецификацияПокупателя.Attribute.Договор</name>
 		<right>
 			<name>View</name>
@@ -45,6 +34,17 @@
 	</object>
 	<object>
 		<name>Document.гф_СпецификацияПокупателя.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_СпецификацияПокупателя.Attribute.Партнер</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -254,36 +254,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.ДоговорыКонтрагентов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ЗаказКлиента</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.СтруктураПредприятия</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Партнеры</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -363,17 +334,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Пользователи</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.гф_СпецификацияПокупателя.TabularSection.ЗаказыКлиентов.Attribute.ЗаказКлиента</name>
 		<right>
 			<name>View</name>
@@ -392,17 +352,6 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Организации</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
