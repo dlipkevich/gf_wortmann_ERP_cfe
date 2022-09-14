@@ -28,6 +28,16 @@
 				<CommandName>Form.Command.История</CommandName>
 				<ExtendedTooltip name="ФормаИсторияРасширеннаяПодсказка" id="56"/>
 			</Button>
+			<Button name="ФормаОтключитьИсторию" id="65">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОтключитьИсторию</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Stop</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаОтключитьИсториюРасширеннаяПодсказка" id="66"/>
+			</Button>
 			<Button name="ФормаНастройкаСписка" id="61">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
@@ -276,6 +286,21 @@
 			</Picture>
 			<Action>История</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтключитьИсторию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить историю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьИсторию</Action>
 		</Command>
 	</Commands>
 </Form>
