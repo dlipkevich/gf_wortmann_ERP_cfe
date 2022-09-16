@@ -4,22 +4,18 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Catalog.Контрагенты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
+		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Комментарий</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
 	</object>
 	<object>
-		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Комментарий</name>
+		<name>Report.гф_ЕженедельныйОтчетПоКоличествуЗаказов</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -29,7 +25,7 @@
 		<name>InformationRegister.гф_ЛимитыКонтрагентов</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -40,10 +36,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -113,7 +105,7 @@
 		<name>Document.гф_УстановкаСнятиеЛимита</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -124,14 +116,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -166,21 +150,6 @@
 		<name>Document.гф_УстановкаСнятиеЛимита.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.гф_ВидыЛимитов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -248,19 +217,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "РегистрСведений.гф_ЗаказКлиента","Чтение","",
+"Организации","Организация",
+"ГруппыПартнеров","Партнер",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Configuration.гф_ОсновныеДоработки</name>
-		<right>
-			<name>ThinClient</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>WebClient</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>MobileClient</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>
@@ -283,29 +261,6 @@
 		</right>
 		<right>
 			<name>AnalyticsSystemClient</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>SaveUserData</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Output</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Пользователи</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -373,31 +328,9 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.гф_СтатусыЛимитов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Статус</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Организации</name>
-		<right>
-			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -410,17 +343,6 @@
 	</object>
 	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Ответственный</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.гф_Бюджеты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>

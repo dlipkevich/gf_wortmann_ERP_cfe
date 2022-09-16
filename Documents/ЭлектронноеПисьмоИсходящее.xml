@@ -74,6 +74,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="cdad5ea3-dce7-4ef2-87de-8cb5719c7bd8">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2ee0d56b-cd7c-42db-8fb6-c1567fe1967d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="b9698195-e816-42ac-8a56-1d5abcb977eb">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.ЭлектронноеПисьмоИсходящее.гф_ПрикрепленныеДокументы" category="TabularSection">
@@ -101,6 +113,38 @@
 							<ExtendedConfigurationObject>0bbf1ce2-30e8-4b3e-8b7c-33515184a9d4</ExtendedConfigurationObject>
 							<Type>
 								<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="2e5e0b29-c4cc-47f6-b20b-809c7dc46cb3">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма" category="TabularSection">
+						<xr:TypeId>8dfdbb70-a7c1-464f-bedc-7481faa85e59</xr:TypeId>
+						<xr:ValueId>1144026a-d951-4fd4-8ec9-073f8a0db9d0</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма" category="TabularSectionRow">
+						<xr:TypeId>dc541427-b987-432f-a1ed-4342e05a62a8</xr:TypeId>
+						<xr:ValueId>b669fa09-e0b3-4126-aef7-b36733a90ca7</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ПолучателиПисьма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>64c91eaa-084f-4801-8dbf-4e075c689c2b</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="210727d4-7c1a-430c-9d5f-31c8af955d50">
+						<InternalInfo/>
+						<Properties>
+							<Name>Контакт</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>3aa12805-823a-439b-b039-fb9940aee312</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
 							</Type>
 						</Properties>
 					</Attribute>
