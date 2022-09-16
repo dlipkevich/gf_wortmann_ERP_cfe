@@ -30,18 +30,30 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ЗаказКлиента.Организация КАК Организация,
 	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Ссылка) КАК ВсегоЗаказов,
-	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Партнер) КАК ВсегоКлиентов
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Партнер) КАК ВсегоКлиентов,
+	ЗаказКлиента.Ссылка КАК Регистратор
 ИЗ
 	Документ.ЗаказКлиента КАК ЗаказКлиента
 ГДЕ
 	ЗаказКлиента.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
 
 СГРУППИРОВАТЬ ПО
-	ЗаказКлиента.Организация</query>
+	ЗаказКлиента.Организация,
+	ЗаказКлиента.Ссылка</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных2</name>
@@ -69,11 +81,22 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ЗаказКлиента.Организация КАК Организация,
 	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Ссылка) КАК ВсегоПодтвержденныхЗаказов,
-	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Партнер) КАК ВсегоПодтвержденныхКлиентов
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаказКлиента.Партнер) КАК ВсегоПодтвержденныхКлиентов,
+	ЗаказКлиента.Ссылка КАК Регистратор
 ИЗ
 	Документ.ЗаказКлиента КАК ЗаказКлиента
 ГДЕ
@@ -81,10 +104,11 @@
 	И ЗаказКлиента.гф_СтатусРаботыСЗаказомИ5.Наименование = "Подтвержден"
 
 СГРУППИРОВАТЬ ПО
-	ЗаказКлиента.Организация</query>
+	ЗаказКлиента.Организация,
+	ЗаказКлиента.Ссылка</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных4</name>
+		<name>НаборДанных3</name>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВсегоОтправленныхПисем</dataPath>
 			<field>ВсегоОтправленныхПисем</field>
@@ -95,9 +119,20 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка) КАК ВсегоОтправленныхПисем
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка) КАК ВсегоОтправленныхПисем,
+	ЗаказКлиента.Ссылка КАК Регистратор
 ИЗ
 	Документ.ЗаказКлиента КАК ЗаказКлиента
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма КАК ЭлектронноеПисьмоИсходящееПолучателиПисьма
@@ -105,10 +140,13 @@
 ГДЕ
 	ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
 	И ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка.СтатусПисьма = ЗНАЧЕНИЕ(Перечисление.СтатусыИсходящегоЭлектронногоПисьма.Отправлено)
-	И ЗаказКлиента.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	И ЗаказКлиента.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ЗаказКлиента.Ссылка</query>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
-		<name>НаборДанных3</name>
+		<name>НаборДанных4</name>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВсегоПисем</dataPath>
 			<field>ВсегоПисем</field>
@@ -119,16 +157,30 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка) КАК ВсегоПисем
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка) КАК ВсегоПисем,
+	ЗаказКлиента.Ссылка КАК Регистратор
 ИЗ
 	Документ.ЗаказКлиента КАК ЗаказКлиента
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма КАК ЭлектронноеПисьмоИсходящееПолучателиПисьма
 		ПО ЗаказКлиента.Партнер = ЭлектронноеПисьмоИсходящееПолучателиПисьма.Контакт
 ГДЕ
 	ЭлектронноеПисьмоИсходящееПолучателиПисьма.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
-	И ЗаказКлиента.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	И ЗаказКлиента.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ЗаказКлиента.Ссылка</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
@@ -229,14 +281,6 @@
 		<expression>Сумма(ВсегоКлиентов)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ВсегоОтправленныхПисем</dataPath>
-		<expression>Сумма(ВсегоОтправленныхПисем)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ВсегоПисем</dataPath>
-		<expression>Сумма(ВсегоПисем)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>ВсегоПодтвержденныхЗаказов</dataPath>
 		<expression>Сумма(ВсегоПодтвержденныхЗаказов)</expression>
 	</totalField>
@@ -320,7 +364,7 @@
 			<dcsat:item xsi:type="dcsat:TableRow">
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
-						<dcsat:value xsi:type="dcscor:Parameter">Организация</dcsat:value>
+						<dcsat:value xsi:type="dcscor:Parameter">Регистратор</dcsat:value>
 					</dcsat:item>
 					<dcsat:appearance>
 						<dcscor:item>
@@ -1036,10 +1080,6 @@
 			</dcsat:item>
 		</template>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
-			<dcsat:name>Организация</dcsat:name>
-			<dcsat:expression>Представление(Организация)</dcsat:expression>
-		</parameter>
-		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
 			<dcsat:name>ВсегоЗаказов</dcsat:name>
 			<dcsat:expression>ВсегоЗаказов</dcsat:expression>
 		</parameter>
@@ -1089,7 +1129,15 @@
 		</parameter>
 		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
 			<dcsat:name>РасшифровкаВсегоЗаказов</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>ВсегоПисем</dcsat:field>
+				<dcsat:expression>Ссылка</dcsat:expression>
+			</dcsat:fieldExpression>
 			<dcsat:mainAction>DrillDown</dcsat:mainAction>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Регистратор</dcsat:name>
+			<dcsat:expression>Представление(Регистратор)</dcsat:expression>
 		</parameter>
 	</template>
 	<template>
@@ -2146,38 +2194,122 @@
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПроцентЗаказов</dcsset:field>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоЗаказов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>всего</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоПодтвержденныхЗаказов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>подтвержденные</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентЗаказов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПроцентКлиентов</dcsset:field>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиенты</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоКлиентов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>всего</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоПодтвержденныхКлиентов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>все заказы подтверждены</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентКлиентов</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>%</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПроцентПисем</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПроцентСформированныхПисем</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоЗаказов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоКлиентов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоОтправленныхПисем</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоПисем</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоПодтвержденныхЗаказов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВсегоПодтвержденныхКлиентов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Организация</dcsset:field>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Письма</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоПисем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>сформированные</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентСформированныхПисем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>"% (сформированные от должно быть сформировано)"</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВсегоОтправленныхПисем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>отправленные</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентПисем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>"% (отправленные от сформированные)"</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
@@ -2215,29 +2347,49 @@
 					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:name>Заголовок</dcsset:name>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:outputParameters>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ВариантИспользованияГруппировки</dcscor:parameter>
-						<dcscor:value xsi:type="dcsset:DataCompositionGroupUseVariant">AdditionalInformation</dcscor:value>
-					</dcscor:item>
-				</dcsset:outputParameters>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
-					<dcsset:name>Строка</dcsset:name>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
-				</dcsset:item>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Регистратор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
