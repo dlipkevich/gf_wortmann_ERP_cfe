@@ -169,9 +169,13 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ЗаблокированКонтекстноеМеню" id="66"/>
 							<ExtendedTooltip name="ЗаблокированРасширеннаяПодсказка" id="67"/>
+							<Events>
+								<Event name="OnChange">ЗаблокированПриИзменении</Event>
+							</Events>
 						</CheckBoxField>
 						<CheckBoxField name="Исключения" id="68">
 							<DataPath>Объект.Исключения</DataPath>
+							<Visible>false</Visible>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ИсключенияКонтекстноеМеню" id="69"/>
