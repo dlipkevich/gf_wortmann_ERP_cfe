@@ -31,6 +31,70 @@
 			<DefaultObjectForm>Catalog.гф_ВидыБлокировок.Form.гф_ФормаЭлемента</DefaultObjectForm>
 		</Properties>
 		<ChildObjects>
+			<TabularSection uuid="e3a508a6-3c4a-483b-a761-e5f32efc368b">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.гф_ВидыБлокировок.БлокируемыТипыДокументов" category="TabularSection">
+						<xr:TypeId>5f65a550-116e-4dfa-930a-ef9012d59a81</xr:TypeId>
+						<xr:ValueId>a97e1277-4ce7-43bd-99eb-1a0e9e472531</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.гф_ВидыБлокировок.БлокируемыТипыДокументов" category="TabularSectionRow">
+						<xr:TypeId>0735cf2d-5bd5-4a9c-b0a5-ff01c7fdc8c0</xr:TypeId>
+						<xr:ValueId>154cae4e-94f5-43b7-b74c-7bd939434734</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>БлокируемыТипыДокументов</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c5b02bb9-6afd-4217-a8c3-b2ce0ecd6686</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="6f698f3e-cf6b-40fe-b194-f981f08d7f1b">
+						<InternalInfo/>
+						<Properties>
+							<Name>ТипДокументов</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>3d8044c4-cb57-4d9f-99b8-6a08c9a12e10</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.гф_ТипыБлокируемыхДокументов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="0af2d08d-ef7f-4ead-9c3f-311e32d5f09b">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.гф_ВидыБлокировок.БлокируемыТипыЛимитов" category="TabularSection">
+						<xr:TypeId>eefa4fe3-ec80-44b8-8f03-78dfb6d33f46</xr:TypeId>
+						<xr:ValueId>2d25386c-3043-4dca-bf84-9494e2fb9397</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.гф_ВидыБлокировок.БлокируемыТипыЛимитов" category="TabularSectionRow">
+						<xr:TypeId>b7e6c134-eeca-4dcb-9cd1-8dbf64b44f93</xr:TypeId>
+						<xr:ValueId>0a91fbb8-1ad3-4c27-8d29-cf0a1b2f0130</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>БлокируемыТипыЛимитов</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bc2b77d3-049a-4d6d-94bd-395157913b1a</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="935426b7-fd53-47a5-a1c6-8100a8618712">
+						<InternalInfo/>
+						<Properties>
+							<Name>ТипЛимита</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>65426a71-f483-4ca7-bfac-bc7465eda184</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.гф_ТипыЛимитов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>гф_ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
