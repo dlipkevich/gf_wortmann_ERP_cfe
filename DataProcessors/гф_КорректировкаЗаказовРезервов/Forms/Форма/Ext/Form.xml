@@ -18,6 +18,11 @@
 				<CommandName>Form.Command.СкрытьОтборы</CommandName>
 				<ExtendedTooltip name="ФормаСкрытьОтборыРасширеннаяПодсказка" id="105"/>
 			</Button>
+			<Button name="ФормаЗакрытьСезон" id="418">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьСезон</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьСезонРасширеннаяПодсказка" id="419"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -655,11 +660,6 @@
 										<CommandName>Form.Command.УдалитьСтрокуВКоробах</CommandName>
 										<ExtendedTooltip name="ТоварыВКоробахУдалитьСтрокуВКоробахРасширеннаяПодсказка" id="202"/>
 									</Button>
-									<Button name="ТоварыВКоробахЗагрузитьИзExcel" id="203">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ЗагрузитьИзExcel</CommandName>
-										<ExtendedTooltip name="ТоварыВКоробахЗагрузитьИзExcelРасширеннаяПодсказка" id="204"/>
-									</Button>
 									<Popup name="ТоварыВКоробахГруппа1" id="412">
 										<Title>
 											<v8:item>
@@ -693,6 +693,11 @@
 											</Button>
 										</ChildItems>
 									</Popup>
+									<Button name="ТоварыВКоробахЗагрузитьИзExcel" id="203">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьИзExcel</CommandName>
+										<ExtendedTooltip name="ТоварыВКоробахЗагрузитьИзExcelРасширеннаяПодсказка" id="204"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТоварыВКоробахРасширеннаяПодсказка" id="138"/>
@@ -2904,6 +2909,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПричинуУдаленияКороба</Action>
+		</Command>
+		<Command name="ЗакрытьСезон" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть сезон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть сезон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьСезон</Action>
 		</Command>
 	</Commands>
 </Form>
