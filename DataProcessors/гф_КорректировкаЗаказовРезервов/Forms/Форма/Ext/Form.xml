@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<Title>
-		<v8:item>
-			<v8:lang>ru</v8:lang>
-			<v8:content>Корректировка заказов и резервов</v8:content>
-		</v8:item>
-	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
@@ -86,7 +80,7 @@
 								<Presentation>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>На согласовании</v8:content>
+										<v8:content>Первоначальная версия</v8:content>
 									</v8:item>
 								</Presentation>
 								<Value xsi:type="xs:decimal">0</Value>
@@ -99,7 +93,7 @@
 								<Presentation>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>К выполнению</v8:content>
+										<v8:content>Отправлено на фабрику</v8:content>
 									</v8:item>
 								</Presentation>
 								<Value xsi:type="xs:decimal">1</Value>
@@ -235,6 +229,7 @@
 								</InputField>
 								<InputField name="отборСтатус" id="30">
 									<DataPath>отборСтатус</DataPath>
+									<Enabled>false</Enabled>
 									<ContextMenu name="отборСтатусКонтекстноеМеню" id="31"/>
 									<ExtendedTooltip name="отборСтатусРасширеннаяПодсказка" id="32"/>
 									<Events>
@@ -665,6 +660,39 @@
 										<CommandName>Form.Command.ЗагрузитьИзExcel</CommandName>
 										<ExtendedTooltip name="ТоварыВКоробахЗагрузитьИзExcelРасширеннаяПодсказка" id="204"/>
 									</Button>
+									<Popup name="ТоварыВКоробахГруппа1" id="412">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ТоварыВКоробахГруппа1РасширеннаяПодсказка" id="413"/>
+										<ChildItems>
+											<Button name="ТоварыВКоробахЗаполнитьПричинуДобавленияКороба" id="414">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПричинуДобавленияКороба</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Причину добавления</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ТоварыВКоробахЗаполнитьПричинуДобавленияКоробаРасширеннаяПодсказка" id="415"/>
+											</Button>
+											<Button name="ТоварыВКоробахЗаполнитьПричинуУдаленияКороба" id="416">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПричинуУдаленияКороба</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Причину отмены</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ТоварыВКоробахЗаполнитьПричинуУдаленияКоробаРасширеннаяПодсказка" id="417"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТоварыВКоробахРасширеннаяПодсказка" id="138"/>
@@ -697,6 +725,20 @@
 								<Event name="BeforeRowChange">ТоварыВКоробахПередНачаломИзменения</Event>
 							</Events>
 							<ChildItems>
+								<CheckBoxField name="ТоварыВКоробахПометка" id="409">
+									<DataPath>Объект.ТоварыВКоробах.Пометка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>V</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТоварыВКоробахПометкаКонтекстноеМеню" id="410"/>
+									<ExtendedTooltip name="ТоварыВКоробахПометкаРасширеннаяПодсказка" id="411"/>
+								</CheckBoxField>
 								<LabelField name="ТоварыВКоробахНомерСтроки" id="148">
 									<DataPath>Объект.ТоварыВКоробах.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -796,8 +838,16 @@
 										<Event name="OnChange">ТоварыВКоробахДобавитьПриИзменении</Event>
 									</Events>
 								</InputField>
+								<InputField name="ТоварыВКоробахПричинаДобавления" id="403">
+									<DataPath>Объект.ТоварыВКоробах.ПричинаДобавления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ContextMenu name="ТоварыВКоробахПричинаДобавленияКонтекстноеМеню" id="404"/>
+									<ExtendedTooltip name="ТоварыВКоробахПричинаДобавленияРасширеннаяПодсказка" id="405"/>
+								</InputField>
 								<InputField name="ТоварыВКоробахУдалить" id="184">
 									<DataPath>Объект.ТоварыВКоробах.Удалить</DataPath>
+									<TitleBackColor>#CCFFFF</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -807,6 +857,14 @@
 									<Events>
 										<Event name="OnChange">ТоварыВКоробахУдалитьПриИзменении</Event>
 									</Events>
+								</InputField>
+								<InputField name="ТоварыВКоробахПричинаОтмены" id="406">
+									<DataPath>Объект.ТоварыВКоробах.ПричинаОтмены</DataPath>
+									<TitleBackColor>#CCFFFF</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ContextMenu name="ТоварыВКоробахПричинаОтменыКонтекстноеМеню" id="407"/>
+									<ExtendedTooltip name="ТоварыВКоробахПричинаОтменыРасширеннаяПодсказка" id="408"/>
 								</InputField>
 								<InputField name="ТоварыВКоробахКоличество" id="157">
 									<DataPath>Объект.ТоварыВКоробах.Количество</DataPath>
@@ -1266,7 +1324,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>20</MaxWidth>
+									<MaxWidth>15</MaxWidth>
 									<ContextMenu name="РезервыВКоробахАртикулКонтекстноеМеню" id="356"/>
 									<ExtendedTooltip name="РезервыВКоробахАртикулРасширеннаяПодсказка" id="357"/>
 								</InputField>
@@ -1284,7 +1342,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>9</MaxWidth>
+									<MaxWidth>8</MaxWidth>
 									<ContextMenu name="РезервыВКоробахКоличествоПервоначальноКонтекстноеМеню" id="359"/>
 									<ExtendedTooltip name="РезервыВКоробахКоличествоПервоначальноРасширеннаяПодсказка" id="360"/>
 								</InputField>
@@ -1295,7 +1353,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>7</MaxWidth>
+									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахДобавленоКонтекстноеМеню" id="362"/>
 									<ExtendedTooltip name="РезервыВКоробахДобавленоРасширеннаяПодсказка" id="363"/>
 								</InputField>
@@ -1306,7 +1364,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>7</MaxWidth>
+									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахУдаленоКонтекстноеМеню" id="365"/>
 									<ExtendedTooltip name="РезервыВКоробахУдаленоРасширеннаяПодсказка" id="366"/>
 								</InputField>
@@ -1342,7 +1400,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>7</MaxWidth>
+									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахТоварВРезервеКонтекстноеМеню" id="386"/>
 									<ExtendedTooltip name="РезервыВКоробахТоварВРезервеРасширеннаяПодсказка" id="387"/>
 								</InputField>
@@ -1362,7 +1420,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>8</MaxWidth>
+									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахДоступноНаСкладеКонтекстноеМеню" id="389"/>
 									<ExtendedTooltip name="РезервыВКоробахДоступноНаСкладеРасширеннаяПодсказка" id="390"/>
 								</InputField>
@@ -1399,7 +1457,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>7</MaxWidth>
+									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахСнятьРезервКонтекстноеМеню" id="374"/>
 									<ExtendedTooltip name="РезервыВКоробахСнятьРезервРасширеннаяПодсказка" id="375"/>
 									<Events>
@@ -1457,6 +1515,9 @@
 									<MaxWidth>7</MaxWidth>
 									<ContextMenu name="РезервыВКоробахПеренестиВДругойЗаказКонтекстноеМеню" id="398"/>
 									<ExtendedTooltip name="РезервыВКоробахПеренестиВДругойЗаказРасширеннаяПодсказка" id="399"/>
+									<Events>
+										<Event name="OnChange">РезервыВКоробахПеренестиВДругойЗаказПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="РезервыВКоробахПеренестиНовоеНазначение" id="400">
 									<DataPath>Объект.РезервыВКоробах.ПеренестиНовоеНазначение</DataPath>
@@ -1505,7 +1566,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>9</MaxWidth>
+									<MaxWidth>7</MaxWidth>
 									<ContextMenu name="РезервыВКоробахЦенаКоробаКонтекстноеМеню" id="380"/>
 									<ExtendedTooltip name="РезервыВКоробахЦенаКоробаРасширеннаяПодсказка" id="381"/>
 									<Events>
@@ -1872,6 +1933,7 @@
 						</v8:item>
 					</Title>
 					<Type>
+						<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
 						<v8:Type>cfg:DocumentRef.КорректировкаНазначенияТоваров</v8:Type>
 						<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
 					</Type>
@@ -2260,6 +2322,33 @@
 						<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ХарактеристикиИспользуются" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристики используются</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="мНазначение" id="24">
@@ -2272,6 +2361,76 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="мСвободныеУпаковочныеЛисты" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М свободные упаковочные листы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УпаковочныйЛист" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковочный лист</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВариантКомплектации" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант комплектации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мУпаковочныеЛисты" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М упаковочные листы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УпаковочныйЛист" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковочный лист</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВариантКомплектации" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант комплектации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -2715,6 +2874,36 @@
 			</Picture>
 			<Action>ПеречитатьЗаказ</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПричинуДобавленияКороба" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить причину добавления короба</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить причину добавления короба</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПричинуДобавленияКороба</Action>
+		</Command>
+		<Command name="ЗаполнитьПричинуУдаленияКороба" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить причину удаления короба</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить причину удаления короба</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПричинуУдаленияКороба</Action>
 		</Command>
 	</Commands>
 </Form>
