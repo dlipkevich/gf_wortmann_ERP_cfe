@@ -290,6 +290,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite" callType="After">гф_ПослеЗаписиПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
 		<Event name="OnWriteAtServer" callType="Before">гф_ПриЗаписиНаСервереПеред</Event>
 		<Event name="OnWriteAtServer" callType="After">гф_ПриЗаписиНаСервереПосле</Event>
@@ -3564,14 +3565,14 @@ notes</v8:content>
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Реквизит1" id="1000001">
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
+		<Attribute name="СтруктураЗаказНаЭмиссиюКодовМаркировки" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура заказ на эмиссию кодов маркировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 	</Attributes>
 	<BaseForm version="2.14">
