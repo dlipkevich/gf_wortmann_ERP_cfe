@@ -24,213 +24,234 @@
 					<v8:content>Группа шапка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
+			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="51"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаЛево" id="125">
+				<UsualGroup name="ГруппаВерх" id="168">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа лево</v8:content>
+							<v8:content>Группа верх</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа лево</v8:content>
+							<v8:content>Группа верх</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>Vertical</Group>
+					<Group>AlwaysHorizontal</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="126"/>
+					<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="169"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаУсловия" id="7">
+						<UsualGroup name="ГруппаЛево" id="125">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Условия</v8:content>
+									<v8:content>Группа лево</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа условия</v8:content>
+									<v8:content>Группа лево</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="126"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаУсловия" id="7">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Условия</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа условия</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаУсловияРасширеннаяПодсказка" id="8"/>
+									<ChildItems>
+										<CheckBoxField name="ОтображатьОтправленые" id="82">
+											<DataPath>Объект.ОтображатьОтправленые</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОтображатьОтправленыеКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ОтображатьОтправленыеРасширеннаяПодсказка" id="84"/>
+											<Events>
+												<Event name="OnChange">ОтображатьОтправленыеПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Период" id="103">
+											<DataPath>Объект.Период</DataPath>
+											<ContextMenu name="ПериодКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="105"/>
+											<Events>
+												<Event name="OnChange">ПериодПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТипДокумента" id="4">
+											<DataPath>Объект.ТипДокумента</DataPath>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ContextMenu name="ТипДокументаКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="6"/>
+											<Events>
+												<Event name="OnChange">ТипДокументаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="КаталогВыгрузки" id="85">
+											<DataPath>Объект.КаталогВыгрузки</DataPath>
+											<Visible>false</Visible>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ChoiceButton>true</ChoiceButton>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="86"/>
+											<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="87"/>
+											<Events>
+												<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="Организация" id="34">
+											<DataPath>Объект.Организация</DataPath>
+											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="36"/>
+											<Events>
+												<Event name="OnChange">ОрганизацияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ФорматВложений" id="92">
+											<DataPath>Объект.ФорматВложений</DataPath>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Документ PDF (.pdf)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.PDF</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Лист Microsoft Excel 2007 (.xlsx)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.XLSX</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ФорматВложенийКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ФорматВложенийРасширеннаяПодсказка" id="94"/>
+										</InputField>
+										<InputField name="КомпоновщикНастроекНастройкиОтбор" id="165">
+											<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+											<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="166"/>
+											<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборРасширеннаяПодсказка" id="167"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраво" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печатные формы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа право</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>StrongSeparation</Representation>
-							<ExtendedTooltip name="ГруппаУсловияРасширеннаяПодсказка" id="8"/>
+							<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="128"/>
 							<ChildItems>
-								<CheckBoxField name="ОтображатьОтправленые" id="82">
-									<DataPath>Объект.ОтображатьОтправленые</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ОтображатьОтправленыеКонтекстноеМеню" id="83"/>
-									<ExtendedTooltip name="ОтображатьОтправленыеРасширеннаяПодсказка" id="84"/>
-									<Events>
-										<Event name="OnChange">ОтображатьОтправленыеПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<InputField name="Период" id="103">
-									<DataPath>Объект.Период</DataPath>
-									<ContextMenu name="ПериодКонтекстноеМеню" id="104"/>
-									<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="105"/>
-									<Events>
-										<Event name="OnChange">ПериодПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ТипДокумента" id="4">
-									<DataPath>Объект.ТипДокумента</DataPath>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ContextMenu name="ТипДокументаКонтекстноеМеню" id="5"/>
-									<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="6"/>
-									<Events>
-										<Event name="OnChange">ТипДокументаПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ПечатнаяФорма" id="9">
-									<DataPath>Объект.ПечатнаяФорма</DataPath>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ContextMenu name="ПечатнаяФормаКонтекстноеМеню" id="10"/>
-									<ExtendedTooltip name="ПечатнаяФормаРасширеннаяПодсказка" id="11"/>
-								</InputField>
-								<InputField name="КаталогВыгрузки" id="85">
-									<DataPath>Объект.КаталогВыгрузки</DataPath>
-									<Visible>false</Visible>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ChoiceButton>true</ChoiceButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="86"/>
-									<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="87"/>
-									<Events>
-										<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
-									</Events>
-								</InputField>
-								<InputField name="Организация" id="34">
-									<DataPath>Объект.Организация</DataPath>
-									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="35"/>
-									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="36"/>
-									<Events>
-										<Event name="OnChange">ОрганизацияПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ФорматВложений" id="92">
-									<DataPath>Объект.ФорматВложений</DataPath>
-									<ListChoiceMode>true</ListChoiceMode>
-									<ChoiceList>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Документ PDF (.pdf)</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.PDF</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Лист Microsoft Excel 2007 (.xlsx)</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xr:DesignTimeRef">Enum.ФорматыСохраненияОтчетов.EnumValue.XLSX</Value>
-											</xr:Value>
-										</xr:Item>
-									</ChoiceList>
-									<ContextMenu name="ФорматВложенийКонтекстноеМеню" id="93"/>
-									<ExtendedTooltip name="ФорматВложенийРасширеннаяПодсказка" id="94"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаПраво" id="127">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа право</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа право</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="128"/>
-					<ChildItems>
-						<UsualGroup name="ГруппаОтбор" id="52">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Отборы</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа отбор</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Behavior>Usual</Behavior>
-							<Representation>StrongSeparation</Representation>
-							<ExtendedTooltip name="ГруппаОтборРасширеннаяПодсказка" id="53"/>
-							<ChildItems>
-								<Table name="КомпоновщикНастроекНастройкиОтбор" id="69">
-									<Representation>Tree</Representation>
-									<Autofill>true</Autofill>
-									<Width>60</Width>
-									<HeightControlVariant>UseContentHeight</HeightControlVariant>
-									<InitialTreeView>ExpandAllLevels</InitialTreeView>
-									<EnableStartDrag>true</EnableStartDrag>
-									<EnableDrag>true</EnableDrag>
-									<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
-									<ViewMode>All</ViewMode>
-									<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
-									<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="70"/>
-									<AutoCommandBar name="КомпоновщикНастроекНастройкиОтборКоманднаяПанель" id="71"/>
-									<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборРасширеннаяПодсказка" id="72"/>
-									<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборСтрокаПоиска" id="73">
+								<Table name="ПечатныеФормы" id="170">
+									<Representation>List</Representation>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<MaxHeight>7</MaxHeight>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>Объект.ПечатныеФормы</DataPath>
+									<RowPictureDataPath>Объект.ПечатныеФормы.Picture</RowPictureDataPath>
+									<ContextMenu name="ПечатныеФормыКонтекстноеМеню" id="171"/>
+									<AutoCommandBar name="ПечатныеФормыКоманднаяПанель" id="172">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ПечатныеФормыРасширеннаяПодсказка" id="173"/>
+									<SearchStringAddition name="ПечатныеФормыСтрокаПоиска" id="174">
 										<AdditionSource>
-											<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+											<Item>ПечатныеФормы</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="74"/>
-										<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+										<ContextMenu name="ПечатныеФормыСтрокаПоискаКонтекстноеМеню" id="175"/>
+										<ExtendedTooltip name="ПечатныеФормыСтрокаПоискаРасширеннаяПодсказка" id="176"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотра" id="76">
+									<ViewStatusAddition name="ПечатныеФормыСостояниеПросмотра" id="177">
 										<AdditionSource>
-											<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+											<Item>ПечатныеФормы</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="77"/>
-										<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+										<ContextMenu name="ПечатныеФормыСостояниеПросмотраКонтекстноеМеню" id="178"/>
+										<ExtendedTooltip name="ПечатныеФормыСостояниеПросмотраРасширеннаяПодсказка" id="179"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборУправлениеПоиском" id="79">
+									<SearchControlAddition name="ПечатныеФормыУправлениеПоиском" id="180">
 										<AdditionSource>
-											<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+											<Item>ПечатныеФормы</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="80"/>
-										<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+										<ContextMenu name="ПечатныеФормыУправлениеПоискомКонтекстноеМеню" id="181"/>
+										<ExtendedTooltip name="ПечатныеФормыУправлениеПоискомРасширеннаяПодсказка" id="182"/>
 									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ПечатныеФормыПометка" id="186">
+											<DataPath>Объект.ПечатныеФормы.Check</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПечатныеФормыПометкаКонтекстноеМеню" id="187"/>
+											<ExtendedTooltip name="ПечатныеФормыПометкаРасширеннаяПодсказка" id="188"/>
+											<Events>
+												<Event name="OnChange">ПечатныеФормыПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПечатныеФормыЗначение" id="183">
+											<DataPath>Объект.ПечатныеФормы.Value</DataPath>
+											<Enabled>false</Enabled>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПечатныеФормыЗначениеКонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="ПечатныеФормыЗначениеРасширеннаяПодсказка" id="185"/>
+										</InputField>
+									</ChildItems>
 								</Table>
 							</ChildItems>
 						</UsualGroup>
@@ -608,12 +629,12 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>1/0:17acf694-2f8c-46bf-a388-b58f39b355c8</Field>
 				<Field>Объект.АдресОтправителя</Field>
 				<Field>Объект.КаталогВыгрузки</Field>
 				<Field>Объект.Организация</Field>
 				<Field>Объект.ОтображатьОтправленые</Field>
 				<Field>Объект.Период</Field>
-				<Field>Объект.ПечатнаяФорма</Field>
 				<Field>Объект.ПоставитьВКопию</Field>
 				<Field>Объект.ТипДокумента</Field>
 				<Field>Объект.УчетнаяЗапись</Field>
@@ -775,6 +796,49 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Файлы" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueTable</v8:Type>
+					</Type>
+				</Column>
+				<AdditionalColumns table="СписокДокументов.Файлы">
+					<Column name="Адрес" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Адрес</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИмяФайла" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Имя файла</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
 			</Columns>
 		</Attribute>
 		<Attribute name="АдресСхемы" id="4">
@@ -802,6 +866,52 @@
 			<Type>
 				<v8:Type>dcsset:SettingsComposer</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныеПечатныеФормы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные печатные формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыбранныеПечатныеФормы</Field>
+			</Save>
+			<Columns>
+				<Column name="ТипДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПечатнаяФорма" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатная форма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
