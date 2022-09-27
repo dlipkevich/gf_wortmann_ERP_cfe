@@ -16,14 +16,14 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формирование общей спецификации (гф)</v8:content>
+					<v8:content>Гф формирование общей спецификации</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm>Report.гф_ФормированиеОбщейСпецификации.Form.ФормаОтчета</DefaultForm>
 			<AuxiliaryForm/>
-			<MainDataCompositionSchema>Report.гф_ФормированиеОбщейСпецификации.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<MainDataCompositionSchema/>
 			<DefaultSettingsForm>Report.гф_ФормированиеОбщейСпецификации.Form.ФормаНастроек</DefaultSettingsForm>
 			<AuxiliarySettingsForm/>
 			<DefaultVariantForm/>
@@ -421,6 +421,78 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="bb972379-3515-44df-b748-7f6f6873c244">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>ShowError</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="56d883b1-7146-4e68-851c-5b9483fe6d03">
+				<Properties>
+					<Name>АдресСхемы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес схемы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="19b31b58-ce91-4b3e-9f4e-61168908ec21">
 				<InternalInfo>
 					<xr:GeneratedType name="ReportTabularSection.гф_ФормированиеОбщейСпецификации.ТаблицаДокументы" category="TabularSection">
@@ -693,8 +765,25 @@
 			</TabularSection>
 			<Form>ФормаОтчета</Form>
 			<Form>ФормаНастроек</Form>
-			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
-			<Template>СхемаКомпановкиОтборНоменклатуры</Template>
+			<Template>_ОсновнаяСхемаКомпоновкиДанных</Template>
+			<Template>_СхемаКомпановкиОтборНоменклатуры</Template>
+			<Template>_ОсновнаяСхемаКомпоновкиДанныхКороба</Template>
+			<Template>_СхемаКомпоновкиДанныхАссортимент</Template>
+			<Template>СхемаРеализацииПокупателейВПарах</Template>
+			<Template>СхемаЗаказыКлиентовВПарах</Template>
+			<Template>СхемаПриобретениеТоваровИУслугВПарах</Template>
+			<Template>СхемаВнутренниеЗаказыВПарах</Template>
+			<Template>СхемаПеремещенияВПарах</Template>
+			<Template>СхемаСвободныеОстаткиВПарах</Template>
+			<Template>СхемаФактическиеОстаткиВПарах</Template>
+			<Template>СхемаАссортиментВКоробах</Template>
+			<Template>СхемаАссортиментВПарах</Template>
+			<Template>СхемаРеализацииПокупателейВКоробах</Template>
+			<Template>СхемаПриобретениеТоваровИУслугВКоробах</Template>
+			<Template>СхемаЗаказыКлиентовВКоробах</Template>
+			<Template>СхемаСвободныеОстаткиВКоробах</Template>
+			<Template>СхемаФактическиеОстаткиВКоробах</Template>
+			<Template>СхемаПеремещенияВКоробах</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>

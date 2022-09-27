@@ -1,0 +1,1564 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаЦО</dataPath>
+			<field>ХарактеристикаЦО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЦены</dataPath>
+			<field>ВидЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияЦО</dataPath>
+			<field>СерияЦО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкаЦО</dataPath>
+			<field>УпаковкаЦО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗапасов</dataPath>
+			<field>ВидЗапасов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+			<field>АналитикаУчетаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерГТД</dataPath>
+			<field>НомерГТД</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтрихкодКороба</dataPath>
+			<field>ШтрихкодКороба</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод короба</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалВерха</dataPath>
+			<field>МатериалВерха</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материал верха</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаЗаПару</dataPath>
+			<field>ЦенаЗаПару</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена за пару</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Стелька</dataPath>
+			<field>Стелька</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стелька</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коллекция</dataPath>
+			<field>Коллекция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коллекция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Марка</dataPath>
+			<field>Марка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Марка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сезон</dataPath>
+			<field>Сезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЦвета</dataPath>
+			<field>НомерЦвета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер цвета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбхватГоленища</dataPath>
+			<field>ОбхватГоленища</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обхват голенища</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Декларация</dataPath>
+			<field>Декларация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цвет</dataPath>
+			<field>Цвет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалОсновной</dataPath>
+			<field>МатериалОсновной</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материал основной</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комплектующая</dataPath>
+			<field>Комплектующая</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комплектующая</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалПодклада</dataPath>
+			<field>МатериалПодклада</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материал подклада</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалПодкладаДополнительно</dataPath>
+			<field>МатериалПодкладаДополнительно</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материал подклада дополнительно</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВысотаГоленища</dataPath>
+			<field>ВысотаГоленища</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Высота голенища</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВысотаКаблука</dataPath>
+			<field>ВысотаКаблука</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Высота каблука</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подошва</dataPath>
+			<field>Подошва</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подошва</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗастежки</dataPath>
+			<field>ВидЗастежки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид застежки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидКаблука</dataPath>
+			<field>ВидКаблука</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид каблука</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФормаИВидМыска</dataPath>
+			<field>ФормаИВидМыска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма и вид мыска</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Технология</dataPath>
+			<field>Технология</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технология</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШиринаПолнота</dataPath>
+			<field>ШиринаПолнота</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ширина полнота</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТНВЭД</dataPath>
+			<field>КодТНВЭД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код ТНВЭД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаСоСкидкой</dataPath>
+			<field>ЦенаСоСкидкой</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена со скидкой</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПар</dataPath>
+			<field>КоличествоПар</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество пар</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазмерныйРяд</dataPath>
+			<field>РазмерныйРяд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Размерный ряд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаРозничная</dataPath>
+			<field>ЦенаРозничная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена розничная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТовара</dataPath>
+			<field>ВидТовара</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид товара</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВариантыКомплектацииНоменклатурыТовары.Номенклатура КАК Номенклатура,
+	ВариантыКомплектацииНоменклатурыТовары.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_ДанныеКомплектации
+ИЗ
+	Справочник.ВариантыКомплектацииНоменклатуры.Товары КАК ВариантыКомплектацииНоменклатурыТовары
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТоварыОрганизацийОстатки.КоличествоОстаток КАК КоличествоПар,
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура КАК Номенклатура,
+	КлючиАналитикиУчетаНоменклатуры.Характеристика КАК РазмерныйРяд,
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура.Артикул КАК Артикул,
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура.СтавкаНДС КАК СтавкаНДС,
+	ЦеныНоменклатурыРозничная.Цена КАК ЦенаРозничная,
+	0 КАК ЦенаЗаПару,
+	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
+	"" КАК ШтрихкодКороба,
+	ПОДСТРОКА(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, 0, СТРНАЙТИ(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, " ")) КАК ВидТовара,
+	ЦеныНоменклатурыСоСкидкой.Цена КАК ЦенаСоСкидкой
+ПОМЕСТИТЬ ВТ_ДанныеНоменклатуры
+ИЗ
+	РегистрНакопления.ТоварыОрганизаций.Остатки(&amp;КонецПериода, Организация = &amp;Организация) КАК ТоварыОрганизацийОстатки
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.КлючиАналитикиУчетаНоменклатуры КАК КлючиАналитикиУчетаНоменклатуры
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦеныРозничная) КАК ЦеныНоменклатурыРозничная
+			ПО КлючиАналитикиУчетаНоменклатуры.Номенклатура = ЦеныНоменклатурыРозничная.Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+			ПО КлючиАналитикиУчетаНоменклатуры.Характеристика = ШтрихкодыНоменклатуры.Характеристика
+				И КлючиАналитикиУчетаНоменклатуры.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+		ПО ТоварыОрганизацийОстатки.АналитикаУчетаНоменклатуры = КлючиАналитикиУчетаНоменклатуры.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЗапасов КАК ВидыЗапасов
+		ПО ТоварыОрганизацийОстатки.ВидЗапасов = ВидыЗапасов.Ссылка,
+	РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦеныСоСкидкой) КАК ЦеныНоменклатурыСоСкидкой
+ГДЕ
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура В
+			(ВЫБРАТЬ
+				ВТ_ДанныеКомплектации.Номенклатура
+			ИЗ
+				ВТ_ДанныеКомплектации)
+	И КлючиАналитикиУчетаНоменклатуры.Характеристика В
+			(ВЫБРАТЬ
+				ВТ_ДанныеКомплектации.Характеристика
+			ИЗ
+				ВТ_ДанныеКомплектации)
+	И КлючиАналитикиУчетаНоменклатуры.МестоХранения = &amp;Склад
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка КАК Номенклатура,
+	НоменклатураДополнительныеРеквизиты.Значение КАК Марка,
+	NULL КАК Сезон,
+	NULL КАК НомерЦвета,
+	NULL КАК Цвет,
+	NULL КАК МатериалОсновной,
+	NULL КАК МатериалПодклада,
+	NULL КАК МатериалПодкладаДополнительно,
+	NULL КАК МатериалВерха,
+	NULL КАК Стелька,
+	NULL КАК Подошва,
+	NULL КАК Комплектующая,
+	NULL КАК Коллекция,
+	NULL КАК ВысотаКаблука,
+	NULL КАК Декларация,
+	NULL КАК ВидЗастежки,
+	NULL КАК ВысотаГоленища,
+	NULL КАК ОбхватГоленища,
+	NULL КАК ВидКаблука,
+	NULL КАК ФормаИВидМыска,
+	NULL КАК ШиринаПолнота,
+	NULL КАК Технология,
+	NULL КАК КодТНВЭД
+ПОМЕСТИТЬ ВТ_ДопРеквизитыНоменклатуры
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Марка"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Сезон"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Color_Code"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Color_Name"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material lining"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material warmlining"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material surface"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material back"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Material bottom"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Customer brand"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Supplier_season"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Heel height"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Декларация"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "ClossingForm"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "LEGHEIGHT"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "LEGFUNCT"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "HEELTYP"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "TOE-CAP"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Wideness"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НоменклатураДополнительныеРеквизиты.Значение,
+	NULL
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Function"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НоменклатураДополнительныеРеквизиты.Ссылка,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	МАКСИМУМ(НоменклатураДополнительныеРеквизиты.Значение)
+ИЗ
+	Справочник.Номенклатура.ДополнительныеРеквизиты КАК НоменклатураДополнительныеРеквизиты
+ГДЕ
+	НоменклатураДополнительныеРеквизиты.Свойство.Наименование = "Customs_tarif_number"
+	И НоменклатураДополнительныеРеквизиты.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ДанныеНоменклатуры.Номенклатура
+			ИЗ
+				ВТ_ДанныеНоменклатуры)
+
+СГРУППИРОВАТЬ ПО
+	НоменклатураДополнительныеРеквизиты.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДопРеквизитыНоменклатуры.Марка КАК Марка,
+	ВТ_ДопРеквизитыНоменклатуры.Сезон КАК Сезон,
+	ВТ_ДопРеквизитыНоменклатуры.НомерЦвета КАК НомерЦвета,
+	ВТ_ДопРеквизитыНоменклатуры.Цвет КАК Цвет,
+	ВТ_ДопРеквизитыНоменклатуры.МатериалОсновной КАК МатериалОсновной,
+	ВТ_ДопРеквизитыНоменклатуры.МатериалПодклада КАК МатериалПодклада,
+	ВТ_ДопРеквизитыНоменклатуры.МатериалПодкладаДополнительно КАК МатериалПодкладаДополнительно,
+	ВТ_ДопРеквизитыНоменклатуры.МатериалВерха КАК МатериалВерха,
+	ВТ_ДопРеквизитыНоменклатуры.Стелька КАК Стелька,
+	ВТ_ДопРеквизитыНоменклатуры.Подошва КАК Подошва,
+	ВТ_ДопРеквизитыНоменклатуры.Комплектующая КАК Комплектующая,
+	ВТ_ДопРеквизитыНоменклатуры.Коллекция КАК Коллекция,
+	ВТ_ДопРеквизитыНоменклатуры.ВысотаКаблука КАК ВысотаКаблука,
+	ВТ_ДопРеквизитыНоменклатуры.Декларация КАК Декларация,
+	ВТ_ДопРеквизитыНоменклатуры.ВидЗастежки КАК ВидЗастежки,
+	ВТ_ДопРеквизитыНоменклатуры.ВысотаГоленища КАК ВысотаГоленища,
+	ВТ_ДопРеквизитыНоменклатуры.ОбхватГоленища КАК ОбхватГоленища,
+	ВТ_ДопРеквизитыНоменклатуры.ВидКаблука КАК ВидКаблука,
+	ВТ_ДопРеквизитыНоменклатуры.ФормаИВидМыска КАК ФормаИВидМыска,
+	ВТ_ДопРеквизитыНоменклатуры.ШиринаПолнота КАК ШиринаПолнота,
+	ВТ_ДопРеквизитыНоменклатуры.Технология КАК Технология,
+	ВТ_ДопРеквизитыНоменклатуры.КодТНВЭД КАК КодТНВЭД,
+	ВТ_ДанныеНоменклатуры.Номенклатура КАК Номенклатура,
+	ВТ_ДанныеНоменклатуры.ЦенаЗаПару КАК ЦенаЗаПару,
+	ВТ_ДанныеНоменклатуры.Штрихкод КАК Штрихкод,
+	ВТ_ДанныеНоменклатуры.ШтрихкодКороба КАК ШтрихкодКороба,
+	ВТ_ДанныеНоменклатуры.Артикул КАК Артикул,
+	ВТ_ДанныеНоменклатуры.СтавкаНДС КАК СтавкаНДС,
+	ВТ_ДанныеНоменклатуры.ЦенаСоСкидкой КАК ЦенаСоСкидкой,
+	ВТ_ДанныеНоменклатуры.КоличествоПар КАК КоличествоПар,
+	ВТ_ДанныеНоменклатуры.РазмерныйРяд КАК РазмерныйРяд,
+	ВТ_ДанныеНоменклатуры.ЦенаРозничная КАК ЦенаРозничная,
+	ВТ_ДанныеНоменклатуры.ВидТовара КАК ВидТовара
+ИЗ
+	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопРеквизитыНоменклатуры КАК ВТ_ДопРеквизитыНоменклатуры
+		ПО ВТ_ДанныеНоменклатуры.Номенклатура = ВТ_ДопРеквизитыНоменклатуры.Номенклатура</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>КоличествоКоробов</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество коробов</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоПарВКоробе</dataPath>
+		<expression>0</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество пар в коробе</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодНоменклатурыКонтрагента</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код номенклатуры контрагента</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидЦеныРозничная</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены розничная</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидЦеныСоСкидкой</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид цены со скидкой</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Склад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Склад</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Склады</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Партнеры</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктураПредприятия</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Марка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтрихкодКороба</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Артикул</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерЦвета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цвет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Штрихкод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодНоменклатурыКонтрагента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МатериалОсновной</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МатериалПодклада</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МатериалПодкладаДополнительно</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МатериалВерха</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Стелька</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подошва</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Технология</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВысотаКаблука</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РазмерныйРяд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаЗаПару</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаСоСкидкой</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаРозничная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодТНВЭД</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Декларация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидТовара</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Коллекция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидЗастежки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВысотаГоленища</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбхватГоленища</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидКаблука</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФормаИВидМыска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШиринаПолнота</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комплектующая</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоКоробов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПарВКоробе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПар</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>6a507589-3d53-46af-8add-80336a61f4ef</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:Field"/>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>c32ba308-fb4d-4c9b-9329-3367982e1bc9</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>897a7768-8609-4ba7-b3c1-b00263c6c788</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>5ac5fe58-1c1e-489b-8d62-56d7fbfcf9d0</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>ab2594f1-aca8-4687-9752-11d37cdb0c7c</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
