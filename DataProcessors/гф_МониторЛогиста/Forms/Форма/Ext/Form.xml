@@ -610,6 +610,11 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ОтгрузкаВывестиСписокРасширеннаяПодсказка" id="227"/>
 										</Button>
+										<Button name="ОтгрузкаПечатныеФормы" id="438">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПечатныеФормы</CommandName>
+											<ExtendedTooltip name="ОтгрузкаПечатныеФормыРасширеннаяПодсказка" id="439"/>
+										</Button>
 										<Button name="ИзменитьСтатусыРО" id="316">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.ИзменитьСтатусыРО</CommandName>
@@ -1144,12 +1149,17 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ПеремещениеВывестиСписокРасширеннаяПодсказка" id="229"/>
 										</Button>
-										<Button name="СоздатьПО1" id="399">
+										<Button name="ПеремещениеСоздатьПО" id="399">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.СоздатьПО</CommandName>
-											<ExtendedTooltip name="СоздатьПО1РасширеннаяПодсказка" id="400"/>
+											<ExtendedTooltip name="ПеремещениеСоздатьПОРасширеннаяПодсказка" id="400"/>
 										</Button>
-										<ButtonGroup name="ГруппаПеремещениеИзменитьСтатусы" id="390">
+										<Button name="ПечатныеФормы1" id="440">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПечатныеФормы</CommandName>
+											<ExtendedTooltip name="ПечатныеФормы1РасширеннаяПодсказка" id="441"/>
+										</Button>
+										<ButtonGroup name="ГруппаПеремещениеИзменитьСтатусы" id="390" DisplayImportance="High">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1579,14 +1589,123 @@
 							<v8:content>Группа страница настройки</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ExtendedTooltip name="ГруппаСтраницаНастройкиРасширеннаяПодсказка" id="188"/>
 					<ChildItems>
-						<InputField name="ВидЦены" id="189">
-							<DataPath>Объект.ВидЦены</DataPath>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ContextMenu name="ВидЦеныКонтекстноеМеню" id="190"/>
-							<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="191"/>
-						</InputField>
+						<UsualGroup name="ГруппаНастройкиЛевая" id="409">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки левая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки левая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиЛеваяРасширеннаяПодсказка" id="410"/>
+							<ChildItems>
+								<InputField name="ВидЦены" id="189">
+									<DataPath>Объект.ВидЦены</DataPath>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ContextMenu name="ВидЦеныКонтекстноеМеню" id="190"/>
+									<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="191"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиПравая" id="411">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печатные формы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки правая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиПраваяРасширеннаяПодсказка" id="412"/>
+							<ChildItems>
+								<InputField name="ТипДокумента" id="413">
+									<DataPath>Объект.ТипДокумента</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="ТипДокументаКонтекстноеМеню" id="414"/>
+									<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="415"/>
+									<Events>
+										<Event name="OnChange">ТипДокументаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Table name="ПечатныеФормы" id="416">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<Header>false</Header>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<DataPath>Объект.ПечатныеФормы</DataPath>
+									<RowPictureDataPath>Объект.ПечатныеФормы.Picture</RowPictureDataPath>
+									<ContextMenu name="ПечатныеФормыКонтекстноеМеню" id="417"/>
+									<AutoCommandBar name="ПечатныеФормыКоманднаяПанель" id="418">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ПечатныеФормыРасширеннаяПодсказка" id="419"/>
+									<SearchStringAddition name="ПечатныеФормыСтрокаПоиска" id="420">
+										<AdditionSource>
+											<Item>ПечатныеФормы</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПечатныеФормыСтрокаПоискаКонтекстноеМеню" id="421"/>
+										<ExtendedTooltip name="ПечатныеФормыСтрокаПоискаРасширеннаяПодсказка" id="422"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПечатныеФормыСостояниеПросмотра" id="423">
+										<AdditionSource>
+											<Item>ПечатныеФормы</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПечатныеФормыСостояниеПросмотраКонтекстноеМеню" id="424"/>
+										<ExtendedTooltip name="ПечатныеФормыСостояниеПросмотраРасширеннаяПодсказка" id="425"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПечатныеФормыУправлениеПоиском" id="426">
+										<AdditionSource>
+											<Item>ПечатныеФормы</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПечатныеФормыУправлениеПоискомКонтекстноеМеню" id="427"/>
+										<ExtendedTooltip name="ПечатныеФормыУправлениеПоискомРасширеннаяПодсказка" id="428"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<CheckBoxField name="ПечатныеФормыПометка" id="435">
+											<DataPath>Объект.ПечатныеФормы.Check</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПечатныеФормыПометкаКонтекстноеМеню" id="436"/>
+											<ExtendedTooltip name="ПечатныеФормыПометкаРасширеннаяПодсказка" id="437"/>
+											<Events>
+												<Event name="OnChange">ПечатныеФормыПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ПечатныеФормыПредставление" id="432">
+											<DataPath>Объект.ПечатныеФормы.Presentation</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПечатныеФормыПредставлениеКонтекстноеМеню" id="433"/>
+											<ExtendedTooltip name="ПечатныеФормыПредставлениеРасширеннаяПодсказка" id="434"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1605,7 +1724,54 @@
 				<Field>Объект.ПеремещениеКомпоновщик.Settings.Filter</Field>
 				<Field>Объект.Период</Field>
 				<Field>Объект.ПоставкаКомпоновщик.Settings.Filter</Field>
+				<Field>Объект.ТипДокумента</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="ВыбранныеПечатныеФормы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранные печатные формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВыбранныеПечатныеФормы</Field>
+			</Save>
+			<Columns>
+				<Column name="ТипДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПечатнаяФорма" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печатная форма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1749,6 +1915,21 @@
 			</Picture>
 			<Action>СоздатьЗаявкиНаДоставку</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПечатныеФормы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатные формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатные формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатныеФормы</Action>
 		</Command>
 	</Commands>
 </Form>
