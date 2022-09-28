@@ -190,16 +190,6 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоЗначениям( "РегистрСведений.гф_ПричиныБлокировок","Чтение","",
-"Организации","Организация",
-"ГруппыПартнеров","Контрагент",
-"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
-#КонецЕсли</condition>
-			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -473,16 +463,6 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоЗначениям( "Документ.гф_БлокировкаРазблокировкаОтгрузок","Чтение","",
-
-"Организации","Организация",
-"ГруппыПартнеров","Контрагент", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
-#КонецЕсли</condition>
-			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -530,13 +510,6 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ПричиныБлокировок.Resource.Заблокирован</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Subsystem.гф_ДебетМенеджент</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
