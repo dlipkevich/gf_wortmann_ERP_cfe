@@ -29,8 +29,25 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>5cd124af-3c73-4878-b482-4d9b05c41f3c</ExtendedConfigurationObject>
 			<DefaultObjectForm>Catalog.гф_ВидыБлокировок.Form.гф_ФормаЭлемента</DefaultObjectForm>
+			<DefaultListForm>Catalog.гф_ВидыБлокировок.Form.гф_ФормаСписка</DefaultListForm>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="ec13343f-3aca-43ba-a46a-9f3b9df124d5">
+				<InternalInfo/>
+				<Properties>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0fafcef6-8dce-412f-9823-744696ff933b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="e3a508a6-3c4a-483b-a761-e5f32efc368b">
 				<InternalInfo>
 					<xr:GeneratedType name="CatalogTabularSection.гф_ВидыБлокировок.БлокируемыТипыДокументов" category="TabularSection">
@@ -96,6 +113,7 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>гф_ФормаЭлемента</Form>
+			<Form>гф_ФормаСписка</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
