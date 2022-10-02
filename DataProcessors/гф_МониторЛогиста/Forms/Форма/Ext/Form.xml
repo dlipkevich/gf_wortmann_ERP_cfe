@@ -374,12 +374,36 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
-										<InputField name="ПоставкаСтатусПО" id="201">
-											<DataPath>Объект.Поставка.СтатусПО</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПоставкаСтатусПОКонтекстноеМеню" id="202"/>
-											<ExtendedTooltip name="ПоставкаСтатусПОРасширеннаяПодсказка" id="203"/>
-										</InputField>
+										<ColumnGroup name="ПоставкаГруппаПОСтатусДата" id="442">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа ПОСтатус дата</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа ПОСтатус дата</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПоставкаГруппаПОСтатусДатаРасширеннаяПодсказка" id="443"/>
+											<ChildItems>
+												<InputField name="ПоставкаДатаОприходования" id="444">
+													<DataPath>Объект.Поставка.ДатаОприходования</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаДатаОприходованияКонтекстноеМеню" id="445"/>
+													<ExtendedTooltip name="ПоставкаДатаОприходованияРасширеннаяПодсказка" id="446"/>
+												</InputField>
+												<InputField name="ПоставкаСтатусПО" id="201">
+													<DataPath>Объект.Поставка.СтатусПО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаСтатусПОКонтекстноеМеню" id="202"/>
+													<ExtendedTooltip name="ПоставкаСтатусПОРасширеннаяПодсказка" id="203"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 									</ChildItems>
 								</ColumnGroup>
 								<ColumnGroup name="ПоставкаГруппаСумма" id="214">
@@ -432,11 +456,11 @@
 											<ContextMenu name="ПоставкаКонтрагентКонтекстноеМеню" id="42"/>
 											<ExtendedTooltip name="ПоставкаКонтрагентРасширеннаяПодсказка" id="43"/>
 										</InputField>
-										<InputField name="ПоставкаСклад" id="44">
+										<InputField name="ПоставкаСкладПолучатель" id="44">
 											<DataPath>Объект.Поставка.СкладПолучатель</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПоставкаСкладКонтекстноеМеню" id="45"/>
-											<ExtendedTooltip name="ПоставкаСкладРасширеннаяПодсказка" id="46"/>
+											<ContextMenu name="ПоставкаСкладПолучательКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ПоставкаСкладПолучательРасширеннаяПодсказка" id="46"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -489,12 +513,35 @@
 									<ContextMenu name="ПоставкаПриходныйОрдерКонтекстноеМеню" id="193"/>
 									<ExtendedTooltip name="ПоставкаПриходныйОрдерРасширеннаяПодсказка" id="194"/>
 								</InputField>
-								<InputField name="ПоставкаОприходовал" id="207">
-									<DataPath>Объект.Поставка.Оприходовал</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПоставкаОприходовалКонтекстноеМеню" id="208"/>
-									<ExtendedTooltip name="ПоставкаОприходовалРасширеннаяПодсказка" id="209"/>
-								</InputField>
+								<ColumnGroup name="ПоставкаГруппаОприходовал" id="447">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поставка группа оприходовал</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поставка группа оприходовал</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПоставкаГруппаОприходовалРасширеннаяПодсказка" id="448"/>
+									<ChildItems>
+										<InputField name="ПоставкаОприходовал" id="207">
+											<DataPath>Объект.Поставка.Оприходовал</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПоставкаОприходовалКонтекстноеМеню" id="208"/>
+											<ExtendedTooltip name="ПоставкаОприходовалРасширеннаяПодсказка" id="209"/>
+										</InputField>
+										<InputField name="ПоставкаОтветственный" id="449">
+											<DataPath>Объект.Поставка.Ответственный</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПоставкаОтветственныйКонтекстноеМеню" id="450"/>
+											<ExtendedTooltip name="ПоставкаОтветственныйРасширеннаяПодсказка" id="451"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="ПоставкаХозяйственнаяОперация" id="401">
 									<DataPath>Объект.Поставка.ХозяйственнаяОперация</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1773,6 +1820,37 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПоставкаСтатусКМ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Поставка.СтатусКМ</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Другое</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="ОбновитьТекущуюТаблицу" id="1">
