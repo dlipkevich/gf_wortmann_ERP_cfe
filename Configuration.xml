@@ -66,9 +66,9 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>Продажи</Subsystem>
-			<Subsystem>гф_ДебетМенеджент</Subsystem>
 			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>гф_ДебетМенеджент</Subsystem>
+			<Subsystem>Продажи</Subsystem>
 			<StyleItem>ПоясняющийТекст</StyleItem>
 			<StyleItem>ПолеСОшибкойФон</StyleItem>
 			<StyleItem>ЦветФонаУдачнойОтправки</StyleItem>
@@ -153,10 +153,14 @@
 			<CommonModule>гф_ЭмиссияКодовМаркировкиВызовСервера</CommonModule>
 			<CommonModule>гф_РассылкаПечатныхФорм</CommonModule>
 			<CommonModule>ДополнительныеОтчетыИОбработкиПереопределяемый</CommonModule>
+			<CommonModule>СкладыСервер</CommonModule>
+			<CommonModule>гф_РасходныйОрдер</CommonModule>
 			<EventSubscription>гф_ОбработкаПроведенияДвижениеКодовМаркировкиОрганизации</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерНаТоварыПроведение</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерНаТоварыПередЗаписью</EventSubscription>
 			<EventSubscription>гф_УстановкаБлокировкиДоговоровКонтрагента</EventSubscription>
+			<EventSubscription>гфОтгрузкаУпаковочногоЛиста</EventSubscription>
+			<EventSubscription>гфОтгрузкаУпаковочногоЛиста1</EventSubscription>
 			<FunctionalOption>гф_ИспользоватьДополнительныеОтчетыИОбработки1</FunctionalOption>
 			<DefinedType>Артикул</DefinedType>
 			<DefinedType>ИнвентарныйНомерТМЦВЭксплуатации</DefinedType>
@@ -302,7 +306,6 @@
 			<Report>гф_ЕженедельныйОтчетПоКоличествуЗаказов</Report>
 			<DataProcessor>гф_ФормированиеСпецификацийПокупателя</DataProcessor>
 			<DataProcessor>гф_ВыставлениеСчетов</DataProcessor>
-			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
 			<DataProcessor>гф_СозданиеДоговоровКонтрагентовНаСезон</DataProcessor>
 			<DataProcessor>гф_ЗаявкиНаДоставку</DataProcessor>
 			<DataProcessor>ЖурналУчетаОригиналовПервичныхДокументов</DataProcessor>
@@ -315,6 +318,8 @@
 			<DataProcessor>гф_ЗагрузкаИзI5</DataProcessor>
 			<DataProcessor>гф_Транслитерация</DataProcessor>
 			<DataProcessor>гф_ДиспетчерПереводов</DataProcessor>
+			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
+			<DataProcessor>гф_ОтгрузкаПоЗаказам</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
 			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
 			<InformationRegister>СостоянияОригиналовПервичныхДокументов</InformationRegister>
