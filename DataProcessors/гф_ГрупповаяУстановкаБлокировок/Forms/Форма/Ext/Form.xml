@@ -179,6 +179,9 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="БлокировкаЗаблокированКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="БлокировкаЗаблокированРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">БлокировкаЗаблокированПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 				<CheckBoxField name="БлокировкаИсключения" id="35">
 					<DataPath>Объект.Блокировка.Исключения</DataPath>
@@ -186,12 +189,18 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="БлокировкаИсключенияКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="БлокировкаИсключенияРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">БлокировкаИсключенияПриИзменении</Event>
+					</Events>
 				</CheckBoxField>
 				<InputField name="БлокировкаСогласовано" id="38">
 					<DataPath>Объект.Блокировка.Согласовано</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="БлокировкаСогласованоКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="БлокировкаСогласованоРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">БлокировкаСогласованоПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="БлокировкаДействуетДо" id="41">
 					<DataPath>Объект.Блокировка.ДействуетДо</DataPath>
@@ -261,6 +270,31 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>БлокировкаСогласовано</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>БлокировкаДействуетДо</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Блокировка.Исключения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаОтметитьВсе" id="1">
