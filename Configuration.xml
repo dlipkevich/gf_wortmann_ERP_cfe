@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>431</Version>
+			<Version>450</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -106,6 +106,8 @@
 			<CommonPicture>УстановитьСостояниеОригиналаПервичногоДокумента</CommonPicture>
 			<CommonPicture>СостояниеОригиналаПервичногоДокументаОригиналПолучен</CommonPicture>
 			<CommonPicture>ФильтрПоСвойствам</CommonPicture>
+			<CommonPicture>ПодобратьТовары</CommonPicture>
+			<CommonPicture>Упаковать</CommonPicture>
 			<Role>гф_ОсновнаяРоль</Role>
 			<Role>гф_ДобавлениеИзменениеСпецификацийПокупателя</Role>
 			<Role>гф_ЧтениеСпецификацияПокупателя</Role>
@@ -136,10 +138,9 @@
 			<Role>гф_ЧтениеОтчетаПоРасчетамБюджета</Role>
 			<Role>гф_ПравоЗакрытиеСезона</Role>
 			<Role>гф_ОткрытиеОбработкиДиспетчерПереводов</Role>
-			<CommonModule>_омОбщегоНазначенияКлиентСервер</CommonModule>
+			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
 			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
-			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>гф_МенеджерПечатиКлиент</CommonModule>
 			<CommonModule>УправлениеДоступомПереопределяемый</CommonModule>
 			<CommonModule>гф_РегламентныеЗадания</CommonModule>
@@ -152,15 +153,18 @@
 			<CommonModule>гф_ДокументПремияМодификация</CommonModule>
 			<CommonModule>гф_ЭмиссияКодовМаркировкиВызовСервера</CommonModule>
 			<CommonModule>гф_РассылкаПечатныхФорм</CommonModule>
-			<CommonModule>ДополнительныеОтчетыИОбработкиПереопределяемый</CommonModule>
 			<CommonModule>СкладыСервер</CommonModule>
+			<CommonModule>ДополнительныеОтчетыИОбработкиПереопределяемый</CommonModule>
 			<CommonModule>гф_РасходныйОрдер</CommonModule>
+			<CommonModule>_омОбщегоНазначенияКлиентСервер</CommonModule>
 			<EventSubscription>гф_ОбработкаПроведенияДвижениеКодовМаркировкиОрганизации</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерНаТоварыПроведение</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерНаТоварыПередЗаписью</EventSubscription>
 			<EventSubscription>гф_УстановкаБлокировкиДоговоровКонтрагента</EventSubscription>
 			<EventSubscription>гф_ОтгрузкаУпаковочногоЛиста</EventSubscription>
 			<EventSubscription>гф_ОтгрузкаУпаковочногоЛистаУдаление</EventSubscription>
+			<EventSubscription>гф_РасходныйОрдерИзменениеСтатуса</EventSubscription>
+			<EventSubscription>гф_РасходныйОрдерУдаление</EventSubscription>
 			<FunctionalOption>гф_ИспользоватьДополнительныеОтчетыИОбработки1</FunctionalOption>
 			<DefinedType>Артикул</DefinedType>
 			<DefinedType>ИнвентарныйНомерТМЦВЭксплуатации</DefinedType>
@@ -233,7 +237,7 @@
 			<Catalog>КлючиАналитикиУчетаПоПартнерам</Catalog>
 			<Catalog>ОбъектыРасчетов</Catalog>
 			<Catalog>ОтветственныеЛицаОрганизаций</Catalog>
-			<Document>ВнутреннееПотреблениеТоваров</Document>
+			<Document>ВнутреннееПотребление</Document>
 			<Document>ПриобретениеТоваровУслуг</Document>
 			<Document>ПриходныйОрдерНаТовары</Document>
 			<Document>гф_СпецификацияПокупателя</Document>
@@ -300,12 +304,14 @@
 			<Enum>СтатусыРасходныхОрдеров</Enum>
 			<Enum>гф_ТипыБлокируемыхДокументов</Enum>
 			<Enum>ВариантыИспользованияХарактеристикНоменклатуры</Enum>
+			<Enum>СпособыКомпенсацииВозвратовТоваров</Enum>
 			<Report>гф_ФормированиеОбщейСпецификации</Report>
 			<Report>гф_ПечатнаяФормаТ11</Report>
 			<Report>гф_ОтчетПоДебиторскойЗадолженности</Report>
 			<Report>гф_ЕженедельныйОтчетПоКоличествуЗаказов</Report>
 			<DataProcessor>гф_ФормированиеСпецификацийПокупателя</DataProcessor>
 			<DataProcessor>гф_ВыставлениеСчетов</DataProcessor>
+			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
 			<DataProcessor>гф_СозданиеДоговоровКонтрагентовНаСезон</DataProcessor>
 			<DataProcessor>гф_ЗаявкиНаДоставку</DataProcessor>
 			<DataProcessor>ЖурналУчетаОригиналовПервичныхДокументов</DataProcessor>
@@ -318,8 +324,8 @@
 			<DataProcessor>гф_ЗагрузкаИзI5</DataProcessor>
 			<DataProcessor>гф_Транслитерация</DataProcessor>
 			<DataProcessor>гф_ДиспетчерПереводов</DataProcessor>
-			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
 			<DataProcessor>гф_ОтгрузкаПоЗаказам</DataProcessor>
+			<DataProcessor>ПечатьЭтикетокИЦенников2_5</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
 			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
 			<InformationRegister>СостоянияОригиналовПервичныхДокументов</InformationRegister>

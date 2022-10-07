@@ -74,41 +74,6 @@
 						<Event name="OnChange">РежимРаботыПриИзменении</Event>
 					</Events>
 				</RadioButtonField>
-				<RadioButtonField name="ВыборСтатуса" id="314">
-					<DataPath>ВыборСтатуса</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<RadioButtonType>Auto</RadioButtonType>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Первоначальная версия</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">0</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Отправлено на фабрику</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:decimal">1</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ВыборСтатусаКонтекстноеМеню" id="315"/>
-					<ExtendedTooltip name="ВыборСтатусаРасширеннаяПодсказка" id="316"/>
-				</RadioButtonField>
 				<CheckBoxField name="флТоварыВКоробах" id="126">
 					<DataPath>флТоварыВКоробах</DataPath>
 					<Enabled>false</Enabled>
@@ -274,6 +239,59 @@
 										<Event name="OnChange">ОтборыПриИзменении</Event>
 									</Events>
 								</InputField>
+								<RadioButtonField name="ВыборСтатуса" id="314">
+									<DataPath>ВыборСтатуса</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учет версии заказа</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Первоначальная версия</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отправлено на фабрику</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВыборСтатусаКонтекстноеМеню" id="315"/>
+									<ExtendedTooltip name="ВыборСтатусаРасширеннаяПодсказка" id="316"/>
+								</RadioButtonField>
+								<CheckBoxField name="флПоказатьПротоколРапределения" id="432">
+									<DataPath>флПоказатьПротоколРапределения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показать протокол распределения</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="флПоказатьПротоколРапределенияКонтекстноеМеню" id="433"/>
+									<ExtendedTooltip name="флПоказатьПротоколРапределенияРасширеннаяПодсказка" id="434"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ТаблицаЗаказы" id="9">
@@ -319,13 +337,14 @@
 							<ChildItems>
 								<InputField name="ТаблицаЗаказыЗаказ" id="22">
 									<DataPath>ТаблицаЗаказы.ЗаказКлиента</DataPath>
-									<EditMode>EnterOnInput</EditMode>
+									<EditMode>Directly</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
 									<SpinButton>false</SpinButton>
 									<OpenButton>true</OpenButton>
 									<CreateButton>false</CreateButton>
+									<TextEdit>false</TextEdit>
 									<ContextMenu name="ТаблицаЗаказыЗаказКонтекстноеМеню" id="23"/>
 									<ExtendedTooltip name="ТаблицаЗаказыЗаказРасширеннаяПодсказка" id="24"/>
 								</InputField>
@@ -352,9 +371,11 @@
 					<ExtendedTooltip name="ДанныеЗаказаРасширеннаяПодсказка" id="39"/>
 					<ChildItems>
 						<Table name="Товары" id="40">
+							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<HeaderHeight>3</HeaderHeight>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -565,6 +586,17 @@
 									<ContextMenu name="ТоварыКоличествоСИзменениямиКонтекстноеМеню" id="63"/>
 									<ExtendedTooltip name="ТоварыКоличествоСИзменениямиРасширеннаяПодсказка" id="64"/>
 								</InputField>
+								<InputField name="ТоварыУпаковка" id="420">
+									<DataPath>Объект.Товары.Упаковка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleBackColor>#CCFFCC</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>8</MaxWidth>
+									<ContextMenu name="ТоварыУпаковкаКонтекстноеМеню" id="421"/>
+									<ExtendedTooltip name="ТоварыУпаковкаРасширеннаяПодсказка" id="422"/>
+								</InputField>
 								<InputField name="ТоварыДобавить" id="74">
 									<DataPath>Объект.Товары.Добавить</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -618,7 +650,7 @@
 									</Events>
 								</InputField>
 								<InputField name="ТоварыКоличество" id="86">
-									<DataPath>Объект.Товары.Количество</DataPath>
+									<DataPath>Объект.Товары.КоличествоУпаковок</DataPath>
 									<Enabled>false</Enabled>
 									<Title>
 										<v8:item>
@@ -636,12 +668,24 @@
 									<ContextMenu name="ТоварыКоличествоКонтекстноеМеню" id="87"/>
 									<ExtendedTooltip name="ТоварыКоличествоРасширеннаяПодсказка" id="88"/>
 								</InputField>
+								<InputField name="ТоварыСумма" id="423">
+									<DataPath>Объект.Товары.СуммаСНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>Объект.Товары.TotalСуммаСНДС</FooterDataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>10</MaxWidth>
+									<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="424"/>
+									<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="425"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 						<Table name="ТоварыВКоробах" id="135">
+							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<HeaderHeight>3</HeaderHeight>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -893,7 +937,6 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахЦенаКороба" id="160">
 									<DataPath>Объект.ТоварыВКоробах.ЦенаКороба</DataPath>
-									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -913,11 +956,11 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахСумма" id="163">
 									<DataPath>Объект.ТоварыВКоробах.Сумма</DataPath>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>Объект.ТоварыВКоробах.TotalСумма</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыВКоробахСуммаКонтекстноеМеню" id="164"/>
@@ -972,9 +1015,11 @@
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Резервы" id="208">
+							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<HeaderHeight>4</HeaderHeight>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1043,8 +1088,8 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Заказано
-первоначально</v8:content>
+											<v8:content>Заказанное
+количество</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
@@ -1150,9 +1195,6 @@
 									<MaxWidth>10</MaxWidth>
 									<ContextMenu name="РезервыЗарезервироватьКонтекстноеМеню" id="297"/>
 									<ExtendedTooltip name="РезервыЗарезервироватьРасширеннаяПодсказка" id="298"/>
-									<Events>
-										<Event name="OnChange">РезервыЗарезервироватьПриИзменении</Event>
-									</Events>
 								</InputField>
 								<InputField name="РезервыСнятьРезерв" id="299">
 									<DataPath>Объект.Резервы.СнятьРезерв</DataPath>
@@ -1162,9 +1204,6 @@
 									<MaxWidth>8</MaxWidth>
 									<ContextMenu name="РезервыСнятьРезервКонтекстноеМеню" id="300"/>
 									<ExtendedTooltip name="РезервыСнятьРезервРасширеннаяПодсказка" id="301"/>
-									<Events>
-										<Event name="OnChange">РезервыСнятьРезервПриИзменении</Event>
-									</Events>
 								</InputField>
 								<InputField name="РезервыПеренестиРезерв" id="302">
 									<DataPath>Объект.Резервы.ПеренестиРезерв</DataPath>
@@ -1197,13 +1236,6 @@
 									<TitleBackColor>#CCFFFF</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>true</ChoiceButton>
-									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
-									<ClearButton>true</ClearButton>
-									<SpinButton>false</SpinButton>
-									<OpenButton>true</OpenButton>
-									<CreateButton>false</CreateButton>
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="РезервыНовоеНазначениеКонтекстноеМеню" id="306"/>
 									<ExtendedTooltip name="РезервыНовоеНазначениеРасширеннаяПодсказка" id="307"/>
@@ -1245,6 +1277,7 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<TextEdit>false</TextEdit>
 									<ContextMenu name="РезервыПеренестиНовоеНазначениеКонтекстноеМеню" id="312"/>
 									<ExtendedTooltip name="РезервыПеренестиНовоеНазначениеРасширеннаяПодсказка" id="313"/>
 									<Events>
@@ -1252,7 +1285,7 @@
 									</Events>
 								</InputField>
 								<InputField name="РезервыКоличество" id="230">
-									<DataPath>Объект.Резервы.Количество</DataPath>
+									<DataPath>Объект.Резервы.КоличествоУпаковок</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
@@ -1270,12 +1303,32 @@
 									<ContextMenu name="РезервыКоличествоКонтекстноеМеню" id="231"/>
 									<ExtendedTooltip name="РезервыКоличествоРасширеннаяПодсказка" id="232"/>
 								</InputField>
+								<InputField name="РезервыЦена" id="426">
+									<DataPath>Объект.Резервы.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыЦенаКонтекстноеМеню" id="427"/>
+									<ExtendedTooltip name="РезервыЦенаРасширеннаяПодсказка" id="428"/>
+								</InputField>
+								<InputField name="РезервыСуммаСНДС" id="429">
+									<DataPath>Объект.Резервы.СуммаСНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>9</MaxWidth>
+									<ContextMenu name="РезервыСуммаСНДСКонтекстноеМеню" id="430"/>
+									<ExtendedTooltip name="РезервыСуммаСНДСРасширеннаяПодсказка" id="431"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 						<Table name="РезервыВКоробах" id="336">
+							<Representation>List</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<HeaderHeight>4</HeaderHeight>
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1342,15 +1395,15 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Заказано
-первоначально</v8:content>
+											<v8:content>Заказанное
+количество</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>8</MaxWidth>
+									<MaxWidth>7</MaxWidth>
 									<ContextMenu name="РезервыВКоробахКоличествоПервоначальноКонтекстноеМеню" id="359"/>
 									<ExtendedTooltip name="РезервыВКоробахКоличествоПервоначальноРасширеннаяПодсказка" id="360"/>
 								</InputField>
@@ -1503,8 +1556,12 @@
 									<TitleBackColor>#CCFFFF</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<TextEdit>false</TextEdit>
 									<ContextMenu name="РезервыВКоробахНовоеНазначениеКонтекстноеМеню" id="395"/>
 									<ExtendedTooltip name="РезервыВКоробахНовоеНазначениеРасширеннаяПодсказка" id="396"/>
+									<Events>
+										<Event name="StartChoice">РезервыВКоробахНовоеНазначениеНачалоВыбора</Event>
+									</Events>
 								</InputField>
 								<InputField name="РезервыВКоробахПеренестиВДругойЗаказ" id="397">
 									<DataPath>Объект.РезервыВКоробах.ПеренестиВДругойЗаказ</DataPath>
@@ -1540,8 +1597,12 @@
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<TextEdit>false</TextEdit>
 									<ContextMenu name="РезервыВКоробахПеренестиНовоеНазначениеКонтекстноеМеню" id="401"/>
 									<ExtendedTooltip name="РезервыВКоробахПеренестиНовоеНазначениеРасширеннаяПодсказка" id="402"/>
+									<Events>
+										<Event name="StartChoice">РезервыВКоробахПеренестиНовоеНазначениеНачалоВыбора</Event>
+									</Events>
 								</InputField>
 								<InputField name="РезервыВКоробахКоличество" id="376">
 									<DataPath>Объект.РезервыВКоробах.Количество</DataPath>
@@ -1587,6 +1648,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>Объект.РезервыВКоробах.TotalСумма</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="РезервыВКоробахСуммаКонтекстноеМеню" id="383"/>
@@ -1605,6 +1667,386 @@
 				<v8:Type>cfg:DataProcessorObject.гф_КорректировкаЗаказовРезервов</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.Товары">
+					<Column name="БезВозвратнойТары" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СуммаБезВозвратнойТары" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="ОтмененоБезВозвратнойТары" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СуммаОтмененоБезВозвратнойТары" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСБезВозвратнойТары" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСБез возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСБезВозвратнойТары" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСБез возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиБезВозвратнойТары" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиБезВозвратнойТары" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСОтмененоБезВозвратнойТары" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСОтменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСОтмененоБезВозвратнойТары" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСОтменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиОтмененоБезВозвратнойТары" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиОтмененоБезВозвратнойТары" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаОтменено" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСОтменено" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСОтменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСОтменено" id="15">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСОтменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиОтменено" id="16">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиОтменено" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Резервы">
+					<Column name="БезВозвратнойТары" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ОтмененоБезВозвратнойТары" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СуммаБезВозвратнойТары" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаОтмененоБезВозвратнойТары" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСБезВозвратнойТары" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСБез возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСОтмененоБезВозвратнойТары" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСОтменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаОтменено" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаНДСОтменено" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма НДСОтменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСБезВозвратнойТары" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСБез возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСОтменено" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСОтменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаСНДСОтмененоБезВозвратнойТары" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма СНДСОтменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиБезВозвратнойТары" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиОтменено" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаРучнойСкидкиОтмененоБезВозвратнойТары" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма ручной скидки отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиБезВозвратнойТары" id="15">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиОтменено" id="16">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки отменено</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+					<Column name="СуммаАвтоматическойСкидкиОтмененоБезВозвратнойТары" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма автоматической скидки отменено без возвратной тары</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
 		</Attribute>
 		<Attribute name="РежимРаботы" id="2">
 			<Title>
@@ -2357,6 +2799,193 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="БезВозвратнойТары" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаБезВозвратнойТары" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ОтмененоБезВозвратнойТары" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаОтмененоБезВозвратнойТары" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма отменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаНДСБезВозвратнойТары" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДСБез возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаСНДСБезВозвратнойТары" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма СНДСБез возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаРучнойСкидкиБезВозвратнойТары" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма ручной скидки без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаАвтоматическойСкидкиБезВозвратнойТары" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма автоматической скидки без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаНДСОтмененоБезВозвратнойТары" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДСОтменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаСНДСОтмененоБезВозвратнойТары" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма СНДСОтменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаРучнойСкидкиОтмененоБезВозвратнойТары" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма ручной скидки отменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаАвтоматическойСкидкиОтмененоБезВозвратнойТары" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма автоматической скидки отменено без возвратной тары</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаОтменено" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма отменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаНДСОтменено" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма НДСОтменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаСНДСОтменено" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма СНДСОтменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаРучнойСкидкиОтменено" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма ручной скидки отменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СуммаАвтоматическойСкидкиОтменено" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма автоматической скидки отменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="мНазначение" id="24">
@@ -2479,6 +3108,39 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="флПоказатьПротоколРаспределенияРезервов" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл показать протокол распределения резервов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флПоказатьПротоколРаспределенияОстатков" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл показать протокол распределения остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флПоказатьПротоколРапределения" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл показать протокол рапределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
