@@ -4,7 +4,28 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
+		<name>Document.ЗаказКлиента.TabularSection.гф_ТоварыВКоробах</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Назначение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Договор</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -88,6 +109,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Command.гф_ЛимитыКонтрагентов</name>
 		<right>
 			<name>View</name>
@@ -148,6 +176,13 @@
 	</object>
 	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.гф_СтатусРаботыСЗаказомИ5</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -225,13 +260,48 @@
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
 #Иначе
-#ПоЗначениям( "РегистрСведений.гф_ЗаказКлиента","Чтение","",
+#ПоЗначениям( "Документ.ЗаказКлиента","Чтение","",
 "Организации","Организация",
 "ГруппыПартнеров","Партнер",
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -261,6 +331,13 @@
 		</right>
 		<right>
 			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Статус</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -335,7 +412,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.СуммаДокумента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Партнер</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -349,7 +447,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.TabularSection.Товары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Subsystem.гф_ДебетМенеджент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДокументОснование</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
