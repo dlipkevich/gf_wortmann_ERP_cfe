@@ -105,6 +105,26 @@
 										<CommandName>Form.Command.Отгрузить</CommandName>
 										<ExtendedTooltip name="ОтгрузитьРасширеннаяПодсказка" id="183"/>
 									</Button>
+									<Button name="ФормаУстановитьФлажки" id="196">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьПометки</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаУстановитьФлажкиРасширеннаяПодсказка" id="197"/>
+									</Button>
+									<Button name="ФормаСнятьФлажки" id="198">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьПометки</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаСнятьФлажкиРасширеннаяПодсказка" id="199"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ДеревоДокументовРасширеннаяПодсказка" id="25"/>
@@ -133,13 +153,13 @@
 								<ExtendedTooltip name="ДеревоДокументовУправлениеПоискомРасширеннаяПодсказка" id="34"/>
 							</SearchControlAddition>
 							<Events>
-								<Event name="OnActivateRow">ДеревоДокументовПриАктивизацииСтроки</Event>
 								<Event name="OnChange">ДеревоДокументовПриИзменении</Event>
 							</Events>
 							<ChildItems>
 								<CheckBoxField name="ДеревоДокументовОтгрузить" id="56">
 									<DataPath>ДеревоДокументов.Отгрузить</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ДеревоДокументовОтгрузитьКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ДеревоДокументовОтгрузитьРасширеннаяПодсказка" id="58"/>
@@ -189,6 +209,12 @@
 								</InputField>
 								<InputField name="ДеревоДокументовСсылка" id="161">
 									<DataPath>ДеревоДокументов.УпаковочныйЛистСсылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ID Короба</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСсылкаКонтекстноеМеню" id="162"/>
 									<ExtendedTooltip name="ДеревоДокументовСсылкаРасширеннаяПодсказка" id="163"/>
@@ -269,9 +295,6 @@
 									<BackColor>#DFFFFF</BackColor>
 									<ContextMenu name="ДеревоДокументовСкидкаКонтекстноеМеню" id="174"/>
 									<ExtendedTooltip name="ДеревоДокументовСкидкаРасширеннаяПодсказка" id="175"/>
-									<Events>
-										<Event name="OnChange">ДеревоДокументовСкидкаПриИзменении</Event>
-									</Events>
 								</InputField>
 								<InputField name="ДеревоДокументовСтоимость" id="44">
 									<DataPath>ДеревоДокументов.Стоимость</DataPath>
@@ -519,6 +542,7 @@
 			<MainAttribute>true</MainAttribute>
 			<Save>
 				<Field>Объект.ВидЦены</Field>
+				<Field>Объект.Склад</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="ДеревоДокументов" id="2">
@@ -1428,6 +1452,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Отгрузить</Action>
+		</Command>
+		<Command name="УстановитьПометки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПометки</Action>
+		</Command>
+		<Command name="СнятьПометки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьПометки</Action>
 		</Command>
 	</Commands>
 </Form>
