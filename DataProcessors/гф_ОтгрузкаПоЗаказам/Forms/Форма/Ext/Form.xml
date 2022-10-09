@@ -89,8 +89,15 @@
 							<AutoCommandBar name="ДеревоДокументовКоманднаяПанель" id="24">
 								<Autofill>false</Autofill>
 								<ChildItems>
+									<Button name="ФормаВыбрать" id="200">
+										<Type>CommandBarButton</Type>
+										<DefaultButton>true</DefaultButton>
+										<CommandName>Form.Command.Сформировать</CommandName>
+										<ExtendedTooltip name="ФормаВыбратьРасширеннаяПодсказка" id="201"/>
+									</Button>
 									<Button name="Отобрать" id="59">
 										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
 										<CommandName>Form.Command.Сформировать</CommandName>
 										<Title>
 											<v8:item>
