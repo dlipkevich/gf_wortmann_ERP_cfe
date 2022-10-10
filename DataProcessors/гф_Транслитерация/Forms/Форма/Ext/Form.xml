@@ -5,6 +5,12 @@
 	<SettingsStorage>2555c2d5-dc97-4733-b71c-982ee9894693</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаОткрытьРСПеревод" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьРСПеревод</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОткрытьРСПереводРасширеннаяПодсказка" id="25"/>
+			</Button>
 			<Button name="ФормаПеревести" id="1">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
@@ -16,6 +22,12 @@
 				<CommandName>Form.Command.ИспользоватьAPI</CommandName>
 				<ExtendedTooltip name="ФормаИспользоватьAPIРасширеннаяПодсказка" id="4"/>
 			</Button>
+			<Button name="ФормаИспользоватьСловарь" id="22">
+				<Type>CommandBarButton</Type>
+				<Check>true</Check>
+				<CommandName>Form.Command.ИспользоватьСловарь</CommandName>
+				<ExtendedTooltip name="ФормаИспользоватьСловарьРасширеннаяПодсказка" id="23"/>
+			</Button>
 			<Button name="ФормаЗакрыть" id="5">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -26,6 +38,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -263,6 +276,17 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ИспользоватьСловарь" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать словарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="Перевести" id="1">
@@ -285,7 +309,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать переводчик</v8:content>
+					<v8:content>Использовать Онлайн-переводчик</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -296,6 +320,36 @@
 			</ToolTip>
 			<Action>ИспользоватьAPI</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИспользоватьСловарь" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать внутренний переводчик</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать словарь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИспользоватьСловарь</Action>
+		</Command>
+		<Command name="ОткрытьРСПеревод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть РС "Перевод значений реквизитов и свойств"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть РСПеревод</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРСПеревод</Action>
 		</Command>
 	</Commands>
 </Form>
