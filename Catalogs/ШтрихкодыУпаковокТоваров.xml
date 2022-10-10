@@ -30,6 +30,118 @@
 			<ExtendedConfigurationObject>e35ed3a1-2051-4f4b-8e36-36bb46591b25</ExtendedConfigurationObject>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="e931d2e5-8f59-4f15-9b6a-1ada97ba73a7">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипУпаковки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f87f5bf6-eb96-4273-8488-3302cde9fa30</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыУпаковок</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cb304f70-96f2-4973-ab71-5f1e10f1284c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЗначениеШтрихкода</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a42882e6-c032-40df-8cfc-90f93e7cd610</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5e08fb4b-036e-4ce7-9922-34cc5f3e85b1">
+				<InternalInfo/>
+				<Properties>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ef2759ca-f423-4ac1-92b8-d19e2827b048</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Номенклатура</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="dc0496c0-6393-4839-9fc1-c3665c25c8f0">
+				<InternalInfo/>
+				<Properties>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a0191373-1fc4-4976-b539-535be3a15c7c</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ХарактеристикаНоменклатуры</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b5a6699b-3aff-44e1-b63b-a303a882c7a4">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипШтрихкода</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b0b61f11-9091-414e-82b4-e02ba7729e9d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыШтрихкодов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1fb0097d-8923-48d9-9882-77499467fa88">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХешСуммаНормализации</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c574bfde-af71-48f9-92d5-e666d820e20b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="5d38c4de-409a-4266-9efa-afcc035b8f1a">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.ШтрихкодыУпаковокТоваров.ВложенныеШтрихкоды" category="TabularSection">
+						<xr:TypeId>9768061a-a2f6-4d27-9f7e-a55f15433a28</xr:TypeId>
+						<xr:ValueId>532a6488-8490-4d46-a9ba-0c2a930a18dc</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.ШтрихкодыУпаковокТоваров.ВложенныеШтрихкоды" category="TabularSectionRow">
+						<xr:TypeId>14264749-1544-4c28-b005-b42348a02aac</xr:TypeId>
+						<xr:ValueId>d0838a7b-6ca1-406b-a333-95b9a91929a7</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ВложенныеШтрихкоды</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ac86f4e2-5541-4be6-a0da-b7f71aeea680</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="282b1a5c-4f90-4849-a0b7-9e5c885a04d1">
+						<InternalInfo/>
+						<Properties>
+							<Name>Штрихкод</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0886919d-cbf7-4cf6-8bef-60a3fb8c4d24</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
