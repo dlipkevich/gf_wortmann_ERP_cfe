@@ -217,7 +217,7 @@
 					<ExtendedTooltip name="ДоговорКонтрагентаРасширеннаяПодсказка" id="22"/>
 				</InputField>
 				<InputField name="ДатаОстатков" id="23">
-					<DataPath>Отчет.ДатаОстатков</DataPath>
+					<DataPath>Отчет.ДатаОстатковУдалить</DataPath>
 					<ContextMenu name="ДатаОстатковКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ДатаОстатковРасширеннаяПодсказка" id="25"/>
 				</InputField>
@@ -241,9 +241,12 @@
 					<ExtendedTooltip name="СкладПолучательРасширеннаяПодсказка" id="34"/>
 				</InputField>
 				<InputField name="ЦенаСоСкидкой" id="35">
-					<DataPath>Отчет.ЦенаСоСкидкой</DataPath>
+					<DataPath>Отчет.ТипЦенСоСкидкой</DataPath>
 					<ContextMenu name="ЦенаСоСкидкойКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ЦенаСоСкидкойРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="OnChange">ЦенаСоСкидкойПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ДопРеквизитТоварыВКоробах" id="100">
 					<DataPath>Отчет.ДопРеквизитТоварыВКоробах</DataPath>
