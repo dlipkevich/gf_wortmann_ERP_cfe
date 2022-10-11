@@ -29,6 +29,7 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>07b3c407-9a3a-4f94-b798-226c96d66840</ExtendedConfigurationObject>
 			<Hierarchical>true</Hierarchical>
+			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
 			<DescriptionLength>50</DescriptionLength>
 		</Properties>
 		<ChildObjects>
@@ -403,6 +404,146 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="fb08ae65-988a-4d42-941c-a58851dda792">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВыборГруппы</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>39299529-e597-4f8e-a8bf-4eb5dc180cbb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВыборГруппыСкладов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c870d216-78c7-4476-84d1-f3cf5405d768">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьАдресноеХранение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ff476f7c-83dd-4bf3-b877-ee64c1fc2c1c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e1752f43-38ea-4e05-b7a0-d3979ebd8e07">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьСерииНоменклатуры</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>df718bac-f408-4171-8960-29c3fc786c43</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="ea36a198-4fcb-44c5-a23d-12d580480a2a">
+				<InternalInfo/>
+				<Properties>
+					<Name>НачинатьОтгрузкуПослеФормированияЗаданияНаПеревозку</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9dfbebb5-e50e-4c85-a0c1-cacc79b509c1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="295d2ae5-1152-4464-a37f-60df41c0e591">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользоватьАдресноеХранениеСправочно</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>fc9bd71d-d667-4afd-9eed-abe3cf6ad536</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3567dd8c-09e5-4b63-bb42-37d9f89fe8ab">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонтролироватьСвободныеОстатки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5081eff1-d952-4031-97b3-331ef7b010b2</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c30b1c9b-2d16-47b3-9d20-9b163932529f">
+				<InternalInfo/>
+				<Properties>
+					<Name>УровеньОбслуживания</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>cbd1be32-a456-4bd1-8725-e33dae2f94ef</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.УровниОбслуживания</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d05f536b-513a-4676-8dbc-5ee714d7f988">
+				<InternalInfo/>
+				<Properties>
+					<Name>УчитыватьСебестоимостьПоСериям</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e6187958-5444-45c0-9c75-38bc0757c5c6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="35661b87-6d54-41ed-9a21-16cfe7fa4388">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Склады.ДополнительныеРеквизиты" category="TabularSection">
+						<xr:TypeId>7900998d-e901-4b37-9d23-605f43d0d213</xr:TypeId>
+						<xr:ValueId>6b14a3b3-51f9-4791-bffa-83a2b24fd16f</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Склады.ДополнительныеРеквизиты" category="TabularSectionRow">
+						<xr:TypeId>f8652429-de02-4b51-a8b1-d686d0888ece</xr:TypeId>
+						<xr:ValueId>ba25a588-65ef-48c1-bf18-effd13aa2dcd</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ДополнительныеРеквизиты</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>733fda55-7600-4f6b-835f-7c1c6c2390f8</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="d5a14734-0a1a-467d-b044-b8136588acb8">
+						<InternalInfo/>
+						<Properties>
+							<Name>Свойство</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>81a219a0-e656-459e-b693-8c4476f368b0</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0c0372ca-2bf2-4903-bb76-3d9230701032">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>def842a7-0900-4895-be0f-074a332af0d8</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаВыбора</Form>
 		</ChildObjects>
