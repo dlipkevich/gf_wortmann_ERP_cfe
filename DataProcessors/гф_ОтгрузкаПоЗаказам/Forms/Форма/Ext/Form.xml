@@ -202,8 +202,21 @@
 									<ContextMenu name="ДеревоДокументовИспользоватьЦенуПрайсаКонтекстноеМеню" id="188"/>
 									<ExtendedTooltip name="ДеревоДокументовИспользоватьЦенуПрайсаРасширеннаяПодсказка" id="189"/>
 								</InputField>
+								<InputField name="ДеревоДокументовАдресДоставкиНомер" id="205">
+									<DataPath>ДеревоДокументов.АдресДоставкиНомер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Адрес Доставки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовАдресДоставкиНомерКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="ДеревоДокументовАдресДоставкиНомерРасширеннаяПодсказка" id="207"/>
+								</InputField>
 								<InputField name="ДеревоДокументовАдресДоставки" id="64">
 									<DataPath>ДеревоДокументов.АдресДоставки</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовАдресДоставкиКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="ДеревоДокументовАдресДоставкиРасширеннаяПодсказка" id="66"/>
@@ -214,8 +227,15 @@
 									<ContextMenu name="ДеревоДокументовСкладКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="ДеревоДокументовСкладРасширеннаяПодсказка" id="69"/>
 								</InputField>
+								<InputField name="ДеревоДокументовДокументПоступленияНомер" id="208">
+									<DataPath>ДеревоДокументов.ДокументПоступленияНомер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовДокументПоступленияНомерКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="ДеревоДокументовДокументПоступленияНомерРасширеннаяПодсказка" id="210"/>
+								</InputField>
 								<InputField name="ДеревоДокументовДокументПоступления" id="167">
 									<DataPath>ДеревоДокументов.ДокументПоступления</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовДокументПоступленияКонтекстноеМеню" id="168"/>
 									<ExtendedTooltip name="ДеревоДокументовДокументПоступленияРасширеннаяПодсказка" id="169"/>
@@ -235,6 +255,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<BackColor>#FFFFE1</BackColor>
 									<ContextMenu name="ДеревоДокументовСсылкаКонтекстноеМеню" id="162"/>
 									<ExtendedTooltip name="ДеревоДокументовСсылкаРасширеннаяПодсказка" id="163"/>
 								</InputField>
@@ -294,7 +315,7 @@
 								<InputField name="ДеревоДокументовДатаПрайсЛиста" id="176">
 									<DataPath>ДеревоДокументов.ДатаПрайсЛиста</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<BackColor>#DFFFFF</BackColor>
+									<BackColor>#F0FFFF</BackColor>
 									<ContextMenu name="ДеревоДокументовДатаПрайсЛистаКонтекстноеМеню" id="177"/>
 									<ExtendedTooltip name="ДеревоДокументовДатаПрайсЛистаРасширеннаяПодсказка" id="178"/>
 								</InputField>
@@ -315,7 +336,7 @@
 								<InputField name="ДеревоДокументовСкидка" id="173">
 									<DataPath>ДеревоДокументов.Скидка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<BackColor>#DFFFFF</BackColor>
+									<BackColor>#F0FFFF</BackColor>
 									<ContextMenu name="ДеревоДокументовСкидкаКонтекстноеМеню" id="174"/>
 									<ExtendedTooltip name="ДеревоДокументовСкидкаРасширеннаяПодсказка" id="175"/>
 								</InputField>
@@ -731,6 +752,36 @@
 					</Title>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АдресДоставкиНомер" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес доставки номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДокументПоступленияНомер" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ поступления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -1161,6 +1212,26 @@
 						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.БлокировкиОтгрузок</dcsset:left>
 						<dcsset:comparisonType>Equal</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовДействующийЛимит</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.ДействующийЛимит</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">0</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>

@@ -214,6 +214,26 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДоставкиНомер</dataPath>
+			<field>АдресДоставкиНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес доставки номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПоступленияНомер</dataPath>
+			<field>ДокументПоступленияНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ поступления номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	гф_ДвижениеКодовМаркировкиОрганизацииОстатки.КМ КАК МультиупаковкаКМ,
@@ -425,7 +445,9 @@
 	ЗаказНоменклатураХарактеристика.Организация КАК Организация,
 	ЗаказНоменклатураХарактеристика.Артикул КАК Артикул,
 	ЗаказНоменклатураХарактеристика.Договор КАК Договор,
-	0 КАК ДействующийЛимит
+	0 КАК ДействующийЛимит,
+	NULL КАК АдресДоставкиНомер,
+	NULL КАК ДокументПоступленияНомер
 ИЗ
 	УпаковочныйЛистДанныеЗаказов КАК УпаковочныйЛистДанныеЗаказов
 		ЛЕВОЕ СОЕДИНЕНИЕ ЗаказНоменклатураХарактеристика КАК ЗаказНоменклатураХарактеристика
@@ -592,6 +614,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Договор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресДоставкиНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументПоступленияНомер</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
