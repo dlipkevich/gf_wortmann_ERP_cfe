@@ -67,17 +67,21 @@
 		<name>InformationRegister.гф_ЛимитыКонтрагентов</name>
 		<right>
 			<name>Read</name>
-			<value>false</value>
+			<value>true</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
 #Иначе
 #ПоЗначениям( "РегистрСведений.гф_ЛимитыКонтрагентов","Чтение","",
 "Организации","Организация",
-"ГруппыПартнеров","Партнер",
+"ГруппыПартнеров","Контрагент",
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -103,6 +107,59 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ЛимитыКонтрагентов.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.Account</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.RecordType</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccountingRegister.Хозрасчетный.StandardAttribute.Period</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -137,6 +194,17 @@
 		</right>
 	</object>
 	<object>
+		<name>ChartOfAccounts.Хозрасчетный</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.ВидЛимита</name>
 		<right>
 			<name>View</name>
@@ -151,6 +219,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.ДоговорыКонтрагентов.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Command.гф_ЛимитыКонтрагентов</name>
 		<right>
 			<name>View</name>
@@ -158,7 +233,21 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.ВидЛимита</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.Attribute.Партнер</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -173,6 +262,87 @@
 	</object>
 	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_ВидыЛимитов.Attribute.Бюджет</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Code</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -232,6 +402,17 @@
 	</object>
 	<object>
 		<name>Document.ЗаказКлиента.Attribute.гф_СтатусРаботыСЗаказомИ5</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_ВидыЛимитов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -301,6 +482,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.ДоговорыКонтрагентов.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента</name>
 		<right>
 			<name>Read</name>
@@ -351,6 +539,87 @@
 	</object>
 	<object>
 		<name>Document.ЗаказКлиента.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Партнеры.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.Attribute.Активный</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -546,6 +815,80 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.гф_СтатусыЛимитов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Статус</name>
 		<right>
 			<name>View</name>
@@ -603,6 +946,13 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ВидыБлокировок.TabularSection.БлокируемыТипыДокументов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.Attribute.гф_Сезон</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
