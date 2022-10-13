@@ -350,210 +350,6 @@
 						</Table>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа7" id="150">
-					<Visible>false</Visible>
-					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="151"/>
-					<ChildItems>
-						<Table name="ДеревоДокументовКороб" id="70">
-							<Representation>Tree</Representation>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>ДеревоДокументовКороб</DataPath>
-							<ContextMenu name="ДеревоДокументовКоробКонтекстноеМеню" id="71"/>
-							<AutoCommandBar name="ДеревоДокументовКоробКоманднаяПанель" id="72"/>
-							<ExtendedTooltip name="ДеревоДокументовКоробРасширеннаяПодсказка" id="73"/>
-							<SearchStringAddition name="ДеревоДокументовКоробСтрокаПоиска" id="74">
-								<AdditionSource>
-									<Item>ДеревоДокументовКороб</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовКоробСтрокаПоискаКонтекстноеМеню" id="75"/>
-								<ExtendedTooltip name="ДеревоДокументовКоробСтрокаПоискаРасширеннаяПодсказка" id="76"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ДеревоДокументовКоробСостояниеПросмотра" id="77">
-								<AdditionSource>
-									<Item>ДеревоДокументовКороб</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовКоробСостояниеПросмотраКонтекстноеМеню" id="78"/>
-								<ExtendedTooltip name="ДеревоДокументовКоробСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ДеревоДокументовКоробУправлениеПоиском" id="80">
-								<AdditionSource>
-									<Item>ДеревоДокументовКороб</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовКоробУправлениеПоискомКонтекстноеМеню" id="81"/>
-								<ExtendedTooltip name="ДеревоДокументовКоробУправлениеПоискомРасширеннаяПодсказка" id="82"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<CheckBoxField name="ДеревоДокументовКоробОтгрузить" id="104">
-									<DataPath>ДеревоДокументовКороб.Отгрузить</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ДеревоДокументовКоробОтгрузитьКонтекстноеМеню" id="105"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробОтгрузитьРасширеннаяПодсказка" id="106"/>
-								</CheckBoxField>
-								<InputField name="ДеревоДокументовКоробНоменклатураХарактеристика" id="83">
-									<DataPath>ДеревоДокументовКороб.НоменклатураХарактеристика</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Короб</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробНоменклатураХарактеристикаКонтекстноеМеню" id="84"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробНоменклатураХарактеристикаРасширеннаяПодсказка" id="85"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробКоличествоВНаличии" id="86">
-									<DataPath>ДеревоДокументовКороб.КоличествоВНаличии</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Кол-во в нал.</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробКоличествоВНаличииКонтекстноеМеню" id="87"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробКоличествоВНаличииРасширеннаяПодсказка" id="88"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробЕдиницаИзмерения" id="89">
-									<DataPath>ДеревоДокументовКороб.ЕдиницаИзмерения</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ед. изм.</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробЕдиницаИзмеренияКонтекстноеМеню" id="90"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробЕдиницаИзмеренияРасширеннаяПодсказка" id="91"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробСтоимость" id="92">
-									<DataPath>ДеревоДокументовКороб.Стоимость</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробСтоимостьКонтекстноеМеню" id="93"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробСтоимостьРасширеннаяПодсказка" id="94"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробКоличествоДнейХранения" id="95">
-									<DataPath>ДеревоДокументовКороб.КоличествоДнейХранения</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Кол-во дней хран.</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробКоличествоДнейХраненияКонтекстноеМеню" id="96"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробКоличествоДнейХраненияРасширеннаяПодсказка" id="97"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробСтатусКМ" id="98">
-									<DataPath>ДеревоДокументовКороб.СтатусКМ</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробСтатусКМКонтекстноеМеню" id="99"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробСтатусКМРасширеннаяПодсказка" id="100"/>
-								</InputField>
-								<InputField name="ДеревоДокументовКоробДействующийЛимит" id="101">
-									<DataPath>ДеревоДокументовКороб.ДействующийЛимит</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКоробДействующийЛимитКонтекстноеМеню" id="102"/>
-									<ExtendedTooltip name="ДеревоДокументовКоробДействующийЛимитРасширеннаяПодсказка" id="103"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-						<Table name="ДеревоДокументовНом" id="109">
-							<Representation>Tree</Representation>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>ДеревоДокументовНом</DataPath>
-							<ContextMenu name="ДеревоДокументовНомКонтекстноеМеню" id="110"/>
-							<AutoCommandBar name="ДеревоДокументовНомКоманднаяПанель" id="111"/>
-							<ExtendedTooltip name="ДеревоДокументовНомРасширеннаяПодсказка" id="112"/>
-							<SearchStringAddition name="ДеревоДокументовНомСтрокаПоиска" id="113">
-								<AdditionSource>
-									<Item>ДеревоДокументовНом</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовНомСтрокаПоискаКонтекстноеМеню" id="114"/>
-								<ExtendedTooltip name="ДеревоДокументовНомСтрокаПоискаРасширеннаяПодсказка" id="115"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ДеревоДокументовНомСостояниеПросмотра" id="116">
-								<AdditionSource>
-									<Item>ДеревоДокументовНом</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовНомСостояниеПросмотраКонтекстноеМеню" id="117"/>
-								<ExtendedTooltip name="ДеревоДокументовНомСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ДеревоДокументовНомУправлениеПоиском" id="119">
-								<AdditionSource>
-									<Item>ДеревоДокументовНом</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ДеревоДокументовНомУправлениеПоискомКонтекстноеМеню" id="120"/>
-								<ExtendedTooltip name="ДеревоДокументовНомУправлениеПоискомРасширеннаяПодсказка" id="121"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<InputField name="ДеревоДокументовНомНоменклатураХарактеристика" id="122">
-									<DataPath>ДеревоДокументовНом.НоменклатураХарактеристика</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомНоменклатураХарактеристикаКонтекстноеМеню" id="123"/>
-									<ExtendedTooltip name="ДеревоДокументовНомНоменклатураХарактеристикаРасширеннаяПодсказка" id="124"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомКоличествоВНаличии" id="125">
-									<DataPath>ДеревоДокументовНом.КоличествоВНаличии</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомКоличествоВНаличииКонтекстноеМеню" id="126"/>
-									<ExtendedTooltip name="ДеревоДокументовНомКоличествоВНаличииРасширеннаяПодсказка" id="127"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомЕдиницаИзмерения" id="128">
-									<DataPath>ДеревоДокументовНом.ЕдиницаИзмерения</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомЕдиницаИзмеренияКонтекстноеМеню" id="129"/>
-									<ExtendedTooltip name="ДеревоДокументовНомЕдиницаИзмеренияРасширеннаяПодсказка" id="130"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомСтоимость" id="131">
-									<DataPath>ДеревоДокументовНом.Стоимость</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомСтоимостьКонтекстноеМеню" id="132"/>
-									<ExtendedTooltip name="ДеревоДокументовНомСтоимостьРасширеннаяПодсказка" id="133"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомКоличествоДнейХранения" id="134">
-									<DataPath>ДеревоДокументовНом.КоличествоДнейХранения</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомКоличествоДнейХраненияКонтекстноеМеню" id="135"/>
-									<ExtendedTooltip name="ДеревоДокументовНомКоличествоДнейХраненияРасширеннаяПодсказка" id="136"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомСтатусКМ" id="137">
-									<DataPath>ДеревоДокументовНом.СтатусКМ</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомСтатусКМКонтекстноеМеню" id="138"/>
-									<ExtendedTooltip name="ДеревоДокументовНомСтатусКМРасширеннаяПодсказка" id="139"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНомДействующийЛимит" id="140">
-									<DataPath>ДеревоДокументовНом.ДействующийЛимит</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомДействующийЛимитКонтекстноеМеню" id="141"/>
-									<ExtendedTooltip name="ДеревоДокументовНомДействующийЛимитРасширеннаяПодсказка" id="142"/>
-								</InputField>
-								<CheckBoxField name="ДеревоДокументовНомОтгрузить" id="143">
-									<DataPath>ДеревоДокументовНом.Отгрузить</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ДеревоДокументовНомОтгрузитьКонтекстноеМеню" id="144"/>
-									<ExtendedTooltip name="ДеревоДокументовНомОтгрузитьРасширеннаяПодсказка" id="145"/>
-								</CheckBoxField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -926,6 +722,17 @@
 						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 					</Type>
 				</Column>
+				<Column name="Договор" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="РежимРаскрытияУровнейОтоброжения" id="3">
@@ -944,138 +751,6 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ДеревоДокументовКороб" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дерево документов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTree</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="НоменклатураХарактеристика" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номенклатура/Характеристика</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="КоличествоВНаличии" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество в наличии</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="ЕдиницаИзмерения" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Единица измерения</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>5</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Стоимость" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Стоимость</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="КоличествоДнейХранения" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество дней хранения</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="СтатусКМ" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус КМ</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ДействующийЛимит" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Действующий лимит</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Отгрузить" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Отгрузить</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
-			</Columns>
-		</Attribute>
 		<Attribute name="РежимРаскрытияУровнейОтоброженияКороб" id="5">
 			<Title>
 				<v8:item>
@@ -1091,138 +766,6 @@
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-		</Attribute>
-		<Attribute name="ДеревоДокументовНом" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дерево документов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTree</v8:Type>
-			</Type>
-			<Columns>
-				<Column name="НоменклатураХарактеристика" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Номенклатура/Характеристика</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="КоличествоВНаличии" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество в наличии</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="ЕдиницаИзмерения" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Единица измерения</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>5</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Стоимость" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Стоимость</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="КоличествоДнейХранения" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество дней хранения</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="СтатусКМ" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус КМ</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="ДействующийЛимит" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Действующий лимит</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Отгрузить" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Отгрузить</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
-			</Columns>
 		</Attribute>
 		<Attribute name="МассивРаспоряжений" id="7">
 			<Title>
@@ -1387,6 +930,179 @@
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ЛимитыКонтрагентов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимиты контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Партнер" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидЛимита" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид лимита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыЛимитов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_СтатусыЛимитов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="БлокировокиКонтрагентов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Блокировоки контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Партнер" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоговорКонтрагента" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидБлокировки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид блокировки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Заблокирован" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заблокирован</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
