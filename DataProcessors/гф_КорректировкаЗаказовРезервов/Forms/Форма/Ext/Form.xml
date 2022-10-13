@@ -178,6 +178,7 @@
 							<v8:content>Отборы</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -288,6 +289,7 @@
 											<v8:content>Показать протокол распределения</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Left</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="флПоказатьПротоколРапределенияКонтекстноеМеню" id="433"/>
 									<ExtendedTooltip name="флПоказатьПротоколРапределенияРасширеннаяПодсказка" id="434"/>
@@ -296,7 +298,7 @@
 						</UsualGroup>
 						<Table name="ТаблицаЗаказы" id="9">
 							<Representation>List</Representation>
-							<CommandBarLocation>None</CommandBarLocation>
+							<CommandBarLocation>Top</CommandBarLocation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -305,7 +307,15 @@
 							<DataPath>ТаблицаЗаказы</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ТаблицаЗаказыКонтекстноеМеню" id="10"/>
-							<AutoCommandBar name="ТаблицаЗаказыКоманднаяПанель" id="11"/>
+							<AutoCommandBar name="ТаблицаЗаказыКоманднаяПанель" id="11">
+								<ChildItems>
+									<Button name="ТаблицаЗаказыВидимостьКолонок" id="435">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВидимостьКолонок</CommandName>
+										<ExtendedTooltip name="ТаблицаЗаказыВидимостьКолонокРасширеннаяПодсказка" id="436"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаЗаказыРасширеннаяПодсказка" id="12"/>
 							<SearchStringAddition name="ТаблицаЗаказыСтрокаПоиска" id="13">
 								<AdditionSource>
@@ -337,7 +347,6 @@
 							<ChildItems>
 								<InputField name="ТаблицаЗаказыЗаказ" id="22">
 									<DataPath>ТаблицаЗаказы.ЗаказКлиента</DataPath>
-									<EditMode>Directly</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
@@ -347,6 +356,37 @@
 									<TextEdit>false</TextEdit>
 									<ContextMenu name="ТаблицаЗаказыЗаказКонтекстноеМеню" id="23"/>
 									<ExtendedTooltip name="ТаблицаЗаказыЗаказРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ТаблицаЗаказыКонтрагент" id="437">
+									<DataPath>ТаблицаЗаказы.Контрагент</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаЗаказыКонтрагентКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="ТаблицаЗаказыКонтрагентРасширеннаяПодсказка" id="439"/>
+								</InputField>
+								<InputField name="ТаблицаЗаказыСклад" id="440">
+									<DataPath>ТаблицаЗаказы.Склад</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаЗаказыСкладКонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="ТаблицаЗаказыСкладРасширеннаяПодсказка" id="442"/>
+								</InputField>
+								<InputField name="ТаблицаЗаказыСуммаДокумента" id="443">
+									<DataPath>ТаблицаЗаказы.СуммаДокумента</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+									<MaxWidth>1</MaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ТаблицаЗаказыСуммаДокументаКонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="ТаблицаЗаказыСуммаДокументаРасширеннаяПодсказка" id="445"/>
+								</InputField>
+								<InputField name="ТаблицаЗаказыКомментарий" id="446">
+									<DataPath>ТаблицаЗаказы.Комментарий</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаЗаказыКомментарийКонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="ТаблицаЗаказыКомментарийРасширеннаяПодсказка" id="448"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -499,6 +539,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ТоварыПометкаКонтекстноеМеню" id="112"/>
@@ -508,6 +549,7 @@
 									<DataPath>Объект.Товары.LineNumber</DataPath>
 									<Enabled>false</Enabled>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>2</MaxWidth>
@@ -517,6 +559,7 @@
 								<InputField name="ТоварыНоменклатура" id="56">
 									<DataPath>Объект.Товары.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="58"/>
@@ -524,13 +567,14 @@
 								<InputField name="ТоварыХарактеристика" id="59">
 									<DataPath>Объект.Товары.Характеристика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="ТоварыХарактеристикаКонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="ТоварыХарактеристикаРасширеннаяПодсказка" id="61"/>
 								</InputField>
 								<InputField name="ТоварыКоличествоПервоначально" id="65">
 									<DataPath>Объект.Товары.КоличествоПервоначально</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -548,7 +592,7 @@
 								</InputField>
 								<InputField name="ТоварыДобавлено" id="68">
 									<DataPath>Объект.Товары.Добавлено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -559,7 +603,7 @@
 								</InputField>
 								<InputField name="ТоварыУдалено" id="71">
 									<DataPath>Объект.Товары.Удалено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -570,7 +614,7 @@
 								</InputField>
 								<InputField name="ТоварыКоличествоСИзменениями" id="62">
 									<DataPath>Объект.Товары.КоличествоСИзменениями</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -784,6 +828,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ТоварыВКоробахПометкаКонтекстноеМеню" id="410"/>
@@ -792,6 +837,7 @@
 								<LabelField name="ТоварыВКоробахНомерСтроки" id="148">
 									<DataPath>Объект.ТоварыВКоробах.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>2</MaxWidth>
@@ -800,7 +846,9 @@
 								</LabelField>
 								<InputField name="ТоварыВКоробахВариантКомплектации" id="151">
 									<DataPath>Объект.ТоварыВКоробах.ВариантКомплектации</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="ТоварыВКоробахВариантКомплектацииКонтекстноеМеню" id="152"/>
 									<ExtendedTooltip name="ТоварыВКоробахВариантКомплектацииРасширеннаяПодсказка" id="153"/>
@@ -808,10 +856,29 @@
 										<Event name="OnChange">ТоварыВКоробахВариантКомплектацииПриИзменении</Event>
 									</Events>
 								</InputField>
+								<InputField name="ТоварыВКоробахВариантКомплектацииКоличествоПар" id="455">
+									<DataPath>Объект.ТоварыВКоробах.ВариантКомплектацииКоличествоПар</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество
+пар</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ТоварыВКоробахВариантКомплектацииКоличествоПарКонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="ТоварыВКоробахВариантКомплектацииКоличествоПарРасширеннаяПодсказка" id="457"/>
+								</InputField>
 								<InputField name="ТоварыВКоробахАртикул" id="154">
 									<DataPath>Объект.ТоварыВКоробах.Артикул</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>20</MaxWidth>
@@ -820,7 +887,7 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахКоличествоПервоначально" id="169">
 									<DataPath>Объект.ТоварыВКоробах.КоличествоПервоначально</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -838,7 +905,7 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахДобавлено" id="172">
 									<DataPath>Объект.ТоварыВКоробах.Добавлено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -849,7 +916,7 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахУдалено" id="175">
 									<DataPath>Объект.ТоварыВКоробах.Удалено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -860,7 +927,7 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахКоличествоСИзменениями" id="178">
 									<DataPath>Объект.ТоварыВКоробах.КоличествоСИзменениями</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -918,7 +985,7 @@
 								</InputField>
 								<InputField name="ТоварыВКоробахКоличество" id="157">
 									<DataPath>Объект.ТоварыВКоробах.Количество</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -934,6 +1001,24 @@
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыВКоробахКоличествоКонтекстноеМеню" id="158"/>
 									<ExtendedTooltip name="ТоварыВКоробахКоличествоРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="ТоварыВКоробахКоличествоПар" id="449">
+									<DataPath>Объект.ТоварыВКоробах.КоличествоПар</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество
+пар</v8:content>
+										</v8:item>
+									</Title>
+									<TitleBackColor>#CCFFCC</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ТоварыВКоробахКоличествоПарКонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="ТоварыВКоробахКоличествоПарРасширеннаяПодсказка" id="451"/>
 								</InputField>
 								<InputField name="ТоварыВКоробахЦенаКороба" id="160">
 									<DataPath>Объект.ТоварыВКоробах.ЦенаКороба</DataPath>
@@ -1060,6 +1145,7 @@
 									<DataPath>Объект.Резервы.LineNumber</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>2</MaxWidth>
@@ -1070,6 +1156,7 @@
 									<DataPath>Объект.Резервы.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="РезервыНоменклатураКонтекстноеМеню" id="240"/>
 									<ExtendedTooltip name="РезервыНоменклатураРасширеннаяПодсказка" id="241"/>
@@ -1078,13 +1165,14 @@
 									<DataPath>Объект.Резервы.Характеристика</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="РезервыХарактеристикаКонтекстноеМеню" id="285"/>
 									<ExtendedTooltip name="РезервыХарактеристикаРасширеннаяПодсказка" id="286"/>
 								</InputField>
 								<InputField name="РезервыКоличествоПервоначально" id="233">
 									<DataPath>Объект.Резервы.КоличествоПервоначально</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1102,7 +1190,7 @@
 								</InputField>
 								<InputField name="РезервыДобавлено" id="227">
 									<DataPath>Объект.Резервы.Добавлено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -1113,7 +1201,7 @@
 								</InputField>
 								<InputField name="РезервыУдалено" id="266">
 									<DataPath>Объект.Резервы.Удалено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -1124,7 +1212,7 @@
 								</InputField>
 								<InputField name="РезервыКоличествоСИзменениями" id="236">
 									<DataPath>Объект.Резервы.КоличествоСИзменениями</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1142,7 +1230,7 @@
 								</InputField>
 								<InputField name="РезервыТоварВРезерве" id="290">
 									<DataPath>Объект.Резервы.ТоварВРезерве</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1160,7 +1248,7 @@
 								</InputField>
 								<InputField name="РезервыДоступноНаСкладе" id="293">
 									<DataPath>Объект.Резервы.ДоступноНаСкладе</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1365,6 +1453,7 @@
 								<InputField name="РезервыВКоробахНомерСтроки" id="349">
 									<DataPath>Объект.РезервыВКоробах.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>2</MaxWidth>
@@ -1375,14 +1464,34 @@
 									<DataPath>Объект.РезервыВКоробах.ВариантКомплектации</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="РезервыВКоробахВариантКомплектацииКонтекстноеМеню" id="353"/>
 									<ExtendedTooltip name="РезервыВКоробахВариантКомплектацииРасширеннаяПодсказка" id="354"/>
+								</InputField>
+								<InputField name="РезервыВКоробахВариантКомплектацииКоличествоПар" id="458">
+									<DataPath>Объект.РезервыВКоробах.ВариантКомплектацииКоличествоПар</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество
+пар</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыВКоробахВариантКомплектацииКоличествоПарКонтекстноеМеню" id="459"/>
+									<ExtendedTooltip name="РезервыВКоробахВариантКомплектацииКоличествоПарРасширеннаяПодсказка" id="460"/>
 								</InputField>
 								<InputField name="РезервыВКоробахАртикул" id="355">
 									<DataPath>Объект.РезервыВКоробах.Артикул</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>15</MaxWidth>
@@ -1391,7 +1500,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахКоличествоПервоначально" id="358">
 									<DataPath>Объект.РезервыВКоробах.КоличествоПервоначально</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1409,7 +1518,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахДобавлено" id="361">
 									<DataPath>Объект.РезервыВКоробах.Добавлено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -1420,7 +1529,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахУдалено" id="364">
 									<DataPath>Объект.РезервыВКоробах.Удалено</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -1431,7 +1540,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахКоличествоСИзменениями" id="367">
 									<DataPath>Объект.РезервыВКоробах.КоличествоСИзменениями</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1449,7 +1558,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахТоварВРезерве" id="385">
 									<DataPath>Объект.РезервыВКоробах.ТоварВРезерве</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1467,7 +1576,7 @@
 								</InputField>
 								<InputField name="РезервыВКоробахДоступноНаСкладе" id="388">
 									<DataPath>Объект.РезервыВКоробах.ДоступноНаСкладе</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1622,6 +1731,24 @@
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="РезервыВКоробахКоличествоКонтекстноеМеню" id="377"/>
 									<ExtendedTooltip name="РезервыВКоробахКоличествоРасширеннаяПодсказка" id="378"/>
+								</InputField>
+								<InputField name="РезервыВКоробахКоличествоПар" id="452">
+									<DataPath>Объект.РезервыВКоробах.КоличествоПар</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество
+пар</v8:content>
+										</v8:item>
+									</Title>
+									<TitleBackColor>#CCFFCC</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыВКоробахКоличествоПарКонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="РезервыВКоробахКоличествоПарРасширеннаяПодсказка" id="454"/>
 								</InputField>
 								<InputField name="РезервыВКоробахЦенаКороба" id="379">
 									<DataPath>Объект.РезервыВКоробах.ЦенаКороба</DataPath>
@@ -2102,6 +2229,39 @@
 							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Склад" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаДокумента" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
 					</Type>
 				</Column>
 			</Columns>
@@ -3078,6 +3238,22 @@
 						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ВсегоМест" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего мест</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="РаспределениеРезервовАдресХранилища" id="27">
@@ -3137,6 +3313,113 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Фл показать протокол рапределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидимостьКонтрагент" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидимостьКонтрагент</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВидимостьСклад" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидимостьСклад</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВидимостьСумма" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидимостьСумма</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВидимостьКомментарий" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ВидимостьКомментарий</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="мВариантыКомплектации" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М варианты комплектации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВариантКомплектации" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант комплектации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоПар" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество пар</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="флКомментарийСохранен" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл комментарий сохранен</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -3630,6 +3913,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьСезон</Action>
+		</Command>
+		<Command name="ВидимостьКолонок" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость колонок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Видимость колонок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидимостьКолонок</Action>
 		</Command>
 	</Commands>
 </Form>

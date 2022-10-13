@@ -87,6 +87,20 @@
 			<ContextMenu name="отборХарактеристикаКонтекстноеМеню" id="38"/>
 			<ExtendedTooltip name="отборХарактеристикаРасширеннаяПодсказка" id="39"/>
 		</InputField>
+		<InputField name="отборКонтрагент" id="40">
+			<DataPath>отборКонтрагент</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="отборКонтрагентКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="отборКонтрагентРасширеннаяПодсказка" id="42"/>
+			<Events>
+				<Event name="OnChange">отборКонтрагентПриИзменении</Event>
+			</Events>
+		</InputField>
 		<InputField name="отборПериод" id="13">
 			<DataPath>отборПериод</DataPath>
 			<Title>
@@ -280,6 +294,17 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="отборКонтрагент" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
