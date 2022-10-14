@@ -68,16 +68,6 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоЗначениям( "РегистрСведений.гф_ЛимитыКонтрагентов","Чтение","",
-"Организации","Организация",
-"ГруппыПартнеров","Контрагент",
-"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
-#КонецЕсли</condition>
-			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -352,7 +342,7 @@
 		<name>Document.гф_УстановкаСнятиеЛимита</name>
 		<right>
 			<name>Read</name>
-			<value>false</value>
+			<value>true</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -363,6 +353,14 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
