@@ -246,8 +246,21 @@
 									<ContextMenu name="ДеревоДокументовЗаказКонтекстноеМеню" id="156"/>
 									<ExtendedTooltip name="ДеревоДокументовЗаказРасширеннаяПодсказка" id="157"/>
 								</InputField>
+								<InputField name="ДеревоДокументовУпаковочныйЛистНомер" id="211">
+									<DataPath>ДеревоДокументов.УпаковочныйЛистНомер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ID Короба</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовУпаковочныйЛистНомерКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="ДеревоДокументовУпаковочныйЛистНомерРасширеннаяПодсказка" id="213"/>
+								</InputField>
 								<InputField name="ДеревоДокументовСсылка" id="161">
 									<DataPath>ДеревоДокументов.УпаковочныйЛистСсылка</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -774,6 +787,21 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Документ поступления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УпаковочныйЛистНомер" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковочный лист номер</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
