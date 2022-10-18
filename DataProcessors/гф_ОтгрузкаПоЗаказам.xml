@@ -388,6 +388,40 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="e846f40d-7007-4915-8259-d6c3e33e030a">
+				<Properties>
+					<Name>КомпоновщикНастроекНоменклатуры</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компоновщик настроек номенклатуры</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings">dcsset:SettingsComposer</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="479bde8d-9809-4e86-8559-e8e419c6191f">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.гф_ОтгрузкаПоЗаказам.Резервы" category="TabularSection">
@@ -2859,6 +2893,7 @@
 			<Form>Форма</Form>
 			<Form>ФормаВопросаОДатеЦенИСкидкеКлиента</Form>
 			<Template>СхемаКомпоновки</Template>
+			<Template>СхемаКомпоновкиНоменклатуры</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>
