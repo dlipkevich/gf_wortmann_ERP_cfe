@@ -82,12 +82,12 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаИсточникРасширеннаяПодсказка" id="10"/>
 					<ChildItems>
-						<TextDocumentField name="Источник" id="11">
+						<SpreadSheetDocumentField name="Источник" id="26">
 							<DataPath>Источник</DataPath>
-							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="ИсточникКонтекстноеМеню" id="12"/>
-							<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="13"/>
-						</TextDocumentField>
+							<Edit>true</Edit>
+							<ContextMenu name="ИсточникКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="28"/>
+						</SpreadSheetDocumentField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаРезультат" id="14">
@@ -105,11 +105,11 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="15"/>
 					<ChildItems>
-						<TextDocumentField name="Результат" id="16">
+						<SpreadSheetDocumentField name="Результат" id="29">
 							<DataPath>Результат</DataPath>
-							<ContextMenu name="РезультатКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="18"/>
-						</TextDocumentField>
+							<ContextMenu name="РезультатКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="31"/>
+						</SpreadSheetDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -130,7 +130,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="Результат" id="3">
@@ -141,7 +141,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="Перевод" id="4">
@@ -255,6 +255,22 @@
 							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Колонка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
