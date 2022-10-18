@@ -1643,6 +1643,21 @@
 																	</ButtonGroup>
 																</ChildItems>
 															</ButtonGroup>
+															<ButtonGroup name="ГруппаТоварыБонусныеБаллы" id="2404">
+																<ExtendedTooltip name="ГруппаТоварыБонусныеБаллыРасширеннаяПодсказка" id="2397"/>
+																<ChildItems>
+																	<Button name="ТоварыДобавитьОплатуБонуснымиБаллами" id="2393">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>0</CommandName>
+																		<ExtendedTooltip name="ТоварыДобавитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="2395"/>
+																	</Button>
+																	<Button name="ТоварыОтменитьОплатуБонуснымиБаллами" id="2398">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>0</CommandName>
+																		<ExtendedTooltip name="ТоварыОтменитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="2403"/>
+																	</Button>
+																</ChildItems>
+															</ButtonGroup>
 														</ChildItems>
 													</Popup>
 													<Button name="ТоварыВыделитьВсе" id="1362">
@@ -2052,6 +2067,21 @@
 													<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="491"/>
 													<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="1211"/>
 												</InputField>
+												<InputField name="ТоварыСуммаБонусныхБалловКСписаниюВВалюте" id="2387">
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Скидка бонусами</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Discount by bonus points</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеКонтекстноеМеню" id="2389"/>
+													<ExtendedTooltip name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеРасширеннаяПодсказка" id="2392"/>
+												</InputField>
 												<InputField name="ТоварыСумма" id="484">
 													<SkipOnInput>true</SkipOnInput>
 													<FooterFont ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -2154,6 +2184,24 @@
 													<ContextMenu name="ТоварыСрокПоставкиКонтекстноеМеню" id="949"/>
 													<ExtendedTooltip name="ТоварыСрокПоставкиExtendedTooltip" id="1222"/>
 												</LabelField>
+												<InputField name="ТоварыСуммаНачисленныхБонусныхБалловВВалюте" id="2388">
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Начисленные бонусные баллы</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Accumulated bonus points</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеКонтекстноеМеню" id="2390"/>
+													<ExtendedTooltip name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеРасширеннаяПодсказка" id="2391"/>
+												</InputField>
 											</ChildItems>
 										</Table>
 										<UsualGroup name="ГруппаТоварыПодвал" id="1588">
@@ -3785,6 +3833,52 @@ business</v8:content>
 															<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="1598"/>
 															<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="1599"/>
 														</InputField>
+														<UsualGroup name="ГруппаГосКонтракт" id="2384">
+															<Visible>false</Visible>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа гос контракт</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group state contract</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаГосКонтрактРасширеннаяПодсказка" id="2385"/>
+															<ChildItems>
+																<LabelField name="ГосКонтракт" id="2386">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>29</MaxWidth>
+																	<Hiperlink>true</Hiperlink>
+																	<ContextMenu name="ГосКонтрактКонтекстноеМеню" id="2399"/>
+																	<ExtendedTooltip name="ГосКонтрактРасширеннаяПодсказка" id="2400"/>
+																</LabelField>
+																<InputField name="ЭтапГосконтрактаЕИС" id="2396">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Этап</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Step</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Left</TitleLocation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>28</MaxWidth>
+																	<DropListButton>false</DropListButton>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ContextMenu name="ЭтапГосконтрактаЕИСКонтекстноеМеню" id="2401"/>
+																	<ExtendedTooltip name="ЭтапГосконтрактаЕИСРасширеннаяПодсказка" id="2402"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
 														<InputField name="Автор" id="1825">
 															<ReadOnly>true</ReadOnly>
 															<AutoMaxWidth>false</AutoMaxWidth>
@@ -6140,7 +6234,7 @@ notes</v8:content>
 																		<Button name="ТоварыЗаполнитьЦеныПоДоговору" id="2382">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныПоДоговоруРасширеннаяПодсказка" id="2383"/>
+																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныПоДоговоруРасширеннаяПодсказка" id="2394"/>
 																		</Button>
 																		<Button name="ТоварыЗаполнитьЦеныВыделенныхСтрокПоВидуЦен" id="710">
 																			<Type>CommandBarButton</Type>
@@ -6219,6 +6313,21 @@ notes</v8:content>
 																				</Button>
 																			</ChildItems>
 																		</ButtonGroup>
+																	</ChildItems>
+																</ButtonGroup>
+																<ButtonGroup name="ГруппаТоварыБонусныеБаллы" id="2383">
+																	<ExtendedTooltip name="ГруппаТоварыБонусныеБаллыРасширеннаяПодсказка" id="2397"/>
+																	<ChildItems>
+																		<Button name="ТоварыДобавитьОплатуБонуснымиБаллами" id="2393">
+																			<Type>CommandBarButton</Type>
+																			<CommandName>0</CommandName>
+																			<ExtendedTooltip name="ТоварыДобавитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="2395"/>
+																		</Button>
+																		<Button name="ТоварыОтменитьОплатуБонуснымиБаллами" id="2398">
+																			<Type>CommandBarButton</Type>
+																			<CommandName>0</CommandName>
+																			<ExtendedTooltip name="ТоварыОтменитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="2403"/>
+																		</Button>
 																	</ChildItems>
 																</ButtonGroup>
 															</ChildItems>
@@ -6630,6 +6739,21 @@ notes</v8:content>
 														<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="491"/>
 														<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="1211"/>
 													</InputField>
+													<InputField name="ТоварыСуммаБонусныхБалловКСписаниюВВалюте" id="2387">
+														<ReadOnly>true</ReadOnly>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Скидка бонусами</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Discount by bonus points</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеКонтекстноеМеню" id="2389"/>
+														<ExtendedTooltip name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеРасширеннаяПодсказка" id="2392"/>
+													</InputField>
 													<InputField name="ТоварыСумма" id="484">
 														<SkipOnInput>true</SkipOnInput>
 														<FooterFont ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
@@ -6732,6 +6856,24 @@ notes</v8:content>
 														<ContextMenu name="ТоварыСрокПоставкиКонтекстноеМеню" id="949"/>
 														<ExtendedTooltip name="ТоварыСрокПоставкиExtendedTooltip" id="1222"/>
 													</LabelField>
+													<InputField name="ТоварыСуммаНачисленныхБонусныхБалловВВалюте" id="2388">
+														<UserVisible>
+															<xr:Common>false</xr:Common>
+														</UserVisible>
+														<ReadOnly>true</ReadOnly>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Начисленные бонусные баллы</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Accumulated bonus points</v8:content>
+															</v8:item>
+														</Title>
+														<ContextMenu name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеКонтекстноеМеню" id="2390"/>
+														<ExtendedTooltip name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеРасширеннаяПодсказка" id="2391"/>
+													</InputField>
 												</ChildItems>
 											</Table>
 											<UsualGroup name="ГруппаТоварыПодвал" id="1588">
@@ -8363,6 +8505,52 @@ business</v8:content>
 																<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="1598"/>
 																<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="1599"/>
 															</InputField>
+															<UsualGroup name="ГруппаГосКонтракт" id="2384">
+																<Visible>false</Visible>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа гос контракт</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Group state contract</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<Group>Vertical</Group>
+																<Behavior>Usual</Behavior>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаГосКонтрактРасширеннаяПодсказка" id="2385"/>
+																<ChildItems>
+																	<LabelField name="ГосКонтракт" id="2386">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<MaxWidth>29</MaxWidth>
+																		<Hiperlink>true</Hiperlink>
+																		<ContextMenu name="ГосКонтрактКонтекстноеМеню" id="2399"/>
+																		<ExtendedTooltip name="ГосКонтрактРасширеннаяПодсказка" id="2400"/>
+																	</LabelField>
+																	<InputField name="ЭтапГосконтрактаЕИС" id="2396">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Этап</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Step</v8:content>
+																			</v8:item>
+																		</Title>
+																		<TitleLocation>Left</TitleLocation>
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<MaxWidth>28</MaxWidth>
+																		<DropListButton>false</DropListButton>
+																		<ChoiceButton>true</ChoiceButton>
+																		<ContextMenu name="ЭтапГосконтрактаЕИСКонтекстноеМеню" id="2401"/>
+																		<ExtendedTooltip name="ЭтапГосконтрактаЕИСРасширеннаяПодсказка" id="2402"/>
+																	</InputField>
+																</ChildItems>
+															</UsualGroup>
 															<InputField name="Автор" id="1825">
 																<ReadOnly>true</ReadOnly>
 																<AutoMaxWidth>false</AutoMaxWidth>
