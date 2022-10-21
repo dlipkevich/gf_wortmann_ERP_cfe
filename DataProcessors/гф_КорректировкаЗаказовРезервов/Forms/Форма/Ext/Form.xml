@@ -10,6 +10,7 @@
 			</Button>
 			<Button name="ФормаСохранить" id="102">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.Сохранить</CommandName>
 				<ExtendedTooltip name="ФормаСохранитьРасширеннаяПодсказка" id="103"/>
 			</Button>
@@ -258,7 +259,7 @@
 												<Presentation>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Первоначальная версия</v8:content>
+														<v8:content>Первоначальный заказ</v8:content>
 													</v8:item>
 												</Presentation>
 												<Value xsi:type="xs:decimal">0</Value>
@@ -271,7 +272,7 @@
 												<Presentation>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Отправлено на фабрику</v8:content>
+														<v8:content>Согласованный заказ</v8:content>
 													</v8:item>
 												</Presentation>
 												<Value xsi:type="xs:decimal">1</Value>
@@ -301,21 +302,28 @@
 							<CommandBarLocation>Top</CommandBarLocation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>12</MaxHeight>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>ТаблицаЗаказы</DataPath>
-							<RowFilter xsi:nil="true"/>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="ТаблицаЗаказыКонтекстноеМеню" id="10"/>
-							<AutoCommandBar name="ТаблицаЗаказыКоманднаяПанель" id="11">
-								<ChildItems>
-									<Button name="ТаблицаЗаказыВидимостьКолонок" id="435">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ВидимостьКолонок</CommandName>
-										<ExtendedTooltip name="ТаблицаЗаказыВидимостьКолонокРасширеннаяПодсказка" id="436"/>
-									</Button>
-								</ChildItems>
-							</AutoCommandBar>
+							<AutoCommandBar name="ТаблицаЗаказыКоманднаяПанель" id="11"/>
 							<ExtendedTooltip name="ТаблицаЗаказыРасширеннаяПодсказка" id="12"/>
 							<SearchStringAddition name="ТаблицаЗаказыСтрокаПоиска" id="13">
 								<AdditionSource>
@@ -345,49 +353,17 @@
 								<Event name="OnActivateCell">ТаблицаЗаказыПриАктивизацииЯчейки</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="ТаблицаЗаказыЗаказ" id="22">
-									<DataPath>ТаблицаЗаказы.ЗаказКлиента</DataPath>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>false</ChoiceButton>
-									<ClearButton>false</ClearButton>
-									<SpinButton>false</SpinButton>
-									<OpenButton>true</OpenButton>
-									<CreateButton>false</CreateButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="ТаблицаЗаказыЗаказКонтекстноеМеню" id="23"/>
-									<ExtendedTooltip name="ТаблицаЗаказыЗаказРасширеннаяПодсказка" id="24"/>
-								</InputField>
-								<InputField name="ТаблицаЗаказыКонтрагент" id="437">
-									<DataPath>ТаблицаЗаказы.Контрагент</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ТаблицаЗаказыКонтрагентКонтекстноеМеню" id="438"/>
-									<ExtendedTooltip name="ТаблицаЗаказыКонтрагентРасширеннаяПодсказка" id="439"/>
-								</InputField>
-								<InputField name="ТаблицаЗаказыСклад" id="440">
-									<DataPath>ТаблицаЗаказы.Склад</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ТаблицаЗаказыСкладКонтекстноеМеню" id="441"/>
-									<ExtendedTooltip name="ТаблицаЗаказыСкладРасширеннаяПодсказка" id="442"/>
-								</InputField>
-								<InputField name="ТаблицаЗаказыСуммаДокумента" id="443">
-									<DataPath>ТаблицаЗаказы.СуммаДокумента</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
-									<MaxWidth>1</MaxWidth>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ТаблицаЗаказыСуммаДокументаКонтекстноеМеню" id="444"/>
-									<ExtendedTooltip name="ТаблицаЗаказыСуммаДокументаРасширеннаяПодсказка" id="445"/>
-								</InputField>
-								<InputField name="ТаблицаЗаказыКомментарий" id="446">
-									<DataPath>ТаблицаЗаказы.Комментарий</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ТаблицаЗаказыКомментарийКонтекстноеМеню" id="447"/>
-									<ExtendedTooltip name="ТаблицаЗаказыКомментарийРасширеннаяПодсказка" id="448"/>
-								</InputField>
+								<LabelField name="ТаблицаЗаказыСсылка" id="461">
+									<DataPath>ТаблицаЗаказы.Ref</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заказ клиента</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗаказыСсылкаКонтекстноеМеню" id="462"/>
+									<ExtendedTooltip name="ТаблицаЗаказыСсылкаРасширеннаяПодсказка" id="463"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -424,6 +400,13 @@
 							<ContextMenu name="ТоварыКонтекстноеМеню" id="41"/>
 							<AutoCommandBar name="ТоварыКоманднаяПанель" id="42">
 								<ChildItems>
+									<Button name="ТоварыСохранить" id="468">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Сохранить</CommandName>
+										<BackColor>#FFFF99</BackColor>
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<ExtendedTooltip name="ТоварыСохранитьРасширеннаяПодсказка" id="469"/>
+									</Button>
 									<Button name="ТоварыДобавитьСтрокуЗаказа" id="106">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ДобавитьСтрокуЗаказа</CommandName>
@@ -738,6 +721,13 @@
 							<ContextMenu name="ТоварыВКоробахКонтекстноеМеню" id="136"/>
 							<AutoCommandBar name="ТоварыВКоробахКоманднаяПанель" id="137">
 								<ChildItems>
+									<Button name="ТоварыВКоробахСохранить" id="466">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Сохранить</CommandName>
+										<BackColor>#FFFF99</BackColor>
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<ExtendedTooltip name="ТоварыВКоробахСохранитьРасширеннаяПодсказка" id="467"/>
+									</Button>
 									<Button name="ТоварыВКоробахДобавитьСтрокуВКоробах" id="187">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ДобавитьСтрокуВКоробах</CommandName>
@@ -1079,8 +1069,16 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПричиныРасширеннаяПодсказка" id="326"/>
 							<ChildItems>
+								<Button name="Сохранить" id="464">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Сохранить</CommandName>
+									<BackColor>#FFFF99</BackColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="465"/>
+								</Button>
 								<InputField name="мНазначение" id="333">
 									<DataPath>мНазначение</DataPath>
+									<Visible>false</Visible>
 									<ContextMenu name="мНазначениеКонтекстноеМеню" id="334"/>
 									<ExtendedTooltip name="мНазначениеРасширеннаяПодсказка" id="335"/>
 									<Events>
@@ -2202,69 +2200,29 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>v8:ValueTable</v8:Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
-			<Columns>
-				<Column name="ЗаказКлиента" id="1">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заказ клиента</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Комментарий" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Контрагент" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Контрагент</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
-					</Type>
-				</Column>
-				<Column name="Склад" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Склад</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
-					</Type>
-				</Column>
-				<Column name="СуммаДокумента" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма документа</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
-					</Type>
-				</Column>
-			</Columns>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ЗаказКлиента</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 		<Attribute name="отборОрганизация" id="4">
 			<Title>
@@ -3424,6 +3382,17 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мТекущаяСтрока" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М текущая строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
