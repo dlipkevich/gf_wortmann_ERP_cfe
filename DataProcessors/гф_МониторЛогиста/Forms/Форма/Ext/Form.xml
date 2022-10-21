@@ -295,6 +295,18 @@
 											<Group>Horizontal</Group>
 											<ExtendedTooltip name="ПоставкаГруппаДатаНомерРасширеннаяПодсказка" id="213"/>
 											<ChildItems>
+												<InputField name="ПоставкаТипДокумента" id="170">
+													<DataPath>Объект.Поставка.ТипДокумента</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Документ</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаТипДокументаКонтекстноеМеню" id="171"/>
+													<ExtendedTooltip name="ПоставкаТипДокументаРасширеннаяПодсказка" id="172"/>
+												</InputField>
 												<InputField name="ПоставкаДата" id="164">
 													<DataPath>Объект.Поставка.Дата</DataPath>
 													<EditMode>EnterOnInput</EditMode>
@@ -307,20 +319,51 @@
 													<ContextMenu name="ПоставкаНомерКонтекстноеМеню" id="168"/>
 													<ExtendedTooltip name="ПоставкаНомерРасширеннаяПодсказка" id="169"/>
 												</InputField>
+												<InputField name="ПоставкаДатаПоступления" id="466">
+													<DataPath>Объект.Поставка.ДатаПоступления</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаДатаПоступленияКонтекстноеМеню" id="467"/>
+													<ExtendedTooltip name="ПоставкаДатаПоступленияРасширеннаяПодсказка" id="468"/>
+													<Events>
+														<Event name="OnChange">ПоставкаДатаПоступленияПриИзменении</Event>
+													</Events>
+												</InputField>
 											</ChildItems>
 										</ColumnGroup>
-										<InputField name="ПоставкаТипДокумента" id="170">
-											<DataPath>Объект.Поставка.ТипДокумента</DataPath>
+										<ColumnGroup name="ПоставкаГруппаДокументКомментарий" id="469">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Документ</v8:content>
+													<v8:content>Поставка группа документ комментарий</v8:content>
 												</v8:item>
 											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПоставкаТипДокументаКонтекстноеМеню" id="171"/>
-											<ExtendedTooltip name="ПоставкаТипДокументаРасширеннаяПодсказка" id="172"/>
-										</InputField>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа документ комментарий</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПоставкаГруппаДокументКомментарийРасширеннаяПодсказка" id="470"/>
+											<ChildItems>
+												<CheckBoxField name="ПоставкаПрямаяПоставка" id="474">
+													<DataPath>Объект.Поставка.ПрямаяПоставка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоставкаПрямаяПоставкаКонтекстноеМеню" id="475"/>
+													<ExtendedTooltip name="ПоставкаПрямаяПоставкаРасширеннаяПодсказка" id="476"/>
+													<Events>
+														<Event name="OnChange">ПоставкаПрямаяПоставкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ПоставкаКомментарий" id="471">
+													<DataPath>Объект.Поставка.Комментарий</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаКомментарийКонтекстноеМеню" id="472"/>
+													<ExtendedTooltip name="ПоставкаКомментарийРасширеннаяПодсказка" id="473"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="ПоставкаДокумент" id="32">
@@ -480,12 +523,36 @@
 									</ToolTip>
 									<ExtendedTooltip name="ПоставкаГруппаКонтрагентРасширеннаяПодсказка" id="217"/>
 									<ChildItems>
-										<InputField name="ПоставкаКонтрагент" id="41">
-											<DataPath>Объект.Поставка.Контрагент</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПоставкаКонтрагентКонтекстноеМеню" id="42"/>
-											<ExtendedTooltip name="ПоставкаКонтрагентРасширеннаяПодсказка" id="43"/>
-										</InputField>
+										<ColumnGroup name="ПоставкаГруппаКонтрагентВид" id="464">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа контрагент вид</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Поставка группа контрагент вид</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ПоставкаГруппаКонтрагентВидРасширеннаяПодсказка" id="465"/>
+											<ChildItems>
+												<InputField name="ПоставкаКонтрагент" id="41">
+													<DataPath>Объект.Поставка.Контрагент</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаКонтрагентКонтекстноеМеню" id="42"/>
+													<ExtendedTooltip name="ПоставкаКонтрагентРасширеннаяПодсказка" id="43"/>
+												</InputField>
+												<InputField name="ПоставкаВидКонтрагента" id="461">
+													<DataPath>Объект.Поставка.ВидКонтрагента</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПоставкаВидКонтрагентаКонтекстноеМеню" id="462"/>
+													<ExtendedTooltip name="ПоставкаВидКонтрагентаРасширеннаяПодсказка" id="463"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
 										<InputField name="ПоставкаСкладПолучатель" id="44">
 											<DataPath>Объект.Поставка.СкладПолучатель</DataPath>
 											<EditMode>EnterOnInput</EditMode>
