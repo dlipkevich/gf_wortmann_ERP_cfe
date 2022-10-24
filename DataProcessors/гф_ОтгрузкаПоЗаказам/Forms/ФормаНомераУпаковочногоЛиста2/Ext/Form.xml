@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Таблица1" id="3">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="Таблица1КонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="Таблица1КоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="Таблица1РасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="Таблица1СтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Таблица1</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Таблица1СтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="Таблица1СтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="Таблица1СостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Таблица1</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Таблица1СостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="Таблица1СостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="Таблица1УправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Таблица1</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="Таблица1УправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="Таблица1УправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Таблица1НомерСтроки" id="16">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Таблица1НомерСтрокиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="Таблица1НомерСтрокиРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<InputField name="Таблица1Поле1" id="19">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Таблица1Поле1КонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="Таблица1Поле1РасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<SpreadSheetDocumentField name="Реквизит1" id="22">
+			<DataPath>Реквизит1</DataPath>
+			<ContextMenu name="Реквизит1КонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="Реквизит1РасширеннаяПодсказка" id="24"/>
+		</SpreadSheetDocumentField>
+		<Button name="Выбрать" id="1">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Выбрать</CommandName>
+			<BackColor>style:ImportantColor</BackColor>
+			<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="2"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ОтгрузкаПоЗаказам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+		</Command>
+	</Commands>
+</Form>

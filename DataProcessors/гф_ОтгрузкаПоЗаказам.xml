@@ -242,6 +242,40 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="e846f40d-7007-4915-8259-d6c3e33e030a">
+				<Properties>
+					<Name>КомпоновщикНастроекНоменклатуры</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Компоновщик настроек номенклатуры</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings">dcsset:SettingsComposer</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<Attribute uuid="cf63608d-4557-4bf9-a335-ad4169da2536">
 				<Properties>
 					<Name>ДатаПолученияЦен</Name>
@@ -334,40 +368,6 @@
 							<v8:Length>100</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>false</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="e846f40d-7007-4915-8259-d6c3e33e030a">
-				<Properties>
-					<Name>КомпоновщикНастроекНоменклатуры</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Компоновщик настроек номенклатуры</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings">dcsset:SettingsComposer</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -2860,7 +2860,8 @@
 			</TabularSection>
 			<Form>Форма</Form>
 			<Form>ФормаВопросаОДатеЦенИСкидкеКлиента</Form>
-			<Form>ФормаНомераУпаковочногоЛиста</Form>
+			<Form>ФормаНомераУпаковочногоЛиста2</Form>
+			<Form>ФормаЗагрузкиКодовМаркировкиУпаковочныхЛистов</Form>
 			<Template>СхемаКомпоновки</Template>
 			<Template>СхемаКомпоновкиНоменклатуры</Template>
 			<Template>ДанныеУпаковочныхЛистов</Template>
