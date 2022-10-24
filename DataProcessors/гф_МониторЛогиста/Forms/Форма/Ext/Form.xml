@@ -465,14 +465,22 @@
 									</ToolTip>
 									<ExtendedTooltip name="ПоставкаГруппаОприходовалРасширеннаяПодсказка" id="448"/>
 									<ChildItems>
+										<InputField name="ПоставкаСтатусИзменил" id="477">
+											<DataPath>Объект.Поставка.ПОСтатусИзменил</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПоставкаСтатусИзменилКонтекстноеМеню" id="478"/>
+											<ExtendedTooltip name="ПоставкаСтатусИзменилРасширеннаяПодсказка" id="479"/>
+										</InputField>
 										<InputField name="ПоставкаОприходовал" id="207">
 											<DataPath>Объект.Поставка.Оприходовал</DataPath>
+											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПоставкаОприходовалКонтекстноеМеню" id="208"/>
 											<ExtendedTooltip name="ПоставкаОприходовалРасширеннаяПодсказка" id="209"/>
 										</InputField>
 										<InputField name="ПоставкаОтветственный" id="449">
 											<DataPath>Объект.Поставка.Ответственный</DataPath>
+											<Visible>false</Visible>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПоставкаОтветственныйКонтекстноеМеню" id="450"/>
 											<ExtendedTooltip name="ПоставкаОтветственныйРасширеннаяПодсказка" id="451"/>
@@ -984,17 +992,30 @@
 									</ToolTip>
 									<ExtendedTooltip name="ОтгрузкаГруппаОтгрузилРасширеннаяПодсказка" id="455"/>
 									<ChildItems>
-										<InputField name="ОтгрузкаОтгрузил" id="313">
-											<DataPath>Объект.Отгрузка.Отгрузил</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ОтгрузкаОтгрузилКонтекстноеМеню" id="314"/>
-											<ExtendedTooltip name="ОтгрузкаОтгрузилРасширеннаяПодсказка" id="315"/>
-										</InputField>
 										<InputField name="ОтгрузкаОтветственный" id="456">
 											<DataPath>Объект.Отгрузка.Ответственный</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Автор</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ОтгрузкаОтветственныйКонтекстноеМеню" id="457"/>
 											<ExtendedTooltip name="ОтгрузкаОтветственныйРасширеннаяПодсказка" id="458"/>
+										</InputField>
+										<InputField name="ОтгрузкаРОСтатусИзменил" id="480">
+											<DataPath>Объект.Отгрузка.РОСтатусИзменил</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаРОСтатусИзменилКонтекстноеМеню" id="481"/>
+											<ExtendedTooltip name="ОтгрузкаРОСтатусИзменилРасширеннаяПодсказка" id="482"/>
+										</InputField>
+										<InputField name="ОтгрузкаОтгрузил" id="313">
+											<DataPath>Объект.Отгрузка.Отгрузил</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаОтгрузилКонтекстноеМеню" id="314"/>
+											<ExtendedTooltip name="ОтгрузкаОтгрузилРасширеннаяПодсказка" id="315"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
@@ -1121,6 +1142,9 @@
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ОтгрузкаАдресДоставкиКонтекстноеМеню" id="279"/>
 											<ExtendedTooltip name="ОтгрузкаАдресДоставкиРасширеннаяПодсказка" id="280"/>
+											<Events>
+												<Event name="OnChange">ОтгрузкаАдресДоставкиПриИзменении</Event>
+											</Events>
 										</InputField>
 										<ColumnGroup name="ОтгрузкаГруппаРегион" id="267">
 											<Title>
