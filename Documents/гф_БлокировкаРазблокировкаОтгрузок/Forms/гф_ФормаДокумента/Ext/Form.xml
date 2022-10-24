@@ -144,11 +144,17 @@
 									<AutoMarkIncomplete>true</AutoMarkIncomplete>
 									<ContextMenu name="КонтрагентКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="58"/>
+									<Events>
+										<Event name="OnChange">КонтрагентПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="Партнер" id="85">
 									<DataPath>Объект.Партнер</DataPath>
 									<ContextMenu name="ПартнерКонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="87"/>
+									<Events>
+										<Event name="OnChange">ПартнерПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ДоговорКонтрагента" id="59">
 									<DataPath>Объект.ДоговорКонтрагента</DataPath>
