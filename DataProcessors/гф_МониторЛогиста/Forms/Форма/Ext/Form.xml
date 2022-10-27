@@ -66,6 +66,18 @@
 					</ToolTip>
 					<CommandSource>Form</CommandSource>
 					<ExtendedTooltip name="ГруппаКоманднаяПанельФормыРасширеннаяПодсказка" id="186"/>
+					<ChildItems>
+						<Button name="ФормаВыгрузитьWMS" id="485">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ВыгрузитьWMS</CommandName>
+							<ExtendedTooltip name="ФормаВыгрузитьWMSРасширеннаяПодсказка" id="486"/>
+						</Button>
+						<Button name="ФормаЗагрузитьWMS" id="483">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗагрузитьWMS</CommandName>
+							<ExtendedTooltip name="ФормаЗагрузитьWMSРасширеннаяПодсказка" id="484"/>
+						</Button>
+					</ChildItems>
 				</CommandBar>
 			</ChildItems>
 		</UsualGroup>
@@ -2157,6 +2169,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПечатныеФормы</Action>
+		</Command>
+		<Command name="ВыгрузитьWMS" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в WMS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить WMS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьWMS</Action>
+		</Command>
+		<Command name="ЗагрузитьWMS" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из WMS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить WMS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьWMS</Action>
 		</Command>
 	</Commands>
 </Form>
