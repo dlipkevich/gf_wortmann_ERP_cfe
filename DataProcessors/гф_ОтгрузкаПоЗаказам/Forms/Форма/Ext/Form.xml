@@ -156,6 +156,11 @@
 										</Title>
 										<ExtendedTooltip name="ДеревоДокументовСписокКоробовРасширеннаяПодсказка" id="218"/>
 									</Button>
+									<Button name="ДеревоДокументовУстановитьСкидки" id="219">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьСкидки</CommandName>
+										<ExtendedTooltip name="ДеревоДокументовУстановитьСкидкиРасширеннаяПодсказка" id="220"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ДеревоДокументовРасширеннаяПодсказка" id="25"/>
@@ -1359,6 +1364,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьФормуЗагрузкиКодовМаркировки</Action>
+		</Command>
+		<Command name="УстановитьСкидки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить скидки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить скидки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСкидки</Action>
 		</Command>
 	</Commands>
 </Form>
