@@ -1266,6 +1266,7 @@
 									</Title>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаПорядокРасчетовПоДоговоруРасширеннаяПодсказка" id="217"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаПорядокРасчетов" id="249">
@@ -1830,6 +1831,7 @@
 									</Title>
 									<Group>Horizontal</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаКонтрольЗадолженностиExtendedTooltip" id="169"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаОграничиватьСуммуЗадолженности" id="134">
@@ -1921,6 +1923,7 @@
 									</ToolTip>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаНалогообложениеНДСРасширеннаяПодсказка" id="753"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаРежимНалогообложенияОпределяетсяЗначением" id="754">
@@ -2068,6 +2071,7 @@
 									<Width>50</Width>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаПорядокСписанияНедостачПринятыхТоваровРасширеннаяПодсказка" id="882"/>
 									<ChildItems>
 										<RadioButtonField name="ПорядокОформленияСписанияНедостачТоваровПринятыхНаХранение" id="865">
@@ -2111,6 +2115,7 @@
 									<Width>50</Width>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаПорядокСписанияВПроизводствоПринятыхТоваровРасширеннаяПодсказка" id="1028"/>
 									<ChildItems>
 										<RadioButtonField name="ПорядокОформленияСписанияВПроизводствоТоваровПринятыхНаХранение" id="1029">
@@ -2140,34 +2145,107 @@
 										</RadioButtonField>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="ГруппаКомиссионнаяЗакупка" id="1032">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Формирование отчета по закупкам</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Generate purchase report</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необходимо для оформления УПД “Сведения о закупке комиссионером” в разрезе приобретения для информирования комитента о закупленных товарах. Необходимо использовать для прослеживаемых товаров.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Required to register the "Consignee purchasing information" UTD by purchase to inform the consignor about the purchased goods. Apply it to traceable goods.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаКомиссионнаяЗакупкаРасширеннаяПодсказка" id="1033"/>
+									<ChildItems>
+										<RadioButtonField name="РазбиватьОтчетКомитентуПоЗакупкам" id="1034">
+											<TitleLocation>None</TitleLocation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ColumnsCount>1</ColumnsCount>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Не разбивать по приобретениям</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Do not split by purchases</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Разбивать по приобретениям и формировать “УПД  (Сведения о закупке комиссионером)”</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Split by purchases and generate "UTD  (Consignee purchasing information)"</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="РазбиватьОтчетКомитентуПоЗакупкамКонтекстноеМеню" id="1035"/>
+											<ExtendedTooltip name="РазбиватьОтчетКомитентуПоЗакупкамРасширеннаяПодсказка" id="1036"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="ЛокализацияГруппаНастроитьГОЗ" id="937">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Классификация при исполнении государственного оборонного заказа</v8:content>
+											<v8:content>Классификация при исполнении государственного контракта</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Classification used for state defense order fulfillment</v8:content>
+											<v8:content>Classification used for state contract fulfillment</v8:content>
 										</v8:item>
 									</Title>
+									<Width>50</Width>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ЛокализацияГруппаНастроитьГОЗРасширеннаяПодсказка" id="938"/>
 									<ChildItems>
-										<LabelDecoration name="ДекорацияНастроитьГОЗ" id="872">
+										<LabelDecoration name="ДекорацияНастроитьГК" id="1037">
 											<Title formatted="true">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>&lt;link НастроитьГОЗ&gt;Настроить договор для исполнения ГОЗ&lt;/&gt;</v8:content>
+													<v8:content>&lt;link НастроитьГОЗ&gt;Настроить договор для исполнения госконтракта&lt;/&gt;</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
-													<v8:content>&lt;link НастроитьГОЗ&gt;Configure the contract for SDO fulfillment&lt;/&gt;</v8:content>
+													<v8:content>&lt;link НастроитьГОЗ&gt;Configure the contract for state contract fulfillment&lt;/&gt;</v8:content>
 												</v8:item>
 											</Title>
-											<ContextMenu name="ДекорацияНастроитьГОЗКонтекстноеМеню" id="873"/>
-											<ExtendedTooltip name="ДекорацияНастроитьГОЗРасширеннаяПодсказка" id="874"/>
+											<ContextMenu name="ДекорацияНастроитьГККонтекстноеМеню" id="1040"/>
+											<ExtendedTooltip name="ДекорацияНастроитьГКРасширеннаяПодсказка" id="1041"/>
 										</LabelDecoration>
 									</ChildItems>
 								</UsualGroup>
@@ -2184,6 +2262,7 @@
 									</Title>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ЛокализацияГруппаВариантВыбытияМаркируемойПродукцииРасширеннаяПодсказка" id="959"/>
 									<ChildItems>
 										<RadioButtonField name="ВариантВыбытияМаркируемойПродукции" id="960">
@@ -2263,6 +2342,7 @@
 									</Title>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаОформлениеДокументовРаздельнойЗакупкиРасширеннаяПодсказка" id="737"/>
 									<ChildItems>
 										<CheckBoxField name="ИспользоватьОформлениеДокументовРаздельнойЗакупки" id="896">
@@ -2343,6 +2423,7 @@
 									</Title>
 									<Group>Vertical</Group>
 									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаВариантыПриемкиРасширеннаяПодсказка" id="785"/>
 									<ChildItems>
 										<InputField name="ОформлениеПоступления" id="788">
@@ -4470,6 +4551,7 @@ details</v8:content>
 										</Title>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаПорядокРасчетовПоДоговоруРасширеннаяПодсказка" id="217"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаПорядокРасчетов" id="249">
@@ -5034,6 +5116,7 @@ details</v8:content>
 										</Title>
 										<Group>Horizontal</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаКонтрольЗадолженностиExtendedTooltip" id="169"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаОграничиватьСуммуЗадолженности" id="134">
@@ -5125,6 +5208,7 @@ details</v8:content>
 										</ToolTip>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаНалогообложениеНДСРасширеннаяПодсказка" id="753"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаРежимНалогообложенияОпределяетсяЗначением" id="754">
@@ -5272,6 +5356,7 @@ details</v8:content>
 										<Width>50</Width>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаПорядокСписанияНедостачПринятыхТоваровРасширеннаяПодсказка" id="882"/>
 										<ChildItems>
 											<RadioButtonField name="ПорядокОформленияСписанияНедостачТоваровПринятыхНаХранение" id="865">
@@ -5315,6 +5400,7 @@ details</v8:content>
 										<Width>50</Width>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаПорядокСписанияВПроизводствоПринятыхТоваровРасширеннаяПодсказка" id="1028"/>
 										<ChildItems>
 											<RadioButtonField name="ПорядокОформленияСписанияВПроизводствоТоваровПринятыхНаХранение" id="1029">
@@ -5344,34 +5430,107 @@ details</v8:content>
 											</RadioButtonField>
 										</ChildItems>
 									</UsualGroup>
+									<UsualGroup name="ГруппаКомиссионнаяЗакупка" id="1032">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Формирование отчета по закупкам</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Generate purchase report</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Необходимо для оформления УПД “Сведения о закупке комиссионером” в разрезе приобретения для информирования комитента о закупленных товарах. Необходимо использовать для прослеживаемых товаров.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Required to register the "Consignee purchasing information" UTD by purchase to inform the consignor about the purchased goods. Apply it to traceable goods.</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ToolTipRepresentation>Button</ToolTipRepresentation>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ExtendedTooltip name="ГруппаКомиссионнаяЗакупкаРасширеннаяПодсказка" id="1033"/>
+										<ChildItems>
+											<RadioButtonField name="РазбиватьОтчетКомитентуПоЗакупкам" id="1034">
+												<TitleLocation>None</TitleLocation>
+												<RadioButtonType>Auto</RadioButtonType>
+												<ColumnsCount>1</ColumnsCount>
+												<ChoiceList>
+													<xr:Item>
+														<xr:Presentation/>
+														<xr:CheckState>0</xr:CheckState>
+														<xr:Value xsi:type="FormChoiceListDesTimeValue">
+															<Presentation>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Не разбивать по приобретениям</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Do not split by purchases</v8:content>
+																</v8:item>
+															</Presentation>
+															<Value xsi:type="xs:decimal">0</Value>
+														</xr:Value>
+													</xr:Item>
+													<xr:Item>
+														<xr:Presentation/>
+														<xr:CheckState>0</xr:CheckState>
+														<xr:Value xsi:type="FormChoiceListDesTimeValue">
+															<Presentation>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Разбивать по приобретениям и формировать “УПД  (Сведения о закупке комиссионером)”</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Split by purchases and generate "UTD  (Consignee purchasing information)"</v8:content>
+																</v8:item>
+															</Presentation>
+															<Value xsi:type="xs:decimal">1</Value>
+														</xr:Value>
+													</xr:Item>
+												</ChoiceList>
+												<ContextMenu name="РазбиватьОтчетКомитентуПоЗакупкамКонтекстноеМеню" id="1035"/>
+												<ExtendedTooltip name="РазбиватьОтчетКомитентуПоЗакупкамРасширеннаяПодсказка" id="1036"/>
+											</RadioButtonField>
+										</ChildItems>
+									</UsualGroup>
 									<UsualGroup name="ЛокализацияГруппаНастроитьГОЗ" id="937">
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Классификация при исполнении государственного оборонного заказа</v8:content>
+												<v8:content>Классификация при исполнении государственного контракта</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>Classification used for state defense order fulfillment</v8:content>
+												<v8:content>Classification used for state contract fulfillment</v8:content>
 											</v8:item>
 										</Title>
+										<Width>50</Width>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ЛокализацияГруппаНастроитьГОЗРасширеннаяПодсказка" id="938"/>
 										<ChildItems>
-											<LabelDecoration name="ДекорацияНастроитьГОЗ" id="872">
+											<LabelDecoration name="ДекорацияНастроитьГК" id="872">
 												<Title formatted="true">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>&lt;link НастроитьГОЗ&gt;Настроить договор для исполнения ГОЗ&lt;/&gt;</v8:content>
+														<v8:content>&lt;link НастроитьГОЗ&gt;Настроить договор для исполнения госконтракта&lt;/&gt;</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>&lt;link НастроитьГОЗ&gt;Configure the contract for SDO fulfillment&lt;/&gt;</v8:content>
+														<v8:content>&lt;link НастроитьГОЗ&gt;Configure the contract for state contract fulfillment&lt;/&gt;</v8:content>
 													</v8:item>
 												</Title>
-												<ContextMenu name="ДекорацияНастроитьГОЗКонтекстноеМеню" id="873"/>
-												<ExtendedTooltip name="ДекорацияНастроитьГОЗРасширеннаяПодсказка" id="874"/>
+												<ContextMenu name="ДекорацияНастроитьГККонтекстноеМеню" id="873"/>
+												<ExtendedTooltip name="ДекорацияНастроитьГКРасширеннаяПодсказка" id="874"/>
 											</LabelDecoration>
 										</ChildItems>
 									</UsualGroup>
@@ -5388,6 +5547,7 @@ details</v8:content>
 										</Title>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ЛокализацияГруппаВариантВыбытияМаркируемойПродукцииРасширеннаяПодсказка" id="959"/>
 										<ChildItems>
 											<RadioButtonField name="ВариантВыбытияМаркируемойПродукции" id="960">
@@ -5467,6 +5627,7 @@ details</v8:content>
 										</Title>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаОформлениеДокументовРаздельнойЗакупкиРасширеннаяПодсказка" id="737"/>
 										<ChildItems>
 											<CheckBoxField name="ИспользоватьОформлениеДокументовРаздельнойЗакупки" id="896">
@@ -5547,6 +5708,7 @@ details</v8:content>
 										</Title>
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
 										<ExtendedTooltip name="ГруппаВариантыПриемкиРасширеннаяПодсказка" id="785"/>
 										<ChildItems>
 											<InputField name="ОформлениеПоступления" id="788">
