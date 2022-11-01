@@ -189,6 +189,11 @@
 			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeWrite" callType="After">гф_ПередЗаписьюПосле</Event>
+		<Event name="BeforeWriteAtServer" callType="After">гф_ПередЗаписьюНаСервереПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаРаспоряжение" id="129">
 			<Title>
