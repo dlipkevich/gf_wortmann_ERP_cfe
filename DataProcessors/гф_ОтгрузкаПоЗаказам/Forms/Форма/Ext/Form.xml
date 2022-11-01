@@ -102,8 +102,13 @@
 								<ChildItems>
 									<Button name="ФормаВыбрать" id="200">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.Сформировать</CommandName>
 										<BackColor>#FFFFFF</BackColor>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -144,10 +149,25 @@
 										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="ФормаСнятьФлажкиРасширеннаяПодсказка" id="199"/>
 									</Button>
+									<Button name="ДеревоДокументовСнятьРезерв" id="221">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.СнятьРезерв</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Document</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ДеревоДокументовСнятьРезервРасширеннаяПодсказка" id="222"/>
+									</Button>
 									<Button name="ДеревоДокументовСписокКоробов" id="217">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.ОткрытьФормуЗагрузкиКодовМаркировки</CommandName>
 										<BackColor>#FFFFFF</BackColor>
+										<Picture>
+											<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -202,12 +222,21 @@
 								</CheckBoxField>
 								<InputField name="ДеревоДокументовКлиент" id="61">
 									<DataPath>ДеревоДокументов.Клиент</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовКлиентКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="ДеревоДокументовКлиентРасширеннаяПодсказка" id="63"/>
 								</InputField>
+								<InputField name="ДеревоДокументовБлокировка" id="223">
+									<DataPath>ДеревоДокументов.Блокировка</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовБлокировкаКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="ДеревоДокументовБлокировкаРасширеннаяПодсказка" id="225"/>
+								</InputField>
 								<InputField name="ДеревоДокументовБлокировкиОтгрузок" id="179">
 									<DataPath>ДеревоДокументов.БлокировкиОтгрузок</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -233,6 +262,7 @@
 								</InputField>
 								<InputField name="ДеревоДокументовНомерАдреса" id="214">
 									<DataPath>ДеревоДокументов.НомерАдреса</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -252,12 +282,14 @@
 								</InputField>
 								<InputField name="ДеревоДокументовСклад" id="67">
 									<DataPath>ДеревоДокументов.Склад</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСкладКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="ДеревоДокументовСкладРасширеннаяПодсказка" id="69"/>
 								</InputField>
 								<InputField name="ДеревоДокументовДокументПоступленияНомер" id="208">
 									<DataPath>ДеревоДокументов.ДокументПоступленияНомер</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовДокументПоступленияНомерКонтекстноеМеню" id="209"/>
 									<ExtendedTooltip name="ДеревоДокументовДокументПоступленияНомерРасширеннаяПодсказка" id="210"/>
@@ -277,6 +309,7 @@
 								</InputField>
 								<InputField name="ДеревоДокументовУпаковочныйЛистНомер" id="211">
 									<DataPath>ДеревоДокументов.УпаковочныйЛистНомер</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -303,12 +336,14 @@
 								</InputField>
 								<InputField name="ДеревоДокументовСостояниеКороба" id="158">
 									<DataPath>ДеревоДокументов.СостояниеКороба</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСостояниеКоробаКонтекстноеМеню" id="159"/>
 									<ExtendedTooltip name="ДеревоДокументовСостояниеКоробаРасширеннаяПодсказка" id="160"/>
 								</InputField>
 								<InputField name="ДеревоДокументовАртикул" id="202">
 									<DataPath>ДеревоДокументов.Артикул</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -329,6 +364,7 @@
 								<InputField name="ДеревоДокументовЕдиницаИзмерения" id="41">
 									<DataPath>ДеревоДокументов.ЕдиницаИзмерения</DataPath>
 									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовЕдиницаИзмеренияКонтекстноеМеню" id="42"/>
 									<ExtendedTooltip name="ДеревоДокументовЕдиницаИзмеренияРасширеннаяПодсказка" id="43"/>
@@ -350,6 +386,7 @@
 								<InputField name="ДеревоДокументовКоличествоНоменклатуры" id="170">
 									<DataPath>ДеревоДокументов.КоличествоНоменклатуры</DataPath>
 									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовКоличествоНоменклатурыКонтекстноеМеню" id="171"/>
 									<ExtendedTooltip name="ДеревоДокументовКоличествоНоменклатурыРасширеннаяПодсказка" id="172"/>
@@ -384,7 +421,7 @@
 								</InputField>
 								<InputField name="ДеревоДокументовСтоимость" id="44">
 									<DataPath>ДеревоДокументов.Стоимость</DataPath>
-									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСтоимостьКонтекстноеМеню" id="45"/>
 									<ExtendedTooltip name="ДеревоДокументовСтоимостьРасширеннаяПодсказка" id="46"/>
@@ -392,6 +429,7 @@
 								<InputField name="ДеревоДокументовКоличествоДнейХранения" id="47">
 									<DataPath>ДеревоДокументов.КоличествоДнейХранения</DataPath>
 									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовКоличествоДнейХраненияКонтекстноеМеню" id="48"/>
 									<ExtendedTooltip name="ДеревоДокументовКоличествоДнейХраненияРасширеннаяПодсказка" id="49"/>
@@ -399,12 +437,14 @@
 								<InputField name="ДеревоДокументовСтатусКМ" id="50">
 									<DataPath>ДеревоДокументов.СтатусКМ</DataPath>
 									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСтатусКМКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ДеревоДокументовСтатусКМРасширеннаяПодсказка" id="52"/>
 								</InputField>
 								<InputField name="ДеревоДокументовДействующийЛимит" id="53">
 									<DataPath>ДеревоДокументов.ДействующийЛимит</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовДействующийЛимитКонтекстноеМеню" id="54"/>
 									<ExtendedTooltip name="ДеревоДокументовДействующийЛимитРасширеннаяПодсказка" id="55"/>
@@ -841,6 +881,21 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Блокировка" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Блокировка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="РежимРаскрытияУровнейОтоброжения" id="3">
@@ -1203,6 +1258,7 @@
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
 				<dcsset:selection>
 					<dcsset:item>
 						<dcsset:field>ДеревоДокументовОтгрузить</dcsset:field>
@@ -1252,6 +1308,9 @@
 					<dcsset:item>
 						<dcsset:field>ДеревоДокументовБлокировкиОтгрузок</dcsset:field>
 					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовБлокировка</dcsset:field>
+					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -1287,6 +1346,29 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовБлокировкиОтгрузок</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовБлокировка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Блокировка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">"Да"</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -1300,7 +1382,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сформировать</v8:content>
+					<v8:content>Заполняется дерево элементов данными по заказам клиентов.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Сформировать</Action>
@@ -1315,7 +1397,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отгрузить</v8:content>
+					<v8:content>Выполняется проверка условий и автоматическое формирование документов. Переформировывается табличная часть документа "Заказ клиента", формирование и проведение документа "Расходный ордер", заполнение реквизитов документа "Упаковочный лист".</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отгрузить</Action>
@@ -1379,6 +1461,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСкидки</Action>
+		</Command>
+		<Command name="СнятьРезерв" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять резерв</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формируется документ "Корректировка назначения товаров", с заполнением табличной части данными из упаковочных листов. В каждом документе "Упаковочном лист" очищается реквизит "Заказ".</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьРезерв</Action>
 		</Command>
 	</Commands>
 </Form>
