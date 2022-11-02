@@ -208,6 +208,8 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="BeforeWrite" callType="After">гф_ПередЗаписьюПосле</Event>
+		<Event name="BeforeWriteAtServer" callType="After">гф_ПередЗаписьюНаСервереПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
@@ -663,88 +665,94 @@
 					<Height>10</Height>
 					<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="381"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаРежимПросмотраНавигация" id="696">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Режим просмотра навигация</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>View mode navigation</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
+						<UsualGroup name="ГруппаТоварыЗаголовок" id="917">
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаРежимПросмотраНавигацияРасширеннаяПодсказка" id="697"/>
+							<ExtendedTooltip name="ГруппаТоварыЗаголовокРасширеннаяПодсказка" id="918"/>
 							<ChildItems>
-								<LabelField name="НадписьНавигация" id="698">
-									<TitleLocation>None</TitleLocation>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="НадписьНавигацияКонтекстноеМеню" id="699"/>
-									<ExtendedTooltip name="НадписьНавигацияРасширеннаяПодсказка" id="700"/>
-								</LabelField>
-								<LabelDecoration name="ОтступНавигация" id="887">
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
-									<ContextMenu name="ОтступНавигацияКонтекстноеМеню" id="888"/>
-									<ExtendedTooltip name="ОтступНавигацияРасширеннаяПодсказка" id="889"/>
-								</LabelDecoration>
-								<RadioButtonField name="РежимПросмотра" id="704">
-									<TitleLocation>None</TitleLocation>
-									<ToolTip>
+								<UsualGroup name="ГруппаРежимПросмотраНавигация" id="696">
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Режим просмотра списка товарных мест</v8:content>
+											<v8:content>Режим просмотра навигация</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Collo list view mode</v8:content>
+											<v8:content>View mode navigation</v8:content>
 										</v8:item>
-									</ToolTip>
-									<RadioButtonType>Tumbler</RadioButtonType>
-									<ChoiceList>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>По товарным местам</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>By colli</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>По товарам</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>By goods</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">1</Value>
-											</xr:Value>
-										</xr:Item>
-									</ChoiceList>
-									<ContextMenu name="РежимПросмотраКонтекстноеМеню" id="705"/>
-									<ExtendedTooltip name="РежимПросмотраРасширеннаяПодсказка" id="706"/>
-								</RadioButtonField>
+									</Title>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРежимПросмотраНавигацияРасширеннаяПодсказка" id="697"/>
+									<ChildItems>
+										<LabelField name="НадписьНавигация" id="698">
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="НадписьНавигацияКонтекстноеМеню" id="699"/>
+											<ExtendedTooltip name="НадписьНавигацияРасширеннаяПодсказка" id="700"/>
+										</LabelField>
+										<LabelDecoration name="ОтступНавигация" id="887">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ОтступНавигацияКонтекстноеМеню" id="888"/>
+											<ExtendedTooltip name="ОтступНавигацияРасширеннаяПодсказка" id="889"/>
+										</LabelDecoration>
+										<RadioButtonField name="РежимПросмотра" id="704">
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Режим просмотра списка товарных мест</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Collo list view mode</v8:content>
+												</v8:item>
+											</ToolTip>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По товарным местам</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>By colli</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>По товарам</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>By goods</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="РежимПросмотраКонтекстноеМеню" id="705"/>
+											<ExtendedTooltip name="РежимПросмотраРасширеннаяПодсказка" id="706"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Товары" id="11">
@@ -1907,6 +1915,7 @@
 													<ShowRoot>true</ShowRoot>
 													<AllowRootChoice>false</AllowRootChoice>
 													<UpdateOnDataChange>Auto</UpdateOnDataChange>
+													<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 													<ContextMenu name="СписокШтрихКодовКонтекстноеМеню" id="212"/>
 													<AutoCommandBar name="СписокШтрихКодовКоманднаяПанель" id="213">
 														<Autofill>false</Autofill>
@@ -2089,6 +2098,7 @@
 													<AllowRootChoice>false</AllowRootChoice>
 													<UpdateOnDataChange>Auto</UpdateOnDataChange>
 													<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+													<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 													<ContextMenu name="СписокУпаковокКонтекстноеМеню" id="194"/>
 													<AutoCommandBar name="СписокУпаковокКоманднаяПанель" id="195">
 														<Autofill>false</Autofill>
@@ -3009,88 +3019,94 @@
 						<Height>10</Height>
 						<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="381"/>
 						<ChildItems>
-							<UsualGroup name="ГруппаРежимПросмотраНавигация" id="696">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Режим просмотра навигация</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>View mode navigation</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Horizontal</Group>
-								<Behavior>Usual</Behavior>
-								<Representation>None</Representation>
+							<UsualGroup name="ГруппаТоварыЗаголовок" id="917">
 								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаРежимПросмотраНавигацияРасширеннаяПодсказка" id="697"/>
+								<ExtendedTooltip name="ГруппаТоварыЗаголовокРасширеннаяПодсказка" id="918"/>
 								<ChildItems>
-									<LabelField name="НадписьНавигация" id="698">
-										<TitleLocation>None</TitleLocation>
-										<AutoMaxWidth>false</AutoMaxWidth>
-										<HorizontalStretch>true</HorizontalStretch>
-										<ContextMenu name="НадписьНавигацияКонтекстноеМеню" id="699"/>
-										<ExtendedTooltip name="НадписьНавигацияРасширеннаяПодсказка" id="700"/>
-									</LabelField>
-									<LabelDecoration name="ОтступНавигация" id="887">
-										<AutoMaxWidth>false</AutoMaxWidth>
-										<HorizontalStretch>true</HorizontalStretch>
-										<ContextMenu name="ОтступНавигацияКонтекстноеМеню" id="888"/>
-										<ExtendedTooltip name="ОтступНавигацияРасширеннаяПодсказка" id="889"/>
-									</LabelDecoration>
-									<RadioButtonField name="РежимПросмотра" id="704">
-										<TitleLocation>None</TitleLocation>
-										<ToolTip>
+									<UsualGroup name="ГруппаРежимПросмотраНавигация" id="696">
+										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Режим просмотра списка товарных мест</v8:content>
+												<v8:content>Режим просмотра навигация</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>Collo list view mode</v8:content>
+												<v8:content>View mode navigation</v8:content>
 											</v8:item>
-										</ToolTip>
-										<RadioButtonType>Tumbler</RadioButtonType>
-										<ChoiceList>
-											<xr:Item>
-												<xr:Presentation/>
-												<xr:CheckState>0</xr:CheckState>
-												<xr:Value xsi:type="FormChoiceListDesTimeValue">
-													<Presentation>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>По товарным местам</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>By colli</v8:content>
-														</v8:item>
-													</Presentation>
-													<Value xsi:type="xs:decimal">0</Value>
-												</xr:Value>
-											</xr:Item>
-											<xr:Item>
-												<xr:Presentation/>
-												<xr:CheckState>0</xr:CheckState>
-												<xr:Value xsi:type="FormChoiceListDesTimeValue">
-													<Presentation>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>По товарам</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>By goods</v8:content>
-														</v8:item>
-													</Presentation>
-													<Value xsi:type="xs:decimal">1</Value>
-												</xr:Value>
-											</xr:Item>
-										</ChoiceList>
-										<ContextMenu name="РежимПросмотраКонтекстноеМеню" id="705"/>
-										<ExtendedTooltip name="РежимПросмотраРасширеннаяПодсказка" id="706"/>
-									</RadioButtonField>
+										</Title>
+										<Group>Horizontal</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ГруппаРежимПросмотраНавигацияРасширеннаяПодсказка" id="697"/>
+										<ChildItems>
+											<LabelField name="НадписьНавигация" id="698">
+												<TitleLocation>None</TitleLocation>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>true</HorizontalStretch>
+												<ContextMenu name="НадписьНавигацияКонтекстноеМеню" id="699"/>
+												<ExtendedTooltip name="НадписьНавигацияРасширеннаяПодсказка" id="700"/>
+											</LabelField>
+											<LabelDecoration name="ОтступНавигация" id="887">
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<HorizontalStretch>true</HorizontalStretch>
+												<ContextMenu name="ОтступНавигацияКонтекстноеМеню" id="888"/>
+												<ExtendedTooltip name="ОтступНавигацияРасширеннаяПодсказка" id="889"/>
+											</LabelDecoration>
+											<RadioButtonField name="РежимПросмотра" id="704">
+												<TitleLocation>None</TitleLocation>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Режим просмотра списка товарных мест</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Collo list view mode</v8:content>
+													</v8:item>
+												</ToolTip>
+												<RadioButtonType>Tumbler</RadioButtonType>
+												<ChoiceList>
+													<xr:Item>
+														<xr:Presentation/>
+														<xr:CheckState>0</xr:CheckState>
+														<xr:Value xsi:type="FormChoiceListDesTimeValue">
+															<Presentation>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>По товарным местам</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>By colli</v8:content>
+																</v8:item>
+															</Presentation>
+															<Value xsi:type="xs:decimal">0</Value>
+														</xr:Value>
+													</xr:Item>
+													<xr:Item>
+														<xr:Presentation/>
+														<xr:CheckState>0</xr:CheckState>
+														<xr:Value xsi:type="FormChoiceListDesTimeValue">
+															<Presentation>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>По товарам</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>By goods</v8:content>
+																</v8:item>
+															</Presentation>
+															<Value xsi:type="xs:decimal">1</Value>
+														</xr:Value>
+													</xr:Item>
+												</ChoiceList>
+												<ContextMenu name="РежимПросмотраКонтекстноеМеню" id="705"/>
+												<ExtendedTooltip name="РежимПросмотраРасширеннаяПодсказка" id="706"/>
+											</RadioButtonField>
+										</ChildItems>
+									</UsualGroup>
 								</ChildItems>
 							</UsualGroup>
 							<Table name="Товары" id="11">
@@ -4253,6 +4269,7 @@
 														<ShowRoot>true</ShowRoot>
 														<AllowRootChoice>false</AllowRootChoice>
 														<UpdateOnDataChange>Auto</UpdateOnDataChange>
+														<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 														<ContextMenu name="СписокШтрихКодовКонтекстноеМеню" id="212"/>
 														<AutoCommandBar name="СписокШтрихКодовКоманднаяПанель" id="213">
 															<Autofill>false</Autofill>
@@ -4435,6 +4452,7 @@
 														<AllowRootChoice>false</AllowRootChoice>
 														<UpdateOnDataChange>Auto</UpdateOnDataChange>
 														<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+														<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 														<ContextMenu name="СписокУпаковокКонтекстноеМеню" id="194"/>
 														<AutoCommandBar name="СписокУпаковокКоманднаяПанель" id="195">
 															<Autofill>false</Autofill>
