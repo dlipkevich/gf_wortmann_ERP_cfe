@@ -28,22 +28,23 @@
 		</InputField>
 		<Button name="ФормаОтгрузитьПоЦенамПрайса" id="1">
 			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ОтгрузитьПоЦенамПрайса</CommandName>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.НеУчитыватьЗадолженность</CommandName>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<ExtendedTooltip name="ФормаОтгрузитьПоЦенамПрайсаРасширеннаяПодсказка" id="2"/>
-		</Button>
-		<Button name="ОтгрузитьПоЦенамЗаказа" id="9">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ОтгрузитьПоЦенамЗаказа</CommandName>
-			<ExtendedTooltip name="ОтгрузитьПоЦенамЗаказаРасширеннаяПодсказка" id="10"/>
-		</Button>
-		<Button name="ИсключитьИзОтгрузкиРазличные" id="11">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ИсключитьИзОтгрузкиРазличные</CommandName>
-			<ExtendedTooltip name="ИсключитьИзОтгрузкиРазличныеРасширеннаяПодсказка" id="12"/>
 		</Button>
 		<Button name="Отменить" id="13">
 			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
 			<CommandName>Form.Command.Отменить</CommandName>
+			<Font bold="true" kind="AutoFont"/>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<ExtendedTooltip name="ОтменитьРасширеннаяПодсказка" id="14"/>
 		</Button>
 	</ChildItems>
@@ -86,62 +87,32 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ОтгрузитьПоЦенамПрайса" id="1">
+		<Command name="НеУчитыватьЗадолженность" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отгрузить по ценам прайс-листа</v8:content>
+					<v8:content>Не учитывать задолженность и блокировки </v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отгрузить по ценам прайса</v8:content>
+					<v8:content>Блокировка и превышение лимитов игнорируются и создается расходный ордер на товары. </v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ОтгрузитьПоЦенамПрайса</Action>
-		</Command>
-		<Command name="ОтгрузитьПоЦенамЗаказа" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отгрузить по ценам заказа</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отгрузить по ценам заказа</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ОтгрузитьПоЦенамЗаказа</Action>
-		</Command>
-		<Command name="ИсключитьИзОтгрузкиРазличные" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Исключить из отгрузки товары с различающимися ценами</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Исключить из отгрузки различные</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ИсключитьИзОтгрузкиРазличные</Action>
+			<Action>НеУчитыватьЗадолженность</Action>
 		</Command>
 		<Command name="Отменить" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отменить все</v8:content>
+					<v8:content>Отменить отгрузку</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отменить</v8:content>
+					<v8:content>Отгрузка отменяется, расходный ордер не создается.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отменить</Action>
