@@ -30,7 +30,9 @@
 			<DataPath>Объект.История</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ИсторияКонтекстноеМеню" id="30"/>
-			<AutoCommandBar name="ИсторияКоманднаяПанель" id="31"/>
+			<AutoCommandBar name="ИсторияКоманднаяПанель" id="31">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="32"/>
 			<SearchStringAddition name="ИсторияСтрокаПоиска" id="33">
 				<AdditionSource>
@@ -75,6 +77,19 @@
 					<ContextMenu name="ИсторияОперацияКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ИсторияОперацияРасширеннаяПодсказка" id="50"/>
 				</InputField>
+				<InputField name="ИсторияДеталиОперации" id="51">
+					<DataPath>Объект.История.ДеталиОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияДеталиОперацииКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ИсторияДеталиОперацииРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<CheckBoxField name="ИсторияКонечнаяОперация" id="54">
+					<DataPath>Объект.История.КонечнаяОперация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсторияКонечнаяОперацияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ИсторияКонечнаяОперацияРасширеннаяПодсказка" id="56"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
