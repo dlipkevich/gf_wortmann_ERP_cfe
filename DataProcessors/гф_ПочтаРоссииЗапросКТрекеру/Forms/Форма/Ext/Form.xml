@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаЗапрос" id="24">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗапрос</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗапросРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="УчетнаяЗапись" id="26">
+			<DataPath>Объект.УчетнаяЗапись</DataPath>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="НомерОтслеживания" id="7">
+			<DataPath>Объект.ТрекНомер</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерОтслеживанияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НомерОтслеживанияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="История" id="29">
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.История</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИсторияКонтекстноеМеню" id="30"/>
+			<AutoCommandBar name="ИсторияКоманднаяПанель" id="31"/>
+			<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="32"/>
+			<SearchStringAddition name="ИсторияСтрокаПоиска" id="33">
+				<AdditionSource>
+					<Item>История</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияСтрокаПоискаКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ИсторияСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИсторияСостояниеПросмотра" id="36">
+				<AdditionSource>
+					<Item>История</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияСостояниеПросмотраКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ИсторияСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИсторияУправлениеПоиском" id="39">
+				<AdditionSource>
+					<Item>История</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияУправлениеПоискомКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ИсторияУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИсторияНомерСтроки" id="42">
+					<DataPath>Объект.История.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияНомерСтрокиКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ИсторияНомерСтрокиРасширеннаяПодсказка" id="44"/>
+				</LabelField>
+				<InputField name="ИсторияДатаОперации" id="45">
+					<DataPath>Объект.История.ДатаОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияДатаОперацииКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ИсторияДатаОперацииРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ИсторияОперация" id="48">
+					<DataPath>Объект.История.Операция</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИсторияОперацияКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ИсторияОперацияРасширеннаяПодсказка" id="50"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ПочтаРоссииЗапросКТрекеру</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:31bf8796-30c0-4104-a123-a03ea59846e9</Field>
+				<Field>1/0:7fa007f6-c88a-4444-a0fe-20230927523c</Field>
+				<Field>Объект.ТрекНомер</Field>
+				<Field>Объект.УчетнаяЗапись</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПоПочтеРоссии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить по почте россии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить по почте россии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьПоПочтеРоссии</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="КомандаЗапрос" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапрос</Action>
+		</Command>
+	</Commands>
+</Form>
