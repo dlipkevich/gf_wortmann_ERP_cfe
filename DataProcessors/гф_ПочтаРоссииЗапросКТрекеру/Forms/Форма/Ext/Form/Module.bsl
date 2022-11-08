@@ -79,8 +79,8 @@
 		Операция = гф_ПочтаРоссии.ОтветОтТрекераСтруктураОперация();  
 		
 		Операция.Дата		= Элемент.OperationParameters.OperDate;
-		Операция.ID			= Строка(Элемент.OperationParameters.OperType.id);
-		Операция.IDАтрибута	= Строка(Элемент.OperationParameters.OperAttr.id);
+		Операция.ID			= Элемент.OperationParameters.OperType.id;
+		Операция.IDАтрибута	= Элемент.OperationParameters.OperAttr.id;
 		
 		ДеталиОперации = гф_ПочтаРоссии.ПолучитьДеталиОперацииОтслеживания(Операция.ID, Операция.IDАтрибута);
 													
