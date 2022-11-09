@@ -39,6 +39,43 @@
 			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
 			<WriteMode>Independent</WriteMode>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Resource uuid="6c373d09-7a90-40eb-be61-091370e8d77e">
+				<InternalInfo/>
+				<Properties>
+					<Name>Операция</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>aeb7ad11-5834-4c0d-927e-af9fbcdacb00</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ПочтаРоссииОперацииОтслеживания</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="6d43928e-2738-43a8-a53a-80ba638514ef">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонечнаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a4bb77c1-5c66-4c62-a228-163988a63edb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="fa79f568-d93b-420d-8c6d-7d8cdd7a860e">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПочтовоеОтправление</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f350a238-dd78-41bd-bbe5-ce87126c9aeb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ПочтаРоссииПочтовыеОтправления</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

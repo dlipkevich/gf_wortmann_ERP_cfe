@@ -28,13 +28,14 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>50923372-673a-4135-bb6b-c1c666e4d0a6</ExtendedConfigurationObject>
+			<DefaultObjectForm>Catalog.гф_ПочтаРоссииОперацииОтслеживания.Form.гф_ФормаЭлемента</DefaultObjectForm>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="c42351b5-8758-48d0-b668-433db53428ab">
 				<InternalInfo/>
 				<Properties>
 					<Name>КодОперации</Name>
-					<Comment/>
+					<Comment>Код операции</Comment>
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>09efc944-1be1-40ec-8889-e8bb70c9512b</ExtendedConfigurationObject>
 					<Type>
@@ -47,6 +48,68 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="b92ca6e0-2e2c-412d-a669-926a66fa5633">
+				<InternalInfo/>
+				<Properties>
+					<Name>КодАтрибута</Name>
+					<Comment>Код атрибута</Comment>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>85b70322-fa95-437f-9eef-2edf024068a9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3326c8b9-5745-4289-8ba0-af03f735efbb">
+				<InternalInfo/>
+				<Properties>
+					<Name>Операция</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>415fde50-245e-4920-910c-43fa3e722a02</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>64</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="aa747b52-f55b-47b2-9aa2-e520d0473eed">
+				<InternalInfo/>
+				<Properties>
+					<Name>Атрибут</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5dd35013-4fb6-4b19-9032-9a513bcdaf73</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>120</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e86a7638-7395-4295-b887-9e4785c6a895">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонечнаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3024ed26-3392-47d8-bbbb-5cefd3c76710</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
