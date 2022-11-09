@@ -143,11 +143,17 @@
 					<ContextMenu name="БлокировкаФлагКонтекстноеМеню" id="51"/>
 					<ExtendedTooltip name="БлокировкаФлагРасширеннаяПодсказка" id="52"/>
 				</CheckBoxField>
-				<InputField name="БлокировкаКонтрагент" id="20">
-					<DataPath>Объект.Блокировка.Контрагент</DataPath>
+				<InputField name="БлокировкаПартнер" id="77">
+					<DataPath>Объект.Блокировка.Партнер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Клиент</v8:content>
+						</v8:item>
+					</Title>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="БлокировкаКонтрагентКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="БлокировкаКонтрагентРасширеннаяПодсказка" id="22"/>
+					<ContextMenu name="БлокировкаПартнерКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="БлокировкаПартнерРасширеннаяПодсказка" id="79"/>
 				</InputField>
 				<InputField name="БлокировкаОрганизация" id="23">
 					<DataPath>Объект.Блокировка.Организация</DataPath>

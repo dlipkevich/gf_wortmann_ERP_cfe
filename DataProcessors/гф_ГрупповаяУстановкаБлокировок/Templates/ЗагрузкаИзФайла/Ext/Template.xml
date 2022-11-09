@@ -106,7 +106,7 @@ Example: Truck Mercedes Axor</v8:content>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Контрагент</v8:content>
+							<v8:content>Клиент</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
@@ -132,13 +132,13 @@ Example: INV-T-0002</v8:content>
 							</v8:item>
 						</text>
 						<beginRow>1</beginRow>
-						<beginRowOffset>-21</beginRowOffset>
+						<beginRowOffset>-22</beginRowOffset>
 						<endRow>0</endRow>
-						<endRowOffset>135</endRowOffset>
+						<endRowOffset>134</endRowOffset>
 						<beginColumn>1</beginColumn>
-						<beginColumnOffset>21</beginColumnOffset>
+						<beginColumnOffset>22</beginColumnOffset>
 						<endColumn>1</endColumn>
-						<endColumnOffset>819</endColumnOffset>
+						<endColumnOffset>850</endColumnOffset>
 						<autoSize>true</autoSize>
 						<pictureSize>Stretch</pictureSize>
 					</note>
@@ -366,16 +366,6 @@ Example: 400.30</v8:content>
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
-		<name>Контрагент</name>
-		<area>
-			<type>Rectangle</type>
-			<beginRow>0</beginRow>
-			<endRow>0</endRow>
-			<beginColumn>1</beginColumn>
-			<endColumn>1</endColumn>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
 		<name>Организация</name>
 		<area>
 			<type>Rectangle</type>
@@ -383,6 +373,16 @@ Example: 400.30</v8:content>
 			<endRow>0</endRow>
 			<beginColumn>0</beginColumn>
 			<endColumn>0</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Партнер</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>0</beginRow>
+			<endRow>0</endRow>
+			<beginColumn>1</beginColumn>
+			<endColumn>1</endColumn>
 		</area>
 	</namedItem>
 	<font faceName="Arial" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
