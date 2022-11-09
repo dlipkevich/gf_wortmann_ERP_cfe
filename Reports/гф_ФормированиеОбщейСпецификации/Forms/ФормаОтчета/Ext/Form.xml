@@ -41,6 +41,11 @@
 					</Title>
 					<ExtendedTooltip name="СкрытьОтборыРасширеннаяПодсказка" id="92"/>
 				</Button>
+				<Button name="СохранитьОтчет" id="103">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СохранитьОтчет</CommandName>
+					<ExtendedTooltip name="СохранитьОтчетРасширеннаяПодсказка" id="104"/>
+				</Button>
 			</ChildItems>
 		</CommandBar>
 		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="3">
@@ -263,6 +268,11 @@
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>Отчет.SettingsComposer.Settings.Filter</DataPath>
+					<CommandSet>
+						<ExcludedCommand>HierarchicalList</ExcludedCommand>
+						<ExcludedCommand>List</ExcludedCommand>
+						<ExcludedCommand>Tree</ExcludedCommand>
+					</CommandSet>
 					<ViewMode>All</ViewMode>
 					<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
 					<ContextMenu name="КомпоновщикОтбораНоменклатурыНастройкиОтборКонтекстноеМеню" id="79"/>
@@ -512,6 +522,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьСтрокиПеревода</Action>
+		</Command>
+		<Command name="СохранитьОтчет" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьОтчет</Action>
 		</Command>
 	</Commands>
 </Form>

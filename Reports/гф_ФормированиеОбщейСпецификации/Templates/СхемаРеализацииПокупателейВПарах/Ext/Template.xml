@@ -335,7 +335,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Цена розничная</v8:content>
+					<v8:content>Розничная цена </v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -415,7 +415,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фотография</v8:content>
+					<v8:content>Картинка</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -456,6 +456,16 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Цена закупочная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаСоСкидкойСНДС</dataPath>
+			<field>ЦенаСоСкидкойСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена со скидкой с НДС</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -1776,7 +1786,8 @@
 	ВТ_ДанныеНоменклатуры.ЦенаРозничная КАК ЦенаРозничная,
 	ВТ_ДанныеНоменклатуры.ВидТовара КАК ВидТовара,
 	НоменклатураКонтрагентовБЭД.Артикул КАК КодНоменклатурыКонтрагента,
-	ВТ_ДанныеНоменклатуры.ЦенаЗакупочная КАК ЦенаЗакупочная
+	ВТ_ДанныеНоменклатуры.ЦенаЗакупочная КАК ЦенаЗакупочная,
+	0 КАК ЦенаСоСкидкойСНДС
 ИЗ
 	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопРеквизитыНоменклатуры КАК ВТ_ДопРеквизитыНоменклатуры
@@ -1883,6 +1894,9 @@
 				<v8:content>Доп реквизит товары в коробах</v8:content>
 			</v8:item>
 		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<availableAsField>false</availableAsField>
@@ -1977,10 +1991,10 @@
 					<dcsset:field>ЦенаСоСкидкойБезНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ЦенаРозничная</dcsset:field>
+					<dcsset:field>ЦенаСоСкидкойСНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ЦенаЗакупочная</dcsset:field>
+					<dcsset:field>ЦенаРозничная</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КодТНВЭД</dcsset:field>
