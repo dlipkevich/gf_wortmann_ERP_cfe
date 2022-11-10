@@ -4,21 +4,6 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Catalog.Контрагенты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Контрагенты.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>View</name>
@@ -671,29 +656,6 @@
 	</object>
 	<object>
 		<name>Catalog.Контрагенты.Attribute.КПП</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.Партнеры</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоЗначениямРасширенный( "Справочник.Партнеры", "Чтение", "",
-"ЛЕВОЕ СОЕДИНЕНИЕ Справочник.КонтактныеЛицаПартнеров КАК Т1 ПО Т1.Владелец = Т.Ссылка
-ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВнешниеПользователи КАК Т2 ПО Т2.ОбъектАвторизации = Т1.Ссылка",
-"",
-"ВнешниеПользователи", "Т.ссылка","ИЛИ",
-"ВнешниеПользователи", "Т2.Ссылка", "", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","", "","","")
-#КонецЕсли</condition>
-			</restrictionByCondition>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
