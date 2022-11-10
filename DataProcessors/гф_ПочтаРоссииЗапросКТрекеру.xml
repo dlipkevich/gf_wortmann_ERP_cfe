@@ -62,22 +62,18 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a0f882d9-ae84-40c1-bc88-b8dfbc9a8e48">
+			<Attribute uuid="3e52f625-eb55-4683-9d33-2c5f25d93b3e">
 				<Properties>
-					<Name>ТрекНомер</Name>
+					<Name>ПочтовоеОтправление</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Трек номер</v8:content>
+							<v8:content>Почтовое отправление</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>50</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.гф_ПочтаРоссииПочтовыеОтправления</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

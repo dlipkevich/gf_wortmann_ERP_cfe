@@ -16,11 +16,10 @@
 			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="27"/>
 			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="28"/>
 		</InputField>
-		<InputField name="НомерОтслеживания" id="7">
-			<DataPath>Объект.ТрекНомер</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НомерОтслеживанияКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="НомерОтслеживанияРасширеннаяПодсказка" id="9"/>
+		<InputField name="ПочтовоеОтправление" id="57">
+			<DataPath>Объект.ПочтовоеОтправление</DataPath>
+			<ContextMenu name="ПочтовоеОтправлениеКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ПочтовоеОтправлениеРасширеннаяПодсказка" id="59"/>
 		</InputField>
 		<Table name="История" id="29">
 			<ReadOnly>true</ReadOnly>
@@ -100,9 +99,10 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>1/0:056ecfb8-ca4a-4c0f-8b8d-363fcfaaa181</Field>
 				<Field>1/0:31bf8796-30c0-4104-a123-a03ea59846e9</Field>
 				<Field>1/0:7fa007f6-c88a-4444-a0fe-20230927523c</Field>
-				<Field>Объект.ТрекНомер</Field>
+				<Field>Объект.ПочтовоеОтправление</Field>
 				<Field>Объект.УчетнаяЗапись</Field>
 			</Save>
 		</Attribute>
@@ -122,6 +122,20 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаЗапрос</Action>
+		</Command>
+		<Command name="КомандаЗапросИстории" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запрос истории</v8:content>
+				</v8:item>
+			</ToolTip>
 		</Command>
 	</Commands>
 </Form>
