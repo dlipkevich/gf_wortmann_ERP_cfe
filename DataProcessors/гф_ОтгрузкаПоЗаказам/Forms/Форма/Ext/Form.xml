@@ -28,6 +28,9 @@
 					<DataPath>Объект.Склад</DataPath>
 					<ContextMenu name="СкладКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">СкладПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="Клиент" id="4">
 					<DataPath>Объект.Клиент</DataPath>
@@ -308,6 +311,20 @@
 									<ContextMenu name="ДеревоДокументовЗаказКонтекстноеМеню" id="156"/>
 									<ExtendedTooltip name="ДеревоДокументовЗаказРасширеннаяПодсказка" id="157"/>
 								</InputField>
+								<InputField name="ДеревоДокументовНоменклатура" id="152">
+									<DataPath>ДеревоДокументов.Номенклатура</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовНоменклатураКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ДеревоДокументовНоменклатураРасширеннаяПодсказка" id="154"/>
+								</InputField>
+								<InputField name="ДеревоДокументовХарактеристика" id="164">
+									<DataPath>ДеревоДокументов.Характеристика</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДокументовХарактеристикаКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ДеревоДокументовХарактеристикаРасширеннаяПодсказка" id="166"/>
+								</InputField>
 								<InputField name="ДеревоДокументовУпаковочныйЛистНомер" id="211">
 									<DataPath>ДеревоДокументов.УпаковочныйЛистНомер</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -376,20 +393,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовЕдиницаИзмеренияКонтекстноеМеню" id="42"/>
 									<ExtendedTooltip name="ДеревоДокументовЕдиницаИзмеренияРасширеннаяПодсказка" id="43"/>
-								</InputField>
-								<InputField name="ДеревоДокументовНоменклатура" id="152">
-									<DataPath>ДеревоДокументов.Номенклатура</DataPath>
-									<Visible>false</Visible>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНоменклатураКонтекстноеМеню" id="153"/>
-									<ExtendedTooltip name="ДеревоДокументовНоменклатураРасширеннаяПодсказка" id="154"/>
-								</InputField>
-								<InputField name="ДеревоДокументовХарактеристика" id="164">
-									<DataPath>ДеревоДокументов.Характеристика</DataPath>
-									<Visible>false</Visible>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовХарактеристикаКонтекстноеМеню" id="165"/>
-									<ExtendedTooltip name="ДеревоДокументовХарактеристикаРасширеннаяПодсказка" id="166"/>
 								</InputField>
 								<InputField name="ДеревоДокументовКоличествоНоменклатуры" id="170">
 									<DataPath>ДеревоДокументов.КоличествоНоменклатуры</DataPath>
