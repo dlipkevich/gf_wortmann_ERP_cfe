@@ -74,7 +74,7 @@
 					<ContextMenu name="КодАтрибутаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="КодАтрибутаРасширеннаяПодсказка" id="14"/>
 				</LabelField>
-				<LabelField name="КонечнаяОперация" id="21">
+				<InputField name="КонечнаяОперация" id="21">
 					<DataPath>Объект.КонечнаяОперация</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Title>
@@ -85,15 +85,15 @@
 					</Title>
 					<ContextMenu name="КонечнаяОперацияКонтекстноеМеню" id="22"/>
 					<ExtendedTooltip name="КонечнаяОперацияРасширеннаяПодсказка" id="23"/>
-				</LabelField>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<LabelField name="Операция" id="15">
+		<InputField name="Операция" id="15">
 			<DataPath>Объект.Операция</DataPath>
 			<ContextMenu name="ОперацияКонтекстноеМеню" id="16"/>
 			<ExtendedTooltip name="ОперацияРасширеннаяПодсказка" id="17"/>
-		</LabelField>
-		<LabelField name="Атрибут" id="18">
+		</InputField>
+		<InputField name="Атрибут" id="18">
 			<DataPath>Объект.Атрибут</DataPath>
 			<Title>
 				<v8:item>
@@ -103,7 +103,7 @@
 			</Title>
 			<ContextMenu name="АтрибутКонтекстноеМеню" id="19"/>
 			<ExtendedTooltip name="АтрибутРасширеннаяПодсказка" id="20"/>
-		</LabelField>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

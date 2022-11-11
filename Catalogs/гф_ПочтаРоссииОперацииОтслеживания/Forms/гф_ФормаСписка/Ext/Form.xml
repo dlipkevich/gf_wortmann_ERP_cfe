@@ -75,32 +75,31 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="ТрекНомер" id="28">
-					<DataPath>Список.ТрекНомер</DataPath>
-					<ContextMenu name="ТрекНомерКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ТрекНомерРасширеннаяПодсказка" id="30"/>
+				<LabelField name="КодОперации" id="19">
+					<DataPath>Список.КодОперации</DataPath>
+					<ContextMenu name="КодОперацииКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КодОперацииРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<LabelField name="ДатаСоздания" id="22">
-					<DataPath>Список.ДатаСоздания</DataPath>
-					<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="24"/>
+				<LabelField name="КодАтрибута" id="22">
+					<DataPath>Список.КодАтрибута</DataPath>
+					<ContextMenu name="КодАтрибутаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КодАтрибутаРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="ДатаПоследнегоЗапроса" id="31">
-					<DataPath>Список.ДатаПоследнегоЗапроса</DataPath>
-					<ContextMenu name="ДатаПоследнегоЗапросаКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="ДатаПоследнегоЗапросаРасширеннаяПодсказка" id="33"/>
+				<LabelField name="Операция" id="25">
+					<DataPath>Список.Операция</DataPath>
+					<ContextMenu name="ОперацияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОперацияРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<CheckBoxField name="ДоставкаЗавершена" id="25">
-					<DataPath>Список.ДоставкаЗавершена</DataPath>
+				<LabelField name="Атрибут" id="28">
+					<DataPath>Список.Атрибут</DataPath>
+					<ContextMenu name="АтрибутКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="АтрибутРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<CheckBoxField name="КонечнаяОперация" id="31">
+					<DataPath>Список.КонечнаяОперация</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ДоставкаЗавершенаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ДоставкаЗавершенаРасширеннаяПодсказка" id="27"/>
-				</CheckBoxField>
-				<CheckBoxField name="ОшибкаПриЗапросе" id="34">
-					<DataPath>Список.ОшибкаПриЗапросе</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОшибкаПриЗапросеКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ОшибкаПриЗапросеРасширеннаяПодсказка" id="36"/>
+					<ContextMenu name="КонечнаяОперацияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="КонечнаяОперацияРасширеннаяПодсказка" id="33"/>
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
@@ -114,22 +113,9 @@
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<MainTable>Catalog.гф_ПочтаРоссииПочтовыеОтправления</MainTable>
+				<MainTable>Catalog.гф_ПочтаРоссииОперацииОтслеживания</MainTable>
 				<ListSettings>
 					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:use>false</dcsset:use>
-							<dcsset:left xsi:type="dcscor:Field">ДоставкаЗавершена</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-							<dcsset:userSettingID>4ea72bab-6c39-490c-bb42-63b789906329</dcsset:userSettingID>
-							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Доставка завершена</v8:content>
-								</v8:item>
-							</dcsset:userSettingPresentation>
-						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
