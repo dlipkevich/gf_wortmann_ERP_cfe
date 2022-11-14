@@ -22,6 +22,12 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="25"/>
 			<ChildItems>
+				<InputField name="Код" id="26">
+					<DataPath>Объект.Code</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="КодКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="28"/>
+				</InputField>
 				<InputField name="Наименование" id="4">
 					<DataPath>Объект.Description</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -74,18 +80,18 @@
 					<ContextMenu name="КодАтрибутаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="КодАтрибутаРасширеннаяПодсказка" id="14"/>
 				</LabelField>
-				<InputField name="КонечнаяОперация" id="21">
+				<CheckBoxField name="КонечнаяОперация" id="21">
 					<DataPath>Объект.КонечнаяОперация</DataPath>
-					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Это конечная операция</v8:content>
 						</v8:item>
 					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="КонечнаяОперацияКонтекстноеМеню" id="22"/>
 					<ExtendedTooltip name="КонечнаяОперацияРасширеннаяПодсказка" id="23"/>
-				</InputField>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Операция" id="15">
