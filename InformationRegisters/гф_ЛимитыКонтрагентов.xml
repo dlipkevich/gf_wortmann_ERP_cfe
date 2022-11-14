@@ -40,6 +40,35 @@
 			<WriteMode>RecorderSubordinate</WriteMode>
 		</Properties>
 		<ChildObjects>
+			<Resource uuid="1db0bee2-ff1f-49f9-b192-f7ddd139efa7">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сумма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7c155c11-354b-405e-b22d-15bf247584e6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="0df5b0f1-3454-4c90-bdc0-5b459a1536b4">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7c99d54b-2969-4490-88fc-85ceebf3c544</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_СтатусыЛимитов</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
 			<Dimension uuid="556c5c4b-a596-4241-b123-a31476c121fe">
 				<InternalInfo/>
 				<Properties>
@@ -49,6 +78,42 @@
 					<ExtendedConfigurationObject>3b0960bd-c629-42f0-9fdf-887fd5c09bb8</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.гф_ВидыЛимитов</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="a248c72e-2c07-44ad-9faf-618557317b31">
+				<InternalInfo/>
+				<Properties>
+					<Name>Партнер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>64370d6e-d376-4a36-a6aa-c7f46ac1594d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="3b379b4a-edd2-46d8-bf60-5dcbfac7c9bf">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>20dc2d62-c2a0-477a-81f0-c6aad24f720b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="3996036a-b637-475f-b107-ee89357d3d1d">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>39d621fd-631b-4863-94f3-63dcdcfa8bef</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
 					</Type>
 				</Properties>
 			</Dimension>
