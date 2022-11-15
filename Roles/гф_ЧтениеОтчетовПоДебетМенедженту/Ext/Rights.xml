@@ -4,6 +4,17 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
+		<name>Catalog.Контрагенты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>View</name>
@@ -74,7 +85,53 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.ВидБлокировки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаИзготовления</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -89,6 +146,13 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ВидыБлокировок.TabularSection.БлокируемыТипыЛимитов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Resource.Статус</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -142,6 +206,20 @@
 	</object>
 	<object>
 		<name>Catalog.Контрагенты.Attribute.НаименованиеМеждународное</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Resource.Сумма</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -261,7 +339,49 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.TabularSection.ПолучателиПисьма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Партнер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.Контрагент</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -275,11 +395,220 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаОкончанияРедактированияСкидок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.Партнер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_СостоянияБюджетов.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>ChartOfAccounts.Хозрасчетный</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Order</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardTabularSection.ExtDimensionTypes</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.OffBalance</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Type</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfAccounts.Хозрасчетный.StandardAttribute.Ref</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -307,6 +636,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Resource.ВидБлокировки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.ДоговорыКонтрагентов.Attribute.Контрагент</name>
 		<right>
 			<name>View</name>
@@ -314,7 +650,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Command.гф_ЛимитыКонтрагентов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_Номер</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -335,7 +685,35 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.Attribute.ДополнительнаяИнформация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаОкончанияФормированияЗаказов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ТехническийЛимит</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Бюджет</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -371,6 +749,27 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ВидыЛимитов.Attribute.Бюджет</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Справочник.ДоговорыКонтрагентов","Чтение","",
+"Организации","Организация",
+"ГруппыПартнеров","Партнер",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -500,6 +899,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.гф_Бюджеты.Attribute.Заголовок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.гф_СтатусРаботыСЗаказомИ5</name>
 		<right>
 			<name>View</name>
@@ -514,6 +920,10 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -588,6 +998,41 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.ДоговорыКонтрагентов.Attribute.Статус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаОкончанияОтгрузкиЗаказов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Склад</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Dimension.ДоговорКонтрагента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента</name>
 		<right>
 			<name>Read</name>
@@ -605,6 +1050,10 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -715,6 +1164,109 @@
 	</object>
 	<object>
 		<name>Catalog.Контрагенты.Attribute.гф_Логистика</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.Dimension.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаНачалаОтгрузкиЗаказов</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -842,6 +1394,59 @@
 	</object>
 	<object>
 		<name>Catalog.Контрагенты.Attribute.НалоговыйНомер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПроцентыПредоплаты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПроцентыПредоплаты.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПроцентыПредоплаты.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПроцентыПредоплаты.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПроцентыПредоплаты.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Dimension.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.Партнер</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1143,7 +1748,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_Год</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Статус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.Attribute.ДатаОтправления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.TabularSection.гф_ПрикрепленныеДокументы</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1164,7 +1790,78 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.TabularSection.гф_АдресаДоставки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Dimension.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Период</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Состояние</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1199,7 +1896,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.Attribute.СтатусПисьма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.Согласовано</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.Dimension.Состояние</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.Attribute.Ответственный</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1220,7 +1938,173 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаНачалаФормированияЗаказов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.PredefinedDataName</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Predefined</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.IsFolder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Owner</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Parent</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Description</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.TabularSection.Товары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.гф_Бюджеты.Attribute.Порядок</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1291,6 +2175,20 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Resource.Заблокирован</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Dimension.Партнер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ВидыБлокировок.Attribute.Комментарий</name>
 		<right>
 			<name>View</name>
@@ -1326,7 +2224,35 @@
 		</right>
 	</object>
 	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.Dimension.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЭлектронноеПисьмоИсходящее.Attribute.Тема</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвиженияБюджетов.Dimension.Бюджет</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.гф_БюджетнаяОперация.Attribute.Ответственный</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
