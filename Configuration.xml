@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>669</Version>
+			<Version>676</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -82,6 +82,10 @@
 			<StyleItem>ТекстСправочнойНадписи</StyleItem>
 			<StyleItem>ФонУправляющегоПоля</StyleItem>
 			<StyleItem>ГруппаВариантовОтчетовЦвет</StyleItem>
+			<StyleItem>ИтогиФонГруппы</StyleItem>
+			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
+			<StyleItem>ЦветФонаВнимание</StyleItem>
+			<StyleItem>ЦветТекстаВнимание</StyleItem>
 			<CommonPicture>ЗаполнитьПоШаблону</CommonPicture>
 			<CommonPicture>ЗаполнитьФорму</CommonPicture>
 			<CommonPicture>Отчеты</CommonPicture>
@@ -109,6 +113,20 @@
 			<CommonPicture>ФильтрПоСвойствам</CommonPicture>
 			<CommonPicture>ПодобратьТовары</CommonPicture>
 			<CommonPicture>Упаковать</CommonPicture>
+			<CommonPicture>ПовторитьДействие</CommonPicture>
+			<CommonPicture>ВыбратьВариантОтчета</CommonPicture>
+			<CommonPicture>ОтменитьДействие</CommonPicture>
+			<CommonPicture>СохранитьКак</CommonPicture>
+			<CommonPicture>ЭлектронноеПисьмо</CommonPicture>
+			<CommonPicture>Сумма</CommonPicture>
+			<CommonPicture>ПиктограммыНастроекОтчета</CommonPicture>
+			<CommonPicture>Отборы</CommonPicture>
+			<CommonPicture>БыстрыйДоступ</CommonPicture>
+			<CommonPicture>ПиктограммыДоступаКНастройкамОтчета</CommonPicture>
+			<CommonPicture>ПоляИСортировки</CommonPicture>
+			<CommonPicture>ПиктограммыТиповДанных</CommonPicture>
+			<CommonPicture>Оформление</CommonPicture>
+			<CommonPicture>Структура</CommonPicture>
 			<Role>гф_ОсновнаяРоль</Role>
 			<Role>гф_ДобавлениеИзменениеСпецификацийПокупателя</Role>
 			<Role>гф_ЧтениеСпецификацияПокупателя</Role>
@@ -177,6 +195,7 @@
 			<EventSubscription>гф_ОтгрузкаУпаковочногоЛистаУдаление</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерИзменениеСтатуса</EventSubscription>
 			<EventSubscription>гф_РасходныйОрдерУдаление</EventSubscription>
+			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>гф_ИспользоватьДополнительныеОтчетыИОбработки1</FunctionalOption>
 			<DefinedType>Артикул</DefinedType>
 			<DefinedType>ИнвентарныйНомерТМЦВЭксплуатации</DefinedType>
@@ -198,6 +217,9 @@
 			<Constant>гф_ПочтаРоссииПромежутокМеждуЗапросамиКОдномуТрекНомеру</Constant>
 			<CommonForm>гф_УстановкаГруппДоступа</CommonForm>
 			<CommonForm>СвязанныеДокументы</CommonForm>
+			<CommonForm>ФормаОтчета</CommonForm>
+			<CommonForm>ФормаВариантаОтчета</CommonForm>
+			<CommonForm>ФормаНастроекОтчета</CommonForm>
 			<Catalog>Склады</Catalog>
 			<Catalog>Организации</Catalog>
 			<Catalog>Контрагенты</Catalog>
@@ -352,6 +374,7 @@
 			<Report>гф_ОтчетПоПлатежнойИстории</Report>
 			<Report>гф_ОтчетПоРасчетуБюджета</Report>
 			<Report>гф_ДекларацияОбОбороте</Report>
+			<Report>гф_ОстаткиНоменклатуры</Report>
 			<DataProcessor>гф_ФормированиеСпецификацийПокупателя</DataProcessor>
 			<DataProcessor>гф_ВыставлениеСчетов</DataProcessor>
 			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
