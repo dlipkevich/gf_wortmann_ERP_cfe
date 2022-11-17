@@ -6,6 +6,7 @@
 		<ChildItems>
 			<Button name="ФормаКомандаТест" id="355">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.КомандаТест</CommandName>
 				<ExtendedTooltip name="ФормаКомандаТестРасширеннаяПодсказка" id="356"/>
 			</Button>
@@ -473,6 +474,311 @@
 								</CheckBoxField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗапросыКОтправке" id="391">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запросы к отправке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа запросы к отправке</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗапросыКОтправкеРасширеннаяПодсказка" id="392"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗапросыКОтправкеГруппа" id="429">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа запросы к отправке группа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа запросы к отправке группа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗапросыКОтправкеГруппаРасширеннаяПодсказка" id="430"/>
+							<ChildItems>
+								<InputField name="УчетнаяЗаписьОтправка" id="393">
+									<DataPath>Объект.УчетнаяЗаписьОтправка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Учетная запись для запросов к отправке</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="УчетнаяЗаписьОтправкаКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="УчетнаяЗаписьОтправкаРасширеннаяПодсказка" id="395"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ГруппаЗапросыКОтправкеСтраницы" id="425">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа запросы к отправке страницы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа запросы к отправке страницы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаЗапросыКОтправкеСтраницыРасширеннаяПодсказка" id="426"/>
+							<ChildItems>
+								<Page name="ГруппаНормализацияАдреса" id="427">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нормализация адреса</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа нормализация адреса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНормализацияАдресаРасширеннаяПодсказка" id="428"/>
+									<ChildItems>
+										<Table name="Адреса" id="396">
+											<Representation>List</Representation>
+											<HeightControlVariant>UseContentHeight</HeightControlVariant>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ПроверяемыеАдреса</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="АдресаКонтекстноеМеню" id="397"/>
+											<AutoCommandBar name="АдресаКоманднаяПанель" id="398">
+												<ChildItems>
+													<Button name="КомандаНомализацияАдреса" id="423">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаНомализацияАдреса</CommandName>
+														<ExtendedTooltip name="КомандаНомализацияАдресаРасширеннаяПодсказка" id="424"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="АдресаРасширеннаяПодсказка" id="399"/>
+											<SearchStringAddition name="АдресаСтрокаПоиска" id="400">
+												<AdditionSource>
+													<Item>Адреса</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="АдресаСтрокаПоискаКонтекстноеМеню" id="401"/>
+												<ExtendedTooltip name="АдресаСтрокаПоискаРасширеннаяПодсказка" id="402"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="АдресаСостояниеПросмотра" id="403">
+												<AdditionSource>
+													<Item>Адреса</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="АдресаСостояниеПросмотраКонтекстноеМеню" id="404"/>
+												<ExtendedTooltip name="АдресаСостояниеПросмотраРасширеннаяПодсказка" id="405"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="АдресаУправлениеПоиском" id="406">
+												<AdditionSource>
+													<Item>Адреса</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="АдресаУправлениеПоискомКонтекстноеМеню" id="407"/>
+												<ExtendedTooltip name="АдресаУправлениеПоискомРасширеннаяПодсказка" id="408"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="АдресаАдрес" id="418">
+													<DataPath>ПроверяемыеАдреса.Адрес</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="АдресаАдресКонтекстноеМеню" id="419"/>
+													<ExtendedTooltip name="АдресаАдресРасширеннаяПодсказка" id="420"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНормализацияФИО" id="431">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нормализация ФИО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа нормализация ФИО</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНормализацияФИОРасширеннаяПодсказка" id="432"/>
+									<ChildItems>
+										<Table name="ПроверяемыеФИО" id="433">
+											<Representation>List</Representation>
+											<HeightControlVariant>UseContentHeight</HeightControlVariant>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ПроверяемыеФИО</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ПроверяемыеФИОКонтекстноеМеню" id="434"/>
+											<AutoCommandBar name="ПроверяемыеФИОКоманднаяПанель" id="435">
+												<ChildItems>
+													<Button name="ПроверяемыеФИОКомандаНормализацияФИО" id="449">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаНормализацияФИО</CommandName>
+														<ExtendedTooltip name="ПроверяемыеФИОКомандаНормализацияФИОРасширеннаяПодсказка" id="450"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПроверяемыеФИОРасширеннаяПодсказка" id="436"/>
+											<SearchStringAddition name="ПроверяемыеФИОСтрокаПоиска" id="437">
+												<AdditionSource>
+													<Item>ПроверяемыеФИО</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеФИОСтрокаПоискаКонтекстноеМеню" id="438"/>
+												<ExtendedTooltip name="ПроверяемыеФИОСтрокаПоискаРасширеннаяПодсказка" id="439"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПроверяемыеФИОСостояниеПросмотра" id="440">
+												<AdditionSource>
+													<Item>ПроверяемыеФИО</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеФИОСостояниеПросмотраКонтекстноеМеню" id="441"/>
+												<ExtendedTooltip name="ПроверяемыеФИОСостояниеПросмотраРасширеннаяПодсказка" id="442"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПроверяемыеФИОУправлениеПоиском" id="443">
+												<AdditionSource>
+													<Item>ПроверяемыеФИО</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеФИОУправлениеПоискомКонтекстноеМеню" id="444"/>
+												<ExtendedTooltip name="ПроверяемыеФИОУправлениеПоискомРасширеннаяПодсказка" id="445"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ПроверяемыеФИОФИО" id="446">
+													<DataPath>ПроверяемыеФИО.ФИО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПроверяемыеФИОФИОКонтекстноеМеню" id="447"/>
+													<ExtendedTooltip name="ПроверяемыеФИОФИОРасширеннаяПодсказка" id="448"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНормализацияТелефона" id="451">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нормализация телефона</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа нормализация телефона</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНормализацияТелефонаРасширеннаяПодсказка" id="452"/>
+									<ChildItems>
+										<Table name="ПроверяемыеТелефоны" id="453">
+											<Representation>List</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ПроверяемыеТелефоны</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ПроверяемыеТелефоныКонтекстноеМеню" id="454"/>
+											<AutoCommandBar name="ПроверяемыеТелефоныКоманднаяПанель" id="455">
+												<ChildItems>
+													<Button name="ПроверяемыеТелефоныКомандаНормализацияТелефона" id="469">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаНормализацияТелефона</CommandName>
+														<ExtendedTooltip name="ПроверяемыеТелефоныКомандаНормализацияТелефонаРасширеннаяПодсказка" id="470"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ПроверяемыеТелефоныРасширеннаяПодсказка" id="456"/>
+											<SearchStringAddition name="ПроверяемыеТелефоныСтрокаПоиска" id="457">
+												<AdditionSource>
+													<Item>ПроверяемыеТелефоны</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеТелефоныСтрокаПоискаКонтекстноеМеню" id="458"/>
+												<ExtendedTooltip name="ПроверяемыеТелефоныСтрокаПоискаРасширеннаяПодсказка" id="459"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПроверяемыеТелефоныСостояниеПросмотра" id="460">
+												<AdditionSource>
+													<Item>ПроверяемыеТелефоны</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеТелефоныСостояниеПросмотраКонтекстноеМеню" id="461"/>
+												<ExtendedTooltip name="ПроверяемыеТелефоныСостояниеПросмотраРасширеннаяПодсказка" id="462"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПроверяемыеТелефоныУправлениеПоиском" id="463">
+												<AdditionSource>
+													<Item>ПроверяемыеТелефоны</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПроверяемыеТелефоныУправлениеПоискомКонтекстноеМеню" id="464"/>
+												<ExtendedTooltip name="ПроверяемыеТелефоныУправлениеПоискомРасширеннаяПодсказка" id="465"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ПроверяемыеТелефоныТелефон" id="466">
+													<DataPath>ПроверяемыеТелефоны.Телефон</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПроверяемыеТелефоныТелефонКонтекстноеМеню" id="467"/>
+													<ExtendedTooltip name="ПроверяемыеТелефоныТелефонРасширеннаяПодсказка" id="468"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаКоличествоЗапросов" id="471">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество запросов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа количество запросов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаКоличествоЗапросовРасширеннаяПодсказка" id="472"/>
+									<ChildItems>
+										<Button name="КомандаКоличествоЗапросов" id="473">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.КомандаКоличествоЗапросов</CommandName>
+											<ExtendedTooltip name="КомандаКоличествоЗапросовРасширеннаяПодсказка" id="474"/>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<TextDocumentField name="ОтветОтПочты" id="415">
+							<DataPath>ОтветОтПочты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ответ от сервиса отправки</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОтветОтПочтыКонтекстноеМеню" id="416"/>
+							<ExtendedTooltip name="ОтветОтПочтыРасширеннаяПодсказка" id="417"/>
+						</TextDocumentField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаНастройки" id="196">
@@ -1184,6 +1490,7 @@
 				<Field>1/0:7fa007f6-c88a-4444-a0fe-20230927523c</Field>
 				<Field>Объект.ПочтовоеОтправление</Field>
 				<Field>Объект.УчетнаяЗапись</Field>
+				<Field>Объект.УчетнаяЗаписьОтправка</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="ПочтовыеОтправления" id="2">
@@ -1594,6 +1901,110 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="ОтветОтПочты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ от почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверяемыеАдреса" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеАдреса</Field>
+			</Save>
+			<Columns>
+				<Column name="Адрес" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПроверяемыеФИО" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеФИО</Field>
+			</Save>
+			<Columns>
+				<Column name="ФИО" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПроверяемыеТелефоны" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые телефоны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеТелефоны</Field>
+			</Save>
+			<Columns>
+				<Column name="Телефон" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефон</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="КомандаЗапрос" id="2">
@@ -1640,6 +2051,66 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаТест</Action>
+		</Command>
+		<Command name="КомандаНомализацияАдреса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда номализация адреса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНомализацияАдреса</Action>
+		</Command>
+		<Command name="КомандаНормализацияФИО" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда нормализация ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНормализацияФИО</Action>
+		</Command>
+		<Command name="КомандаНормализацияТелефона" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда нормализация телефона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНормализацияТелефона</Action>
+		</Command>
+		<Command name="КомандаКоличествоЗапросов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит и количество запросов за день</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда количество запросов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаКоличествоЗапросов</Action>
 		</Command>
 	</Commands>
 </Form>
