@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<Report uuid="dbb96574-0fab-4a3c-a55d-74ba44cd49c9">
+	<Report uuid="83cb3d2a-c86c-455f-87d1-9072cba193e0">
 		<InternalInfo>
 			<xr:GeneratedType name="ReportObject.гф_ОтчетПоДебиторскойЗадолженности" category="Object">
-				<xr:TypeId>1e8de33d-e2e3-4dab-9414-b011e30e9325</xr:TypeId>
-				<xr:ValueId>bf134835-7e57-44e9-949b-c49574acda94</xr:ValueId>
+				<xr:TypeId>3b9d0fed-7f82-4b20-87b4-b7ef14ba2321</xr:TypeId>
+				<xr:ValueId>a6ec9c03-15d2-436b-bb4b-370f3d1a4e64</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="ReportManager.гф_ОтчетПоДебиторскойЗадолженности" category="Manager">
-				<xr:TypeId>3dde2f57-d6ab-42cb-a2d4-7405d1d239c6</xr:TypeId>
-				<xr:ValueId>202a1946-a778-496a-b273-132f965f7d94</xr:ValueId>
+				<xr:TypeId>897fc0ff-5d3b-459b-9586-5a4bda178c7f</xr:TypeId>
+				<xr:ValueId>27ccd881-1643-471c-ae56-53e2261e123c</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -19,15 +19,15 @@
 					<v8:content>Отчет по дебиторской задолженности</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>// #wortmann #4.1.15 (Рабочее место по дебет-менеджменту) Галфинд(Просто) Боцманова 2022/09/08</Comment>
+			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm/>
+			<DefaultForm>CommonForm.ФормаОтчета</DefaultForm>
 			<AuxiliaryForm/>
 			<MainDataCompositionSchema>Report.гф_ОтчетПоДебиторскойЗадолженности.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
-			<DefaultSettingsForm/>
+			<DefaultSettingsForm>CommonForm.ФормаНастроекОтчета</DefaultSettingsForm>
 			<AuxiliarySettingsForm/>
 			<DefaultVariantForm/>
-			<VariantsStorage/>
+			<VariantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</VariantsStorage>
 			<SettingsStorage/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
@@ -35,6 +35,7 @@
 		</Properties>
 		<ChildObjects>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+			<Template>Макет</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<Report uuid="12f505ae-af11-4e57-aedc-4ced5e970272">
+	<Report uuid="098e9297-d73d-4404-9e5e-9dec0b699ddb">
 		<InternalInfo>
 			<xr:GeneratedType name="ReportObject.гф_ЕженедельныйОтчетПоКоличествуЗаказов" category="Object">
-				<xr:TypeId>a45af41e-85fd-4e5b-9628-f7c7d4697b51</xr:TypeId>
-				<xr:ValueId>fee43cb5-663e-42b3-b49b-3b7fbbe26767</xr:ValueId>
+				<xr:TypeId>c4a098e4-ce7b-4bd8-8aa4-acc33fcf04c1</xr:TypeId>
+				<xr:ValueId>bfcd251c-be7e-4a57-a234-853ade80733b</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="ReportManager.гф_ЕженедельныйОтчетПоКоличествуЗаказов" category="Manager">
-				<xr:TypeId>cc10a88e-05e4-4eb4-b98f-feb638ddb96a</xr:TypeId>
-				<xr:ValueId>5757abf1-80ae-45bb-bf51-af60fefe5247</xr:ValueId>
+				<xr:TypeId>0e672fa9-bfa5-4244-bf00-ade9f2943df4</xr:TypeId>
+				<xr:ValueId>bd6661ad-5dcf-4b12-b5a6-f1fb6365040a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -21,13 +21,13 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>Report.гф_ЕженедельныйОтчетПоКоличествуЗаказов.Form.ФормаОтчета</DefaultForm>
+			<DefaultForm>Report.гф_ЕженедельныйОтчетПоКоличествуЗаказов.Form.ФормаОтчета1</DefaultForm>
 			<AuxiliaryForm/>
 			<MainDataCompositionSchema>Report.гф_ЕженедельныйОтчетПоКоличествуЗаказов.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
-			<DefaultSettingsForm/>
+			<DefaultSettingsForm>CommonForm.ФормаНастроекОтчета</DefaultSettingsForm>
 			<AuxiliarySettingsForm/>
-			<DefaultVariantForm/>
-			<VariantsStorage/>
+			<DefaultVariantForm>CommonForm.ФормаВариантаОтчета</DefaultVariantForm>
+			<VariantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</VariantsStorage>
 			<SettingsStorage/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
@@ -35,6 +35,7 @@
 		</Properties>
 		<ChildObjects>
 			<Form>ФормаОтчета</Form>
+			<Form>ФормаОтчета1</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
 		</ChildObjects>
 	</Report>
