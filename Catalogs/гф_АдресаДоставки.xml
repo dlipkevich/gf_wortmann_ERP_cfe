@@ -31,6 +31,9 @@
 			<Owners>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
 			</Owners>
+			<DefaultObjectForm>Catalog.гф_АдресаДоставки.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultListForm>Catalog.гф_АдресаДоставки.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm>Catalog.гф_АдресаДоставки.Form.ФормаВыбора</DefaultChoiceForm>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="eb4b0fa1-c139-4774-99ff-9b5ac5992e4e">
@@ -81,7 +84,131 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="abdffe1d-2729-493d-b9db-675d25bec94a">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипАдреса</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b0d7a879-1722-46b3-bdfc-a6a4981dd241</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_ТипыАдреса</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d169ccd6-232e-48ce-b1a0-0dc2eb1e8129">
+				<InternalInfo/>
+				<Properties>
+					<Name>КонтактноеЛицо</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>12d62d52-cf46-4ce2-b754-6f888235ec6b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КонтактныеЛицаПартнеров</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8338a8fe-12bf-4aa3-95d9-b1b07085bd4d">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТК</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9470429a-80df-41a7-b414-c60922063a87</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5c6db601-8b38-4a36-b308-a91654384294">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипПрайсЛистаТК</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b7d9f612-a55a-4efd-ab52-5a0398dddf65</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыЦенПоставщиков</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a9349ff3-111b-43b7-bb6a-764d73a71fa2">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДоставкаДоДвери</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b86807b9-9f41-49ca-ba2d-e09ae517f42e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2c479585-ce22-47c0-bd76-f7302825619c">
+				<InternalInfo/>
+				<Properties>
+					<Name>СогласованиеДоставки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>1ec0c353-4982-4c4d-99f5-93c87e88aec9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="90662714-436c-422d-bc96-fc9edc672b64">
+				<InternalInfo/>
+				<Properties>
+					<Name>РегионКод</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>188846e5-1e9a-423c-a584-607401834181</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5d90f545-6704-42c7-9b02-523b45cb4c3a">
+				<InternalInfo/>
+				<Properties>
+					<Name>РегионНаименование</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7e651722-b2e1-4303-b919-0f33974ad999</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="a2ff76b8-e637-4f97-a340-4c2e41f6c902">
+				<InternalInfo/>
+				<Properties>
+					<Name>Значение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e510ec6f-4713-44a2-99cb-510e2bc2700f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаВыбора</Form>
+			<Form>ФормаЭлемента</Form>
+			<Form>ФормаВыбора</Form>
+			<Form>ФормаСписка</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

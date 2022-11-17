@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -23,7 +22,6 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<ChoiceMode>true</ChoiceMode>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -74,28 +72,28 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Ссылка" id="16">
+				<LabelField name="Ссылка" id="25">
 					<DataPath>Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
-					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="Адрес" id="31">
+				<LabelField name="Адрес" id="22">
 					<DataPath>Список.Адрес</DataPath>
-					<ContextMenu name="АдресКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="33"/>
+					<ContextMenu name="АдресКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="24"/>
 				</LabelField>
-				<LabelField name="НомерАдреса" id="25">
+				<LabelField name="НомерАдреса" id="28">
 					<DataPath>Список.НомерАдреса</DataPath>
-					<ContextMenu name="НомерАдресаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="НомерАдресаРасширеннаяПодсказка" id="27"/>
+					<ContextMenu name="НомерАдресаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НомерАдресаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
-				<LabelField name="GLNНомер" id="28">
+				<LabelField name="GLNНомер" id="31">
 					<DataPath>Список.GLNНомер</DataPath>
-					<ContextMenu name="GLNНомерКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="GLNНомерРасширеннаяПодсказка" id="30"/>
+					<ContextMenu name="GLNНомерКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="GLNНомерРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 				<LabelField name="КонтактноеЛицо" id="34">
 					<DataPath>Список.КонтактноеЛицо</DataPath>
@@ -132,6 +130,9 @@
 				<CheckBoxField name="Запрещен" id="52">
 					<DataPath>Список.Запрещен</DataPath>
 					<Visible>false</Visible>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЗапрещенКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ЗапрещенРасширеннаяПодсказка" id="54"/>
@@ -199,6 +200,7 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
