@@ -1916,6 +1916,1471 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаСтраницаПочтаРоссии" id="487">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почта России</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страница почта россии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницаПочтаРоссииРасширеннаяПодсказка" id="488"/>
+					<ChildItems>
+						<Pages name="ГруппаСтраницыПочты" id="489">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страницы почты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страницы почты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаСтраницыПочтыРасширеннаяПодсказка" id="490"/>
+							<ChildItems>
+								<Page name="ГруппаЗапросКТрекеру" id="491">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запрос к трекеру</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запрос к трекеру</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleDataPath>Объект.История.RowsCount</TitleDataPath>
+									<ExtendedTooltip name="ГруппаЗапросКТрекеруРасширеннаяПодсказка" id="492"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЗапросКТрекеруПараметры" id="493">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запрос к трекеру параметры</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запрос к трекеру параметры</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросКТрекеруПараметрыРасширеннаяПодсказка" id="494"/>
+											<ChildItems>
+												<InputField name="ПочтовоеОтправление" id="495">
+													<DataPath>Объект.ПочтовоеОтправление</DataPath>
+													<ContextMenu name="ПочтовоеОтправлениеКонтекстноеМеню" id="496"/>
+													<ExtendedTooltip name="ПочтовоеОтправлениеРасширеннаяПодсказка" id="497"/>
+												</InputField>
+												<InputField name="УчетнаяЗапись" id="498">
+													<DataPath>Объект.УчетнаяЗапись</DataPath>
+													<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="499"/>
+													<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="500"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="История" id="501">
+											<ReadOnly>true</ReadOnly>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.История</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ИсторияКонтекстноеМеню" id="502"/>
+											<AutoCommandBar name="ИсторияКоманднаяПанель" id="503">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ИсторияКомандаЗапрос" id="894">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаЗапрос</CommandName>
+														<ExtendedTooltip name="ИсторияКомандаЗапросРасширеннаяПодсказка" id="895"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="504"/>
+											<SearchStringAddition name="ИсторияСтрокаПоиска" id="505">
+												<AdditionSource>
+													<Item>История</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияСтрокаПоискаКонтекстноеМеню" id="506"/>
+												<ExtendedTooltip name="ИсторияСтрокаПоискаРасширеннаяПодсказка" id="507"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИсторияСостояниеПросмотра" id="508">
+												<AdditionSource>
+													<Item>История</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияСостояниеПросмотраКонтекстноеМеню" id="509"/>
+												<ExtendedTooltip name="ИсторияСостояниеПросмотраРасширеннаяПодсказка" id="510"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИсторияУправлениеПоиском" id="511">
+												<AdditionSource>
+													<Item>История</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияУправлениеПоискомКонтекстноеМеню" id="512"/>
+												<ExtendedTooltip name="ИсторияУправлениеПоискомРасширеннаяПодсказка" id="513"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ИсторияНомерСтроки" id="514">
+													<DataPath>Объект.История.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсторияНомерСтрокиКонтекстноеМеню" id="515"/>
+													<ExtendedTooltip name="ИсторияНомерСтрокиРасширеннаяПодсказка" id="516"/>
+												</LabelField>
+												<InputField name="ИсторияДатаОперации" id="517">
+													<DataPath>Объект.История.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсторияДатаОперацииКонтекстноеМеню" id="518"/>
+													<ExtendedTooltip name="ИсторияДатаОперацииРасширеннаяПодсказка" id="519"/>
+												</InputField>
+												<InputField name="ИсторияОперация" id="520">
+													<DataPath>Объект.История.Операция</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсторияОперацияКонтекстноеМеню" id="521"/>
+													<ExtendedTooltip name="ИсторияОперацияРасширеннаяПодсказка" id="522"/>
+												</InputField>
+												<CheckBoxField name="ИсторияКонечнаяОперация" id="523">
+													<DataPath>Объект.История.КонечнаяОперация</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсторияКонечнаяОперацияКонтекстноеМеню" id="524"/>
+													<ExtendedTooltip name="ИсторияКонечнаяОперацияРасширеннаяПодсказка" id="525"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаПочтовыеОтправления" id="528">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Почтовые отправления</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа почтовые отправления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаПочтовыеОтправленияРасширеннаяПодсказка" id="529"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПочтовыеОтправленияНастройки" id="530">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа почтовые отправления настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа почтовые отправления настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<AssociatedTableElementId xsi:type="xs:string">ОтгрузкаУправлениеПоискомКонтекстноеМеню</AssociatedTableElementId>
+											<ExtendedTooltip name="ГруппаПочтовыеОтправленияНастройкиРасширеннаяПодсказка" id="531"/>
+										</UsualGroup>
+										<Table name="ПочтовыеОтправления" id="900">
+											<Representation>List</Representation>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<DataPath>ПочтовыеОтправления</DataPath>
+											<RowPictureDataPath>ПочтовыеОтправления.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<UserSettingsGroup>ГруппаПочтовыеОтправленияНастройки</UserSettingsGroup>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+											<ContextMenu name="ПочтовыеОтправленияКонтекстноеМеню" id="901"/>
+											<AutoCommandBar name="ПочтовыеОтправленияКоманднаяПанель" id="902"/>
+											<ExtendedTooltip name="ПочтовыеОтправленияРасширеннаяПодсказка" id="903"/>
+											<SearchStringAddition name="ПочтовыеОтправленияСтрокаПоиска" id="904">
+												<AdditionSource>
+													<Item>ПочтовыеОтправления</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПочтовыеОтправленияСтрокаПоискаКонтекстноеМеню" id="905"/>
+												<ExtendedTooltip name="ПочтовыеОтправленияСтрокаПоискаРасширеннаяПодсказка" id="906"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПочтовыеОтправленияСостояниеПросмотра" id="907">
+												<AdditionSource>
+													<Item>ПочтовыеОтправления</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПочтовыеОтправленияСостояниеПросмотраКонтекстноеМеню" id="908"/>
+												<ExtendedTooltip name="ПочтовыеОтправленияСостояниеПросмотраРасширеннаяПодсказка" id="909"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПочтовыеОтправленияУправлениеПоиском" id="910">
+												<AdditionSource>
+													<Item>ПочтовыеОтправления</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПочтовыеОтправленияУправлениеПоискомКонтекстноеМеню" id="911"/>
+												<ExtendedTooltip name="ПочтовыеОтправленияУправлениеПоискомРасширеннаяПодсказка" id="912"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ПочтовыеОтправленияНаименование" id="913">
+													<DataPath>ПочтовыеОтправления.Description</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияНаименованиеКонтекстноеМеню" id="914"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияНаименованиеРасширеннаяПодсказка" id="915"/>
+												</LabelField>
+												<LabelField name="ПочтовыеОтправленияКод" id="916">
+													<DataPath>ПочтовыеОтправления.Code</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияКодКонтекстноеМеню" id="917"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияКодРасширеннаяПодсказка" id="918"/>
+												</LabelField>
+												<LabelField name="ПочтовыеОтправленияТрекНомер" id="919">
+													<DataPath>ПочтовыеОтправления.ТрекНомер</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияТрекНомерКонтекстноеМеню" id="920"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияТрекНомерРасширеннаяПодсказка" id="921"/>
+												</LabelField>
+												<LabelField name="ПочтовыеОтправленияДатаСоздания" id="922">
+													<DataPath>ПочтовыеОтправления.ДатаСоздания</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияДатаСозданияКонтекстноеМеню" id="923"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияДатаСозданияРасширеннаяПодсказка" id="924"/>
+												</LabelField>
+												<CheckBoxField name="ПочтовыеОтправленияОтслеживать" id="925">
+													<DataPath>ПочтовыеОтправления.Отслеживать</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПочтовыеОтправленияОтслеживатьКонтекстноеМеню" id="926"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияОтслеживатьРасширеннаяПодсказка" id="927"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПочтовыеОтправленияДоставкаЗавершена" id="928">
+													<DataPath>ПочтовыеОтправления.ДоставкаЗавершена</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПочтовыеОтправленияДоставкаЗавершенаКонтекстноеМеню" id="929"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияДоставкаЗавершенаРасширеннаяПодсказка" id="930"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПочтовыеОтправленияОшибкаПриЗапросе" id="931">
+													<DataPath>ПочтовыеОтправления.ОшибкаПриЗапросе</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПочтовыеОтправленияОшибкаПриЗапросеКонтекстноеМеню" id="932"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияОшибкаПриЗапросеРасширеннаяПодсказка" id="933"/>
+												</CheckBoxField>
+												<LabelField name="ПочтовыеОтправленияТекстОшибки" id="934">
+													<DataPath>ПочтовыеОтправления.ТекстОшибки</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияТекстОшибкиКонтекстноеМеню" id="935"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияТекстОшибкиРасширеннаяПодсказка" id="936"/>
+												</LabelField>
+												<LabelField name="ПочтовыеОтправленияДатаПоследнегоЗапроса" id="937">
+													<DataPath>ПочтовыеОтправления.ДатаПоследнегоЗапроса</DataPath>
+													<ContextMenu name="ПочтовыеОтправленияДатаПоследнегоЗапросаКонтекстноеМеню" id="938"/>
+													<ExtendedTooltip name="ПочтовыеОтправленияДатаПоследнегоЗапросаРасширеннаяПодсказка" id="939"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаИстория" id="569">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>История отслеживания</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа история</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаИсторияРасширеннаяПодсказка" id="570"/>
+									<ChildItems>
+										<Table name="ИсторияОтслеживания" id="996">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<DataPath>ИсторияОтслеживания</DataPath>
+											<RowPictureDataPath>ИсторияОтслеживания.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+											<ContextMenu name="ИсторияОтслеживанияКонтекстноеМеню" id="997"/>
+											<AutoCommandBar name="ИсторияОтслеживанияКоманднаяПанель" id="998"/>
+											<ExtendedTooltip name="ИсторияОтслеживанияРасширеннаяПодсказка" id="999"/>
+											<SearchStringAddition name="ИсторияОтслеживанияСтрокаПоиска" id="1000">
+												<AdditionSource>
+													<Item>ИсторияОтслеживания</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияОтслеживанияСтрокаПоискаКонтекстноеМеню" id="1001"/>
+												<ExtendedTooltip name="ИсторияОтслеживанияСтрокаПоискаРасширеннаяПодсказка" id="1002"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИсторияОтслеживанияСостояниеПросмотра" id="1003">
+												<AdditionSource>
+													<Item>ИсторияОтслеживания</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияОтслеживанияСостояниеПросмотраКонтекстноеМеню" id="1004"/>
+												<ExtendedTooltip name="ИсторияОтслеживанияСостояниеПросмотраРасширеннаяПодсказка" id="1005"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИсторияОтслеживанияУправлениеПоиском" id="1006">
+												<AdditionSource>
+													<Item>ИсторияОтслеживания</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИсторияОтслеживанияУправлениеПоискомКонтекстноеМеню" id="1007"/>
+												<ExtendedTooltip name="ИсторияОтслеживанияУправлениеПоискомРасширеннаяПодсказка" id="1008"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ИсторияОтслеживанияПериод" id="1009">
+													<DataPath>ИсторияОтслеживания.Period</DataPath>
+													<ContextMenu name="ИсторияОтслеживанияПериодКонтекстноеМеню" id="1010"/>
+													<ExtendedTooltip name="ИсторияОтслеживанияПериодРасширеннаяПодсказка" id="1011"/>
+												</LabelField>
+												<LabelField name="ИсторияОтслеживанияПочтовоеОтправление" id="1012">
+													<DataPath>ИсторияОтслеживания.ПочтовоеОтправление</DataPath>
+													<ContextMenu name="ИсторияОтслеживанияПочтовоеОтправлениеКонтекстноеМеню" id="1013"/>
+													<ExtendedTooltip name="ИсторияОтслеживанияПочтовоеОтправлениеРасширеннаяПодсказка" id="1014"/>
+												</LabelField>
+												<LabelField name="ИсторияОтслеживанияОперация" id="1015">
+													<DataPath>ИсторияОтслеживания.Операция</DataPath>
+													<ContextMenu name="ИсторияОтслеживанияОперацияКонтекстноеМеню" id="1016"/>
+													<ExtendedTooltip name="ИсторияОтслеживанияОперацияРасширеннаяПодсказка" id="1017"/>
+												</LabelField>
+												<CheckBoxField name="ИсторияОтслеживанияКонечнаяОперация" id="1018">
+													<DataPath>ИсторияОтслеживания.КонечнаяОперация</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсторияОтслеживанияКонечнаяОперацияКонтекстноеМеню" id="1019"/>
+													<ExtendedTooltip name="ИсторияОтслеживанияКонечнаяОперацияРасширеннаяПодсказка" id="1020"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаТекущееСостояние" id="596">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текущее состояние почтовых отправлений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа текущее состояние</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаТекущееСостояниеРасширеннаяПодсказка" id="597"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаТекущееСостояниеНастройки" id="598">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текущее состояние настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа текущее состояние настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<AssociatedTableElementId xsi:type="xs:string">ПеремещениеСкладПолучательРасширеннаяПодсказка</AssociatedTableElementId>
+											<ExtendedTooltip name="ГруппаТекущееСостояниеНастройкиРасширеннаяПодсказка" id="599"/>
+										</UsualGroup>
+										<Table name="ТекущееСостояние" id="1211">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<DataPath>ТекущееСостояние</DataPath>
+											<RowPictureDataPath>ТекущееСостояние.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<UserSettingsGroup>ГруппаТекущееСостояниеНастройки</UserSettingsGroup>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+											<ContextMenu name="ТекущееСостояниеКонтекстноеМеню" id="1212"/>
+											<AutoCommandBar name="ТекущееСостояниеКоманднаяПанель" id="1213"/>
+											<ExtendedTooltip name="ТекущееСостояниеРасширеннаяПодсказка" id="1214"/>
+											<SearchStringAddition name="ТекущееСостояниеСтрокаПоиска" id="1215">
+												<AdditionSource>
+													<Item>ТекущееСостояние</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТекущееСостояниеСтрокаПоискаКонтекстноеМеню" id="1216"/>
+												<ExtendedTooltip name="ТекущееСостояниеСтрокаПоискаРасширеннаяПодсказка" id="1217"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТекущееСостояниеСостояниеПросмотра" id="1218">
+												<AdditionSource>
+													<Item>ТекущееСостояние</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТекущееСостояниеСостояниеПросмотраКонтекстноеМеню" id="1219"/>
+												<ExtendedTooltip name="ТекущееСостояниеСостояниеПросмотраРасширеннаяПодсказка" id="1220"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТекущееСостояниеУправлениеПоиском" id="1221">
+												<AdditionSource>
+													<Item>ТекущееСостояние</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТекущееСостояниеУправлениеПоискомКонтекстноеМеню" id="1222"/>
+												<ExtendedTooltip name="ТекущееСостояниеУправлениеПоискомРасширеннаяПодсказка" id="1223"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ТекущееСостояниеПериод" id="1224">
+													<DataPath>ТекущееСостояние.Period</DataPath>
+													<ContextMenu name="ТекущееСостояниеПериодКонтекстноеМеню" id="1225"/>
+													<ExtendedTooltip name="ТекущееСостояниеПериодРасширеннаяПодсказка" id="1226"/>
+												</LabelField>
+												<LabelField name="ТекущееСостояниеПочтовоеОтправление" id="1227">
+													<DataPath>ТекущееСостояние.ПочтовоеОтправление</DataPath>
+													<ContextMenu name="ТекущееСостояниеПочтовоеОтправлениеКонтекстноеМеню" id="1228"/>
+													<ExtendedTooltip name="ТекущееСостояниеПочтовоеОтправлениеРасширеннаяПодсказка" id="1229"/>
+												</LabelField>
+												<LabelField name="ТекущееСостояниеОперация" id="1230">
+													<DataPath>ТекущееСостояние.Операция</DataPath>
+													<ContextMenu name="ТекущееСостояниеОперацияКонтекстноеМеню" id="1231"/>
+													<ExtendedTooltip name="ТекущееСостояниеОперацияРасширеннаяПодсказка" id="1232"/>
+												</LabelField>
+												<CheckBoxField name="ТекущееСостояниеКонечнаяОперация" id="1233">
+													<DataPath>ТекущееСостояние.КонечнаяОперация</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТекущееСостояниеКонечнаяОперацияКонтекстноеМеню" id="1234"/>
+													<ExtendedTooltip name="ТекущееСостояниеКонечнаяОперацияРасширеннаяПодсказка" id="1235"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаЗапросыКОтправке" id="625">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Запросы к отправке</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа запросы к отправке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаЗапросыКОтправкеРасширеннаяПодсказка" id="626"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЗапросыКОтправкеГруппа" id="627">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запросы к отправке группа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запросы к отправке группа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросыКОтправкеГруппаРасширеннаяПодсказка" id="628"/>
+											<ChildItems>
+												<InputField name="УчетнаяЗаписьОтправка" id="629">
+													<DataPath>Объект.УчетнаяЗаписьОтправка</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Учетная запись для запросов к отправке</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="УчетнаяЗаписьОтправкаКонтекстноеМеню" id="630"/>
+													<ExtendedTooltip name="УчетнаяЗаписьОтправкаРасширеннаяПодсказка" id="631"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<Pages name="ГруппаЗапросыКОтправкеСтраницы" id="632">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запросы к отправке страницы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа запросы к отправке страницы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<PagesRepresentation>TabsOnTop</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаЗапросыКОтправкеСтраницыРасширеннаяПодсказка" id="633"/>
+											<ChildItems>
+												<Page name="ГруппаНормализацияАдреса" id="634">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нормализация адреса</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа нормализация адреса</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаНормализацияАдресаРасширеннаяПодсказка" id="635"/>
+													<ChildItems>
+														<Table name="ПроверяемыеАдреса" id="940">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<DataPath>ПроверяемыеАдреса</DataPath>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ПроверяемыеАдресаКонтекстноеМеню" id="941"/>
+															<AutoCommandBar name="ПроверяемыеАдресаКоманднаяПанель" id="942">
+																<ChildItems>
+																	<Button name="ПроверяемыеАдресаКомандаНомализацияАдреса" id="956">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.КомандаНомализацияАдреса</CommandName>
+																		<ExtendedTooltip name="ПроверяемыеАдресаКомандаНомализацияАдресаРасширеннаяПодсказка" id="957"/>
+																	</Button>
+																</ChildItems>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ПроверяемыеАдресаРасширеннаяПодсказка" id="943"/>
+															<SearchStringAddition name="ПроверяемыеАдресаСтрокаПоиска" id="944">
+																<AdditionSource>
+																	<Item>ПроверяемыеАдреса</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеАдресаСтрокаПоискаКонтекстноеМеню" id="945"/>
+																<ExtendedTooltip name="ПроверяемыеАдресаСтрокаПоискаРасширеннаяПодсказка" id="946"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ПроверяемыеАдресаСостояниеПросмотра" id="947">
+																<AdditionSource>
+																	<Item>ПроверяемыеАдреса</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеАдресаСостояниеПросмотраКонтекстноеМеню" id="948"/>
+																<ExtendedTooltip name="ПроверяемыеАдресаСостояниеПросмотраРасширеннаяПодсказка" id="949"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ПроверяемыеАдресаУправлениеПоиском" id="950">
+																<AdditionSource>
+																	<Item>ПроверяемыеАдреса</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеАдресаУправлениеПоискомКонтекстноеМеню" id="951"/>
+																<ExtendedTooltip name="ПроверяемыеАдресаУправлениеПоискомРасширеннаяПодсказка" id="952"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<InputField name="ПроверяемыеАдресаАдрес" id="953">
+																	<DataPath>ПроверяемыеАдреса.Адрес</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПроверяемыеАдресаАдресКонтекстноеМеню" id="954"/>
+																	<ExtendedTooltip name="ПроверяемыеАдресаАдресРасширеннаяПодсказка" id="955"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаНормализацияФИО" id="654">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нормализация ФИО</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа нормализация ФИО</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаНормализацияФИОРасширеннаяПодсказка" id="655"/>
+													<ChildItems>
+														<Table name="ПроверяемыеФИО" id="976">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<DataPath>ПроверяемыеФИО</DataPath>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ПроверяемыеФИОКонтекстноеМеню" id="977"/>
+															<AutoCommandBar name="ПроверяемыеФИОКоманднаяПанель" id="978">
+																<ChildItems>
+																	<Button name="ПроверяемыеФИОКомандаНормализацияФИО" id="992">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.КомандаНормализацияФИО</CommandName>
+																		<ExtendedTooltip name="ПроверяемыеФИОКомандаНормализацияФИОРасширеннаяПодсказка" id="993"/>
+																	</Button>
+																</ChildItems>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ПроверяемыеФИОРасширеннаяПодсказка" id="979"/>
+															<SearchStringAddition name="ПроверяемыеФИОСтрокаПоиска" id="980">
+																<AdditionSource>
+																	<Item>ПроверяемыеФИО</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеФИОСтрокаПоискаКонтекстноеМеню" id="981"/>
+																<ExtendedTooltip name="ПроверяемыеФИОСтрокаПоискаРасширеннаяПодсказка" id="982"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ПроверяемыеФИОСостояниеПросмотра" id="983">
+																<AdditionSource>
+																	<Item>ПроверяемыеФИО</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеФИОСостояниеПросмотраКонтекстноеМеню" id="984"/>
+																<ExtendedTooltip name="ПроверяемыеФИОСостояниеПросмотраРасширеннаяПодсказка" id="985"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ПроверяемыеФИОУправлениеПоиском" id="986">
+																<AdditionSource>
+																	<Item>ПроверяемыеФИО</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеФИОУправлениеПоискомКонтекстноеМеню" id="987"/>
+																<ExtendedTooltip name="ПроверяемыеФИОУправлениеПоискомРасширеннаяПодсказка" id="988"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<InputField name="ПроверяемыеФИОФИО" id="989">
+																	<DataPath>ПроверяемыеФИО.ФИО</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПроверяемыеФИОФИОКонтекстноеМеню" id="990"/>
+																	<ExtendedTooltip name="ПроверяемыеФИОФИОРасширеннаяПодсказка" id="991"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаНормализацияТелефона" id="674">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Нормализация телефона</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа нормализация телефона</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаНормализацияТелефонаРасширеннаяПодсказка" id="675"/>
+													<ChildItems>
+														<Table name="ПроверяемыеТелефоны" id="958">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<DataPath>ПроверяемыеТелефоны</DataPath>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ПроверяемыеТелефоныКонтекстноеМеню" id="959"/>
+															<AutoCommandBar name="ПроверяемыеТелефоныКоманднаяПанель" id="960">
+																<ChildItems>
+																	<Button name="ПроверяемыеТелефоныКомандаНормализацияТелефона" id="974">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.КомандаНормализацияТелефона</CommandName>
+																		<ExtendedTooltip name="ПроверяемыеТелефоныКомандаНормализацияТелефонаРасширеннаяПодсказка" id="975"/>
+																	</Button>
+																</ChildItems>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ПроверяемыеТелефоныРасширеннаяПодсказка" id="961"/>
+															<SearchStringAddition name="ПроверяемыеТелефоныСтрокаПоиска" id="962">
+																<AdditionSource>
+																	<Item>ПроверяемыеТелефоны</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеТелефоныСтрокаПоискаКонтекстноеМеню" id="963"/>
+																<ExtendedTooltip name="ПроверяемыеТелефоныСтрокаПоискаРасширеннаяПодсказка" id="964"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ПроверяемыеТелефоныСостояниеПросмотра" id="965">
+																<AdditionSource>
+																	<Item>ПроверяемыеТелефоны</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеТелефоныСостояниеПросмотраКонтекстноеМеню" id="966"/>
+																<ExtendedTooltip name="ПроверяемыеТелефоныСостояниеПросмотраРасширеннаяПодсказка" id="967"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ПроверяемыеТелефоныУправлениеПоиском" id="968">
+																<AdditionSource>
+																	<Item>ПроверяемыеТелефоны</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ПроверяемыеТелефоныУправлениеПоискомКонтекстноеМеню" id="969"/>
+																<ExtendedTooltip name="ПроверяемыеТелефоныУправлениеПоискомРасширеннаяПодсказка" id="970"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<InputField name="ПроверяемыеТелефоныТелефон" id="971">
+																	<DataPath>ПроверяемыеТелефоны.Телефон</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ПроверяемыеТелефоныТелефонКонтекстноеМеню" id="972"/>
+																	<ExtendedTooltip name="ПроверяемыеТелефоныТелефонРасширеннаяПодсказка" id="973"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКоличествоЗапросов" id="694">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Количество запросов</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа количество запросов</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКоличествоЗапросовРасширеннаяПодсказка" id="695"/>
+													<ChildItems>
+														<Button name="КомандаКоличествоЗапросов" id="994">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.КомандаКоличествоЗапросов</CommandName>
+															<ExtendedTooltip name="КомандаКоличествоЗапросовРасширеннаяПодсказка" id="995"/>
+														</Button>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+										<TextDocumentField name="ОтветОтПочты" id="698">
+											<DataPath>ОтветОтПочты</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответ от сервиса отправки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОтветОтПочтыКонтекстноеМеню" id="699"/>
+											<ExtendedTooltip name="ОтветОтПочтыРасширеннаяПодсказка" id="700"/>
+										</TextDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНастройки" id="701">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="702"/>
+									<ChildItems>
+										<CheckBoxField name="ЗапрашиватьДанныеПоРасписанию" id="703">
+											<DataPath>ЗапрашиватьДанныеПоРасписанию</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ЗапрашиватьДанныеПоРасписаниюКонтекстноеМеню" id="704"/>
+											<ExtendedTooltip name="ЗапрашиватьДанныеПоРасписаниюРасширеннаяПодсказка" id="705"/>
+											<Events>
+												<Event name="OnChange">ЗапрашиватьДанныеПоРасписаниюПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаНастройкиЗадания" id="706">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки регламентного задания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройки задания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ExtendedTooltip name="ГруппаНастройкиЗаданияРасширеннаяПодсказка" id="707"/>
+											<ChildItems>
+												<InputField name="ЧасовМеждуЗапросами" id="708">
+													<DataPath>ЧасовМеждуЗапросами</DataPath>
+													<ContextMenu name="ЧасовМеждуЗапросамиКонтекстноеМеню" id="709"/>
+													<ExtendedTooltip name="ЧасовМеждуЗапросамиРасширеннаяПодсказка" id="710"/>
+													<Events>
+														<Event name="OnChange">ЧасовМеждуЗапросамиПриИзменении</Event>
+													</Events>
+												</InputField>
+												<Button name="КомандаРасписание" id="1046">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.КомандаРасписание</CommandName>
+													<ExtendedTooltip name="КомандаРасписаниеРасширеннаяПодсказка" id="1047"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаКоды" id="713">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коды</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа коды</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаКодыРасширеннаяПодсказка" id="714"/>
+									<ChildItems>
+										<Pages name="ГруппаСтраницыКоды" id="715">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы коды</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа страницы коды</v8:content>
+												</v8:item>
+											</ToolTip>
+											<PagesRepresentation>TabsOnTop</PagesRepresentation>
+											<ExtendedTooltip name="ГруппаСтраницыКодыРасширеннаяПодсказка" id="716"/>
+											<ChildItems>
+												<Page name="ГруппаКодыОпераций" id="717">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды операций</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды операций</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыОперацийРасширеннаяПодсказка" id="718"/>
+													<ChildItems>
+														<Table name="КодыОпераций" id="1048">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыОпераций</DataPath>
+															<RowPictureDataPath>КодыОпераций.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыОперацийКонтекстноеМеню" id="1049"/>
+															<AutoCommandBar name="КодыОперацийКоманднаяПанель" id="1050"/>
+															<ExtendedTooltip name="КодыОперацийРасширеннаяПодсказка" id="1051"/>
+															<SearchStringAddition name="КодыОперацийСтрокаПоиска" id="1052">
+																<AdditionSource>
+																	<Item>КодыОпераций</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОперацийСтрокаПоискаКонтекстноеМеню" id="1053"/>
+																<ExtendedTooltip name="КодыОперацийСтрокаПоискаРасширеннаяПодсказка" id="1054"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыОперацийСостояниеПросмотра" id="1055">
+																<AdditionSource>
+																	<Item>КодыОпераций</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОперацийСостояниеПросмотраКонтекстноеМеню" id="1056"/>
+																<ExtendedTooltip name="КодыОперацийСостояниеПросмотраРасширеннаяПодсказка" id="1057"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыОперацийУправлениеПоиском" id="1058">
+																<AdditionSource>
+																	<Item>КодыОпераций</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОперацийУправлениеПоискомКонтекстноеМеню" id="1059"/>
+																<ExtendedTooltip name="КодыОперацийУправлениеПоискомРасширеннаяПодсказка" id="1060"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыОперацийНаименование" id="1061">
+																	<DataPath>КодыОпераций.Description</DataPath>
+																	<ContextMenu name="КодыОперацийНаименованиеКонтекстноеМеню" id="1062"/>
+																	<ExtendedTooltip name="КодыОперацийНаименованиеРасширеннаяПодсказка" id="1063"/>
+																</LabelField>
+																<LabelField name="КодыОперацийКод" id="1064">
+																	<DataPath>КодыОпераций.Code</DataPath>
+																	<ContextMenu name="КодыОперацийКодКонтекстноеМеню" id="1065"/>
+																	<ExtendedTooltip name="КодыОперацийКодРасширеннаяПодсказка" id="1066"/>
+																</LabelField>
+																<LabelField name="КодыОперацийКодОперации" id="1067">
+																	<DataPath>КодыОпераций.КодОперации</DataPath>
+																	<ContextMenu name="КодыОперацийКодОперацииКонтекстноеМеню" id="1068"/>
+																	<ExtendedTooltip name="КодыОперацийКодОперацииРасширеннаяПодсказка" id="1069"/>
+																</LabelField>
+																<LabelField name="КодыОперацийКодАтрибута" id="1070">
+																	<DataPath>КодыОпераций.КодАтрибута</DataPath>
+																	<ContextMenu name="КодыОперацийКодАтрибутаКонтекстноеМеню" id="1071"/>
+																	<ExtendedTooltip name="КодыОперацийКодАтрибутаРасширеннаяПодсказка" id="1072"/>
+																</LabelField>
+																<LabelField name="КодыОперацийОперация" id="1073">
+																	<DataPath>КодыОпераций.Операция</DataPath>
+																	<ContextMenu name="КодыОперацийОперацияКонтекстноеМеню" id="1074"/>
+																	<ExtendedTooltip name="КодыОперацийОперацияРасширеннаяПодсказка" id="1075"/>
+																</LabelField>
+																<LabelField name="КодыОперацийАтрибут" id="1076">
+																	<DataPath>КодыОпераций.Атрибут</DataPath>
+																	<ContextMenu name="КодыОперацийАтрибутКонтекстноеМеню" id="1077"/>
+																	<ExtendedTooltip name="КодыОперацийАтрибутРасширеннаяПодсказка" id="1078"/>
+																</LabelField>
+																<CheckBoxField name="КодыОперацийКонечнаяОперация" id="1079">
+																	<DataPath>КодыОпераций.КонечнаяОперация</DataPath>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="КодыОперацийКонечнаяОперацияКонтекстноеМеню" id="1080"/>
+																	<ExtendedTooltip name="КодыОперацийКонечнаяОперацияРасширеннаяПодсказка" id="1081"/>
+																</CheckBoxField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыКатегорийПочтовыхОтправлений" id="753">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды категорий почтовых отправлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды категорий почтовых отправлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыКатегорийПочтовыхОтправленийРасширеннаяПодсказка" id="754"/>
+													<ChildItems>
+														<Table name="КодыКатегорийПочтовыхОтправлений" id="1082">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыКатегорийПочтовыхОтправлений</DataPath>
+															<RowPictureDataPath>КодыКатегорийПочтовыхОтправлений.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыКатегорийПочтовыхОтправленийКонтекстноеМеню" id="1083"/>
+															<AutoCommandBar name="КодыКатегорийПочтовыхОтправленийКоманднаяПанель" id="1084"/>
+															<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийРасширеннаяПодсказка" id="1085"/>
+															<SearchStringAddition name="КодыКатегорийПочтовыхОтправленийСтрокаПоиска" id="1086">
+																<AdditionSource>
+																	<Item>КодыКатегорийПочтовыхОтправлений</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийПочтовыхОтправленийСтрокаПоискаКонтекстноеМеню" id="1087"/>
+																<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийСтрокаПоискаРасширеннаяПодсказка" id="1088"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыКатегорийПочтовыхОтправленийСостояниеПросмотра" id="1089">
+																<AdditionSource>
+																	<Item>КодыКатегорийПочтовыхОтправлений</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийПочтовыхОтправленийСостояниеПросмотраКонтекстноеМеню" id="1090"/>
+																<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийСостояниеПросмотраРасширеннаяПодсказка" id="1091"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыКатегорийПочтовыхОтправленийУправлениеПоиском" id="1092">
+																<AdditionSource>
+																	<Item>КодыКатегорийПочтовыхОтправлений</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийПочтовыхОтправленийУправлениеПоискомКонтекстноеМеню" id="1093"/>
+																<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийУправлениеПоискомРасширеннаяПодсказка" id="1094"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыКатегорийПочтовыхОтправленийНаименование" id="1095">
+																	<DataPath>КодыКатегорийПочтовыхОтправлений.Description</DataPath>
+																	<ContextMenu name="КодыКатегорийПочтовыхОтправленийНаименованиеКонтекстноеМеню" id="1096"/>
+																	<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийНаименованиеРасширеннаяПодсказка" id="1097"/>
+																</LabelField>
+																<LabelField name="КодыКатегорийПочтовыхОтправленийКод" id="1098">
+																	<DataPath>КодыКатегорийПочтовыхОтправлений.Code</DataPath>
+																	<ContextMenu name="КодыКатегорийПочтовыхОтправленийКодКонтекстноеМеню" id="1099"/>
+																	<ExtendedTooltip name="КодыКатегорийПочтовыхОтправленийКодРасширеннаяПодсказка" id="1100"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыРазрядовПочтовыхОтправлений" id="774">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды разрядов почтовых отправлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды разрядов почтовых отправлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыРазрядовПочтовыхОтправленийРасширеннаяПодсказка" id="775"/>
+													<ChildItems>
+														<Table name="КодыРазрядовПочтовыхОтправлений" id="1101">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыРазрядовПочтовыхОтправлений</DataPath>
+															<RowPictureDataPath>КодыРазрядовПочтовыхОтправлений.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыРазрядовПочтовыхОтправленийКонтекстноеМеню" id="1102"/>
+															<AutoCommandBar name="КодыРазрядовПочтовыхОтправленийКоманднаяПанель" id="1103"/>
+															<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийРасширеннаяПодсказка" id="1104"/>
+															<SearchStringAddition name="КодыРазрядовПочтовыхОтправленийСтрокаПоиска" id="1105">
+																<AdditionSource>
+																	<Item>КодыРазрядовПочтовыхОтправлений</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыРазрядовПочтовыхОтправленийСтрокаПоискаКонтекстноеМеню" id="1106"/>
+																<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийСтрокаПоискаРасширеннаяПодсказка" id="1107"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыРазрядовПочтовыхОтправленийСостояниеПросмотра" id="1108">
+																<AdditionSource>
+																	<Item>КодыРазрядовПочтовыхОтправлений</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыРазрядовПочтовыхОтправленийСостояниеПросмотраКонтекстноеМеню" id="1109"/>
+																<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийСостояниеПросмотраРасширеннаяПодсказка" id="1110"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыРазрядовПочтовыхОтправленийУправлениеПоиском" id="1111">
+																<AdditionSource>
+																	<Item>КодыРазрядовПочтовыхОтправлений</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыРазрядовПочтовыхОтправленийУправлениеПоискомКонтекстноеМеню" id="1112"/>
+																<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийУправлениеПоискомРасширеннаяПодсказка" id="1113"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыРазрядовПочтовыхОтправленийНаименование" id="1114">
+																	<DataPath>КодыРазрядовПочтовыхОтправлений.Description</DataPath>
+																	<ContextMenu name="КодыРазрядовПочтовыхОтправленийНаименованиеКонтекстноеМеню" id="1115"/>
+																	<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийНаименованиеРасширеннаяПодсказка" id="1116"/>
+																</LabelField>
+																<LabelField name="КодыРазрядовПочтовыхОтправленийКод" id="1117">
+																	<DataPath>КодыРазрядовПочтовыхОтправлений.Code</DataPath>
+																	<ContextMenu name="КодыРазрядовПочтовыхОтправленийКодКонтекстноеМеню" id="1118"/>
+																	<ExtendedTooltip name="КодыРазрядовПочтовыхОтправленийКодРасширеннаяПодсказка" id="1119"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыВидовПочтовыхОтправлений" id="795">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды видов почтовых отправлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды видов почтовых отправлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыВидовПочтовыхОтправленийРасширеннаяПодсказка" id="796"/>
+													<ChildItems>
+														<Table name="КодыВидовПочтовыхОтправлений" id="1120">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыВидовПочтовыхОтправлений</DataPath>
+															<RowPictureDataPath>КодыВидовПочтовыхОтправлений.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыВидовПочтовыхОтправленийКонтекстноеМеню" id="1121"/>
+															<AutoCommandBar name="КодыВидовПочтовыхОтправленийКоманднаяПанель" id="1122"/>
+															<ExtendedTooltip name="КодыВидовПочтовыхОтправленийРасширеннаяПодсказка" id="1123"/>
+															<SearchStringAddition name="КодыВидовПочтовыхОтправленийСтрокаПоиска" id="1124">
+																<AdditionSource>
+																	<Item>КодыВидовПочтовыхОтправлений</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыВидовПочтовыхОтправленийСтрокаПоискаКонтекстноеМеню" id="1125"/>
+																<ExtendedTooltip name="КодыВидовПочтовыхОтправленийСтрокаПоискаРасширеннаяПодсказка" id="1126"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыВидовПочтовыхОтправленийСостояниеПросмотра" id="1127">
+																<AdditionSource>
+																	<Item>КодыВидовПочтовыхОтправлений</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыВидовПочтовыхОтправленийСостояниеПросмотраКонтекстноеМеню" id="1128"/>
+																<ExtendedTooltip name="КодыВидовПочтовыхОтправленийСостояниеПросмотраРасширеннаяПодсказка" id="1129"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыВидовПочтовыхОтправленийУправлениеПоиском" id="1130">
+																<AdditionSource>
+																	<Item>КодыВидовПочтовыхОтправлений</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыВидовПочтовыхОтправленийУправлениеПоискомКонтекстноеМеню" id="1131"/>
+																<ExtendedTooltip name="КодыВидовПочтовыхОтправленийУправлениеПоискомРасширеннаяПодсказка" id="1132"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыВидовПочтовыхОтправленийНаименование" id="1133">
+																	<DataPath>КодыВидовПочтовыхОтправлений.Description</DataPath>
+																	<ContextMenu name="КодыВидовПочтовыхОтправленийНаименованиеКонтекстноеМеню" id="1134"/>
+																	<ExtendedTooltip name="КодыВидовПочтовыхОтправленийНаименованиеРасширеннаяПодсказка" id="1135"/>
+																</LabelField>
+																<LabelField name="КодыВидовПочтовыхОтправленийКод" id="1136">
+																	<DataPath>КодыВидовПочтовыхОтправлений.Code</DataPath>
+																	<ContextMenu name="КодыВидовПочтовыхОтправленийКодКонтекстноеМеню" id="1137"/>
+																	<ExtendedTooltip name="КодыВидовПочтовыхОтправленийКодРасширеннаяПодсказка" id="1138"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыОтметокПочтовыхОтправлений" id="816">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды отметок почтовых отправлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды отметок почтовых отправлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыОтметокПочтовыхОтправленийРасширеннаяПодсказка" id="817"/>
+													<ChildItems>
+														<Table name="КодыОтметокПочтовыхОтправлений" id="1139">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыОтметокПочтовыхОтправлений</DataPath>
+															<RowPictureDataPath>КодыОтметокПочтовыхОтправлений.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыОтметокПочтовыхОтправленийКонтекстноеМеню" id="1140"/>
+															<AutoCommandBar name="КодыОтметокПочтовыхОтправленийКоманднаяПанель" id="1141"/>
+															<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийРасширеннаяПодсказка" id="1142"/>
+															<SearchStringAddition name="КодыОтметокПочтовыхОтправленийСтрокаПоиска" id="1143">
+																<AdditionSource>
+																	<Item>КодыОтметокПочтовыхОтправлений</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОтметокПочтовыхОтправленийСтрокаПоискаКонтекстноеМеню" id="1144"/>
+																<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийСтрокаПоискаРасширеннаяПодсказка" id="1145"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыОтметокПочтовыхОтправленийСостояниеПросмотра" id="1146">
+																<AdditionSource>
+																	<Item>КодыОтметокПочтовыхОтправлений</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОтметокПочтовыхОтправленийСостояниеПросмотраКонтекстноеМеню" id="1147"/>
+																<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийСостояниеПросмотраРасширеннаяПодсказка" id="1148"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыОтметокПочтовыхОтправленийУправлениеПоиском" id="1149">
+																<AdditionSource>
+																	<Item>КодыОтметокПочтовыхОтправлений</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыОтметокПочтовыхОтправленийУправлениеПоискомКонтекстноеМеню" id="1150"/>
+																<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийУправлениеПоискомРасширеннаяПодсказка" id="1151"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыОтметокПочтовыхОтправленийНаименование" id="1152">
+																	<DataPath>КодыОтметокПочтовыхОтправлений.Description</DataPath>
+																	<ContextMenu name="КодыОтметокПочтовыхОтправленийНаименованиеКонтекстноеМеню" id="1153"/>
+																	<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийНаименованиеРасширеннаяПодсказка" id="1154"/>
+																</LabelField>
+																<LabelField name="КодыОтметокПочтовыхОтправленийКод" id="1155">
+																	<DataPath>КодыОтметокПочтовыхОтправлений.Code</DataPath>
+																	<ContextMenu name="КодыОтметокПочтовыхОтправленийКодКонтекстноеМеню" id="1156"/>
+																	<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийКодРасширеннаяПодсказка" id="1157"/>
+																</LabelField>
+																<LabelField name="КодыОтметокПочтовыхОтправленийРазряд" id="1158">
+																	<DataPath>КодыОтметокПочтовыхОтправлений.Разряд</DataPath>
+																	<ContextMenu name="КодыОтметокПочтовыхОтправленийРазрядКонтекстноеМеню" id="1159"/>
+																	<ExtendedTooltip name="КодыОтметокПочтовыхОтправленийРазрядРасширеннаяПодсказка" id="1160"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыСтранПересылкиПочтовыхОтправлений" id="840">
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды стран пересылки почтовых отправлений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды стран пересылки почтовых отправлений</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыСтранПересылкиПочтовыхОтправленийРасширеннаяПодсказка" id="841"/>
+													<ChildItems>
+														<Table name="КодыСтранПересылкиПочтовыхОтправлений" id="1161">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыСтранПересылкиПочтовыхОтправлений</DataPath>
+															<RowPictureDataPath>КодыСтранПересылкиПочтовыхОтправлений.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийКонтекстноеМеню" id="1162"/>
+															<AutoCommandBar name="КодыСтранПересылкиПочтовыхОтправленийКоманднаяПанель" id="1163"/>
+															<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийРасширеннаяПодсказка" id="1164"/>
+															<SearchStringAddition name="КодыСтранПересылкиПочтовыхОтправленийСтрокаПоиска" id="1165">
+																<AdditionSource>
+																	<Item>КодыСтранПересылкиПочтовыхОтправлений</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийСтрокаПоискаКонтекстноеМеню" id="1166"/>
+																<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийСтрокаПоискаРасширеннаяПодсказка" id="1167"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыСтранПересылкиПочтовыхОтправленийСостояниеПросмотра" id="1168">
+																<AdditionSource>
+																	<Item>КодыСтранПересылкиПочтовыхОтправлений</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийСостояниеПросмотраКонтекстноеМеню" id="1169"/>
+																<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийСостояниеПросмотраРасширеннаяПодсказка" id="1170"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыСтранПересылкиПочтовыхОтправленийУправлениеПоиском" id="1171">
+																<AdditionSource>
+																	<Item>КодыСтранПересылкиПочтовыхОтправлений</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийУправлениеПоискомКонтекстноеМеню" id="1172"/>
+																<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийУправлениеПоискомРасширеннаяПодсказка" id="1173"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийНаименование" id="1174">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.Description</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийНаименованиеКонтекстноеМеню" id="1175"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийНаименованиеРасширеннаяПодсказка" id="1176"/>
+																</LabelField>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийКод" id="1177">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.Code</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийКодКонтекстноеМеню" id="1178"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийКодРасширеннаяПодсказка" id="1179"/>
+																</LabelField>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha2" id="1180">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.КодAlpha2</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha2КонтекстноеМеню" id="1181"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha2РасширеннаяПодсказка" id="1182"/>
+																</LabelField>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha3" id="1183">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.КодAlpha3</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha3КонтекстноеМеню" id="1184"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийКодAlpha3РасширеннаяПодсказка" id="1185"/>
+																</LabelField>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийАнглийскоеНаименование" id="1186">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.АнглийскоеНаименование</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийАнглийскоеНаименованиеКонтекстноеМеню" id="1187"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийАнглийскоеНаименованиеРасширеннаяПодсказка" id="1188"/>
+																</LabelField>
+																<LabelField name="КодыСтранПересылкиПочтовыхОтправленийФранцузскоеНаименование" id="1189">
+																	<DataPath>КодыСтранПересылкиПочтовыхОтправлений.ФранцузскоеНаименование</DataPath>
+																	<ContextMenu name="КодыСтранПересылкиПочтовыхОтправленийФранцузскоеНаименованиеКонтекстноеМеню" id="1190"/>
+																	<ExtendedTooltip name="КодыСтранПересылкиПочтовыхОтправленийФранцузскоеНаименованиеРасширеннаяПодсказка" id="1191"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаКодыКатегорийОтправителей" id="873">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Коды категорий отправителей</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа коды категорий отправителей</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаКодыКатегорийОтправителейРасширеннаяПодсказка" id="874"/>
+													<ChildItems>
+														<Table name="КодыКатегорийОтправителей" id="1192">
+															<UseAlternationRowColor>true</UseAlternationRowColor>
+															<EnableStartDrag>true</EnableStartDrag>
+															<DataPath>КодыКатегорийОтправителей</DataPath>
+															<RowPictureDataPath>КодыКатегорийОтправителей.DefaultPicture</RowPictureDataPath>
+															<AutoRefresh>false</AutoRefresh>
+															<AutoRefreshPeriod>60</AutoRefreshPeriod>
+															<Period>
+																<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+																<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+																<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+															</Period>
+															<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+															<RestoreCurrentRow>false</RestoreCurrentRow>
+															<TopLevelParent xsi:nil="true"/>
+															<ShowRoot>true</ShowRoot>
+															<AllowRootChoice>false</AllowRootChoice>
+															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+															<ContextMenu name="КодыКатегорийОтправителейКонтекстноеМеню" id="1193"/>
+															<AutoCommandBar name="КодыКатегорийОтправителейКоманднаяПанель" id="1194"/>
+															<ExtendedTooltip name="КодыКатегорийОтправителейРасширеннаяПодсказка" id="1195"/>
+															<SearchStringAddition name="КодыКатегорийОтправителейСтрокаПоиска" id="1196">
+																<AdditionSource>
+																	<Item>КодыКатегорийОтправителей</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийОтправителейСтрокаПоискаКонтекстноеМеню" id="1197"/>
+																<ExtendedTooltip name="КодыКатегорийОтправителейСтрокаПоискаРасширеннаяПодсказка" id="1198"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="КодыКатегорийОтправителейСостояниеПросмотра" id="1199">
+																<AdditionSource>
+																	<Item>КодыКатегорийОтправителей</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийОтправителейСостояниеПросмотраКонтекстноеМеню" id="1200"/>
+																<ExtendedTooltip name="КодыКатегорийОтправителейСостояниеПросмотраРасширеннаяПодсказка" id="1201"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="КодыКатегорийОтправителейУправлениеПоиском" id="1202">
+																<AdditionSource>
+																	<Item>КодыКатегорийОтправителей</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="КодыКатегорийОтправителейУправлениеПоискомКонтекстноеМеню" id="1203"/>
+																<ExtendedTooltip name="КодыКатегорийОтправителейУправлениеПоискомРасширеннаяПодсказка" id="1204"/>
+															</SearchControlAddition>
+															<ChildItems>
+																<LabelField name="КодыКатегорийОтправителейНаименование" id="1205">
+																	<DataPath>КодыКатегорийОтправителей.Description</DataPath>
+																	<ContextMenu name="КодыКатегорийОтправителейНаименованиеКонтекстноеМеню" id="1206"/>
+																	<ExtendedTooltip name="КодыКатегорийОтправителейНаименованиеРасширеннаяПодсказка" id="1207"/>
+																</LabelField>
+																<LabelField name="КодыКатегорийОтправителейКод" id="1208">
+																	<DataPath>КодыКатегорийОтправителей.Code</DataPath>
+																	<ContextMenu name="КодыКатегорийОтправителейКодКонтекстноеМеню" id="1209"/>
+																	<ExtendedTooltip name="КодыКатегорийОтправителейКодРасширеннаяПодсказка" id="1210"/>
+																</LabelField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1932,7 +3397,10 @@
 				<Field>Объект.ПеремещениеКомпоновщик.Settings.Filter</Field>
 				<Field>Объект.Период</Field>
 				<Field>Объект.ПоставкаКомпоновщик.Settings.Filter</Field>
+				<Field>Объект.ПочтовоеОтправление</Field>
 				<Field>Объект.ТипДокумента</Field>
+				<Field>Объект.УчетнаяЗапись</Field>
+				<Field>Объект.УчетнаяЗаписьОтправка</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="ВыбранныеПечатныеФормы" id="2">
@@ -1980,6 +3448,518 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ЗапрашиватьДанныеПоРасписанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашивать данные по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияОтслеживания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История отслеживания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.гф_ПочтаРоссииИсторияОтслеживания</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыВидовПочтовыхОтправлений" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды видов почтовых отправлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыВидовПочтовыхОтправлений</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыКатегорийОтправителей" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды категорий отправителей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыКатегорийОтправлителей</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыКатегорийПочтовыхОтправлений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды категорий почтовых отправлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыКатегорийПочтовыхОтправлений</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыОпераций" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды операций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииОперацииОтслеживания</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыОтметокПочтовыхОтправлений" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды отметок почтовых отправлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыОтметокПочтовыхОтправлений</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыРазрядовПочтовыхОтправлений" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды разрядов почтовых отправлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыРазрядовПочтовыхОтправлений</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КодыСтранПересылкиПочтовыхОтправлений" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды стран пересылки почтовых отправлений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииКодыСтранПересылкиПочтовыхОтправлений</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтветОтПочты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ от почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПочтовыеОтправления" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Почтовые отправления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.гф_ПочтаРоссииПочтовыеОтправления</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ОшибкаПриЗапросе</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Ошибка при запросе</dcsset:presentation>
+							<dcsset:userSettingID>0decc632-2ef7-4ff9-83a2-c1fb58264f22</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Ошибка при запросе</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Отслеживать</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Отслеживать</dcsset:presentation>
+							<dcsset:userSettingID>281df3c5-816f-4af4-94d7-330e762e213e</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Отслеживать</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ДоставкаЗавершена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Доставка завершена</dcsset:presentation>
+							<dcsset:userSettingID>e977c3cc-0a5a-452d-be45-60db6c7e4672</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Доставка завершена</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">ДоставкаЗавершена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Доставка не завершена</dcsset:presentation>
+							<dcsset:userSettingID>9343be4b-bf9b-4434-aa69-c8d3ae91b909</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Доставка не завершена</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПроверяемыеАдреса" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеАдреса</Field>
+			</Save>
+			<Columns>
+				<Column name="Адрес" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПроверяемыеТелефоны" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые телефоны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеТелефоны</Field>
+			</Save>
+			<Columns>
+				<Column name="Телефон" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Телефон</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПроверяемыеФИО" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПроверяемыеФИО</Field>
+			</Save>
+			<Columns>
+				<Column name="ФИО" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗадания" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТекущееСостояние" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<MainTable>InformationRegister.гф_ПочтаРоссииИсторияОтслеживания.SliceLast</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КонечнаяОперация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Доставка завершена</dcsset:presentation>
+							<dcsset:userSettingID>6b2c8d52-7353-4451-bce0-99730d77a4ef</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Доставка завершена</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КонечнаяОперация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Доставка не завершена</dcsset:presentation>
+							<dcsset:userSettingID>422644ae-30e9-43f8-9a34-1ae1f636265d</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Доставка не завершена</dcsset:userSettingPresentation>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЧасовМеждуЗапросами" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время в часах между запросами к одному трек номеру</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -2199,6 +4179,111 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьWMS</Action>
+		</Command>
+		<Command name="КомандаЗапрос" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапрос</Action>
+		</Command>
+		<Command name="КомандаКоличествоЗапросов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит и количество запросов за день</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда количество запросов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаКоличествоЗапросов</Action>
+		</Command>
+		<Command name="КомандаНомализацияАдреса" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда номализация адреса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНомализацияАдреса</Action>
+		</Command>
+		<Command name="КомандаНормализацияТелефона" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда нормализация телефона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНормализацияТелефона</Action>
+		</Command>
+		<Command name="КомандаНормализацияФИО" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда нормализация ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНормализацияФИО</Action>
+		</Command>
+		<Command name="КомандаРасписание" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаРасписание</Action>
+		</Command>
+		<Command name="КомандаТест" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаТест</Action>
 		</Command>
 	</Commands>
 </Form>
