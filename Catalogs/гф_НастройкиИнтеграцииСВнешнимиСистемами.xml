@@ -28,6 +28,7 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>16c72273-956b-466d-95c6-89e2c3d550e7</ExtendedConfigurationObject>
+			<DefaultObjectForm>Catalog.гф_НастройкиИнтеграцииСВнешнимиСистемами.Form.гф_ФормаЭлемента</DefaultObjectForm>
 		</Properties>
 		<ChildObjects>
 			<Attribute uuid="5b6b8160-4d82-4c71-9048-5677d747cf0d">
@@ -83,7 +84,40 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>c00aca80-fcd3-4b35-bb82-1b1a90c14c12</ExtendedConfigurationObject>
 				</Properties>
-				<ChildObjects/>
+				<ChildObjects>
+					<Attribute uuid="213a0cc5-6fd9-4f68-b7b2-1ed9349ed040">
+						<InternalInfo/>
+						<Properties>
+							<Name>Параметр</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>b17a9c75-311b-46b7-b3ec-401eaba29564</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>250</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="adcca4a0-def6-4e35-b711-cd62969985a9">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>f581990c-dac9-4a51-9144-2f879e7b1f87</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>1000</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
 			</TabularSection>
 			<TabularSection uuid="e15effa0-31c2-4a60-88ef-3d50655122e2">
 				<InternalInfo>
@@ -102,8 +136,38 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>28060f6b-4b3f-4d7f-87c0-e4213915be96</ExtendedConfigurationObject>
 				</Properties>
-				<ChildObjects/>
+				<ChildObjects>
+					<Attribute uuid="471f6fa4-2a2d-45f6-89a4-49f3f53e4e15">
+						<InternalInfo/>
+						<Properties>
+							<Name>Наименование</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>84cbaa33-2a25-43b4-8475-14c495b57296</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>250</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b1e92a13-7157-46a4-8012-a9f6fbd165b8">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>cfcfa297-2fd5-4941-b105-116fc0e25754</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
 			</TabularSection>
+			<Form>гф_ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
