@@ -51,7 +51,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>% Скидки из Заказа клиента</v8:content>
+							<v8:content>% Скидки</v8:content>
 						</v8:item>
 					</Title>
 					<TitleTextColor>#0000FF</TitleTextColor>
@@ -89,7 +89,6 @@
 				</InputField>
 				<Button name="ФормаСохранитьСкидкуДляРТУ" id="88">
 					<Type>UsualButton</Type>
-					<Visible>false</Visible>
 					<CommandName>Form.Command.СохранитьСкидкуДляРТУ</CommandName>
 					<Font ref="style:NormalTextFont" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<Title>
@@ -102,87 +101,6 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="Скидки" id="4">
-			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Скидки</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СкидкиКонтекстноеМеню" id="5"/>
-			<AutoCommandBar name="СкидкиКоманднаяПанель" id="6"/>
-			<ExtendedTooltip name="СкидкиРасширеннаяПодсказка" id="7"/>
-			<SearchStringAddition name="СкидкиСтрокаПоиска" id="8">
-				<AdditionSource>
-					<Item>Скидки</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СкидкиСтрокаПоискаКонтекстноеМеню" id="9"/>
-				<ExtendedTooltip name="СкидкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СкидкиСостояниеПросмотра" id="11">
-				<AdditionSource>
-					<Item>Скидки</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СкидкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
-				<ExtendedTooltip name="СкидкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СкидкиУправлениеПоиском" id="14">
-				<AdditionSource>
-					<Item>Скидки</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СкидкиУправлениеПоискомКонтекстноеМеню" id="15"/>
-				<ExtendedTooltip name="СкидкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
-			</SearchControlAddition>
-			<ChildItems>
-				<LabelField name="СкидкиНомерСтроки" id="17">
-					<DataPath>Объект.Скидки.LineNumber</DataPath>
-					<Visible>false</Visible>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкидкиНомерСтрокиКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="СкидкиНомерСтрокиРасширеннаяПодсказка" id="19"/>
-				</LabelField>
-				<InputField name="СкидкиВидСкидки" id="20">
-					<DataPath>Объект.Скидки.ВидСкидки</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкидкиВидСкидкиКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="СкидкиВидСкидкиРасширеннаяПодсказка" id="22"/>
-				</InputField>
-				<InputField name="СкидкиСкидкаРасчетная" id="23">
-					<DataPath>Объект.Скидки.СкидкаРасчетная</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.Скидки.TotalСкидкаРасчетная</FooterDataPath>
-					<ContextMenu name="СкидкиСкидкаРасчетнаяКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="СкидкиСкидкаРасчетнаяРасширеннаяПодсказка" id="25"/>
-				</InputField>
-				<InputField name="СкидкиСкидкаДляРТУ" id="26">
-					<DataPath>Объект.Скидки.СкидкаДляРТУ</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.Скидки.TotalСкидкаДляРТУ</FooterDataPath>
-					<ContextMenu name="СкидкиСкидкаДляРТУКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="СкидкиСкидкаДляРТУРасширеннаяПодсказка" id="28"/>
-					<Events>
-						<Event name="OnChange">СкидкиСкидкаДляРТУПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="СкидкиСкидкаПоРегистру" id="46">
-					<DataPath>Объект.Скидки.СкидкаПоРегистру</DataPath>
-					<Visible>false</Visible>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.Скидки.TotalСкидкаПоРегистру</FooterDataPath>
-					<ContextMenu name="СкидкиСкидкаПоРегиструКонтекстноеМеню" id="47"/>
-					<ExtendedTooltip name="СкидкиСкидкаПоРегиструРасширеннаяПодсказка" id="48"/>
-				</InputField>
-			</ChildItems>
-		</Table>
 		<Table name="СкидкиПоЗаказам" id="49">
 			<CommandBarLocation>None</CommandBarLocation>
 			<ChangeRowSet>false</ChangeRowSet>
@@ -292,6 +210,87 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаКонтекстноеМеню" id="78"/>
 					<ExtendedTooltip name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаРасширеннаяПодсказка" id="79"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Скидки" id="4">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Скидки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СкидкиКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СкидкиКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="СкидкиРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СкидкиСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Скидки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкидкиСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СкидкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СкидкиСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Скидки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкидкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СкидкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СкидкиУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Скидки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СкидкиУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СкидкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СкидкиНомерСтроки" id="17">
+					<DataPath>Объект.Скидки.LineNumber</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкидкиНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СкидкиНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="СкидкиВидСкидки" id="20">
+					<DataPath>Объект.Скидки.ВидСкидки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкидкиВидСкидкиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СкидкиВидСкидкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СкидкиСкидкаРасчетная" id="23">
+					<DataPath>Объект.Скидки.СкидкаРасчетная</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Скидки.TotalСкидкаРасчетная</FooterDataPath>
+					<ContextMenu name="СкидкиСкидкаРасчетнаяКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СкидкиСкидкаРасчетнаяРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="СкидкиСкидкаДляРТУ" id="26">
+					<DataPath>Объект.Скидки.СкидкаДляРТУ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Скидки.TotalСкидкаДляРТУ</FooterDataPath>
+					<ContextMenu name="СкидкиСкидкаДляРТУКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СкидкиСкидкаДляРТУРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">СкидкиСкидкаДляРТУПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СкидкиСкидкаПоРегистру" id="46">
+					<DataPath>Объект.Скидки.СкидкаПоРегистру</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Скидки.TotalСкидкаПоРегистру</FooterDataPath>
+					<ContextMenu name="СкидкиСкидкаПоРегиструКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СкидкиСкидкаПоРегиструРасширеннаяПодсказка" id="48"/>
 				</InputField>
 			</ChildItems>
 		</Table>
