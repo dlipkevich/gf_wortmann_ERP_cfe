@@ -905,6 +905,48 @@
 									<ContextMenu name="ОтгрузкаДокументКонтекстноеМеню" id="77"/>
 									<ExtendedTooltip name="ОтгрузкаДокументРасширеннаяПодсказка" id="78"/>
 								</InputField>
+								<ColumnGroup name="ОтгрузкаГруппаСостояниеПосылки" id="1236">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа состояние посылки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отгрузка группа состояние посылки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОтгрузкаГруппаСостояниеПосылкиРасширеннаяПодсказка" id="1237"/>
+									<ChildItems>
+										<InputField name="ОтгрузкаСостояниеПосылки" id="1241">
+											<DataPath>Объект.Отгрузка.СостояниеПосылки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаСостояниеПосылкиКонтекстноеМеню" id="1242"/>
+											<ExtendedTooltip name="ОтгрузкаСостояниеПосылкиРасширеннаяПодсказка" id="1243"/>
+										</InputField>
+										<InputField name="ОтгрузкаДатаСостоянияПосылки" id="1238">
+											<DataPath>Объект.Отгрузка.ДатаСостоянияПосылки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата состояния</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаДатаСостоянияПосылкиКонтекстноеМеню" id="1239"/>
+											<ExtendedTooltip name="ОтгрузкаДатаСостоянияПосылкиРасширеннаяПодсказка" id="1240"/>
+										</InputField>
+										<InputField name="ОтгрузкаПосылка" id="1244">
+											<DataPath>Объект.Отгрузка.Посылка</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОтгрузкаПосылкаКонтекстноеМеню" id="1245"/>
+											<ExtendedTooltip name="ОтгрузкаПосылкаРасширеннаяПодсказка" id="1246"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<ColumnGroup name="ОтгрузкаГруппаРО" id="297">
 									<Title>
 										<v8:item>
@@ -1545,6 +1587,48 @@
 									<ContextMenu name="ПеремещениеДокументКонтекстноеМеню" id="121"/>
 									<ExtendedTooltip name="ПеремещениеДокументРасширеннаяПодсказка" id="122"/>
 								</InputField>
+								<ColumnGroup name="ПеремещениеГруппаСостояниеПосылки" id="1247">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа состояние посылки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перемещение группа состояние посылки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПеремещениеГруппаСостояниеПосылкиРасширеннаяПодсказка" id="1248"/>
+									<ChildItems>
+										<InputField name="ПеремещениеСостояниеПосылки" id="1252">
+											<DataPath>Объект.Перемещение.СостояниеПосылки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеСостояниеПосылкиКонтекстноеМеню" id="1253"/>
+											<ExtendedTooltip name="ПеремещениеСостояниеПосылкиРасширеннаяПодсказка" id="1254"/>
+										</InputField>
+										<InputField name="ПеремещениеДатаСостоянияПосылки" id="1249">
+											<DataPath>Объект.Перемещение.ДатаСостоянияПосылки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата состояния</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеДатаСостоянияПосылкиКонтекстноеМеню" id="1250"/>
+											<ExtendedTooltip name="ПеремещениеДатаСостоянияПосылкиРасширеннаяПодсказка" id="1251"/>
+										</InputField>
+										<InputField name="ПеремещениеПосылка" id="1255">
+											<DataPath>Объект.Перемещение.Посылка</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПеремещениеПосылкаКонтекстноеМеню" id="1256"/>
+											<ExtendedTooltip name="ПеремещениеПосылкаРасширеннаяПодсказка" id="1257"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<ColumnGroup name="ПеремещениеГруппаРО" id="333">
 									<Title>
 										<v8:item>
