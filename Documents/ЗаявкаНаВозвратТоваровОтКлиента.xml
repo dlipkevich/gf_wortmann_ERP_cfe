@@ -32,6 +32,42 @@
 		</Properties>
 		<ChildObjects>
 			<Form>ФормаДокумента</Form>
+			<TabularSection uuid="416c2908-a5aa-4ff2-a028-cbd6b5b01dae">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЗаявкаНаВозвратТоваровОтКлиента.ВозвращаемыеТовары" category="TabularSection">
+						<xr:TypeId>be3a744e-d0fe-45b0-aa04-a356eeeb675c</xr:TypeId>
+						<xr:ValueId>b39a7e06-face-472b-9e67-04460f2e4d84</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЗаявкаНаВозвратТоваровОтКлиента.ВозвращаемыеТовары" category="TabularSectionRow">
+						<xr:TypeId>bfa2f0b4-291e-4e32-8acb-6098d7870aa9</xr:TypeId>
+						<xr:ValueId>9a929168-aa19-4a23-b99a-877b97a84ced</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ВозвращаемыеТовары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8a772172-d735-41bf-8bcb-79e5476ae870</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="f84f4cfe-bb8f-4d27-9c79-1236b3e2809d">
+						<InternalInfo/>
+						<Properties>
+							<Name>гф_КМСтрокой</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>9a61c9b0-832e-4621-9aba-7288f735e21a</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>200</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Template>ЗагрузкаИзФайлаВозвращаемыеТовары</Template>
 		</ChildObjects>
 	</Document>

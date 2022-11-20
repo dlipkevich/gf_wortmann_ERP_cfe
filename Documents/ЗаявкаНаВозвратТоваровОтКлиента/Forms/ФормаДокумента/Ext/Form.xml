@@ -1367,6 +1367,9 @@
 								<ContextMenu name="ВозвращаемыеТоварыУправлениеПоискомКонтекстноеМеню" id="1396"/>
 								<ExtendedTooltip name="ВозвращаемыеТоварыУправлениеПоискомРасширеннаяПодсказка" id="1397"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange" callType="After">гф_ВозвращаемыеТоварыПриИзмененииПосле</Event>
+							</Events>
 							<ChildItems>
 								<InputField name="ВозвращаемыеТоварыНомерСтроки" id="34">
 									<Width>3</Width>
