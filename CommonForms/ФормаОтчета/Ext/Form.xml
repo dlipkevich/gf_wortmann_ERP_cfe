@@ -61,6 +61,10 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnLoadVariantAtServer" callType="After">гф_ПриЗагрузкеВариантаНаСервереПосле</Event>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ПанельБыстрыхНастроек" id="986">
 			<Title>
