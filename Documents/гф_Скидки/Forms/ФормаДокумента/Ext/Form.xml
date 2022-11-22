@@ -86,10 +86,6 @@
 				<ContextMenu name="СкидкиУправлениеПоискомКонтекстноеМеню" id="30"/>
 				<ExtendedTooltip name="СкидкиУправлениеПоискомРасширеннаяПодсказка" id="31"/>
 			</SearchControlAddition>
-			<Events>
-				<Event name="BeforeRowChange">СкидкиПередНачаломИзменения</Event>
-				<Event name="OnStartEdit">СкидкиПриНачалеРедактирования</Event>
-			</Events>
 			<ChildItems>
 				<LabelField name="СкидкиНомерСтроки" id="32">
 					<DataPath>Объект.Скидки.LineNumber</DataPath>
