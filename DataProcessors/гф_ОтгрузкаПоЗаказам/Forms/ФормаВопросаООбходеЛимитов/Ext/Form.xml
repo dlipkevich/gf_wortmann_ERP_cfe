@@ -29,7 +29,7 @@
 		<Button name="ФормаОтгрузитьПоЦенамПрайса" id="1">
 			<Type>UsualButton</Type>
 			<Representation>PictureAndText</Representation>
-			<CommandName>Form.Command.НеУчитыватьБлокировки</CommandName>
+			<CommandName>Form.Command.НеУчитыватьЛимиты</CommandName>
 			<Picture>
 				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -87,11 +87,11 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="НеУчитыватьБлокировки" id="1">
+		<Command name="НеУчитыватьЛимиты" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Не учитывать блокировки </v8:content>
+					<v8:content>Не учитывать лимиты</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -100,7 +100,7 @@
 					<v8:content>Блокировка и превышение лимитов игнорируются и создается расходный ордер на товары. </v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>НеУчитыватьЗадолженность</Action>
+			<Action>НеУчитыватьЛимиты</Action>
 		</Command>
 		<Command name="Отменить" id="4">
 			<Title>
