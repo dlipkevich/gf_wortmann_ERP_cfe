@@ -1095,31 +1095,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ЗаказКлиента</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-			<restrictionByCondition>
-				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
-#ДляОбъекта("")
-#Иначе
-#ПоЗначениям( "Документ.ЗаказКлиента","Чтение","",
-"Организации","Организация",
-"ГруппыПартнеров","Партнер",
-"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
-#КонецЕсли</condition>
-			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ЗаказКлиента.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
