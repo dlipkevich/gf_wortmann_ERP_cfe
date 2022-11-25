@@ -424,6 +424,40 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="1a5c38c0-ed78-4071-906b-50f1d963c7e1">
+				<Properties>
+					<Name>ИсключитьКоробСРасхождениями</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключить короб с расхождениями</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="479bde8d-9809-4e86-8559-e8e419c6191f">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.гф_ОтгрузкаПоЗаказам.Резервы" category="TabularSection">
@@ -3281,6 +3315,7 @@
 			<Form>ФормаДанныеДляРТУ</Form>
 			<Form>ФормаВопросаООбходеБлокировок</Form>
 			<Form>ФормаВопросаООбходеЛимитов</Form>
+			<Form>ФормаВопросаООтгрузкеУпаковочныхЛистовСПересортом</Form>
 			<Template>СхемаКомпоновки</Template>
 			<Template>СхемаКомпоновкиНоменклатуры</Template>
 			<Template>ДанныеУпаковочныхЛистов</Template>
