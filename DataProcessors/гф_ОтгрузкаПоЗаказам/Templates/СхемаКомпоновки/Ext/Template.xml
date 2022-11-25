@@ -500,6 +500,18 @@
 	ЗаказНоменклатураХарактеристика.Договор,
 	ЗаказНоменклатураХарактеристика.НомерАдреса</query>
 	</dataSet>
+	<totalField>
+		<dataPath>КоличествоОстаток</dataPath>
+		<expression>Сумма(КоличествоОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНоменклатуры</dataPath>
+		<expression>Сумма(КоличествоНоменклатуры)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>Сумма(Цена*КоличествоНоменклатуры)</expression>
+	</totalField>
 	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
