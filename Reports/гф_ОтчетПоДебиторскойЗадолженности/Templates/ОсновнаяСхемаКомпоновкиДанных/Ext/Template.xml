@@ -539,7 +539,7 @@
 	ТаблицаЗадолженностей.ДатаВозникновения КАК ДатаВозникновения,
 	ВЫБОР
 		КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
-			ТОГДА -ТаблицаЗадолженностей.ПредоплатаУпрОстаток
+			ТОГДА 0
 		ИНАЧЕ ТаблицаЗадолженностей.ДолгКлиента
 	КОНЕЦ КАК ДолгКлиента,
 	ТаблицаЗадолженностей.ДолгКлиентаПросрочено КАК ДолгКлиентаПросрочено,
@@ -577,7 +577,8 @@
 		КОГДА СостоянияПоОбъектамУчетаЭДО.СостояниеЭДО = НЕОПРЕДЕЛЕНО
 			ТОГДА " Не ЭДО"
 		ИНАЧЕ "Не ЭДО"
-	КОНЕЦ КАК ЭДО
+	КОНЕЦ КАК ЭДО,
+	ТаблицаЗадолженностей.ПредоплатаУпрОстаток КАК Депозит
 {ВЫБРАТЬ
 	Организация.*,
 	Партнер.*,
@@ -603,7 +604,8 @@
 	ДниОтсрочки.*,
 	КрайняяДатаОплаты,
 	ДниПросрочки,
-	ЭДО}
+	ЭДО,
+	Депозит}
 ИЗ
 	ТаблицаЗадолженностей КАК ТаблицаЗадолженностей
 		{ЛЕВОЕ СОЕДИНЕНИЕ РазностиДат КАК РазностиДат
@@ -636,6 +638,11 @@
 	(ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.РеализацияТоваровУслуг
 			ИЛИ ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.ПервичныйДокумент
 			ИЛИ ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.КорректировкаЗадолженности)
+	И ТаблицаЗадолженностей.Партнер В
+			(ВЫБРАТЬ
+				Справочник.Партнеры.Ссылка
+			ИЗ
+				Справочник.Партнеры)
 {ГДЕ
 	ТаблицаЗадолженностей.Организация.*,
 	ТаблицаЗадолженностей.Партнер.*,
@@ -1367,76 +1374,6 @@
 	<totalField>
 		<dataPath>НеобеспеченнаяЗадолженность</dataPath>
 		<expression>Сумма(Массив(ТаблицаЗначений(Различные НеобеспеченнаяЗадолженность,Договор)))</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДействующийЛимит</dataPath>
-		<expression>Сумма(ДействующийЛимит)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ЛокальныйЛимит</dataPath>
-		<expression>Сумма(ЛокальныйЛимит)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ПрочийЛимит</dataPath>
-		<expression>Сумма(ПрочийЛимит)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СуммаЛимитаНаДатуДокумента</dataPath>
-		<expression>Сумма(СуммаЛимитаНаДатуДокумента)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КВ</dataPath>
-		<expression>Сумма(КВ)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДолгКлиента</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные ДолгКлиента,РасчетныйДокумент)))</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДниОтсрочки</dataPath>
-		<expression>ДниОтсрочки</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДниПросрочки</dataPath>
-		<expression>ДниПросрочки</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КрайняяДатаОплаты</dataPath>
-		<expression>КрайняяДатаОплаты</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ОписаниеБлокировки</dataPath>
-		<expression>ОписаниеБлокировки</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ПартнерКод</dataPath>
-		<expression>ПартнерКод</expression>
-	</totalField>
-	<totalField>
-		<dataPath>Заблокирован</dataPath>
-		<expression>Заблокирован</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ЭДО</dataPath>
-		<expression>ЭДО</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДепозитОстаток</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные ДепозитОстаток,Партнер)))</expression>
-	</totalField>
-	<totalField>
-		<dataPath>НижняяГраницаИнтервала</dataPath>
-		<expression>Максимум(НижняяГраницаИнтервала)</expression>
-		<group>Партнер</group>
-		<group>Партнер Иерархия</group>
-	</totalField>
-	<totalField>
-		<dataPath>НижняяГраницаИнтервала</dataPath>
-		<expression>Среднее(НижняяГраницаИнтервала)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>КоличествоДней</dataPath>
-		<expression>Максимум(КоличествоДней)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
