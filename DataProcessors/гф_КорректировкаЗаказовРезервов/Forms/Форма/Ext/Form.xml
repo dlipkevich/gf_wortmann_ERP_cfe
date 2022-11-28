@@ -115,6 +115,13 @@
 					<ContextMenu name="ДатаОбновленияИзИ5КонтекстноеМеню" id="321"/>
 					<ExtendedTooltip name="ДатаОбновленияИзИ5РасширеннаяПодсказка" id="322"/>
 				</InputField>
+				<InputField name="мСуммаЗаказа" id="470">
+					<DataPath>мСуммаЗаказа</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="мСуммаЗаказаКонтекстноеМеню" id="471"/>
+					<ExtendedTooltip name="мСуммаЗаказаРасширеннаяПодсказка" id="472"/>
+				</InputField>
 				<Button name="ПеречитатьЗаказ" id="323">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ПеречитатьЗаказ</CommandName>
@@ -3436,6 +3443,22 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мСуммаЗаказа" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
