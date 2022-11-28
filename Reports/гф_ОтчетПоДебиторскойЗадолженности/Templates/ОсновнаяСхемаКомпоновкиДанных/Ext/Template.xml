@@ -353,6 +353,16 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Депозит</dataPath>
+			<field>Депозит</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Депозит</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	Сегменты.Партнер КАК Партнер,
@@ -905,6 +915,13 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетныйДокумент</dataPath>
+			<field>РасчетныйДокумент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	АналитикаУчета.Организация КАК Организация,
@@ -925,7 +942,8 @@
 	Договор.*,
 	Партнер.*,
 	Контрагент.*,
-	Организация.*}
+	Организация.*,
+	РасчетныйДокумент.*}
 ИЗ
 	РегистрНакопления.РасчетыСКлиентамиПоСрокам.ОстаткиИОбороты({(&amp;ДатаНачала)}, {(&amp;ДатаОкончания)}, Авто, , ) КАК РасчетыПоСрокам
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПоПартнерам КАК АналитикаУчета
@@ -1221,9 +1239,15 @@
 		<sourceExpression>Контрагент</sourceExpression>
 		<destinationExpression>Контрагент</destinationExpression>
 	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Основной</sourceDataSet>
+		<destinationDataSet>Депозиты</destinationDataSet>
+		<sourceExpression>РасчетныйДокумент</sourceExpression>
+		<destinationExpression>РасчетныйДокумент</destinationExpression>
+	</dataSetLink>
 	<calculatedField>
 		<dataPath>НеобеспеченнаяЗадолженность</dataPath>
-		<expression>ДолгКлиента- (ЕстьNull(ДепозитОстаток,0)+ЕстьNull(КВ,0))
+		<expression>ДолгКлиента- (ЕстьNull(Депозит,0)+ЕстьNull(КВ,0))
  </expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -1277,8 +1301,8 @@
 	<calculatedField>
 		<dataPath>ЗадолженностьСУчетомДепозита</dataPath>
 		<expression>выбор
- когда ДолгКлиента + ДепозитОстаток &gt; 0
- тогда ДолгКлиента+ ДепозитОстаток
+ когда ДолгКлиента + Депозит &gt; 0
+ тогда ДолгКлиента+ Депозит
  иначе 0 
 конец</expression>
 		<title xsi:type="v8:LocalStringType">
@@ -1321,7 +1345,7 @@
 	</calculatedField>
 	<calculatedField>
 		<dataPath>МожноОтгрузить</dataPath>
-		<expression>ЛокальныйЛимит + КВ + ДепозитОстаток - ДолгКлиента</expression>
+		<expression>ЛокальныйЛимит + КВ + Депозит- ДолгКлиента</expression>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -1374,6 +1398,80 @@
 	<totalField>
 		<dataPath>НеобеспеченнаяЗадолженность</dataPath>
 		<expression>Сумма(Массив(ТаблицаЗначений(Различные НеобеспеченнаяЗадолженность,Договор)))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДействующийЛимит</dataPath>
+		<expression>Сумма(ДействующийЛимит)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЛокальныйЛимит</dataPath>
+		<expression>Сумма(ЛокальныйЛимит)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПрочийЛимит</dataPath>
+		<expression>Сумма(ПрочийЛимит)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЛимитаНаДатуДокумента</dataPath>
+		<expression>Сумма(СуммаЛимитаНаДатуДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КВ</dataPath>
+		<expression>Сумма(КВ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДолгКлиента</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ДолгКлиента,РасчетныйДокумент)))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДниОтсрочки</dataPath>
+		<expression>ДниОтсрочки</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДниПросрочки</dataPath>
+		<expression>ДниПросрочки</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КрайняяДатаОплаты</dataPath>
+		<expression>КрайняяДатаОплаты</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОписаниеБлокировки</dataPath>
+		<expression>ОписаниеБлокировки</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПартнерКод</dataPath>
+		<expression>ПартнерКод</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Заблокирован</dataPath>
+		<expression>Заблокирован</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЭДО</dataPath>
+		<expression>ЭДО</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДепозитОстаток</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные ДепозитОстаток,Партнер)))</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НижняяГраницаИнтервала</dataPath>
+		<expression>Максимум(НижняяГраницаИнтервала)</expression>
+		<group>Партнер</group>
+		<group>Партнер Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>НижняяГраницаИнтервала</dataPath>
+		<expression>Среднее(НижняяГраницаИнтервала)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоДней</dataPath>
+		<expression>Максимум(КоличествоДней)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Депозит</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные Депозит,Партнер)))</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаНачала</name>
@@ -1791,7 +1889,7 @@
 							</dcsset:lwsTitle>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ДепозитОстаток</dcsset:field>
+							<dcsset:field>Депозит</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
