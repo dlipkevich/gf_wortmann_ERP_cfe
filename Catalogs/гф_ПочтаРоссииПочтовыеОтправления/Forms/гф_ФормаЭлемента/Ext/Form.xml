@@ -59,6 +59,7 @@
 					<v8:content>Группа наименование</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -77,11 +78,47 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 				</InputField>
+				<InputField name="НомерПартии" id="50">
+					<DataPath>Объект.НомерПартии</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер партии</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерПартииКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="НомерПартииРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ИдентификаторПР" id="44">
+					<DataPath>Объект.ИдентификаторПР</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор Почты России</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИдентификаторПРКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ИдентификаторПРРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="УпаковочныйЛист" id="47">
+					<DataPath>Объект.УпаковочныйЛист</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="УпаковочныйЛистКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="УпаковочныйЛистРасширеннаяПодсказка" id="49"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="ТрекНомер" id="10">
 			<DataPath>Объект.ТрекНомер</DataPath>
 			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Трек-номер</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ТрекНомерКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ТрекНомерРасширеннаяПодсказка" id="12"/>
