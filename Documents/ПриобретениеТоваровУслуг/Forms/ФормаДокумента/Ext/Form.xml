@@ -1576,6 +1576,9 @@
 								<ContextMenu name="ТоварыУправлениеПоискомКонтекстноеМеню" id="1403"/>
 								<ExtendedTooltip name="ТоварыУправлениеПоискомРасширеннаяПодсказка" id="1404"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange" callType="After">гф_ТоварыПриИзмененииПосле</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ТоварыНомерСтроки" id="38">
 									<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="39"/>
