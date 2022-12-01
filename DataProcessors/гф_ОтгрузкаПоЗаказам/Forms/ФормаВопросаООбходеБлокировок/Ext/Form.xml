@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отгрузка</v8:content>
+		</v8:item>
+	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
 	<HorizontalAlign>Center</HorizontalAlign>
 	<VerticalAlign>Center</VerticalAlign>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
 	<ShowCloseButton>false</ShowCloseButton>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
@@ -26,8 +34,44 @@
 			<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="7"/>
 			<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="8"/>
 		</InputField>
+		<UsualGroup name="Группа1" id="25">
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация2" id="22">
+					<Picture>
+						<xr:Ref>StdPicture.DialogQuestion</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="24"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация1" id="15">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отгрузки запрещены по причине блокировки. Все равно отгрузить?</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="Кнопка1" id="18">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НеУчитыватьБлокировки</CommandName>
+			<BackColor>#FFE100</BackColor>
+			<BorderColor>#71641A</BorderColor>
+			<Font bold="true" kind="AutoFont"/>
+			<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="19"/>
+		</Button>
 		<Button name="ФормаОтгрузитьПоЦенамПрайса" id="1">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<Representation>PictureAndText</Representation>
 			<CommandName>Form.Command.НеУчитыватьБлокировки</CommandName>
 			<Picture>
@@ -36,8 +80,17 @@
 			</Picture>
 			<ExtendedTooltip name="ФормаОтгрузитьПоЦенамПрайсаРасширеннаяПодсказка" id="2"/>
 		</Button>
+		<Button name="Кнопка2" id="20">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Отменить</CommandName>
+			<BackColor>#FFA487</BackColor>
+			<BorderColor>#71641A</BorderColor>
+			<Font bold="true" kind="AutoFont"/>
+			<ExtendedTooltip name="Кнопка2РасширеннаяПодсказка" id="21"/>
+		</Button>
 		<Button name="Отменить" id="13">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<Representation>PictureAndText</Representation>
 			<CommandName>Form.Command.Отменить</CommandName>
 			<Font bold="true" kind="AutoFont"/>

@@ -34,16 +34,34 @@
 			<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="7"/>
 			<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="8"/>
 		</InputField>
-		<LabelDecoration name="Декорация1" id="21">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отмечены к отгрузке короб(а) с расхождениями!</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="Декорация1КонтекстноеМеню" id="22"/>
-			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="23"/>
-		</LabelDecoration>
+		<UsualGroup name="Группа1" id="27">
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация2" id="24">
+					<Picture>
+						<xr:Ref>StdPicture.DialogQuestion</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="26"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация1" id="21">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмечены к отгрузке короб(а) с расхождениями!</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="23"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
 		<Button name="Кнопка1" id="17">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.ПродолжитьОтгрузку</CommandName>
@@ -72,6 +90,12 @@
 				<xr:Ref>StdPicture.Back</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить короб(а) с расхождениями</v8:content>
+				</v8:item>
+			</Title>
 			<ExtendedTooltip name="ИсключитьКоробСРасхождениямиРасширеннаяПодсказка" id="16"/>
 		</Button>
 		<Button name="Кнопка2" id="19">
