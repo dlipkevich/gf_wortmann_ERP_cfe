@@ -2101,6 +2101,9 @@
 													<Wrap>false</Wrap>
 													<ContextMenu name="ТоварыПроцентРучнойСкидкиКонтекстноеМеню" id="497"/>
 													<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиExtendedTooltip" id="1210"/>
+													<Events>
+														<Event name="OnChange" callType="After">гф_ТоварыПроцентРучнойСкидкиПриИзмененииПосле</Event>
+													</Events>
 												</InputField>
 												<InputField name="ТоварыСуммаРучнойСкидки" id="490">
 													<DataPath>Объект.Товары.СуммаРучнойСкидки</DataPath>
