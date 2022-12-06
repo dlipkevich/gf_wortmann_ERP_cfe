@@ -28,6 +28,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -518,6 +519,7 @@
 							<Events>
 								<Event name="OnActivateRow">ТоварыПриАктивизацииСтроки</Event>
 								<Event name="BeforeRowChange">ТоварыПередНачаломИзменения</Event>
+								<Event name="OnChange">ТоварыПриИзменении</Event>
 							</Events>
 							<ChildItems>
 								<CheckBoxField name="ТоварыПометка" id="111">
@@ -553,6 +555,9 @@
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="58"/>
+									<Events>
+										<Event name="OnChange">ТоварыНоменклатураПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="ТоварыХарактеристика" id="59">
 									<DataPath>Объект.Товары.Характеристика</DataPath>
@@ -676,11 +681,31 @@
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>9</MaxWidth>
+									<MaxWidth>7</MaxWidth>
 									<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="109"/>
 									<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="110"/>
 									<Events>
 										<Event name="OnChange">ТоварыЦенаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Товарыгф_ЦенаСоСкидкой" id="479">
+									<DataPath>Объект.Товары.гф_ЦенаСоСкидкой</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена со
+скидкой</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="Товарыгф_ЦенаСоСкидкойКонтекстноеМеню" id="480"/>
+									<ExtendedTooltip name="Товарыгф_ЦенаСоСкидкойРасширеннаяПодсказка" id="481"/>
+									<Events>
+										<Event name="OnChange">ТоварыЦенаСоСкидкойПриИзменении</Event>
 									</Events>
 								</InputField>
 								<InputField name="ТоварыКоличество" id="86">
@@ -706,11 +731,20 @@
 									<DataPath>Объект.Товары.СуммаСНДС</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<FooterDataPath>Объект.Товары.TotalСуммаСНДС</FooterDataPath>
+									<FooterDataPath>мСуммаЗаказаПредварительно</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>10</MaxWidth>
 									<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="424"/>
 									<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="425"/>
+								</InputField>
+								<InputField name="ТоварыСтавкаНДС" id="485">
+									<DataPath>Объект.Товары.СтавкаНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ТоварыСтавкаНДСКонтекстноеМеню" id="486"/>
+									<ExtendedTooltip name="ТоварыСтавкаНДСРасширеннаяПодсказка" id="487"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1036,6 +1070,25 @@
 										<Event name="OnChange">ТоварыВКоробахЦенаКоробаПриИзменении</Event>
 									</Events>
 								</InputField>
+								<InputField name="ТоварыВКоробахЦенаКоробаСоСкидкой" id="476">
+									<DataPath>Объект.ТоварыВКоробах.ЦенаКоробаСоСкидкой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена короба
+со скидкой</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ТоварыВКоробахЦенаКоробаСоСкидкойКонтекстноеМеню" id="477"/>
+									<ExtendedTooltip name="ТоварыВКоробахЦенаКоробаСоСкидкойРасширеннаяПодсказка" id="478"/>
+									<Events>
+										<Event name="OnChange">ТоварыВКоробахЦенаКоробаПриИзменении</Event>
+									</Events>
+								</InputField>
 								<InputField name="ТоварыВКоробахСумма" id="163">
 									<DataPath>Объект.ТоварыВКоробах.Сумма</DataPath>
 									<ReadOnly>true</ReadOnly>
@@ -1144,6 +1197,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="BeforeRowChange">РезервыПередНачаломИзменения</Event>
+								<Event name="OnChange">РезервыПриИзменении</Event>
 							</Events>
 							<ChildItems>
 								<LabelField name="РезервыНомерСтроки" id="221">
@@ -1405,14 +1459,41 @@
 									<ContextMenu name="РезервыЦенаКонтекстноеМеню" id="427"/>
 									<ExtendedTooltip name="РезервыЦенаРасширеннаяПодсказка" id="428"/>
 								</InputField>
+								<InputField name="Резервыгф_ЦенаСоСкидкой" id="482">
+									<DataPath>Объект.Резервы.гф_ЦенаСоСкидкой</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена со
+скидкой</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="Резервыгф_ЦенаСоСкидкойКонтекстноеМеню" id="483"/>
+									<ExtendedTooltip name="Резервыгф_ЦенаСоСкидкойРасширеннаяПодсказка" id="484"/>
+								</InputField>
 								<InputField name="РезервыСуммаСНДС" id="429">
 									<DataPath>Объект.Резервы.СуммаСНДС</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мСуммаЗаказаПредварительно</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="РезервыСуммаСНДСКонтекстноеМеню" id="430"/>
 									<ExtendedTooltip name="РезервыСуммаСНДСРасширеннаяПодсказка" id="431"/>
+								</InputField>
+								<InputField name="РезервыСтавкаНДС" id="488">
+									<DataPath>Объект.Резервы.СтавкаНДС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыСтавкаНДСКонтекстноеМеню" id="489"/>
+									<ExtendedTooltip name="РезервыСтавкаНДСРасширеннаяПодсказка" id="490"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1770,6 +1851,25 @@
 									<MaxWidth>7</MaxWidth>
 									<ContextMenu name="РезервыВКоробахЦенаКоробаКонтекстноеМеню" id="380"/>
 									<ExtendedTooltip name="РезервыВКоробахЦенаКоробаРасширеннаяПодсказка" id="381"/>
+									<Events>
+										<Event name="OnChange">РезервыВКоробахЦенаКоробаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="РезервыВКоробахЦенаКоробаСоСкидкой" id="473">
+									<DataPath>Объект.РезервыВКоробах.ЦенаКоробаСоСкидкой</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена короба
+со скидкой</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыВКоробахЦенаКоробаСоСкидкойКонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="РезервыВКоробахЦенаКоробаСоСкидкойРасширеннаяПодсказка" id="475"/>
 									<Events>
 										<Event name="OnChange">РезервыВКоробахЦенаКоробаПриИзменении</Event>
 									</Events>
@@ -3461,6 +3561,22 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="мСуммаЗаказаПредварительно" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа предварительно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -3500,11 +3616,16 @@
 						<dcsset:item xsi:type="dcsset:FilterItemGroup">
 							<dcsset:groupType>AndGroup</dcsset:groupType>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
-								<dcsset:left xsi:type="dcscor:Field">Объект.Товары.Количество</dcsset:left>
+								<dcsset:left xsi:type="dcscor:Field">Объект.Товары.КоличествоУпаковок</dcsset:left>
 								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
 								<dcsset:left xsi:type="dcscor:Field">Объект.Товары.флНаличиеВЗаказе</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.Товары.флДобавленаВручную</dcsset:left>
 								<dcsset:comparisonType>Equal</dcsset:comparisonType>
 								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
 							</dcsset:item>
@@ -3658,7 +3779,7 @@
 						<dcsset:item xsi:type="dcsset:FilterItemGroup">
 							<dcsset:groupType>AndGroup</dcsset:groupType>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
-								<dcsset:left xsi:type="dcscor:Field">Объект.Резервы.Количество</dcsset:left>
+								<dcsset:left xsi:type="dcscor:Field">Объект.Резервы.КоличествоУпаковок</dcsset:left>
 								<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
