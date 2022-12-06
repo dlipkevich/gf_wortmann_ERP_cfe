@@ -226,6 +226,7 @@
 			<DefinedType>КонтактВзаимодействия</DefinedType>
 			<DefinedType>Номенклатура</DefinedType>
 			<DefinedType>ХарактеристикаНоменклатуры</DefinedType>
+			<DefinedType>Упаковка</DefinedType>
 			<CommonCommand>гф_СвязанныеДокументы</CommonCommand>
 			<CommonCommand>гф_ДополнительныеОбработкиДебетМенеджмент</CommonCommand>
 			<Constant>гф_ГруппыДоступаДляКонтрагентов</Constant>
@@ -332,6 +333,8 @@
 			<Document>гф_Скидки</Document>
 			<Document>гф_ВводНачальныхОстатковКМ</Document>
 			<Document>ЗаявкаНаВозвратТоваровОтКлиента</Document>
+			<Document>ВыводИзОборотаИСМП</Document>
+			<Document>ВозвратВОборотИСМП</Document>
 			<Enum>ИсточникиИнформацииОЦенахДляПечати</Enum>
 			<Enum>ТипыСкладов</Enum>
 			<Enum>СтатусыДействияВидовЦен</Enum>
@@ -380,6 +383,7 @@
 			<Enum>гф_ВидыСкидок</Enum>
 			<Enum>гф_ВнешниеСистемы</Enum>
 			<Enum>гф_ТипыАдреса</Enum>
+			<Enum>ВидыОперацийИСМП</Enum>
 			<Report>гф_ФормированиеОбщейСпецификации</Report>
 			<Report>гф_ПечатнаяФормаТ11</Report>
 			<Report>гф_ОтчетПоДебиторскойЗадолженности</Report>
@@ -446,6 +450,7 @@
 			<InformationRegister>ДвоичныеДанныеФайлов</InformationRegister>
 			<InformationRegister>гф_СтатусОтгрузки</InformationRegister>
 			<InformationRegister>ЦеныНоменклатуры25</InformationRegister>
+			<InformationRegister>гф_ДвижениеКодовМаркировкиИзВнешнихСистем</InformationRegister>
 			<AccumulationRegister>гф_ДвижениеКодовМаркировкиОрганизации</AccumulationRegister>
 			<AccumulationRegister>гф_ДвиженияБюджетов</AccumulationRegister>
 			<AccumulationRegister>РасчетыСКлиентами</AccumulationRegister>
