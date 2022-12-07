@@ -2,11 +2,44 @@
 <Rights xmlns="http://v8.1c.ru/8.2/roles" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Rights" version="2.14">
 	<setForNewObjects>false</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
-	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
+	<independentRightsOfChildObjects>true</independentRightsOfChildObjects>
 	<object>
 		<name>Catalog.Контрагенты</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Серия</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.СтатусУказанияСерий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -36,7 +69,25 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Характеристика</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаданиеНаПеревозку</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.СтатусыДокументовИСМП</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -50,9 +101,42 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Подразделение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ПочтаРоссииИсторияОтслеживания</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Ответственный</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -79,7 +163,25 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ВидЦены</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.МаркировкаТоваровИСМП</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -310,6 +412,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.КлючиАналитикиУчетаНоменклатуры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.гф_ПочтаРоссииПромежутокМеждуЗапросамиКОдномуТрекНомеру</name>
 		<right>
 			<name>Read</name>
@@ -434,6 +543,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.АналитикаАктивовПассивов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_АдресаДоставки</name>
 		<right>
 			<name>Read</name>
@@ -444,6 +564,28 @@
 		<name>Document.РасходныйОрдерНаТовары</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Цена</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ВыпускПодДеятельность</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -476,6 +618,39 @@
 		<name>Catalog.Склады</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.НаправлениеДеятельности</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Номенклатура</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -766,6 +941,46 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Подразделение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Валюты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ДатаПоступления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ПочтаРоссииПочтовыеОтправления.Attribute.ТекстОшибки</name>
 		<right>
 			<name>View</name>
@@ -853,7 +1068,29 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.ДоляСтоимости</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ПочтаРоссииОперацииОтслеживания.Attribute.Атрибут</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.НаправлениеВыпуска</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -874,6 +1111,17 @@
 		<name>Document.УпаковочныйЛист</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.КоличествоУпаковок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1036,6 +1284,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.гф_ПродукцияВКоробах</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Получатель</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ПочтаРоссииПочтовыеОтправления.Attribute.УпаковочныйЛист</name>
 		<right>
 			<name>View</name>
@@ -1098,6 +1368,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.Упаковка</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ПочтаРоссииОперацииОтслеживания.Attribute.КодОперации</name>
 		<right>
 			<name>View</name>
@@ -1134,6 +1415,87 @@
 		<name>Document.ПроизводствоБезЗаказа</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.АналитикаРасходов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1363,6 +1725,17 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ПочтаРоссииОперацииОтслеживания.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия.Attribute.ОформитьОтчетДавальцу</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
