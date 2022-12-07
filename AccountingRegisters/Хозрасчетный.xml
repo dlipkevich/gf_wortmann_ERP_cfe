@@ -36,7 +36,54 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>7b248429-2107-4371-b371-a099028cd179</ExtendedConfigurationObject>
+			<ChartOfAccounts>ChartOfAccounts.Хозрасчетный</ChartOfAccounts>
+			<Correspondence>true</Correspondence>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Dimension uuid="079a1bbf-624a-40fb-b49c-2a79ae81f46d">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4d42e16e-f450-41a3-a9c4-4f0d0844392a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+					<Balance>true</Balance>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="f060ca9a-53bb-4f61-aca6-24c47756e943">
+				<InternalInfo/>
+				<Properties>
+					<Name>НаправлениеДеятельности</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b973d7a5-c2f6-43b0-97dc-721b0dbc8ee9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НаправленияДеятельности</v8:Type>
+					</Type>
+					<Balance>false</Balance>
+				</Properties>
+			</Dimension>
+			<Resource uuid="92806589-a63c-48de-85ef-daa65ae424cf">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сумма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3656a8da-a29d-4315-b78f-48d379d4b712</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+					<Balance>true</Balance>
+				</Properties>
+			</Resource>
+		</ChildObjects>
 	</AccountingRegister>
 </MetaDataObject>
