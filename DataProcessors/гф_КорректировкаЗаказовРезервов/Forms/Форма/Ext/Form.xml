@@ -739,6 +739,7 @@
 								</InputField>
 								<InputField name="ТоварыСтавкаНДС" id="485">
 									<DataPath>Объект.Товары.СтавкаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -848,6 +849,7 @@
 							<Events>
 								<Event name="OnActivateRow">ТоварыВКоробахПриАктивизацииСтроки</Event>
 								<Event name="BeforeRowChange">ТоварыВКоробахПередНачаломИзменения</Event>
+								<Event name="OnChange">ТоварыВКоробахПриИзменении</Event>
 							</Events>
 							<ChildItems>
 								<CheckBoxField name="ТоварыВКоробахПометка" id="409">
@@ -1066,9 +1068,6 @@
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыВКоробахЦенаКоробаКонтекстноеМеню" id="161"/>
 									<ExtendedTooltip name="ТоварыВКоробахЦенаКоробаРасширеннаяПодсказка" id="162"/>
-									<Events>
-										<Event name="OnChange">ТоварыВКоробахЦенаКоробаПриИзменении</Event>
-									</Events>
 								</InputField>
 								<InputField name="ТоварыВКоробахЦенаКоробаСоСкидкой" id="476">
 									<DataPath>Объект.ТоварыВКоробах.ЦенаКоробаСоСкидкой</DataPath>
@@ -1090,23 +1089,26 @@
 									</Events>
 								</InputField>
 								<InputField name="ТоварыВКоробахСумма" id="163">
-									<DataPath>Объект.ТоварыВКоробах.Сумма</DataPath>
+									<DataPath>Объект.ТоварыВКоробах.СуммаСНДС</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<FooterDataPath>Объект.ТоварыВКоробах.TotalСумма</FooterDataPath>
+									<FooterDataPath>мСуммаЗаказаПредварительно</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыВКоробахСуммаКонтекстноеМеню" id="164"/>
 									<ExtendedTooltip name="ТоварыВКоробахСуммаРасширеннаяПодсказка" id="165"/>
 								</InputField>
-								<InputField name="ТоварыВКоробахIDКороба" id="166">
-									<DataPath>Объект.ТоварыВКоробах.IDКороба</DataPath>
-									<Visible>false</Visible>
+								<InputField name="ТоварыВКоробахСтавкаНДС" id="491">
+									<DataPath>Объект.ТоварыВКоробах.СтавкаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ТоварыВКоробахIDКоробаКонтекстноеМеню" id="167"/>
-									<ExtendedTooltip name="ТоварыВКоробахIDКоробаРасширеннаяПодсказка" id="168"/>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="ТоварыВКоробахСтавкаНДСКонтекстноеМеню" id="492"/>
+									<ExtendedTooltip name="ТоварыВКоробахСтавкаНДСРасширеннаяПодсказка" id="493"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1488,6 +1490,7 @@
 								</InputField>
 								<InputField name="РезервыСтавкаНДС" id="488">
 									<DataPath>Объект.Резервы.СтавкаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -1535,6 +1538,9 @@
 								<ContextMenu name="РезервыВКоробахУправлениеПоискомКонтекстноеМеню" id="347"/>
 								<ExtendedTooltip name="РезервыВКоробахУправлениеПоискомРасширеннаяПодсказка" id="348"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РезервыВКоробахПриИзменении</Event>
+							</Events>
 							<ChildItems>
 								<InputField name="РезервыВКоробахНомерСтроки" id="349">
 									<DataPath>Объект.РезервыВКоробах.LineNumber</DataPath>
@@ -1875,16 +1881,26 @@
 									</Events>
 								</InputField>
 								<InputField name="РезервыВКоробахСумма" id="382">
-									<DataPath>Объект.РезервыВКоробах.Сумма</DataPath>
+									<DataPath>Объект.РезервыВКоробах.СуммаСНДС</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<FooterDataPath>Объект.РезервыВКоробах.TotalСумма</FooterDataPath>
+									<FooterDataPath>мСуммаЗаказаПредварительно</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="РезервыВКоробахСуммаКонтекстноеМеню" id="383"/>
 									<ExtendedTooltip name="РезервыВКоробахСуммаРасширеннаяПодсказка" id="384"/>
+								</InputField>
+								<InputField name="РезервыВКоробахСтавкаНДС" id="494">
+									<DataPath>Объект.РезервыВКоробах.СтавкаНДС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>7</MaxWidth>
+									<ContextMenu name="РезервыВКоробахСтавкаНДСКонтекстноеМеню" id="495"/>
+									<ExtendedTooltip name="РезервыВКоробахСтавкаНДСРасширеннаяПодсказка" id="496"/>
 								</InputField>
 							</ChildItems>
 						</Table>
