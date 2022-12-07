@@ -40,6 +40,58 @@
 			<WriteMode>Independent</WriteMode>
 		</Properties>
 		<ChildObjects>
+			<Resource uuid="77250b06-2da1-4aee-ba65-a1fc3119764a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d561ee5a-2a87-4205-93af-4902b1247d87</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="83b40f9c-7c60-4392-9b2e-e2247fbb79b6">
+				<InternalInfo/>
+				<Properties>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>93716140-4123-4913-8258-75356dec29a0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="b2be6a52-3c72-452f-9a17-8d7809163220">
+				<InternalInfo/>
+				<Properties>
+					<Name>Упаковка</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c79450ab-f8f1-43d9-948d-10c6481c5538</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="818f76b7-5ced-40f0-a2fe-374573833198">
+				<InternalInfo/>
+				<Properties>
+					<Name>Штрихкод</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>75e2d606-c8d4-4cfe-8f96-2eaa5c364409</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
 			<Form>ФормаЗаписи</Form>
 			<Form>ФормаСписка</Form>
 		</ChildObjects>
