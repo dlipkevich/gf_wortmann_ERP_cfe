@@ -90,6 +90,50 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<TabularSection uuid="5b0d5cfd-4fdd-4440-91da-a2e7d97cfa89">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.ДоговорыКонтрагентов.ДополнительныеРеквизиты" category="TabularSection">
+						<xr:TypeId>de5f909d-e3c2-475c-8245-997ef487e601</xr:TypeId>
+						<xr:ValueId>d492fbd0-6fe4-4c1d-acec-cc42fd9e6200</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.ДоговорыКонтрагентов.ДополнительныеРеквизиты" category="TabularSectionRow">
+						<xr:TypeId>b618d735-dcb5-4a42-bd10-e178caefb330</xr:TypeId>
+						<xr:ValueId>cf798912-ba65-4f94-9ec0-d70b67c23e27</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ДополнительныеРеквизиты</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>df10b069-e208-42fb-b04f-d5b5239f320e</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="6ca7cc49-0876-4ac6-ba7a-89ba37838654">
+						<InternalInfo/>
+						<Properties>
+							<Name>Свойство</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>92a07f04-3acc-4b83-9d37-ef44ee4db151</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="cca80f81-c123-4f73-a660-7d3412c886b7">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>cb23b7af-c779-4ad4-99e8-4abfff8b406c</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
