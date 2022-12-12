@@ -245,12 +245,12 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Свыше30</dataPath>
-			<field>Свыше30</field>
+			<dataPath>До30</dataPath>
+			<field>До30</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Свыше30</v8:content>
+					<v8:content>До30</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -442,12 +442,12 @@
 	гф_БлокировкаРазблокировкаОтгрузок.Исключения КАК Исключения,
 	гф_БлокировкаРазблокировкаОтгрузок.Согласовано КАК Согласовано,
 	ВЫБОР
-		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Исключения = ИСТИНА
+		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Заблокирован = ИСТИНА
 			ТОГДА ВЫБОР
 					КОГДА ЗС.ДниПросрочки &gt;= 30
 						ТОГДА гф_БлокировкаРазблокировкаОтгрузок.Дата
 				КОНЕЦ
-	КОНЕЦ КАК Свыше30,
+	КОНЕЦ КАК До30,
 	ВЫБОР
 		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Заблокирован
 			ТОГДА ВЫБОР
@@ -753,12 +753,36 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>До30</dataPath>
-			<field>До30</field>
+			<dataPath>ОрганизацииСвыше30</dataPath>
+			<field>ОрганизацииСвыше30</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>До30</v8:content>
+					<v8:content>Организации свыше30</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Свыше30</dataPath>
+			<field>Свыше30</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свыше30</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоБлокировок</dataPath>
+			<field>КоличествоБлокировок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество блокировок</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -934,6 +958,24 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	гф_БлокировкаРазблокировкаОтгрузок.Ссылка КАК ДокументБлокировки,
+	гф_БлокировкаРазблокировкаОтгрузок.Дата КАК Дата,
+	гф_БлокировкаРазблокировкаОтгрузок.Контрагент КАК Контрагент,
+	гф_БлокировкаРазблокировкаОтгрузок.ВидБлокировки КАК ВидБлокировки,
+	гф_БлокировкаРазблокировкаОтгрузок.Партнер КАК Партнер,
+	Организации.Ссылка КАК Организация
+ПОМЕСТИТЬ ВТБезОтрганизации
+ИЗ
+	Документ.гф_БлокировкаРазблокировкаОтгрузок КАК гф_БлокировкаРазблокировкаОтгрузок,
+	Справочник.Организации КАК Организации
+ГДЕ
+	гф_БлокировкаРазблокировкаОтгрузок.Проведен = ИСТИНА
+	И гф_БлокировкаРазблокировкаОтгрузок.ПометкаУдаления = ЛОЖЬ
+	И гф_БлокировкаРазблокировкаОтгрузок.Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	гф_БлокировкаРазблокировкаОтгрузок.Организация КАК Организация,
 	гф_БлокировкаРазблокировкаОтгрузок.Партнер КАК Партнер,
@@ -950,12 +992,20 @@
 	гф_БлокировкаРазблокировкаОтгрузок.Исключения КАК Исключения,
 	гф_БлокировкаРазблокировкаОтгрузок.Согласовано КАК Согласовано,
 	ВЫБОР
-		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Заблокирован
+		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Исключения = ИСТИНА
 			ТОГДА ВЫБОР
 					КОГДА ЗС.ДниПросрочки &gt;= 30
 						ТОГДА гф_БлокировкаРазблокировкаОтгрузок.Дата
 				КОНЕЦ
-	КОНЕЦ КАК До30
+	КОНЕЦ КАК Свыше30,
+	ВЫБОР
+		КОГДА гф_БлокировкаРазблокировкаОтгрузок.Заблокирован
+			ТОГДА ВЫБОР
+					КОГДА ЗС.ДниПросрочки &gt;= 30
+						ТОГДА гф_БлокировкаРазблокировкаОтгрузок.Организация
+				КОНЕЦ
+	КОНЕЦ КАК ОрганизацииСвыше30
+ПОМЕСТИТЬ ВременнаяТаблица
 {ВЫБРАТЬ
 	Организация.*,
 	Партнер.*,
@@ -1026,7 +1076,41 @@
 	гф_БлокировкаРазблокировкаОтгрузок.Дата КАК ДатаБлокировки,
 	гф_БлокировкаРазблокировкаОтгрузок.ВидБлокировки.*,
 	гф_БлокировкаРазблокировкаОтгрузок.Заблокирован,
-	гф_БлокировкаРазблокировкаОтгрузок.Исключения}</query>
+	гф_БлокировкаРазблокировкаОтгрузок.Исключения}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ВременнаяТаблица.Организация = ЗНАЧЕНИЕ(справочник.организации.пустаяссылка)
+			ТОГДА ВТБезОтрганизации.Организация
+		ИНАЧЕ ВременнаяТаблица.Организация
+	КОНЕЦ КАК Организация,
+	ВременнаяТаблица.Партнер КАК Партнер,
+	ВременнаяТаблица.Контрагент КАК Контрагент,
+	ВременнаяТаблица.Договор КАК Договор,
+	ВременнаяТаблица.Валюта КАК Валюта,
+	ВременнаяТаблица.ДниОтсрочки КАК ДниОтсрочки,
+	ВременнаяТаблица.КрайняяДатаОплаты КАК КрайняяДатаОплаты,
+	ВременнаяТаблица.ДниПросрочки КАК ДниПросрочки,
+	ВременнаяТаблица.ДокументБлокировки КАК ДокументБлокировки,
+	ВременнаяТаблица.ДатаБлокировки КАК ДатаБлокировки,
+	ВременнаяТаблица.ВидБлокировки КАК ВидБлокировки,
+	ВременнаяТаблица.Заблокирован КАК Заблокирован,
+	ВременнаяТаблица.Исключения КАК Исключения,
+	ВременнаяТаблица.Согласовано КАК Согласовано,
+	ВременнаяТаблица.Свыше30 КАК Свыше30,
+	ВременнаяТаблица.ОрганизацииСвыше30 КАК ОрганизацииСвыше30,
+	ВТБезОтрганизации.Дата КАК Дата,
+	ВЫБОР
+		КОГДА ВременнаяТаблица.Исключения = ИСТИНА
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоБлокировок
+ИЗ
+	ВременнаяТаблица КАК ВременнаяТаблица
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТБезОтрганизации КАК ВТБезОтрганизации
+		ПО ВременнаяТаблица.ДокументБлокировки = ВТБезОтрганизации.ДокументБлокировки</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>НаборДанных2</sourceDataSet>
@@ -1043,8 +1127,8 @@
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
 		<destinationDataSet>НаборДанных3</destinationDataSet>
-		<sourceExpression>Организация</sourceExpression>
-		<destinationExpression>Организация</destinationExpression>
+		<sourceExpression>ДокументБлокировки</sourceExpression>
+		<destinationExpression>ДокументБлокировки</destinationExpression>
 	</dataSetLink>
 	<calculatedField>
 		<dataPath>ГруппаСвыше30</dataPath>
@@ -1091,29 +1175,24 @@
 		<expression>Согласовано</expression>
 	</totalField>
 	<totalField>
+		<dataPath>ОрганизацииСвыше30</dataPath>
+		<expression>ОрганизацииСвыше30</expression>
+	</totalField>
+	<totalField>
 		<dataPath>Свыше30</dataPath>
 		<expression>Свыше30</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Code</dataPath>
+		<expression>Code</expression>
 	</totalField>
 	<totalField>
 		<dataPath>До30</dataPath>
 		<expression>До30</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ОрганизацииСвыше30</dataPath>
-		<expression>Массив(ОрганизацииСвыше30)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДниПросрочки</dataPath>
-		<expression>ДниПросрочки</expression>
-	</totalField>
-	<totalField>
-		<dataPath>Total</dataPath>
-		<expression>Количество(Различные Total)</expression>
-		<group>ОбщийИтог</group>
-	</totalField>
-	<totalField>
-		<dataPath>Code</dataPath>
-		<expression>Code</expression>
+		<dataPath>КоличествоБлокировок</dataPath>
+		<expression>Сумма(Массив(ТаблицаЗначений(Различные КоличествоБлокировок,Организация)))</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -1315,6 +1394,32 @@
 			<dcsat:expression>Представление(Ссылка)</dcsat:expression>
 		</parameter>
 	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Total</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Итог</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Итог</dcsat:name>
+			<dcsat:expression>Total</dcsat:expression>
+		</parameter>
+	</template>
 	<groupTemplate>
 		<groupField>ГруппаСвыше30</groupField>
 		<groupField>Ссылка</groupField>
@@ -1332,16 +1437,34 @@
 		<templateType>Header</templateType>
 		<template>Макет3</template>
 	</groupTemplate>
+	<groupHeaderTemplate>
+		<groupName>Итог</groupName>
+		<templateType>OverallHeader</templateType>
+		<template>Макет4</template>
+	</groupHeaderTemplate>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по исключениям </v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">ВидБлокировки</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.гф_ВидыБлокировок.ПустаяСсылка</dcsset:right>
-					<dcsset:userSettingID>836447a8-ca41-4ac9-8dba-3fb3c23ef4eb</dcsset:userSettingID>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>ba2aab46-7ad1-4d75-8d97-f56711b415ff</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
@@ -1495,9 +1618,86 @@
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Партнер</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПоВидамБлокировок</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по исключениям с количеством </v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ВидБлокировки</dcsset:left>
+					<dcsset:comparisonType>InListByHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>60761783-6122-472f-93bc-4faa4b3173ff</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Календарь</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c1e75341-8023-44c6-b292-925d403ba9d7</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>9628d625-5879-4fcb-ba33-0bfc1e277e53</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоБлокировок</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Code</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:field>Ссылка</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -1508,7 +1708,19 @@
 						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 					</dcsset:order>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Свыше30</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Партнер</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:row>
 			</dcsset:item>
