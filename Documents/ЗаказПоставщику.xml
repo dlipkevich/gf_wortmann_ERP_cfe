@@ -31,7 +31,69 @@
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="849c9697-9c09-4149-b0ae-73b7a86acf96">
+				<InternalInfo/>
+				<Properties>
+					<Name>Склад</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2dc068b6-bb1b-4722-a4d5-7e1d1e718f32</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d7c96729-1b32-45ae-9f4d-c392750884fb">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХозяйственнаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>48b02061-bc07-47e4-b621-d91cf421f3dd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
+			<TabularSection uuid="446ae069-6cc0-4ff2-9a23-cfcb7fb4718b">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЗаказПоставщику.гф_ПродукцияВКоробах" category="TabularSection">
+						<xr:TypeId>455c423b-1289-4f17-a2a6-541d5e96f025</xr:TypeId>
+						<xr:ValueId>f5d62d19-6456-486b-aed1-b38e7504d6f7</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЗаказПоставщику.гф_ПродукцияВКоробах" category="TabularSectionRow">
+						<xr:TypeId>be9ea29f-a63e-4879-a45e-1142d2e9ffc8</xr:TypeId>
+						<xr:ValueId>1bd5167d-1924-4b1e-80b4-5cd56493b2c3</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ПродукцияВКоробах</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>199db8ef-46a2-4ebd-a037-b1590f44838b</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+			<TabularSection uuid="d7293fa3-ec3f-4cc1-9da6-d27da9860e73">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЗаказПоставщику.Товары" category="TabularSection">
+						<xr:TypeId>70d54fa3-c309-4e1d-97b6-b211bab60ddf</xr:TypeId>
+						<xr:ValueId>2ba996d0-ed69-4ca9-b4ce-6cbd742dc083</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЗаказПоставщику.Товары" category="TabularSectionRow">
+						<xr:TypeId>b3553f67-6d74-4ffd-8f1b-79d3d8c00533</xr:TypeId>
+						<xr:ValueId>1c3c7a3e-3714-4900-8eb9-097cb28a3dd6</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>dcee393b-d797-4bfd-be64-3bc288149128</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>

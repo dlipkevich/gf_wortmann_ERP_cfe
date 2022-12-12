@@ -290,10 +290,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="AfterWrite" callType="After">гф_ПослеЗаписиПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
-		<Event name="OnWriteAtServer" callType="Before">гф_ПриЗаписиНаСервереПеред</Event>
-		<Event name="OnWriteAtServer" callType="After">гф_ПриЗаписиНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПанельСостоянияEDI" id="1201">
@@ -668,31 +665,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.d9b1c4e5-909c-44cb-91ed-1d4258e526ea</Value>
-																	</xr:Value>
-																</xr:Item>
-																<xr:Item>
-																	<xr:Presentation/>
-																	<xr:CheckState>0</xr:CheckState>
-																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.aa9f1a42-8455-4ed1-9b98-623ca9c12b89</Value>
-																	</xr:Value>
-																</xr:Item>
-																<xr:Item>
-																	<xr:Presentation/>
-																	<xr:CheckState>0</xr:CheckState>
-																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																		<Presentation/>
 																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаПоИмпорту</Value>
-																	</xr:Value>
-																</xr:Item>
-																<xr:Item>
-																	<xr:Presentation/>
-																	<xr:CheckState>0</xr:CheckState>
-																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.69d9d1a8-31ea-4bdc-80fd-a137ae6052ad</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -708,7 +681,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.88e438c1-2fc6-4794-b6b2-e63b79824579</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ПриемНаХранениеСПравомПродажи</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -716,7 +689,7 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.342c3846-4563-4b9e-829a-426febb0cbf4</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаВСтранахЕАЭСФактуровкаПоставки</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -724,7 +697,31 @@
 																	<xr:CheckState>0</xr:CheckState>
 																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.7dd55c96-81fc-4108-875d-a21f9e59e57e</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаВСтранахЕАЭСТоварыВПути</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаПоИмпортуТоварыВПути</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаУПоставщикаФактуровкаПоставки</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation/>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаУПоставщикаТоварыВПути</Value>
 																	</xr:Value>
 																</xr:Item>
 															</ChoiceList>
@@ -2926,14 +2923,14 @@ accounting group</v8:content>
 																		<Presentation>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Налоговый агент по НДС</v8:content>
+																				<v8:content>Облагается НДС у покупателя</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>VAT tax agent</v8:content>
+																				<v8:content>Subject to VAT at customer</v8:content>
 																			</v8:item>
 																		</Presentation>
-																		<Value xsi:type="xr:DesignTimeRef">6fcc22be-1370-4125-ae12-db6e04c10524.2c649691-962d-4469-8c60-ef99afc3ede5</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНалогообложенияНДС.EnumValue.ОблагаетсяНДСУПокупателя</Value>
 																	</xr:Value>
 																</xr:Item>
 																<xr:Item>
@@ -2943,14 +2940,14 @@ accounting group</v8:content>
 																		<Presentation>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Облагается НДС у покупателя</v8:content>
+																				<v8:content>Налоговый агент по НДС</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Subject to VAT at customer</v8:content>
+																				<v8:content>VAT tax agent</v8:content>
 																			</v8:item>
 																		</Presentation>
-																		<Value xsi:type="xr:DesignTimeRef">6fcc22be-1370-4125-ae12-db6e04c10524.f486b059-aeda-4e79-8266-54a543e66160</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНалогообложенияНДС.EnumValue.НалоговыйАгентПоНДС</Value>
 																	</xr:Value>
 																</xr:Item>
 															</ChoiceList>
@@ -3564,17 +3561,7 @@ notes</v8:content>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
-	<Attributes>
-		<Attribute name="СтруктураЗаказНаЭмиссиюКодовМаркировки" id="1000001">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Структура заказ на эмиссию кодов маркировки</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
-		</Attribute>
-	</Attributes>
+	<Attributes/>
 	<BaseForm version="2.14">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -4238,7 +4225,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.d9b1c4e5-909c-44cb-91ed-1d4258e526ea</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаУПоставщикаТоварыВПути</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -4246,7 +4233,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.aa9f1a42-8455-4ed1-9b98-623ca9c12b89</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаУПоставщикаФактуровкаПоставки</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -4262,7 +4249,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.69d9d1a8-31ea-4bdc-80fd-a137ae6052ad</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаПоИмпортуТоварыВПути</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -4278,7 +4265,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.88e438c1-2fc6-4794-b6b2-e63b79824579</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаВСтранахЕАЭСТоварыВПути</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -4286,7 +4273,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.342c3846-4563-4b9e-829a-426febb0cbf4</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ЗакупкаВСтранахЕАЭСФактуровкаПоставки</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -4294,7 +4281,7 @@ notes</v8:content>
 																		<xr:CheckState>0</xr:CheckState>
 																		<xr:Value xsi:type="FormChoiceListDesTimeValue">
 																			<Presentation/>
-																			<Value xsi:type="xr:DesignTimeRef">0c25fb53-0d0a-46c7-9379-9e8b918c28fa.7dd55c96-81fc-4108-875d-a21f9e59e57e</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ХозяйственныеОперации.EnumValue.ПриемНаХранениеСПравомПродажи</Value>
 																		</xr:Value>
 																	</xr:Item>
 																</ChoiceList>
@@ -6503,7 +6490,7 @@ accounting group</v8:content>
 																					<v8:content>VAT tax agent</v8:content>
 																				</v8:item>
 																			</Presentation>
-																			<Value xsi:type="xr:DesignTimeRef">6fcc22be-1370-4125-ae12-db6e04c10524.2c649691-962d-4469-8c60-ef99afc3ede5</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНалогообложенияНДС.EnumValue.НалоговыйАгентПоНДС</Value>
 																		</xr:Value>
 																	</xr:Item>
 																	<xr:Item>
@@ -6520,7 +6507,7 @@ accounting group</v8:content>
 																					<v8:content>Subject to VAT at customer</v8:content>
 																				</v8:item>
 																			</Presentation>
-																			<Value xsi:type="xr:DesignTimeRef">6fcc22be-1370-4125-ae12-db6e04c10524.f486b059-aeda-4e79-8266-54a543e66160</Value>
+																			<Value xsi:type="xr:DesignTimeRef">Enum.ТипыНалогообложенияНДС.EnumValue.ОблагаетсяНДСУПокупателя</Value>
 																		</xr:Value>
 																	</xr:Item>
 																</ChoiceList>
