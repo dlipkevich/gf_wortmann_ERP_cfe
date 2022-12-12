@@ -216,6 +216,24 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЛимита</dataPath>
+			<field>ВидЛимита</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация1</dataPath>
+			<field>Организация1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация1</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ДоговорыТекущие.Партнер КАК Партнер,
@@ -451,7 +469,7 @@
 	РАЗНОСТЬДАТ(Договоры.Партнер.ДатаРегистрации, &amp;ТекущаяДата, ГОД) КАК СрокСотрудничества,
 	ЕСТЬNULL(ВТСвойстваДоговора3.ЗапрашиваемыйЛокальныйЛимит, 0) КАК ЗапрашиваемыйЛокальныйЛимитНаСезон,
 	СУММА(ЕСТЬNULL(ОбъемЗаказов.СуммаВзаиморасчетовПриход, 0)) КАК ОбщаяСуммаЗаказаЗаСезон,
-	ЕСТЬNULL(СвойстваДоговора.KV, 0) КАК KV,
+	ЕСТЬNULL(ВТСвойстваДоговора1.КВ, 0) КАК KV,
 	ЕСТЬNULL(ЕСТЬNULL(ВТСвойстваДоговора4.ЗапрашиваемоеКоличествоДнейОтсрочки, ВТСвойстваДоговора5.КоличествоДнейОтсрочкиПлатежа), 0) КАК ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон,
 	ВТСвойстваДоговора2.СтраховойДепозит КАК АвансНаСезон,
 	СвойстваДоговора.ЛокальныйЛимит1 КАК ЛокальныйЛимит1,
@@ -525,12 +543,11 @@
 	ПОДСТРОКА(Договоры.Договор.Организация.Префикс, 1, 1),
 	РАЗНОСТЬДАТ(Договоры.Партнер.ДатаРегистрации, &amp;ТекущаяДата, ГОД),
 	ЕСТЬNULL(ВТСвойстваДоговора3.ЗапрашиваемыйЛокальныйЛимит, 0),
-	ЕСТЬNULL(СвойстваДоговора.KV, 0),
+	ЕСТЬNULL(ВТСвойстваДоговора1.КВ, 0),
 	ЕСТЬNULL(ЕСТЬNULL(ВТСвойстваДоговора4.ЗапрашиваемоеКоличествоДнейОтсрочки, ВТСвойстваДоговора5.КоличествоДнейОтсрочкиПлатежа), 0),
 	Договоры.Партнер,
 	Договоры.Партнер.Наименование,
 	Договоры.Организация</query>
-		<autoFillFields>false</autoFillFields>
 	</dataSet>
 	<dataSet xsi:type="DataSetObject">
 		<name>НаборДанных2</name>
@@ -631,14 +648,6 @@
 			</dcscor:item>
 		</appearance>
 	</calculatedField>
-	<totalField>
-		<dataPath>KV</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные KV ,ДоговорКонтрагента)))</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ОбщаяСуммаЗаказаЗаСезон</dataPath>
-		<expression>Сумма(Массив(ТаблицаЗначений(Различные ОбщаяСуммаЗаказаЗаСезон ,ДоговорКонтрагента)))</expression>
-	</totalField>
 	<parameter>
 		<name>Контрагент</name>
 		<title xsi:type="v8:LocalStringType">
@@ -877,6 +886,23 @@
 		</availableValue>
 		<valueListAllowed>true</valueListAllowed>
 	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -886,7 +912,7 @@
 					<dcsset:field>КодКомпании</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>НаименованиеПартнера</dcsset:field>
+					<dcsset:field>Партнер</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
