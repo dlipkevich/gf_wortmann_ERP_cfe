@@ -15,10 +15,6 @@
 	<ShowTitle>false</ShowTitle>
 	<ShowCloseButton>false</ShowCloseButton>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
-	<Events>
-		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-	</Events>
 	<ChildItems>
 		<InputField name="ДатаПолученияЦен" id="3">
 			<DataPath>ДатаПолученияЦен</DataPath>
@@ -153,7 +149,7 @@
 					<v8:content>Блокировка и превышение лимитов игнорируются и создается расходный ордер на товары. </v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>НеУчитыватьЗадолженность</Action>
+			<Action>НеУчитыватьБлокироки</Action>
 		</Command>
 		<Command name="Отменить" id="4">
 			<Title>
