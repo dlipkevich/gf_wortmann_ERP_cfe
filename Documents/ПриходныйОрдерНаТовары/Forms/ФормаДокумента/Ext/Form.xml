@@ -8,7 +8,7 @@
 				<Type>CommandBarButton</Type>
 				<Representation>Text</Representation>
 				<DefaultButton>true</DefaultButton>
-				<CommandName>0</CommandName>
+				<CommandName>Form.Command.ПровестиИЗакрыть</CommandName>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="841"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="846">
@@ -20,7 +20,7 @@
 			<Button name="ФормаПровести" id="848">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
-				<CommandName>0</CommandName>
+				<CommandName>Form.Command.ПровестиДокумент</CommandName>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="849"/>
 			</Button>
 			<Button name="ФормаУстановитьПометкуУдаленияДокумента" id="912">
@@ -208,8 +208,6 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="BeforeWrite" callType="After">гф_ПередЗаписьюПосле</Event>
-		<Event name="BeforeWriteAtServer" callType="After">гф_ПередЗаписьюНаСервереПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
@@ -2358,6 +2356,66 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes/>
+	<Commands>
+		<Command name="ПровестиИЗакрыть" id="1000002">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Post and close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести и закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Post and close</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action callType="Override">гф_ПровестиИЗакрытьВместо</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПровестиДокумент" id="1000004">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Post</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Post</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action callType="Override">гф_ПровестиДокументВместо</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
 	<BaseForm version="2.14">
 		<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -2367,7 +2425,7 @@
 					<Type>CommandBarButton</Type>
 					<Representation>Text</Representation>
 					<DefaultButton>true</DefaultButton>
-					<CommandName>0</CommandName>
+					<CommandName>Form.Command.ПровестиИЗакрыть</CommandName>
 					<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="841"/>
 				</Button>
 				<Button name="ФормаЗаписать" id="846">
@@ -2379,7 +2437,7 @@
 				<Button name="ФормаПровести" id="848">
 					<Type>CommandBarButton</Type>
 					<Representation>Picture</Representation>
-					<CommandName>0</CommandName>
+					<CommandName>Form.Command.ПровестиДокумент</CommandName>
 					<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="849"/>
 				</Button>
 				<Button name="ФормаУстановитьПометкуУдаленияДокумента" id="912">
@@ -4712,5 +4770,65 @@
 			</UsualGroup>
 		</ChildItems>
 		<Attributes/>
+		<Commands>
+			<Command name="ПровестиИЗакрыть" id="1000001">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести и закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Post and close</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести и закрыть</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Post and close</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Action callType="Before">ПровестиИЗакрыть</Action>
+				<ModifiesSavedData>true</ModifiesSavedData>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+			<Command name="ПровестиДокумент" id="1000003">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Post</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Провести документ</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Post</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Post</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Action callType="Before">ПровестиДокумент</Action>
+				<ModifiesSavedData>true</ModifiesSavedData>
+				<CurrentRowUse>DontUse</CurrentRowUse>
+			</Command>
+		</Commands>
 	</BaseForm>
 </Form>
