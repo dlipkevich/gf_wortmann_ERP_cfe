@@ -271,6 +271,30 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="fadaac6d-317b-421d-b228-1d8586a5a474">
+				<InternalInfo/>
+				<Properties>
+					<Name>B2B_ОсновноеКонтактноеЛицо</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>96e2bd25-019c-48d7-a042-0039d9932f59</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КонтактныеЛицаПартнеров</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="74da56c9-1ef1-407d-b6ce-8f4ad4a932d8">
+				<InternalInfo/>
+				<Properties>
+					<Name>B2B_ОсновнойБанковскийСчет</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>15e7e583-bb20-4908-995a-faaa85318272</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.БанковскиеСчетаКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="c33fca3e-844d-401f-8d75-49b6b76fed3e">
 				<InternalInfo>
 					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_АдресаДоставки" category="TabularSection">
@@ -394,6 +418,25 @@
 						</Properties>
 					</Attribute>
 				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="b11df58f-69b1-4d35-b92e-4a446066e9e5">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_ОсновнойДоговорКонтрагента" category="TabularSection">
+						<xr:TypeId>ae75d941-af4a-4abb-a508-88ac1d3eeb1f</xr:TypeId>
+						<xr:ValueId>d3dbadda-bf29-47eb-87b6-02dbfcf961bf</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.гф_ОсновнойДоговорКонтрагента" category="TabularSectionRow">
+						<xr:TypeId>57b6b69e-8e50-4ffc-a759-8a0c873006da</xr:TypeId>
+						<xr:ValueId>8aca968a-aefc-4681-b2ed-d4e2d209c669</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ОсновнойДоговорКонтрагента</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>759662ae-879a-4f0a-8ace-7fc19b5505fb</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>гф_ФормаСпискаАдресаДоставки</Form>
