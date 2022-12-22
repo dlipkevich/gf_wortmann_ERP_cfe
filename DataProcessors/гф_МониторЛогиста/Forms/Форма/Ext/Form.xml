@@ -205,6 +205,11 @@
 											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 											<ExtendedTooltip name="ПоставкаВывестиСписокРасширеннаяПодсказка" id="225"/>
 										</Button>
+										<Button name="ПечатныеФормы2" id="1261">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ПечатныеФормы</CommandName>
+											<ExtendedTooltip name="ПечатныеФормы2РасширеннаяПодсказка" id="1262"/>
+										</Button>
 										<Button name="СоздатьПО" id="397">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.СоздатьПО</CommandName>
@@ -307,6 +312,13 @@
 											<Group>Horizontal</Group>
 											<ExtendedTooltip name="ПоставкаГруппаДатаНомерРасширеннаяПодсказка" id="213"/>
 											<ChildItems>
+												<CheckBoxField name="ПоставкаПроведен" id="1258">
+													<DataPath>Объект.Поставка.Проведен</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоставкаПроведенКонтекстноеМеню" id="1259"/>
+													<ExtendedTooltip name="ПоставкаПроведенРасширеннаяПодсказка" id="1260"/>
+												</CheckBoxField>
 												<InputField name="ПоставкаТипДокумента" id="170">
 													<DataPath>Объект.Поставка.ТипДокумента</DataPath>
 													<Title>
