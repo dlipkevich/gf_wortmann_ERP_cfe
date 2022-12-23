@@ -39,6 +39,31 @@
 			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
 			<WriteMode>Independent</WriteMode>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Resource uuid="b3e829aa-21ed-448c-8bab-ab5831e1c4ef">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>53a28551-319a-477d-a479-2fbb83f946da</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_СтатусыИсключений</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="8efe6244-0e98-4902-bba7-43818a5fe8d1">
+				<InternalInfo/>
+				<Properties>
+					<Name>NVE</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>8deed4b3-e357-4e0a-a548-ea343be6b966</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>
