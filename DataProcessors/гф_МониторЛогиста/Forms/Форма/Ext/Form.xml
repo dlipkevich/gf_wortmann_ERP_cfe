@@ -624,10 +624,18 @@
 								</ColumnGroup>
 								<InputField name="ПоставкаСтатусКМ" id="179">
 									<DataPath>Объект.Поставка.СтатусКМ</DataPath>
+									<Visible>false</Visible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПоставкаСтатусКМКонтекстноеМеню" id="180"/>
 									<ExtendedTooltip name="ПоставкаСтатусКМРасширеннаяПодсказка" id="181"/>
 								</InputField>
+								<CheckBoxField name="ПоставкаКМЭмитирован" id="1263">
+									<DataPath>Объект.Поставка.КМЭмитирован</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПоставкаКМЭмитированКонтекстноеМеню" id="1264"/>
+									<ExtendedTooltip name="ПоставкаКМЭмитированРасширеннаяПодсказка" id="1265"/>
+								</CheckBoxField>
 								<InputField name="ПоставкаДокументМаркировка" id="182">
 									<DataPath>Объект.Поставка.ДокументМаркировка</DataPath>
 									<Visible>false</Visible>
