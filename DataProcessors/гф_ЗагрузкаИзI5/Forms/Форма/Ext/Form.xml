@@ -14,6 +14,7 @@
 			<ExtendedTooltip name="ОтладкаНеУдалятьРасширеннаяПодсказка" id="3"/>
 		</CheckBoxField>
 		<LabelDecoration name="Декорация1" id="9">
+			<Visible>false</Visible>
 			<TextColor>style:ToolTipTextColor</TextColor>
 			<Font ref="style:SmallTextFont" kind="StyleItem"/>
 			<ToolTip>
@@ -27,6 +28,11 @@
 			<ContextMenu name="Декорация1КонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="11"/>
 		</LabelDecoration>
+		<InputField name="Организация" id="12">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="14"/>
+		</InputField>
 		<InputField name="КаталогЗагрузки" id="4">
 			<DataPath>Объект.КаталогЗагрузки</DataPath>
 			<EditMode>EnterOnInput</EditMode>
