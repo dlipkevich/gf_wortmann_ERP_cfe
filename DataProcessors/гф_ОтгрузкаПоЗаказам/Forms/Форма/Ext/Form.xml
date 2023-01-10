@@ -239,6 +239,22 @@
 										</Title>
 										<ExtendedTooltip name="ДеревоДокументовСписокКоробовРасширеннаяПодсказка" id="218"/>
 									</Button>
+									<Button name="ДеревоДокументовСоздатьПеремещениеТоваров" id="247">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПеремещениеТоваров</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Forward</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать перемещение товаров</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДеревоДокументовСоздатьПеремещениеТоваровРасширеннаяПодсказка" id="248"/>
+									</Button>
 									<Button name="ДеревоДокументовУстановитьСкидки" id="219">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
@@ -1592,6 +1608,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьРезерв</Action>
+		</Command>
+		<Command name="ПеремещениеТоваров" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеремещениеТоваров</Action>
 		</Command>
 	</Commands>
 </Form>
