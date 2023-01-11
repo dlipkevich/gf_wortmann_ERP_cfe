@@ -31,15 +31,15 @@
 			<DescriptionLength>100</DescriptionLength>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="f2ad7ff8-95fd-4923-86d8-ea7b0c9ff781">
+			<Attribute uuid="c9a8cce0-c663-42a2-bb27-689cdfe98813">
 				<InternalInfo/>
 				<Properties>
-					<Name>Партнер</Name>
+					<Name>ИНН</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>ce59e7d4-ce32-4e73-8b06-cda594aec2b3</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>489feb46-8450-495a-ab9b-547fdd55c2bc</ExtendedConfigurationObject>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+						<v8:TypeSet>cfg:DefinedType.ИНН</v8:TypeSet>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -135,19 +135,15 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="79fe73f6-9a7f-4666-84e4-68de8983ec8e">
+			<Attribute uuid="f2ad7ff8-95fd-4923-86d8-ea7b0c9ff781">
 				<InternalInfo/>
 				<Properties>
-					<Name>КПП</Name>
+					<Name>Партнер</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>ea256d8b-5500-4819-9668-837744212add</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>ce59e7d4-ce32-4e73-8b06-cda594aec2b3</ExtendedConfigurationObject>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>9</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -195,17 +191,17 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="18218f05-df5a-44bd-87d8-418d2caf2b2b">
+			<Attribute uuid="79fe73f6-9a7f-4666-84e4-68de8983ec8e">
 				<InternalInfo/>
 				<Properties>
-					<Name>НаименованиеПолное</Name>
+					<Name>КПП</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>be19691e-3e4a-44a7-96c2-ce843902e27e</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>ea256d8b-5500-4819-9668-837744212add</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>250</v8:Length>
+							<v8:Length>9</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -243,29 +239,17 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="c9a8cce0-c663-42a2-bb27-689cdfe98813">
+			<Attribute uuid="18218f05-df5a-44bd-87d8-418d2caf2b2b">
 				<InternalInfo/>
 				<Properties>
-					<Name>ИНН</Name>
+					<Name>НаименованиеПолное</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>489feb46-8450-495a-ab9b-547fdd55c2bc</ExtendedConfigurationObject>
-					<Type>
-						<v8:TypeSet>cfg:DefinedType.ИНН</v8:TypeSet>
-					</Type>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="5ba8ac56-4507-4d81-aa61-e8a952fad146">
-				<InternalInfo/>
-				<Properties>
-					<Name>гф_GLN_номер</Name>
-					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>c2adc8ad-f88d-4ccc-8f2b-3b39547e9a29</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>be19691e-3e4a-44a7-96c2-ce843902e27e</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>13</v8:Length>
+							<v8:Length>250</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -295,33 +279,65 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<TabularSection uuid="c33fca3e-844d-401f-8d75-49b6b76fed3e">
+			<Attribute uuid="5ba8ac56-4507-4d81-aa61-e8a952fad146">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_GLN_номер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c2adc8ad-f88d-4ccc-8f2b-3b39547e9a29</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>13</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="ce604b38-6ec7-4d4b-b81a-e5a0a6a94e54">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_АдресаДоставки" category="TabularSection">
-						<xr:TypeId>ccc80606-4334-4bd6-9e10-daec8e061ac1</xr:TypeId>
-						<xr:ValueId>cdeee4b8-0cfa-4f9e-a870-31301f8765e8</xr:ValueId>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.КонтактнаяИнформация" category="TabularSection">
+						<xr:TypeId>6783f047-3b34-437f-a529-cac816fef197</xr:TypeId>
+						<xr:ValueId>f7fd4a15-4ac5-4210-8fce-42ccd636d3d3</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.гф_АдресаДоставки" category="TabularSectionRow">
-						<xr:TypeId>55277614-8bdc-45ae-aa25-f6742a620b89</xr:TypeId>
-						<xr:ValueId>1a438e25-e70c-4b97-bb4b-c3637eb54b94</xr:ValueId>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.КонтактнаяИнформация" category="TabularSectionRow">
+						<xr:TypeId>690162be-3c89-46d9-8183-6e1f606793dd</xr:TypeId>
+						<xr:ValueId>e12382d7-ddf2-4768-b1d6-63ffe201ee67</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>гф_АдресаДоставки</Name>
+					<Name>КонтактнаяИнформация</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>6db3e316-af1f-4f16-bed8-3b391350c1b7</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>2629d638-1c9b-4112-b68e-0560bb2d997b</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="cf4f1ac7-94ba-43db-a6c5-669a69c80281">
+					<Attribute uuid="d12c37c1-7ca6-4721-8d5e-c7e87fa922c2">
 						<InternalInfo/>
 						<Properties>
-							<Name>Адрес</Name>
+							<Name>Вид</Name>
 							<Comment/>
 							<ObjectBelonging>Adopted</ObjectBelonging>
-							<ExtendedConfigurationObject>78d0cac5-be81-4bb2-86fd-003c05d9583c</ExtendedConfigurationObject>
+							<ExtendedConfigurationObject>a9a6552a-9493-4353-953b-2f7c777b2f61</ExtendedConfigurationObject>
 							<Type>
-								<v8:Type>cfg:CatalogRef.гф_АдресаДоставки</v8:Type>
+								<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="3f7cfbcc-3dbd-4f9d-a491-84301e08f3cd">
+						<InternalInfo/>
+						<Properties>
+							<Name>Представление</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>21ef8fb5-99ad-409e-9d21-398379db456f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>500</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
 							</Type>
 						</Properties>
 					</Attribute>
@@ -371,49 +387,33 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="ce604b38-6ec7-4d4b-b81a-e5a0a6a94e54">
+			<TabularSection uuid="c33fca3e-844d-401f-8d75-49b6b76fed3e">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.КонтактнаяИнформация" category="TabularSection">
-						<xr:TypeId>6783f047-3b34-437f-a529-cac816fef197</xr:TypeId>
-						<xr:ValueId>f7fd4a15-4ac5-4210-8fce-42ccd636d3d3</xr:ValueId>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.гф_АдресаДоставки" category="TabularSection">
+						<xr:TypeId>ccc80606-4334-4bd6-9e10-daec8e061ac1</xr:TypeId>
+						<xr:ValueId>cdeee4b8-0cfa-4f9e-a870-31301f8765e8</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.КонтактнаяИнформация" category="TabularSectionRow">
-						<xr:TypeId>690162be-3c89-46d9-8183-6e1f606793dd</xr:TypeId>
-						<xr:ValueId>e12382d7-ddf2-4768-b1d6-63ffe201ee67</xr:ValueId>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.гф_АдресаДоставки" category="TabularSectionRow">
+						<xr:TypeId>55277614-8bdc-45ae-aa25-f6742a620b89</xr:TypeId>
+						<xr:ValueId>1a438e25-e70c-4b97-bb4b-c3637eb54b94</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>КонтактнаяИнформация</Name>
+					<Name>гф_АдресаДоставки</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>2629d638-1c9b-4112-b68e-0560bb2d997b</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>6db3e316-af1f-4f16-bed8-3b391350c1b7</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="3f7cfbcc-3dbd-4f9d-a491-84301e08f3cd">
+					<Attribute uuid="cf4f1ac7-94ba-43db-a6c5-669a69c80281">
 						<InternalInfo/>
 						<Properties>
-							<Name>Представление</Name>
+							<Name>Адрес</Name>
 							<Comment/>
 							<ObjectBelonging>Adopted</ObjectBelonging>
-							<ExtendedConfigurationObject>21ef8fb5-99ad-409e-9d21-398379db456f</ExtendedConfigurationObject>
+							<ExtendedConfigurationObject>78d0cac5-be81-4bb2-86fd-003c05d9583c</ExtendedConfigurationObject>
 							<Type>
-								<v8:Type>xs:string</v8:Type>
-								<v8:StringQualifiers>
-									<v8:Length>500</v8:Length>
-									<v8:AllowedLength>Variable</v8:AllowedLength>
-								</v8:StringQualifiers>
-							</Type>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="d12c37c1-7ca6-4721-8d5e-c7e87fa922c2">
-						<InternalInfo/>
-						<Properties>
-							<Name>Вид</Name>
-							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
-							<ExtendedConfigurationObject>a9a6552a-9493-4353-953b-2f7c777b2f61</ExtendedConfigurationObject>
-							<Type>
-								<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+								<v8:Type>cfg:CatalogRef.гф_АдресаДоставки</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>

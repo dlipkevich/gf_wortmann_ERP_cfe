@@ -28,30 +28,11 @@
 			<Comment/>
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>d256db00-0426-48b7-9248-31c0cc7d35e3</ExtendedConfigurationObject>
-			<Owners>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
-			</Owners>
 			<DefaultObjectForm>Catalog.гф_АдресаДоставки.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultListForm>Catalog.гф_АдресаДоставки.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm>Catalog.гф_АдресаДоставки.Form.ФормаВыбора</DefaultChoiceForm>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="eb4b0fa1-c139-4774-99ff-9b5ac5992e4e">
-				<InternalInfo/>
-				<Properties>
-					<Name>Адрес</Name>
-					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>7c232b8a-2d03-4efc-a51b-3a0d9e09c63a</ExtendedConfigurationObject>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>500</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Properties>
-			</Attribute>
 			<Attribute uuid="ae4c1e85-0be7-44b9-ab61-38ccb23d658d">
 				<InternalInfo/>
 				<Properties>
@@ -79,6 +60,22 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>13</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="eb4b0fa1-c139-4774-99ff-9b5ac5992e4e">
+				<InternalInfo/>
+				<Properties>
+					<Name>Адрес</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7c232b8a-2d03-4efc-a51b-3a0d9e09c63a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>

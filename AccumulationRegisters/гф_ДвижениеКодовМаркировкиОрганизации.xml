@@ -34,6 +34,48 @@
 			<ExtendedConfigurationObject>ecfa3886-8b96-46ff-beed-73a4a831f018</ExtendedConfigurationObject>
 			<RegisterType>Balance</RegisterType>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Resource uuid="64706817-d5e0-453e-95a9-903937d125c9">
+				<InternalInfo/>
+				<Properties>
+					<Name>Количество</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7875f031-d6e8-4b80-baca-6ac9acdc9b61</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="fa02853d-5ee5-48fe-8e83-f92ea22bbe28">
+				<InternalInfo/>
+				<Properties>
+					<Name>КМ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>63affce1-c9f8-496b-80cb-c88504d3f8dd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="0b446f7c-d55f-46d2-b633-400af0754791">
+				<InternalInfo/>
+				<Properties>
+					<Name>Склад</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b061d981-3a74-4a32-be25-fe36e70cf98f</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
 	</AccumulationRegister>
 </MetaDataObject>

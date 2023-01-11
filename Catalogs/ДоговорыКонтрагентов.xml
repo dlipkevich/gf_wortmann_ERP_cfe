@@ -54,15 +54,15 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="4fa17049-7012-4128-ade7-398ee968adb8">
+			<Attribute uuid="c78f768e-03fc-4de8-9255-e54e2ece16b2">
 				<InternalInfo/>
 				<Properties>
-					<Name>Контрагент</Name>
+					<Name>ТипДоговора</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>6fe24eab-4e23-451e-8cae-c25d6e78e3df</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>92fb5452-6c85-4d20-915a-3faee12eda7d</ExtendedConfigurationObject>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:EnumRef.ТипыДоговоров</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -87,6 +87,33 @@
 					<ExtendedConfigurationObject>95fd57e5-8d9b-4a9e-aa6b-e248c6f95a7b</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.СтатусыДоговоровКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="bf599f5a-f135-4cf8-b362-7e0a0f97b799">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДатаОкончанияДействия</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>416cdb16-c886-4d38-9741-99dacd92412e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4fa17049-7012-4128-ade7-398ee968adb8">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6fe24eab-4e23-451e-8cae-c25d6e78e3df</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>

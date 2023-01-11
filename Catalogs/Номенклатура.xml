@@ -33,6 +33,18 @@
 			<CodeAllowedLength>Fixed</CodeAllowedLength>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="445852bf-812b-4ad2-aeb7-4cf09436b849">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИспользованиеХарактеристик</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0ad62bbb-21aa-4934-a430-a1bd6aa95383</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВариантыИспользованияХарактеристикНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Attribute uuid="907f9c7e-aae7-49cc-b5e7-8e704e9ca268">
 				<InternalInfo/>
 				<Properties>
@@ -42,6 +54,18 @@
 					<ExtendedConfigurationObject>1b521724-19bd-43e6-b544-b67dc4ba22b9</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e2d83449-65d5-4b18-a3b4-e96d1cda66cc">
+				<InternalInfo/>
+				<Properties>
+					<Name>СтавкаНДС</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>67f48522-0ad7-470e-9baf-c8655912b8f8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -57,15 +81,123 @@
 					</Type>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="e2d83449-65d5-4b18-a3b4-e96d1cda66cc">
+			<Attribute uuid="317bf034-4ae2-44aa-ae4f-43de89f88424">
 				<InternalInfo/>
 				<Properties>
-					<Name>СтавкаНДС</Name>
+					<Name>B2B_СЭ_ТипНоменклатуры</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
-					<ExtendedConfigurationObject>67f48522-0ad7-470e-9baf-c8655912b8f8</ExtendedConfigurationObject>
+					<ExtendedConfigurationObject>85b3bc46-6e67-4368-aa12-edb976a57765</ExtendedConfigurationObject>
 					<Type>
-						<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
+						<v8:Type>cfg:CatalogRef.B2B_СЭ_ТипНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4f84cc96-435e-49cd-a88c-08bca702dac2">
+				<InternalInfo/>
+				<Properties>
+					<Name>Артикул</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>722c3d13-753d-4b4f-82b9-d41340f96d79</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e3f8ac7a-3a97-45d0-a398-3414d5e0eb5c">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидНоменклатуры</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>09a12ed1-441d-49a8-9f36-2093735e8d37</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1bd20af4-7fb6-4361-a6ae-df302e59e869">
+				<InternalInfo/>
+				<Properties>
+					<Name>B2B_Портал</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>13e6daf5-fa6f-403f-abc1-4468c61e417f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.B2B_Портал</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0064eeea-b421-4df4-ad2f-0ecdc444ac26">
+				<InternalInfo/>
+				<Properties>
+					<Name>НаименованиеПолное</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0e7e0970-627b-458f-8d96-ef13c523d2b8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1024</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0bfa4ff3-3b12-492f-bb90-a9919bc95daa">
+				<InternalInfo/>
+				<Properties>
+					<Name>B2B_СЭ_НоменклатураДляВыгрузки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>54ef3a5e-10ff-48d7-830f-f469c4b9a3c7</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="93a0b2df-6079-4a38-94eb-afd84e0dae84">
+				<InternalInfo/>
+				<Properties>
+					<Name>ФайлКартинки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bcf7d7fa-e8eb-40ae-b61c-2f1a7e19a77c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НоменклатураПрисоединенныеФайлы</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c58046d1-1075-4f44-ba8c-91bbb98be265">
+				<InternalInfo/>
+				<Properties>
+					<Name>Описание</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d9e8ce9b-ffce-43e7-9a6c-ee5f2b7ddbdf</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1024</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="35174529-2f52-4de4-ab2d-eacf4fb6df23">
+				<InternalInfo/>
+				<Properties>
+					<Name>СтранаПроисхождения</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4acf9956-9ebd-45aa-adba-2e72cbe6d63b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
 					</Type>
 				</Properties>
 			</Attribute>
