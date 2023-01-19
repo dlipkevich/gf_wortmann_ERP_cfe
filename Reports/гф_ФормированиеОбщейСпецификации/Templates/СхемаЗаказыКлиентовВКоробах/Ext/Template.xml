@@ -1813,20 +1813,6 @@
 		<valueListAllowed>true</valueListAllowed>
 	</parameter>
 	<parameter>
-		<name>ВидЦенЗакупочная</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен закупочная</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-	</parameter>
-	<parameter>
 		<name>КонецПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -1848,7 +1834,21 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен розничная</v8:content>
+				<v8:content>Цена за пару</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидЦенЗакупочная</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Розничная цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -2013,17 +2013,17 @@
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВидЦенЗакупочная</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>ba9ca940-2ebd-4f30-81e9-2a4849f0c098</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>4c1a0351-33e5-4ff5-ab40-d2777ef57b4f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенЗакупочная</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ba9ca940-2ebd-4f30-81e9-2a4849f0c098</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

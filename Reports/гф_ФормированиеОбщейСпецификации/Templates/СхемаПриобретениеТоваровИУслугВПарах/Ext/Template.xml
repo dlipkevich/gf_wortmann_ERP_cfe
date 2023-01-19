@@ -551,8 +551,8 @@
 	ПриобретениеТоваровУслугТовары.Ссылка КАК Приобритение,
 	ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
 	ПриобретениеТоваровУслугТовары.Характеристика КАК Характеристика,
-	МАКСИМУМ(ПриобретениеТоваровУслугТовары.Цена) КАК ЦенаЗаПару,
-	МАКСИМУМ(0) КАК ЦенаСоСкидкой
+	МАКСИМУМ(ЕСТЬNULL(ЗаказКлиентаТовары.гф_ЦенаСоСкидкой, 0)) КАК ЦенаЗаПару,
+	МАКСИМУМ(ЕСТЬNULL(ЗаказКлиентаТовары.гф_ЦенаСоСкидкой, 0)) КАК ЦенаСоСкидкой
 ПОМЕСТИТЬ втЦеныНоменклатуры
 ИЗ
 	Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
@@ -560,6 +560,10 @@
 		ПО ПриобретениеТоваровУслугТовары.Ссылка = ПриобретениеТоваровУслуг.Ссылка
 		ЛЕВОЕ СОЕДИНЕНИЕ втСкладыТоварыВКоробах КАК втСкладыТоварыВКоробах
 		ПО (втСкладыТоварыВКоробах.Склад = ПриобретениеТоваровУслуг.Склад)
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента.Товары КАК ЗаказКлиентаТовары
+		ПО (ПриобретениеТоваровУслугТовары.гф_IDКороба.гф_Заказ = ЗаказКлиентаТовары.Ссылка)
+			И ПриобретениеТоваровУслугТовары.Номенклатура = ЗаказКлиентаТовары.Номенклатура
+			И ПриобретениеТоваровУслугТовары.Характеристика = ЗаказКлиентаТовары.Характеристика
 ГДЕ
 	ПриобретениеТоваровУслуг.Ссылка В(&amp;СписокДокументов)
 	И втСкладыТоварыВКоробах.ТоварыВКоробах = ИСТИНА
@@ -615,7 +619,7 @@
 	втТоварыВКоробах.КоличествоПар,
 	втТоварыВКоробах.КоличествоКоробов,
 	втТоварыВКоробах.КоличествоПарВКоробе,
-	ЕСТЬNULL(втЦеныНоменклатуры.ЦенаЗаПару, 0),
+	ЕСТЬNULL(втЦеныНоменклатуры.ЦенаСоСкидкой, 0),
 	ЕСТЬNULL(втЦеныНоменклатуры.ЦенаСоСкидкой, 0),
 	ЦеныНоменклатурыРозничная.Цена,
 	втТоварыВКоробах.ВариантКомплектации.гф_Штрихкод,
@@ -1814,7 +1818,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен розничная</v8:content>
+				<v8:content>Цена за пару</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1860,7 +1864,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен закупочная</v8:content>
+				<v8:content>Розничная цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -2016,37 +2020,25 @@
 				<dcsset:userSettingID>6a507589-3d53-46af-8add-80336a61f4ef</dcsset:userSettingID>
 			</dcsset:selection>
 			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:Field"/>
-				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>c32ba308-fb4d-4c9b-9329-3367982e1bc9</dcsset:userSettingID>
 			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>26c813b3-2c3f-458f-8b2a-b5f893fb8eda</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенЗакупочная</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>bd213fd8-0016-4dae-bfa8-cd7207523d1e</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>897a7768-8609-4ba7-b3c1-b00263c6c788</dcsset:userSettingID>

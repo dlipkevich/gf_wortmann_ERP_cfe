@@ -1797,7 +1797,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен закупочная</v8:content>
+				<v8:content>Розничная цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1843,7 +1843,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен розничная</v8:content>
+				<v8:content>Цена за пару</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1857,7 +1857,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Вид цен со скидкой</v8:content>
+				<v8:content>Цена со скидкой</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -2013,34 +2013,6 @@
 				<dcsset:userSettingID>6a507589-3d53-46af-8add-80336a61f4ef</dcsset:userSettingID>
 			</dcsset:selection>
 			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:string"/>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:Field"/>
-				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>c32ba308-fb4d-4c9b-9329-3367982e1bc9</dcsset:userSettingID>
 			</dcsset:filter>
