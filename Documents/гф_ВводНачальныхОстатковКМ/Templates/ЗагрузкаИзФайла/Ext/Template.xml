@@ -10,7 +10,7 @@
 		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>3</size>
+		<size>4</size>
 		<columnsItem>
 			<index>0</index>
 			<column>
@@ -29,13 +29,19 @@
 				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
+		<columnsItem>
+			<index>3</index>
+			<column>
+				<formatIndex>4</formatIndex>
+			</column>
+		</columnsItem>
 	</columns>
 	<rowsItem>
 		<index>0</index>
 		<row>
 			<c>
 				<c>
-					<f>4</f>
+					<f>5</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -46,7 +52,7 @@
 					<note>
 						<drawingType>Comment</drawingType>
 						<id>0</id>
-						<formatIndex>5</formatIndex>
+						<formatIndex>6</formatIndex>
 						<text>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -70,7 +76,7 @@
 			</c>
 			<c>
 				<c>
-					<f>6</f>
+					<f>7</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -81,7 +87,7 @@
 					<note>
 						<drawingType>Comment</drawingType>
 						<id>0</id>
-						<formatIndex>5</formatIndex>
+						<formatIndex>6</formatIndex>
 						<text>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -105,7 +111,7 @@
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -116,7 +122,7 @@
 					<note>
 						<drawingType>Comment</drawingType>
 						<id>0</id>
-						<formatIndex>5</formatIndex>
+						<formatIndex>6</formatIndex>
 						<text>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
@@ -134,6 +140,42 @@
 						<beginColumnOffset>-585</beginColumnOffset>
 						<endColumn>2</endColumn>
 						<endColumnOffset>549</endColumnOffset>
+						<autoSize>true</autoSize>
+						<pictureSize>Stretch</pictureSize>
+					</note>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>8</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страна происхождения</v8:content>
+						</v8:item>
+					</tl>
+					<detailParameter>СтранаПроисхождения</detailParameter>
+					<note>
+						<drawingType>Comment</drawingType>
+						<id>0</id>
+						<formatIndex>6</formatIndex>
+						<text>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование страны
+происхождения товара
+Тип: Строка (до 60 символов) в любом регистре
+Пример: БОСНИЯ И ГЕРЦЕГОВИНА</v8:content>
+							</v8:item>
+						</text>
+						<beginRow>1</beginRow>
+						<beginRowOffset>561</beginRowOffset>
+						<endRow>0</endRow>
+						<endRowOffset>177</endRowOffset>
+						<beginColumn>1</beginColumn>
+						<beginColumnOffset>-585</beginColumnOffset>
+						<endColumn>3</endColumn>
+						<endColumnOffset>765</endColumnOffset>
 						<autoSize>true</autoSize>
 						<pictureSize>Stretch</pictureSize>
 					</note>
@@ -246,7 +288,7 @@
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>8</defaultFormatIndex>
+	<defaultFormatIndex>9</defaultFormatIndex>
 	<height>24</height>
 	<vgRows>24</vgRows>
 	<namedItem xsi:type="NamedItemCells">
@@ -279,6 +321,16 @@
 			<endColumn>2</endColumn>
 		</area>
 	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>СтранаПроисхождения</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>0</beginRow>
+			<endRow>0</endRow>
+			<beginColumn>3</beginColumn>
+			<endColumn>3</endColumn>
+		</area>
+	</namedItem>
 	<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
@@ -289,6 +341,9 @@
 	</format>
 	<format>
 		<width>128</width>
+	</format>
+	<format>
+		<width>200</width>
 	</format>
 	<format>
 		<font>0</font>

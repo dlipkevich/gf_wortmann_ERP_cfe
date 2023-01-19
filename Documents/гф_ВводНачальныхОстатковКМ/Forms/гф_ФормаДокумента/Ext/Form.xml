@@ -166,11 +166,24 @@
 					<ContextMenu name="ШтрихкодыУпаковокТоваровGTINКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ШтрихкодыУпаковокТоваровGTINРасширеннаяПодсказка" id="40"/>
 				</InputField>
+				<InputField name="ШтрихкодыУпаковокТоваровспрНомерГТД" id="61">
+					<DataPath>Объект.ШтрихкодыУпаковокТоваров.спрНомерГТД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ШтрихкодыУпаковокТоваровспрНомерГТДКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ШтрихкодыУпаковокТоваровспрНомерГТДРасширеннаяПодсказка" id="63"/>
+				</InputField>
 				<InputField name="ШтрихкодыУпаковокТоваровНомерГТД" id="41">
 					<DataPath>Объект.ШтрихкодыУпаковокТоваров.НомерГТД</DataPath>
+					<Visible>false</Visible>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ШтрихкодыУпаковокТоваровНомерГТДКонтекстноеМеню" id="42"/>
 					<ExtendedTooltip name="ШтрихкодыУпаковокТоваровНомерГТДРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ШтрихкодыУпаковокТоваровСтранаПроисхождения" id="58">
+					<DataPath>Объект.ШтрихкодыУпаковокТоваров.СтранаПроисхождения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ШтрихкодыУпаковокТоваровСтранаПроисхожденияКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ШтрихкодыУпаковокТоваровСтранаПроисхожденияРасширеннаяПодсказка" id="60"/>
 				</InputField>
 			</ChildItems>
 		</Table>
