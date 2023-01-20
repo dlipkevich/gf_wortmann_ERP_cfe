@@ -83,11 +83,25 @@
 			<DataPath>Объект.Склад</DataPath>
 			<CreateButton>false</CreateButton>
 			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.гф_Организация</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
 			<ContextMenu name="СкладКонтекстноеМеню" id="15"/>
 			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="16"/>
 		</InputField>
 		<InputField name="Поставка" id="17">
 			<DataPath>Объект.Поставка</DataPath>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Организация</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
 			<ContextMenu name="ПоставкаКонтекстноеМеню" id="18"/>
 			<ExtendedTooltip name="ПоставкаРасширеннаяПодсказка" id="19"/>
 			<Events>
