@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<InformationRegister uuid="8c9e61c4-fba0-4f10-99ab-31b4d3398e9f">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="Record">
+				<xr:TypeId>aed0d6dd-ce06-49dd-b8c6-84fe5c712438</xr:TypeId>
+				<xr:ValueId>72cec279-562c-47de-bb78-16eb301ef947</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="Manager">
+				<xr:TypeId>fbbddd6e-67a6-4fce-a839-b549c6a4eb55</xr:TypeId>
+				<xr:ValueId>76dd197e-fb1b-4100-9cf5-8a1119f9548a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="Selection">
+				<xr:TypeId>b6d06995-b243-454c-84ec-a430507c5d40</xr:TypeId>
+				<xr:ValueId>f6f38fe2-0db5-427b-a665-382d0e8401da</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="List">
+				<xr:TypeId>06189eda-9e87-4eb8-ba5b-a580e5ea25ab</xr:TypeId>
+				<xr:ValueId>63ce08c6-90bf-41f4-ab9c-ca0978b50aed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="RecordSet">
+				<xr:TypeId>ee402cf1-f3fe-4a55-bed1-eb1abf6fd97c</xr:TypeId>
+				<xr:ValueId>c3eb4339-5f94-4f48-af13-90ea1bd3daf8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="RecordKey">
+				<xr:TypeId>f4213cc6-6698-45b8-b599-bd6ce4edb65c</xr:TypeId>
+				<xr:ValueId>91af90ae-c3d5-430b-8ab5-84e9b59f3617</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ИсторияСостоянийОригиналовПервичныхДокументов" category="RecordManager">
+				<xr:TypeId>9324faf1-b208-4501-95e8-7ba2740dcd1f</xr:TypeId>
+				<xr:ValueId>117eca5e-457d-4dd4-9b4a-ca517e1692b7</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ИсторияСостоянийОригиналовПервичныхДокументов</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>1b83fb42-2688-4729-a80e-11ef2ffb1a72</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="3d877b8e-6ed8-4ff6-bfe8-2ff274b22830">
+				<InternalInfo/>
+				<Properties>
+					<Name>Состояние</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>49406ad2-ebf1-4f60-af52-7f9561af38e6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СостоянияОригиналовПервичныхДокументов</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Attribute uuid="91456aff-d227-4c80-8469-ce3f29efb56b">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сотрудник</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9c02452c-6408-4daf-a192-23e6056ec728</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Сотрудник</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Dimension uuid="0d98e6bf-545f-4646-9b52-9318e6fc0509">
+				<InternalInfo/>
+				<Properties>
+					<Name>Владелец</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>916ceccf-ba4a-4f47-8cc8-e6e0f890d9cf</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОбъектСУчетомОригиналовПервичныхДокументов</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="018a4b24-28c5-4d47-99ca-e47b65b94b2b">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПервичныйДокумент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>82ef7ef6-2e8b-4359-b9a6-6104b7ebd347</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
