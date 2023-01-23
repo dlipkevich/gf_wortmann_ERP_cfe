@@ -67,6 +67,7 @@
 			<ChildItems>
 				<InputField name="ДанныеФайлаАртикул" id="129">
 					<DataPath>ДанныеФайла.Артикул</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<AutoMaxWidth>false</AutoMaxWidth>
@@ -81,14 +82,9 @@
 					<ContextMenu name="ДанныеФайлаНоменклатураКонтекстноеМеню" id="133"/>
 					<ExtendedTooltip name="ДанныеФайлаНоменклатураРасширеннаяПодсказка" id="134"/>
 				</InputField>
-				<InputField name="ДанныеФайлаВариантКомплектации" id="147">
-					<DataPath>ДанныеФайла.ВариантКомплектации</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДанныеФайлаВариантКомплектацииКонтекстноеМеню" id="148"/>
-					<ExtendedTooltip name="ДанныеФайлаВариантКомплектацииРасширеннаяПодсказка" id="149"/>
-				</InputField>
 				<InputField name="ДанныеФайлаХарактеристикаНаименование" id="135">
 					<DataPath>ДанныеФайла.ХарактеристикаНаименование</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -109,6 +105,29 @@
 					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 					<ContextMenu name="ДанныеФайлаХарактеристикаКонтекстноеМеню" id="139"/>
 					<ExtendedTooltip name="ДанныеФайлаХарактеристикаРасширеннаяПодсказка" id="140"/>
+				</InputField>
+				<InputField name="ДанныеФайлаВариантКомплектацииНаименование" id="150">
+					<DataPath>ДанныеФайла.ВариантКомплектацииНаименование</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант комплектации
+(наименование)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>15</MaxWidth>
+					<ContextMenu name="ДанныеФайлаВариантКомплектацииНаименованиеКонтекстноеМеню" id="151"/>
+					<ExtendedTooltip name="ДанныеФайлаВариантКомплектацииНаименованиеРасширеннаяПодсказка" id="152"/>
+				</InputField>
+				<InputField name="ДанныеФайлаВариантКомплектации" id="147">
+					<DataPath>ДанныеФайла.ВариантКомплектации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаВариантКомплектацииКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="ДанныеФайлаВариантКомплектацииРасширеннаяПодсказка" id="149"/>
 				</InputField>
 				<InputField name="ДанныеФайлаДобавить" id="141">
 					<DataPath>ДанныеФайла.Добавить</DataPath>
@@ -146,6 +165,7 @@
 			<ChildItems>
 				<Button name="ЗаполнитьЗаказ" id="23">
 					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
 					<CommandName>Form.Command.ЗаполнитьЗаказКлиента</CommandName>
 					<Title>
 						<v8:item>
@@ -302,6 +322,21 @@
 					</Title>
 					<Type>
 						<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВариантКомплектацииНаименование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вариант комплектации наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
