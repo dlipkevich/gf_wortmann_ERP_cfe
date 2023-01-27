@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Catalog uuid="69c21038-dc74-4257-be2d-bd62c149c7db">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.гф_ВидыЛимитов" category="Object">
+				<xr:TypeId>7fd4dc96-f0cf-4a2a-86fd-aecb1027d792</xr:TypeId>
+				<xr:ValueId>108babff-1659-43f6-89f0-342046d8612f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.гф_ВидыЛимитов" category="Ref">
+				<xr:TypeId>cdba3a06-3901-4327-9152-067ef8b236b3</xr:TypeId>
+				<xr:ValueId>a9295d7f-e9bb-4561-af0d-a1825ccf14bd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.гф_ВидыЛимитов" category="Selection">
+				<xr:TypeId>550ee077-8f3f-4a33-9e4a-0f5c38ca0982</xr:TypeId>
+				<xr:ValueId>4e7484d5-a5eb-4a80-a3bf-498c3adb274c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.гф_ВидыЛимитов" category="List">
+				<xr:TypeId>f731d720-945a-4676-bcef-a6d511100ff3</xr:TypeId>
+				<xr:ValueId>81249f69-d6ae-403e-bf57-0c63144a81fb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.гф_ВидыЛимитов" category="Manager">
+				<xr:TypeId>29123c43-2786-4c7b-b6f4-e4c60e0864bd</xr:TypeId>
+				<xr:ValueId>ba2873ef-5ce7-4104-a08f-cdd189d1398f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ВидыЛимитов</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>b158c156-92e1-4bb2-afc8-78be699f9ffe</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="6411d97b-e1b9-43f5-ba4a-111a9856510f">
+				<InternalInfo/>
+				<Properties>
+					<Name>Бюджет</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4647a7fd-211f-4143-beb1-b2abf59d6803</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_Бюджеты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="44b0496e-ddfa-4395-8803-47eee6da902a">
+				<InternalInfo/>
+				<Properties>
+					<Name>ТипЛимита</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7a57a0fb-ef04-4baa-8ecd-cb47905d5f92</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_ТипыЛимитов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>
