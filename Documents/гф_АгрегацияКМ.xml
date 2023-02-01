@@ -54,7 +54,7 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>1f064cf6-17d9-40a0-8786-d65a1dbc4a72</ExtendedConfigurationObject>
 					<Type>
-						<v8:TypeSet>cfg:DefinedType.ОснованиеМаркировкаТоваровИСМП</v8:TypeSet>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
 					</Type>
 				</Properties>
 			</Attribute>
@@ -105,6 +105,18 @@
 					<ExtendedConfigurationObject>73179e7e-fcfc-4e39-b1ce-f93ad3495777</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects>
+					<Attribute uuid="c3d9d2bb-a89f-40f7-a0bd-982cb7c57cf0">
+						<InternalInfo/>
+						<Properties>
+							<Name>АртикулАгрегата</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>f2fcbc0f-fa78-4506-a4d5-6aa1498eb6c5</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
 					<Attribute uuid="3c889daf-acac-4a2a-b805-ed1448051802">
 						<InternalInfo/>
 						<Properties>
@@ -121,18 +133,6 @@
 							</Type>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c3d9d2bb-a89f-40f7-a0bd-982cb7c57cf0">
-						<InternalInfo/>
-						<Properties>
-							<Name>АртикулАгрегата</Name>
-							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
-							<ExtendedConfigurationObject>f2fcbc0f-fa78-4506-a4d5-6aa1498eb6c5</ExtendedConfigurationObject>
-							<Type>
-								<v8:Type>cfg:CatalogRef.ВариантыКомплектацииНоменклатуры</v8:Type>
-							</Type>
-						</Properties>
-					</Attribute>
 					<Attribute uuid="00e1bf79-b013-4ffb-950b-8488abca6605">
 						<InternalInfo/>
 						<Properties>
@@ -142,6 +142,34 @@
 							<ExtendedConfigurationObject>93dc328d-af2d-43d3-bfb2-803aef7bcf23</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="466697ff-3547-41e9-9777-835d97cd04cb">
+						<InternalInfo/>
+						<Properties>
+							<Name>Движение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>c6a9f4ea-7de5-4ad1-b970-53299d963250</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.гф_ВидДвиженияАгрегацииКМ</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0d34b4df-7a37-4dd1-89c5-c66dd65a6369">
+						<InternalInfo/>
+						<Properties>
+							<Name>ЗначениеШтрихкода</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>113ae5ac-b746-4595-8396-3053d20fe38c</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>50</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
 							</Type>
 						</Properties>
 					</Attribute>
