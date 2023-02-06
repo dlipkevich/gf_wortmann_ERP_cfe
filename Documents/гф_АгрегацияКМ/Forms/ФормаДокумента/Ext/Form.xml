@@ -213,6 +213,11 @@
 										<CommandName>Form.Command.ЗагрузитьИзВнешнегоФайла</CommandName>
 										<ExtendedTooltip name="ТоварыЗагрузитьИзВнешнегоФайлаРасширеннаяПодсказка" id="55"/>
 									</Button>
+									<Button name="ТоварыЗаполнитьВидДвижения" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьВидДвижения</CommandName>
+										<ExtendedTooltip name="ТоварыЗаполнитьВидДвиженияРасширеннаяПодсказка" id="76"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="22"/>
@@ -270,6 +275,12 @@
 								</InputField>
 								<InputField name="ТоварыДвижение" id="60">
 									<DataPath>Объект.Товары.Движение</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Движение (вид агрегации)</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТоварыДвижениеКонтекстноеМеню" id="63"/>
 									<ExtendedTooltip name="ТоварыДвижениеРасширеннаяПодсказка" id="64"/>
@@ -350,6 +361,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action callType="Override">гф_ЗагрузитьИзВнешнегоФайлаВместо</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЗаполнитьВидДвижения" id="1000001">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить вид движения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить вид движения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action callType="Override">гф_ЗаполнитьВидДвиженияВместо</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 	</Commands>
