@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<InformationRegister uuid="1b9cbf6c-3d54-4759-a406-53d20d552203">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.СтатусыДокументовИСМП" category="Record">
+				<xr:TypeId>9d81b6e3-951c-46f3-be90-3da2691fb0ba</xr:TypeId>
+				<xr:ValueId>df4589e8-8715-46f7-b5a5-a22a5e9c56cb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.СтатусыДокументовИСМП" category="Manager">
+				<xr:TypeId>baa373ef-dbb3-4930-b4c7-e7c5c118cba1</xr:TypeId>
+				<xr:ValueId>8248e92a-433e-4afc-929f-124b2fad69ed</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.СтатусыДокументовИСМП" category="Selection">
+				<xr:TypeId>971cba9d-5650-4b3f-ac7b-dc8bec104a02</xr:TypeId>
+				<xr:ValueId>fb2e2919-9df0-45a7-9979-9027b60c8791</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.СтатусыДокументовИСМП" category="List">
+				<xr:TypeId>388de3cd-d2e9-41b0-acb2-d12849b9954f</xr:TypeId>
+				<xr:ValueId>10568959-508e-4f31-a637-af4062a24da5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.СтатусыДокументовИСМП" category="RecordSet">
+				<xr:TypeId>8c4b71c3-3e6f-4d1e-8938-ad8aeb835a19</xr:TypeId>
+				<xr:ValueId>4388e8bb-e15e-4631-be97-2c696852c627</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.СтатусыДокументовИСМП" category="RecordKey">
+				<xr:TypeId>d4b5bb9a-aded-4575-b798-fea488d16458</xr:TypeId>
+				<xr:ValueId>3026f13c-6727-46d9-95cd-09e8d5e74d68</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.СтатусыДокументовИСМП" category="RecordManager">
+				<xr:TypeId>4b8dee63-1391-4f8c-832a-08f9c9188e31</xr:TypeId>
+				<xr:ValueId>219cc938-369b-4c63-9d09-f9318295fab0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>СтатусыДокументовИСМП</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>e35d34cf-4f67-45fd-af60-6b03f2ced591</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="dac36c5d-b87d-4a91-9be0-4638647b4b1e">
+				<InternalInfo/>
+				<Properties>
+					<Name>Статус</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>93fe6aa4-e3f5-4ad8-a8df-d172a4a0989c</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="8ec8b9ab-a193-4092-a100-264d73f23ba3">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДальнейшееДействие1</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>778edb4d-99cd-4f34-a220-392c5acbbf81</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДальнейшиеДействияПоВзаимодействиюИСМП</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="12b4347d-23d3-428a-8598-07debbdb5810">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДальнейшееДействие2</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>02c772d8-ca7c-4733-b753-b43445e061c6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДальнейшиеДействияПоВзаимодействиюИСМП</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="4fbccd25-0310-4c83-986b-67af6b9e51e2">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДальнейшееДействие3</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6ff31260-6912-40a0-bd35-624543774597</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДальнейшиеДействияПоВзаимодействиюИСМП</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="95a1f859-0593-4d65-b045-cd25862370bc">
+				<InternalInfo/>
+				<Properties>
+					<Name>Документ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5546370c-2541-46ee-a615-fc82c0ced8a4</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДокументыИСМП</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

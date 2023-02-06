@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Catalog uuid="6d379dc8-85ef-4a15-b886-f26efc1b9f26">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.КонтактныеЛицаПартнеров" category="Object">
+				<xr:TypeId>658b01be-8cfa-48e8-82e6-14b0038f849b</xr:TypeId>
+				<xr:ValueId>f3b23c1e-60fb-4fd1-940d-417c5c22af54</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.КонтактныеЛицаПартнеров" category="Ref">
+				<xr:TypeId>d2003069-0b01-4183-b3d3-291833c2e140</xr:TypeId>
+				<xr:ValueId>8e67334e-2419-40da-bdfb-c8f8b1afa580</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.КонтактныеЛицаПартнеров" category="Selection">
+				<xr:TypeId>1a361bb0-cba4-4a0a-9e43-1af06c6648be</xr:TypeId>
+				<xr:ValueId>fd69eb9a-0312-43b3-88c6-3dbcdf6b5007</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.КонтактныеЛицаПартнеров" category="List">
+				<xr:TypeId>b0e0ef32-7941-4be7-90e7-24d0de9453c7</xr:TypeId>
+				<xr:ValueId>2484f60d-8afd-434f-9d2c-c9e0c9a302e7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.КонтактныеЛицаПартнеров" category="Manager">
+				<xr:TypeId>f445d585-0f92-4af4-92aa-33b195916a64</xr:TypeId>
+				<xr:ValueId>e6a3df46-c188-4274-af78-b0f7b3908037</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КонтактныеЛицаПартнеров</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>877a04b6-4c0b-4715-b826-6ac77909e040</ExtendedConfigurationObject>
+			<Hierarchical>false</Hierarchical>
+			<Owners>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Партнеры</xr:Item>
+			</Owners>
+			<DefaultFolderForm/>
+			<DefaultFolderChoiceForm/>
+			<AuxiliaryFolderForm/>
+			<AuxiliaryFolderChoiceForm/>
+		</Properties>
+		<ChildObjects>
+			<TabularSection uuid="032218df-6c7a-4b30-84c2-e19b742cbd06">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.КонтактныеЛицаПартнеров.гф_ГруппыДоступа" category="TabularSection">
+						<xr:TypeId>af5fd6cb-4bab-4c28-b6ac-9b33d127113e</xr:TypeId>
+						<xr:ValueId>8f78f77d-93d9-478c-ba27-55812df8f844</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.КонтактныеЛицаПартнеров.гф_ГруппыДоступа" category="TabularSectionRow">
+						<xr:TypeId>46a04898-34a9-483c-a65f-a50068b51a91</xr:TypeId>
+						<xr:ValueId>e0498be2-c72c-439b-94d6-addc5cbc7cf4</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ГруппыДоступа</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>ed31d02d-0ed6-47bd-9f17-bd91beff58a7</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="13d4ada0-9f53-4c96-9de5-d2d99f33b802">
+						<InternalInfo/>
+						<Properties>
+							<Name>ГруппаДоступа</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>a446ad25-ba59-45e2-9491-3a8e5aa5655f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ГруппыДоступа</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="562e24b8-a38d-466e-ac40-56413ce79e82">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.КонтактныеЛицаПартнеров.КонтактнаяИнформация" category="TabularSection">
+						<xr:TypeId>fe7c0173-260a-4f42-a50c-7360634a7002</xr:TypeId>
+						<xr:ValueId>41f07cb7-0052-4802-a377-0e72124d3631</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.КонтактныеЛицаПартнеров.КонтактнаяИнформация" category="TabularSectionRow">
+						<xr:TypeId>09abf42c-9bc3-45ca-95b6-aac232266d5e</xr:TypeId>
+						<xr:ValueId>efc96693-c595-4268-a1c1-fd0a270614c2</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>КонтактнаяИнформация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>65059fcf-d30d-4366-aabc-1736a2a1198c</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="d1e6f115-6df4-404c-b665-b30262dde9ad">
+						<InternalInfo/>
+						<Properties>
+							<Name>Вид</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>1507bf85-d479-4d4c-b34f-ae3f3fbe92d0</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ВидыКонтактнойИнформации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="47e87ee5-9146-4c0f-8a05-c59db4e72fe0">
+						<InternalInfo/>
+						<Properties>
+							<Name>Представление</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>b63093be-8b18-45db-919f-2d2f35cdb506</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>500</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ФормаЭлемента</Form>
+			<Form>гф_ФормаВыбораОтбор</Form>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбора</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

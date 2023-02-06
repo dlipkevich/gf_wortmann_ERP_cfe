@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Document uuid="c1a0566a-9b8e-454e-9921-d20ba68ce2dd">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ЭлектронноеПисьмоИсходящее" category="Object">
+				<xr:TypeId>36fad738-e095-4036-a15b-d8fe20135bc7</xr:TypeId>
+				<xr:ValueId>f5ebae02-3ecc-4819-92cc-2aaa4ea36cd0</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ЭлектронноеПисьмоИсходящее" category="Ref">
+				<xr:TypeId>e2436b63-9864-427b-b606-960a6a525bd5</xr:TypeId>
+				<xr:ValueId>83f75458-c6b3-4aa7-b48b-4103d6ef6db8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ЭлектронноеПисьмоИсходящее" category="Selection">
+				<xr:TypeId>e7f50b09-fe8c-440e-9658-5b3c875db88a</xr:TypeId>
+				<xr:ValueId>f5b6ae2c-589b-41d9-bab0-fd132e271a63</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ЭлектронноеПисьмоИсходящее" category="List">
+				<xr:TypeId>f4b64cbe-7771-4a56-9e91-b106f21c64e5</xr:TypeId>
+				<xr:ValueId>92cbee8c-582c-4611-8fe6-e80ecb83cdbf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ЭлектронноеПисьмоИсходящее" category="Manager">
+				<xr:TypeId>03306cfd-61ce-4210-ab28-247f79a5e1d7</xr:TypeId>
+				<xr:ValueId>1f7c19b7-570d-462c-b261-29809af3364f</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ЭлектронноеПисьмоИсходящее</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>8f2b8a8e-4cd3-45e3-89ae-1cc4bd0ff30a</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="ca7e3fb1-b8cb-4af4-8437-267bb4a3fea8">
+				<InternalInfo/>
+				<Properties>
+					<Name>СтатусПисьма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b80ddaf8-c5c3-4bde-98ed-74a1a0446f38</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыИсходящегоЭлектронногоПисьма</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b63c26d1-bce0-47d8-937e-18ef7c62907e">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДатаОтправления</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0510206f-eef0-4a5e-aeb7-d53c26d34adb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f75c67d2-40aa-49d6-902a-62485c651e05">
+				<InternalInfo/>
+				<Properties>
+					<Name>Тема</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>683861f9-9a5f-47db-8b03-959f839d5a3a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1024</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cdad5ea3-dce7-4ef2-87de-8cb5719c7bd8">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>2ee0d56b-cd7c-42db-8fb6-c1567fe1967d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="b9698195-e816-42ac-8a56-1d5abcb977eb">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЭлектронноеПисьмоИсходящее.гф_ПрикрепленныеДокументы" category="TabularSection">
+						<xr:TypeId>2ee011ad-bae0-434d-9790-034e11d15233</xr:TypeId>
+						<xr:ValueId>8d828301-96c0-4bd4-ae8e-da67a5cce493</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЭлектронноеПисьмоИсходящее.гф_ПрикрепленныеДокументы" category="TabularSectionRow">
+						<xr:TypeId>2d05fae8-227b-4564-bef1-6085280bd62f</xr:TypeId>
+						<xr:ValueId>e2354a6c-dc72-47dd-a0a2-d7ece08bd387</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>гф_ПрикрепленныеДокументы</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>82e6567d-c5e7-48b2-adcc-8b287270cc96</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="72ffd5c5-1197-4d97-8023-724e417aebe4">
+						<InternalInfo/>
+						<Properties>
+							<Name>Документ</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0bbf1ce2-30e8-4b3e-8b7c-33515184a9d4</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="2e5e0b29-c4cc-47f6-b20b-809c7dc46cb3">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма" category="TabularSection">
+						<xr:TypeId>8dfdbb70-a7c1-464f-bedc-7481faa85e59</xr:TypeId>
+						<xr:ValueId>1144026a-d951-4fd4-8ec9-073f8a0db9d0</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.ЭлектронноеПисьмоИсходящее.ПолучателиПисьма" category="TabularSectionRow">
+						<xr:TypeId>dc541427-b987-432f-a1ed-4342e05a62a8</xr:TypeId>
+						<xr:ValueId>b669fa09-e0b3-4126-aef7-b36733a90ca7</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ПолучателиПисьма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>64c91eaa-084f-4801-8dbf-4e075c689c2b</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="210727d4-7c1a-430c-9d5f-31c8af955d50">
+						<InternalInfo/>
+						<Properties>
+							<Name>Контакт</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>3aa12805-823a-439b-b039-fb9940aee312</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.КонтактВзаимодействия</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
