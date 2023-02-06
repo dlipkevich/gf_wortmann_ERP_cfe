@@ -115,7 +115,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ПредопределенныеЗначения</v8:content>
+							<v8:content>Предопределенные значения</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ГруппаПредопределенныеЗначенияРасширеннаяПодсказка" id="43"/>
@@ -172,6 +172,77 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПредопределенныеЗначенияЗначениеКонтекстноеМеню" id="64"/>
 									<ExtendedTooltip name="ПредопределенныеЗначенияЗначениеРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПредопределенныеЗначенияДляВыгрузки" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предопределенные значения для выгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа предопределенные значения для выгрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПредопределенныеЗначенияДляВыгрузкиРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<Table name="ПредопределенныеЗначенияДляВыгрузки" id="68">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПредопределенныеЗначенияДляВыгрузки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиКонтекстноеМеню" id="69"/>
+							<AutoCommandBar name="ПредопределенныеЗначенияДляВыгрузкиКоманднаяПанель" id="70"/>
+							<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиРасширеннаяПодсказка" id="71"/>
+							<SearchStringAddition name="ПредопределенныеЗначенияДляВыгрузкиСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>ПредопределенныеЗначенияДляВыгрузки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПредопределенныеЗначенияДляВыгрузкиСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>ПредопределенныеЗначенияДляВыгрузки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПредопределенныеЗначенияДляВыгрузкиУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>ПредопределенныеЗначенияДляВыгрузки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПредопределенныеЗначенияДляВыгрузкиНомерСтроки" id="81">
+									<DataPath>Объект.ПредопределенныеЗначенияДляВыгрузки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиНомерСтрокиКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+								<InputField name="ПредопределенныеЗначенияДляВыгрузкиНаименование" id="84">
+									<DataPath>Объект.ПредопределенныеЗначенияДляВыгрузки.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиНаименованиеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиНаименованиеРасширеннаяПодсказка" id="86"/>
+								</InputField>
+								<InputField name="ПредопределенныеЗначенияДляВыгрузкиЗначение" id="87">
+									<DataPath>Объект.ПредопределенныеЗначенияДляВыгрузки.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПредопределенныеЗначенияДляВыгрузкиЗначениеКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ПредопределенныеЗначенияДляВыгрузкиЗначениеРасширеннаяПодсказка" id="89"/>
 								</InputField>
 							</ChildItems>
 						</Table>
