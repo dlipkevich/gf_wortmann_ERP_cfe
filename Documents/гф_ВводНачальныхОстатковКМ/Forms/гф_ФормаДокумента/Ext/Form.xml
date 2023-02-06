@@ -120,6 +120,11 @@
 						<CommandName>Form.Command.ЗагрузитьКМизФайла</CommandName>
 						<ExtendedTooltip name="ШтрихкодыУпаковокТоваровЗагрузитьКМизФайлаРасширеннаяПодсказка" id="51"/>
 					</Button>
+					<Button name="ШтрихкодыУпаковокТоваровПодобратьGTIN" id="64">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодобратьGTIN</CommandName>
+						<ExtendedTooltip name="ШтрихкодыУпаковокТоваровПодобратьGTINРасширеннаяПодсказка" id="65"/>
+					</Button>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="ШтрихкодыУпаковокТоваровРасширеннаяПодсказка" id="22"/>
@@ -255,6 +260,21 @@
 			</ToolTip>
 			<Action>ЗагрузитьКМизФайла</Action>
 			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ПодобратьGTIN" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать GTIN</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать GTIN</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьGTIN</Action>
 		</Command>
 	</Commands>
 </Form>
