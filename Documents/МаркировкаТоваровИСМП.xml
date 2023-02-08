@@ -30,6 +30,51 @@
 			<ExtendedConfigurationObject>53ae58fd-269c-418d-9ff7-35861d950c1c</ExtendedConfigurationObject>
 			<RegisterRecords/>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<TabularSection uuid="3605b48b-77b2-4d7c-a212-4f3362306d20">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.МаркировкаТоваровИСМП.Товары" category="TabularSection">
+						<xr:TypeId>a11d5d46-06cf-40f8-983a-4b5866daf5da</xr:TypeId>
+						<xr:ValueId>6ab4150f-a98f-4e85-99cf-b911eef8072d</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.МаркировкаТоваровИСМП.Товары" category="TabularSectionRow">
+						<xr:TypeId>ad0d9910-bf9d-422a-bfe6-93ce23f772af</xr:TypeId>
+						<xr:ValueId>661ca9cc-97b3-4812-8d9c-7b0a221a5737</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Товары</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>624e4801-e14a-4ad7-bcf1-13e3391c48ba</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="98bb703c-01bf-49b1-a768-f147f35bfc73">
+						<InternalInfo/>
+						<Properties>
+							<Name>Номенклатура</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>59cdaca5-eafe-4aa1-bcf9-1d44c01ac8be</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.Номенклатура</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="7f163e49-0955-4e44-8d02-9bd2ed6b4189">
+						<InternalInfo/>
+						<Properties>
+							<Name>Характеристика</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>b059c2e7-0474-4d33-a119-96e32665cf0f</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:DefinedType.ХарактеристикаНоменклатуры</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
 	</Document>
 </MetaDataObject>
