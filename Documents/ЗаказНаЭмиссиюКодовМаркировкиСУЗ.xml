@@ -31,6 +31,66 @@
 			<RegisterRecords/>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="a158c3b6-7e67-4656-bfc5-a7d043ad0d0e">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДокументОснование</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6315aeae-ebcd-41bc-a2d8-8dfbd6f10faf</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОснованиеЗаказНаЭмиссиюКодовМаркировкиИСМП</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="fc553f46-4802-410d-a9de-6a67470f2836">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4d9830d6-8ddf-4354-89f8-654848b43c6e</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="84ab6082-9140-4380-bd30-0131a3bcfa58">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидПродукции</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>c8d3d70c-d5f4-4ad0-94be-17679b3fa7eb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="926dd2b9-ca43-4aa7-ad54-dd80029e6650">
+				<InternalInfo/>
+				<Properties>
+					<Name>СпособВводаВОборот</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3f788dca-cb95-4ce3-a6fb-fa6465dda2bd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СпособыВводаВОборотСУЗ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="05afc46e-0bd3-45e1-87c7-91f62157f343">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>859ebec9-e738-4bf4-beb0-98848657f823</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ПользователиИС</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Command uuid="a1d39edf-118d-4bec-8372-ecf9a5b5823e">
 				<Properties>
