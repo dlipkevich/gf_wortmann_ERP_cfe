@@ -1629,7 +1629,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВариантыКомплектацииНоменклатурыТовары.Ссылка КАК ВариантКомплектации,
 	ВариантыКомплектацииНоменклатурыТовары.Характеристика КАК РазмерныйРяд,
 	ВариантыКомплектацииНоменклатурыТовары.Количество КАК КоличествоПар,
@@ -1646,7 +1646,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВТ_ДанныеНоменклатуры.ВариантКомплектации1 КАК ВариантКомплектации1,
 	ВТ_ДанныеНоменклатуры.Номенклатура КАК Номенклатура,
 	ВТ_ДанныеНоменклатуры.КоличествоКоробов КАК КоличествоКоробов,
@@ -1700,7 +1700,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВТ_ДанныеНоменклатурыРасширенные.Номенклатура КАК Номенклатура,
 	ВТ_ДанныеНоменклатурыРасширенные.КоличествоКоробов КАК КоличествоКоробов,
 	ВТ_ДанныеНоменклатурыРасширенные.Качество КАК Качество,
@@ -1737,11 +1737,13 @@
 	ВТ_ДанныеНоменклатурыРасширенные.КодНоменклатурыКонтрагента КАК КодНоменклатурыКонтрагента,
 	ВТ_СоставКомплектации.РазмерныйРяд КАК РазмерныйРяд,
 	ВТ_СоставКомплектации.КоличествоПар КАК КоличествоПарВКоробе,
-	ВЫБОР
-		КОГДА ВТ_СоставКомплектации.ВариантКомплектации.Количество = 0
-			ТОГДА 0
-		ИНАЧЕ ВТ_ДанныеНоменклатурыРасширенные.ЦенаРозничная / ВТ_СоставКомплектации.ВариантКомплектации.Количество
-	КОНЕЦ КАК ЦенаЗаПару,
+	//.. СадомцевСА 14.02.2023 "Цена за пару" - из регистра с отбором по "Оптовой цене" (параметр ВидЦеныЗакупочная)
+	//ВЫБОР
+	//	КОГДА ВТ_СоставКомплектации.ВариантКомплектации.Количество = 0
+	//		ТОГДА 0
+	//	ИНАЧЕ ВТ_ДанныеНоменклатурыРасширенные.ЦенаРозничная / ВТ_СоставКомплектации.ВариантКомплектации.Количество
+	//КОНЕЦ КАК ЦенаЗаПару,
+	ВТ_ДанныеНоменклатурыРасширенные.ЦенаЗакупочная КАК ЦенаЗаПару,
 	0 КАК ЦенаСоСкидкойБезНДС,
 	ВТ_СоставКомплектации.КоличествоПар * ВТ_ДанныеНоменклатурыРасширенные.КоличествоКоробов КАК КоличествоПар,
 	ВТ_ДанныеНоменклатурыРасширенные.ВидТовара КАК ВидТовара,
@@ -1800,18 +1802,21 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВидЦенРозничная</name>
+		<name>КонецПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Цена за пару</v8:content>
+				<v8:content>Конец периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
 		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
 		<name>СписокДокументов</name>
@@ -1833,7 +1838,7 @@
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Розничная цена</v8:content>
+				<v8:content>Оптовая цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1843,21 +1848,18 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>КонецПериода</name>
+		<name>ВидЦенРозничная</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Конец периода</v8:content>
+				<v8:content>Розничная цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыЦен</v8:Type>
 		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -1950,6 +1952,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЦенаРозничная</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Розничная цена</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КодТНВЭД</dcsset:field>
@@ -2012,17 +2020,17 @@
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>4c1a0351-33e5-4ff5-ab40-d2777ef57b4f</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВидЦенЗакупочная</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>ba9ca940-2ebd-4f30-81e9-2a4849f0c098</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>4c1a0351-33e5-4ff5-ab40-d2777ef57b4f</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>

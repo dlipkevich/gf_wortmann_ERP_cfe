@@ -486,6 +486,16 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаДоступа</dataPath>
+			<field>ГруппаДоступа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа доступа</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	гф_ПереводЗначенийРеквизитовИСвойств.Объект КАК Объект,
@@ -536,7 +546,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ РАЗЛИЧНЫЕ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	Склады.Ссылка КАК Склад
 ПОМЕСТИТЬ втСклады
 ИЗ
@@ -544,7 +554,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Склады.Склад КАК Склад,
 	ЕСТЬNULL(СкладыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК ТоварыВКоробах
 ПОМЕСТИТЬ втСкладыТоварыВКоробах
@@ -556,7 +566,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВариантыКомплектацииНоменклатуры.Владелец КАК Номенклатура,
 	ВариантыКомплектацииНоменклатуры.Владелец.Качество КАК Качество,
 	ВариантыКомплектацииНоменклатуры.Характеристика КАК РазмерныйРяд,
@@ -570,7 +580,9 @@
 	ВариантыКомплектацииНоменклатуры.Владелец.СтавкаНДС КАК СтавкаНДС,
 	"" КАК Штрихкод,
 	ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК Контрагент,
-	ЦеныНоменклатурыРозничные.Цена / ВариантыКомплектацииНоменклатуры.Количество КАК ЦенаЗаПару,
+	//.. СадомцевСА 14.02.2023 "Цена за пару" - из регистра с отбором по "Оптовой цене" (параметр ВидЦеныЗакупочная)
+	//ЦеныНоменклатурыРозничные.Цена / ВариантыКомплектацииНоменклатуры.Количество КАК ЦенаЗаПару,
+	ЦеныНоменклатурыЗакупочные.Цена КАК ЦенаЗаПару,
 	0 КАК ЦенаСоСкидкойБезНДС,
 	0 КАК ЦенаСоСкидкойСНДС
 ПОМЕСТИТЬ ВТ_ДанныеНоменклатуры
@@ -1661,7 +1673,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВариантыКомплектацииНоменклатурыТовары.Ссылка КАК ВариантКомплектации,
 	СУММА(ВариантыКомплектацииНоменклатурыТовары.Количество) КАК КоличествоПар
 ПОМЕСТИТЬ ВТ_СоставВариантаКомплектации
@@ -1694,6 +1706,7 @@
 	ВТ_ДопРеквизитыНоменклатуры.ШиринаПолнота КАК ШиринаПолнота,
 	ВТ_ДопРеквизитыНоменклатуры.Технология КАК Технология,
 	ВТ_ДанныеНоменклатуры.Номенклатура КАК Номенклатура,
+	ВТ_ДанныеНоменклатуры.Номенклатура.ГруппаДоступа КАК ГруппаДоступа,
 	ВТ_ДопРеквизитыНоменклатуры.ДатаИзготовления КАК ДатаИзготовления,
 	ВТ_ДопРеквизитыНоменклатуры.Пол КАК Пол,
 	ВТ_ДанныеНоменклатуры.Номенклатура.КодТНВЭД КАК КодТНВЭД,
@@ -2086,11 +2099,11 @@
 		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВидЦенРозничная</name>
+		<name>ВидЦенЗакупочная</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Цена за пару</v8:content>
+				<v8:content>Оптовая цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -2100,7 +2113,7 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВидЦенЗакупочная</name>
+		<name>ВидЦенРозничная</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -2355,31 +2368,42 @@
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ГруппаДоступа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Артикул</dcsset:left>
 					<dcsset:comparisonType>Contains</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
 					<dcsset:comparisonType>Contains</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
 					<dcsset:comparisonType>Contains</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>c32ba308-fb4d-4c9b-9329-3367982e1bc9</dcsset:userSettingID>

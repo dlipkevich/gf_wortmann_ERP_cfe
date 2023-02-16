@@ -453,6 +453,16 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаСоСкидкойСНДС</dataPath>
+			<field>ЦенаСоСкидкойСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена со скидкой СНДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	гф_ПереводЗначенийРеквизитовИСвойств.Объект КАК Объект,
@@ -503,7 +513,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ РАЗЛИЧНЫЕ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	Склады.Ссылка КАК Склад
 ПОМЕСТИТЬ втСклады
 ИЗ
@@ -511,7 +521,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Склады.Склад КАК Склад,
 	ЕСТЬNULL(СкладыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК ТоварыВКоробах
 ПОМЕСТИТЬ втСкладыТоварыВКоробах
@@ -523,7 +533,7 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВнутреннееПотреблениеТовары.Номенклатура КАК Номенклатура,
 	ВнутреннееПотреблениеТовары.Характеристика КАК Характеристика,
 	ВнутреннееПотреблениеТовары.Ссылка КАК ВнутреннееПотребление,
@@ -542,14 +552,16 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВнутреннееПотреблениеТовары.Номенклатура КАК Номенклатура,
 	ВнутреннееПотреблениеТовары.Номенклатура.Качество КАК Качество,
 	ВнутреннееПотреблениеТовары.Характеристика КАК РазмерныйРяд,
 	ВнутреннееПотреблениеТовары.Количество КАК КоличествоПар,
 	0 КАК КоличествоКоробов,
 	0 КАК КоличествоПарВКоробе,
-	0 КАК ЦенаЗаПару,
+	//.. СадомцевСА 14.02.2023 "Цена за пару" - из регистра с отбором по "Оптовой цене" (параметр ВидЦеныЗакупочная)
+	//0 КАК ЦенаЗаПару,
+	ЦеныНоменклатурыЗакупочная.Цена КАК ЦенаЗаПару,
 	0 КАК ЦенаСоСкидкой,
 	ЦеныНоменклатурыРозничная.Цена КАК ЦенаРозничная,
 	"" КАК ШтрихкодКороба,
@@ -1693,7 +1705,10 @@
 	ВТ_ДанныеНоменклатуры.ШтрихкодКороба КАК ШтрихкодКороба,
 	ВТ_ДанныеНоменклатуры.Артикул КАК Артикул,
 	ВТ_ДанныеНоменклатуры.СтавкаНДС КАК СтавкаНДС,
-	ВТ_ДанныеНоменклатуры.ЦенаСоСкидкой КАК ЦенаСоСкидкойБезНДС,
+	//..СадомцевСА 16.02.2023
+	//ВТ_ДанныеНоменклатуры.ЦенаСоСкидкой КАК ЦенаСоСкидкойБезНДС,
+	0 КАК ЦенаСоСкидкойБезНДС,
+	0 КАК ЦенаСоСкидкойСНДС,
 	ВТ_ДанныеНоменклатуры.КоличествоПар КАК КоличествоПар,
 	ВТ_ДанныеНоменклатуры.КоличествоКоробов КАК КоличествоКоробов,
 	ВТ_ДанныеНоменклатуры.КоличествоПарВКоробе КАК КоличествоПарВКоробе,
@@ -1815,11 +1830,11 @@
 		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВидЦенРозничная</name>
+		<name>ВидЦенЗакупочная</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Цена за пару</v8:content>
+				<v8:content>Оптовая цена</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -1829,7 +1844,7 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ВидЦенЗакупочная</name>
+		<name>ВидЦенРозничная</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -1926,7 +1941,16 @@
 					<dcsset:field>ЦенаСоСкидкойБезНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаСоСкидкойСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЦенаРозничная</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Розничная цена</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЦенаЗакупочная</dcsset:field>
@@ -1986,17 +2010,17 @@
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>9cb4860f-70bb-4430-b563-4720b13b7d0b</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВидЦенЗакупочная</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>4b359d28-4e14-48f6-ae34-49c9f4156c1c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидЦенРозничная</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9cb4860f-70bb-4430-b563-4720b13b7d0b</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
