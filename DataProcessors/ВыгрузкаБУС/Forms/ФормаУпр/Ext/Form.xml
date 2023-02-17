@@ -1235,6 +1235,33 @@
 						</Button>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаЗагрузкаСвойств" id="351">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница загрузка свойств</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница загрузка свойств</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗагрузкаСвойствРасширеннаяПодсказка" id="352"/>
+					<ChildItems>
+						<InputField name="Свойство" id="353">
+							<DataPath>Свойство</DataPath>
+							<ContextMenu name="СвойствоКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="СвойствоРасширеннаяПодсказка" id="355"/>
+						</InputField>
+						<Button name="ЗагрузитьСвойства" id="356">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьСвойства</CommandName>
+							<ExtendedTooltip name="ЗагрузитьСвойстваРасширеннаяПодсказка" id="357"/>
+						</Button>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1293,6 +1320,17 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВидыНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Свойство" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -1821,6 +1859,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НоменклатураЗагрузитьСправочникНоменклатура</Action>
+		</Command>
+		<Command name="ЗагрузитьСвойства" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить свойства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить свойства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСвойства</Action>
 		</Command>
 	</Commands>
 </Form>
