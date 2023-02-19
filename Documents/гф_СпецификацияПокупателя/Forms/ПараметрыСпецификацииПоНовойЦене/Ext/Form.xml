@@ -11,26 +11,24 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="ДатаОстатков" id="1">
-			<DataPath>ДатаОстатков</DataPath>
-			<AutoMarkIncomplete>true</AutoMarkIncomplete>
-			<ContextMenu name="ДатаОстатковКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ДатаОстатковРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="ДатаЦен" id="14">
-			<DataPath>ДатаЦен</DataPath>
-			<ContextMenu name="ДатаЦенКонтекстноеМеню" id="15"/>
-			<ExtendedTooltip name="ДатаЦенРасширеннаяПодсказка" id="16"/>
-		</InputField>
 		<CheckBoxField name="ПредоплатныйКлиент" id="8">
 			<DataPath>ПредоплатныйКлиент</DataPath>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ПредоплатныйКлиентКонтекстноеМеню" id="9"/>
 			<ExtendedTooltip name="ПредоплатныйКлиентРасширеннаяПодсказка" id="10"/>
+			<Events>
+				<Event name="OnChange">ПредоплатныйКлиентПриИзменении</Event>
+			</Events>
 		</CheckBoxField>
+		<InputField name="ДатаЦен" id="14">
+			<DataPath>ДатаЦен</DataPath>
+			<ContextMenu name="ДатаЦенКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ДатаЦенРасширеннаяПодсказка" id="16"/>
+		</InputField>
 		<InputField name="ПрайсЛист" id="11">
 			<DataPath>ПрайсЛист</DataPath>
 			<AutoMarkIncomplete>true</AutoMarkIncomplete>
@@ -105,9 +103,6 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
 			</Type>
-			<Save>
-				<Field>ПрайсЛист</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ДатаЦен" id="4">
 			<Title>
@@ -138,9 +133,6 @@
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</Type>
-			<Save>
-				<Field>СкидкаКлиента</Field>
-			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
