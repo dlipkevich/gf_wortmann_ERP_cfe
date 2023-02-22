@@ -213,6 +213,22 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="6d06df4a-46fe-4ed1-ba3a-6b7369891cc6">
+				<InternalInfo/>
+				<Properties>
+					<Name>B2B_НазваниеWeb</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b864cec0-2162-4d16-afa4-f3bcf89717a5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
 			<TabularSection uuid="356e1d1a-633b-435f-8a16-54d01231989f">
 				<InternalInfo>
 					<xr:GeneratedType name="CatalogTabularSection.Номенклатура.B2B_ГруппыНаСайте" category="TabularSection">
@@ -230,7 +246,20 @@
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>93f7df1d-2dd7-49c3-8ac8-ebc467bc6023</ExtendedConfigurationObject>
 				</Properties>
-				<ChildObjects/>
+				<ChildObjects>
+					<Attribute uuid="6a35d1ce-2b68-48cc-8131-b4a26d975442">
+						<InternalInfo/>
+						<Properties>
+							<Name>Группа</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>2afba7f2-20ad-4f54-9f97-347651fd6690</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.B2B_Б_ПользовательскиеГруппыТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Command uuid="e6c7d534-5d28-48d3-a7de-c6a5e9444158">
