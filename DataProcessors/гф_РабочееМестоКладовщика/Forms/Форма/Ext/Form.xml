@@ -52,6 +52,15 @@
 			<Collapsed>true</Collapsed>
 			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="414"/>
 			<ChildItems>
+				<InputField name="Склад" id="540">
+					<DataPath>Объект.Склад</DataPath>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="СкладКонтекстноеМеню" id="541"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="542"/>
+					<Events>
+						<Event name="StartChoice">СкладНачалоВыбора</Event>
+					</Events>
+				</InputField>
 				<InputField name="НастройкиПечати" id="337">
 					<DataPath>Объект.НастройкиПечати</DataPath>
 					<ContextMenu name="НастройкиПечатиКонтекстноеМеню" id="338"/>
@@ -1660,6 +1669,7 @@
 			<Save>
 				<Field>Объект.АвтоматическаяПечать</Field>
 				<Field>Объект.НастройкиПечати</Field>
+				<Field>Объект.Склад</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="УбратьТЧ_СканированиеКМ" id="2">
