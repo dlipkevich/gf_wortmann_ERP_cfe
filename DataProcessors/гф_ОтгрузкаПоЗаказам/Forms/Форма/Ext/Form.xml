@@ -192,6 +192,16 @@
 										</Title>
 										<ExtendedTooltip name="ОтобратьРасширеннаяПодсказка" id="60"/>
 									</Button>
+									<Button name="РазвернутьСтрокиДереваПомеченных" id="251">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.РазвернутьСтрокиДереваПомеченных</CommandName>
+										<ExtendedTooltip name="РазвернутьСтрокиДереваПомеченныхРасширеннаяПодсказка" id="252"/>
+									</Button>
+									<Button name="СвернутьСтрокиДереваВыбораПомеченных" id="249">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СвернутьСтрокиДереваВыбораПомеченных</CommandName>
+										<ExtendedTooltip name="СвернутьСтрокиДереваВыбораПомеченныхРасширеннаяПодсказка" id="250"/>
+									</Button>
 									<Button name="ФормаУстановитьФлажки" id="196">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.УстановитьПометки</CommandName>
@@ -340,6 +350,14 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовИспользоватьЦенуПрайсаКонтекстноеМеню" id="188"/>
 									<ExtendedTooltip name="ДеревоДокументовИспользоватьЦенуПрайсаРасширеннаяПодсказка" id="189"/>
+								</InputField>
+								<InputField name="ДеревоДокументовДействующийЛимит" id="53">
+									<DataPath>ДеревоДокументов.ДействующийЛимит</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>18</Width>
+									<ContextMenu name="ДеревоДокументовДействующийЛимитКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ДеревоДокументовДействующийЛимитРасширеннаяПодсказка" id="55"/>
 								</InputField>
 								<InputField name="ДеревоДокументовНомерАдреса" id="214">
 									<DataPath>ДеревоДокументов.НомерАдреса</DataPath>
@@ -527,14 +545,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСтатусКМКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="ДеревоДокументовСтатусКМРасширеннаяПодсказка" id="52"/>
-								</InputField>
-								<InputField name="ДеревоДокументовДействующийЛимит" id="53">
-									<DataPath>ДеревоДокументов.ДействующийЛимит</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>18</Width>
-									<ContextMenu name="ДеревоДокументовДействующийЛимитКонтекстноеМеню" id="54"/>
-									<ExtendedTooltip name="ДеревоДокументовДействующийЛимитРасширеннаяПодсказка" id="55"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1646,6 +1656,52 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеремещениеТоваров</Action>
+		</Command>
+		<Command name="СвернутьСтрокиДереваВыбораПомеченных" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть строки дерева выбора помеченных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse rows of marked object tree</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СвернутьСтрокиДереваВыбораПомеченных</Action>
+		</Command>
+		<Command name="РазвернутьСтрокиДереваПомеченных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть строки дерева помеченных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expand rows of marked object tree</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьСтрокиДереваПомеченных</Action>
 		</Command>
 	</Commands>
 </Form>
