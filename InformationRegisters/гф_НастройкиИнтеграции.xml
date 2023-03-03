@@ -40,6 +40,177 @@
 			<WriteMode>Independent</WriteMode>
 		</Properties>
 		<ChildObjects>
+			<Resource uuid="d27cac04-e214-46f6-8bfb-dba186dff1f1">
+				<InternalInfo/>
+				<Properties>
+					<Name>АдресHTTPСервиса</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3113c7e4-3d9f-46da-b0db-bb54f85e1b60</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="350a49ca-3a70-43b4-9c5f-16affb028559">
+				<InternalInfo/>
+				<Properties>
+					<Name>Порт</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5fdf374c-874b-4d10-bef2-035424d0e71b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="69da80b6-7d66-42e3-9b96-b597ae203326">
+				<InternalInfo/>
+				<Properties>
+					<Name>Пароль</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>62f51004-f055-4016-bdb6-135169d5803b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="7578c939-8c57-4fdc-bf28-d1a350faa18e">
+				<InternalInfo/>
+				<Properties>
+					<Name>ЗащищенноеСоединение</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>bf80acde-2aa9-4f34-82f1-2d5af32796c1</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="d9f29e77-d163-4975-bf12-96c9554a7a5d">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ключ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4fa80de6-4258-44e1-8058-514c6030cd92</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="28992e77-c83a-417c-b55d-0afcad3580c9">
+				<InternalInfo/>
+				<Properties>
+					<Name>ИмяПубликации</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>54a3da47-b42a-4c1f-b129-5d288b70aa04</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="1c8e3c29-c3e1-489d-b945-a99b70470036">
+				<InternalInfo/>
+				<Properties>
+					<Name>Пользователь</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>0507f541-c18e-47d4-8b54-c1833b6ac28a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="a8f737cd-a71b-483f-815e-985d72a6d1a1">
+				<InternalInfo/>
+				<Properties>
+					<Name>КоличествоЗаписейGTINКОтправке</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b42c01a2-462c-4ea5-a2b3-4a50a574724e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="17823e57-8a3a-4d5b-8e93-eeb2bf9f0a91">
+				<InternalInfo/>
+				<Properties>
+					<Name>МинимальныйТаймаутПолученияFeed</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>504a61dd-784c-4715-bea2-e478ee31a11e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="84f6ce0d-3d1c-48b7-8c19-18ac7febdd25">
+				<InternalInfo/>
+				<Properties>
+					<Name>СвойствоБренд</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>70652a99-d3a2-47a7-a058-90008e4110a5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="93f436fe-e183-45e0-9ca0-3a404446cad1">
+				<InternalInfo/>
+				<Properties>
+					<Name>УчетнаяЗаписьEmailРасылки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7f9d6952-bf32-4910-9110-c8a3aa37a8fa</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
 			<Attribute uuid="ae4bcfb7-4aa1-4daa-9132-8b10b9ab1d6f">
 				<InternalInfo/>
 				<Properties>
@@ -64,6 +235,7 @@
 					</Type>
 				</Properties>
 			</Dimension>
+			<Form>ФормаЗаписи</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>
