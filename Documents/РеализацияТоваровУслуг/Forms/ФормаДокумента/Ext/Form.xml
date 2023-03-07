@@ -2045,6 +2045,21 @@
 															</Button>
 														</ChildItems>
 													</ButtonGroup>
+													<ButtonGroup name="ГруппаТоварыБонусныеБаллы" id="1601">
+														<ExtendedTooltip name="ГруппаТоварыБонусныеБаллыРасширеннаяПодсказка" id="1548"/>
+														<ChildItems>
+															<Button name="ТоварыДобавитьОплатуБонуснымиБаллами" id="1549">
+																<Type>CommandBarButton</Type>
+																<CommandName>0</CommandName>
+																<ExtendedTooltip name="ТоварыДобавитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="1550"/>
+															</Button>
+															<Button name="ТоварыОтменитьОплатуБонуснымиБаллами" id="1551">
+																<Type>CommandBarButton</Type>
+																<CommandName>0</CommandName>
+																<ExtendedTooltip name="ТоварыОтменитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="1552"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
 												</ChildItems>
 											</ButtonGroup>
 										</ChildItems>
@@ -2183,6 +2198,20 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<InputField name="ТоварыНоменклатураПартнера" id="1595">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номенклатура клиента</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Customer items</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТоварыНоменклатураПартнераКонтекстноеМеню" id="1596"/>
+									<ExtendedTooltip name="ТоварыНоменклатураПартнераРасширеннаяПодсказка" id="1597"/>
+								</InputField>
 								<InputField name="ТоварыНоменклатура" id="32">
 									<Width>16</Width>
 									<Wrap>false</Wrap>
@@ -2452,6 +2481,21 @@
 									<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="148"/>
 									<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="817"/>
 								</InputField>
+								<InputField name="ТоварыСуммаБонусныхБалловКСписаниюВВалюте" id="1581">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скидка бонусами</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Discount by bonus points</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеКонтекстноеМеню" id="1583"/>
+									<ExtendedTooltip name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеРасширеннаяПодсказка" id="1598"/>
+								</InputField>
 								<InputField name="ТоварыСумма" id="80">
 									<SkipOnInput>true</SkipOnInput>
 									<Width>9</Width>
@@ -2589,6 +2633,24 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<InputField name="ТоварыСуммаНачисленныхБонусныхБалловВВалюте" id="1582">
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начисленные бонусные баллы</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Accumulated bonus points</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеКонтекстноеМеню" id="1599"/>
+									<ExtendedTooltip name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеРасширеннаяПодсказка" id="1600"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 						<UsualGroup name="ГруппаНадписьИКартинкаНесколькоСкладов" id="1206">
@@ -4270,6 +4332,43 @@ option</v8:content>
 									</ChoiceList>
 									<ContextMenu name="ВариантВыбытияМаркируемойПродукцииКонтекстноеМеню" id="1579"/>
 									<ExtendedTooltip name="ВариантВыбытияМаркируемойПродукцииРасширеннаяПодсказка" id="1580"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаГосКонтракт" id="1584">
+							<Visible>false</Visible>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГосКонтрактРасширеннаяПодсказка" id="1585"/>
+							<ChildItems>
+								<LabelField name="ГосКонтракт" id="1586">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>29</MaxWidth>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="ГосКонтрактКонтекстноеМеню" id="1587"/>
+									<ExtendedTooltip name="ГосКонтрактРасширеннаяПодсказка" id="1588"/>
+								</LabelField>
+								<InputField name="ЭтапГосконтрактаЕИС" id="1589">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Этап</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Step</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<DropListButton>false</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ЭтапГосконтрактаЕИСКонтекстноеМеню" id="1590"/>
+									<ExtendedTooltip name="ЭтапГосконтрактаЕИСРасширеннаяПодсказка" id="1591"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -6668,6 +6767,21 @@ option</v8:content>
 																</Button>
 															</ChildItems>
 														</ButtonGroup>
+														<ButtonGroup name="ГруппаТоварыБонусныеБаллы" id="1601">
+															<ExtendedTooltip name="ГруппаТоварыБонусныеБаллыРасширеннаяПодсказка" id="1548"/>
+															<ChildItems>
+																<Button name="ТоварыДобавитьОплатуБонуснымиБаллами" id="1549">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>0</CommandName>
+																	<ExtendedTooltip name="ТоварыДобавитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="1550"/>
+																</Button>
+																<Button name="ТоварыОтменитьОплатуБонуснымиБаллами" id="1551">
+																	<Type>CommandBarButton</Type>
+																	<CommandName>0</CommandName>
+																	<ExtendedTooltip name="ТоварыОтменитьОплатуБонуснымиБалламиРасширеннаяПодсказка" id="1552"/>
+																</Button>
+															</ChildItems>
+														</ButtonGroup>
 													</ChildItems>
 												</ButtonGroup>
 											</ChildItems>
@@ -6806,6 +6920,20 @@ option</v8:content>
 											</InputField>
 										</ChildItems>
 									</ColumnGroup>
+									<InputField name="ТоварыНоменклатураПартнера" id="1595">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Номенклатура клиента</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Customer items</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ТоварыНоменклатураПартнераКонтекстноеМеню" id="1596"/>
+										<ExtendedTooltip name="ТоварыНоменклатураПартнераРасширеннаяПодсказка" id="1597"/>
+									</InputField>
 									<InputField name="ТоварыНоменклатура" id="32">
 										<Width>16</Width>
 										<Wrap>false</Wrap>
@@ -7075,6 +7203,21 @@ option</v8:content>
 										<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="148"/>
 										<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="817"/>
 									</InputField>
+									<InputField name="ТоварыСуммаБонусныхБалловКСписаниюВВалюте" id="1581">
+										<ReadOnly>true</ReadOnly>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Скидка бонусами</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Discount by bonus points</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеКонтекстноеМеню" id="1583"/>
+										<ExtendedTooltip name="ТоварыСуммаБонусныхБалловКСписаниюВВалютеРасширеннаяПодсказка" id="1598"/>
+									</InputField>
 									<InputField name="ТоварыСумма" id="80">
 										<SkipOnInput>true</SkipOnInput>
 										<Width>9</Width>
@@ -7212,6 +7355,24 @@ option</v8:content>
 											</InputField>
 										</ChildItems>
 									</ColumnGroup>
+									<InputField name="ТоварыСуммаНачисленныхБонусныхБалловВВалюте" id="1582">
+										<UserVisible>
+											<xr:Common>false</xr:Common>
+										</UserVisible>
+										<ReadOnly>true</ReadOnly>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Начисленные бонусные баллы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Accumulated bonus points</v8:content>
+											</v8:item>
+										</Title>
+										<ContextMenu name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеКонтекстноеМеню" id="1599"/>
+										<ExtendedTooltip name="ТоварыСуммаНачисленныхБонусныхБалловВВалютеРасширеннаяПодсказка" id="1600"/>
+									</InputField>
 								</ChildItems>
 							</Table>
 							<UsualGroup name="ГруппаНадписьИКартинкаНесколькоСкладов" id="1206">
@@ -8893,6 +9054,43 @@ option</v8:content>
 										</ChoiceList>
 										<ContextMenu name="ВариантВыбытияМаркируемойПродукцииКонтекстноеМеню" id="1579"/>
 										<ExtendedTooltip name="ВариантВыбытияМаркируемойПродукцииРасширеннаяПодсказка" id="1580"/>
+									</InputField>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаГосКонтракт" id="1584">
+								<Visible>false</Visible>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаГосКонтрактРасширеннаяПодсказка" id="1585"/>
+								<ChildItems>
+									<LabelField name="ГосКонтракт" id="1586">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>29</MaxWidth>
+										<Hiperlink>true</Hiperlink>
+										<ContextMenu name="ГосКонтрактКонтекстноеМеню" id="1587"/>
+										<ExtendedTooltip name="ГосКонтрактРасширеннаяПодсказка" id="1588"/>
+									</LabelField>
+									<InputField name="ЭтапГосконтрактаЕИС" id="1589">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Этап</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Step</v8:content>
+											</v8:item>
+										</Title>
+										<TitleLocation>Left</TitleLocation>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>28</MaxWidth>
+										<DropListButton>false</DropListButton>
+										<ChoiceButton>true</ChoiceButton>
+										<TextEdit>false</TextEdit>
+										<ContextMenu name="ЭтапГосконтрактаЕИСКонтекстноеМеню" id="1590"/>
+										<ExtendedTooltip name="ЭтапГосконтрактаЕИСРасширеннаяПодсказка" id="1591"/>
 									</InputField>
 								</ChildItems>
 							</UsualGroup>
