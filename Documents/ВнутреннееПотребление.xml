@@ -195,14 +195,21 @@
 				</Properties>
 			</Attribute>
 			<Attribute uuid="61bb11c7-1864-4e7a-94ee-5148c0a71b14">
-				<InternalInfo/>
+				<InternalInfo>
+					<xr:PropertyState>
+						<xr:Property>Type</xr:Property>
+						<xr:State>MultiState</xr:State>
+					</xr:PropertyState>
+				</InternalInfo>
 				<Properties>
 					<Name>гф_Контрагент</Name>
 					<Comment/>
 					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>1805fc20-c920-4245-9a80-6ece32a7e542</ExtendedConfigurationObject>
-					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					<Type xsi:type="xr:ExtendedProperty">
+						<xr:ExtendValue xsi:type="v8:TypeDescription">
+							<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+						</xr:ExtendValue>
 					</Type>
 				</Properties>
 			</Attribute>
