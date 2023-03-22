@@ -716,7 +716,7 @@
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>dated</v8:content>
+															<v8:content>from</v8:content>
 														</v8:item>
 													</Title>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -905,7 +905,6 @@
 							<AutoAddIncomplete>false</AutoAddIncomplete>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Объект.Товары</DataPath>
-							<RowPictureDataPath>Объект.Товары.РасхождениеЗаказ</RowPictureDataPath>
 							<RowsPicture>
 								<xr:Ref>CommonPicture.СостоянияСтрок</xr:Ref>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -1257,7 +1256,6 @@
 									<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="215"/>
 								</LabelField>
 								<LabelField name="ТоварыНоменклатураАртикул" id="145">
-									<DataPath>Объект.Товары.Артикул</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
@@ -1283,7 +1281,6 @@
 									<ExtendedTooltip name="ТоварыХарактеристикаExtendedTooltip" id="218"/>
 								</InputField>
 								<CheckBoxField name="ТоварыОбособленно" id="390">
-									<DataPath>Объект.Товары.Обособленно</DataPath>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1340,6 +1337,14 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<LabelField name="ТоварыНазначение" id="433">
+									<DataPath>Объект.Товары.Назначение</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="ТоварыНазначениеКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="ТоварыНазначениеРасширеннаяПодсказка" id="435"/>
+								</LabelField>
 								<InputField name="ТоварыКатегорияЭксплуатации" id="304">
 									<DataPath>Объект.Товары.КатегорияЭксплуатации</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1400,7 +1405,7 @@
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Count</v8:content>
+											<v8:content>Quantity</v8:content>
 										</v8:item>
 									</Title>
 									<Width>8</Width>
@@ -1544,7 +1549,6 @@
 									</ChildItems>
 								</ColumnGroup>
 								<LabelField name="ТоварыПредставлениеОтраженияОперации" id="401">
-									<DataPath>Объект.Товары.ПредставлениеОтраженияОперации</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<CellHyperlink>true</CellHyperlink>
 									<ContextMenu name="ТоварыПредставлениеОтраженияОперацииКонтекстноеМеню" id="404"/>
@@ -1562,7 +1566,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>More</v8:content>
+							<v8:content>Advanced settings</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ГруппаДополнительноExtendedTooltip" id="236"/>
@@ -1650,187 +1654,7 @@
 				<Field>Объект.ВидыЗапасов.ИдентификаторСтроки</Field>
 			</UseAlways>
 			<Columns>
-				<AdditionalColumns table="Объект.Товары">
-					<Column name="ХарактеристикиИспользуются" id="1">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Характеристики используются</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Variants are used</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="Артикул" id="2">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Артикул</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Item ID</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:TypeSet>cfg:DefinedType.Артикул</v8:TypeSet>
-						</Type>
-					</Column>
-					<Column name="ТипНоменклатуры" id="3">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Тип номенклатуры</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Item type</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
-						</Type>
-					</Column>
-					<Column name="АналитикаРасходовОбязательна" id="4">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Аналитика расходов обязательна</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Expense dimension is required</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="РасхождениеЗаказ" id="6">
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>1</v8:Digits>
-								<v8:FractionDigits>0</v8:FractionDigits>
-								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="АналитикаРасходовЗаказРеализация" id="7">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Аналитика расходов заказ реализация</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Dimension of expenses order implementation</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="ИнвентарныйУчет" id="8">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Инвентарный учет</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Stocktaking record</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="ПредставлениеОтраженияОперации" id="9">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Счет списания</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Write-off account</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:string</v8:Type>
-							<v8:StringQualifiers>
-								<v8:Length>0</v8:Length>
-								<v8:AllowedLength>Variable</v8:AllowedLength>
-							</v8:StringQualifiers>
-						</Type>
-					</Column>
-					<Column name="ТипСтатьи" id="10">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Тип статьи</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Item type</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>1</v8:Digits>
-								<v8:FractionDigits>0</v8:FractionDigits>
-								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="АналитикаАктивовПассивовНеИспользуется" id="5">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Аналитика активов пассивов не используется</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Dimension of assets liabilities is not used</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="Обособленно" id="34">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Обособленно</v8:content>
-							</v8:item>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Separately</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="УчетПоФизЛицам" id="36">
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-					<Column name="УчитыватьВВидеГрупповогоОС" id="37">
-						<Type>
-							<v8:Type>xs:boolean</v8:Type>
-						</Type>
-					</Column>
-				</AdditionalColumns>
+				<AdditionalColumns table="Объект.Товары"/>
 			</Columns>
 		</Attribute>
 	</Attributes>
@@ -2548,7 +2372,7 @@
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
-																<v8:content>dated</v8:content>
+																<v8:content>from</v8:content>
 															</v8:item>
 														</Title>
 														<AutoMaxWidth>false</AutoMaxWidth>
@@ -2734,7 +2558,6 @@
 								<AutoAddIncomplete>false</AutoAddIncomplete>
 								<FileDragMode>AsFile</FileDragMode>
 								<DataPath>Объект.Товары</DataPath>
-								<RowPictureDataPath>Объект.Товары.РасхождениеЗаказ</RowPictureDataPath>
 								<RowsPicture>
 									<xr:Ref>CommonPicture.СостоянияСтрок</xr:Ref>
 									<xr:LoadTransparent>false</xr:LoadTransparent>
@@ -3086,7 +2909,6 @@
 										<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="215"/>
 									</LabelField>
 									<LabelField name="ТоварыНоменклатураАртикул" id="145">
-										<DataPath>Объект.Товары.Артикул</DataPath>
 										<UserVisible>
 											<xr:Common>false</xr:Common>
 										</UserVisible>
@@ -3112,7 +2934,6 @@
 										<ExtendedTooltip name="ТоварыХарактеристикаExtendedTooltip" id="218"/>
 									</InputField>
 									<CheckBoxField name="ТоварыОбособленно" id="390">
-										<DataPath>Объект.Товары.Обособленно</DataPath>
 										<ToolTip>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -3169,6 +2990,14 @@
 											</InputField>
 										</ChildItems>
 									</ColumnGroup>
+									<LabelField name="ТоварыНазначение" id="433">
+										<DataPath>Объект.Товары.Назначение</DataPath>
+										<UserVisible>
+											<xr:Common>false</xr:Common>
+										</UserVisible>
+										<ContextMenu name="ТоварыНазначениеКонтекстноеМеню" id="434"/>
+										<ExtendedTooltip name="ТоварыНазначениеРасширеннаяПодсказка" id="435"/>
+									</LabelField>
 									<InputField name="ТоварыКатегорияЭксплуатации" id="304">
 										<DataPath>Объект.Товары.КатегорияЭксплуатации</DataPath>
 										<EditMode>EnterOnInput</EditMode>
@@ -3229,7 +3058,7 @@
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>Count</v8:content>
+												<v8:content>Quantity</v8:content>
 											</v8:item>
 										</Title>
 										<Width>8</Width>
@@ -3373,7 +3202,6 @@
 										</ChildItems>
 									</ColumnGroup>
 									<LabelField name="ТоварыПредставлениеОтраженияОперации" id="401">
-										<DataPath>Объект.Товары.ПредставлениеОтраженияОперации</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<CellHyperlink>true</CellHyperlink>
 										<ContextMenu name="ТоварыПредставлениеОтраженияОперацииКонтекстноеМеню" id="404"/>
@@ -3391,7 +3219,7 @@
 							</v8:item>
 							<v8:item>
 								<v8:lang>en</v8:lang>
-								<v8:content>More</v8:content>
+								<v8:content>Advanced settings</v8:content>
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ГруппаДополнительноExtendedTooltip" id="236"/>
@@ -3478,189 +3306,6 @@
 					<Field>Объект.RegisterRecords</Field>
 					<Field>Объект.ВидыЗапасов.ИдентификаторСтроки</Field>
 				</UseAlways>
-				<Columns>
-					<AdditionalColumns table="Объект.Товары">
-						<Column name="ХарактеристикиИспользуются" id="1">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Характеристики используются</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Variants are used</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="Артикул" id="2">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Артикул</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Item ID</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:TypeSet>cfg:DefinedType.Артикул</v8:TypeSet>
-							</Type>
-						</Column>
-						<Column name="ТипНоменклатуры" id="3">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Тип номенклатуры</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Item type</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
-							</Type>
-						</Column>
-						<Column name="АналитикаРасходовОбязательна" id="4">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Аналитика расходов обязательна</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Expense dimension is required</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="РасхождениеЗаказ" id="6">
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>1</v8:Digits>
-									<v8:FractionDigits>0</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-						</Column>
-						<Column name="АналитикаРасходовЗаказРеализация" id="7">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Аналитика расходов заказ реализация</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Dimension of expenses order implementation</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="ИнвентарныйУчет" id="8">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Инвентарный учет</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Stocktaking record</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="ПредставлениеОтраженияОперации" id="9">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Счет списания</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Write-off account</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:string</v8:Type>
-								<v8:StringQualifiers>
-									<v8:Length>0</v8:Length>
-									<v8:AllowedLength>Variable</v8:AllowedLength>
-								</v8:StringQualifiers>
-							</Type>
-						</Column>
-						<Column name="ТипСтатьи" id="10">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Тип статьи</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Item type</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>1</v8:Digits>
-									<v8:FractionDigits>0</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-						</Column>
-						<Column name="АналитикаАктивовПассивовНеИспользуется" id="5">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Аналитика активов пассивов не используется</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Dimension of assets liabilities is not used</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="Обособленно" id="34">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Обособленно</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Separately</v8:content>
-								</v8:item>
-							</Title>
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="УчетПоФизЛицам" id="36">
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-						<Column name="УчитыватьВВидеГрупповогоОС" id="37">
-							<Type>
-								<v8:Type>xs:boolean</v8:Type>
-							</Type>
-						</Column>
-					</AdditionalColumns>
-				</Columns>
 			</Attribute>
 		</Attributes>
 	</BaseForm>
