@@ -89,7 +89,7 @@
 							<v8:content>Код маркировки</v8:content>
 						</v8:item>
 					</tl>
-					<detailParameter>гф_КМСтрокой</detailParameter>
+					<detailParameter>гф_ПринятыеКМ</detailParameter>
 					<note>
 						<drawingType>Comment</drawingType>
 						<id>0</id>
@@ -267,7 +267,7 @@
 		<width>130</width>
 	</format>
 	<format>
-		<width>123</width>
+		<width>241</width>
 	</format>
 	<format>
 		<font>0</font>
@@ -277,6 +277,7 @@
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<autoMarkIncomplete>true</autoMarkIncomplete>
 		<indent>1</indent>
+		<columnSizeChange>QuickChange</columnSizeChange>
 		<mask>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
@@ -297,6 +298,7 @@
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<autoMarkIncomplete>true</autoMarkIncomplete>
 		<indent>1</indent>
+		<columnSizeChange>QuickChange</columnSizeChange>
 	</format>
 	<format>
 		<font>0</font>
@@ -318,13 +320,15 @@
 		<verticalAlignment>Center</verticalAlignment>
 		<backColor>style:ReportHeaderBackColor</backColor>
 		<indent>1</indent>
+		<columnSizeChange>QuickChange</columnSizeChange>
 	</format>
 	<format>
 		<font>0</font>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<backColor>#F4ECC5</backColor>
-		<textPlacement>Wrap</textPlacement>
+		<textPlacement>Auto</textPlacement>
+		<columnSizeChange>QuickChange</columnSizeChange>
 	</format>
 	<format>
 		<width>72</width>
