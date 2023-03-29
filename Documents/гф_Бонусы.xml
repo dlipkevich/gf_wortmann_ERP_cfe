@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Document uuid="8418cda0-1966-409d-b569-fd2132b6b331">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.гф_Бонусы" category="Object">
+				<xr:TypeId>fa02dc8d-6bff-45a4-a11a-87813c1de698</xr:TypeId>
+				<xr:ValueId>039f372b-8e31-4f6d-8907-966f03823da7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.гф_Бонусы" category="Ref">
+				<xr:TypeId>ac326f06-c125-44cd-916c-e4f1c50a2caa</xr:TypeId>
+				<xr:ValueId>37d6beb2-f4da-44c2-a5ae-709db47a12cf</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.гф_Бонусы" category="Selection">
+				<xr:TypeId>4a10735b-b1b9-4f5b-aeb9-c6dda15ac045</xr:TypeId>
+				<xr:ValueId>428a1db7-866b-4f16-9888-7fd290b3ef4c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.гф_Бонусы" category="List">
+				<xr:TypeId>221f78b4-6817-415a-a348-9619f5fb180e</xr:TypeId>
+				<xr:ValueId>cf86b26d-36e3-4a45-9676-40995c794c22</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.гф_Бонусы" category="Manager">
+				<xr:TypeId>11c25ec0-4d46-42d1-9f20-5c8532157c1a</xr:TypeId>
+				<xr:ValueId>f0a67eb5-d6dc-4c3f-92ca-0a71c6f5973a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_Бонусы</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>3f704a56-cdbc-42a3-bf02-7b5560eff139</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_Бонусы.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_Бонусы.Form.ФормаСписка</DefaultListForm>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="aef110f7-c215-4c81-8f51-252ceb4a7673">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>1aba767c-80d1-4b16-b49e-30553169712b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="306c0bda-1666-4181-bb06-88b373e51a2e">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сезон</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d389d05e-9a9f-40a8-a00c-51484a441de5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="dcd0e55d-546b-490f-a413-89ca6c9066a2">
+				<InternalInfo/>
+				<Properties>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>582af328-d7db-48ea-8273-a8727a3e4317</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f6555588-db9a-4b5b-b842-ce1e3625db77">
+				<InternalInfo/>
+				<Properties>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e4c96233-0c8e-4e8c-a997-a2ddb7fae372</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаДокумента</Form>
+			<Form>ФормаСписка</Form>
+			<TabularSection uuid="5b4a2d31-c9fd-4607-84b1-4990902f5a00">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.гф_Бонусы.Бонусы" category="TabularSection">
+						<xr:TypeId>5902b589-26fa-41ec-95a7-2615dc5bde6a</xr:TypeId>
+						<xr:ValueId>08793de9-f060-49c8-bdec-d34a0054b59d</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.гф_Бонусы.Бонусы" category="TabularSectionRow">
+						<xr:TypeId>dd79ffef-43ad-424a-8c37-cd190484e163</xr:TypeId>
+						<xr:ValueId>b8efb277-923c-42be-a818-e6e77b133c61</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Бонусы</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3fc3c47f-38c4-4754-8043-f2067484fbf1</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="a3051ee2-7827-4367-8385-d36c6ca8730a">
+						<InternalInfo/>
+						<Properties>
+							<Name>Бонус</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>59727f51-ce01-48a0-8bb3-41b9e5284d4e</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.гф_ВидыБонусов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="5a3082ec-12df-4348-8547-b0dd5f602bc9">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>874e7e78-fac0-4f5a-8ab8-de725abd4763</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0fd4f8a6-b4fd-4004-9778-fb80f309b601">
+						<InternalInfo/>
+						<Properties>
+							<Name>ПороговоеЗначение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>3597dbd6-df3e-4e9f-bddb-b7a3f7c42bf0</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>0</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

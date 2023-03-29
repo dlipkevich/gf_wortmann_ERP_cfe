@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>1157</Version>
+			<Version>1158</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -72,6 +72,7 @@
 			<Subsystem>гф_ПочтаРоссии</Subsystem>
 			<Subsystem>Склад</Subsystem>
 			<Subsystem>ЭлектронноеВзаимодействие</Subsystem>
+			<Subsystem>гф_Бонусы</Subsystem>
 			<StyleItem>ПоясняющийТекст</StyleItem>
 			<StyleItem>ПолеСОшибкойФон</StyleItem>
 			<StyleItem>ЦветФонаУдачнойОтправки</StyleItem>
@@ -209,6 +210,9 @@
 			<Role>гф_ИзменениеНоменклатураВнешнихСистем</Role>
 			<Role>гф_РабочееМестоКладовщикаИспользованиеВсехСкладов</Role>
 			<Role>гф_ИспользованиеРаботаСLamoda</Role>
+			<Role>гф_ДобавлениеИзменениеБонусы</Role>
+			<Role>гф_ЧтениеБонусы</Role>
+			<Role>гф_ИспользованиеЗачетБонусы</Role>
 			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
 			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
@@ -376,6 +380,7 @@
 			<Catalog>НомераГТД</Catalog>
 			<Catalog>Приоритеты</Catalog>
 			<Catalog>гф_НоменклатураВнешнихСистем</Catalog>
+			<Catalog>гф_ВидыБонусов</Catalog>
 			<Document>ВнутреннееПотребление</Document>
 			<Document>ПриобретениеТоваровУслуг</Document>
 			<Document>ПриходныйОрдерНаТовары</Document>
@@ -410,6 +415,9 @@
 			<Document>ВозвратВОборотИСМП</Document>
 			<Document>КорректировкаРеализации</Document>
 			<Document>ЗаказНаВнутреннееПотребление</Document>
+			<Document>гф_Бонусы</Document>
+			<Document>ПоступлениеБезналичныхДенежныхСредств</Document>
+			<Document>КорректировкаЗадолженности</Document>
 			<Enum>ИсточникиИнформацииОЦенахДляПечати</Enum>
 			<Enum>СпособыПолученияИзготовленныхКИЗГИСМ</Enum>
 			<Enum>ТипыСкладов</Enum>
@@ -487,6 +495,7 @@
 			<Report>гф_СрокиХранения</Report>
 			<Report>ОстаткиИДоступностьТоваров</Report>
 			<Report>ВедомостьПоТоварамНаСкладах</Report>
+			<Report>гф_БонусыКлиентов</Report>
 			<DataProcessor>гф_ФормированиеСпецификацийПокупателя</DataProcessor>
 			<DataProcessor>гф_ВыставлениеСчетов</DataProcessor>
 			<DataProcessor>гф_ГрупповаяРассылкаДокументов</DataProcessor>
@@ -527,6 +536,7 @@
 			<DataProcessor>КлиентБанк</DataProcessor>
 			<DataProcessor>ЗаполнениеКорректировкиНазначения</DataProcessor>
 			<DataProcessor>УПДЧерновик</DataProcessor>
+			<DataProcessor>гф_ЗачетБонусов</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
 			<InformationRegister>B2B_w_СкидкиКлиентаПоДоговору</InformationRegister>
 			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
@@ -567,11 +577,13 @@
 			<InformationRegister>B2B_ИдентификаторыТиповЦен</InformationRegister>
 			<InformationRegister>гф_ЗначенияСвойствНоменклатурыВнешнейСистемы</InformationRegister>
 			<InformationRegister>гф_ЗначенияХарактеристикНоменклатурыВнешнейСистемы</InformationRegister>
+			<InformationRegister>гф_ИсторияИзмененияБонусов</InformationRegister>
 			<AccumulationRegister>гф_ДвижениеКодовМаркировкиОрганизации</AccumulationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>гф_ДвиженияБюджетов</AccumulationRegister>
 			<AccumulationRegister>ТоварыКОтгрузке</AccumulationRegister>
 			<AccumulationRegister>РасчетыСКлиентами</AccumulationRegister>
+			<AccumulationRegister>гф_БонусыКлиентов</AccumulationRegister>
 			<ChartOfCharacteristicTypes>гф_ГлобальныеЗначения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>СтатьиАктивовПассивов</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>СтатьиРасходов</ChartOfCharacteristicTypes>
