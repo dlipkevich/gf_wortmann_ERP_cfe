@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>1175</Version>
+			<Version>1177</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -73,6 +73,7 @@
 			<Subsystem>Склад</Subsystem>
 			<Subsystem>ЭлектронноеВзаимодействие</Subsystem>
 			<Subsystem>гф_Бонусы</Subsystem>
+			<Subsystem>Производство</Subsystem>
 			<StyleItem>ПоясняющийТекст</StyleItem>
 			<StyleItem>ПолеСОшибкойФон</StyleItem>
 			<StyleItem>ЦветФонаУдачнойОтправки</StyleItem>
@@ -214,6 +215,7 @@
 			<Role>гф_ЧтениеБонусы</Role>
 			<Role>гф_ИспользованиеЗачетБонусы</Role>
 			<Role>гф_БазовыеПраваУТ_безМонитора</Role>
+			<Role>гф_ИспользованиеОбработкиСозданиеСырьяИУслугДляРЗ</Role>
 			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
 			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
@@ -539,6 +541,7 @@
 			<DataProcessor>УПДЧерновик</DataProcessor>
 			<DataProcessor>гф_ЗачетБонусов</DataProcessor>
 			<DataProcessor>гф_СопоставлениеОрдеровИЗаявокНаВозврат</DataProcessor>
+			<DataProcessor>гф_ExtTool_СозданиеСырьяУслуг_v3</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
 			<InformationRegister>B2B_w_СкидкиКлиентаПоДоговору</InformationRegister>
 			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
