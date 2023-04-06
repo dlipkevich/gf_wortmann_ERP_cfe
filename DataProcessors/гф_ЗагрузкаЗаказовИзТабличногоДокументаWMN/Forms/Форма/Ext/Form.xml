@@ -42,6 +42,13 @@
 					</Title>
 					<ExtendedTooltip name="ЗагрузитьExtendedTooltip" id="132"/>
 				</Button>
+				<CheckBoxField name="флТестоваяЗагрузка" id="280">
+					<DataPath>флТестоваяЗагрузка</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="флТестоваяЗагрузкаКонтекстноеМеню" id="281"/>
+					<ExtendedTooltip name="флТестоваяЗагрузкаРасширеннаяПодсказка" id="282"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаЗагрузкаНастройка" id="18">
@@ -906,7 +913,34 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="НомерСтроки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="флТестоваяЗагрузка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тестовая загрузка (без записи документов в базу данных)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
