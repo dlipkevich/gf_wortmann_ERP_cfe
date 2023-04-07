@@ -454,6 +454,50 @@
 				</Properties>
 				<ChildObjects/>
 			</TabularSection>
+			<TabularSection uuid="54dddbaa-55f6-4353-be1f-3bf173d1709f">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.B2B_КонтактныеЛицаПоОрганизациям" category="TabularSection">
+						<xr:TypeId>92a08af7-06a0-4d31-8254-e93c6f3bed1d</xr:TypeId>
+						<xr:ValueId>a6e94d67-35de-4a72-88e8-b7b0c3d3b7c5</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.B2B_КонтактныеЛицаПоОрганизациям" category="TabularSectionRow">
+						<xr:TypeId>0d12e9ad-a4ec-4a65-bb55-b3c47529e097</xr:TypeId>
+						<xr:ValueId>3e059fc6-4b57-4b75-b22a-ef4f2e690aa2</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>B2B_КонтактныеЛицаПоОрганизациям</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>30bf09f0-e090-46f7-87d1-a1391bba29eb</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="ec0220b0-5d07-497f-b269-72b22eca0b40">
+						<InternalInfo/>
+						<Properties>
+							<Name>Организация</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>0a99e353-a9d3-4eeb-994a-3a28b771fc2f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="fdfce4d2-194c-4235-b142-d181999c0c95">
+						<InternalInfo/>
+						<Properties>
+							<Name>ОсновноеКонтактноеЛицо</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>7bd90e52-0763-4fc3-808f-284e9aca4edd</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.КонтактныеЛицаПартнеров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 			<Form>гф_ФормаСпискаАдресаДоставки</Form>
 		</ChildObjects>
