@@ -2,6 +2,9 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="60">
 			<Title>
@@ -35,6 +38,19 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="ТипАдреса" id="62">
+			<DataPath>Объект.ТипАдреса</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип адреса</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<ContextMenu name="ТипАдресаКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ТипАдресаРасширеннаяПодсказка" id="64"/>
+		</InputField>
 		<UsualGroup name="ГруппаСвойстваРеквизиты" id="55">
 			<Title>
 				<v8:item>
@@ -56,7 +72,6 @@
 				<Table name="Реквизиты" id="28">
 					<Representation>List</Representation>
 					<TitleLocation>Top</TitleLocation>
-					<ChangeRowSet>false</ChangeRowSet>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -69,6 +84,9 @@
 					</Title>
 					<TitleTextColor>style:AccentColor</TitleTextColor>
 					<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+					</CommandSet>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="РеквизитыКонтекстноеМеню" id="29"/>
 					<AutoCommandBar name="РеквизитыКоманднаяПанель" id="30">
@@ -130,7 +148,6 @@
 				<Table name="ДополнительныеСведения" id="7">
 					<Representation>List</Representation>
 					<TitleLocation>Top</TitleLocation>
-					<ChangeRowSet>false</ChangeRowSet>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -143,6 +160,9 @@
 					</Title>
 					<TitleTextColor>style:AccentColor</TitleTextColor>
 					<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+					</CommandSet>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ДополнительныеСведенияКонтекстноеМеню" id="8"/>
 					<AutoCommandBar name="ДополнительныеСведенияКоманднаяПанель" id="9">
