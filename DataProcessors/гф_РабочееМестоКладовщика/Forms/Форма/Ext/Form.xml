@@ -1578,36 +1578,42 @@
 									<ChildItems>
 										<LabelField name="Товары_УправлениеПоставкойНомерСтроки" id="376">
 											<DataPath>Объект.Товары_УправлениеПоставкой.LineNumber</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойНомерСтрокиКонтекстноеМеню" id="377"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойНомерСтрокиРасширеннаяПодсказка" id="378"/>
 										</LabelField>
 										<InputField name="Товары_УправлениеПоставкойНоменклатура" id="379">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Номенклатура</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойНоменклатураКонтекстноеМеню" id="380"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойНоменклатураРасширеннаяПодсказка" id="381"/>
 										</InputField>
 										<InputField name="Товары_УправлениеПоставкойКомплектация" id="382">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Комплектация</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойКомплектацияКонтекстноеМеню" id="383"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойКомплектацияРасширеннаяПодсказка" id="384"/>
 										</InputField>
 										<InputField name="Товары_УправлениеПоставкойNVE" id="385">
 											<DataPath>Объект.Товары_УправлениеПоставкой.NVE</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойNVEКонтекстноеМеню" id="386"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойNVEРасширеннаяПодсказка" id="387"/>
 										</InputField>
 										<InputField name="Товары_УправлениеПоставкойСтатусЕН" id="388">
 											<DataPath>Объект.Товары_УправлениеПоставкой.СтатусЕН</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойСтатусЕНКонтекстноеМеню" id="389"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойСтатусЕНРасширеннаяПодсказка" id="390"/>
 										</InputField>
 										<CheckBoxField name="Товары_УправлениеПоставкойНазначен" id="391">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Назначен</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="Товары_УправлениеПоставкойНазначенКонтекстноеМеню" id="392"/>
@@ -1632,6 +1638,7 @@
 											<ChildItems>
 												<CheckBoxField name="Товары_УправлениеПоставкойРаспечатанПризнак" id="394">
 													<DataPath>Объект.Товары_УправлениеПоставкой.РаспечатанПризнак</DataPath>
+													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
@@ -1642,6 +1649,7 @@
 												</CheckBoxField>
 												<InputField name="Товары_УправлениеПоставкойРаспечатанДата" id="397">
 													<DataPath>Объект.Товары_УправлениеПоставкой.РаспечатанДата</DataPath>
+													<ReadOnly>true</ReadOnly>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
