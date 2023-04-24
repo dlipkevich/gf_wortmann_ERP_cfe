@@ -208,6 +208,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="BeforeWrite" callType="After">гф_ПередЗаписьюПосле</Event>
 		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
 	</Events>
 	<ChildItems>
