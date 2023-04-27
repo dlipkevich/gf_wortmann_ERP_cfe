@@ -327,7 +327,7 @@
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<AutoMaxHeight>false</AutoMaxHeight>
-							<MaxHeight>12</MaxHeight>
+							<MaxHeight>10</MaxHeight>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1239,7 +1239,7 @@
 							<ContextMenu name="РезервыКонтекстноеМеню" id="209"/>
 							<AutoCommandBar name="РезервыКоманднаяПанель" id="210">
 								<ChildItems>
-									<Button name="РезервыРезервыЗагрузитьИзТабличногоДокумента" id="518">
+									<Button name="РезервыЗагрузитьИзТабличногоДокумента" id="518">
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.РезервыЗагрузитьИзТабличногоДокумента</CommandName>
@@ -1247,8 +1247,45 @@
 											<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="РезервыРезервыЗагрузитьИзТабличногоДокументаРасширеннаяПодсказка" id="519"/>
+										<ExtendedTooltip name="РезервыЗагрузитьИзТабличногоДокументаРасширеннаяПодсказка" id="519"/>
 									</Button>
+									<Popup name="РезервыГруппаЗаполнить" id="538">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Резервы группа заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="РезервыГруппаЗаполнитьРасширеннаяПодсказка" id="539"/>
+										<ChildItems>
+											<Button name="РезервыЗаполнитьДоступными" id="522">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьДоступными</CommandName>
+												<ExtendedTooltip name="РезервыЗаполнитьДоступнымиРасширеннаяПодсказка" id="523"/>
+											</Button>
+											<Button name="РезервыЗаполнитьЗарезервированными" id="526">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьЗарезервированными</CommandName>
+												<ExtendedTooltip name="РезервыЗаполнитьЗарезервированнымиРасширеннаяПодсказка" id="527"/>
+											</Button>
+											<Button name="РезервыЗаполнитьПереносРезерва" id="532">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПереносРезерва</CommandName>
+												<ExtendedTooltip name="РезервыЗаполнитьПереносРезерваРасширеннаяПодсказка" id="533"/>
+											</Button>
+											<Button name="РезервыЗаполнитьПереносВДругойЗаказ" id="534">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПереносВДругойЗаказ</CommandName>
+												<ExtendedTooltip name="РезервыЗаполнитьПереносВДругойЗаказРасширеннаяПодсказка" id="535"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РезервыРасширеннаяПодсказка" id="211"/>
@@ -1601,7 +1638,7 @@
 							<ContextMenu name="РезервыВКоробахКонтекстноеМеню" id="337"/>
 							<AutoCommandBar name="РезервыВКоробахКоманднаяПанель" id="338">
 								<ChildItems>
-									<Button name="РезервыВКоробахРезервыВКоробахЗагрузитьИзТабличногоДокумента" id="520">
+									<Button name="РезервыВКоробахЗагрузитьИзТабличногоДокумента" id="520">
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.РезервыВКоробахЗагрузитьИзТабличногоДокумента</CommandName>
@@ -1609,8 +1646,45 @@
 											<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="РезервыВКоробахРезервыВКоробахЗагрузитьИзТабличногоДокументаРасширеннаяПодсказка" id="521"/>
+										<ExtendedTooltip name="РезервыВКоробахЗагрузитьИзТабличногоДокументаРасширеннаяПодсказка" id="521"/>
 									</Button>
+									<Popup name="РезервыВКоробахГруппаЗаполнить" id="540">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Резервы в коробах группа заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="РезервыВКоробахГруппаЗаполнитьРасширеннаяПодсказка" id="541"/>
+										<ChildItems>
+											<Button name="РезервыВКоробахЗаполнитьДоступными" id="524">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьДоступными</CommandName>
+												<ExtendedTooltip name="РезервыВКоробахЗаполнитьДоступнымиРасширеннаяПодсказка" id="525"/>
+											</Button>
+											<Button name="РезервыВКоробахЗаполнитьЗарезервированными" id="528">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьЗарезервированными</CommandName>
+												<ExtendedTooltip name="РезервыВКоробахЗаполнитьЗарезервированнымиРасширеннаяПодсказка" id="529"/>
+											</Button>
+											<Button name="РезервыВКоробахЗаполнитьПереносРезерва" id="530">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПереносРезерва</CommandName>
+												<ExtendedTooltip name="РезервыВКоробахЗаполнитьПереносРезерваРасширеннаяПодсказка" id="531"/>
+											</Button>
+											<Button name="РезервыВКоробахЗаполнитьПереносВДругойЗаказ" id="536">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПереносВДругойЗаказ</CommandName>
+												<ExtendedTooltip name="РезервыВКоробахЗаполнитьПереносВДругойЗаказРасширеннаяПодсказка" id="537"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РезервыВКоробахРасширеннаяПодсказка" id="339"/>
@@ -4295,6 +4369,78 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РезервыВКоробахЗагрузитьИзТабличногоДокумента</Action>
+		</Command>
+		<Command name="ЗаполнитьДоступными" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить доступными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить доступными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьДоступными</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьЗарезервированными" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить зарезервированными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить зарезервированными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЗарезервированными</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПереносРезерва" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить перенос резерва</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить перенос резерва</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПереносРезерва</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьПереносВДругойЗаказ" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить перенос в другой заказ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить перенос в другой заказ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПереносВДругойЗаказ</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
