@@ -7,33 +7,97 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Ссылка</dataPath>
-			<field>Ссылка</field>
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусGTIN</dataPath>
+			<field>СтатусGTIN</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус GTIN</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>GTIN</dataPath>
+			<field>GTIN</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GTIN</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
-	ПриобретениеТоваровУслугТовары.Ссылка КАК ДокументПоставки,
-	ПриобретениеТоваровУслугТовары.Ссылка.Дата КАК ДатаДокумента,
-	ПриобретениеТоваровУслугТовары.Номенклатура.Артикул КАК АртикулНоменклатуры,
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ПриобретениеТоваровУслугТовары.Ссылка.Номер КАК Номер,
 	ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
-	ПриобретениеТоваровУслугТовары.Характеристика КАК Размер,
-	ШтрихкодыНоменклатуры.Штрихкод КАК GTIN,
-	ШтрихкодыНоменклатуры.гф_СостояниеВыгрузкиНоменклатуры КАК СтатусGTIN,
-	ПриобретениеТоваровУслугТовары.Ссылка.Контрагент КАК Контрагент,
-	ПриобретениеТоваровУслугТовары.Номенклатура.ОсобенностьУчета КАК ОсобенностьУчета,
-	ВЫБОР
-		КОГДА ПриобретениеТоваровУслугТовары.Ссылка.Проведен
-			ТОГДА "V"
-		ИНАЧЕ ""
-	КОНЕЦ КАК ДокументПроведен
+	ПриобретениеТоваровУслугТовары.Номенклатура.Ссылка КАК Ссылка,
+	ПриобретениеТоваровУслугТовары.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_ИЗ_ПТУ
 ИЗ
 	Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
-		ПО ПриобретениеТоваровУслугТовары.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
-			И ПриобретениеТоваровУслугТовары.Характеристика = ШтрихкодыНоменклатуры.Характеристика
 ГДЕ
-	ПриобретениеТоваровУслугТовары.Ссылка.Дата МЕЖДУ &amp;НачалоОтчета И &amp;КонецОтчета
-	И НЕ ПриобретениеТоваровУслугТовары.Ссылка.ПометкаУдаления</query>
+	ПриобретениеТоваровУслугТовары.Ссылка В(&amp;ПТУ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ИЗ_ПТУ.Номер КАК Номер,
+	ВТ_ИЗ_ПТУ.Номенклатура КАК Номенклатура,
+	ВТ_ИЗ_ПТУ.Ссылка КАК Ссылка,
+	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
+	ШтрихкодыНоменклатуры.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_СоШтрихкодом
+ИЗ
+	ВТ_ИЗ_ПТУ КАК ВТ_ИЗ_ПТУ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+		ПО ВТ_ИЗ_ПТУ.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура
+			И ВТ_ИЗ_ПТУ.Характеристика = ШтрихкодыНоменклатуры.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ_СоШтрихкодом.Номер КАК Номер,
+	ВТ_СоШтрихкодом.Номенклатура КАК Номенклатура,
+	ВТ_СоШтрихкодом.Номенклатура.Артикул КАК Артикул,
+	ВТ_СоШтрихкодом.Штрихкод КАК GTIN,
+	ВТ_СоШтрихкодом.Характеристика КАК Характеристика,
+	гф_СтатусыGTINСрезПоследних.Статус КАК СтатусGTIN
+ИЗ
+	ВТ_СоШтрихкодом КАК ВТ_СоШтрихкодом
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_СтатусыGTIN.СрезПоследних(
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ВТ_СоШтрихкодом.Ссылка КАК Ссылка
+					ИЗ
+						ВТ_СоШтрихкодом КАК ВТ_СоШтрихкодом)) КАК гф_СтатусыGTINСрезПоследних
+		ПО ВТ_СоШтрихкодом.Штрихкод = гф_СтатусыGTINСрезПоследних.GTIN
+			И ВТ_СоШтрихкодом.Номенклатура = гф_СтатусыGTINСрезПоследних.Номенклатура</query>
 	</dataSet>
 	<parameter>
 		<name>Период</name>
@@ -44,62 +108,33 @@
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type>v8:StandardPeriod</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
 		</valueType>
-		<value xsi:type="v8:StandardPeriod">
-			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
-		</value>
-		<useRestriction>false</useRestriction>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПТУ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ПТУ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПриобретениеТоваровУслуг</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
 		<use>Always</use>
-	</parameter>
-	<parameter>
-		<name>НачалоОтчета</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Начало отчета</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаНачала</expression>
-	</parameter>
-	<parameter>
-		<name>КонецОтчета</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Конец отчета</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаОкончания</expression>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Статусы GTIN в ПТУ</v8:content>
-			</v8:item>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Основной</v8:content>
-			</v8:item>
-		</dcsset:presentation>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -112,56 +147,28 @@
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДокументПроведен</dcsset:field>
+					<dcsset:field>Номер</dcsset:field>
 					<dcsset:lwsTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Пр.</v8:content>
+							<v8:content>Номер ПТУ</v8:content>
 						</v8:item>
 					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДокументПоставки</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДатаДокумента</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>АртикулНоменклатуры</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Номенклатура</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Размер</dcsset:field>
+					<dcsset:field>Артикул</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>GTIN</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СтатусGTIN</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>Контрагент</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>ОсобенностьУчета</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ДокументПоставки</dcsset:left>
-					<dcsset:comparisonType>InList</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:ValueListType">
-						<v8:valueType/>
-						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
-					</dcsset:right>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>164094be-219e-4a8b-9308-312c991aebce</dcsset:userSettingID>
-				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">СтатусGTIN</dcsset:left>
@@ -170,64 +177,15 @@
 						<v8:valueType/>
 						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
 					</dcsset:right>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>3e1678be-f8b1-4f2d-819e-516318c5021b</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
-					<dcsset:comparisonType>InList</dcsset:comparisonType>
-					<dcsset:right xsi:type="v8:ValueListType">
-						<v8:valueType/>
-						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
-					</dcsset:right>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>3d459f68-7516-40ef-a9bb-53abaf5ca146</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ДокументПоставки.Проведен</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					<dcsset:presentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Только проведенные документы</v8:content>
-						</v8:item>
-					</dcsset:presentation>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>1efff3f5-6fb9-4b62-a87e-a1380a9f6a9c</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">ОсобенностьУчета</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.ОсобенностиУчетаНоменклатуры.ОбувнаяПродукция</dcsset:right>
-					<dcsset:presentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Только обувная продукция</v8:content>
-						</v8:item>
-					</dcsset:presentation>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>5fdaaf6a-71bc-4804-a3ff-b9546387ccf7</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
-					</dcscor:value>
-					<dcsset:userSettingID>014ab3da-53f7-4348-815a-878b9eaa2162</dcsset:userSettingID>
+					<dcscor:parameter>ПТУ</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ДатаДокумента</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
