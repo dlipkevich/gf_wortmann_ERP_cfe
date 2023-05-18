@@ -10,14 +10,14 @@
 	<AutoTitle>false</AutoTitle>
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ФормаНастройкаСписка" id="204">
+			<Button name="ФормаНастройкаСписка" id="295">
 				<Type>CommandBarButton</Type>
-				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
-				<CommandName>191:14559f7c-853c-42a4-9ea1-01546107747b</CommandName>
+				<CommandName>Form.StandardCommand.ListSettings</CommandName>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="205"/>
+				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="296"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -110,7 +110,12 @@
 											</Button>
 											<Button name="ОбъектЗаказыКлиентовИнвертироватьПометку" id="271">
 												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
 												<CommandName>Form.Command.ИнвертироватьПометку</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.ИнвертироватьФлажки</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
 												<ExtendedTooltip name="ОбъектЗаказыКлиентовИнвертироватьПометкуРасширеннаяПодсказка" id="272"/>
 											</Button>
 										</ChildItems>
@@ -283,12 +288,12 @@
 								<Page name="Группа5" id="279">
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="280"/>
 									<ChildItems>
-										<TextDocumentField name="Протокол" id="283">
+										<SpreadSheetDocumentField name="Протокол" id="283">
 											<DataPath>Протокол</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<ContextMenu name="ПротоколКонтекстноеМеню" id="284"/>
 											<ExtendedTooltip name="ПротоколРасширеннаяПодсказка" id="285"/>
-										</TextDocumentField>
+										</SpreadSheetDocumentField>
 									</ChildItems>
 								</Page>
 								<Page name="Группа6" id="281">
@@ -455,6 +460,7 @@
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
+			<MainAttribute>true</MainAttribute>
 			<UseAlways>
 				<Field>~ДинСписок.Ссылка</Field>
 			</UseAlways>
@@ -490,7 +496,7 @@
 		ПО ЗаказКлиентагф_ТоварыВКоробах.ВариантКомплектации = ВариантыКомплектацииНоменклатуры.Ссылка
 ГДЕ
 	ЗаказКлиента.Проведен
-	И ЗаказКлиента.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыЗаказовКлиентов.НеСогласован)
+	//И ЗаказКлиента.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыЗаказовКлиентов.НеСогласован)
 	И ЗаказКлиентагф_ТоварыВКоробах.ВариантОбеспечения = ЗНАЧЕНИЕ(Перечисление.ВариантыОбеспечения.КОбеспечению)
 	И НЕ ЗаказКлиентагф_ТоварыВКоробах.Отменено
 	И НЕ ЗаказКлиентагф_ТоварыВКоробах.ВариантКомплектации = ЗНАЧЕНИЕ(Справочник.ВариантыКомплектацииНоменклатуры.ПустаяСсылка)
@@ -532,6 +538,17 @@
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 							<dcsset:userSettingID>7ee8c37d-3a3f-431a-9df5-178c8b26cc4b</dcsset:userSettingID>
 						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+							<dcsset:comparisonType>InList</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:ValueListType">
+								<v8:valueType/>
+								<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+							</dcsset:right>
+							<dcsset:userSettingID>25247b16-031b-48fe-8543-4730472b1f7a</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="xs:string">Статус</dcsset:userSettingPresentation>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
@@ -556,7 +573,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ОтборПоДатеЗаказов" id="7">
