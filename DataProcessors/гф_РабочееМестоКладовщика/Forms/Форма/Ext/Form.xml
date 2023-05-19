@@ -4,11 +4,13 @@
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
 	<ScalingMode>Normal</ScalingMode>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаСохранитьЗначения" id="340">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
+				<SkipOnInput>true</SkipOnInput>
 				<CommandName>Form.StandardCommand.SaveValues</CommandName>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаСохранитьЗначенияРасширеннаяПодсказка" id="341"/>
@@ -16,6 +18,7 @@
 			<Button name="ФормаВосстановитьЗначения" id="342">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
+				<SkipOnInput>true</SkipOnInput>
 				<CommandName>Form.StandardCommand.RestoreValues</CommandName>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаВосстановитьЗначенияРасширеннаяПодсказка" id="343"/>
@@ -54,11 +57,13 @@
 			<ChildItems>
 				<InputField name="Склады" id="540">
 					<DataPath>СписокСкладов</DataPath>
+					<SkipOnInput>true</SkipOnInput>
 					<ContextMenu name="СкладыКонтекстноеМеню" id="541"/>
 					<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="542"/>
 				</InputField>
 				<InputField name="НастройкиПечати" id="337">
 					<DataPath>Объект.НастройкиПечати</DataPath>
+					<SkipOnInput>true</SkipOnInput>
 					<ContextMenu name="НастройкиПечатиКонтекстноеМеню" id="338"/>
 					<ExtendedTooltip name="НастройкиПечатиРасширеннаяПодсказка" id="339"/>
 				</InputField>
@@ -74,6 +79,7 @@
 				<PictureDecoration name="Декорация1" id="406">
 					<Width>1</Width>
 					<Height>1</Height>
+					<SkipOnInput>true</SkipOnInput>
 					<ContextMenu name="Декорация1КонтекстноеМеню" id="407"/>
 					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="408"/>
 				</PictureDecoration>
@@ -82,6 +88,7 @@
 		<InputField name="СерияНоменклатуры" id="71">
 			<DataPath>Объект.СерияНоменклатуры</DataPath>
 			<Visible>false</Visible>
+			<SkipOnInput>true</SkipOnInput>
 			<ContextMenu name="СерияНоменклатурыКонтекстноеМеню" id="72"/>
 			<ExtendedTooltip name="СерияНоменклатурыРасширеннаяПодсказка" id="73"/>
 		</InputField>
@@ -141,6 +148,7 @@
 									<ChildItems>
 										<InputField name="NVE" id="65">
 											<DataPath>Объект.NVE</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<Width>40</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -153,6 +161,7 @@
 										</InputField>
 										<CheckBoxField name="АвтоматическаяПечать" id="68">
 											<DataPath>Объект.АвтоматическаяПечать</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<CheckBoxType>CheckBox</CheckBoxType>
 											<ContextMenu name="АвтоматическаяПечатьКонтекстноеМеню" id="69"/>
 											<ExtendedTooltip name="АвтоматическаяПечатьРасширеннаяПодсказка" id="70"/>
@@ -165,6 +174,7 @@
 								<InputField name="Номенклатура" id="74">
 									<DataPath>Объект.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
 									<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="НоменклатураКонтекстноеМеню" id="75"/>
 									<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="76"/>
@@ -179,6 +189,7 @@
 							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="314"/>
 							<ChildItems>
 								<Table name="Товары" id="81">
+									<SkipOnInput>true</SkipOnInput>
 									<ChangeRowSet>false</ChangeRowSet>
 									<ChangeRowOrder>false</ChangeRowOrder>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -192,6 +203,7 @@
 											<Button name="ТоварыПечатьСNVE" id="136">
 												<Type>CommandBarButton</Type>
 												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ПечатьСNVE</CommandName>
 												<BackColor>style:ActivityColor</BackColor>
 												<Picture>
@@ -211,6 +223,7 @@
 											<Button name="ТоварыПечатьСNVEСПредварительнымПросмотром" id="315">
 												<Type>CommandBarButton</Type>
 												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ПечатьСNVEСПредварительнымПросмотром</CommandName>
 												<BackColor>style:ActivityColor</BackColor>
 												<Picture>
@@ -258,6 +271,7 @@
 										<LabelField name="ТоварыНомерСтроки" id="94">
 											<DataPath>Объект.Товары.LineNumber</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>1</Width>
 											<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="95"/>
@@ -266,6 +280,7 @@
 										<CheckBoxField name="ТоварыПометка" id="97">
 											<DataPath>Объект.Товары.Пометка</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -284,6 +299,7 @@
 										<InputField name="ТоварыАртикулУпаковки" id="100">
 											<DataPath>Объект.Товары.АртикулУпаковки</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыАртикулУпаковкиКонтекстноеМеню" id="101"/>
 											<ExtendedTooltip name="ТоварыАртикулУпаковкиРасширеннаяПодсказка" id="102"/>
@@ -291,6 +307,7 @@
 										<InputField name="ТоварыАртикул" id="103">
 											<DataPath>Объект.Товары.Артикул</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>15</Width>
 											<ContextMenu name="ТоварыАртикулКонтекстноеМеню" id="104"/>
@@ -299,6 +316,7 @@
 										<InputField name="ТоварыНоменклатура" id="106">
 											<DataPath>Объект.Товары.Номенклатура</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="107"/>
 											<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="108"/>
@@ -306,6 +324,7 @@
 										<InputField name="ТоварыХарактеристика" id="109">
 											<DataPath>Объект.Товары.Характеристика</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>7</Width>
 											<ContextMenu name="ТоварыХарактеристикаКонтекстноеМеню" id="110"/>
@@ -314,6 +333,7 @@
 										<InputField name="ТоварыКоличествоБазЕдиниц" id="112">
 											<DataPath>Объект.Товары.КоличествоБазЕдиниц</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыКоличествоБазЕдиницКонтекстноеМеню" id="113"/>
 											<ExtendedTooltip name="ТоварыКоличествоБазЕдиницРасширеннаяПодсказка" id="114"/>
@@ -321,6 +341,7 @@
 										<InputField name="ТоварыЕдИзмБазовая" id="115">
 											<DataPath>Объект.Товары.ЕдИзмБазовая</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыЕдИзмБазоваяКонтекстноеМеню" id="116"/>
 											<ExtendedTooltip name="ТоварыЕдИзмБазоваяРасширеннаяПодсказка" id="117"/>
@@ -329,6 +350,7 @@
 											<DataPath>Объект.Товары.КоличествоЭтикеток</DataPath>
 											<Visible>false</Visible>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыКоличествоЭтикетокКонтекстноеМеню" id="119"/>
 											<ExtendedTooltip name="ТоварыКоличествоЭтикетокРасширеннаяПодсказка" id="120"/>
@@ -336,6 +358,7 @@
 										<InputField name="ТоварыNVE" id="121">
 											<DataPath>Объект.Товары.NVE</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыNVEКонтекстноеМеню" id="122"/>
 											<ExtendedTooltip name="ТоварыNVEРасширеннаяПодсказка" id="123"/>
@@ -343,6 +366,7 @@
 										<InputField name="ТоварыСтранаПроисхождения" id="124">
 											<DataPath>Объект.Товары.СтранаПроисхождения</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыСтранаПроисхожденияКонтекстноеМеню" id="125"/>
 											<ExtendedTooltip name="ТоварыСтранаПроисхожденияРасширеннаяПодсказка" id="126"/>
@@ -350,6 +374,7 @@
 										<InputField name="ТоварыКМ" id="127">
 											<DataPath>Объект.Товары.КМ</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыКМКонтекстноеМеню" id="128"/>
 											<ExtendedTooltip name="ТоварыКМРасширеннаяПодсказка" id="129"/>
@@ -357,6 +382,7 @@
 										<InputField name="ТоварыКлиент" id="130">
 											<DataPath>Объект.Товары.Клиент</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыКлиентКонтекстноеМеню" id="131"/>
 											<ExtendedTooltip name="ТоварыКлиентРасширеннаяПодсказка" id="132"/>
@@ -364,6 +390,7 @@
 										<InputField name="ТоварыКодКлиента" id="133">
 											<DataPath>Объект.Товары.КодКлиента</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ТоварыКодКлиентаКонтекстноеМеню" id="134"/>
 											<ExtendedTooltip name="ТоварыКодКлиентаРасширеннаяПодсказка" id="135"/>
@@ -430,6 +457,7 @@
 									<ChildItems>
 										<InputField name="НомерИнвойса" id="200">
 											<DataPath>Объект.НомерИнвойса</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="НомерИнвойсаКонтекстноеМеню" id="201"/>
 											<ExtendedTooltip name="НомерИнвойсаРасширеннаяПодсказка" id="202"/>
@@ -440,6 +468,7 @@
 										<InputField name="СсылкаНаПТУ" id="206">
 											<DataPath>Объект.СсылкаНаПТУ</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<ContextMenu name="СсылкаНаПТУКонтекстноеМеню" id="207"/>
 											<ExtendedTooltip name="СсылкаНаПТУРасширеннаяПодсказка" id="208"/>
 										</InputField>
@@ -459,6 +488,7 @@
 									<ChildItems>
 										<InputField name="Артикул" id="203">
 											<DataPath>Объект.Артикул</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="АртикулКонтекстноеМеню" id="204"/>
 											<ExtendedTooltip name="АртикулРасширеннаяПодсказка" id="205"/>
@@ -468,6 +498,7 @@
 										</InputField>
 										<CheckBoxField name="АвтоматическаяПечать1" id="197">
 											<DataPath>Объект.АвтоматическаяПечать</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="АвтоматическаяПечать1КонтекстноеМеню" id="198"/>
 											<ExtendedTooltip name="АвтоматическаяПечать1РасширеннаяПодсказка" id="199"/>
@@ -480,6 +511,7 @@
 								<InputField name="Номенклатура1" id="213">
 									<DataPath>Объект.Номенклатура</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<SkipOnInput>true</SkipOnInput>
 									<ContextMenu name="Номенклатура1КонтекстноеМеню" id="214"/>
 									<ExtendedTooltip name="Номенклатура1РасширеннаяПодсказка" id="215"/>
 								</InputField>
@@ -506,6 +538,7 @@
 											<Button name="Товары1ПечатьБезNVE" id="317">
 												<Type>CommandBarButton</Type>
 												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ПечатьБезNVE</CommandName>
 												<BackColor>style:ActivityColor</BackColor>
 												<Picture>
@@ -524,6 +557,7 @@
 											<Button name="Товары1ПечатьБезNVEСПредварительнымПросмотром" id="538">
 												<Type>CommandBarButton</Type>
 												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ПечатьБезNVEСПредварительнымПросмотром</CommandName>
 												<BackColor>#FACD21</BackColor>
 												<Picture>
@@ -569,12 +603,14 @@
 									<ChildItems>
 										<LabelField name="Товары1НомерСтроки" id="153">
 											<DataPath>Объект.Товары.LineNumber</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1НомерСтрокиКонтекстноеМеню" id="154"/>
 											<ExtendedTooltip name="Товары1НомерСтрокиРасширеннаяПодсказка" id="155"/>
 										</LabelField>
 										<CheckBoxField name="Товары1Пометка" id="156">
 											<DataPath>Объект.Товары.Пометка</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -592,36 +628,42 @@
 										</CheckBoxField>
 										<InputField name="Товары1АртикулУпаковки" id="159">
 											<DataPath>Объект.Товары.АртикулУпаковки</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1АртикулУпаковкиКонтекстноеМеню" id="160"/>
 											<ExtendedTooltip name="Товары1АртикулУпаковкиРасширеннаяПодсказка" id="161"/>
 										</InputField>
 										<InputField name="Товары1Артикул" id="162">
 											<DataPath>Объект.Товары.Артикул</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1АртикулКонтекстноеМеню" id="163"/>
 											<ExtendedTooltip name="Товары1АртикулРасширеннаяПодсказка" id="164"/>
 										</InputField>
 										<InputField name="Товары1Номенклатура" id="165">
 											<DataPath>Объект.Товары.Номенклатура</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1НоменклатураКонтекстноеМеню" id="166"/>
 											<ExtendedTooltip name="Товары1НоменклатураРасширеннаяПодсказка" id="167"/>
 										</InputField>
 										<InputField name="Товары1Характеристика" id="168">
 											<DataPath>Объект.Товары.Характеристика</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1ХарактеристикаКонтекстноеМеню" id="169"/>
 											<ExtendedTooltip name="Товары1ХарактеристикаРасширеннаяПодсказка" id="170"/>
 										</InputField>
 										<InputField name="Товары1КоличествоБазЕдиниц" id="171">
 											<DataPath>Объект.Товары.КоличествоБазЕдиниц</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1КоличествоБазЕдиницКонтекстноеМеню" id="172"/>
 											<ExtendedTooltip name="Товары1КоличествоБазЕдиницРасширеннаяПодсказка" id="173"/>
 										</InputField>
 										<InputField name="Товары1ЕдИзмБазовая" id="174">
 											<DataPath>Объект.Товары.ЕдИзмБазовая</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1ЕдИзмБазоваяКонтекстноеМеню" id="175"/>
 											<ExtendedTooltip name="Товары1ЕдИзмБазоваяРасширеннаяПодсказка" id="176"/>
@@ -629,36 +671,42 @@
 										<InputField name="Товары1КоличествоЭтикеток" id="177">
 											<DataPath>Объект.Товары.КоличествоЭтикеток</DataPath>
 											<Visible>false</Visible>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1КоличествоЭтикетокКонтекстноеМеню" id="178"/>
 											<ExtendedTooltip name="Товары1КоличествоЭтикетокРасширеннаяПодсказка" id="179"/>
 										</InputField>
 										<InputField name="Товары1NVE" id="180">
 											<DataPath>Объект.Товары.NVE</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1NVEКонтекстноеМеню" id="181"/>
 											<ExtendedTooltip name="Товары1NVEРасширеннаяПодсказка" id="182"/>
 										</InputField>
 										<InputField name="Товары1СтранаПроисхождения" id="183">
 											<DataPath>Объект.Товары.СтранаПроисхождения</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1СтранаПроисхожденияКонтекстноеМеню" id="184"/>
 											<ExtendedTooltip name="Товары1СтранаПроисхожденияРасширеннаяПодсказка" id="185"/>
 										</InputField>
 										<InputField name="Товары1КМ" id="186">
 											<DataPath>Объект.Товары.КМ</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1КМКонтекстноеМеню" id="187"/>
 											<ExtendedTooltip name="Товары1КМРасширеннаяПодсказка" id="188"/>
 										</InputField>
 										<InputField name="Товары1Клиент" id="189">
 											<DataPath>Объект.Товары.Клиент</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1КлиентКонтекстноеМеню" id="190"/>
 											<ExtendedTooltip name="Товары1КлиентРасширеннаяПодсказка" id="191"/>
 										</InputField>
 										<InputField name="Товары1КодКлиента" id="192">
 											<DataPath>Объект.Товары.КодКлиента</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары1КодКлиентаКонтекстноеМеню" id="193"/>
 											<ExtendedTooltip name="Товары1КодКлиентаРасширеннаяПодсказка" id="194"/>
@@ -694,6 +742,7 @@
 							<ChildItems>
 								<InputField name="NVE1" id="220">
 									<DataPath>Объект.NVE</DataPath>
+									<SkipOnInput>true</SkipOnInput>
 									<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="NVE1КонтекстноеМеню" id="221"/>
 									<ExtendedTooltip name="NVE1РасширеннаяПодсказка" id="222"/>
@@ -712,6 +761,7 @@
 											<DataPath>Объект.УпаковочныйЛист</DataPath>
 											<Visible>false</Visible>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -738,6 +788,7 @@
 											<ChildItems>
 												<InputField name="СпособВводаВОборот" id="327">
 													<DataPath>Объект.СпособВводаВОборот</DataPath>
+													<SkipOnInput>true</SkipOnInput>
 													<ContextMenu name="СпособВводаВОборотКонтекстноеМеню" id="328"/>
 													<ExtendedTooltip name="СпособВводаВОборотРасширеннаяПодсказка" id="329"/>
 													<Events>
@@ -746,6 +797,7 @@
 												</InputField>
 												<InputField name="Контрагент" id="332">
 													<DataPath>Объект.Контрагент</DataPath>
+													<SkipOnInput>true</SkipOnInput>
 													<ContextMenu name="КонтрагентКонтекстноеМеню" id="333"/>
 													<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="334"/>
 												</InputField>
@@ -755,6 +807,7 @@
 								</UsualGroup>
 								<CheckBoxField name="АвтоматическаяПечать2" id="516">
 									<DataPath>Объект.АвтоматическаяПечать</DataPath>
+									<SkipOnInput>true</SkipOnInput>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="АвтоматическаяПечать2КонтекстноеМеню" id="517"/>
 									<ExtendedTooltip name="АвтоматическаяПечать2РасширеннаяПодсказка" id="518"/>
@@ -812,6 +865,7 @@
 												<InputField name="УбратьТЧ_СканированиеКМ" id="266">
 													<DataPath>УбратьТЧ_СканированиеКМ</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -826,6 +880,7 @@
 												</InputField>
 												<Button name="ГотовоУдалить" id="261">
 													<Type>UsualButton</Type>
+													<SkipOnInput>true</SkipOnInput>
 													<Width>17</Width>
 													<CommandName>Form.Command.ГотовоУдалить</CommandName>
 													<BackColor>style:ActivityColor</BackColor>
@@ -844,6 +899,7 @@
 										<Table name="ТЧ_Убрать" id="233">
 											<Representation>List</Representation>
 											<CommandBarLocation>Top</CommandBarLocation>
+											<SkipOnInput>true</SkipOnInput>
 											<ChangeRowOrder>false</ChangeRowOrder>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -868,6 +924,7 @@
 													<Button name="ТЧ_УбратьУдалить" id="319">
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
+														<SkipOnInput>true</SkipOnInput>
 														<CommandName>Form.Item.ТЧ_Убрать.StandardCommand.Delete</CommandName>
 														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 														<ExtendedTooltip name="ТЧ_УбратьУдалитьРасширеннаяПодсказка" id="320"/>
@@ -903,6 +960,7 @@
 												<LabelField name="ТЧ_УбратьНомерСтроки" id="246">
 													<DataPath>Объект.ТЧ_Убрать.LineNumber</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТЧ_УбратьНомерСтрокиКонтекстноеМеню" id="247"/>
 													<ExtendedTooltip name="ТЧ_УбратьНомерСтрокиРасширеннаяПодсказка" id="248"/>
@@ -910,6 +968,7 @@
 												<InputField name="ТЧ_УбратьНоменклатура" id="252">
 													<DataPath>Объект.ТЧ_Убрать.Номенклатура</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ТЧ_УбратьНоменклатураКонтекстноеМеню" id="253"/>
@@ -918,6 +977,7 @@
 												<InputField name="ТЧ_УбратьХарактеристика" id="258">
 													<DataPath>Объект.ТЧ_Убрать.Характеристика</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ТЧ_УбратьХарактеристикаКонтекстноеМеню" id="259"/>
@@ -926,6 +986,7 @@
 												<InputField name="ТЧ_УбратьКМ" id="249">
 													<DataPath>Объект.ТЧ_Убрать.КМ</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ТЧ_УбратьКМКонтекстноеМеню" id="250"/>
@@ -934,6 +995,7 @@
 												<InputField name="ТЧ_УбратьАртикул" id="255">
 													<DataPath>Объект.ТЧ_Убрать.Артикул</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТЧ_УбратьАртикулКонтекстноеМеню" id="256"/>
 													<ExtendedTooltip name="ТЧ_УбратьАртикулРасширеннаяПодсказка" id="257"/>
@@ -971,6 +1033,7 @@
 												<InputField name="ДобавитьТЧ_ОтсканируйтеШК" id="302">
 													<DataPath>ДобавитьТЧ_ОтсканируйтеШК</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<ContextMenu name="ДобавитьТЧ_ОтсканируйтеШККонтекстноеМеню" id="303"/>
 													<ExtendedTooltip name="ДобавитьТЧ_ОтсканируйтеШКРасширеннаяПодсказка" id="304"/>
 													<Events>
@@ -979,6 +1042,7 @@
 												</InputField>
 												<Button name="ГотовоДобавить" id="305">
 													<Type>UsualButton</Type>
+													<SkipOnInput>true</SkipOnInput>
 													<Width>17</Width>
 													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 													<CommandName>Form.Command.ГотовоДобавить</CommandName>
@@ -997,6 +1061,7 @@
 										</UsualGroup>
 										<Table name="ТЧ_Добавить" id="271">
 											<CommandBarLocation>Top</CommandBarLocation>
+											<SkipOnInput>true</SkipOnInput>
 											<ChangeRowOrder>false</ChangeRowOrder>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
@@ -1020,6 +1085,7 @@
 													<Button name="ТЧ_ДобавитьУдалить" id="321">
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
+														<SkipOnInput>true</SkipOnInput>
 														<CommandName>Form.Item.ТЧ_Добавить.StandardCommand.Delete</CommandName>
 														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 														<ExtendedTooltip name="ТЧ_ДобавитьУдалитьРасширеннаяПодсказка" id="322"/>
@@ -1055,6 +1121,7 @@
 												<LabelField name="ТЧ_ДобавитьНомерСтроки" id="284">
 													<DataPath>Объект.ТЧ_Добавить.LineNumber</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТЧ_ДобавитьНомерСтрокиКонтекстноеМеню" id="285"/>
 													<ExtendedTooltip name="ТЧ_ДобавитьНомерСтрокиРасширеннаяПодсказка" id="286"/>
@@ -1062,6 +1129,7 @@
 												<InputField name="ТЧ_ДобавитьНоменклатура" id="293">
 													<DataPath>Объект.ТЧ_Добавить.Номенклатура</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ТЧ_ДобавитьНоменклатураКонтекстноеМеню" id="294"/>
@@ -1070,6 +1138,7 @@
 												<InputField name="ТЧ_ДобавитьХарактеристика" id="299">
 													<DataPath>Объект.ТЧ_Добавить.Характеристика</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ТЧ_ДобавитьХарактеристикаКонтекстноеМеню" id="300"/>
@@ -1078,6 +1147,7 @@
 												<InputField name="ТЧ_ДобавитьGTIN" id="287">
 													<DataPath>Объект.ТЧ_Добавить.GTIN</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТЧ_ДобавитьGTINКонтекстноеМеню" id="288"/>
 													<ExtendedTooltip name="ТЧ_ДобавитьGTINРасширеннаяПодсказка" id="289"/>
@@ -1085,6 +1155,7 @@
 												<InputField name="ТЧ_ДобавитьАртикул" id="290">
 													<DataPath>Объект.ТЧ_Добавить.Артикул</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТЧ_ДобавитьАртикулКонтекстноеМеню" id="291"/>
 													<ExtendedTooltip name="ТЧ_ДобавитьАртикулРасширеннаяПодсказка" id="292"/>
@@ -1092,6 +1163,7 @@
 												<CheckBoxField name="ТЧ_ДобавитьСераяМетка" id="296">
 													<DataPath>Объект.ТЧ_Добавить.СераяМетка</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ТЧ_ДобавитьСераяМеткаКонтекстноеМеню" id="297"/>
@@ -1126,6 +1198,7 @@
 							<ChildItems>
 								<Table name="СписокЗаказыНаЭмиссию" id="444">
 									<TitleLocation>Top</TitleLocation>
+									<SkipOnInput>true</SkipOnInput>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>СписокЗаказыНаЭмиссию</DataPath>
@@ -1161,6 +1234,7 @@
 											<Button name="СписокЗаказыНаЭмиссиюОбновить" id="510">
 												<Type>CommandBarButton</Type>
 												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Item.СписокЗаказыНаЭмиссию.StandardCommand.Refresh</CommandName>
 												<Shape>Oval</Shape>
 												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
@@ -1169,6 +1243,7 @@
 											<Button name="СписокЗаказыНаЭмиссиюЗаказатьКодыМаркировки" id="512">
 												<Type>CommandBarButton</Type>
 												<Visible>false</Visible>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ЗаказатьКодыМаркировки</CommandName>
 												<Shape>Oval</Shape>
 												<ExtendedTooltip name="СписокЗаказыНаЭмиссиюЗаказатьКодыМаркировкиРасширеннаяПодсказка" id="513"/>
@@ -1203,21 +1278,25 @@
 									<ChildItems>
 										<LabelField name="СписокЗаказыНаЭмиссиюНомер" id="495">
 											<DataPath>СписокЗаказыНаЭмиссию.Номер</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<ContextMenu name="СписокЗаказыНаЭмиссиюНомерКонтекстноеМеню" id="496"/>
 											<ExtendedTooltip name="СписокЗаказыНаЭмиссиюНомерРасширеннаяПодсказка" id="497"/>
 										</LabelField>
 										<LabelField name="СписокЗаказыНаЭмиссиюДата" id="498">
 											<DataPath>СписокЗаказыНаЭмиссию.Дата</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<ContextMenu name="СписокЗаказыНаЭмиссиюДатаКонтекстноеМеню" id="499"/>
 											<ExtendedTooltip name="СписокЗаказыНаЭмиссиюДатаРасширеннаяПодсказка" id="500"/>
 										</LabelField>
 										<LabelField name="СписокЗаказыНаЭмиссиюNVE" id="504">
 											<DataPath>СписокЗаказыНаЭмиссию.NVE</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<ContextMenu name="СписокЗаказыНаЭмиссиюNVEКонтекстноеМеню" id="505"/>
 											<ExtendedTooltip name="СписокЗаказыНаЭмиссиюNVEРасширеннаяПодсказка" id="506"/>
 										</LabelField>
 										<LabelField name="СписокЗаказыНаЭмиссиюДокументОснование" id="466">
 											<DataPath>СписокЗаказыНаЭмиссию.ДокументОснование</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1229,6 +1308,7 @@
 										</LabelField>
 										<LabelField name="СписокЗаказыНаЭмиссиюДальнейшееДействие1" id="507">
 											<DataPath>СписокЗаказыНаЭмиссию.ДальнейшееДействие1</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1264,6 +1344,7 @@
 												<Button name="ТаблицаСтатусовNVEДляПечатиОбновитьСтатусыИсключений" id="442">
 													<Type>UsualButton</Type>
 													<Representation>PictureAndText</Representation>
+													<SkipOnInput>true</SkipOnInput>
 													<Width>11</Width>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<CommandName>Form.Command.ОбновитьСтатусыИсключений</CommandName>
@@ -1283,6 +1364,7 @@
 													<ChildItems>
 														<RadioButtonField name="РежимПечатиИслючаемыеКМ" id="519">
 															<DataPath>РежимПечатиИслючаемыеКМ</DataPath>
+															<SkipOnInput>true</SkipOnInput>
 															<TitleLocation>None</TitleLocation>
 															<RadioButtonType>RadioButtons</RadioButtonType>
 															<ColumnsCount>2</ColumnsCount>
@@ -1324,6 +1406,7 @@
 													<Type>UsualButton</Type>
 													<Visible>false</Visible>
 													<Representation>PictureAndText</Representation>
+													<SkipOnInput>true</SkipOnInput>
 													<CommandName>Form.Command.ПечататьДобавленныеКМ</CommandName>
 													<Picture>
 														<xr:Ref>StdPicture.Print</xr:Ref>
@@ -1335,6 +1418,7 @@
 												</Button>
 												<InputField name="NVEДляПечатиИсключения" id="526">
 													<DataPath>NVEДляПечатиИсключения</DataPath>
+													<SkipOnInput>true</SkipOnInput>
 													<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 													<TitleLocation>Left</TitleLocation>
 													<ContextMenu name="NVEДляПечатиИсключенияКонтекстноеМеню" id="527"/>
@@ -1347,6 +1431,7 @@
 										</UsualGroup>
 										<Table name="ТаблицаСтатусовNVEДляПечати" id="417">
 											<Representation>List</Representation>
+											<SkipOnInput>true</SkipOnInput>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -1395,6 +1480,7 @@
 												<InputField name="ТаблицаСтатусовNVEДляПечатиNVE" id="430">
 													<DataPath>ТаблицаСтатусовNVEДляПечати.NVE</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТаблицаСтатусовNVEДляПечатиNVEКонтекстноеМеню" id="431"/>
 													<ExtendedTooltip name="ТаблицаСтатусовNVEДляПечатиNVEРасширеннаяПодсказка" id="432"/>
@@ -1402,6 +1488,7 @@
 												<InputField name="ТаблицаСтатусовNVEДляПечатиСтатус" id="436">
 													<DataPath>ТаблицаСтатусовNVEДляПечати.Статус</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТаблицаСтатусовNVEДляПечатиСтатусКонтекстноеМеню" id="437"/>
 													<ExtendedTooltip name="ТаблицаСтатусовNVEДляПечатиСтатусРасширеннаяПодсказка" id="438"/>
@@ -1409,6 +1496,7 @@
 												<InputField name="ТаблицаСтатусовNVEДляПечатиДатаСтатуса" id="439">
 													<DataPath>ТаблицаСтатусовNVEДляПечати.ДатаСтатуса</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ТаблицаСтатусовNVEДляПечатиДатаСтатусаКонтекстноеМеню" id="440"/>
 													<ExtendedTooltip name="ТаблицаСтатусовNVEДляПечатиДатаСтатусаРасширеннаяПодсказка" id="441"/>
@@ -1465,6 +1553,7 @@
 									<ChildItems>
 										<InputField name="НомерИнвойса1" id="346">
 											<DataPath>Объект.НомерИнвойса</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="НомерИнвойса1КонтекстноеМеню" id="347"/>
 											<ExtendedTooltip name="НомерИнвойса1РасширеннаяПодсказка" id="348"/>
@@ -1474,6 +1563,7 @@
 										</InputField>
 										<InputField name="NVE2" id="352">
 											<DataPath>Объект.NVE</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="NVE2КонтекстноеМеню" id="353"/>
 											<ExtendedTooltip name="NVE2РасширеннаяПодсказка" id="354"/>
@@ -1492,6 +1582,7 @@
 									<ChildItems>
 										<InputField name="СсылкаНаПТУ1" id="349">
 											<DataPath>Объект.СсылкаНаПТУ</DataPath>
+											<SkipOnInput>true</SkipOnInput>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1506,6 +1597,7 @@
 										</InputField>
 										<Button name="УправлениеПоставкойОбновить" id="359">
 											<Type>UsualButton</Type>
+											<SkipOnInput>true</SkipOnInput>
 											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 											<CommandName>Form.Command.УправлениеПоставкойОбновить</CommandName>
 											<Shape>Oval</Shape>
@@ -1523,6 +1615,7 @@
 							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="403"/>
 							<ChildItems>
 								<Table name="Товары_УправлениеПоставкой" id="363">
+									<SkipOnInput>true</SkipOnInput>
 									<ChangeRowSet>false</ChangeRowSet>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -1534,12 +1627,14 @@
 										<ChildItems>
 											<Button name="Товары_УправлениеПоставкойЗакрытьПоставку" id="409">
 												<Type>CommandBarButton</Type>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ЗакрытьПоставку</CommandName>
 												<Shape>Oval</Shape>
 												<ExtendedTooltip name="Товары_УправлениеПоставкойЗакрытьПоставкуРасширеннаяПодсказка" id="410"/>
 											</Button>
 											<Button name="Товары_УправлениеПоставкойЗакрытьПоставкуПринудительно" id="411">
 												<Type>CommandBarButton</Type>
+												<SkipOnInput>true</SkipOnInput>
 												<CommandName>Form.Command.ЗакрытьПоставкуПринудительно</CommandName>
 												<Shape>Oval</Shape>
 												<ExtendedTooltip name="Товары_УправлениеПоставкойЗакрытьПоставкуПринудительноРасширеннаяПодсказка" id="412"/>
@@ -1575,6 +1670,7 @@
 										<LabelField name="Товары_УправлениеПоставкойНомерСтроки" id="376">
 											<DataPath>Объект.Товары_УправлениеПоставкой.LineNumber</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойНомерСтрокиКонтекстноеМеню" id="377"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойНомерСтрокиРасширеннаяПодсказка" id="378"/>
@@ -1582,6 +1678,7 @@
 										<InputField name="Товары_УправлениеПоставкойНоменклатура" id="379">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Номенклатура</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойНоменклатураКонтекстноеМеню" id="380"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойНоменклатураРасширеннаяПодсказка" id="381"/>
@@ -1589,6 +1686,7 @@
 										<InputField name="Товары_УправлениеПоставкойКомплектация" id="382">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Комплектация</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойКомплектацияКонтекстноеМеню" id="383"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойКомплектацияРасширеннаяПодсказка" id="384"/>
@@ -1596,6 +1694,7 @@
 										<InputField name="Товары_УправлениеПоставкойNVE" id="385">
 											<DataPath>Объект.Товары_УправлениеПоставкой.NVE</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойNVEКонтекстноеМеню" id="386"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойNVEРасширеннаяПодсказка" id="387"/>
@@ -1603,6 +1702,7 @@
 										<InputField name="Товары_УправлениеПоставкойСтатусЕН" id="388">
 											<DataPath>Объект.Товары_УправлениеПоставкой.СтатусЕН</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="Товары_УправлениеПоставкойСтатусЕНКонтекстноеМеню" id="389"/>
 											<ExtendedTooltip name="Товары_УправлениеПоставкойСтатусЕНРасширеннаяПодсказка" id="390"/>
@@ -1610,6 +1710,7 @@
 										<CheckBoxField name="Товары_УправлениеПоставкойНазначен" id="391">
 											<DataPath>Объект.Товары_УправлениеПоставкой.Назначен</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<SkipOnInput>true</SkipOnInput>
 											<EditMode>EnterOnInput</EditMode>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="Товары_УправлениеПоставкойНазначенКонтекстноеМеню" id="392"/>
@@ -1635,6 +1736,7 @@
 												<CheckBoxField name="Товары_УправлениеПоставкойРаспечатанПризнак" id="394">
 													<DataPath>Объект.Товары_УправлениеПоставкой.РаспечатанПризнак</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
@@ -1646,6 +1748,7 @@
 												<InputField name="Товары_УправлениеПоставкойРаспечатанДата" id="397">
 													<DataPath>Объект.Товары_УправлениеПоставкой.РаспечатанДата</DataPath>
 													<ReadOnly>true</ReadOnly>
+													<SkipOnInput>true</SkipOnInput>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
