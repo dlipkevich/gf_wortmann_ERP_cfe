@@ -80,6 +80,78 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаЗагрузкиИз" id="1242">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузки из</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузки из</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗагрузкиИзРасширеннаяПодсказка" id="1243"/>
+			<ChildItems>
+				<RadioButtonField name="ВыборGTIN" id="1247">
+					<DataPath>ВыборGTIN</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>GTIN</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Артикул</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыборGTINКонтекстноеМеню" id="1248"/>
+					<ExtendedTooltip name="ВыборGTINРасширеннаяПодсказка" id="1249"/>
+				</RadioButtonField>
+				<Button name="ЗагрузитьИзEcxel" id="1250">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗагрузитьИзEcxel</CommandName>
+					<ExtendedTooltip name="ЗагрузитьИзEcxelРасширеннаяПодсказка" id="1251"/>
+				</Button>
+				<InputField name="СписокАртикулШтрихкод" id="1244">
+					<DataPath>СписокАртикулШтрихкод</DataPath>
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список (Артикул/GTIN)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокАртикулШтрихкодКонтекстноеМеню" id="1245"/>
+					<ExtendedTooltip name="СписокАртикулШтрихкодРасширеннаяПодсказка" id="1246"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ПанельБыстрыхНастроек" id="986">
 			<Title>
 				<v8:item>
@@ -3728,6 +3800,32 @@ Use:
 				<Field>apikey</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="СписокАртикулШтрихкод" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список артикул штрихкод</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыборGTIN" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор GTIN</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВсеНастройки" id="1">
@@ -5014,6 +5112,21 @@ Use:
 			</Picture>
 			<Action>СписокОфлайнОтчетов</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьИзEcxel" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из ecxel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из ecxel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзEcxel</Action>
 		</Command>
 	</Commands>
 	<Parameters>
