@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>1303</Version>
+			<Version>1310</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -271,6 +271,10 @@
 			<CommonModule>гф_МодульИнтеграцияСВнешнимиСистемами</CommonModule>
 			<CommonModule>ОбеспечениеВДокументахСервер</CommonModule>
 			<CommonModule>РеализацияТоваровУслугЛокализация</CommonModule>
+			<CommonModule>гф_МаркировкаТоваровИСМПВызовСервера</CommonModule>
+			<CommonModule>ИнтеграцияИСМПСлужебный</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебныйКлиент</CommonModule>
+			<CommonModule>гф_ЭлектроннаяПодписьВызовСервера</CommonModule>
 			<ExchangePlan>ОбменССайтом</ExchangePlan>
 			<XDTOPackage>гф_ОбменДаннымиWMS</XDTOPackage>
 			<HTTPService>БУС_Обмен</HTTPService>
@@ -314,6 +318,7 @@
 			<Constant>ИспользоватьДополнительныеОтчетыИОбработки</Constant>
 			<Constant>гф_ПочтаРоссииПромежутокМеждуЗапросамиКОдномуТрекНомеру</Constant>
 			<Constant>ИспользоватьАвтоматическуюОтправкуПолучениеДанныхИСМП</Constant>
+			<Constant>гф_СвойстваПодписи</Constant>
 			<CommonForm>гф_УстановкаГруппДоступа</CommonForm>
 			<CommonForm>СвязанныеДокументы</CommonForm>
 			<CommonForm>ФормаОтчета</CommonForm>
@@ -505,6 +510,7 @@
 			<Enum>СтатусыОбработкиЗаказовНаЭмиссиюКодовМаркировкиИСМП</Enum>
 			<Enum>СтатусыЗаявокНаВозвратТоваровОтКлиентов</Enum>
 			<Enum>гф_СостоянияСтатусовGTIN</Enum>
+			<Enum>ВариантыЗаполненияДекларацииИСМП</Enum>
 			<Report>гф_ФормированиеОбщейСпецификации</Report>
 			<Report>гф_ПечатнаяФормаТ11</Report>
 			<Report>гф_ОтчетПоДебиторскойЗадолженности</Report>
