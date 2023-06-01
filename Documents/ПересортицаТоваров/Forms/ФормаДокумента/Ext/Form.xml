@@ -295,49 +295,6 @@
 					</Title>
 					<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="184"/>
 					<ChildItems>
-						<UsualGroup name="НомерДата" id="49">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Номер дата</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Number date</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Horizontal</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="НомерДатаExtendedTooltip" id="121"/>
-							<ChildItems>
-								<InputField name="Номер" id="1">
-									<EditMode>EnterOnInput</EditMode>
-									<Width>10</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-									<ExtendedTooltip name="НомерExtendedTooltip" id="122"/>
-								</InputField>
-								<InputField name="Дата" id="3">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>от</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>dated</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>14</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-									<ExtendedTooltip name="ДатаExtendedTooltip" id="123"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 						<LabelField name="ПересчетТоваров" id="218">
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ПересчетТоваровКонтекстноеМеню" id="219"/>
@@ -378,6 +335,79 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ШапкаЛевоExtendedTooltip" id="120"/>
 									<ChildItems>
+										<UsualGroup name="НомерДата" id="49">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер дата</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Number date</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="НомерДатаExtendedTooltip" id="121"/>
+											<ChildItems>
+												<InputField name="Номер" id="1">
+													<EditMode>EnterOnInput</EditMode>
+													<Width>10</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+													<ExtendedTooltip name="НомерExtendedTooltip" id="122"/>
+												</InputField>
+												<InputField name="Дата" id="3">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>от</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>dated</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>14</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+													<ExtendedTooltip name="ДатаExtendedTooltip" id="123"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="Склад" id="21">
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>28</MaxWidth>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+											<ContextMenu name="СкладКонтекстноеМеню" id="22"/>
+											<ExtendedTooltip name="СкладExtendedTooltip" id="128"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ШапкаПраво" id="48">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шапка право</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Header right</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="126"/>
+									<ChildItems>
 										<InputField name="Организация" id="13">
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -401,51 +431,6 @@
 											<MaxWidth>28</MaxWidth>
 											<ContextMenu name="ПодразделениеКонтекстноеМеню" id="18"/>
 											<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="125"/>
-										</InputField>
-										<InputField name="Ответственный" id="15">
-											<EditMode>EnterOnInput</EditMode>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>28</MaxWidth>
-											<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
-											<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="173"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ШапкаПраво" id="48">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Шапка право</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Header right</v8:content>
-										</v8:item>
-									</Title>
-									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<United>false</United>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="126"/>
-									<ChildItems>
-										<InputField name="Склад" id="21">
-											<EditMode>EnterOnInput</EditMode>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>28</MaxWidth>
-											<DropListButton>false</DropListButton>
-											<ChoiceButton>true</ChoiceButton>
-											<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
-											<ContextMenu name="СкладКонтекстноеМеню" id="22"/>
-											<ExtendedTooltip name="СкладExtendedTooltip" id="128"/>
-										</InputField>
-										<InputField name="Валюта" id="234">
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>5</MaxWidth>
-											<Wrap>false</Wrap>
-											<OpenButton>false</OpenButton>
-											<ContextMenu name="ВалютаКонтекстноеМеню" id="235"/>
-											<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="236"/>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
@@ -566,74 +551,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппаПрочее" id="237">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Прочее</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Other</v8:content>
-								</v8:item>
-							</Title>
-							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
-							<United>false</United>
-							<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="238"/>
-							<ChildItems>
-								<UsualGroup name="ГруппаПрочееДополнительно" id="239">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Прочее дополнительно</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Other more</v8:content>
-										</v8:item>
-									</Title>
-									<Group>Horizontal</Group>
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПрочееДополнительноРасширеннаяПодсказка" id="240"/>
-									<ChildItems>
-										<InputField name="ВидДеятельностиНДС" id="226">
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Вид деятельности НДС</v8:content>
-												</v8:item>
-												<v8:item>
-													<v8:lang>en</v8:lang>
-													<v8:content>VAT activity type</v8:content>
-												</v8:item>
-											</Title>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>28</MaxWidth>
-											<ListChoiceMode>true</ListChoiceMode>
-											<TextEdit>false</TextEdit>
-											<ContextMenu name="ВидДеятельностиНДСКонтекстноеМеню" id="227"/>
-											<ExtendedTooltip name="ВидДеятельностиНДСРасширеннаяПодсказка" id="228"/>
-										</InputField>
-										<InputField name="ВидЦены" id="69">
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>28</MaxWidth>
-											<ContextMenu name="ВидЦеныКонтекстноеМеню" id="70"/>
-											<ExtendedTooltip name="ВидЦеныExtendedTooltip" id="129"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="Автор" id="250">
-							<ReadOnly>true</ReadOnly>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<MaxWidth>28</MaxWidth>
-							<ContextMenu name="АвторКонтекстноеМеню" id="251"/>
-							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="252"/>
-						</InputField>
 						<UsualGroup name="ГруппаКомментарий" id="68">
 							<Title>
 								<v8:item>
@@ -1133,6 +1050,20 @@
 											<ContextMenu name="ТоварыЦенаОприходованиеКонтекстноеМеню" id="74"/>
 											<ExtendedTooltip name="ТоварыЦенаОприходованиеExtendedTooltip" id="166"/>
 										</InputField>
+										<InputField name="ТоварыЦенаОприходованиеЗабаланс" id="278">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цена (забаланс)</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Price (off-balance)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ТоварыЦенаОприходованиеЗабалансКонтекстноеМеню" id="279"/>
+											<ExtendedTooltip name="ТоварыЦенаОприходованиеЗабалансРасширеннаяПодсказка" id="280"/>
+										</InputField>
 										<InputField name="ТоварыВидЗапасов" id="95">
 											<UserVisible>
 												<xr:Common>false</xr:Common>
@@ -1182,33 +1113,98 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ДополнительныеРеквизиты" id="93">
+				<Page name="ГруппаДополнительно" id="281">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительные реквизиты</v8:content>
+							<v8:content>Дополнительно</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Additional attributes</v8:content>
+							<v8:content>Advanced settings</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="ДополнительныеРеквизитыExtendedTooltip" id="169"/>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="283"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаДополнительныеРеквизиты" id="94">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дополнительные реквизиты</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Additional attributes</v8:content>
-								</v8:item>
-							</Title>
+						<UsualGroup name="ГруппаДополнительноЛево" id="275">
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
-							<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="170"/>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительноЛевоРасширеннаяПодсказка" id="277"/>
+							<ChildItems>
+								<InputField name="Ответственный" id="15">
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="173"/>
+								</InputField>
+								<InputField name="Автор" id="250">
+									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ContextMenu name="АвторКонтекстноеМеню" id="251"/>
+									<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="252"/>
+								</InputField>
+								<UsualGroup name="ГруппаДополнительныеРеквизиты" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные реквизиты</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Additional attributes</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="170"/>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительноПраво" id="276">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительноПравоРасширеннаяПодсказка" id="271"/>
+							<ChildItems>
+								<InputField name="ВидДеятельностиНДС" id="226">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид деятельности НДС</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>VAT activity type</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ВидДеятельностиНДСКонтекстноеМеню" id="227"/>
+									<ExtendedTooltip name="ВидДеятельностиНДСРасширеннаяПодсказка" id="228"/>
+								</InputField>
+								<InputField name="Валюта" id="234">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<Wrap>false</Wrap>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ВалютаКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="236"/>
+								</InputField>
+								<InputField name="ВидЦены" id="69">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>28</MaxWidth>
+									<ContextMenu name="ВидЦеныКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ВидЦеныExtendedTooltip" id="129"/>
+								</InputField>
+							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</Page>
@@ -1509,49 +1505,6 @@
 						</Title>
 						<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="184"/>
 						<ChildItems>
-							<UsualGroup name="НомерДата" id="49">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Номер дата</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>Number date</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Horizontal</Group>
-								<Behavior>Usual</Behavior>
-								<Representation>None</Representation>
-								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="НомерДатаExtendedTooltip" id="121"/>
-								<ChildItems>
-									<InputField name="Номер" id="1">
-										<EditMode>EnterOnInput</EditMode>
-										<Width>10</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-										<ExtendedTooltip name="НомерExtendedTooltip" id="122"/>
-									</InputField>
-									<InputField name="Дата" id="3">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>от</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>dated</v8:content>
-											</v8:item>
-										</Title>
-										<EditMode>EnterOnInput</EditMode>
-										<Width>14</Width>
-										<HorizontalStretch>false</HorizontalStretch>
-										<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-										<ExtendedTooltip name="ДатаExtendedTooltip" id="123"/>
-									</InputField>
-								</ChildItems>
-							</UsualGroup>
 							<LabelField name="ПересчетТоваров" id="218">
 								<Hiperlink>true</Hiperlink>
 								<ContextMenu name="ПересчетТоваровКонтекстноеМеню" id="219"/>
@@ -1592,6 +1545,79 @@
 										<ShowTitle>false</ShowTitle>
 										<ExtendedTooltip name="ШапкаЛевоExtendedTooltip" id="120"/>
 										<ChildItems>
+											<UsualGroup name="НомерДата" id="49">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Номер дата</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Number date</v8:content>
+													</v8:item>
+												</Title>
+												<Group>Horizontal</Group>
+												<Behavior>Usual</Behavior>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="НомерДатаExtendedTooltip" id="121"/>
+												<ChildItems>
+													<InputField name="Номер" id="1">
+														<EditMode>EnterOnInput</EditMode>
+														<Width>10</Width>
+														<HorizontalStretch>false</HorizontalStretch>
+														<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+														<ExtendedTooltip name="НомерExtendedTooltip" id="122"/>
+													</InputField>
+													<InputField name="Дата" id="3">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>от</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>dated</v8:content>
+															</v8:item>
+														</Title>
+														<EditMode>EnterOnInput</EditMode>
+														<Width>14</Width>
+														<HorizontalStretch>false</HorizontalStretch>
+														<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+														<ExtendedTooltip name="ДатаExtendedTooltip" id="123"/>
+													</InputField>
+												</ChildItems>
+											</UsualGroup>
+											<InputField name="Склад" id="21">
+												<EditMode>EnterOnInput</EditMode>
+												<AutoMaxWidth>false</AutoMaxWidth>
+												<MaxWidth>30</MaxWidth>
+												<DropListButton>false</DropListButton>
+												<ChoiceButton>true</ChoiceButton>
+												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+												<ContextMenu name="СкладКонтекстноеМеню" id="22"/>
+												<ExtendedTooltip name="СкладExtendedTooltip" id="128"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
+									<UsualGroup name="ШапкаПраво" id="48">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Шапка право</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Header right</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<United>false</United>
+										<ShowTitle>false</ShowTitle>
+										<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="126"/>
+										<ChildItems>
 											<InputField name="Организация" id="13">
 												<EditMode>EnterOnInput</EditMode>
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -1615,51 +1641,6 @@
 												<MaxWidth>28</MaxWidth>
 												<ContextMenu name="ПодразделениеКонтекстноеМеню" id="18"/>
 												<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="125"/>
-											</InputField>
-											<InputField name="Ответственный" id="15">
-												<EditMode>EnterOnInput</EditMode>
-												<AutoMaxWidth>false</AutoMaxWidth>
-												<MaxWidth>28</MaxWidth>
-												<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
-												<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="173"/>
-											</InputField>
-										</ChildItems>
-									</UsualGroup>
-									<UsualGroup name="ШапкаПраво" id="48">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Шапка право</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Header right</v8:content>
-											</v8:item>
-										</Title>
-										<Group>Vertical</Group>
-										<Behavior>Usual</Behavior>
-										<Representation>None</Representation>
-										<United>false</United>
-										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ШапкаПравоExtendedTooltip" id="126"/>
-										<ChildItems>
-											<InputField name="Склад" id="21">
-												<EditMode>EnterOnInput</EditMode>
-												<AutoMaxWidth>false</AutoMaxWidth>
-												<MaxWidth>28</MaxWidth>
-												<DropListButton>false</DropListButton>
-												<ChoiceButton>true</ChoiceButton>
-												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
-												<ContextMenu name="СкладКонтекстноеМеню" id="22"/>
-												<ExtendedTooltip name="СкладExtendedTooltip" id="128"/>
-											</InputField>
-											<InputField name="Валюта" id="234">
-												<AutoMaxWidth>false</AutoMaxWidth>
-												<MaxWidth>5</MaxWidth>
-												<Wrap>false</Wrap>
-												<OpenButton>false</OpenButton>
-												<ContextMenu name="ВалютаКонтекстноеМеню" id="235"/>
-												<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="236"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
@@ -1780,74 +1761,6 @@
 									</UsualGroup>
 								</ChildItems>
 							</UsualGroup>
-							<UsualGroup name="ГруппаПрочее" id="237">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Прочее</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>Other</v8:content>
-									</v8:item>
-								</Title>
-								<Group>Vertical</Group>
-								<Behavior>Usual</Behavior>
-								<United>false</United>
-								<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="238"/>
-								<ChildItems>
-									<UsualGroup name="ГруппаПрочееДополнительно" id="239">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Прочее дополнительно</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Other more</v8:content>
-											</v8:item>
-										</Title>
-										<Group>Horizontal</Group>
-										<Behavior>Usual</Behavior>
-										<Representation>None</Representation>
-										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаПрочееДополнительноРасширеннаяПодсказка" id="240"/>
-										<ChildItems>
-											<InputField name="ВидДеятельностиНДС" id="226">
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Вид деятельности НДС</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>VAT activity type</v8:content>
-													</v8:item>
-												</Title>
-												<AutoMaxWidth>false</AutoMaxWidth>
-												<MaxWidth>28</MaxWidth>
-												<ListChoiceMode>true</ListChoiceMode>
-												<TextEdit>false</TextEdit>
-												<ContextMenu name="ВидДеятельностиНДСКонтекстноеМеню" id="227"/>
-												<ExtendedTooltip name="ВидДеятельностиНДСРасширеннаяПодсказка" id="228"/>
-											</InputField>
-											<InputField name="ВидЦены" id="69">
-												<AutoMaxWidth>false</AutoMaxWidth>
-												<MaxWidth>28</MaxWidth>
-												<ContextMenu name="ВидЦеныКонтекстноеМеню" id="70"/>
-												<ExtendedTooltip name="ВидЦеныExtendedTooltip" id="129"/>
-											</InputField>
-										</ChildItems>
-									</UsualGroup>
-								</ChildItems>
-							</UsualGroup>
-							<InputField name="Автор" id="250">
-								<ReadOnly>true</ReadOnly>
-								<AutoMaxWidth>false</AutoMaxWidth>
-								<MaxWidth>28</MaxWidth>
-								<ContextMenu name="АвторКонтекстноеМеню" id="251"/>
-								<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="252"/>
-							</InputField>
 							<UsualGroup name="ГруппаКомментарий" id="68">
 								<Title>
 									<v8:item>
@@ -2347,6 +2260,20 @@
 												<ContextMenu name="ТоварыЦенаОприходованиеКонтекстноеМеню" id="74"/>
 												<ExtendedTooltip name="ТоварыЦенаОприходованиеExtendedTooltip" id="166"/>
 											</InputField>
+											<InputField name="ТоварыЦенаОприходованиеЗабаланс" id="278">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Цена (забаланс)</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Price (off-balance)</v8:content>
+													</v8:item>
+												</Title>
+												<ContextMenu name="ТоварыЦенаОприходованиеЗабалансКонтекстноеМеню" id="279"/>
+												<ExtendedTooltip name="ТоварыЦенаОприходованиеЗабалансРасширеннаяПодсказка" id="280"/>
+											</InputField>
 											<InputField name="ТоварыВидЗапасов" id="95">
 												<UserVisible>
 													<xr:Common>false</xr:Common>
@@ -2396,33 +2323,98 @@
 							</Table>
 						</ChildItems>
 					</Page>
-					<Page name="ДополнительныеРеквизиты" id="93">
+					<Page name="ГруппаДополнительно" id="93">
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Дополнительные реквизиты</v8:content>
+								<v8:content>Дополнительно</v8:content>
 							</v8:item>
 							<v8:item>
 								<v8:lang>en</v8:lang>
-								<v8:content>Additional attributes</v8:content>
+								<v8:content>Advanced settings</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ДополнительныеРеквизитыExtendedTooltip" id="169"/>
+						<Group>HorizontalIfPossible</Group>
+						<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="169"/>
 						<ChildItems>
-							<UsualGroup name="ГруппаДополнительныеРеквизиты" id="94">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Дополнительные реквизиты</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>Additional attributes</v8:content>
-									</v8:item>
-								</Title>
+							<UsualGroup name="ГруппаДополнительноЛево" id="275">
 								<Group>Vertical</Group>
 								<Behavior>Usual</Behavior>
-								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="170"/>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаДополнительноЛевоРасширеннаяПодсказка" id="277"/>
+								<ChildItems>
+									<InputField name="Ответственный" id="15">
+										<EditMode>EnterOnInput</EditMode>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>28</MaxWidth>
+										<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
+										<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="173"/>
+									</InputField>
+									<InputField name="Автор" id="250">
+										<ReadOnly>true</ReadOnly>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>28</MaxWidth>
+										<ContextMenu name="АвторКонтекстноеМеню" id="251"/>
+										<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="252"/>
+									</InputField>
+									<UsualGroup name="ГруппаДополнительныеРеквизиты" id="94">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дополнительные реквизиты</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Additional attributes</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
+										<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="170"/>
+									</UsualGroup>
+								</ChildItems>
+							</UsualGroup>
+							<UsualGroup name="ГруппаДополнительноПраво" id="276">
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<Representation>None</Representation>
+								<ShowTitle>false</ShowTitle>
+								<ExtendedTooltip name="ГруппаДополнительноПравоРасширеннаяПодсказка" id="271"/>
+								<ChildItems>
+									<InputField name="ВидДеятельностиНДС" id="226">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Вид деятельности НДС</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>VAT activity type</v8:content>
+											</v8:item>
+										</Title>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>28</MaxWidth>
+										<ListChoiceMode>true</ListChoiceMode>
+										<TextEdit>false</TextEdit>
+										<ContextMenu name="ВидДеятельностиНДСКонтекстноеМеню" id="227"/>
+										<ExtendedTooltip name="ВидДеятельностиНДСРасширеннаяПодсказка" id="228"/>
+									</InputField>
+									<InputField name="Валюта" id="234">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>8</MaxWidth>
+										<Wrap>false</Wrap>
+										<OpenButton>false</OpenButton>
+										<ContextMenu name="ВалютаКонтекстноеМеню" id="235"/>
+										<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="236"/>
+									</InputField>
+									<InputField name="ВидЦены" id="69">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>28</MaxWidth>
+										<ContextMenu name="ВидЦеныКонтекстноеМеню" id="70"/>
+										<ExtendedTooltip name="ВидЦеныExtendedTooltip" id="129"/>
+									</InputField>
+								</ChildItems>
 							</UsualGroup>
 						</ChildItems>
 					</Page>
