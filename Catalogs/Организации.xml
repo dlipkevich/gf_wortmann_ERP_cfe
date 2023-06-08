@@ -46,6 +46,50 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<TabularSection uuid="45bc6eb5-93cd-480a-bcea-ad28677ac0aa">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.Организации.ДополнительныеРеквизиты" category="TabularSection">
+						<xr:TypeId>1c9a4bd1-6516-4793-9daa-5d23c9004306</xr:TypeId>
+						<xr:ValueId>7718cab4-e209-45e3-bf96-4c2abacfb55e</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.Организации.ДополнительныеРеквизиты" category="TabularSectionRow">
+						<xr:TypeId>aededbaf-5589-4193-969d-c32014cd6229</xr:TypeId>
+						<xr:ValueId>90b9028b-e8d1-435b-b52c-9692875bc1f9</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>ДополнительныеРеквизиты</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a04707a3-5da7-4de7-b5b1-d765060e5068</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="ff1b072f-b881-4720-9ccb-1627406d4d34">
+						<InternalInfo/>
+						<Properties>
+							<Name>Свойство</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>1bb42db9-4fd2-4fc4-a0bc-7c326b817c96</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="081f3bc2-52e7-4b74-8e1f-51ec08774311">
+						<InternalInfo/>
+						<Properties>
+							<Name>Значение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>f8e2f403-2cb5-4858-9fd2-309e9b6e158d</ExtendedConfigurationObject>
+							<Type>
+								<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаЭлемента</Form>
 		</ChildObjects>
 	</Catalog>
