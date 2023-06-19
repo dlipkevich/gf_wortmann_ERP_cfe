@@ -68,10 +68,15 @@
 // BSLLS:MissingSpace-on
 
 // Типовая процедура, поэтому экранируем
+//
+// Небольшой список требований от SonarCube на которые плевать разработчикам фирмы 1С
+//
 // BSLLS:CognitiveComplexity-off 
 // BSLLS:CyclomaticComplexity-off
 // BSLLS:IfElseIfEndsWithElse-off      
-// BSLLS:LineLength-off
+// BSLLS:LineLength-off 
+// BSLLS:IfConditionComplexity-off  
+// BSLLS:MissingSpace-off     
 &НаСервере
 &ИзменениеИКонтроль("ВывестиРодительскиеОбъекты")
 Процедура гф_ВывестиРодительскиеОбъекты(ТекущийОбъект, ДеревоРодитель, ВыведенныеОбъекты, СлужебныеОбъекты, ИндексСвязейОбъектов)
@@ -253,9 +258,11 @@
 
 	КонецЦикла;
 
-КонецПроцедуры
+КонецПроцедуры   
+// BSLLS:MissingSpace-on
 // BSLLS:CyclomaticComplexity-on
 // BSLLS:CognitiveComplexity-on
 // BSLLS:IfElseIfEndsWithElse-on
-// BSLLS:LineLength-on
+// BSLLS:LineLength-on 
+// BSLLS:IfConditionComplexity-on
 #КонецОбласти
