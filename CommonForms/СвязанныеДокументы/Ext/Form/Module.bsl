@@ -66,6 +66,7 @@
 // Типовая процедура, поэтому экранируем
 // BSLLS:CognitiveComplexity-off 
 // BSLLS:CyclomaticComplexity-off
+// BSLLS:IfElseIfEndsWithElse-off
 &НаСервере
 &ИзменениеИКонтроль("ВывестиРодительскиеОбъекты")
 Процедура гф_ВывестиРодительскиеОбъекты(ТекущийОбъект, ДеревоРодитель, ВыведенныеОбъекты, СлужебныеОбъекты, ИндексСвязейОбъектов)
@@ -250,4 +251,5 @@
 КонецПроцедуры
 // BSLLS:CyclomaticComplexity-on
 // BSLLS:CognitiveComplexity-on
+// BSLLS:IfElseIfEndsWithElse-on
 #КонецОбласти
