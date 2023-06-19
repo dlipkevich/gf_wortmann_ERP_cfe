@@ -1,5 +1,7 @@
 ﻿#Область СлужебныеПроцедурыИФункции
-
+// Директива вместо, минимально вмешиваемся в типовой код, SonarCube потерпит
+// BSLLS:EmptyStatement-off 
+// BSLLS:MissingSpace-off
 &НаСервере
 &Вместо("ОбъектыПоКритериюОтбора")
 Функция гф_ОбъектыПоКритериюОтбора(ЗначениеКритерияОтбора)
@@ -62,11 +64,14 @@
 	КонецЕсли;
 	
 КонецФункции
+// BSLLS:EmptyStatement-on
+// BSLLS:MissingSpace-on
 
 // Типовая процедура, поэтому экранируем
 // BSLLS:CognitiveComplexity-off 
 // BSLLS:CyclomaticComplexity-off
-// BSLLS:IfElseIfEndsWithElse-off
+// BSLLS:IfElseIfEndsWithElse-off      
+// BSLLS:LineLength-off
 &НаСервере
 &ИзменениеИКонтроль("ВывестиРодительскиеОбъекты")
 Процедура гф_ВывестиРодительскиеОбъекты(ТекущийОбъект, ДеревоРодитель, ВыведенныеОбъекты, СлужебныеОбъекты, ИндексСвязейОбъектов)
@@ -252,4 +257,5 @@
 // BSLLS:CyclomaticComplexity-on
 // BSLLS:CognitiveComplexity-on
 // BSLLS:IfElseIfEndsWithElse-on
+// BSLLS:LineLength-on
 #КонецОбласти
