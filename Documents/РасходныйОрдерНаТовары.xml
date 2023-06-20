@@ -55,6 +55,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="7f37b584-c350-440b-986b-46f798e11089">
+				<InternalInfo/>
+				<Properties>
+					<Name>Получатель</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>145a504e-53c5-4349-a710-b106ea052174</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОтправительПолучательТоваров</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="48bbdeb2-e299-4ed0-9955-ae5063466bc3">
 				<InternalInfo>
@@ -121,6 +133,42 @@
 							<ExtendedConfigurationObject>93ae14aa-f407-4566-96ba-2cbba0eadcc2</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="06fa7b1e-2e63-4a7a-822d-c377979cf055">
+						<InternalInfo/>
+						<Properties>
+							<Name>УпаковочныйЛистРодитель</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>323f8573-378e-4fef-931a-b93c2c113890</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="0b11ddd9-a000-430c-94b1-02de8a14e2bd">
+						<InternalInfo/>
+						<Properties>
+							<Name>ЭтоУпаковочныйЛист</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>bb33b3e3-7a69-47fd-93df-2ef5d81b4ced</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="e264d176-bb97-4acf-9c93-9715c17aa1c3">
+						<InternalInfo/>
+						<Properties>
+							<Name>УпаковочныйЛист</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>fc35a8ee-3531-4b7e-8222-611bb0bc88ab</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>
