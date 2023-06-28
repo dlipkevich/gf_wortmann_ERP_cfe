@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Catalog uuid="f3178b88-2c45-4bac-b1dc-549ee29bc18c">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.гф_ПоследовательностьПроведения" category="Object">
+				<xr:TypeId>02f7082f-c530-4f56-b7dc-6d03821f74c0</xr:TypeId>
+				<xr:ValueId>a0129833-ef3f-4e20-877c-0c1a9c2343d8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.гф_ПоследовательностьПроведения" category="Ref">
+				<xr:TypeId>4986d1d9-3080-40ce-9a59-c2c46f20ef67</xr:TypeId>
+				<xr:ValueId>97516a77-183d-469b-b64e-161aae8859eb</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.гф_ПоследовательностьПроведения" category="Selection">
+				<xr:TypeId>62a2074c-68d8-408f-86e9-8077e640d789</xr:TypeId>
+				<xr:ValueId>b9cb325e-1409-419d-849b-6e453b0c5251</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.гф_ПоследовательностьПроведения" category="List">
+				<xr:TypeId>fdcf4698-3539-4aae-b135-52321868a4b0</xr:TypeId>
+				<xr:ValueId>47817f98-bc9d-40d4-b7ec-fa3d2ca6b9a1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.гф_ПоследовательностьПроведения" category="Manager">
+				<xr:TypeId>da0b51a5-cbcd-4958-810e-817c9bc861f5</xr:TypeId>
+				<xr:ValueId>50e4b2b8-1e02-4564-8241-951ed625e528</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ПоследовательностьПроведения</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>53d24eee-5c9b-4257-80f8-9aadf3d5d9c2</ExtendedConfigurationObject>
+			<DefaultObjectForm>Catalog.гф_ПоследовательностьПроведения.Form.гф_ФормаЭлемента</DefaultObjectForm>
+			<DefaultListForm>Catalog.гф_ПоследовательностьПроведения.Form.гф_ФормаСписка</DefaultListForm>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="5adaa7c4-32ef-484f-a11c-a7155de1d8e2">
+				<InternalInfo/>
+				<Properties>
+					<Name>Интерфейс</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>9c68b5e4-0457-4024-bf36-0037a7a71b60</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_Интерфейсы</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3e9c361e-fd57-4c7b-8702-de333daeb307">
+				<InternalInfo/>
+				<Properties>
+					<Name>ПорядокОбработки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>38826d83-3a74-4216-b6fd-2828fa9d117c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаЭлемента</Form>
+			<Form>гф_ФормаСписка</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

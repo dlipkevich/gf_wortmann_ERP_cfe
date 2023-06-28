@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Document uuid="c4cc0ed7-832d-4195-85d9-f3dd7f28ec5f">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.КорректировкаЗадолженности" category="Object">
+				<xr:TypeId>9b7fcef7-5f60-4e25-88ee-bc516eaadba2</xr:TypeId>
+				<xr:ValueId>3d7f5ebd-d8ca-4315-85de-8eed5025655c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.КорректировкаЗадолженности" category="Ref">
+				<xr:TypeId>bd88bb20-ce75-463a-8883-ccdf1b378b73</xr:TypeId>
+				<xr:ValueId>f340e8e7-c861-4b88-a013-2a3ac342313c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.КорректировкаЗадолженности" category="Selection">
+				<xr:TypeId>a98acc23-b1e9-40e0-af73-c2258813d495</xr:TypeId>
+				<xr:ValueId>66379c19-dbca-45f4-8434-bbf72a9ad0b3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.КорректировкаЗадолженности" category="List">
+				<xr:TypeId>58253270-f525-4154-a8df-0878a8386408</xr:TypeId>
+				<xr:ValueId>261ee6e0-6b8a-4391-a321-a38a433d1ad5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.КорректировкаЗадолженности" category="Manager">
+				<xr:TypeId>dd690a7b-083f-4da8-80a4-7900155f5bd7</xr:TypeId>
+				<xr:ValueId>3f57ba46-1e16-466d-b7c1-1c3f225ef1b1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>КорректировкаЗадолженности</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>537a6fca-6e71-4d20-9df7-dc2b2acb57d9</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="7636ffc8-adad-43c3-8d99-0e3479679c08">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>67150349-91ac-48ca-9357-94a09e7c7188</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="975a3581-f90d-44b9-aab1-4f534f4e64dc">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>e3cc8f24-615f-49ae-aa18-c7bb31d1a830</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="81e94a3a-b2df-4345-a734-6c7c666f3fd1">
+				<InternalInfo/>
+				<Properties>
+					<Name>ХозяйственнаяОперация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3b8ea432-e117-4c64-bd86-28a6ee4b5ece</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="2a745d81-0007-4154-a61b-d197db786d36">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.КорректировкаЗадолженности.Задолженность" category="TabularSection">
+						<xr:TypeId>42542ffb-50ad-4984-a0cf-1bed78e41d9e</xr:TypeId>
+						<xr:ValueId>8a552145-bfd1-4487-ae0c-7bcb8fb8173e</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.КорректировкаЗадолженности.Задолженность" category="TabularSectionRow">
+						<xr:TypeId>896d8553-73db-4389-90a5-fee60a60fe8d</xr:TypeId>
+						<xr:ValueId>af5f0a3f-e2c1-4b88-a324-d2e6f279d36e</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Задолженность</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>7388c1e5-c629-496d-bb4f-992c2f41edd4</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects/>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>
