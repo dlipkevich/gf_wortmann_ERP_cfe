@@ -543,6 +543,64 @@
 							</Type>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="4c58dd56-0cbd-4753-b62e-43d490ae8843">
+						<InternalInfo/>
+						<Properties>
+							<Name>ВариантОбеспечения</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>83c775d3-3225-4a7b-8d7c-f85fb0041c57</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:EnumRef.ВариантыОбеспечения</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="4e1f994f-ad37-40a3-9fe7-9e0d898ee5c0">
+						<InternalInfo/>
+						<Properties>
+							<Name>ВидЦены</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>997d448c-13bf-44a5-b224-5821f3666aaa</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="7a1f1946-91f9-47dd-b348-ca0ae067a400">
+						<InternalInfo/>
+						<Properties>
+							<Name>Скидка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>7c4fc3c2-a50b-4f99-9550-2956a04f143b</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>14</v8:Digits>
+									<v8:FractionDigits>4</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="9c543cb0-c0a2-464e-9398-54253a392f69">
+						<InternalInfo/>
+						<Properties>
+							<Name>ЦенаКоробаСоСкидкой</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>2c8de483-cbcb-4715-964f-c520fc2fa6fe</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
 			<TabularSection uuid="e20fd6be-378f-4e85-a0df-08350ecd7cc3">

@@ -134,6 +134,18 @@
 					</Type>
 				</Properties>
 			</Attribute>
+			<Attribute uuid="db5474cc-8b47-4422-818a-094d66a1d387">
+				<InternalInfo/>
+				<Properties>
+					<Name>гф_СостояниеКороба</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f27e4e96-cb98-42f3-9321-3a930e4217e5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_СостянияКоробов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
@@ -194,6 +206,47 @@
 									<v8:FractionDigits>3</v8:FractionDigits>
 									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="2a831e08-5dd8-4115-94b0-66c6dd78a347">
+						<InternalInfo/>
+						<Properties>
+							<Name>Упаковка</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>8ad7a54e-680b-4fb0-9e95-b432a92a0aaf</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.УпаковкиЕдиницыИзмерения</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="04f83f19-3c46-4a37-b656-63d17ce1a27e">
+						<InternalInfo/>
+						<Properties>
+							<Name>КоличествоУпаковок</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>bc3b1022-e2ec-45b8-8024-bb1650ae219f</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>15</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="afab1b60-af84-454a-a8eb-baabd0862e0d">
+						<InternalInfo/>
+						<Properties>
+							<Name>Назначение</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>7733f4a9-3697-4c5c-a1a3-133a461c7fe8</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
 							</Type>
 						</Properties>
 					</Attribute>
