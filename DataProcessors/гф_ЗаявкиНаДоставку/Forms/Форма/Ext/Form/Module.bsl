@@ -752,7 +752,8 @@
 	
 КонецПроцедуры// } #wortmann
 
-// BSLLS:MethodSize-off
+// BSLLS:MethodSize-on       
+// BSLLS:JoinWithSubQuery-on
 // Не думаю, что текст запроса станет понятнее, если его разбить на две части
 // в двух разных функциях, будет только труднее для понимания, отлаживать удобнее целиком
 // поэтоту экранирование
@@ -1023,7 +1024,9 @@
 	Возврат Результат;
 	
 КонецФункции// } #wortmann// } #wortmann
-// BSLLS:MethodSize-off
+// BSLLS:MethodSize-off    
+// BSLLS:JoinWithSubQuery-off
+
 
 
 // #wortmann {
