@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<InformationRegister uuid="837a9ee2-aa4e-4180-b367-e1024686c82c">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ПричиныБлокировок" category="Record">
+				<xr:TypeId>bd0b6f37-cebc-43b3-a315-c8ff73968da5</xr:TypeId>
+				<xr:ValueId>806b6a17-b29e-4945-8b6b-6e3071025070</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ПричиныБлокировок" category="Manager">
+				<xr:TypeId>1a04e4f4-ec08-41db-9918-d95e0da5e7d6</xr:TypeId>
+				<xr:ValueId>e1d6402e-cdad-4086-80f4-2c5f389eb3c6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ПричиныБлокировок" category="Selection">
+				<xr:TypeId>a5fec182-55ef-46c3-bebc-803cc6330357</xr:TypeId>
+				<xr:ValueId>b139e0ce-b407-4834-a17b-e4351125828d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ПричиныБлокировок" category="List">
+				<xr:TypeId>4617a9f3-4090-400b-b4ce-ebc89a7ae67b</xr:TypeId>
+				<xr:ValueId>7e5b8fcb-e33a-4d83-9b78-c5323bee6fd3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ПричиныБлокировок" category="RecordSet">
+				<xr:TypeId>87177f42-f621-4895-b21f-633611599bfe</xr:TypeId>
+				<xr:ValueId>90712395-cf6f-40ca-9a91-fc300513e324</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ПричиныБлокировок" category="RecordKey">
+				<xr:TypeId>3d712811-fcc2-4430-aa17-bb1f5131d537</xr:TypeId>
+				<xr:ValueId>b84f61df-5f09-4ebd-a8f8-f913ae90a0c8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ПричиныБлокировок" category="RecordManager">
+				<xr:TypeId>09821cfd-2844-40d9-80fe-73c9fcc37898</xr:TypeId>
+				<xr:ValueId>00b301a0-37db-4d73-924f-a2bf7b1c3312</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ПричиныБлокировок</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>b784dbdb-283c-41d6-8191-a1daff6326c9</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
+			<WriteMode>RecorderSubordinate</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="e95f5ebe-cd95-49a0-87ae-f94410289805">
+				<InternalInfo/>
+				<Properties>
+					<Name>Заблокирован</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>b0385b58-6c3e-43bb-9999-579603a9426e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="a0a57346-d803-40a3-a3dd-210474fb1a3a">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f873d6db-4970-4787-8813-a0f12c7da6aa</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="74bdff39-2cef-4ec7-9c73-273c82e8f049">
+				<InternalInfo/>
+				<Properties>
+					<Name>ДоговорКонтрагента</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5dc3cdfd-e279-446a-b95c-6ab2baa0b313</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c454176b-705c-4bae-8e32-624778f8ec7c">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a6ff2946-ff18-4df9-a982-3c0ac7ebd5fd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="ea090bb0-6b9e-4236-8061-a919ac1f8038">
+				<InternalInfo/>
+				<Properties>
+					<Name>Партнер</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>4093d818-29f9-4b6a-bb1e-27383f26c5a8</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="af207794-3c49-4591-84de-088723069059">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидБлокировки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>97431aac-6a6c-4153-b48c-2bcb0aeaa914</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыБлокировок</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

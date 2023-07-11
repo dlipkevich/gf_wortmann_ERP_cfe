@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AccumulationRegister uuid="f3c672eb-339a-4a08-8de2-64951b9cdb1b">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.гф_БонусыКлиентов" category="Record">
+				<xr:TypeId>c90405f3-96ad-42ef-a008-27d15a958bf9</xr:TypeId>
+				<xr:ValueId>be86ecdd-22d4-44be-823d-ab7da250e7d8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.гф_БонусыКлиентов" category="Manager">
+				<xr:TypeId>387b6e9f-a30b-47f0-827a-81be58de3344</xr:TypeId>
+				<xr:ValueId>10d89c75-d67f-4b69-8501-27eb042b654e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.гф_БонусыКлиентов" category="Selection">
+				<xr:TypeId>fc87d5c8-1f80-4a90-bfa9-4a790685cc61</xr:TypeId>
+				<xr:ValueId>5169f525-bade-4227-a282-e912a6f69a17</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.гф_БонусыКлиентов" category="List">
+				<xr:TypeId>28b67d2a-ddb1-4f4f-b948-7f33bae20b98</xr:TypeId>
+				<xr:ValueId>8a98c912-0571-4dce-bf7c-9e667dfb3cec</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.гф_БонусыКлиентов" category="RecordSet">
+				<xr:TypeId>d91f730a-0d53-4226-98d3-33d5ba96ac62</xr:TypeId>
+				<xr:ValueId>b29286b3-3db4-447f-a406-c01b9735ef97</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.гф_БонусыКлиентов" category="RecordKey">
+				<xr:TypeId>8203d75d-c4e7-484e-ba29-3018366eb10e</xr:TypeId>
+				<xr:ValueId>52988d37-1126-4e62-8aa0-489ce6f8cdb5</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_БонусыКлиентов</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>6f1a67b3-a7e2-44d0-9b78-e34d8ce4dc89</ExtendedConfigurationObject>
+			<RegisterType>Balance</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="e941608c-9259-4c1c-a755-26d31f243205">
+				<InternalInfo/>
+				<Properties>
+					<Name>Сумма</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>a26101db-34f1-4f36-b72f-0acc46a5d03d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Attribute uuid="300e91d5-f8e8-47fd-a805-43f7b43af1f0">
+				<InternalInfo/>
+				<Properties>
+					<Name>КурсЕвро</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>f144f03f-8848-49b2-aea0-363c6e1fa2c7</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2985a5af-9788-4747-b668-d3c77901889d">
+				<InternalInfo/>
+				<Properties>
+					<Name>СПЗ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>25e5e08f-2338-4fd7-a508-43a35324f963</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3ad9a68e-5fda-45c6-a550-593f801d5a4b">
+				<InternalInfo/>
+				<Properties>
+					<Name>СНПЗ</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>d2bfb605-912c-4fac-b844-53dc9fa1531f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Dimension uuid="7d8c8794-f34c-40da-96f9-252b08929f88">
+				<InternalInfo/>
+				<Properties>
+					<Name>Организация</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>3a5b1c5e-ce28-42ae-a24b-848a6cafd5a6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="3a5fa34c-8af0-4f2b-9ad6-f7820177a1e4">
+				<InternalInfo/>
+				<Properties>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>5720ff3b-3e63-4e0e-9c7f-06daab98fc1e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="f3786ca2-ba85-4cbb-9b2e-016ffc5eeef5">
+				<InternalInfo/>
+				<Properties>
+					<Name>Договор</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>228b6b6e-a0e1-44d6-b0b9-394317605d72</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="ad6b678d-0659-4240-9444-9cee3279e41d">
+				<InternalInfo/>
+				<Properties>
+					<Name>ВидБонуса</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>da4c69cd-0e2b-428c-884c-9bba672be4f0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыБонусов</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>

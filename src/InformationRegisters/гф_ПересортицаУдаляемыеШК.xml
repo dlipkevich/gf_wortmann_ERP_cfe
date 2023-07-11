@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<InformationRegister uuid="4b9efe2b-e040-4291-8652-d5af55045e5e">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ПересортицаУдаляемыеШК" category="Record">
+				<xr:TypeId>c8942c92-a681-484a-a70e-021a0d5b89da</xr:TypeId>
+				<xr:ValueId>397de6e5-2f2a-4f9b-bca8-c5dc20db8824</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ПересортицаУдаляемыеШК" category="Manager">
+				<xr:TypeId>ba6e991a-b33c-47a7-ae2a-d571e5e9dd6a</xr:TypeId>
+				<xr:ValueId>466f91a6-a909-45e2-9bc8-2b463fab1276</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ПересортицаУдаляемыеШК" category="Selection">
+				<xr:TypeId>bd171b77-401f-416a-8157-94ad0a74f6f0</xr:TypeId>
+				<xr:ValueId>3021c430-3b42-48ee-8e75-05f9e6fd253b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ПересортицаУдаляемыеШК" category="List">
+				<xr:TypeId>569ae176-d7ee-403e-b3b0-640ef0a18662</xr:TypeId>
+				<xr:ValueId>7ab17588-d1d6-4851-817d-e6b77cb33795</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ПересортицаУдаляемыеШК" category="RecordSet">
+				<xr:TypeId>78d977fb-a9e3-4121-8e04-ccac2da0c71a</xr:TypeId>
+				<xr:ValueId>2551924c-7e9f-4c92-9232-5172d1a90f2d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ПересортицаУдаляемыеШК" category="RecordKey">
+				<xr:TypeId>327bd067-12cc-44c1-93a0-4e5666589458</xr:TypeId>
+				<xr:ValueId>98b8e143-c55f-4f2b-aa99-78d8081c83b2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ПересортицаУдаляемыеШК" category="RecordManager">
+				<xr:TypeId>5537633a-43ac-4e58-bc9a-cc49f50a52a3</xr:TypeId>
+				<xr:ValueId>3e9edde7-bad2-4429-8739-c77802f26c5e</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>гф_ПересортицаУдаляемыеШК</Name>
+			<Comment/>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<ExtendedConfigurationObject>00d1851c-8aea-4975-bf88-89d67680b16b</ExtendedConfigurationObject>
+			<DefaultListForm>InformationRegister.гф_ПересортицаУдаляемыеШК.Form.гф_ФормаСписка</DefaultListForm>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="0f7a6afd-6e24-4a71-b5fc-6f2e272c8fd5">
+				<InternalInfo/>
+				<Properties>
+					<Name>Обработан</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>859dc462-7af5-4043-948f-e7d2925388b0</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Dimension uuid="a5b6cbb2-8ff2-4fe8-8a3c-22f2147e629d">
+				<InternalInfo/>
+				<Properties>
+					<Name>Пересортица</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>938c65c8-cf81-4b8a-86bb-356c6f5516f1</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="6198f7bf-b7ee-46ed-8bcf-8c80239b29b9">
+				<InternalInfo/>
+				<Properties>
+					<Name>ШтрихкодУпаковки</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>07a3b45c-3143-456c-8a10-b5bef1f4057b</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Form>гф_ФормаСписка</Form>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

@@ -1,0 +1,1706 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Счета</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Содержание</dataPath>
+			<field>Содержание</field>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>250</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма документа</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет на оплату</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Оплата</dataPath>
+			<field>Оплата</field>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Перенос</dataPath>
+			<field>Перенос</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенос</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлатежноеПоручение</dataPath>
+			<field>ПлатежноеПоручение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежное поручение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеОплачено</dataPath>
+			<field>НеОплачено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не оплачено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>17</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорректировкаДолга</dataPath>
+			<field>КорректировкаДолга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка долга</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВЫРАЗИТЬ(Счета.Контрагент КАК Справочник.Контрагенты) КАК Контрагент,
+	Счета.Договор КАК ДоговорКонтрагента,
+	Счета.Ссылка КАК Счет,
+	ПОДСТРОКА(Счета.НазначениеПлатежа, 1, 255) КАК Содержание,
+	Счета.СуммаДокумента КАК СуммаДокумента,
+	Счета.Партнер КАК Партнер
+ПОМЕСТИТЬ Счета
+ИЗ
+	Документ.СчетНаОплатуКлиенту КАК Счета
+ГДЕ
+	Счета.гф_СпецификацияПокупателя &lt;&gt; ЗНАЧЕНИЕ(Документ.гф_СпецификацияПокупателя.ПустаяСсылка)
+	И Счета.Договор.гф_Сезон В(&amp;Сезон)
+	И НЕ Счета.ПометкаУдаления
+{ГДЕ
+	(ПОДСТРОКА(Счета.ДополнительнаяИнформация, 1, 255)) КАК Содержание,
+	Счета.Ссылка.*,
+	Счета.Контрагент.*,
+	Счета.Договор.*}
+
+ИНДЕКСИРОВАТЬ ПО
+	Контрагент,
+	ДоговорКонтрагента,
+	Счет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Счета.Счет КАК Счет,
+	СУММА(ВЫБОР
+			КОГДА ТИПЗНАЧЕНИЯ(РасчетыСКлиентамиПоСрокам.ДокументРегистратор) В (ТИП(Документ.РасчетКурсовыхРазниц), ТИП(Документ.КорректировкаЗадолженности))
+				ТОГДА ВЫБОР
+						КОГДА РасчетыСКлиентамиПоСрокам.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+							ТОГДА -РасчетыСКлиентамиПоСрокам.ДолгУпр - РасчетыСКлиентамиПоСрокам.ПредоплатаУпр
+						ИНАЧЕ РасчетыСКлиентамиПоСрокам.ДолгУпр + РасчетыСКлиентамиПоСрокам.ПредоплатаУпр
+					КОНЕЦ
+			ИНАЧЕ 0
+		КОНЕЦ) КАК Перенос,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(РасчетыСКлиентамиПоСрокам.ДокументРегистратор) В (ТИП(Документ.РасчетКурсовыхРазниц), ТИП(Документ.КорректировкаЗадолженности))
+			ТОГДА РасчетыСКлиентамиПоСрокам.ДокументРегистратор.Ссылка
+		ИНАЧЕ ""
+	КОНЕЦ КАК КорректировкаДолга
+ПОМЕСТИТЬ Переносы
+ИЗ
+	Счета КАК Счета
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.РасчетыСКлиентамиПоСрокам КАК РасчетыСКлиентамиПоСрокам
+		ПО Счета.Контрагент = РасчетыСКлиентамиПоСрокам.АналитикаУчетаПоПартнерам.Контрагент
+			И Счета.ДоговорКонтрагента = РасчетыСКлиентамиПоСрокам.ОбъектРасчетов.Договор
+ГДЕ
+	РасчетыСКлиентамиПоСрокам.ДокументРегистратор ССЫЛКА Документ.КорректировкаЗадолженности
+	И РасчетыСКлиентамиПоСрокам.ДокументРегистратор.Проведен = ИСТИНА
+
+СГРУППИРОВАТЬ ПО
+	Счета.Счет,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(РасчетыСКлиентамиПоСрокам.ДокументРегистратор) В (ТИП(Документ.РасчетКурсовыхРазниц), ТИП(Документ.КорректировкаЗадолженности))
+			ТОГДА РасчетыСКлиентамиПоСрокам.ДокументРегистратор.Ссылка
+		ИНАЧЕ ""
+	КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Счета.Счет КАК Счет,
+	СУММА(ЕСТЬNULL(Платеж.СуммаВзаиморасчетов, 0)) КАК Оплата,
+	Платеж.Ссылка КАК ПлатежноеПоручение
+ПОМЕСТИТЬ Оплаты
+ИЗ
+	Счета КАК Счета
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПоступлениеБезналичныхДенежныхСредств.РасшифровкаПлатежа КАК Платеж
+		ПО Счета.Счет = Платеж.ОснованиеПлатежа
+			И (Платеж.Ссылка.Проведен)
+			И (Платеж.Ссылка.Дата &lt;= &amp;ДатаОкончания)
+
+СГРУППИРОВАТЬ ПО
+	Счета.Счет,
+	Платеж.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Счет
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Счета.Счет КАК Счет,
+	Счета.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	Счета.Содержание КАК Содержание,
+	Счета.СуммаДокумента КАК СуммаДокумента,
+	ЕСТЬNULL(Оплаты.Оплата, 0) КАК Оплата,
+	ЕСТЬNULL(Переносы.Перенос, 0) КАК Перенос,
+	Оплаты.ПлатежноеПоручение КАК ПлатежноеПоручение,
+	Счета.СуммаДокумента - ЕСТЬNULL(Оплаты.Оплата, 0) - ЕСТЬNULL(Переносы.Перенос, 0) КАК НеОплачено,
+	Переносы.КорректировкаДолга КАК КорректировкаДолга,
+	Счета.Партнер КАК Партнер
+{ВЫБРАТЬ
+	Счет.*,
+	ДоговорКонтрагента.*,
+	Содержание,
+	СуммаДокумента,
+	Оплата,
+	Перенос,
+	ПлатежноеПоручение.*,
+	НеОплачено,
+	КорректировкаДолга.*,
+	Партнер.*}
+ИЗ
+	Счета КАК Счета
+		ЛЕВОЕ СОЕДИНЕНИЕ Оплаты КАК Оплаты
+		ПО Счета.Счет = Оплаты.Счет
+		ЛЕВОЕ СОЕДИНЕНИЕ Переносы КАК Переносы
+		ПО Счета.Счет = Переносы.Счет
+{ГДЕ
+	Счета.Счет.*,
+	Счета.Контрагент.*,
+	Счета.ДоговорКонтрагента.*,
+	Счета.Содержание,
+	Переносы.КорректировкаДолга.*}
+
+УПОРЯДОЧИТЬ ПО
+	ДоговорКонтрагента</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Бух</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сч62Остаток</dataPath>
+			<field>Сч62Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч62 остаток</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>17</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сч76Остаток</dataPath>
+			<field>Сч76Остаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч76 остаток</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>17</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Остатки62.Субконто1.Партнер КАК Партнер,
+	Остатки62.Субконто2 КАК ДоговорКонтрагента,
+	Остатки62.СуммаОстаток КАК Сч62Остаток,
+	0 КАК Сч76Остаток
+{ВЫБРАТЬ
+	Партнер.*,
+	ДоговорКонтрагента.*,
+	Сч62Остаток,
+	Сч76Остаток}
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ), Счет В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСПокупателямиИЗаказчиками)), &amp;Аналитика, НЕ Субконто2.гф_Сезон = ЗНАЧЕНИЕ(Справочник.КоллекцииНоменклатуры.ПустаяСсылка) {(Субконто1).* КАК Контрагент, (Субконто2).* КАК ДоговорКонтрагента}) КАК Остатки62
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	Остатки76.Субконто1.Партнер,
+	Остатки76.Субконто2,
+	0,
+	Остатки76.СуммаОстаток
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ), Счет = ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.ПрочиеРасчетыСРазнымиДебиторамиИКредиторами), &amp;Аналитика, НЕ Субконто2.гф_Сезон = ЗНАЧЕНИЕ(Справочник.КоллекцииНоменклатуры.ПустаяСсылка) {(Субконто1).* КАК Контрагент, (Субконто2).* КАК ДоговорКонтрагента}) КАК Остатки76
+
+УПОРЯДОЧИТЬ ПО
+	Партнер,
+	ДоговорКонтрагента</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СпецПлан</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спецификация</dataPath>
+			<field>Спецификация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокументаПлан</dataPath>
+			<field>СуммаДокументаПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма документа план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	гф_СпецификацияПокупателя.Ссылка КАК Ссылка,
+	гф_СпецификацияПокупателя.Контрагент КАК Контрагент,
+	гф_СпецификацияПокупателя.Организация КАК Организация,
+	гф_СпецификацияПокупателя.Договор КАК ДоговорКонтрагента,
+	гф_СпецификацияПокупателяЗаказыКлиентов.Сумма КАК Сумма,
+	гф_СпецификацияПокупателя.Партнер КАК Партнер
+ПОМЕСТИТЬ втСпецификации
+{ВЫБРАТЬ
+	Ссылка.*,
+	Контрагент.*,
+	ДоговорКонтрагента.*,
+	Сумма}
+ИЗ
+	Документ.гф_СпецификацияПокупателя КАК гф_СпецификацияПокупателя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.гф_СпецификацияПокупателя.ЗаказыКлиентов КАК гф_СпецификацияПокупателяЗаказыКлиентов
+		ПО гф_СпецификацияПокупателя.Ссылка = гф_СпецификацияПокупателяЗаказыКлиентов.Ссылка
+ГДЕ
+	гф_СпецификацияПокупателя.Договор.гф_Сезон В(&amp;Сезон)
+	И гф_СпецификацияПокупателя.Проведен
+
+СГРУППИРОВАТЬ ПО
+	гф_СпецификацияПокупателя.Ссылка,
+	гф_СпецификацияПокупателя.Контрагент,
+	гф_СпецификацияПокупателя.Организация,
+	гф_СпецификацияПокупателя.Договор,
+	гф_СпецификацияПокупателяЗаказыКлиентов.Сумма,
+	гф_СпецификацияПокупателя.Партнер
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	гф_СпецификацияПокупателя.Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСпецификации.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	ДополнительныеРеквизитыСтраховойДепозит.Значение КАК СтраховойДепозит,
+	ДополнительныеРеквизитыПредоплата.Значение КАК Предоплата
+ПОМЕСТИТЬ втСвойстваДоговора
+ИЗ
+	втСпецификации КАК втСпецификации
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДополнительныеРеквизитыСтраховойДепозит
+		ПО втСпецификации.ДоговорКонтрагента = ДополнительныеРеквизитыСтраховойДепозит.Ссылка
+			И (ДополнительныеРеквизитыСтраховойДепозит.Свойство.Имя = "гф_ДоговорыКонтрагентовСтраховойДепозит")
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДополнительныеРеквизитыПредоплата
+		ПО втСпецификации.ДоговорКонтрагента = ДополнительныеРеквизитыПредоплата.Ссылка
+			И (ДополнительныеРеквизитыПредоплата.Свойство.Имя = "гф_ДоговорыКонтрагентовПредоплата")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСвойстваДоговора.ДоговорКонтрагента КАК ДоговорКонтрагента
+ПОМЕСТИТЬ втОтобранныеДоговора
+ИЗ
+	втСвойстваДоговора КАК втСвойстваДоговора
+ГДЕ
+	(ЕСТЬNULL(втСвойстваДоговора.СтраховойДепозит, ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)
+			ИЛИ ЕСТЬNULL(втСвойстваДоговора.Предоплата, ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка))
+
+СГРУППИРОВАТЬ ПО
+	втСвойстваДоговора.ДоговорКонтрагента
+
+ИНДЕКСИРОВАТЬ ПО
+	ДоговорКонтрагента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСпецификации.Ссылка КАК Спецификация,
+	втСпецификации.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	СУММА(втСпецификации.Сумма * гф_ПроцентыПредоплатыПоДепозиту.Процент) / 100 КАК СуммаДокументаПлан,
+	втСпецификации.Партнер КАК Партнер
+ИЗ
+	втСпецификации КАК втСпецификации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втОтобранныеДоговора КАК втОтобранныеДоговора
+			ЛЕВОЕ СОЕДИНЕНИЕ втСвойстваДоговора КАК втСвойстваДоговора
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПроцентыПредоплаты КАК гф_ПроцентыПредоплатыПоДепозиту
+				ПО втСвойстваДоговора.СтраховойДепозит = гф_ПроцентыПредоплатыПоДепозиту.Номеклатура
+			ПО втОтобранныеДоговора.ДоговорКонтрагента = втСвойстваДоговора.ДоговорКонтрагента
+		ПО втСпецификации.ДоговорКонтрагента = втОтобранныеДоговора.ДоговорКонтрагента
+
+СГРУППИРОВАТЬ ПО
+	втСпецификации.Ссылка,
+	втСпецификации.ДоговорКонтрагента,
+	втСпецификации.Партнер</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ПродажиЗаказы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказы</dataPath>
+			<field>Заказы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>17</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	выборка.АналитикаУчетаПоПартнерам.Договор КАК ДоговорКонтрагента,
+	выборка.АналитикаУчетаПоПартнерам.Партнер КАК Партнер,
+	выборка.Регистратор КАК ЗаказПокупателя,
+	выборка.КОплатеОборот КАК Заказы
+{ВЫБРАТЬ
+	ДоговорКонтрагента.*,
+	Заказы,
+	ЗаказПокупателя.*,
+	Партнер.*}
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами.Обороты(&amp;ДатаНачала, КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ), Авто, АналитикаУчетаПоПартнерам.Договор.гф_Сезон В (&amp;Сезон) {(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК ДоговорКонтрагента}) КАК выборка
+ГДЕ
+	ТИПЗНАЧЕНИЯ(выборка.Регистратор) = ТИП(документ.заказклиента)
+{ГДЕ
+	выборка.КОплатеОборот КАК Заказы}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Контрагенты</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предоплата</dataPath>
+			<field>Предоплата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предоплата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спецификация</dataPath>
+			<field>Спецификация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаПредоплаты</dataPath>
+			<field>УслугаПредоплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга предоплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслугаДепозита</dataPath>
+			<field>УслугаДепозита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга депозита</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Депозит</dataPath>
+			<field>Депозит</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Депозит</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сезон</dataPath>
+			<field>Сезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомеклатураАванса</dataPath>
+			<field>НомеклатураАванса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номеклатура аванса</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	гф_СпецификацияПокупателя.Ссылка КАК Ссылка,
+	гф_СпецификацияПокупателя.Контрагент КАК Контрагент,
+	гф_СпецификацияПокупателя.Организация КАК Организация,
+	гф_СпецификацияПокупателя.Договор КАК ДоговорКонтрагента,
+	гф_СпецификацияПокупателя.Партнер КАК Партнер,
+	гф_СпецификацияПокупателяЗаказыКлиентов.ЗаказКлиента КАК ЗаказКлиента
+ПОМЕСТИТЬ втСпецификации
+{ВЫБРАТЬ
+	Ссылка.*,
+	Контрагент.*,
+	ДоговорКонтрагента.*}
+ИЗ
+	Документ.гф_СпецификацияПокупателя КАК гф_СпецификацияПокупателя
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.гф_СпецификацияПокупателя.ЗаказыКлиентов КАК гф_СпецификацияПокупателяЗаказыКлиентов
+		ПО гф_СпецификацияПокупателя.Ссылка = гф_СпецификацияПокупателяЗаказыКлиентов.Ссылка
+ГДЕ
+	гф_СпецификацияПокупателя.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И гф_СпецификацияПокупателя.Договор.гф_Сезон В(&amp;Сезон)
+	И гф_СпецификацияПокупателя.Проведен
+	И гф_СпецификацияПокупателяЗаказыКлиентов.Сумма &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	гф_СпецификацияПокупателя.Ссылка,
+	гф_СпецификацияПокупателя.Контрагент,
+	гф_СпецификацияПокупателя.Организация,
+	гф_СпецификацияПокупателя.Договор,
+	гф_СпецификацияПокупателя.Партнер,
+	гф_СпецификацияПокупателяЗаказыКлиентов.ЗаказКлиента
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	гф_СпецификацияПокупателя.Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСпецификации.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	ДополнительныеРеквизитыСтраховойДепозит.Значение КАК СтраховойДепозит,
+	ДополнительныеРеквизитыПредоплата.Значение КАК Предоплата
+ПОМЕСТИТЬ втСвойстваДоговора
+ИЗ
+	втСпецификации КАК втСпецификации
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДополнительныеРеквизитыСтраховойДепозит
+		ПО втСпецификации.ДоговорКонтрагента = ДополнительныеРеквизитыСтраховойДепозит.Ссылка
+			И (ДополнительныеРеквизитыСтраховойДепозит.Свойство.Имя = "гф_ДоговорыКонтрагентовСтраховойДепозит")
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДополнительныеРеквизитыПредоплата
+		ПО втСпецификации.ДоговорКонтрагента = ДополнительныеРеквизитыПредоплата.Ссылка
+			И (ДополнительныеРеквизитыПредоплата.Свойство.Имя = "гф_ДоговорыКонтрагентовПредоплата")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСвойстваДоговора.ДоговорКонтрагента КАК ДоговорКонтрагента
+ПОМЕСТИТЬ втОтобранныеДоговора
+ИЗ
+	втСвойстваДоговора КАК втСвойстваДоговора
+ГДЕ
+	(ЕСТЬNULL(втСвойстваДоговора.СтраховойДепозит, ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)
+			ИЛИ ЕСТЬNULL(втСвойстваДоговора.Предоплата, ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяССылка))
+
+СГРУППИРОВАТЬ ПО
+	втСвойстваДоговора.ДоговорКонтрагента
+
+ИНДЕКСИРОВАТЬ ПО
+	ДоговорКонтрагента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	втСпецификации.Ссылка КАК Спецификация,
+	втСпецификации.Организация КАК Организация,
+	втСпецификации.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	втСвойстваДоговора.СтраховойДепозит КАК УслугаДепозита,
+	втСвойстваДоговора.Предоплата КАК УслугаПредоплаты,
+	гф_ПроцентыПредоплатыПоДепозиту.Процент КАК Депозит,
+	гф_ПроцентыПредоплатыСкидкаЗаПредоплату.Процент КАК Предоплата,
+	втСпецификации.ДоговорКонтрагента.гф_Сезон КАК Сезон,
+	втСпецификации.Партнер КАК Партнер,
+	гф_ПроцентыПредоплатыПоДепозиту.Номеклатура КАК НомеклатураАванса
+ИЗ
+	втСпецификации КАК втСпецификации
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втОтобранныеДоговора КАК втОтобранныеДоговора
+			ЛЕВОЕ СОЕДИНЕНИЕ втСвойстваДоговора КАК втСвойстваДоговора
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПроцентыПредоплаты КАК гф_ПроцентыПредоплатыПоДепозиту
+				ПО втСвойстваДоговора.СтраховойДепозит = гф_ПроцентыПредоплатыПоДепозиту.Номеклатура
+				ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПроцентыПредоплаты КАК гф_ПроцентыПредоплатыСкидкаЗаПредоплату
+				ПО втСвойстваДоговора.Предоплата = гф_ПроцентыПредоплатыСкидкаЗаПредоплату.Номеклатура
+			ПО втОтобранныеДоговора.ДоговорКонтрагента = втСвойстваДоговора.ДоговорКонтрагента
+		ПО втСпецификации.ДоговорКонтрагента = втОтобранныеДоговора.ДоговорКонтрагента
+ГДЕ
+	втСпецификации.Партнер В
+			(ВЫБРАТЬ
+				справочник.партнеры.Ссылка
+			ИЗ
+				справочник.партнеры)
+
+СГРУППИРОВАТЬ ПО
+	втСпецификации.Ссылка,
+	втСпецификации.Организация,
+	втСпецификации.ДоговорКонтрагента,
+	втСвойстваДоговора.СтраховойДепозит,
+	втСвойстваДоговора.Предоплата,
+	гф_ПроцентыПредоплатыПоДепозиту.Процент,
+	гф_ПроцентыПредоплатыСкидкаЗаПредоплату.Процент,
+	втСпецификации.ДоговорКонтрагента.гф_Сезон,
+	втСпецификации.Партнер,
+	гф_ПроцентыПредоплатыПоДепозиту.Номеклатура</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Спецификации</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСпецификации</dataPath>
+			<field>СуммаСпецификации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма спецификации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Спецификация</dataPath>
+			<field>Спецификация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спецификация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	а.Ссылка КАК Спецификация,
+	а.Сумма КАК СуммаСпецификации,
+	а.Ссылка.Договор КАК ДоговорКонтрагента,
+	а.Ссылка.Партнер КАК Партнер
+{ВЫБРАТЬ
+	ДоговорКонтрагента.*,
+	СуммаСпецификации,
+	Спецификация.*,
+	Партнер.*}
+ИЗ
+	Документ.гф_СпецификацияПокупателя.ЗаказыКлиентов КАК а
+ГДЕ
+	а.Ссылка.Договор.гф_Сезон В(&amp;Сезон)
+{ГДЕ
+	а.Ссылка.Контрагент.* КАК Контрагент,
+	а.Ссылка.Договор.* КАК ДоговорКонтрагента,
+	а.Ссылка.* КАК Спецификация}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ПродажиРеализации</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПродажи</dataPath>
+			<field>ДокументПродажи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ продажи</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продажи</dataPath>
+			<field>Продажи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	выборка.АналитикаУчетаПоПартнерам.Договор КАК ДоговорКонтрагента,
+	выборка.Регистратор КАК ДокументПродажи,
+	выборка.СуммаОборот КАК Продажи,
+	выборка.АналитикаУчетаПоПартнерам.Партнер КАК Партнер
+{ВЫБРАТЬ
+	ДоговорКонтрагента.*,
+	Продажи,
+	ДокументПродажи.*,
+	Партнер.*}
+ИЗ
+	РегистрНакопления.РасчетыСКлиентами.Обороты(&amp;ДатаНачала, КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ), Авто, АналитикаУчетаПоПартнерам.Договор.гф_Сезон В (&amp;Сезон) {(АналитикаУчетаПоПартнерам.Контрагент).* КАК Контрагент, (АналитикаУчетаПоПартнерам.Договор).* КАК ДоговорКонтрагента}) КАК выборка
+ГДЕ
+	ТИПЗНАЧЕНИЯ(выборка.Регистратор) = ТИП(документ.РеализацияТоваровУслуг)
+{ГДЕ
+	выборка.СуммаОборот КАК Продажи}</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>Счета</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>Бух</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>СпецПлан</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>Спецификации</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>ПродажиРеализации</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>Контрагенты</sourceDataSet>
+		<destinationDataSet>ПродажиЗаказы</destinationDataSet>
+		<sourceExpression>ДоговорКонтрагента</sourceExpression>
+		<destinationExpression>ДоговорКонтрагента</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ПланФакт</dataPath>
+		<expression>СуммаДокументаПлан - СуммаДокумента</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План/факт</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧГ=3,0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>17</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодКонтрагента</dataPath>
+		<expression>Контрагент.Код</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код контрагента</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ГруппаДоступаКонтрагента</dataPath>
+		<expression>Контрагент.ГруппаДоступаКонтрагента</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Группа доступа контрагента</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СодержаниеПоле</dataPath>
+		<expression>Выбор когда Содержание= "" Тогда НомеклатураАванса  Иначе Содержание Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Содержание поле</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Заказы</dataPath>
+		<expression>Сумма(Заказы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеОплачено</dataPath>
+		<expression>Сумма(НеОплачено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Оплата</dataPath>
+		<expression>Сумма(Оплата)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Перенос</dataPath>
+		<expression>Сумма(Перенос)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланФакт</dataPath>
+		<expression>Сумма(СуммаДокументаПлан) - Сумма(СуммаДокумента)</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаДокумента</dataPath>
+		<expression>Сумма(СуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаДокументаПлан</dataPath>
+		<expression>Сумма(СуммаДокументаПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСпецификации</dataPath>
+		<expression>Сумма(СуммаСпецификации)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сч62Остаток</dataPath>
+		<expression>Сумма(Сч62Остаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сч76Остаток</dataPath>
+		<expression>Сумма(Сч76Остаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УслугаДепозита</dataPath>
+		<expression>Сумма(УслугаДепозита)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УслугаПредоплаты</dataPath>
+		<expression>Сумма(УслугаПредоплаты)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Продажи</dataPath>
+		<expression>Сумма(Продажи)</expression>
+	</totalField>
+	<parameter>
+		<name>Аналитика</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Аналитика</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Контрагенты</value>
+		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Договоры</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Анализ счетов на авансы</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>309ce677-7aef-40bd-ac69-d087675adcf2</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Сезон</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>2b1da308-69cf-4851-91a4-b19809433c89</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>79e2ea00-7c68-4919-8759-81f4384e9254</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ФиксацияСлева</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionFixation">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаДокумента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Оплата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Перенос</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НеОплачено</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Сч62Остаток</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Сч76Остаток</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаСпецификации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Продажи</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Заказы</dcsset:field>
+							</dcsset:item>
+							<dcsset:placement>Auto</dcsset:placement>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер.Код</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер.ГруппаДоступа</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сезон</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Депозит</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Предоплата</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>НомеклатураАванса</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>РасшифровкаПоДокументам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расшифровка</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>309ce677-7aef-40bd-ac69-d087675adcf2</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Сезон</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>2b1da308-69cf-4851-91a4-b19809433c89</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>79e2ea00-7c68-4919-8759-81f4384e9254</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ФиксацияСлева</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionFixation">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Счет</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Оплата</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПлатежноеПоручение</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Перенос</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КорректировкаДолга</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаСпецификации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Спецификация</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Продажи</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДокументПродажи</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Заказы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Партнер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗаказПокупателя</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбувь" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обувь</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обувь</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбувьРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<InputField name="нВидНоменклатуры" id="4">
+					<DataPath>Объект.нВидНоменклатуры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид номенклатуры (обувь)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="нВидНоменклатурыКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="нВидНоменклатурыРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСырье" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сырье</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сырье</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСырьеРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<InputField name="сВидНоменклатуры" id="7">
+					<DataPath>Объект.сВидНоменклатуры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид номенклатуры (сырье)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="сВидНоменклатурыКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="сВидНоменклатурыРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ДопРеквизитСырье" id="19">
+					<DataPath>Объект.ДопРеквизитСырье</DataPath>
+					<ContextMenu name="ДопРеквизитСырьеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДопРеквизитСырьеРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУслуги" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа услуги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа услуги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУслугиРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="уВидНоменклатуры" id="10">
+					<DataPath>Объект.уВидНоменклатуры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид номенклатуры (услуга)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="уВидНоменклатурыКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="уВидНоменклатурыРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДопРеквизитУслуга" id="24">
+					<DataPath>Объект.ДопРеквизитУслуга</DataPath>
+					<ContextMenu name="ДопРеквизитУслугаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДопРеквизитУслугаРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Page name="СтраницаВводаДанных" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ввода данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВводаДанныхРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<CheckBoxField name="флТест" id="33">
+							<DataPath>флТест</DataPath>
+							<Visible>false</Visible>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="флТестКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="флТестРасширеннаяПодсказка" id="35"/>
+						</CheckBoxField>
+						<Button name="СоздатьУслугиСырье" id="13">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.СоздатьУслугиСырье</CommandName>
+							<Font bold="true" kind="AutoFont"/>
+							<Picture>
+								<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СоздатьУслугиСырьеРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<UsualGroup name="ГруппаТаблица" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица ввода данных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаТаблицаРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="ТабДок" id="1">
+									<DataPath>ТабДок</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ТабДок</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ShowGrid>true</ShowGrid>
+									<ShowHeaders>true</ShowHeaders>
+									<Edit>true</Edit>
+									<ContextMenu name="ТабДокКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="3"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ExtTool_СозданиеСырьяУслуг_v3</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.ДопРеквизитСырье</Field>
+				<Field>Объект.ДопРеквизитУслуга</Field>
+				<Field>Объект.нВидНоменклатуры</Field>
+				<Field>Объект.сВидНоменклатуры</Field>
+				<Field>Объект.уВидНоменклатуры</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТабДок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таб док</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флТест" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фл тест</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоОбработаноСтрок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего обработано строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьУслугиСырье" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать услуги и сырье</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать услуги сырье</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьУслугиСырье</Action>
+		</Command>
+	</Commands>
+</Form>
