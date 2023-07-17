@@ -1770,6 +1770,433 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаПеремаркировкаТоваров" id="543">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перемаркировка товаров</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница перемаркировка товаров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПеремаркировкаТоваровРасширеннаяПодсказка" id="544"/>
+					<ChildItems>
+						<Button name="ВыбратьДокумент" id="663">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыбратьДокумент</CommandName>
+							<ExtendedTooltip name="ВыбратьДокументРасширеннаяПодсказка" id="664"/>
+						</Button>
+						<UsualGroup name="ГруппаВерхПеремарировки" id="545">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа верх перемарировки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа верх перемарировки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВерхПеремарировкиРасширеннаяПодсказка" id="546"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПеремаркировки" id="657">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Товары к перемаркировки: </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа перемаркировки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаПеремаркировкиРасширеннаяПодсказка" id="658"/>
+									<ChildItems>
+										<Table name="ТоварыКПеремаркировки" id="549">
+											<ReadOnly>true</ReadOnly>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoAddIncomplete>false</AutoAddIncomplete>
+											<AutoMarkIncomplete>false</AutoMarkIncomplete>
+											<DataPath>Объект.ТоварыКПеремаркировке</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТоварыКПеремаркировкиКонтекстноеМеню" id="550"/>
+											<AutoCommandBar name="ТоварыКПеремаркировкиКоманднаяПанель" id="551">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ТоварыКПеремаркировкиРасширеннаяПодсказка" id="552"/>
+											<SearchStringAddition name="ТоварыКПеремаркировкиСтрокаПоиска" id="553">
+												<AdditionSource>
+													<Item>ТоварыКПеремаркировки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТоварыКПеремаркировкиСтрокаПоискаКонтекстноеМеню" id="554"/>
+												<ExtendedTooltip name="ТоварыКПеремаркировкиСтрокаПоискаРасширеннаяПодсказка" id="555"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТоварыКПеремаркировкиСостояниеПросмотра" id="556">
+												<AdditionSource>
+													<Item>ТоварыКПеремаркировки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТоварыКПеремаркировкиСостояниеПросмотраКонтекстноеМеню" id="557"/>
+												<ExtendedTooltip name="ТоварыКПеремаркировкиСостояниеПросмотраРасширеннаяПодсказка" id="558"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТоварыКПеремаркировкиУправлениеПоиском" id="559">
+												<AdditionSource>
+													<Item>ТоварыКПеремаркировки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТоварыКПеремаркировкиУправлениеПоискомКонтекстноеМеню" id="560"/>
+												<ExtendedTooltip name="ТоварыКПеремаркировкиУправлениеПоискомРасширеннаяПодсказка" id="561"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ТоварыКПеремаркировкиНомерСтроки" id="562">
+													<DataPath>Объект.ТоварыКПеремаркировке.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиНомерСтрокиКонтекстноеМеню" id="563"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиНомерСтрокиРасширеннаяПодсказка" id="564"/>
+												</LabelField>
+												<InputField name="ТоварыКПеремаркировкиДокументВозврата" id="565">
+													<DataPath>Объект.ТоварыКПеремаркировке.ДокументВозврата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиДокументВозвратаКонтекстноеМеню" id="566"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиДокументВозвратаРасширеннаяПодсказка" id="567"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиДокументПеремаркировки" id="568">
+													<DataPath>Объект.ТоварыКПеремаркировке.ДокументПеремаркировки</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиДокументПеремаркировкиКонтекстноеМеню" id="569"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиДокументПеремаркировкиРасширеннаяПодсказка" id="570"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиНоменклатура" id="571">
+													<DataPath>Объект.ТоварыКПеремаркировке.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиНоменклатураКонтекстноеМеню" id="572"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиНоменклатураРасширеннаяПодсказка" id="573"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиХарактеристика" id="574">
+													<DataPath>Объект.ТоварыКПеремаркировке.Характеристика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиХарактеристикаКонтекстноеМеню" id="575"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиХарактеристикаРасширеннаяПодсказка" id="576"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиАртикул" id="577">
+													<DataPath>Объект.ТоварыКПеремаркировке.Артикул</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиАртикулКонтекстноеМеню" id="578"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиАртикулРасширеннаяПодсказка" id="579"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиGTIN" id="580">
+													<DataPath>Объект.ТоварыКПеремаркировке.GTIN</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиGTINКонтекстноеМеню" id="581"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиGTINРасширеннаяПодсказка" id="582"/>
+												</InputField>
+												<InputField name="ТоварыКПеремаркировкиПеремаркированныйКМ" id="583">
+													<DataPath>Объект.ТоварыКПеремаркировке.ПеремаркированныйКМ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТоварыКПеремаркировкиПеремаркированныйКМКонтекстноеМеню" id="584"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиПеремаркированныйКМРасширеннаяПодсказка" id="585"/>
+												</InputField>
+												<CheckBoxField name="ТоварыКПеремаркировкиРаспечатан" id="586">
+													<DataPath>Объект.ТоварыКПеремаркировке.Распечатан</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТоварыКПеремаркировкиРаспечатанКонтекстноеМеню" id="587"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиРаспечатанРасширеннаяПодсказка" id="588"/>
+												</CheckBoxField>
+												<CheckBoxField name="ТоварыКПеремаркировкиПодтвержден" id="589">
+													<DataPath>Объект.ТоварыКПеремаркировке.Подтвержден</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТоварыКПеремаркировкиПодтвержденКонтекстноеМеню" id="590"/>
+													<ExtendedTooltip name="ТоварыКПеремаркировкиПодтвержденРасширеннаяПодсказка" id="591"/>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКМПечати" id="659">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>КМ к печати:</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа КМПечати</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаКМПечатиРасширеннаяПодсказка" id="660"/>
+									<ChildItems>
+										<UsualGroup name="Группа16" id="665">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка строк</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" height="8" kind="StyleItem"/>
+											<Behavior>Collapsible</Behavior>
+											<CollapsedRepresentationTitle>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка строк</v8:content>
+												</v8:item>
+											</CollapsedRepresentationTitle>
+											<Collapsed>true</Collapsed>
+											<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="666"/>
+											<ChildItems>
+												<InputField name="КоличествоСтрокТЧ" id="667">
+													<DataPath>КоличествоСтрокТЧ</DataPath>
+													<ContextMenu name="КоличествоСтрокТЧКонтекстноеМеню" id="668"/>
+													<ExtendedTooltip name="КоличествоСтрокТЧРасширеннаяПодсказка" id="669"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ВводGTIN" id="670">
+											<DataPath>ВводGTIN</DataPath>
+											<ContextMenu name="ВводGTINКонтекстноеМеню" id="671"/>
+											<ExtendedTooltip name="ВводGTINРасширеннаяПодсказка" id="672"/>
+											<Events>
+												<Event name="OnChange">ВводGTINПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Table name="КМКПечати" id="592">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>Объект.КМКПечати</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="КМКПечатиКонтекстноеМеню" id="593"/>
+											<AutoCommandBar name="КМКПечатиКоманднаяПанель" id="594">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="КМКПечатиКМКПечати_Удалить" id="673">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.КМКПечати.StandardCommand.Delete</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="КМКПечатиКМКПечати_УдалитьРасширеннаяПодсказка" id="674"/>
+													</Button>
+													<Button name="КМКПечатиКМКПечати_Очистить" id="675">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КМКПечати_Очистить</CommandName>
+														<ExtendedTooltip name="КМКПечатиКМКПечати_ОчиститьРасширеннаяПодсказка" id="676"/>
+													</Button>
+													<Button name="КМКПечатиКМКПечати_НаЭкран" id="677">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.КМКПечати_НаЭкран</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Print</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КМКПечатиКМКПечати_НаЭкранРасширеннаяПодсказка" id="678"/>
+													</Button>
+													<Button name="КМКПечатиКМКПечати_Печать" id="679">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.КМКПечати_Печать</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.PrintImmediately</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="КМКПечатиКМКПечати_ПечатьРасширеннаяПодсказка" id="680"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="КМКПечатиРасширеннаяПодсказка" id="595"/>
+											<SearchStringAddition name="КМКПечатиСтрокаПоиска" id="596">
+												<AdditionSource>
+													<Item>КМКПечати</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КМКПечатиСтрокаПоискаКонтекстноеМеню" id="597"/>
+												<ExtendedTooltip name="КМКПечатиСтрокаПоискаРасширеннаяПодсказка" id="598"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="КМКПечатиСостояниеПросмотра" id="599">
+												<AdditionSource>
+													<Item>КМКПечати</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КМКПечатиСостояниеПросмотраКонтекстноеМеню" id="600"/>
+												<ExtendedTooltip name="КМКПечатиСостояниеПросмотраРасширеннаяПодсказка" id="601"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="КМКПечатиУправлениеПоиском" id="602">
+												<AdditionSource>
+													<Item>КМКПечати</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="КМКПечатиУправлениеПоискомКонтекстноеМеню" id="603"/>
+												<ExtendedTooltip name="КМКПечатиУправлениеПоискомРасширеннаяПодсказка" id="604"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">КМКПечатиПередНачаломДобавления</Event>
+											</Events>
+											<ChildItems>
+												<LabelField name="КМКПечатиНомерСтроки" id="605">
+													<DataPath>Объект.КМКПечати.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиНомерСтрокиКонтекстноеМеню" id="606"/>
+													<ExtendedTooltip name="КМКПечатиНомерСтрокиРасширеннаяПодсказка" id="607"/>
+												</LabelField>
+												<InputField name="КМКПечатиНоменклатура" id="608">
+													<DataPath>Объект.КМКПечати.Номенклатура</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиНоменклатураКонтекстноеМеню" id="609"/>
+													<ExtendedTooltip name="КМКПечатиНоменклатураРасширеннаяПодсказка" id="610"/>
+												</InputField>
+												<InputField name="КМКПечатиХарактеристика" id="611">
+													<DataPath>Объект.КМКПечати.Характеристика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиХарактеристикаКонтекстноеМеню" id="612"/>
+													<ExtendedTooltip name="КМКПечатиХарактеристикаРасширеннаяПодсказка" id="613"/>
+												</InputField>
+												<InputField name="КМКПечатиАртикул" id="614">
+													<DataPath>Объект.КМКПечати.Артикул</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиАртикулКонтекстноеМеню" id="615"/>
+													<ExtendedTooltip name="КМКПечатиАртикулРасширеннаяПодсказка" id="616"/>
+												</InputField>
+												<InputField name="КМКПечатиGTIN" id="617">
+													<DataPath>Объект.КМКПечати.GTIN</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиGTINКонтекстноеМеню" id="618"/>
+													<ExtendedTooltip name="КМКПечатиGTINРасширеннаяПодсказка" id="619"/>
+												</InputField>
+												<InputField name="КМКПечатиПеремаркированныйКМ" id="620">
+													<DataPath>Объект.КМКПечати.КМ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КМКПечатиПеремаркированныйКМКонтекстноеМеню" id="621"/>
+													<ExtendedTooltip name="КМКПечатиПеремаркированныйКМРасширеннаяПодсказка" id="622"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодтвержденные" id="661">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подтвержденные КМ:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подтвержденные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>12</Height>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаПодтвержденныеРасширеннаяПодсказка" id="662"/>
+							<ChildItems>
+								<Table name="ПодтвержденныеКМ" id="623">
+									<Enabled>false</Enabled>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.ПодтвержденныеКМ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ПодтвержденныеКМКонтекстноеМеню" id="624"/>
+									<AutoCommandBar name="ПодтвержденныеКМКоманднаяПанель" id="625"/>
+									<ExtendedTooltip name="ПодтвержденныеКМРасширеннаяПодсказка" id="626"/>
+									<SearchStringAddition name="ПодтвержденныеКМСтрокаПоиска" id="627">
+										<AdditionSource>
+											<Item>ПодтвержденныеКМ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодтвержденныеКМСтрокаПоискаКонтекстноеМеню" id="628"/>
+										<ExtendedTooltip name="ПодтвержденныеКМСтрокаПоискаРасширеннаяПодсказка" id="629"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПодтвержденныеКМСостояниеПросмотра" id="630">
+										<AdditionSource>
+											<Item>ПодтвержденныеКМ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодтвержденныеКМСостояниеПросмотраКонтекстноеМеню" id="631"/>
+										<ExtendedTooltip name="ПодтвержденныеКМСостояниеПросмотраРасширеннаяПодсказка" id="632"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПодтвержденныеКМУправлениеПоиском" id="633">
+										<AdditionSource>
+											<Item>ПодтвержденныеКМ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПодтвержденныеКМУправлениеПоискомКонтекстноеМеню" id="634"/>
+										<ExtendedTooltip name="ПодтвержденныеКМУправлениеПоискомРасширеннаяПодсказка" id="635"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ПодтвержденныеКМНомерСтроки" id="636">
+											<DataPath>Объект.ПодтвержденныеКМ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМНомерСтрокиКонтекстноеМеню" id="637"/>
+											<ExtendedTooltip name="ПодтвержденныеКМНомерСтрокиРасширеннаяПодсказка" id="638"/>
+										</LabelField>
+										<InputField name="ПодтвержденныеКМНоменклатура" id="639">
+											<DataPath>Объект.ПодтвержденныеКМ.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМНоменклатураКонтекстноеМеню" id="640"/>
+											<ExtendedTooltip name="ПодтвержденныеКМНоменклатураРасширеннаяПодсказка" id="641"/>
+										</InputField>
+										<InputField name="ПодтвержденныеКМХарактеристика" id="642">
+											<DataPath>Объект.ПодтвержденныеКМ.Характеристика</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМХарактеристикаКонтекстноеМеню" id="643"/>
+											<ExtendedTooltip name="ПодтвержденныеКМХарактеристикаРасширеннаяПодсказка" id="644"/>
+										</InputField>
+										<InputField name="ПодтвержденныеКМАртикул" id="645">
+											<DataPath>Объект.ПодтвержденныеКМ.Артикул</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМАртикулКонтекстноеМеню" id="646"/>
+											<ExtendedTooltip name="ПодтвержденныеКМАртикулРасширеннаяПодсказка" id="647"/>
+										</InputField>
+										<InputField name="ПодтвержденныеКМGTIN" id="648">
+											<DataPath>Объект.ПодтвержденныеКМ.GTIN</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМGTINКонтекстноеМеню" id="649"/>
+											<ExtendedTooltip name="ПодтвержденныеКМGTINРасширеннаяПодсказка" id="650"/>
+										</InputField>
+										<InputField name="ПодтвержденныеКМПеремаркированныйКМ" id="651">
+											<DataPath>Объект.ПодтвержденныеКМ.ПеремаркированныйКМ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПодтвержденныеКМПеремаркированныйКМКонтекстноеМеню" id="652"/>
+											<ExtendedTooltip name="ПодтвержденныеКМПеремаркированныйКМРасширеннаяПодсказка" id="653"/>
+										</InputField>
+										<CheckBoxField name="ПодтвержденныеКМПодтвержден" id="654">
+											<DataPath>Объект.ПодтвержденныеКМ.Подтвержден</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПодтвержденныеКМПодтвержденКонтекстноеМеню" id="655"/>
+											<ExtendedTooltip name="ПодтвержденныеКМПодтвержденРасширеннаяПодсказка" id="656"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -2060,6 +2487,52 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДокументОснованиеПеремаркировки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ основание перемаркировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаявкаНаВозвратТоваровОтКлиента</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСтрокТЧ" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>КоличествоСтрокТЧ</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВводGTIN" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод GTIN</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>14</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьСNVE" id="1">
@@ -2242,6 +2715,66 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПечатьБезNVEСПредварительнымПросмотром</Action>
+		</Command>
+		<Command name="ВыбратьДокумент" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьДокумент</Action>
+		</Command>
+		<Command name="КМКПечати_Очистить" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КМКПечати очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМКПечати_Очистить</Action>
+		</Command>
+		<Command name="КМКПечати_НаЭкран" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На экран</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КМКПечати на экран</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМКПечати_Печать</Action>
+		</Command>
+		<Command name="КМКПечати_Печать" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КМКПечати печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КМКПечати_Печать</Action>
 		</Command>
 	</Commands>
 </Form>
