@@ -19,10 +19,6 @@
 			<field>КМ</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Резерв</dataPath>
-			<field>Резерв</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ЕдиницаИзмерения</dataPath>
 			<field>ЕдиницаИзмерения</field>
 			<title xsi:type="v8:LocalStringType">
@@ -231,6 +227,20 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Количество номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидБлокировки</dataPath>
+			<field>ВидБлокировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УИ</dataPath>
+			<field>УИ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УИ</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -502,6 +512,9 @@
 	0 КАК ДействующийЛимит,
 	ЗаказНоменклатураХарактеристика.НомерАдреса КАК НомерАдреса,
 	NULL КАК Блокировка,
+	
+	NULL КАК УИ,
+	
 	ЗаказНоменклатураХарактеристика.СтавкаНДС КАК СтавкаНДС,
 	УпаковочныйЛистДанныеЗаказов.КоличествоНоменклатурыВУпаковочномЛисте КАК КоличествоНоменклатуры,
 	УпаковочныйЛистДанныеЗаказов.ЦенаУпаковочногоЛиста * УпаковочныйЛистДанныеЗаказов.КоличествоОстаток КАК Стоимость
@@ -689,6 +702,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УИ</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
