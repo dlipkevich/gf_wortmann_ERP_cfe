@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
-	<DataProcessor uuid="6150c7a1-ae7c-432e-91da-6ba9bbe77dbf">
+	<DataProcessor uuid="8659e612-2fab-4647-a8fc-4038155c1ca2">
 		<InternalInfo>
 			<xr:GeneratedType name="DataProcessorObject.гф_РезервированиеТоваровПоПриоритетам" category="Object">
-				<xr:TypeId>f8b36156-0edf-4312-b650-9ad530125b1b</xr:TypeId>
-				<xr:ValueId>68b8c7da-be5c-4c04-aa4b-4a9c8d183e6a</xr:ValueId>
+				<xr:TypeId>0ba541b4-0933-4e08-9bde-0ab34e929568</xr:TypeId>
+				<xr:ValueId>ed61405e-65c8-4d90-92de-bb65b3663149</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="DataProcessorManager.гф_РезервированиеТоваровПоПриоритетам" category="Manager">
-				<xr:TypeId>5c496af8-7be3-4a04-a226-a21f2bb5c527</xr:TypeId>
-				<xr:ValueId>5bc899a9-2095-4708-96c4-f3f2f8fc409d</xr:ValueId>
+				<xr:TypeId>e170cfcc-2e0e-4e3b-b678-befdcb4bfa83</xr:TypeId>
+				<xr:ValueId>36211c4d-e788-4fed-8057-c2b8b31a4bad</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -19,7 +19,7 @@
 					<v8:content>Резервирование товаров по приоритетам</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>#wortmann #5.2.08 Галфинд Sakovich 2022/08/09</Comment>
+			<Comment>#wortmann #5.2.08 Галфинд Sakovich 2022/09/30_вер. 19</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm>DataProcessor.гф_РезервированиеТоваровПоПриоритетам.Form.Форма</DefaultForm>
 			<AuxiliaryForm/>
@@ -28,7 +28,7 @@
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="59447fc4-25b4-4d96-aaa0-f5b599ffe19a">
+			<Attribute uuid="b8ce3477-14d7-437a-a8b8-24bc80160e2b">
 				<Properties>
 					<Name>Дата</Name>
 					<Synonym>
@@ -65,9 +65,9 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="f88e1c6c-c882-4b44-b83e-7c2f96767fc6">
+			<Attribute uuid="3dff47a1-5672-45a7-8f48-b832089e7d15">
 				<Properties>
-					<Name>Организация</Name>
+					<Name>гф_Организация</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -99,7 +99,7 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="38588fbb-ec46-4caa-9585-65609754e24c">
+			<Attribute uuid="4029d9da-25da-46ce-8398-1ae55e89a2a9">
 				<Properties>
 					<Name>Склад</Name>
 					<Synonym>
@@ -133,15 +133,15 @@
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<TabularSection uuid="20adf39a-d19d-45c7-b3c7-deb8a150f872">
+			<TabularSection uuid="eb60b61c-72df-491d-9114-ba0b38669891">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.гф_РезервированиеТоваровПоПриоритетам.ТекущиеПриоритеты" category="TabularSection">
-						<xr:TypeId>a73961e6-9e63-424c-9eb8-dcb323ef46d9</xr:TypeId>
-						<xr:ValueId>ed67acf4-e715-4abf-8ac7-1ec106ff8e21</xr:ValueId>
+						<xr:TypeId>69699b63-fa21-44d0-a5bb-e40abc656203</xr:TypeId>
+						<xr:ValueId>33594039-7de9-4b0e-8fa1-3595587c0461</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.гф_РезервированиеТоваровПоПриоритетам.ТекущиеПриоритеты" category="TabularSectionRow">
-						<xr:TypeId>7d6af039-523d-4c37-99cf-d78d089f8c2c</xr:TypeId>
-						<xr:ValueId>aad84bd8-5d14-499e-bb6a-66ea6941d535</xr:ValueId>
+						<xr:TypeId>e95cfe85-72ad-4520-b980-26848fcb6a65</xr:TypeId>
+						<xr:ValueId>e359711c-29fa-4b38-a2a8-b7eeb29a13e1</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -185,7 +185,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="f1c5af8b-586e-475a-a569-d1dcb0a27155">
+					<Attribute uuid="f6b57e17-7d52-4128-bd33-027e288b058b">
 						<Properties>
 							<Name>Контрагент</Name>
 							<Synonym>
@@ -221,7 +221,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="401d645d-ddc3-423e-8fbf-defa1066b382">
+					<Attribute uuid="ff39e5dc-5440-40c4-a69c-54ed8fec6d5b">
 						<Properties>
 							<Name>Организация</Name>
 							<Synonym>
@@ -257,7 +257,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="f56c034d-09c9-451f-b96e-ba44df4419cd">
+					<Attribute uuid="b9fbbf0a-3575-4139-80a8-b3b3a08bf62e">
 						<Properties>
 							<Name>Склад</Name>
 							<Synonym>
@@ -293,7 +293,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="a845735c-56d8-4915-9ad2-73ae90cccd93">
+					<Attribute uuid="6fa69f3b-90fc-4849-8111-45e8b2fbbd87">
 						<Properties>
 							<Name>Заказ</Name>
 							<Synonym>
@@ -329,7 +329,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c4dfaf0b-4aa8-4865-8960-f70f0048f06f">
+					<Attribute uuid="5e472468-ce94-47cd-b053-84d735ee9be4">
 						<Properties>
 							<Name>ТекущийПриоритет</Name>
 							<Synonym>
@@ -370,7 +370,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="70e302f0-a1e2-422c-82ca-04ee6623516e">
+					<Attribute uuid="ef75382c-838c-41b0-acd7-92bd09943299">
 						<Properties>
 							<Name>НовыйПриоритет</Name>
 							<Synonym>
@@ -411,7 +411,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="cf0f2177-0703-4da9-b21d-cd7a94f86e48">
+					<Attribute uuid="e7cc011c-ef60-4212-adc7-0b5ed72435c0">
 						<Properties>
 							<Name>ПервоначальныйНомерСтроки</Name>
 							<Synonym>
@@ -454,15 +454,15 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<TabularSection uuid="6a9fa06c-3d26-4850-bdd9-176a22fbdc4b">
+			<TabularSection uuid="3e146b11-7f24-48fe-8c14-355ab0b0069b">
 				<InternalInfo>
 					<xr:GeneratedType name="DataProcessorTabularSection.гф_РезервированиеТоваровПоПриоритетам.РаспределениеРезервов" category="TabularSection">
-						<xr:TypeId>b7c4838a-618d-47b7-b776-6c82381bf4ca</xr:TypeId>
-						<xr:ValueId>148e0af8-e9ab-4523-96b5-b898ed73f63b</xr:ValueId>
+						<xr:TypeId>18c28c9f-70c8-4916-abbb-3118076293ee</xr:TypeId>
+						<xr:ValueId>6017c9d2-c242-4c8e-ae6b-92ce4712c660</xr:ValueId>
 					</xr:GeneratedType>
 					<xr:GeneratedType name="DataProcessorTabularSectionRow.гф_РезервированиеТоваровПоПриоритетам.РаспределениеРезервов" category="TabularSectionRow">
-						<xr:TypeId>128eb5a1-4a5b-4f37-b750-a16621919291</xr:TypeId>
-						<xr:ValueId>b05e1929-62ea-4108-8782-1cc64be2f917</xr:ValueId>
+						<xr:TypeId>af1cbcdb-9d34-40b7-8261-bc893da9c51f</xr:TypeId>
+						<xr:ValueId>40172a65-a40b-40bb-9b92-d0b012421b3c</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
@@ -506,7 +506,7 @@
 					</StandardAttributes>
 				</Properties>
 				<ChildObjects>
-					<Attribute uuid="3dd3121f-e6ee-4780-a51f-7cea089d3d8e">
+					<Attribute uuid="29f18ef2-50ca-453b-9fdd-3aef08c80f25">
 						<Properties>
 							<Name>Номенклатура</Name>
 							<Synonym>
@@ -542,7 +542,43 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="1a2c843c-2bab-407d-bfd0-e88ce29a9544">
+					<Attribute uuid="9e9af994-5241-44ce-835a-dbd5b8dba874">
+						<Properties>
+							<Name>Характеристика</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Характеристика</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="36efde30-3bed-40c6-9e26-537465f68ebf">
 						<Properties>
 							<Name>IDКороба</Name>
 							<Synonym>
@@ -578,7 +614,7 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="c99b8c0b-7455-49b3-933d-21ebc4d4b07b">
+					<Attribute uuid="4d2c9f13-1e14-4d56-94d6-bd6ff9d69f3f">
 						<Properties>
 							<Name>НовоеНазначение</Name>
 							<Synonym>
@@ -589,9 +625,122 @@
 							</Synonym>
 							<Comment/>
 							<Type>
+								<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="8d63a916-594f-4cf1-a5cf-66ea0a4be564">
+						<Properties>
+							<Name>ИсходноеНазначение</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исходное назначение</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="5b9fa74d-34a8-499c-a79e-2d3cb900dc31">
+						<Properties>
+							<Name>Количество</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>10</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="e3c73d85-5c0d-4a16-9edb-bf358e9ea511">
+						<Properties>
+							<Name>Артикул</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Артикул</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
 								<v8:Type>xs:string</v8:Type>
 								<v8:StringQualifiers>
-									<v8:Length>10</v8:Length>
+									<v8:Length>50</v8:Length>
 									<v8:AllowedLength>Variable</v8:AllowedLength>
 								</v8:StringQualifiers>
 							</Type>
@@ -607,6 +756,168 @@
 							<MaxValue xsi:nil="true"/>
 							<FillFromFillingValue>false</FillFromFillingValue>
 							<FillValue xsi:type="xs:string"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="a8b5fc5a-6c55-4003-9b6c-7e1a3571b2bd">
+						<Properties>
+							<Name>ЕстьНовоеНазначение</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Есть новое назначение</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:boolean</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<TabularSection uuid="d42c0454-88f2-4d04-81bf-e9055bf036a3">
+				<InternalInfo>
+					<xr:GeneratedType name="DataProcessorTabularSection.гф_РезервированиеТоваровПоПриоритетам.УпаковочныеЛисты" category="TabularSection">
+						<xr:TypeId>0ac07710-ddbe-40ee-b81a-4a4d41d5b7ba</xr:TypeId>
+						<xr:ValueId>259ca4b3-a038-4d71-8392-75e94060e5ee</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DataProcessorTabularSectionRow.гф_РезервированиеТоваровПоПриоритетам.УпаковочныеЛисты" category="TabularSectionRow">
+						<xr:TypeId>57e0b8bf-edc0-42ff-888e-6a34caf7efe9</xr:TypeId>
+						<xr:ValueId>bfaeaf2c-5bf1-45bd-a2b6-f1d5951c3284</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>УпаковочныеЛисты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковочные листы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<ToolTip/>
+					<FillChecking>DontCheck</FillChecking>
+					<StandardAttributes>
+						<xr:StandardAttribute name="LineNumber">
+							<xr:LinkByType/>
+							<xr:FillChecking>DontCheck</xr:FillChecking>
+							<xr:MultiLine>false</xr:MultiLine>
+							<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+							<xr:CreateOnInput>Auto</xr:CreateOnInput>
+							<xr:MaxValue xsi:nil="true"/>
+							<xr:ToolTip/>
+							<xr:ExtendedEdit>false</xr:ExtendedEdit>
+							<xr:Format/>
+							<xr:ChoiceForm/>
+							<xr:QuickChoice>Auto</xr:QuickChoice>
+							<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+							<xr:EditFormat/>
+							<xr:PasswordMode>false</xr:PasswordMode>
+							<xr:DataHistory>Use</xr:DataHistory>
+							<xr:MarkNegatives>false</xr:MarkNegatives>
+							<xr:MinValue xsi:nil="true"/>
+							<xr:Synonym/>
+							<xr:Comment/>
+							<xr:FullTextSearch>Use</xr:FullTextSearch>
+							<xr:ChoiceParameterLinks/>
+							<xr:FillValue xsi:nil="true"/>
+							<xr:Mask/>
+							<xr:ChoiceParameters/>
+						</xr:StandardAttribute>
+					</StandardAttributes>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="0bfbc2db-b464-46eb-b06d-e41c0b208a2e">
+						<Properties>
+							<Name>IDКороба</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>IDКороба</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="8a21e3e7-5bd1-45a8-be0d-5eab73224b1a">
+						<Properties>
+							<Name>НовоеНазначение</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новое назначение</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>cfg:DocumentRef.ЗаказКлиента</v8:Type>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
 							<FillChecking>DontCheck</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
