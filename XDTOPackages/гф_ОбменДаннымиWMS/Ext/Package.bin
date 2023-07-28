@@ -414,4 +414,20 @@
 		</property>
 		<property xmlns:d3p1="WMS" name="Конкатенация" type="d3p1:Конкатенация" localName="SoUpdate"/>
 	</objectType>
+	<objectType name="СтрокаТовара5">
+		<property name="НомерСтроки" localName="line_no">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Код" localName="sku">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Количество" localName="ordered_quantity">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="WMS" name="СерийныеНомера" type="d3p1:СерийныеНомера" localName="expected_serials"/>
+		<property xmlns:d3p1="WMS" name="Комментарии" type="d3p1:Комментарии" localName="comments"/>
+		<property name="Блокировка" localName="quality">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+	</objectType>
 </package>
