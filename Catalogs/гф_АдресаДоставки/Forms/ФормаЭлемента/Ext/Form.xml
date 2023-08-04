@@ -11,7 +11,6 @@
 	</Events>
 	<ChildItems>
 		<InputField name="Владелец_Код" id="37">
-			<DataPath>1/-5/0:f2ad7ff8-95fd-4923-86d8-ea7b0c9ff781/-2</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -24,7 +23,6 @@
 			<ExtendedTooltip name="Владелец_КодРасширеннаяПодсказка" id="39"/>
 		</InputField>
 		<InputField name="Владелец" id="7">
-			<DataPath>1/-5</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
@@ -144,6 +142,68 @@
 			<ContextMenu name="ТипПрайсЛистаТККонтекстноеМеню" id="29"/>
 			<ExtendedTooltip name="ТипПрайсЛистаТКРасширеннаяПодсказка" id="30"/>
 		</InputField>
+		<Button name="Заполнить" id="74">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Заполнить</CommandName>
+			<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="75"/>
+		</Button>
+		<Table name="КонтактныеЛица" id="52">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.КонтактныеЛица</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтактныеЛицаКонтекстноеМеню" id="53"/>
+			<AutoCommandBar name="КонтактныеЛицаКоманднаяПанель" id="54">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КонтактныеЛицаРасширеннаяПодсказка" id="55"/>
+			<SearchStringAddition name="КонтактныеЛицаСтрокаПоиска" id="56">
+				<AdditionSource>
+					<Item>КонтактныеЛица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактныеЛицаСтрокаПоискаКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="КонтактныеЛицаСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтактныеЛицаСостояниеПросмотра" id="59">
+				<AdditionSource>
+					<Item>КонтактныеЛица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактныеЛицаСостояниеПросмотраКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="КонтактныеЛицаСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтактныеЛицаУправлениеПоиском" id="62">
+				<AdditionSource>
+					<Item>КонтактныеЛица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтактныеЛицаУправлениеПоискомКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="КонтактныеЛицаУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КонтактныеЛицаНомерСтроки" id="65">
+					<DataPath>Объект.КонтактныеЛица.LineNumber</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактныеЛицаНомерСтрокиКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="КонтактныеЛицаНомерСтрокиРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<InputField name="КонтактныеЛицаОрганизация" id="68">
+					<DataPath>Объект.КонтактныеЛица.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактныеЛицаОрганизацияКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="КонтактныеЛицаОрганизацияРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="КонтактныеЛицаКонтактноеЛицо" id="71">
+					<DataPath>Объект.КонтактныеЛица.КонтактноеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтактныеЛицаКонтактноеЛицоКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="КонтактныеЛицаКонтактноеЛицоРасширеннаяПодсказка" id="73"/>
+				</InputField>
+			</ChildItems>
+		</Table>
 		<UsualGroup name="ГруппаДоставка" id="42">
 			<Title>
 				<v8:item>
@@ -231,6 +291,23 @@
 			</Settings>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>
