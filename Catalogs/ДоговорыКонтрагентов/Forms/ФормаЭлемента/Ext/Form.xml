@@ -1294,7 +1294,7 @@
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Define AR/AP as</v8:content>
+															<v8:content>AR/AP item</v8:content>
 														</v8:item>
 													</Title>
 													<Width>40</Width>
@@ -1387,6 +1387,253 @@
 													<ContextMenu name="ОплатаВВалютеКонтекстноеМеню" id="878"/>
 													<ExtendedTooltip name="ОплатаВВалютеРасширеннаяПодсказка" id="879"/>
 												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаВариантКурсаДоговора" id="1076">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вариант курса договора</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group contract rate options</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа курс валюты договора</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group contract exchange rate</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВариантКурсаДоговораРасширеннаяПодсказка" id="1081"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаВариантКурсаДоговораПоле" id="1056">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа вариант курса договора поле</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group contract rate options field</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа курс валюты договора поле</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group contract exchange rate field</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
+													<ExtendedTooltip name="ГруппаВариантКурсаДоговораПолеРасширеннаяПодсказка" id="1057"/>
+													<ChildItems>
+														<InputField name="ВариантКурсаДоговора" id="1073">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Курс валюты договора</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Contract exchange rate</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>22</MaxWidth>
+															<ListChoiceMode>true</ListChoiceMode>
+															<ContextMenu name="ВариантКурсаДоговораКонтекстноеМеню" id="1074"/>
+															<ExtendedTooltip name="ВариантКурсаДоговораРасширеннаяПодсказка" id="1075">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<MaxWidth>22</MaxWidth>
+															</ExtendedTooltip>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКурсУказанныйВДоговоре" id="1078">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа курс указанный в договоре</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group rate specified in contract</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа курс указанный в договоре</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Group rate specified in the contract</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКурсУказанныйВДоговореРасширеннаяПодсказка" id="1038"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаРедактированиеКурса" id="1039">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа редактирование курса</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group edit rate</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа редактирование курса</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group edit the rate</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаРедактированиеКурсаРасширеннаяПодсказка" id="1082"/>
+															<ChildItems>
+																<InputField name="ЧислительКурсаВалютыДоговора" id="1044">
+																	<TitleLocation>None</TitleLocation>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЧислительКурсаВалютыДоговораКонтекстноеМеню" id="1045"/>
+																	<ExtendedTooltip name="ЧислительКурсаВалютыДоговораРасширеннаяПодсказка" id="1046"/>
+																</InputField>
+																<UsualGroup name="ГруппаКратностьКурса" id="1066">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа кратность курса</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group exchange rate multiplier</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа кратность курса</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group exchange rate multiplier</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаКратностьКурсаРасширеннаяПодсказка" id="1067"/>
+																	<ChildItems>
+																		<LabelField name="НадписьЗнаменательКурсаВалютыДоговора" id="1061">
+																			<TitleLocation>None</TitleLocation>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<MaxWidth>15</MaxWidth>
+																			<HorizontalStretch>true</HorizontalStretch>
+																			<ContextMenu name="НадписьЗнаменательКурсаВалютыДоговораКонтекстноеМеню" id="1062"/>
+																			<ExtendedTooltip name="НадписьЗнаменательКурсаВалютыДоговораРасширеннаяПодсказка" id="1063"/>
+																		</LabelField>
+																		<UsualGroup name="ГруппаРедактированиеКратностиКурса" id="1064">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа редактирование кратности курса</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Group edit rate multiplying factor</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа редактирование кратности курса</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Group edit the rate multiplying factor</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Group>AlwaysHorizontal</Group>
+																			<Behavior>Usual</Behavior>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаРедактированиеКратностиКурсаРасширеннаяПодсказка" id="1065"/>
+																			<ChildItems>
+																				<InputField name="ЗнаменательКурсаВалютыДоговора" id="1047">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Валюта регл. учета</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Currency of local accounting</v8:content>
+																						</v8:item>
+																					</Title>
+																					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																					<ContextMenu name="ЗнаменательКурсаВалютыДоговораКонтекстноеМеню" id="1048"/>
+																					<ExtendedTooltip name="ЗнаменательКурсаВалютыДоговораРасширеннаяПодсказка" id="1049"/>
+																				</InputField>
+																				<LabelField name="НадписьВалютаДоговора" id="1068">
+																					<TitleLocation>None</TitleLocation>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<MaxWidth>5</MaxWidth>
+																					<ContextMenu name="НадписьВалютаДоговораКонтекстноеМеню" id="1069"/>
+																					<ExtendedTooltip name="НадписьВалютаДоговораРасширеннаяПодсказка" id="1070"/>
+																				</LabelField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<LabelDecoration name="НадписьИсторияКурсаДоговора" id="1080">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>История</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>History</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьИсторияКурсаДоговораКонтекстноеМеню" id="1042"/>
+															<ExtendedTooltip name="НадписьИсторияКурсаДоговораРасширеннаяПодсказка" id="1043"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаСуммаДоговора" id="487">
@@ -2061,11 +2308,11 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Порядок списания недостач товаров, принятых на хранение</v8:content>
+											<v8:content>Порядок списания недостач товаров</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Write-off procedure for shortages of goods accepted for storage</v8:content>
+											<v8:content>Stock shortage recognition procedure</v8:content>
 										</v8:item>
 									</Title>
 									<Width>50</Width>
@@ -4579,7 +4826,7 @@ details</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
-																<v8:content>Define AR/AP as</v8:content>
+																<v8:content>AR/AP item</v8:content>
 															</v8:item>
 														</Title>
 														<Width>40</Width>
@@ -4672,6 +4919,253 @@ details</v8:content>
 														<ContextMenu name="ОплатаВВалютеКонтекстноеМеню" id="878"/>
 														<ExtendedTooltip name="ОплатаВВалютеРасширеннаяПодсказка" id="879"/>
 													</CheckBoxField>
+												</ChildItems>
+											</UsualGroup>
+											<UsualGroup name="ГруппаВариантКурсаДоговора" id="1035">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа вариант курса договора</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Group contract rate options</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа курс валюты договора</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Group contract exchange rate</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Group>AlwaysHorizontal</Group>
+												<Behavior>Usual</Behavior>
+												<Representation>None</Representation>
+												<ShowTitle>false</ShowTitle>
+												<ExtendedTooltip name="ГруппаВариантКурсаДоговораРасширеннаяПодсказка" id="1036"/>
+												<ChildItems>
+													<UsualGroup name="ГруппаВариантКурсаДоговораПоле" id="1056">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа вариант курса договора поле</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Group contract rate options field</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа курс валюты договора поле</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Group contract exchange rate field</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ThroughAlign>Use</ThroughAlign>
+														<ExtendedTooltip name="ГруппаВариантКурсаДоговораПолеРасширеннаяПодсказка" id="1057"/>
+														<ChildItems>
+															<InputField name="ВариантКурсаДоговора" id="1073">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Курс валюты договора</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Contract exchange rate</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<MaxWidth>22</MaxWidth>
+																<ListChoiceMode>true</ListChoiceMode>
+																<ContextMenu name="ВариантКурсаДоговораКонтекстноеМеню" id="1074"/>
+																<ExtendedTooltip name="ВариантКурсаДоговораРасширеннаяПодсказка" id="1075">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>22</MaxWidth>
+																</ExtendedTooltip>
+															</InputField>
+														</ChildItems>
+													</UsualGroup>
+													<UsualGroup name="ГруппаКурсУказанныйВДоговоре" id="1037">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа курс указанный в договоре</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Group rate specified in contract</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Группа курс указанный в договоре</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Group rate specified in the contract</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Group>Vertical</Group>
+														<Behavior>Usual</Behavior>
+														<Representation>None</Representation>
+														<ShowTitle>false</ShowTitle>
+														<ExtendedTooltip name="ГруппаКурсУказанныйВДоговореРасширеннаяПодсказка" id="1038"/>
+														<ChildItems>
+															<UsualGroup name="ГруппаРедактированиеКурса" id="1039">
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа редактирование курса</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Group edit rate</v8:content>
+																	</v8:item>
+																</Title>
+																<ToolTip>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Группа редактирование курса</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Group edit the rate</v8:content>
+																	</v8:item>
+																</ToolTip>
+																<Group>AlwaysHorizontal</Group>
+																<Behavior>Usual</Behavior>
+																<Representation>None</Representation>
+																<ShowTitle>false</ShowTitle>
+																<ExtendedTooltip name="ГруппаРедактированиеКурсаРасширеннаяПодсказка" id="1040"/>
+																<ChildItems>
+																	<InputField name="ЧислительКурсаВалютыДоговора" id="1044">
+																		<TitleLocation>None</TitleLocation>
+																		<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																		<ContextMenu name="ЧислительКурсаВалютыДоговораКонтекстноеМеню" id="1045"/>
+																		<ExtendedTooltip name="ЧислительКурсаВалютыДоговораРасширеннаяПодсказка" id="1046"/>
+																	</InputField>
+																	<UsualGroup name="ГруппаКратностьКурса" id="1066">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Группа кратность курса</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Group exchange rate multiplier</v8:content>
+																			</v8:item>
+																		</Title>
+																		<ToolTip>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Группа кратность курса</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Group exchange rate multiplier</v8:content>
+																			</v8:item>
+																		</ToolTip>
+																		<Group>Vertical</Group>
+																		<Behavior>Usual</Behavior>
+																		<Representation>None</Representation>
+																		<ShowTitle>false</ShowTitle>
+																		<ExtendedTooltip name="ГруппаКратностьКурсаРасширеннаяПодсказка" id="1067"/>
+																		<ChildItems>
+																			<LabelField name="НадписьЗнаменательКурсаВалютыДоговора" id="1061">
+																				<TitleLocation>None</TitleLocation>
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<MaxWidth>15</MaxWidth>
+																				<HorizontalStretch>true</HorizontalStretch>
+																				<ContextMenu name="НадписьЗнаменательКурсаВалютыДоговораКонтекстноеМеню" id="1062"/>
+																				<ExtendedTooltip name="НадписьЗнаменательКурсаВалютыДоговораРасширеннаяПодсказка" id="1063"/>
+																			</LabelField>
+																			<UsualGroup name="ГруппаРедактированиеКратностиКурса" id="1064">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа редактирование кратности курса</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Group edit rate multiplying factor</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ToolTip>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа редактирование кратности курса</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Group edit the rate multiplying factor</v8:content>
+																					</v8:item>
+																				</ToolTip>
+																				<Group>AlwaysHorizontal</Group>
+																				<Behavior>Usual</Behavior>
+																				<Representation>None</Representation>
+																				<ShowTitle>false</ShowTitle>
+																				<ExtendedTooltip name="ГруппаРедактированиеКратностиКурсаРасширеннаяПодсказка" id="1065"/>
+																				<ChildItems>
+																					<InputField name="ЗнаменательКурсаВалютыДоговора" id="1047">
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Валюта регл. учета</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Currency of local accounting</v8:content>
+																							</v8:item>
+																						</Title>
+																						<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																						<ContextMenu name="ЗнаменательКурсаВалютыДоговораКонтекстноеМеню" id="1048"/>
+																						<ExtendedTooltip name="ЗнаменательКурсаВалютыДоговораРасширеннаяПодсказка" id="1049"/>
+																					</InputField>
+																					<LabelField name="НадписьВалютаДоговора" id="1068">
+																						<TitleLocation>None</TitleLocation>
+																						<AutoMaxWidth>false</AutoMaxWidth>
+																						<MaxWidth>5</MaxWidth>
+																						<ContextMenu name="НадписьВалютаДоговораКонтекстноеМеню" id="1069"/>
+																						<ExtendedTooltip name="НадписьВалютаДоговораРасширеннаяПодсказка" id="1070"/>
+																					</LabelField>
+																				</ChildItems>
+																			</UsualGroup>
+																		</ChildItems>
+																	</UsualGroup>
+																</ChildItems>
+															</UsualGroup>
+															<LabelDecoration name="НадписьИсторияКурсаДоговора" id="1041">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>История</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>History</v8:content>
+																	</v8:item>
+																</Title>
+																<Hyperlink>true</Hyperlink>
+																<ContextMenu name="НадписьИсторияКурсаДоговораКонтекстноеМеню" id="1042"/>
+																<ExtendedTooltip name="НадписьИсторияКурсаДоговораРасширеннаяПодсказка" id="1043"/>
+															</LabelDecoration>
+														</ChildItems>
+													</UsualGroup>
 												</ChildItems>
 											</UsualGroup>
 											<UsualGroup name="ГруппаСуммаДоговора" id="487">
@@ -5346,11 +5840,11 @@ details</v8:content>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Порядок списания недостач товаров, принятых на хранение</v8:content>
+												<v8:content>Порядок списания недостач товаров</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>Write-off procedure for shortages of goods accepted for storage</v8:content>
+												<v8:content>Stock shortage recognition procedure</v8:content>
 											</v8:item>
 										</Title>
 										<Width>50</Width>
@@ -5496,8 +5990,8 @@ details</v8:content>
 														</xr:Value>
 													</xr:Item>
 												</ChoiceList>
-												<ContextMenu name="РазбиватьОтчетКомитентуПоЗакупкамКонтекстноеМеню" id="1035"/>
-												<ExtendedTooltip name="РазбиватьОтчетКомитентуПоЗакупкамРасширеннаяПодсказка" id="1036"/>
+												<ContextMenu name="РазбиватьОтчетКомитентуПоЗакупкамКонтекстноеМеню" id="1071"/>
+												<ExtendedTooltip name="РазбиватьОтчетКомитентуПоЗакупкамРасширеннаяПодсказка" id="1072"/>
 											</RadioButtonField>
 										</ChildItems>
 									</UsualGroup>
