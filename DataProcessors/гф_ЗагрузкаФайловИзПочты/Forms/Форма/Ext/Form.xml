@@ -202,6 +202,7 @@
 							<ChildItems>
 								<Table name="ПочтовыеЯщики" id="10">
 									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -248,55 +249,16 @@
 									</Events>
 									<ChildItems>
 										<InputField name="ПочтовыеЯщикиEMail" id="23">
-											<DataPath>ПочтовыеЯщики.EMail</DataPath>
+											<DataPath>ПочтовыеЯщики.Профиль</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПочтовыеЯщикиEMailКонтекстноеМеню" id="24"/>
 											<ExtendedTooltip name="ПочтовыеЯщикиEMailРасширеннаяПодсказка" id="25"/>
 										</InputField>
-										<InputField name="ПочтовыеЯщикиЛогин" id="26">
-											<DataPath>ПочтовыеЯщики.Логин</DataPath>
+										<InputField name="ПочтовыеЯщикиПротоколВходящейПочты" id="120">
+											<DataPath>ПочтовыеЯщики.ПротоколВходящейПочты</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПочтовыеЯщикиЛогинКонтекстноеМеню" id="27"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиЛогинРасширеннаяПодсказка" id="28"/>
-										</InputField>
-										<InputField name="ПочтовыеЯщикиПароль" id="29">
-											<DataPath>ПочтовыеЯщики.Пароль</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<PasswordMode>true</PasswordMode>
-											<ContextMenu name="ПочтовыеЯщикиПарольКонтекстноеМеню" id="30"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиПарольРасширеннаяПодсказка" id="31"/>
-										</InputField>
-										<InputField name="ПочтовыеЯщикиАдресСервера" id="32">
-											<DataPath>ПочтовыеЯщики.АдресСервера</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПочтовыеЯщикиАдресСервераКонтекстноеМеню" id="33"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиАдресСервераРасширеннаяПодсказка" id="34"/>
-										</InputField>
-										<InputField name="ПочтовыеЯщикиПорт" id="35">
-											<DataPath>ПочтовыеЯщики.Порт</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПочтовыеЯщикиПортКонтекстноеМеню" id="36"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиПортРасширеннаяПодсказка" id="37"/>
-										</InputField>
-										<CheckBoxField name="ПочтовыеЯщикиIMAP" id="38">
-											<DataPath>ПочтовыеЯщики.IMAP</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПочтовыеЯщикиIMAPКонтекстноеМеню" id="39"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиIMAPРасширеннаяПодсказка" id="40"/>
-										</CheckBoxField>
-										<CheckBoxField name="ПочтовыеЯщикиSSL" id="41">
-											<DataPath>ПочтовыеЯщики.SSL</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ПочтовыеЯщикиSSLКонтекстноеМеню" id="42"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиSSLРасширеннаяПодсказка" id="43"/>
-										</CheckBoxField>
-										<InputField name="ПочтовыеЯщикиТаймаут" id="52">
-											<DataPath>ПочтовыеЯщики.Таймаут</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ПочтовыеЯщикиТаймаутКонтекстноеМеню" id="53"/>
-											<ExtendedTooltip name="ПочтовыеЯщикиТаймаутРасширеннаяПодсказка" id="54"/>
+											<ContextMenu name="ПочтовыеЯщикиПротоколВходящейПочтыКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="ПочтовыеЯщикиПротоколВходящейПочтыРасширеннаяПодсказка" id="122"/>
 										</InputField>
 										<InputField name="ПочтовыеЯщикиКаталогЗагрузки" id="85">
 											<DataPath>ПочтовыеЯщики.КаталогЗагрузки</DataPath>
@@ -338,7 +300,7 @@
 				<Field>ПочтовыеЯщики</Field>
 			</Save>
 			<Columns>
-				<Column name="EMail" id="1">
+				<Column name="Профиль" id="1">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -346,11 +308,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Логин" id="2">
@@ -463,6 +421,21 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПротоколВходящейПочты" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол входящей почты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>4</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
