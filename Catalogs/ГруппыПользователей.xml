@@ -29,6 +29,39 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>a2782760-dd4c-44d2-a785-814d6f610455</ExtendedConfigurationObject>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<TabularSection uuid="8cb03bbd-6dc9-48ed-afca-8b4195c3935e">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.ГруппыПользователей.Состав" category="TabularSection">
+						<xr:TypeId>65de6f9a-f3bc-4ee0-8c52-13b68b98b0ce</xr:TypeId>
+						<xr:ValueId>907a7eba-5cd9-47fe-8e40-58936e7fc6f3</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.ГруппыПользователей.Состав" category="TabularSectionRow">
+						<xr:TypeId>a08df22a-44d9-45f5-ab5d-ba8f485053e0</xr:TypeId>
+						<xr:ValueId>597c0c26-3455-458c-aaae-d19ef7f0ee29</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<Name>Состав</Name>
+					<Comment/>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<ExtendedConfigurationObject>6581ac1f-11ef-42b8-9f3b-590bb7546e63</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="fb8daa26-2b42-4fb2-8b2b-7b780d01bae2">
+						<InternalInfo/>
+						<Properties>
+							<Name>Пользователь</Name>
+							<Comment/>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<ExtendedConfigurationObject>ce952e88-35b7-4506-81ac-d7081e50a650</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
