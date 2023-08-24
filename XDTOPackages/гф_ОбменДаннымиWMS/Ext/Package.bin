@@ -19,7 +19,7 @@
 		<property xmlns:d3p1="WMS" name="Документы" type="d3p1:Документы" localName="documents"/>
 	</objectType>
 	<objectType name="Документы">
-		<property xmlns:d3p1="WMS" name="Документ" type="d3p1:Документ" form="Element" localName="document"/>
+		<property xmlns:d3p1="WMS" name="Документ" type="d3p1:Документ" upperBound="2" form="Element" localName="document"/>
 	</objectType>
 	<objectType name="Документ">
 		<property name="Тип" nillable="false" form="Attribute" localName="type">
