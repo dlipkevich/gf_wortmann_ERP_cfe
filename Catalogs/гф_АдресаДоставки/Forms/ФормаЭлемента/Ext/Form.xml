@@ -11,6 +11,7 @@
 	</Events>
 	<ChildItems>
 		<InputField name="Владелец_Код" id="37">
+			<DataPath>Объект.Owner.Партнер.Code</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -23,6 +24,7 @@
 			<ExtendedTooltip name="Владелец_КодРасширеннаяПодсказка" id="39"/>
 		</InputField>
 		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
