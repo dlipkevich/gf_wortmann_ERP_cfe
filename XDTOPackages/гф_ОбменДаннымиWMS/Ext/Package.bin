@@ -9,6 +9,12 @@
 		<property name="Источник" nillable="false" localName="source_system">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
+		<property name="НомерПакета" nillable="true" localName="packet_number">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="НомерПакетаПрошлый" nillable="true" localName="last_packet_number">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
 		<property name="Владелец" nillable="false" localName="owner">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
@@ -19,10 +25,13 @@
 		<property xmlns:d3p1="WMS" name="Документы" type="d3p1:Документы" localName="documents"/>
 	</objectType>
 	<objectType name="Документы">
-		<property xmlns:d3p1="WMS" name="Документ" type="d3p1:Документ" form="Element" localName="document"/>
+		<property xmlns:d3p1="WMS" name="Документ" type="d3p1:Документ" lowerBound="1" upperBound="2" form="Element" localName="document"/>
 	</objectType>
 	<objectType name="Документ">
 		<property name="Тип" nillable="false" form="Attribute" localName="type">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Владелец" localName="owner">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
 		<property xmlns:d3p1="WMS" name="Шапка" type="d3p1:Шапка" localName="header"/>
@@ -30,6 +39,9 @@
 	</objectType>
 	<objectType name="Шапка">
 		<property name="Номер" localName="doc_number">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="НомерПовтор" nillable="true" localName="xdock_doc_number">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
 		<property name="Статус" localName="status">
@@ -415,18 +427,18 @@
 		<property xmlns:d3p1="WMS" name="Конкатенация" type="d3p1:Конкатенация" localName="SoUpdate"/>
 	</objectType>
 	<objectType name="СтрокаТовара5">
-		<property name="НомерСтроки" localName="line_no">
-			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
-		</property>
 		<property name="Код" localName="sku">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
-		<property name="Количество" localName="ordered_quantity">
+		<property name="НомерСтроки" localName="line_no">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
-		<property xmlns:d3p1="WMS" name="СерийныеНомера" type="d3p1:СерийныеНомера" localName="expected_serials"/>
-		<property xmlns:d3p1="WMS" name="Комментарии" type="d3p1:Комментарии" localName="comments"/>
 		<property name="Блокировка" localName="quality">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="WMS" name="СерийныеНомера" type="d3p1:СерийныеНомера" localName="serials"/>
+		<property xmlns:d3p1="WMS" name="Комментарии" type="d3p1:Комментарии" localName="comments"/>
+		<property name="ДатаСменыНазначения" nillable="false" localName="exp_date">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
 	</objectType>
