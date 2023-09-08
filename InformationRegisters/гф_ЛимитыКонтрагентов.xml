@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
 	<InformationRegister uuid="2925ee20-c4f3-4afb-9395-1d3f3c5e90b8">
 		<InternalInfo>
 			<xr:GeneratedType name="InformationRegisterRecord.гф_ЛимитыКонтрагентов" category="Record">
@@ -32,9 +32,9 @@
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
 			<Name>гф_ЛимитыКонтрагентов</Name>
 			<Comment/>
-			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>b196352c-8698-4972-b1f8-c8e79f5499bd</ExtendedConfigurationObject>
 			<InformationRegisterPeriodicity>RecorderPosition</InformationRegisterPeriodicity>
 			<WriteMode>RecorderSubordinate</WriteMode>
@@ -43,9 +43,9 @@
 			<Resource uuid="1db0bee2-ff1f-49f9-b192-f7ddd139efa7">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Сумма</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>7c155c11-354b-405e-b22d-15bf247584e6</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
@@ -60,9 +60,9 @@
 			<Resource uuid="0df5b0f1-3454-4c90-bdc0-5b459a1536b4">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Статус</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>7c99d54b-2969-4490-88fc-85ceebf3c544</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.гф_СтатусыЛимитов</v8:Type>
@@ -72,9 +72,9 @@
 			<Dimension uuid="556c5c4b-a596-4241-b123-a31476c121fe">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ВидЛимита</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>3b0960bd-c629-42f0-9fdf-887fd5c09bb8</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.гф_ВидыЛимитов</v8:Type>
@@ -84,9 +84,9 @@
 			<Dimension uuid="a248c72e-2c07-44ad-9faf-618557317b31">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Партнер</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>64370d6e-d376-4a36-a6aa-c7f46ac1594d</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
@@ -96,9 +96,9 @@
 			<Dimension uuid="3b379b4a-edd2-46d8-bf60-5dcbfac7c9bf">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Контрагент</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>20dc2d62-c2a0-477a-81f0-c6aad24f720b</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
@@ -108,9 +108,9 @@
 			<Dimension uuid="3996036a-b637-475f-b107-ee89357d3d1d">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Организация</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>39d621fd-631b-4863-94f3-63dcdcfa8bef</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Организации</v8:Type>

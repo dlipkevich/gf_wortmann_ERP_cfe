@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
 	<Document uuid="14532ede-8ec5-47aa-b7f0-e2b6bb752939">
 		<InternalInfo>
 			<xr:GeneratedType name="DocumentObject.ПриобретениеТоваровУслуг" category="Object">
@@ -24,9 +24,9 @@
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
 			<Name>ПриобретениеТоваровУслуг</Name>
 			<Comment/>
-			<ObjectBelonging>Adopted</ObjectBelonging>
 			<ExtendedConfigurationObject>5e0d9dd9-464c-4fa3-984a-2a2da8517f38</ExtendedConfigurationObject>
 			<RegisterRecords/>
 		</Properties>
@@ -34,9 +34,9 @@
 			<Attribute uuid="658ef656-f98b-4560-a219-75f2424ad6dc">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ДатаПоступления</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>677f0404-9d76-45d7-810d-776bc801139b</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
@@ -49,9 +49,9 @@
 			<Attribute uuid="7cf036ae-f204-4e21-9437-d2e7b42edaa0">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>ХозяйственнаяОперация</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>221a4541-2b95-440e-889b-259e07f55204</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:EnumRef.ХозяйственныеОперации</v8:Type>
@@ -61,9 +61,9 @@
 			<Attribute uuid="9fec1b7f-e38d-43a1-9a4c-e2c1dc704b2c">
 				<InternalInfo/>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Склад</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>c545b75d-dd2d-4844-903e-a04b725622b7</ExtendedConfigurationObject>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
@@ -83,18 +83,18 @@
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>Товары</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>941aa10e-3657-48ec-8f9d-92e38e90ecbf</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects>
 					<Attribute uuid="07998149-e1d9-4c34-8bb1-d3a58b22f4f2">
 						<InternalInfo/>
 						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
 							<Name>Номенклатура</Name>
 							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
 							<ExtendedConfigurationObject>6b535f05-ac01-4fbe-a57c-0c88609787de</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
@@ -104,9 +104,9 @@
 					<Attribute uuid="f70a7748-beb6-47d6-ad0a-d13fb8f74937">
 						<InternalInfo/>
 						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
 							<Name>Характеристика</Name>
 							<Comment/>
-							<ObjectBelonging>Adopted</ObjectBelonging>
 							<ExtendedConfigurationObject>07770f6f-1b6b-4728-8b1e-5727c63dbf6d</ExtendedConfigurationObject>
 							<Type>
 								<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
@@ -127,9 +127,9 @@
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
 					<Name>гф_ПродукцияВКоробах</Name>
 					<Comment/>
-					<ObjectBelonging>Adopted</ObjectBelonging>
 					<ExtendedConfigurationObject>55729dbc-bcf5-49f5-9c3e-32ca2df02949</ExtendedConfigurationObject>
 				</Properties>
 				<ChildObjects/>
