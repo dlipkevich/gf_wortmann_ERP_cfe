@@ -24,6 +24,11 @@
 				<CommandName>Form.Command.ЗакрытьСезон</CommandName>
 				<ExtendedTooltip name="ФормаЗакрытьСезонРасширеннаяПодсказка" id="419"/>
 			</Button>
+			<Button name="ФормаОткрытьСписокКорректировок" id="542">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.ОткрытьСписокКорректировок</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьСписокКорректировокРасширеннаяПодсказка" id="543"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -4441,6 +4446,21 @@
 			</ToolTip>
 			<Action>ЗаполнитьПереносВДругойЗаказ</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьСписокКорректировок" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировки назначения товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список корректировок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСписокКорректировок</Action>
 		</Command>
 	</Commands>
 </Form>
