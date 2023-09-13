@@ -382,8 +382,58 @@
 								<Event name="OnActivateCell">ТаблицаЗаказыПриАктивизацииЯчейки</Event>
 							</Events>
 							<ChildItems>
+								<LabelField name="ТаблицаЗаказыПартнер" id="562">
+									<DataPath>ТаблицаЗаказы.Партнер</DataPath>
+									<ContextMenu name="ТаблицаЗаказыПартнерКонтекстноеМеню" id="563"/>
+									<ExtendedTooltip name="ТаблицаЗаказыПартнерРасширеннаяПодсказка" id="564"/>
+								</LabelField>
+								<LabelField name="ТаблицаЗаказыДата" id="547">
+									<DataPath>ТаблицаЗаказы.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата заказа</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=D</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ТаблицаЗаказыДатаКонтекстноеМеню" id="548"/>
+									<ExtendedTooltip name="ТаблицаЗаказыДатаРасширеннаяПодсказка" id="549"/>
+								</LabelField>
+								<LabelField name="ТаблицаЗаказыНомер" id="550">
+									<DataPath>ТаблицаЗаказы.Number</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер заказа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗаказыНомерКонтекстноеМеню" id="551"/>
+									<ExtendedTooltip name="ТаблицаЗаказыНомерРасширеннаяПодсказка" id="552"/>
+								</LabelField>
+								<LabelField name="ТаблицаЗаказыСуммаДокумента" id="556">
+									<DataPath>ТаблицаЗаказы.СуммаДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма заказа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаЗаказыСуммаДокументаКонтекстноеМеню" id="557"/>
+									<ExtendedTooltip name="ТаблицаЗаказыСуммаДокументаРасширеннаяПодсказка" id="558"/>
+								</LabelField>
+								<LabelField name="ТаблицаЗаказыСклад" id="553">
+									<DataPath>ТаблицаЗаказы.Склад</DataPath>
+									<ContextMenu name="ТаблицаЗаказыСкладКонтекстноеМеню" id="554"/>
+									<ExtendedTooltip name="ТаблицаЗаказыСкладРасширеннаяПодсказка" id="555"/>
+								</LabelField>
 								<LabelField name="ТаблицаЗаказыСсылка" id="461">
 									<DataPath>ТаблицаЗаказы.Ref</DataPath>
+									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2512,6 +2562,9 @@
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
+			<UseAlways>
+				<Field>ТаблицаЗаказы.Ref</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
@@ -2519,7 +2572,6 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:use>false</dcsset:use>
 							<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
 							<dcsset:comparisonType>Equal</dcsset:comparisonType>
 						</dcsset:item>
