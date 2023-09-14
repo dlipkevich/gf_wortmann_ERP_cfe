@@ -201,8 +201,69 @@
 					<ContextMenu name="СписокНазначенийНазначениеКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="СписокНазначенийНазначениеРасширеннаяПодсказка" id="31"/>
 				</InputField>
+				<InputField name="СписокНазначенийЗаказПартнер" id="69">
+					<DataPath>СписокНазначений.Заказ.Партнер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНазначенийЗаказПартнерКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СписокНазначенийЗаказПартнерРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="СписокНазначенийЗаказДата" id="72">
+					<DataPath>СписокНазначений.Заказ.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата заказа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy; ДЛФ=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy; ДЛФ=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="СписокНазначенийЗаказДатаКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="СписокНазначенийЗаказДатаРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="СписокНазначенийЗаказНомер" id="75">
+					<DataPath>СписокНазначений.Заказ.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер заказа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНазначенийЗаказНомерКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СписокНазначенийЗаказНомерРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="СписокНазначенийЗаказСуммаДокумента" id="78">
+					<DataPath>СписокНазначений.Заказ.СуммаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма заказа</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНазначенийЗаказСуммаДокументаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="СписокНазначенийЗаказСуммаДокументаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="СписокНазначенийКоличествоУпаковокЗаказа" id="66">
+					<DataPath>СписокНазначений.КоличествоУпаковокЗаказа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНазначенийКоличествоУпаковокЗаказаКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СписокНазначенийКоличествоУпаковокЗаказаРасширеннаяПодсказка" id="68"/>
+				</InputField>
 				<InputField name="СписокНазначенийЗаказ" id="43">
 					<DataPath>СписокНазначений.Заказ</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>Directly</EditMode>
 					<ContextMenu name="СписокНазначенийЗаказКонтекстноеМеню" id="44"/>
@@ -396,6 +457,22 @@
 							<v8:Digits>15</v8:Digits>
 							<v8:FractionDigits>3</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоУпаковокЗаказа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общее количество в заказе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
