@@ -302,6 +302,9 @@
 			И (л.Период &lt;= а.Период)
 ГДЕ
 	л.Статус.Активный
+	//И л.Статус.Наименование = "Действующий"
+{ГДЕ
+	л.Организация = &amp;Организация}
 
 СГРУППИРОВАТЬ ПО
 	а.Контрагент,
@@ -359,6 +362,9 @@
 	Буфер КАК а
 		ЛЕВОЕ СОЕДИНЕНИЕ выборка КАК б
 		ПО а.Документ = б.Документ
+		// Волков
+		И а.Контрагент = б.Контрагент
+		// Волков
 {ГДЕ
 	а.Контрагент.*,
 	а.Договор.*,
@@ -403,6 +409,20 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 	</parameter>
 	<settingsVariant>

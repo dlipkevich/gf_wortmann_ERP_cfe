@@ -207,6 +207,11 @@
 							<ContextMenu name="ОрганизацииКонтекстноеМеню" id="1124"/>
 							<ExtendedTooltip name="ОрганизацииРасширеннаяПодсказка" id="1125"/>
 						</InputField>
+						<InputField name="Контрагент" id="1126">
+							<DataPath>Отчет.Контрагент</DataPath>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="1127"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="1128"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<CommandBar name="КомандыПанелиБыстрыхНастроек" id="988">
@@ -609,6 +614,7 @@
 					<ExtendedTooltip name="ГруппаПоказательРасширеннаяПодсказка" id="725"/>
 					<ChildItems>
 						<PictureDecoration name="ВыбратьПоказатель" id="1024">
+							<Visible>false</Visible>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
