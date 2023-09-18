@@ -2640,14 +2640,31 @@
 																<Presentation>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>По схеме "Неотфактурованные поставки"</v8:content>
+																		<v8:content>По схеме "Неотфактурованные поставки товаров и услуг"</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>According to the "Uninvoiced deliveries" scheme</v8:content>
+																		<v8:content>According to the "Uninvoiced deliveries of goods and services" scheme</v8:content>
 																	</v8:item>
 																</Presentation>
-																<Value xsi:type="xs:string">НеотфактурованныеПоставки</Value>
+																<Value xsi:type="xs:string">НеотфактурованныеПоставкиТоваровИУслуг</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>По схеме "Неотфактурованные поставки товаров"</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>According to the "Uninvoiced deliveries of goods" scheme</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">НеотфактурованныеПоставкиТоваров</Value>
 															</xr:Value>
 														</xr:Item>
 													</ChoiceList>
@@ -3069,6 +3086,104 @@
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<ExtendedTooltip name="ГруппаКонтролируемыеСделкиРасширеннаяПодсказка" id="871"/>
+						</UsualGroup>
+						<UsualGroup name="ЛокализацияГруппаПорядокОтраженияНеотфактурованныхПоставокНУ" id="1084">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Порядок учета стоимости неотфактурованной поставки в НУ</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Procedure to account for uninvoiced delivery cost in TA</v8:content>
+								</v8:item>
+							</Title>
+							<Width>50</Width>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ЛокализацияГруппаПорядокОтраженияНеотфактурованныхПоставокНУРасширеннаяПодсказка" id="1077"/>
+							<ChildItems>
+								<RadioButtonField name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступлении" id="1085">
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость поступления отражается в НУ и может быть учтена в расходах при выбытии товаров со склада.
+Рекомендуется использовать, если фактуровка произойдет в том же налоговом периоде, что и поступление.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Receipt cost is recorded in TA and can be accounted for in expenses upon goods outflow from the warehouse.
+We recommend that you use it if invoice entry is carried out in the same fiscal period as the receipt.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Shortcut>Ctrl+S</Shortcut>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отражать при поступлении</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Record on receipt</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтраженияНеотфактурованныхПоставокНУ.EnumValue.ОтражатьПриПоступлении</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступленииКонтекстноеМеню" id="1089"/>
+									<ExtendedTooltip name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступленииРасширеннаяПодсказка" id="1083"/>
+								</RadioButtonField>
+								<RadioButtonField name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровке" id="1087">
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость отфактурованных товаров в НУ распределяется между остатком партии товаров на складе и выбытием товаров. Стоимость, которая относится к выбывшим со склада товарам, списывается на прочие расходы (счет 91).
+Рекомендуется использовать, если налоговые периоды поступления и фактуровки могут не совпадать.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The cost of invoiced goods in TA is allocated between the remaining item lot in the warehouse and the goods outflow. The cost of the goods outflow is written off as other expenses (account 91).
+We recommend that you use it if fiscal periods of the receipt and invoice entry are different.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Shortcut>Ctrl+S</Shortcut>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отражать при фактуровке</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Record on invoice entry</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтраженияНеотфактурованныхПоставокНУ.EnumValue.ОтражатьПриФактуровке</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровкеКонтекстноеМеню" id="1079"/>
+									<ExtendedTooltip name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровкеРасширеннаяПодсказка" id="1090"/>
+								</RadioButtonField>
+							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</Page>
@@ -3738,7 +3853,7 @@ details</v8:content>
 						<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ПодменюДополнительныхОбработокЗаполненияРасширеннаяПодсказка" id="280"/>
+					<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="280"/>
 				</Popup>
 				<Button name="ФормаИзменитьФорму" id="420">
 					<Type>CommandBarButton</Type>
@@ -3958,7 +4073,7 @@ details</v8:content>
 														<AutoMaxWidth>false</AutoMaxWidth>
 														<MaxWidth>11</MaxWidth>
 														<ContextMenu name="НомерКонтекстноеМеню" id="903"/>
-														<ExtendedTooltip name="НомерExtendedTooltip" id="904"/>
+														<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="904"/>
 													</InputField>
 													<LabelDecoration name="Декорация1" id="931">
 														<Title formatted="false">
@@ -3988,7 +4103,7 @@ details</v8:content>
 														<AutoMaxWidth>false</AutoMaxWidth>
 														<MaxWidth>10</MaxWidth>
 														<ContextMenu name="ДатаКонтекстноеМеню" id="906"/>
-														<ExtendedTooltip name="ДатаExtendedTooltip" id="907"/>
+														<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="907"/>
 													</InputField>
 												</ChildItems>
 											</UsualGroup>
@@ -4335,7 +4450,7 @@ details</v8:content>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
 												<ContextMenu name="ОрганизацияКонтекстноеМеню" id="52"/>
-												<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="162"/>
+												<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="162"/>
 											</InputField>
 											<InputField name="Подразделение" id="108">
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -4345,19 +4460,19 @@ details</v8:content>
 												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 												<AutoMarkIncomplete>false</AutoMarkIncomplete>
 												<ContextMenu name="ПодразделениеКонтекстноеМеню" id="109"/>
-												<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="178"/>
+												<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="178"/>
 											</InputField>
 											<InputField name="БанковскийСчет" id="96">
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
 												<ContextMenu name="БанковскийСчетКонтекстноеМеню" id="97"/>
-												<ExtendedTooltip name="БанковскийСчетExtendedTooltip" id="167"/>
+												<ExtendedTooltip name="БанковскийСчетРасширеннаяПодсказка" id="167"/>
 											</InputField>
 											<InputField name="Менеджер" id="87">
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
 												<ContextMenu name="МенеджерКонтекстноеМеню" id="88"/>
-												<ExtendedTooltip name="МенеджерExtendedTooltip" id="177"/>
+												<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="177"/>
 											</InputField>
 											<InputField name="ИдентификаторПлатежа" id="276">
 												<ReadOnly>true</ReadOnly>
@@ -4412,7 +4527,7 @@ details</v8:content>
 												<ChoiceButton>true</ChoiceButton>
 												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 												<ContextMenu name="ПартнерКонтекстноеМеню" id="90"/>
-												<ExtendedTooltip name="ПартнерExtendedTooltip" id="152"/>
+												<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="152"/>
 											</InputField>
 											<InputField name="Контрагент" id="49">
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -4421,7 +4536,7 @@ details</v8:content>
 												<ChoiceButton>true</ChoiceButton>
 												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 												<ContextMenu name="КонтрагентКонтекстноеМеню" id="50"/>
-												<ExtendedTooltip name="КонтрагентExtendedTooltip" id="153"/>
+												<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="153"/>
 											</InputField>
 											<UsualGroup name="ЛокализацияГруппаСПАРК" id="875">
 												<Behavior>Usual</Behavior>
@@ -4489,7 +4604,7 @@ details</v8:content>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>29</MaxWidth>
 												<ContextMenu name="БанковскийСчетКонтрагентаКонтекстноеМеню" id="95"/>
-												<ExtendedTooltip name="БанковскийСчетКонтрагентаExtendedTooltip" id="168"/>
+												<ExtendedTooltip name="БанковскийСчетКонтрагентаРасширеннаяПодсказка" id="168"/>
 											</InputField>
 											<InputField name="КонтактноеЛицо" id="119">
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -4505,7 +4620,7 @@ details</v8:content>
 													</xr:Link>
 												</ChoiceParameterLinks>
 												<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="120"/>
-												<ExtendedTooltip name="КонтактноеЛицоExtendedTooltip" id="154"/>
+												<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="154"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
@@ -4693,7 +4808,7 @@ details</v8:content>
 														</Title>
 														<FileDragMode>AsFile</FileDragMode>
 														<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="597"/>
-														<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаExtendedTooltip" id="598"/>
+														<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="598"/>
 													</PictureDecoration>
 													<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="893">
 														<TextColor>web:FireBrick</TextColor>
@@ -4752,7 +4867,7 @@ details</v8:content>
 								<Group>Vertical</Group>
 								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
-								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="175"/>
+								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="175"/>
 							</UsualGroup>
 						</ChildItems>
 					</Page>
@@ -4877,7 +4992,7 @@ details</v8:content>
 															</xr:Item>
 														</ChoiceList>
 														<ContextMenu name="ПорядокРасчетовКонтекстноеМеню" id="105"/>
-														<ExtendedTooltip name="ПорядокРасчетовExtendedTooltip" id="166"/>
+														<ExtendedTooltip name="ПорядокРасчетовРасширеннаяПодсказка" id="166"/>
 													</InputField>
 												</ChildItems>
 											</UsualGroup>
@@ -4913,7 +5028,7 @@ details</v8:content>
 														<HorizontalStretch>false</HorizontalStretch>
 														<OpenButton>false</OpenButton>
 														<ContextMenu name="ВалютаВзаиморасчетовКонтекстноеМеню" id="56"/>
-														<ExtendedTooltip name="ВалютаВзаиморасчетовExtendedTooltip" id="165"/>
+														<ExtendedTooltip name="ВалютаВзаиморасчетовРасширеннаяПодсказка" id="165"/>
 													</InputField>
 													<CheckBoxField name="ОплатаВВалюте" id="877">
 														<TitleLocation>Right</TitleLocation>
@@ -5613,7 +5728,7 @@ details</v8:content>
 										<Group>Horizontal</Group>
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
-										<ExtendedTooltip name="ГруппаКонтрольЗадолженностиExtendedTooltip" id="169"/>
+										<ExtendedTooltip name="ГруппаКонтрольЗадолженностиРасширеннаяПодсказка" id="169"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаОграничиватьСуммуЗадолженности" id="134">
 												<Title>
@@ -5630,7 +5745,7 @@ details</v8:content>
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="ГруппаОграничиватьСуммуЗадолженностиExtendedTooltip" id="170"/>
+												<ExtendedTooltip name="ГруппаОграничиватьСуммуЗадолженностиРасширеннаяПодсказка" id="170"/>
 												<ChildItems>
 													<CheckBoxField name="ОграничиватьСуммуЗадолженности" id="135">
 														<Title>
@@ -5646,20 +5761,20 @@ details</v8:content>
 														<TitleLocation>Right</TitleLocation>
 														<CheckBoxType>Auto</CheckBoxType>
 														<ContextMenu name="ОграничиватьСуммуЗадолженностиКонтекстноеМеню" id="136"/>
-														<ExtendedTooltip name="ОграничиватьСуммуЗадолженностиExtendedTooltip" id="171"/>
+														<ExtendedTooltip name="ОграничиватьСуммуЗадолженностиРасширеннаяПодсказка" id="171"/>
 													</CheckBoxField>
 													<InputField name="ДопустимаяСуммаЗадолженности" id="137">
 														<TitleLocation>None</TitleLocation>
 														<Width>12</Width>
 														<ContextMenu name="ДопустимаяСуммаЗадолженностиКонтекстноеМеню" id="138"/>
-														<ExtendedTooltip name="ДопустимаяСуммаЗадолженностиExtendedTooltip" id="172"/>
+														<ExtendedTooltip name="ДопустимаяСуммаЗадолженностиРасширеннаяПодсказка" id="172"/>
 													</InputField>
 													<LabelField name="НадписьВалютаВзаиморасчетов" id="139">
 														<TitleLocation>None</TitleLocation>
 														<Width>4</Width>
 														<HorizontalStretch>false</HorizontalStretch>
 														<ContextMenu name="НадписьВалютаВзаиморасчетовКонтекстноеМеню" id="140"/>
-														<ExtendedTooltip name="НадписьВалютаВзаиморасчетовExtendedTooltip" id="173"/>
+														<ExtendedTooltip name="НадписьВалютаВзаиморасчетовРасширеннаяПодсказка" id="173"/>
 													</LabelField>
 												</ChildItems>
 											</UsualGroup>
@@ -5677,7 +5792,7 @@ details</v8:content>
 												<TitleLocation>Right</TitleLocation>
 												<CheckBoxType>Auto</CheckBoxType>
 												<ContextMenu name="ЗапрещаетсяПросроченнаяЗадолженностьКонтекстноеМеню" id="142"/>
-												<ExtendedTooltip name="ЗапрещаетсяПросроченнаяЗадолженностьExtendedTooltip" id="174"/>
+												<ExtendedTooltip name="ЗапрещаетсяПросроченнаяЗадолженностьРасширеннаяПодсказка" id="174"/>
 											</CheckBoxField>
 										</ChildItems>
 									</UsualGroup>
@@ -6173,14 +6288,31 @@ details</v8:content>
 																	<Presentation>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>По схеме "Неотфактурованные поставки"</v8:content>
+																			<v8:content>По схеме "Неотфактурованные поставки товаров"</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>According to the "Uninvoiced deliveries" scheme</v8:content>
+																			<v8:content>According to the "Uninvoiced deliveries of goods" scheme</v8:content>
 																		</v8:item>
 																	</Presentation>
-																	<Value xsi:type="xs:string">НеотфактурованныеПоставки</Value>
+																	<Value xsi:type="xs:string">НеотфактурованныеПоставкиТоваров</Value>
+																</xr:Value>
+															</xr:Item>
+															<xr:Item>
+																<xr:Presentation/>
+																<xr:CheckState>0</xr:CheckState>
+																<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																	<Presentation>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>По схеме "Неотфактурованные поставки товаров и услуг"</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>According to the "Uninvoiced deliveries of goods and services" scheme</v8:content>
+																		</v8:item>
+																	</Presentation>
+																	<Value xsi:type="xs:string">НеотфактурованныеПоставкиТоваровИУслуг</Value>
 																</xr:Value>
 															</xr:Item>
 														</ChoiceList>
@@ -6281,7 +6413,7 @@ details</v8:content>
 										<Width>28</Width>
 										<HorizontalStretch>false</HorizontalStretch>
 										<ContextMenu name="ГруппаФинансовогоУчетаКонтекстноеМеню" id="118"/>
-										<ExtendedTooltip name="ГруппаФинансовогоУчетаExtendedTooltip" id="179"/>
+										<ExtendedTooltip name="ГруппаФинансовогоУчетаРасширеннаяПодсказка" id="179"/>
 									</InputField>
 									<InputField name="ГруппаФинансовогоУчетаКлиента" id="1004">
 										<Width>28</Width>
@@ -6353,7 +6485,7 @@ details</v8:content>
 								</ToolTip>
 								<Group>Horizontal</Group>
 								<Behavior>Usual</Behavior>
-								<ExtendedTooltip name="ГруппаСрокОплатыExtendedTooltip" id="294"/>
+								<ExtendedTooltip name="ГруппаСрокОплатыРасширеннаяПодсказка" id="294"/>
 								<ChildItems>
 									<RadioButtonField name="КлассификацияЗадолженности" id="295">
 										<TitleLocation>None</TitleLocation>
@@ -6603,6 +6735,104 @@ details</v8:content>
 								<Behavior>Usual</Behavior>
 								<ExtendedTooltip name="ГруппаКонтролируемыеСделкиРасширеннаяПодсказка" id="871"/>
 							</UsualGroup>
+							<UsualGroup name="ЛокализацияГруппаПорядокОтраженияНеотфактурованныхПоставокНУ" id="1076">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Порядок учета стоимости неотфактурованной поставки в НУ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Procedure to account for uninvoiced delivery cost in TA</v8:content>
+									</v8:item>
+								</Title>
+								<Width>50</Width>
+								<Group>Vertical</Group>
+								<Behavior>Usual</Behavior>
+								<ExtendedTooltip name="ЛокализацияГруппаПорядокОтраженияНеотфактурованныхПоставокНУРасширеннаяПодсказка" id="1077"/>
+								<ChildItems>
+									<RadioButtonField name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступлении" id="1081">
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Стоимость поступления отражается в НУ и может быть учтена в расходах при выбытии товаров со склада.
+Рекомендуется использовать, если фактуровка произойдет в том же налоговом периоде, что и поступление.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Receipt cost is recorded in TA and can be accounted for in expenses upon goods outflow from the warehouse.
+We recommend that you use it if invoice entry is carried out in the same fiscal period as the receipt.</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ToolTipRepresentation>Button</ToolTipRepresentation>
+										<Shortcut>Ctrl+S</Shortcut>
+										<RadioButtonType>Auto</RadioButtonType>
+										<ColumnsCount>1</ColumnsCount>
+										<ChoiceList>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отражать при поступлении</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Record on receipt</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтраженияНеотфактурованныхПоставокНУ.EnumValue.ОтражатьПриПоступлении</Value>
+												</xr:Value>
+											</xr:Item>
+										</ChoiceList>
+										<ContextMenu name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступленииКонтекстноеМеню" id="1082"/>
+										<ExtendedTooltip name="ПорядокОтраженияНеотфактурованныхПоставокПриПоступленииРасширеннаяПодсказка" id="1083"/>
+									</RadioButtonField>
+									<RadioButtonField name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровке" id="1078">
+										<TitleLocation>None</TitleLocation>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Стоимость отфактурованных товаров в НУ распределяется между остатком партии товаров на складе и выбытием товаров. Стоимость, которая относится к выбывшим со склада товарам, списывается на прочие расходы (счет 91).
+Рекомендуется использовать, если налоговые периоды поступления и фактуровки могут не совпадать.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>The cost of invoiced goods in TA is allocated between the remaining item lot in the warehouse and the goods outflow. The cost of the goods outflow is written off as other expenses (account 91).
+We recommend that you use it if fiscal periods of the receipt and invoice entry are different.</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ToolTipRepresentation>Button</ToolTipRepresentation>
+										<Shortcut>Ctrl+S</Shortcut>
+										<RadioButtonType>Auto</RadioButtonType>
+										<ColumnsCount>1</ColumnsCount>
+										<ChoiceList>
+											<xr:Item>
+												<xr:Presentation/>
+												<xr:CheckState>0</xr:CheckState>
+												<xr:Value xsi:type="FormChoiceListDesTimeValue">
+													<Presentation>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отражать при фактуровке</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Record on invoice entry</v8:content>
+														</v8:item>
+													</Presentation>
+													<Value xsi:type="xr:DesignTimeRef">Enum.ВариантыОтраженияНеотфактурованныхПоставокНУ.EnumValue.ОтражатьПриФактуровке</Value>
+												</xr:Value>
+											</xr:Item>
+										</ChoiceList>
+										<ContextMenu name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровкеКонтекстноеМеню" id="1079"/>
+										<ExtendedTooltip name="ПорядокОтраженияНеотфактурованныхПоставокПриФактуровкеРасширеннаяПодсказка" id="1080"/>
+									</RadioButtonField>
+								</ChildItems>
+							</UsualGroup>
 						</ChildItems>
 					</Page>
 					<Page name="СтраницаДоставка" id="799">
@@ -6616,7 +6846,7 @@ details</v8:content>
 								<v8:content>Delivery</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="СтраницаДоставкаExtendedTooltip" id="800"/>
+						<ExtendedTooltip name="СтраницаДоставкаРасширеннаяПодсказка" id="800"/>
 						<ChildItems>
 							<UsualGroup name="ГруппаСпособДоставкиПеревозчик" id="801">
 								<Title>
@@ -6693,7 +6923,7 @@ details</v8:content>
 														<OpenButton>false</OpenButton>
 														<ChoiceListButton>true</ChoiceListButton>
 														<ContextMenu name="ПеревозчикПартнерКонтекстноеМеню" id="811"/>
-														<ExtendedTooltip name="ПеревозчикПартнерExtendedTooltip" id="812"/>
+														<ExtendedTooltip name="ПеревозчикПартнерРасширеннаяПодсказка" id="812"/>
 													</InputField>
 												</ChildItems>
 											</Page>
@@ -6733,7 +6963,7 @@ details</v8:content>
 									</v8:item>
 								</Title>
 								<PagesRepresentation>None</PagesRepresentation>
-								<ExtendedTooltip name="СтраницыДоставкиExtendedTooltip" id="819"/>
+								<ExtendedTooltip name="СтраницыДоставкиРасширеннаяПодсказка" id="819"/>
 								<ChildItems>
 									<Page name="СтраницаДоставкаНеНашимиСилами" id="820">
 										<Title>
@@ -7060,7 +7290,7 @@ details</v8:content>
 								<AutoMaxWidth>false</AutoMaxWidth>
 								<Wrap>false</Wrap>
 								<ContextMenu name="КомментарийКонтекстноеМеню" id="68"/>
-								<ExtendedTooltip name="КомментарийExtendedTooltip" id="180"/>
+								<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="180"/>
 							</InputField>
 						</ChildItems>
 					</Page>
