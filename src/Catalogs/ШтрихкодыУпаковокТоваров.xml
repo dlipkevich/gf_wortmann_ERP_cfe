@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Catalog uuid="32a565f3-ff97-4158-81f1-ef2f0ec1c003">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ШтрихкодыУпаковокТоваров" category="Object">
+				<xr:TypeId>f07c687d-de28-4dfa-b84c-9d8191c2e519</xr:TypeId>
+				<xr:ValueId>8450c47c-11b9-4fce-a53a-cbfaf486e029</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.ШтрихкодыУпаковокТоваров" category="Ref">
+				<xr:TypeId>48ada410-a444-4656-ad82-0922d99622ff</xr:TypeId>
+				<xr:ValueId>d1c994a6-ac4b-49a3-99b7-4ddb4e8c2078</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.ШтрихкодыУпаковокТоваров" category="Selection">
+				<xr:TypeId>2b4f8cce-34aa-4a74-8083-ab992b84a4f5</xr:TypeId>
+				<xr:ValueId>c18e26fe-2d51-470c-bd56-6bc2b1c634f5</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.ШтрихкодыУпаковокТоваров" category="List">
+				<xr:TypeId>326699aa-de95-4adb-a533-cb51eca26c49</xr:TypeId>
+				<xr:ValueId>e2521355-22a2-491e-bbb8-09c1e84e9d89</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.ШтрихкодыУпаковокТоваров" category="Manager">
+				<xr:TypeId>3f93aa07-5ec8-4047-a47d-a009c412ab58</xr:TypeId>
+				<xr:ValueId>92a7c654-f0b8-45e3-8066-c64630bcee4a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ШтрихкодыУпаковокТоваров</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>e35ed3a1-2051-4f4b-8e36-36bb46591b25</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="e931d2e5-8f59-4f15-9b6a-1ada97ba73a7">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ТипУпаковки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f87f5bf6-eb96-4273-8488-3302cde9fa30</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыУпаковок</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cb304f70-96f2-4973-ab71-5f1e10f1284c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ЗначениеШтрихкода</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a42882e6-c032-40df-8cfc-90f93e7cd610</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="5e08fb4b-036e-4ce7-9922-34cc5f3e85b1">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ef2759ca-f423-4ac1-92b8-d19e2827b048</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Номенклатура</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="dc0496c0-6393-4839-9fc1-c3665c25c8f0">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a0191373-1fc4-4976-b539-535be3a15c7c</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ХарактеристикаНоменклатуры</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b5a6699b-3aff-44e1-b63b-a303a882c7a4">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ТипШтрихкода</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b0b61f11-9091-414e-82b4-e02ba7729e9d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипыШтрихкодов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="1fb0097d-8923-48d9-9882-77499467fa88">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ХешСуммаНормализации</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c574bfde-af71-48f9-92d5-e666d820e20b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="79204d22-cc0a-42b2-87ec-65418de1ef85">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ЗначениеШтрихкодаBase64</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>eabcc038-efcb-4ebf-b803-7754c3e6de4b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6ddc1306-4199-457f-8d56-a6852d5e1a35">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Упаковка</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b86b5670-15a0-4f98-ba37-a6036639714a</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Упаковка</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<TabularSection uuid="5d38c4de-409a-4266-9efa-afcc035b8f1a">
+				<InternalInfo>
+					<xr:GeneratedType name="CatalogTabularSection.ШтрихкодыУпаковокТоваров.ВложенныеШтрихкоды" category="TabularSection">
+						<xr:TypeId>9768061a-a2f6-4d27-9f7e-a55f15433a28</xr:TypeId>
+						<xr:ValueId>532a6488-8490-4d46-a9ba-0c2a930a18dc</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="CatalogTabularSectionRow.ШтрихкодыУпаковокТоваров.ВложенныеШтрихкоды" category="TabularSectionRow">
+						<xr:TypeId>14264749-1544-4c28-b005-b42348a02aac</xr:TypeId>
+						<xr:ValueId>d0838a7b-6ca1-406b-a333-95b9a91929a7</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВложенныеШтрихкоды</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ac86f4e2-5541-4be6-a0da-b7f71aeea680</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="282b1a5c-4f90-4849-a0b7-9e5c885a04d1">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Штрихкод</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>0886919d-cbf7-4cf6-8bef-60a3fb8c4d24</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+			<Form>ФормаЭлемента</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

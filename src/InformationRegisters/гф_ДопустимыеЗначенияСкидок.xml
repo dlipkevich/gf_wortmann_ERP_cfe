@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="191b720b-cb03-44e2-95d8-705f72737ec3">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ДопустимыеЗначенияСкидок" category="Record">
+				<xr:TypeId>c7c9fd6b-2f57-42ce-bbe9-5c2df024e5b0</xr:TypeId>
+				<xr:ValueId>51e2a672-41f5-4eda-b67f-9f8af789080c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ДопустимыеЗначенияСкидок" category="Manager">
+				<xr:TypeId>cd298a44-fcb0-4abb-8840-25aa4de93c7c</xr:TypeId>
+				<xr:ValueId>72d2e34e-2e52-4063-9ef7-731ad264ad19</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ДопустимыеЗначенияСкидок" category="Selection">
+				<xr:TypeId>667ada7d-a30a-4651-a0f1-5cdd590546ab</xr:TypeId>
+				<xr:ValueId>a148a4e4-547d-4f95-9cfb-cce214ee6f14</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ДопустимыеЗначенияСкидок" category="List">
+				<xr:TypeId>277fba6a-a629-4e8e-b3e7-354ef42aeea1</xr:TypeId>
+				<xr:ValueId>3e135785-e4f0-42f4-866d-32c2b0d1022c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ДопустимыеЗначенияСкидок" category="RecordSet">
+				<xr:TypeId>db393c3d-5d3f-463c-8468-8c7c7f244fc5</xr:TypeId>
+				<xr:ValueId>c1728f56-c17e-47c6-b06d-070dee43309b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ДопустимыеЗначенияСкидок" category="RecordKey">
+				<xr:TypeId>3e11ac4d-f9dc-4a9d-b518-62d5c28fff65</xr:TypeId>
+				<xr:ValueId>03487ca5-b4d9-4c10-baa3-2c20e004a37a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ДопустимыеЗначенияСкидок" category="RecordManager">
+				<xr:TypeId>58aa9593-09c4-45fd-9936-782ab8d3d735</xr:TypeId>
+				<xr:ValueId>78485631-85d1-4a2b-bfef-8da7cb0626ad</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_ДопустимыеЗначенияСкидок</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>0e05f810-86d5-4281-bf93-b68ccb71c350</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="52cda63e-e0bb-4088-9808-03f75cab0a0c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>МинимальноеЗначение</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>d9f4078d-893c-4f67-a64f-996d567dbcb3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="32b8db5e-8073-4035-83cd-48d6f3fa0ba3">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>МаксимальноеЗначение</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>cafd921f-f41f-4633-9cfa-dff2f5e2c6ce</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="89403ee1-c4cb-4f7e-b738-2f98bb713e87">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ИспользоватьДляРТУ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>92f25761-8b46-4e65-8555-bb79210b78d9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="fc34949f-f1d6-41dc-9fa4-aa5a1265ab27">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВидСкидки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>fe087371-678d-4c74-ada3-c5e7c1583e97</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_ВидыСкидок</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

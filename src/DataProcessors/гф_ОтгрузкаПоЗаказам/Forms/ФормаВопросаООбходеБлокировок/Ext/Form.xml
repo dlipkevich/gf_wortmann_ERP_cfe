@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отгрузка</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<HorizontalAlign>Center</HorizontalAlign>
+	<VerticalAlign>Center</VerticalAlign>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ДатаПолученияЦен" id="3">
+			<DataPath>ДатаПолученияЦен</DataPath>
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<ContextMenu name="ДатаПолученияЦенКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаПолученияЦенРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<InputField name="ПроцентСкидки" id="6">
+			<DataPath>ПроцентСкидки</DataPath>
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<ContextMenu name="ПроцентСкидкиКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ПроцентСкидкиРасширеннаяПодсказка" id="8"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="25">
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация2" id="22">
+					<Picture>
+						<xr:Ref>StdPicture.DialogQuestion</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="24"/>
+				</PictureDecoration>
+				<LabelDecoration name="Декорация1" id="15">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отгрузки запрещены по причине блокировки. Все равно отгрузить?</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="17"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="Кнопка1" id="18">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НеУчитыватьБлокировки</CommandName>
+			<BackColor>#FFE100</BackColor>
+			<BorderColor>#71641A</BorderColor>
+			<Font bold="true" kind="AutoFont"/>
+			<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="19"/>
+		</Button>
+		<Button name="ФормаОтгрузитьПоЦенамПрайса" id="1">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.НеУчитыватьБлокировки</CommandName>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ExtendedTooltip name="ФормаОтгрузитьПоЦенамПрайсаРасширеннаяПодсказка" id="2"/>
+		</Button>
+		<Button name="Кнопка2" id="20">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Отменить</CommandName>
+			<BackColor>#FFA487</BackColor>
+			<BorderColor>#71641A</BorderColor>
+			<Font bold="true" kind="AutoFont"/>
+			<ExtendedTooltip name="Кнопка2РасширеннаяПодсказка" id="21"/>
+		</Button>
+		<Button name="Отменить" id="13">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.Отменить</CommandName>
+			<Font bold="true" kind="AutoFont"/>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ExtendedTooltip name="ОтменитьРасширеннаяПодсказка" id="14"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ОтгрузкаПоЗаказам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаПолученияЦен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата получения цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроцентСкидки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент скидки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НеУчитыватьБлокировки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не учитывать блокировки </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Блокировка и превышение лимитов игнорируются и создается расходный ордер на товары. </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НеУчитыватьБлокироки</Action>
+		</Command>
+		<Command name="Отменить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить отгрузку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгрузка отменяется, расходный ордер не создается.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отменить</Action>
+		</Command>
+	</Commands>
+</Form>

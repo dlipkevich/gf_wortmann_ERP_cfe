@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаСоздатьДоговора" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьДоговора</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьДоговораРасширеннаяПодсказка" id="29"/>
+			</Button>
+			<Button name="ФормаУстановитьДоговорОсновным" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьДоговорОсновным</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьДоговорОсновнымРасширеннаяПодсказка" id="31"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Сезон" id="4">
+			<DataPath>Объект.Сезон</DataPath>
+			<ContextMenu name="СезонКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СезонРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">СезонПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ПерезаполнятьСвойства" id="10">
+			<DataPath>Объект.ПерезаполнятьСвойства</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПерезаполнятьСвойстваКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПерезаполнятьСвойстваРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<Table name="КомпоновщикНастроекНастройкиОтбор" id="45">
+			<Representation>Tree</Representation>
+			<Autofill>true</Autofill>
+			<Width>60</Width>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>КомпоновщикНастроек.Settings.Filter</DataPath>
+			<ViewMode>All</ViewMode>
+			<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+			<ContextMenu name="КомпоновщикНастроекНастройкиОтборКонтекстноеМеню" id="46"/>
+			<AutoCommandBar name="КомпоновщикНастроекНастройкиОтборКоманднаяПанель" id="47"/>
+			<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборРасширеннаяПодсказка" id="48"/>
+			<SearchStringAddition name="КомпоновщикНастроекНастройкиОтборСтрокаПоиска" id="49">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотра" id="52">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КомпоновщикНастроекНастройкиОтборУправлениеПоиском" id="55">
+				<AdditionSource>
+					<Item>КомпоновщикНастроекНастройкиОтбор</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="КомпоновщикНастроекНастройкиОтборУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+			</SearchControlAddition>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_СозданиеДоговоровКонтрагентовНаСезон</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроек" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьДоговора" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать договора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьДоговора</Action>
+		</Command>
+		<Command name="УстановитьДоговорОсновным" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить договор основным</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить договор основным</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьДоговорОсновным</Action>
+		</Command>
+	</Commands>
+</Form>

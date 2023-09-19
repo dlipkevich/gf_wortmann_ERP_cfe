@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Document uuid="e66f0e27-0559-49ef-b0c6-32dbda72b681">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.гф_БлокировкаРазблокировкаОтгрузок" category="Object">
+				<xr:TypeId>ac04fb80-6844-4a02-9fc4-8c1b81068797</xr:TypeId>
+				<xr:ValueId>58c233bc-5982-44a7-974f-f4fabf6cbe70</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.гф_БлокировкаРазблокировкаОтгрузок" category="Ref">
+				<xr:TypeId>2d3db658-43a5-4a6f-965d-01722f98e53e</xr:TypeId>
+				<xr:ValueId>b6266ec4-5ce2-4a15-a803-ef23b996390f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.гф_БлокировкаРазблокировкаОтгрузок" category="Selection">
+				<xr:TypeId>491bbb11-c6c3-44cb-b150-a1ea4a10453a</xr:TypeId>
+				<xr:ValueId>93609dc2-f18a-40d6-bc75-741ce23fd9d1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.гф_БлокировкаРазблокировкаОтгрузок" category="List">
+				<xr:TypeId>853b22ff-c19d-4d3f-9abf-f754bc8925bd</xr:TypeId>
+				<xr:ValueId>e850ae6f-f4a2-4145-ba71-c1dffcc82c91</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.гф_БлокировкаРазблокировкаОтгрузок" category="Manager">
+				<xr:TypeId>57041dae-942b-477d-80d0-0fede89a9a23</xr:TypeId>
+				<xr:ValueId>d369e3e7-604a-49be-b0f2-a08ff42af4d0</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_БлокировкаРазблокировкаОтгрузок</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>a4c5be1b-d7d6-49d6-b884-d38087c77e38</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_БлокировкаРазблокировкаОтгрузок.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_БлокировкаРазблокировкаОтгрузок.Form.гф_ФормаСписка</DefaultListForm>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="941a61a2-1691-4357-b7b9-caa9446d7f71">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>eb04d2db-9ea7-4782-8cb2-654198bbfc0a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="63ef0ffa-85ae-46d6-92aa-df43a1908313">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДоговорКонтрагента</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4a57c54a-d919-4255-86d6-527c971eddc3</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="057af9ef-4b2e-4ce0-8351-801747bcaaaf">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВидБлокировки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ec4161e0-53c3-4500-aebd-23b0f683f971</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыБлокировок</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="09aa8f4c-a244-4cc3-b784-61795502afe9">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Заблокирован</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>11f7cd76-76ea-4af7-984e-ea61742f92ce</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="ed6658f3-feff-4a98-92c5-20b8dbe2e653">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Исключения</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>0af85f4e-dfac-47ec-a5a7-ba35d0e584ec</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="cb589755-fceb-4241-ad50-4cd70618acf8">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Согласовано</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4c5f4268-9d04-42be-b40f-227dfb411985</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="63cb531e-ab11-4016-889b-209e7e7c4224">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4736d41a-6b67-45b8-8b1a-d7a271edf857</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="2a9a6247-97b1-44d0-b9c0-b7729a7de170">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>aa67a92e-1247-4c03-87d4-1dd25e5f264f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f0a7e9e2-36ec-4cde-9d34-b021406e1b2f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДействуетДо</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>d6443e04-4873-4d77-9be9-f793855240dc</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="8d6118b1-5abd-4a64-9a4c-7adb7923db04">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДокументОснование</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4b8f7561-c107-4814-971a-d8ebe3dead9d</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:DocumentRef.гф_БлокировкаРазблокировкаОтгрузок</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4623654f-1f18-4221-b630-0418443b3b68">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Партнер</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>6daab9db-fe84-425c-911f-e264775236b9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6bcf1e6a-e82e-4ca0-8057-f3835818be53">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>2165af24-370c-43a9-a449-d168f742e2b4</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаДокумента</Form>
+			<Form>гф_ФормаСписка</Form>
+			<Command uuid="2c63fd4f-e85c-497a-8c1b-7c3fe9faa64e">
+				<Properties>
+					<Name>Удалитьгф_Блокировки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УдалитьБлокировки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormNavigationPanelGoTo</Group>
+					<CommandParameterType>
+						<v8:TypeId>4ab90c09-637d-4b5a-803e-3fd214870c9c</v8:TypeId>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="1ee3dff4-9ed7-419b-b529-9dfb712118a9">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_Блокировки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>134075df-ae09-4775-ab51-6809df527494</ExtendedConfigurationObject>
+					<Group>FormNavigationPanelGoTo</Group>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

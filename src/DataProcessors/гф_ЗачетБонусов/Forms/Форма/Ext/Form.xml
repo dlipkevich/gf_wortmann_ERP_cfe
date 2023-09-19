@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Дата" id="1">
+			<DataPath>Дата</DataPath>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Организация" id="4">
+			<DataPath>Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Подразделение" id="61">
+			<DataPath>Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="63"/>
+		</InputField>
+		<InputField name="Контрагент" id="7">
+			<DataPath>Контрагент</DataPath>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="СтатьяРасходов" id="13">
+			<DataPath>СтатьяРасходов</DataPath>
+			<ContextMenu name="СтатьяРасходовКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СтатьяРасходовРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="ТаблицаБонусов" id="16">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаБонусов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаБонусовКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ТаблицаБонусовКоманднаяПанель" id="18">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТаблицаБонусовЗаполнить" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Заполнить</CommandName>
+						<ExtendedTooltip name="ТаблицаБонусовЗаполнитьРасширеннаяПодсказка" id="51"/>
+					</Button>
+					<Button name="ТаблицаБонусовУстановитьФлажки" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьФлажки</CommandName>
+						<ExtendedTooltip name="ТаблицаБонусовУстановитьФлажкиРасширеннаяПодсказка" id="53"/>
+					</Button>
+					<Button name="ТаблицаБонусовСнятьФлажки" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьФлажки</CommandName>
+						<ExtendedTooltip name="ТаблицаБонусовСнятьФлажкиРасширеннаяПодсказка" id="55"/>
+					</Button>
+					<Button name="ТаблицаБонусовСоздатьКорректировкиЗадолженностей" id="56">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СоздатьКорректировкиЗадолженностей</CommandName>
+						<ExtendedTooltip name="ТаблицаБонусовСоздатьКорректировкиЗадолженностейРасширеннаяПодсказка" id="57"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаБонусовРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ТаблицаБонусовСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>ТаблицаБонусов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаБонусовСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТаблицаБонусовСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаБонусовСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>ТаблицаБонусов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаБонусовСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ТаблицаБонусовСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаБонусовУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ТаблицаБонусов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаБонусовУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ТаблицаБонусовУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ТаблицаБонусовОтметка" id="29">
+					<DataPath>ТаблицаБонусов.Отметка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТаблицаБонусовОтметкаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаБонусовОтметкаРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="ТаблицаБонусовОрганизация" id="58">
+					<DataPath>ТаблицаБонусов.Организация</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовОрганизацияКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ТаблицаБонусовОрганизацияРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовКонтрагент" id="32">
+					<DataPath>ТаблицаБонусов.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовКонтрагентКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТаблицаБонусовКонтрагентРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовДоговор" id="35">
+					<DataPath>ТаблицаБонусов.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовДоговорКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТаблицаБонусовДоговорРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовДоговоргф_Сезон" id="47">
+					<DataPath>ТаблицаБонусов.Договор.гф_Сезон</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовДоговоргф_СезонКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТаблицаБонусовДоговоргф_СезонРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовВидБонуса" id="38">
+					<DataPath>ТаблицаБонусов.ВидБонуса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовВидБонусаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТаблицаБонусовВидБонусаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовСуммаБонуса" id="41">
+					<DataPath>ТаблицаБонусов.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовСуммаБонусаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТаблицаБонусовСуммаБонусаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТаблицаБонусовКорректирокаЗадолженности" id="44">
+					<DataPath>ТаблицаБонусов.КорректирокаЗадолженности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаБонусовКорректирокаЗадолженностиКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТаблицаБонусовКорректирокаЗадолженностиРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ЗачетБонусов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Дата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтруктураПредприятия</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяРасходов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.СтатьиРасходов</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Контрагент" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаБонусов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица бонусов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Отметка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Договор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидБонуса" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид бонуса</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.гф_ВидыБонусов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КорректирокаЗадолженности" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корректирока задолженности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КорректировкаЗадолженности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+		</Command>
+		<Command name="УстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+		</Command>
+		<Command name="СнятьФлажки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="СоздатьКорректировкиЗадолженностей" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать корректировки задолженностей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать корректировки задолженностей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьКорректировкиЗадолженностей</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CheckBoxField name="ОтладкаНеУдалять" id="1">
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтладкаНеУдалятьКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОтладкаНеУдалятьРасширеннаяПодсказка" id="3"/>
+		</CheckBoxField>
+		<LabelDecoration name="Декорация1" id="9">
+			<TextColor>style:ToolTipTextColor</TextColor>
+			<Font ref="style:SmallTextFont" kind="StyleItem"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Необходимо заполнить глобальные значения с ключами:</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="11"/>
+		</LabelDecoration>
+		<InputField name="КаталогЗагрузки" id="4">
+			<DataPath>Объект.КаталогЗагрузки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="КаталогЗагрузкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КаталогЗагрузкиРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">КаталогЗагрузкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Button name="Загрузить" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Загрузить</CommandName>
+			<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<InputField name="КаталогВыгрузки" id="12">
+			<DataPath>Объект.КаталогВыгрузки</DataPath>
+			<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<Button name="Выгрузить" id="15">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Выгрузить</CommandName>
+			<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="16"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ОбменСWMS</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Загрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+		</Command>
+		<Command name="Выгрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выгрузить</Action>
+		</Command>
+	</Commands>
+</Form>
