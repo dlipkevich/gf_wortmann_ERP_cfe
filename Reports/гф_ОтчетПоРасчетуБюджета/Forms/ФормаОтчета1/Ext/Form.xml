@@ -2829,6 +2829,10 @@ Use:
 				<v8:Type>cfg:ReportObject.гф_ОтчетПоРасчетуБюджета</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Отчет.ДатаОкончания</Field>
+				<Field>Отчет.Организации</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="ОтчетНаименованиеТекущегоВарианта" id="2">
 			<Type>
@@ -3249,6 +3253,9 @@ Use:
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<Save>
+				<Field>ОтборБюджетовПредставление</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="БюджетСписок" id="23">
 			<Title>
