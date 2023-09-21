@@ -144,27 +144,17 @@
 			<ContextMenu name="ТипПрайсЛистаТККонтекстноеМеню" id="29"/>
 			<ExtendedTooltip name="ТипПрайсЛистаТКРасширеннаяПодсказка" id="30"/>
 		</InputField>
-		<Button name="Заполнить" id="74">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.Заполнить</CommandName>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить</v8:content>
-				</v8:item>
-			</Title>
-			<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="75"/>
-		</Button>
 		<Table name="КонтактныеЛица" id="52">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Объект.КонтактныеЛица</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="КонтактныеЛицаКонтекстноеМеню" id="53"/>
-			<AutoCommandBar name="КонтактныеЛицаКоманднаяПанель" id="54">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="КонтактныеЛицаКоманднаяПанель" id="54"/>
 			<ExtendedTooltip name="КонтактныеЛицаРасширеннаяПодсказка" id="55"/>
 			<SearchStringAddition name="КонтактныеЛицаСтрокаПоиска" id="56">
 				<AdditionSource>
