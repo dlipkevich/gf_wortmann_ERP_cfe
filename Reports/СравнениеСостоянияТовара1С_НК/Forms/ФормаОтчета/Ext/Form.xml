@@ -62,6 +62,9 @@
 					<AutoMarkIncomplete>true</AutoMarkIncomplete>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="1227"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="1228"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
 				</InputField>
 				<CheckBoxField name="ВариантВыводаДанных" id="1229">
 					<DataPath>Отчет.ВариантВыводаДанных</DataPath>
