@@ -304,13 +304,6 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Счет</dataPath>
-			<field>Счет</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаОстатокСчет76</dataPath>
 			<field>СуммаОстатокСчет76</field>
 			<title xsi:type="v8:LocalStringType">
@@ -347,28 +340,8 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Субконто1</dataPath>
-			<field>Субконто1</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Валюта</dataPath>
 			<field>Валюта</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Субконто2</dataPath>
-			<field>Субконто2</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Субконто3</dataPath>
-			<field>Субконто3</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Подразделение</dataPath>
-			<field>Подразделение</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>НаправлениеДеятельности</dataPath>
-			<field>НаправлениеДеятельности</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Партнер</dataPath>
@@ -489,6 +462,64 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>КМ</dataPath>
 			<field>КМ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментПартнеров</dataPath>
+			<field>СегментПартнеров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент партнеров</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БазоваяВалюта</dataPath>
+			<field>БазоваяВалюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВозникновения</dataPath>
+			<field>ДатаВозникновения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле2</dataPath>
+			<field>Поле2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УдалитьОбъектРасчетов</dataPath>
+			<field>УдалитьОбъектРасчетов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПлановогоПогашения</dataPath>
+			<field>ДатаПлановогоПогашения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+			<field>АналитикаУчетаПоПартнерам</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектРасчетов</dataPath>
+			<field>ОбъектРасчетов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетныйДокумент</dataPath>
+			<field>РасчетныйДокумент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<item xsi:type="DataSetQuery">
 			<name>Заказы</name>
@@ -819,7 +850,7 @@
 		И НЕ ЗаказКлиентаТовары.Отменено
 //ГДЕ	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
 {ГДЕ
-	(ДоговорыКонтрагентов.Организация = &amp;Организация),
+	//(ДоговорыКонтрагентов.Организация = &amp;Организация),
 	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
 	}
 
@@ -865,7 +896,7 @@
 Где	 ЗаказКлиентаДокумент.Проведен
 	И ВТ_ЗаказыОстатки.ЗаказКлиента ЕСТЬ NULL
 {ГДЕ
-	(ДоговорыКонтрагентов.Организация = &amp;Организация) ,
+	//(ДоговорыКонтрагентов.Организация = &amp;Организация) ,
 	 ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
 	}
 
@@ -1266,13 +1297,6 @@
 		<item xsi:type="DataSetQuery">
 			<name>БухОстатки</name>
 			<field xsi:type="DataSetFieldField">
-				<dataPath>Счет</dataPath>
-				<field>Счет</field>
-				<role>
-					<dcscom:dimension>true</dcscom:dimension>
-				</role>
-			</field>
-			<field xsi:type="DataSetFieldField">
 				<dataPath>СуммаОстатокСчет76</dataPath>
 				<field>СуммаОстатокСчет76</field>
 				<title xsi:type="v8:LocalStringType">
@@ -1297,10 +1321,6 @@
 				<field>гф_Сезон</field>
 			</field>
 			<field xsi:type="DataSetFieldField">
-				<dataPath>Организация</dataPath>
-				<field>Организация</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
 				<dataPath>Контрагент</dataPath>
 				<field>Контрагент</field>
 				<title xsi:type="v8:LocalStringType">
@@ -1309,6 +1329,9 @@
 						<v8:content>Контрагент</v8:content>
 					</v8:item>
 				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 				<valueType>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
 				</valueType>
@@ -1322,6 +1345,9 @@
 						<v8:content>Договор</v8:content>
 					</v8:item>
 				</title>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
 				<valueType>
 					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
 				</valueType>
@@ -1337,65 +1363,250 @@
 				</title>
 			</field>
 			<field xsi:type="DataSetFieldField">
-				<dataPath>Субконто1</dataPath>
-				<field>Субконто1</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
 				<dataPath>Валюта</dataPath>
 				<field>Валюта</field>
 			</field>
 			<field xsi:type="DataSetFieldField">
-				<dataPath>Субконто2</dataPath>
-				<field>Субконто2</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>Субконто3</dataPath>
-				<field>Субконто3</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>Подразделение</dataPath>
-				<field>Подразделение</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>НаправлениеДеятельности</dataPath>
-				<field>НаправлениеДеятельности</field>
-			</field>
-			<field xsi:type="DataSetFieldField">
 				<dataPath>Партнер</dataPath>
 				<field>Партнер</field>
+				<role>
+					<dcscom:dimension>true</dcscom:dimension>
+				</role>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СегментПартнеров</dataPath>
+				<field>СегментПартнеров</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сегмент партнеров</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>БазоваяВалюта</dataPath>
+				<field>БазоваяВалюта</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаВозникновения</dataPath>
+				<field>ДатаВозникновения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Поле2</dataPath>
+				<field>Поле2</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поле2</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>УдалитьОбъектРасчетов</dataPath>
+				<field>УдалитьОбъектРасчетов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаПлановогоПогашения</dataPath>
+				<field>ДатаПлановогоПогашения</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+				<field>АналитикаУчетаПоПартнерам</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОбъектРасчетов</dataPath>
+				<field>ОбъектРасчетов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РасчетныйДокумент</dataPath>
+				<field>РасчетныйДокумент</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Счет</dataPath>
+				<field>Счет</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Счет</v8:content>
+					</v8:item>
+				</title>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
-			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	ХозрасчетныйОстатки.Счет КАК Счет,
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Сегменты.Партнер КАК Партнер,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуПартнеров
+ПОМЕСТИТЬ ОтборПоСегментуПартнеров
+ИЗ
+	РегистрСведений.ПартнерыСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментПартнеров,
+	Сегменты.Партнер.* КАК Партнер}
+
+ИНДЕКСИРОВАТЬ ПО
+	Партнер,
+	ИспользуетсяОтборПоСегментуПартнеров
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Организации.Ссылка КАК Организация,
+	КурсВалюты.Валюта КАК Валюта,
+	ЕСТЬNULL(КурсВалюты.КурсЧислитель, 1) * ЕСТЬNULL(КурсВалютыУпр.КурсЗнаменатель, 1) / (ЕСТЬNULL(КурсВалюты.КурсЗнаменатель, 1) * ЕСТЬNULL(КурсВалютыУпр.КурсЧислитель, 1)) КАК Коэффициент
+ПОМЕСТИТЬ КурсыВалют
+ИЗ
+	Справочник.Организации КАК Организации
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних({(&amp;ДатаОтчета)}, БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалюты
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних(
+				{(&amp;ДатаОтчета)},
+				Валюта = &amp;ВалютаУправленческогоУчета
+					И БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалютыУпр
+		ПО (ИСТИНА)
+//{ГДЕ
+//	(Организации.Ссылка = &amp;Организация)
+//	}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	АналитикаУчета.Организация КАК Организация,
+	АналитикаУчета.Партнер КАК Партнер,
+	АналитикаУчета.Контрагент КАК Контрагент,
+	АналитикаУчета.Договор КАК Договор,
+	&amp;ВалютаУправленческогоУчета КАК Валюта,
+	РасчетыПоСрокам.ДолгРеглОстаток КАК ДолгКлиента,
+	РасчетыПоСрокам.ДолгОстаток КАК ДолгКлиентаВВалюте
+ПОМЕСТИТЬ ТаблицаЗадолженностей_2
+ИЗ
+	РегистрНакопления.РасчетыСКлиентамиПоСрокам.Остатки({(&amp;ДатаОтчетаГраница)}, ) КАК РасчетыПоСрокам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПоПартнерам КАК АналитикаУчета
+		ПО РасчетыПоСрокам.АналитикаУчетаПоПартнерам = АналитикаУчета.КлючАналитики
+		ЛЕВОЕ СОЕДИНЕНИЕ КурсыВалют КАК КурсВалюты
+		ПО (КурсВалюты.Валюта = РасчетыПоСрокам.Валюта)
+			И (КурсВалюты.Организация = АналитикаУчета.Организация)
+ГДЕ
+	АналитикаУчета.Партнер &lt;&gt; ЗНАЧЕНИЕ(Справочник.Партнеры.НашеПредприятие)
+{ГДЕ
+	//(АналитикаУчета.Контрагент = &amp;Контрагент),
+	//(АналитикаУчета.Партнер = &amp;Партнер),
+	//(АналитикаУчета.Организация = &amp;Организация),
+	АналитикаУчета.Договор.* КАК Договор,
+	(АналитикаУчета.Партнер В
+			(ВЫБРАТЬ
+				ОтборПоСегментуПартнеров.Партнер
+			ИЗ
+				ОтборПоСегментуПартнеров
+			ГДЕ
+				ОтборПоСегментуПартнеров.ИспользуетсяОтборПоСегментуПартнеров = &amp;ИспользуетсяОтборПоСегментуПартнеров)) КАК Поле2}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаЗадолженностей_.Организация КАК Организация,
+	ТаблицаЗадолженностей_.Партнер КАК Партнер,
+	ТаблицаЗадолженностей_.Контрагент КАК Контрагент,
+	ТаблицаЗадолженностей_.Договор КАК Договор,
+	ДоговорыКонтрагентов.гф_Сезон КАК гф_Сезон,
+	ДоговорыКонтрагентов.ГруппаФинансовогоУчета КАК ГруппаФинансовогоУчета,
+	ПорядокОтраженияНаСчетахУчета.СчетУчета КАК СчетУчета,
+	ТаблицаЗадолженностей_.Валюта КАК Валюта,
+	ТаблицаЗадолженностей_.ДолгКлиента КАК ДолгКлиента,
+	ТаблицаЗадолженностей_.ДолгКлиентаВВалюте КАК ДолгКлиентаВВалюте
+ПОМЕСТИТЬ ТаблицаЗадолженностей2
+ИЗ
+	ТаблицаЗадолженностей_2 КАК ТаблицаЗадолженностей_
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО ТаблицаЗадолженностей_.Договор = ДоговорыКонтрагентов.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПорядокОтраженияНаСчетахУчета КАК ПорядокОтраженияНаСчетахУчета
+		ПО (ДоговорыКонтрагентов.ГруппаФинансовогоУчета = ПорядокОтраженияНаСчетахУчета.АналитикаУчета)
+ГДЕ
+	ПорядокОтраженияНаСчетахУчета.ВидСчета = ЗНАЧЕНИЕ(Перечисление.ВидыСчетовРеглУчета.АвансыПолученные)
+{ГДЕ
+	(ДоговорыКонтрагентов.гф_Сезон В (&amp;Сезоны)) КАК Поле2}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТаблицаЗадолженностей.Организация КАК Организация,
+	ТаблицаЗадолженностей.Партнер КАК Партнер,
+	ТаблицаЗадолженностей.Контрагент КАК Контрагент,
+	ТаблицаЗадолженностей.Договор КАК Договор,
+	ТаблицаЗадолженностей.гф_Сезон КАК гф_Сезон,
+	ТаблицаЗадолженностей.СчетУчета КАК СчетУчета,
+	ТаблицаЗадолженностей.Валюта КАК Валюта,
+	СУММА(ВЫБОР
+			КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
+				ТОГДА 0
+			ИНАЧЕ ТаблицаЗадолженностей.ДолгКлиента
+		КОНЕЦ) КАК ДолгКлиента,
+	СУММА(ВЫБОР
+			КОГДА ТаблицаЗадолженностей.ДолгКлиентаВВалюте = 0
+				ТОГДА 0
+			ИНАЧЕ ТаблицаЗадолженностей.ДолгКлиентаВВалюте
+		КОНЕЦ) КАК ДолгКлиентаВВалюте
+ПОМЕСТИТЬ ВТ1_1
+ИЗ
+	ТаблицаЗадолженностей2 КАК ТаблицаЗадолженностей
+
+СГРУППИРОВАТЬ ПО
+	ТаблицаЗадолженностей.Организация,
+	ТаблицаЗадолженностей.Партнер,
+	ТаблицаЗадолженностей.Контрагент,
+	ТаблицаЗадолженностей.Договор,
+	ТаблицаЗадолженностей.гф_Сезон,
+	ТаблицаЗадолженностей.СчетУчета,
+	ТаблицаЗадолженностей.Валюта
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ1_1.Партнер КАК Партнер,
+	ВТ1_1.Контрагент КАК Контрагент,
+	ВТ1_1.Договор КАК Договор,
+	ВТ1_1.гф_Сезон КАК гф_Сезон,
+	ВТ1_1.СчетУчета КАК СчетУчета,
 	ВЫБОР
-		КОГДА ХозрасчетныйОстатки.Счет В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСПокупателямиИЗаказчиками))
-			ТОГДА ХозрасчетныйОстатки.СуммаОстаток
+		КОГДА ВТ1_1.СчетУчета В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСПокупателямиИЗаказчиками))
+			ТОГДА ВТ1_1.ДолгКлиента
 		ИНАЧЕ 0
 	КОНЕЦ КАК СуммаОстатокСчет62,
 	ВЫБОР
-		КОГДА ХозрасчетныйОстатки.Счет В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСРазнымиДебиторамиИКредиторами))
-			ТОГДА ХозрасчетныйОстатки.СуммаОстаток
+		КОГДА ВТ1_1.СчетУчета В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСРазнымиДебиторамиИКредиторами))
+			ТОГДА ВТ1_1.ДолгКлиента
 		ИНАЧЕ 0
 	КОНЕЦ КАК СуммаОстатокСчет76,
-	ДоговорыКонтрагентов.гф_Сезон КАК гф_Сезон,
-	ЗНАЧЕНИЕ(Справочник.Склады.ПустаяСсылка) КАК Склад,
-	ДоговорыКонтрагентов.Ссылка КАК Договор,
-	Контрагенты.Ссылка КАК Контрагент,
-	Контрагенты.Партнер КАК Партнер
+	ЗНАЧЕНИЕ(Справочник.Склады.ПустаяСсылка) КАК Склад
+ПОМЕСТИТЬ Буфер
 ИЗ
-	РегистрБухгалтерии.Хозрасчетный.Остатки(
-			КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ),
-			Счет В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСПокупателямиИЗаказчиками))
-				ИЛИ Счет В ИЕРАРХИИ (ЗНАЧЕНИЕ(ПланСчетов.Хозрасчетный.РасчетыСРазнымиДебиторамиИКредиторами)),
-			&amp;СубконтоКонтрагентДоговор,
-			{(Организация = &amp;Организация)}) КАК ХозрасчетныйОстатки
-		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
-		ПО ХозрасчетныйОстатки.Субконто2 = ДоговорыКонтрагентов.Ссылка
-		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
-		ПО ХозрасчетныйОстатки.Субконто1 = Контрагенты.Ссылка
-//ГДЕ	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
-{ГДЕ
-	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)}	</query>
+	ВТ1_1 КАК ВТ1_1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Буфер.СчетУчета КАК Счет,
+	СУММА(Буфер.СуммаОстатокСчет62) КАК СуммаОстатокСчет62,
+	СУММА(Буфер.СуммаОстатокСчет76) КАК СуммаОстатокСчет76,
+	Буфер.гф_Сезон КАК гф_Сезон,
+	ЗНАЧЕНИЕ(Справочник.Склады.ПустаяСсылка) КАК Склад,
+	Буфер.Договор КАК Договор,
+	Буфер.Контрагент КАК Контрагент,
+	Буфер.Партнер КАК Партнер
+ИЗ
+	Буфер КАК Буфер
+ГДЕ
+	(НЕ Буфер.СуммаОстатокСчет62 = 0
+			ИЛИ НЕ Буфер.СуммаОстатокСчет76 = 0)
+
+СГРУППИРОВАТЬ ПО
+	Буфер.СчетУчета,
+	Буфер.гф_Сезон,
+	Буфер.Склад,
+	Буфер.Договор,
+	Буфер.Контрагент,
+	Буфер.Партнер
+
+УПОРЯДОЧИТЬ ПО
+	Контрагент</query>
 		</item>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
@@ -2203,18 +2414,22 @@
 		<group>Договор</group>
 	</totalField>
 	<parameter>
-		<name>Организация</name>
+		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Организация</v8:content>
+				<v8:content>Период</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
 		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -2253,24 +2468,6 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<availableAsField>false</availableAsField>
-	</parameter>
-	<parameter>
 		<name>ДатаОтчета</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -2289,17 +2486,21 @@
 		<use>Always</use>
 	</parameter>
 	<parameter>
-		<name>СубконтоКонтрагентДоговор</name>
+		<name>ДатаОтчетаГраница</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Субконто контрагент договор</v8:content>
+				<v8:content>Дата отчета граница</v8:content>
 			</v8:item>
 		</title>
-		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Контрагенты</value>
-		<value xsi:type="dcscor:DesignTimeValue">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.Договоры</value>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
@@ -2315,6 +2516,50 @@
 		</valueType>
 		<useRestriction>false</useRestriction>
 		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>БазоваяВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Базовая валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.БазоваяВалютаПоУмолчанию.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>ВалютаУправленческогоУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта управленческого учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.ВалютаУправленческогоУчета.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуПартнеров</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту партнеров</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<template>
 		<name>Макет1</name>
@@ -2356,26 +2601,17 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Партнер</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>7bdb082e-09b9-4349-aa5a-504f6e41b14c</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="xs:string">Контрагент</dcsset:userSettingPresentation>
+					<dcsset:userSettingID>8ca89b18-3e3f-4eff-b155-70522f415f4a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>cecab5fb-a137-4ed9-bf84-1cebb88b7706</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Организация</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>a22e7253-e3c5-4202-a254-08d395d77f04</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Организация</v8:content>
-						</v8:item>
-					</dcsset:userSettingPresentation>
-				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardBeginningDate">
@@ -2399,6 +2635,16 @@
 							<v8:content>Сезоны</v8:content>
 						</v8:item>
 					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>БазоваяВалюта</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВалютаУправленческогоУчета</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
