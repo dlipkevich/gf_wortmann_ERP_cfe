@@ -399,7 +399,6 @@
 								</InputField>
 								<InputField name="ДеревоДокументовУпаковочныйЛистНомер" id="211">
 									<DataPath>ДеревоДокументов.УпаковочныйЛистНомер</DataPath>
-									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -407,8 +406,12 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
 									<ContextMenu name="ДеревоДокументовУпаковочныйЛистНомерКонтекстноеМеню" id="212"/>
 									<ExtendedTooltip name="ДеревоДокументовУпаковочныйЛистНомерРасширеннаяПодсказка" id="213"/>
+									<Events>
+										<Event name="Opening">ДеревоДокументовУпаковочныйЛистНомерОткрытие</Event>
+									</Events>
 								</InputField>
 								<InputField name="ДеревоДокументовДоговор" id="226">
 									<DataPath>ДеревоДокументов.Договор</DataPath>
