@@ -959,6 +959,9 @@
 												<ContextMenu name="ТЧ_УбратьУправлениеПоискомКонтекстноеМеню" id="244"/>
 												<ExtendedTooltip name="ТЧ_УбратьУправлениеПоискомРасширеннаяПодсказка" id="245"/>
 											</SearchControlAddition>
+											<Events>
+												<Event name="OnActivateRow">ТЧ_УбратьПриАктивизацииСтроки</Event>
+											</Events>
 											<ChildItems>
 												<LabelField name="ТЧ_УбратьНомерСтроки" id="246">
 													<DataPath>Объект.ТЧ_Убрать.LineNumber</DataPath>
