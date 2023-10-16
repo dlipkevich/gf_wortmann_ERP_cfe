@@ -849,10 +849,11 @@
 		ПО ЗаказыКлиентовОстатки.ЗаказКлиента = ЗаказКлиентаТовары.Ссылка
 		И НЕ ЗаказКлиентаТовары.Отменено
 //ГДЕ	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
-{ГДЕ
-	//(ДоговорыКонтрагентов.Организация = &amp;Организация),
-	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
-	}
+//++ СадомцевСА 16.10.2023 Исправил отбор по Сезону
+//..{ГДЕ
+//..	//(ДоговорыКонтрагентов.Организация = &amp;Организация),
+//..	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
+//..	}
 
 СГРУППИРОВАТЬ ПО
 	ДоговорыКонтрагентов.гф_Сезон,
@@ -895,10 +896,11 @@
 //ГДЕ	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
 Где	 ЗаказКлиентаДокумент.Проведен
 	И ВТ_ЗаказыОстатки.ЗаказКлиента ЕСТЬ NULL
-{ГДЕ
-	//(ДоговорыКонтрагентов.Организация = &amp;Организация) ,
-	 ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
-	}
+//++ СадомцевСА 16.10.2023 Исправил отбор по Сезону
+//..{ГДЕ
+//..	//(ДоговорыКонтрагентов.Организация = &amp;Организация) ,
+//..	ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны)
+//..	}
 
 СГРУППИРОВАТЬ ПО
 	ДоговорыКонтрагентов.гф_Сезон,
@@ -1237,6 +1239,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	ВТ_Заказы.ЗаказКлиента КАК ЗаказКлиента,
+	//++ СадомцевСА 16.10.2023 Исправил отбор по Организации
+	ВТ_Заказы.ЗаказКлиента.Организация КАК Организация,
+	//--
 	ВТ_Заказы.гф_Сезон КАК гф_Сезон,
 	ВЫРАЗИТЬ(ВТ_Заказы.Контрагент КАК Справочник.Контрагенты) КАК Контрагент,
 	ВТ_Заказы.Договор КАК Договор,
@@ -1521,8 +1526,9 @@
 		ПО (ДоговорыКонтрагентов.ГруппаФинансовогоУчета = ПорядокОтраженияНаСчетахУчета.АналитикаУчета)
 ГДЕ
 	ПорядокОтраженияНаСчетахУчета.ВидСчета = ЗНАЧЕНИЕ(Перечисление.ВидыСчетовРеглУчета.АвансыПолученные)
-{ГДЕ
-	(ДоговорыКонтрагентов.гф_Сезон В (&amp;Сезоны)) КАК Поле2}
+//++ СадомцевСА 16.10.2023 Исправил отбор по Сезону
+//..{ГДЕ
+//..	(ДоговорыКонтрагентов.гф_Сезон В (&amp;Сезоны)) КАК Поле2}
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1974,7 +1980,8 @@
 ГДЕ
 	//ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны) И
 	 гф_СпецификацияПокупателя.Проведен
-{Где ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны) }	
+//++ СадомцевСА 16.10.2023 Исправил отбор по Сезону
+//..{Где ДоговорыКонтрагентов.гф_Сезон В(&amp;Сезоны) }	
 
 УПОРЯДОЧИТЬ ПО
 	Договор,
@@ -2504,20 +2511,6 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>Сезоны</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Сезоны</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
-		</valueType>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
 		<name>БазоваяВалюта</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -2606,9 +2599,20 @@
 					<dcsset:userSettingID>8ca89b18-3e3f-4eff-b155-70522f415f4a</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>cecab5fb-a137-4ed9-bf84-1cebb88b7706</dcsset:userSettingID>
+					<dcsset:userSettingID>04d8c62b-7bff-4c38-af03-1e2222584292</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">гф_Сезон</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>bc2e3c2f-695a-4e44-8704-029e5f1a1d34</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
@@ -2619,32 +2623,6 @@
 					</dcscor:value>
 					<dcsset:userSettingID>4f1b2c45-3674-4c7a-8ab3-9ef2b73a8af8</dcsset:userSettingID>
 					<dcsset:userSettingPresentation xsi:type="xs:string">ДатаОтчета</dcsset:userSettingPresentation>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Сезоны</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>5810ae81-d76d-4856-bf61-23bdfe8d8c35</dcsset:userSettingID>
-					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сезоны</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Сезоны</v8:content>
-						</v8:item>
-					</dcsset:userSettingPresentation>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>БазоваяВалюта</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ВалютаУправленческогоУчета</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
