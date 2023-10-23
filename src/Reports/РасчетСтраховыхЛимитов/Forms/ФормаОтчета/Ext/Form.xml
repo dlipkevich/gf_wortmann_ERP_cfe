@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<CommandBarLocation>None</CommandBarLocation>
+	<ReportResult>Результат</ReportResult>
+	<DetailsData>ДанныеРасшифровки</DetailsData>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>DontShow</AutoShowState>
+	<CustomSettingsFolder>22:02023637-7868-4a5f-8576-835a76e0c9ba</CustomSettingsFolder>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>DontApply</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод данных</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<InputField name="Контрагент" id="63">
+					<DataPath>Отчет.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<Table name="ТЧ" id="27">
+					<CommandBarLocation>None</CommandBarLocation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Отчет.ТЧ</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТЧКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ТЧКоманднаяПанель" id="29"/>
+					<ExtendedTooltip name="ТЧРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="ТЧСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>ТЧ</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТЧСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ТЧСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТЧСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>ТЧ</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТЧСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ТЧСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТЧУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>ТЧ</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТЧУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ТЧУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">ТЧПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ТЧНомерСтроки" id="40">
+							<DataPath>Отчет.ТЧ.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТЧНомерСтрокиКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ТЧНомерСтрокиРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<InputField name="ТЧОрганизация" id="46">
+							<DataPath>Отчет.ТЧ.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТЧОрганизацияКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ТЧОрганизацияРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ТЧСтраховая" id="49">
+							<DataPath>Отчет.ТЧ.ВидЛимита</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТЧСтраховаяКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ТЧСтраховаяРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="ТЧСтраховкаАктуальная" id="57">
+							<DataPath>Отчет.ТЧ.СтраховкаАктуальная</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТЧСтраховкаАктуальнаяКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ТЧСтраховкаАктуальнаяРасширеннаяПодсказка" id="59"/>
+						</InputField>
+						<InputField name="ТЧСуммаЗаказа" id="52">
+							<DataPath>Отчет.ТЧ.СуммаЗаказа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТЧСуммаЗаказаКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ТЧСуммаЗаказаРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">ТЧСуммаЗаказаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="Команда1" id="55">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Команда1</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="Команда1РасширеннаяПодсказка" id="56"/>
+		</Button>
+		<SpreadSheetDocumentField name="Результат" id="24">
+			<DataPath>Результат</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<TitleLocation>None</TitleLocation>
+			<Width>100</Width>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="26"/>
+		</SpreadSheetDocumentField>
+		<Button name="СохранитьНастройки" id="68">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СохранитьНастройки</CommandName>
+			<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="69"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.РасчетСтраховыхЛимитов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Результат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеРасшифровки" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Команда1" id="1">
+			<Action>Команда1</Action>
+		</Command>
+		<Command name="СохранитьНастройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+		</Command>
+	</Commands>
+</Form>

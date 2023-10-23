@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Catalog uuid="dc33f81f-7ec7-4650-8de9-8b2078e8596d">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.КоллекцииНоменклатуры" category="Object">
+				<xr:TypeId>cb8f598c-b113-4014-bbc0-d4a84f381fd7</xr:TypeId>
+				<xr:ValueId>ba96cf31-03ed-4283-ac7c-3028de5620d6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.КоллекцииНоменклатуры" category="Ref">
+				<xr:TypeId>9b040279-f60e-411b-a7c5-5205c836d881</xr:TypeId>
+				<xr:ValueId>d6d363ff-fbb1-474a-bb7e-2dfbb864e046</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.КоллекцииНоменклатуры" category="Selection">
+				<xr:TypeId>5f18c2f0-22e4-4146-965c-72a7377931cd</xr:TypeId>
+				<xr:ValueId>f94647c7-95a1-4266-9a64-d3f66b312141</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.КоллекцииНоменклатуры" category="List">
+				<xr:TypeId>68a53c64-a443-4c70-8aae-99df4391aa05</xr:TypeId>
+				<xr:ValueId>63177d29-fce7-4f3a-94d5-a43b800bc22b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.КоллекцииНоменклатуры" category="Manager">
+				<xr:TypeId>195c5476-1711-428e-b18f-238f9c34452f</xr:TypeId>
+				<xr:ValueId>e28f7a9a-3b3c-4a21-ab3f-0b38bbcdbfc1</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>КоллекцииНоменклатуры</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>b25817a2-618c-4a94-86bf-3be7396b0a97</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="528c35dd-53a2-45bc-82c0-6763f3f46d0a">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_Номер</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>05321862-dac3-46e3-8556-65e269a774bf</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b1f4c2b4-5b3d-4fe2-ba27-436cd35285f2">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_Год</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ff53f388-1ad2-4ee4-8027-29c764a1a5be</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6147ce0f-69d2-4654-a49f-ffb2ccc609a2">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ТехническийЛимит</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>14375b1f-55d0-4a3d-99ea-c929760c4f6f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="d3039b70-d4be-44d0-bc04-babfc13d8654">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаНачалаФормированияЗаказов</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>da263dd8-57e8-4846-9014-51cbf3d83630</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="60133ac8-43ad-461d-bca1-f57d163b7d86">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаОкончанияФормированияЗаказов</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e1ca4514-90a0-4c08-9cc6-c066702fd823</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="87fe329e-b0bc-4f50-8b70-2e5011dea02e">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаНачалаОтгрузкиЗаказов</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ab0c7a35-46a6-4021-b5c5-37e80f7e7506</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="70023b49-1d5b-4ee1-822d-b9e7561d681d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаОкончанияОтгрузкиЗаказов</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f11f5a64-9cf9-4b55-98cf-2a7487fa0027</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="40d996e2-3fc9-4e71-9c02-9bfbee83dd14">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаОкончанияРедактированияСкидок</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b153cc4d-146c-413b-8258-584e354a5c69</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="058a3ae0-4b3b-412d-be09-db2e7c8d3280">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>гф_ДатаИзготовления</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8760d03e-1748-4fb0-9a76-edb40b6ee76f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаЭлемента</Form>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

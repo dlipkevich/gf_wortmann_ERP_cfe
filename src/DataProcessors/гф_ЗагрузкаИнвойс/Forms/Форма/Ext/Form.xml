@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="КаталогЗагрузки" id="31">
+			<DataPath>Объект.КаталогЗагрузки</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КаталогЗагрузкиКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="КаталогЗагрузкиРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="StartChoice">КаталогЗагрузкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="СозданныеДокументы" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СозданныеДокументы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СозданныеДокументыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СозданныеДокументыКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ЗагрузитьДанные" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьДанные</CommandName>
+						<ExtendedTooltip name="ЗагрузитьДанныеРасширеннаяПодсказка" id="24"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>СозданныеДокументы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>СозданныеДокументы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>СозданныеДокументы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СозданныеДокументыНомерСтроки" id="17">
+					<DataPath>Объект.СозданныеДокументы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СозданныеДокументыНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СозданныеДокументыНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<CheckBoxField name="СозданныеДокументыПроведен" id="28">
+					<DataPath>Объект.СозданныеДокументы.Проведен</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СозданныеДокументыПроведенКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СозданныеДокументыПроведенРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+				<CheckBoxField name="СозданныеДокументыНовый" id="25">
+					<DataPath>Объект.СозданныеДокументы.Новый</DataPath>
+					<Enabled>false</Enabled>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СозданныеДокументыНовыйКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СозданныеДокументыНовыйРасширеннаяПодсказка" id="27"/>
+				</CheckBoxField>
+				<InputField name="СозданныеДокументыДокумент" id="20">
+					<DataPath>Объект.СозданныеДокументы.Документ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СозданныеДокументыДокументКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СозданныеДокументыДокументРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ЗагрузкаИнвойс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ШипингЛисты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шипинг листы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПолноеИмяФайла" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>256</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="shipping_unit_no" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Shipping unit no</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="XML" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>XML</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="XDTO" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>XDTO</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ИнвойсЕсть" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инвойс есть</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДанные</Action>
+		</Command>
+	</Commands>
+</Form>

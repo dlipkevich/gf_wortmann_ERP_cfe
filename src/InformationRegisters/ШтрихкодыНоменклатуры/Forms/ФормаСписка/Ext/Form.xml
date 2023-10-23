@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<FileDragMode>AsFile</FileDragMode>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="12"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Штрихкод" id="4">
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Barcode</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ШтрихкодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ШтрихкодExtendedTooltip" id="13"/>
+				</LabelField>
+				<LabelField name="Номенклатура" id="6">
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Items</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НоменклатураExtendedTooltip" id="14"/>
+				</LabelField>
+				<LabelField name="Характеристика" id="8">
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Variant</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ХарактеристикаExtendedTooltip" id="15"/>
+				</LabelField>
+				<LabelField name="Упаковка" id="10">
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед. изм.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Unit</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УпаковкаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="УпаковкаExtendedTooltip" id="16"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.15">
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+		<ChildItems>
+			<Table name="Список" id="1">
+				<Representation>List</Representation>
+				<CommandBarLocation>None</CommandBarLocation>
+				<SkipOnInput>false</SkipOnInput>
+				<DefaultItem>true</DefaultItem>
+				<UseAlternationRowColor>true</UseAlternationRowColor>
+				<FileDragMode>AsFile</FileDragMode>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>List</v8:content>
+					</v8:item>
+				</Title>
+				<AutoRefresh>false</AutoRefresh>
+				<AutoRefreshPeriod>60</AutoRefreshPeriod>
+				<Period>
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</Period>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<RestoreCurrentRow>false</RestoreCurrentRow>
+				<TopLevelParent xsi:nil="true"/>
+				<ShowRoot>false</ShowRoot>
+				<AllowRootChoice>false</AllowRootChoice>
+				<UpdateOnDataChange>Auto</UpdateOnDataChange>
+				<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+				<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+				<ExtendedTooltip name="СписокExtendedTooltip" id="12"/>
+				<SearchStringAddition name="СписокСтрокаПоиска" id="17">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="СписокСостояниеПросмотра" id="20">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<HorizontalLocation>Left</HorizontalLocation>
+					<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="СписокУправлениеПоиском" id="23">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="Штрихкод" id="4">
+						<DefaultItem>true</DefaultItem>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Штрихкод</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Barcode</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ШтрихкодКонтекстноеМеню" id="5"/>
+						<ExtendedTooltip name="ШтрихкодExtendedTooltip" id="13"/>
+					</LabelField>
+					<LabelField name="Номенклатура" id="6">
+						<DefaultItem>true</DefaultItem>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номенклатура</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Items</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="НоменклатураКонтекстноеМеню" id="7"/>
+						<ExtendedTooltip name="НоменклатураExtendedTooltip" id="14"/>
+					</LabelField>
+					<LabelField name="Характеристика" id="8">
+						<DefaultItem>true</DefaultItem>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Характеристика</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Variant</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="ХарактеристикаExtendedTooltip" id="15"/>
+					</LabelField>
+					<LabelField name="Упаковка" id="10">
+						<DefaultItem>true</DefaultItem>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ед. изм.</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Unit</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="УпаковкаКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="УпаковкаExtendedTooltip" id="16"/>
+					</LabelField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

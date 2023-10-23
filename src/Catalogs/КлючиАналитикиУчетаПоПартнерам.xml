@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Catalog uuid="6debdc03-983d-49e2-882d-81a02bc4416c">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.КлючиАналитикиУчетаПоПартнерам" category="Object">
+				<xr:TypeId>8d65e0e4-1ae9-4cfc-8896-4d20efbfd9c3</xr:TypeId>
+				<xr:ValueId>b7b9302a-1069-48c3-9c48-641c6eb74b9c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.КлючиАналитикиУчетаПоПартнерам" category="Ref">
+				<xr:TypeId>b68de6f9-39ec-4aae-a2ed-304dc1d242c7</xr:TypeId>
+				<xr:ValueId>f193bfdd-b330-4cbb-bd5c-6fc40f5c58f9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.КлючиАналитикиУчетаПоПартнерам" category="Selection">
+				<xr:TypeId>60154e06-1223-4c1d-857b-cf739119c5ef</xr:TypeId>
+				<xr:ValueId>130c82ad-1b45-4176-8664-b4b3cf74d8dc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.КлючиАналитикиУчетаПоПартнерам" category="List">
+				<xr:TypeId>5638fd82-5912-4406-b479-c5d5c366ae2e</xr:TypeId>
+				<xr:ValueId>347c5b98-c68d-49a7-b924-f28fb9aedd40</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.КлючиАналитикиУчетаПоПартнерам" category="Manager">
+				<xr:TypeId>3e2e7c15-41b3-478d-8848-b7c02d9be6bc</xr:TypeId>
+				<xr:ValueId>af320f27-13fe-4d53-a077-48a9f4b2da69</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>КлючиАналитикиУчетаПоПартнерам</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>8a645b53-68e0-49a9-881e-9c7fead35281</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="aa05afe7-1108-4dc1-a9d3-92a7b8bbf794">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Партнер</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>24d1ded8-5b6d-47ca-bcad-7e24e1280e06</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Партнеры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e199b30f-1a7f-471b-a431-442e37e4320b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>fe35f476-7f5a-4047-a037-e5711e8c4a76</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="bfae6fc1-74e8-4ee1-9d26-8c0fdc5892ee">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Контрагент</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ed75d786-eba2-4f67-8d86-0286be55813f</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6697123c-fced-4111-966c-e4bfb89b8c5f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Договор</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>7b961150-49c8-4eb2-affa-68d1cfacfdf5</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

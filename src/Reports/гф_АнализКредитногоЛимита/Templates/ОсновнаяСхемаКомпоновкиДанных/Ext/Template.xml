@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодКомпании</dataPath>
+			<field>КодКомпании</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код компании</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИспользованиеАванса</dataPath>
+			<field>ИспользованиеАванса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование аванса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапрашиваемыйЛокальныйЛимитНаСезон</dataPath>
+			<field>ЗапрашиваемыйЛокальныйЛимитНаСезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашиваемый локальный лимит на сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Лояльность</dataPath>
+			<field>Лояльность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лояльность</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сезон</dataPath>
+			<field>Сезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛокальныйЛимит2</dataPath>
+			<field>ЛокальныйЛимит2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальный лимит2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбщаяСуммаЗаказаЗаСезон</dataPath>
+			<field>ОбщаяСуммаЗаказаЗаСезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая сумма заказа за сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛокальныйЛимит1</dataPath>
+			<field>ЛокальныйЛимит1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальный лимит1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>KV</dataPath>
+			<field>KV</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>KV</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон</dataPath>
+			<field>ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашиваемое количество дней отсрочки за сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвансНаСезон</dataPath>
+			<field>АвансНаСезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аванс на сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛокальныйЛимит3</dataPath>
+			<field>ЛокальныйЛимит3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальный лимит3</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛокальныйЛимит4</dataPath>
+			<field>ЛокальныйЛимит4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Локальный лимит4</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбоснованиеЗапросаЛимита</dataPath>
+			<field>ОбоснованиеЗапросаЛимита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обоснование запроса лимита</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокСотрудничества</dataPath>
+			<field>СрокСотрудничества</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок сотрудничества</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПартнера</dataPath>
+			<field>КодПартнера</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код партнера</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеПартнера</dataPath>
+			<field>НаименованиеПартнера</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование партнера</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЛимита</dataPath>
+			<field>ВидЛимита</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация1</dataPath>
+			<field>Организация1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДоговорыТекущие.Партнер КАК Партнер,
+	ДоговорыТекущие.Ссылка КАК Договор,
+	ДоговорыТекущие.гф_Сезон КАК Сезон,
+	Договоры1.Ссылка КАК Договор1,
+	Договоры2.Ссылка КАК Договор2,
+	Договоры3.Ссылка КАК Договор3,
+	Договоры4.Ссылка КАК Договор4,
+	ДоговорыТекущие.Организация КАК Организация
+ПОМЕСТИТЬ Договоры
+ИЗ
+	Справочник.ДоговорыКонтрагентов КАК ДоговорыТекущие
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры1
+		ПО ДоговорыТекущие.Партнер = Договоры1.Партнер
+			И (Договоры1.гф_Сезон = &amp;Сезон1)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры2
+		ПО ДоговорыТекущие.Партнер = Договоры2.Партнер
+			И (Договоры2.гф_Сезон = &amp;Сезон2)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры3
+		ПО ДоговорыТекущие.Партнер = Договоры3.Партнер
+			И (Договоры3.гф_Сезон = &amp;Сезон3)
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК Договоры4
+		ПО ДоговорыТекущие.Партнер = Договоры4.Партнер
+			И (Договоры4.гф_Сезон = &amp;Сезон4)
+ГДЕ
+	ДоговорыТекущие.Партнер В(&amp;Контрагент)
+	И ДоговорыТекущие.гф_Сезон = &amp;Сезон
+
+ИНДЕКСИРОВАТЬ ПО
+	Партнер,
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	Заказы.СуммаДокумента КАК СуммаВзаиморасчетовПриход
+ПОМЕСТИТЬ ОбъемЗаказов
+ИЗ
+	Договоры КАК Договоры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК Заказы
+		ПО Договоры.Договор = Заказы.Договор
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ИспользоватьАванс
+ПОМЕСТИТЬ ВТСвойстваДоговора
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Использование аванса"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК КВ
+ПОМЕСТИТЬ ВТСвойстваДоговора1
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "KV"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК СтраховойДепозит
+ПОМЕСТИТЬ ВТСвойстваДоговора2
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Страховой депозит"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ЗапрашиваемыйЛокальныйЛимит
+ПОМЕСТИТЬ ВТСвойстваДоговора3
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Запрашиваемый локальный лимит"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ЗапрашиваемоеКоличествоДнейОтсрочки
+ПОМЕСТИТЬ ВТСвойстваДоговора4
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Запрашиваемое количество дней отсрочки"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК КоличествоДнейОтсрочкиПлатежа
+ПОМЕСТИТЬ ВТСвойстваДоговора5
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Количество дней отсрочки платежа"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор КАК Договор,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ОбоснованиеЗапросаЛимита
+ПОМЕСТИТЬ ВТСвойстваДоговора6
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО Договоры.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Обоснавание запроса лимита"
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПартнерыДополнительныеРеквизиты.Значение КАК Лояльность,
+	Договоры.Партнер КАК Партнер
+ПОМЕСТИТЬ ВТСвойстваКонтрагента
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Партнеры.ДополнительныеРеквизиты КАК ПартнерыДополнительныеРеквизиты
+		ПО Договоры.Партнер = ПартнерыДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ПартнерыДополнительныеРеквизиты.Свойство.Наименование = "Лояльность"
+	И ПартнерыДополнительныеРеквизиты.Ссылка.ПометкаУдаления = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Партнер
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Договоры.Договор КАК Договор,
+	СУММА(Лимиты.Сумма) КАК KV,
+	ЕСТЬNULL(Лимиты1.Сумма, "no data") КАК ЛокальныйЛимит1,
+	ЕСТЬNULL(Лимиты2.Сумма, "no data") КАК ЛокальныйЛимит2,
+	ЕСТЬNULL(Лимиты3.Сумма, "no data") КАК ЛокальныйЛимит3,
+	ЕСТЬNULL(Лимиты4.Сумма, "no data") КАК ЛокальныйЛимит4
+ПОМЕСТИТЬ СвойстваДоговора
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ДатаОкончанияОтгрузок, ВидЛимита.ТипЛимита = ЗНАЧЕНИЕ(Перечисление.гф_ТипыЛимитов.KV)) КАК Лимиты
+		ПО Договоры.Партнер = Лимиты.Контрагент.Партнер
+			И (Договоры.Организация = Лимиты.Организация)
+			И (Лимиты.Статус.Активный)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ДатаОкончанияОтгрузок1, ВидЛимита = &amp;ВидЛимитаЛокальный) КАК Лимиты1
+		ПО Договоры.Партнер = Лимиты1.Контрагент.Партнер
+			И (Договоры.Организация = Лимиты1.Организация)
+			И (Лимиты1.Статус.Активный)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ДатаОкончанияОтгрузок2, ВидЛимита = &amp;ВидЛимитаЛокальный) КАК Лимиты2
+		ПО Договоры.Партнер = Лимиты2.Контрагент.Партнер
+			И (Договоры.Организация = Лимиты2.Организация)
+			И (Лимиты2.Статус.Активный)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ДатаОкончанияОтгрузок3, ВидЛимита = &amp;ВидЛимитаЛокальный) КАК Лимиты3
+		ПО Договоры.Партнер = Лимиты3.Контрагент.Партнер
+			И (Договоры.Организация = Лимиты3.Организация)
+			И (Лимиты3.Статус.Активный)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ДатаОкончанияОтгрузок4, ВидЛимита = &amp;ВидЛимитаЛокальный) КАК Лимиты4
+		ПО Договоры.Партнер = Лимиты4.Контрагент.Партнер
+			И (Договоры.Организация = Лимиты4.Организация)
+			И (Лимиты4.Статус.Активный)
+
+СГРУППИРОВАТЬ ПО
+	Договоры.Договор,
+	ЕСТЬNULL(Лимиты1.Сумма, "no data"),
+	ЕСТЬNULL(Лимиты2.Сумма, "no data"),
+	ЕСТЬNULL(Лимиты3.Сумма, "no data"),
+	ЕСТЬNULL(Лимиты4.Сумма, "no data")
+
+ИНДЕКСИРОВАТЬ ПО
+	Договор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Договоры.Договор.Организация КАК Организация,
+	Договоры.Партнер КАК Партнер,
+	ПОДСТРОКА(Договоры.Договор.Организация.Префикс, 1, 1) КАК КодКомпании,
+	Договоры.Партнер.Код КАК КодПартнера,
+	Договоры.Партнер.Наименование КАК НаименованиеПартнера,
+	Договоры.Договор КАК ДоговорКонтрагента,
+	Договоры.Сезон КАК Сезон,
+	ВТСвойстваКонтрагента.Лояльность КАК Лояльность,
+	РАЗНОСТЬДАТ(Договоры.Партнер.ДатаРегистрации, &amp;ТекущаяДата, ГОД) КАК СрокСотрудничества,
+	ЕСТЬNULL(ВТСвойстваДоговора3.ЗапрашиваемыйЛокальныйЛимит, 0) КАК ЗапрашиваемыйЛокальныйЛимитНаСезон,
+	СУММА(ЕСТЬNULL(ОбъемЗаказов.СуммаВзаиморасчетовПриход, 0)) КАК ОбщаяСуммаЗаказаЗаСезон,
+	// СадомцевСА 18.102023 Исправил заполнение показателя KV (данные из РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних)
+	//..ЕСТЬNULL(ВТСвойстваДоговора1.КВ, 0) КАК KV,
+	СвойСтваДоговора.KV КАК KV,
+	ЕСТЬNULL(ЕСТЬNULL(ВТСвойстваДоговора4.ЗапрашиваемоеКоличествоДнейОтсрочки, ВТСвойстваДоговора5.КоличествоДнейОтсрочкиПлатежа), 0) КАК ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон,
+	ВТСвойстваДоговора2.СтраховойДепозит КАК АвансНаСезон,
+	СвойстваДоговора.ЛокальныйЛимит1 КАК ЛокальныйЛимит1,
+	СвойстваДоговора.ЛокальныйЛимит2 КАК ЛокальныйЛимит2,
+	СвойстваДоговора.ЛокальныйЛимит3 КАК ЛокальныйЛимит3,
+	СвойстваДоговора.ЛокальныйЛимит4 КАК ЛокальныйЛимит4,
+	ВТСвойстваДоговора.ИспользоватьАванс КАК ИспользованиеАванса,
+	"" КАК ОбоснованиеЗапросаЛимита,
+	Договоры.Организация КАК Организация1
+{ВЫБРАТЬ
+	Организация.*,
+	Партнер.*,
+	КодКомпании,
+	КодПартнера,
+	НаименованиеПартнера,
+	ДоговорКонтрагента.*,
+	Сезон.*,
+	Лояльность.*,
+	СрокСотрудничества,
+	ЗапрашиваемыйЛокальныйЛимитНаСезон.*,
+	ОбщаяСуммаЗаказаЗаСезон,
+	KV,
+	ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон.*,
+	АвансНаСезон.*,
+	ЛокальныйЛимит1,
+	ЛокальныйЛимит2,
+	ЛокальныйЛимит3,
+	ЛокальныйЛимит4,
+	ИспользованиеАванса.*,
+	ОбоснованиеЗапросаЛимита}
+ИЗ
+	Договоры КАК Договоры
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваКонтрагента КАК ВТСвойстваКонтрагента
+		ПО Договоры.Партнер = ВТСвойстваКонтрагента.Партнер
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора3 КАК ВТСвойстваДоговора3
+		ПО Договоры.Договор = ВТСвойстваДоговора3.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ОбъемЗаказов КАК ОбъемЗаказов
+		ПО Договоры.Договор = ОбъемЗаказов.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора1 КАК ВТСвойстваДоговора1
+		ПО Договоры.Договор = ВТСвойстваДоговора1.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора4 КАК ВТСвойстваДоговора4
+		ПО Договоры.Договор = ВТСвойстваДоговора4.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора5 КАК ВТСвойстваДоговора5
+		ПО Договоры.Договор = ВТСвойстваДоговора5.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора2 КАК ВТСвойстваДоговора2
+		ПО Договоры.Договор = ВТСвойстваДоговора2.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ СвойстваДоговора КАК СвойстваДоговора
+		ПО Договоры.Договор = СвойстваДоговора.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора КАК ВТСвойстваДоговора
+		ПО Договоры.Договор = ВТСвойстваДоговора.Договор
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСвойстваДоговора6 КАК ВТСвойстваДоговора6
+		ПО Договоры.Договор = ВТСвойстваДоговора6.Договор
+{ГДЕ
+	Договоры.Партнер.*,
+	Договоры.Договор.*,
+	Договоры.Сезон.*,
+	Договоры.Организация.*}
+
+СГРУППИРОВАТЬ ПО
+	Договоры.Договор.Организация,
+	Договоры.Партнер.Код,
+	Договоры.Договор,
+	Договоры.Сезон,
+	ВТСвойстваКонтрагента.Лояльность,
+	ВТСвойстваДоговора2.СтраховойДепозит,
+	СвойстваДоговора.ЛокальныйЛимит1,
+	СвойстваДоговора.ЛокальныйЛимит2,
+	СвойстваДоговора.ЛокальныйЛимит3,
+	СвойстваДоговора.ЛокальныйЛимит4,
+	ВТСвойстваДоговора.ИспользоватьАванс,
+	ПОДСТРОКА(Договоры.Договор.Организация.Префикс, 1, 1),
+	РАЗНОСТЬДАТ(Договоры.Партнер.ДатаРегистрации, &amp;ТекущаяДата, ГОД),
+	ЕСТЬNULL(ВТСвойстваДоговора3.ЗапрашиваемыйЛокальныйЛимит, 0),
+	// СадомцевСА 18.102023 Исправил заполнение показателя KV (данные из РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних)
+	//..ЕСТЬNULL(ВТСвойстваДоговора1.КВ, 0),
+	СвойСтваДоговора.KV,
+	ЕСТЬNULL(ЕСТЬNULL(ВТСвойстваДоговора4.ЗапрашиваемоеКоличествоДнейОтсрочки, ВТСвойстваДоговора5.КоличествоДнейОтсрочкиПлатежа), 0),
+	Договоры.Партнер,
+	Договоры.Партнер.Наименование,
+	Договоры.Организация</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetObject">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаМин</dataPath>
+			<field>ОплатаМин</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Payments rate (min)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаСредневзвешенное</dataPath>
+			<field>ОплатаСредневзвешенное</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Payments rate (weighted average)</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<objectName>ТаблицаНабораДанных</objectName>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Партнер</sourceExpression>
+		<destinationExpression>Партнер</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ЗапрашиваемыйЛимитПроцент</dataPath>
+		<expression>ВЫБОР КОГДА ОбщаяСуммаЗаказаЗаСезон = 0 ТОГДА 0 ИНАЧЕ ЗапрашиваемыйЛокальныйЛимитНаСезон * 100 / ОбщаяСуммаЗаказаЗаСезон КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Запрашиваемый лимит процент</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПроцентKV</dataPath>
+		<expression>ВЫБОР КОГДА ОбщаяСуммаЗаказаЗаСезон = 0 ТОГДА 0 ИНАЧЕ KV * 100 / ОбщаяСуммаЗаказаЗаСезон КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент KV</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<parameter>
+		<name>Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Партнеры</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон3</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон3</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сезон4</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сезон4</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВидЛимитаЛокальный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид лимита локальный</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.гф_ВидыЛимитов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияОтгрузок</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания отгрузок</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияОтгрузок1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания отгрузок1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияОтгрузок2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания отгрузок2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияОтгрузок3</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания отгрузок3</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончанияОтгрузок4</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания отгрузок4</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТипыЛимитов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Типы лимитов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.гф_ТипыЛимитов</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.гф_ТипыЛимитов.KV</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.гф_ТипыЛимитов.ИзБюджета</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.гф_ТипыЛимитов.Локальный</value>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Перечисление.гф_ТипыЛимитов.Прочее</value>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодКомпании</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Партнер</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодПартнера</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбщаяСуммаЗаказаЗаСезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Лояльность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокСотрудничества</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗапрашиваемыйЛокальныйЛимитНаСезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗапрашиваемоеКоличествоДнейОтсрочкиЗаСезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплатаСредневзвешенное</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОплатаМин</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>KV</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АвансНаСезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИспользованиеАванса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛокальныйЛимит1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛокальныйЛимит2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛокальныйЛимит3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЛокальныйЛимит4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбоснованиеЗапросаЛимита</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>e0e147d8-f821-44dd-82a4-252f77098a86</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Контрагент</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>7a4680b6-123a-4b56-91bb-02579defcd5d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Сезон</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>ae7efeb5-4aa6-4482-a53c-f7a09b8b6b77</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидЛимитаЛокальный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>9e2c7da8-c77a-4d6f-ab48-0f7100ad6bb6</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипыЛимитов</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>ced1f741-a22e-4f05-9587-4f34c29a588b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НаименованиеПартнера</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

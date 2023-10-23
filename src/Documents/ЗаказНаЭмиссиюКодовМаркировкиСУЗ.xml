@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Document uuid="1562bd1f-fa87-4b39-934f-be82f38728f6">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.ЗаказНаЭмиссиюКодовМаркировкиСУЗ" category="Object">
+				<xr:TypeId>86e574f0-49dc-4ef6-9aff-7a903bef17b8</xr:TypeId>
+				<xr:ValueId>94453331-4d9b-4b96-8861-0d48fd87d183</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ" category="Ref">
+				<xr:TypeId>07375b96-fb75-4841-8a35-2756aa8d329e</xr:TypeId>
+				<xr:ValueId>fce17c91-674b-49b9-b7b0-2e0d40b1b6e4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.ЗаказНаЭмиссиюКодовМаркировкиСУЗ" category="Selection">
+				<xr:TypeId>8ba45dd1-4fa7-4e8e-9c51-75144a41ae0a</xr:TypeId>
+				<xr:ValueId>1e718347-d4c3-451a-9e94-e42fae2b7de7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.ЗаказНаЭмиссиюКодовМаркировкиСУЗ" category="List">
+				<xr:TypeId>4c6448f4-f04a-43c3-a0b2-5e7d30d0ee3d</xr:TypeId>
+				<xr:ValueId>e7c730a6-9d17-431e-9317-f9a735e937c2</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.ЗаказНаЭмиссиюКодовМаркировкиСУЗ" category="Manager">
+				<xr:TypeId>1ff4758c-b907-44bb-9a3e-766c3db915ca</xr:TypeId>
+				<xr:ValueId>d826338b-c498-40eb-8cd2-67faa7acd746</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ЗаказНаЭмиссиюКодовМаркировкиСУЗ</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>44c937c8-266d-4ead-ba9b-7edb337e173e</ExtendedConfigurationObject>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="a158c3b6-7e67-4656-bfc5-a7d043ad0d0e">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДокументОснование</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>6315aeae-ebcd-41bc-a2d8-8dfbd6f10faf</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОснованиеЗаказНаЭмиссиюКодовМаркировкиИСМП</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="fc553f46-4802-410d-a9de-6a67470f2836">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4d9830d6-8ddf-4354-89f8-654848b43c6e</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="84ab6082-9140-4380-bd30-0131a3bcfa58">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВидПродукции</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c8d3d70c-d5f4-4ad0-94be-17679b3fa7eb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыПродукцииИС</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="926dd2b9-ca43-4aa7-ad54-dd80029e6650">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>СпособВводаВОборот</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>3f788dca-cb95-4ce3-a6fb-fa6465dda2bd</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.СпособыВводаВОборотСУЗ</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="05afc46e-0bd3-45e1-87c7-91f62157f343">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>859ebec9-e738-4bf4-beb0-98848657f823</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ПользователиИС</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаДокумента</Form>
+			<Command uuid="a1d39edf-118d-4bec-8372-ecf9a5b5823e">
+				<Properties>
+					<Name>УдалитьОбменСНК</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обмен с НК</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>Auto</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="26405bfa-3231-4a27-ab9c-539d8ce952ac">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ОбменСНК</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>81419abb-24ad-4973-9289-d5dc91c4545e</ExtendedConfigurationObject>
+					<Group>FormCommandBarImportant</Group>
+				</Properties>
+			</Command>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

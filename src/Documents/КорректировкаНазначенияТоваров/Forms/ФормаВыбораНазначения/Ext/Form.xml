@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Header</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<CheckBoxField name="ТолькоЗаказыОрганизации" id="40">
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоЗаказыОрганизацииКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ТолькоЗаказыОрганизацииРасширеннаяПодсказка" id="42"/>
+				</CheckBoxField>
+				<CommandBar name="КоманднаяПанельСписка" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель списка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>List command bar</v8:content>
+						</v8:item>
+					</Title>
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="КоманднаяПанельСпискаРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<Button name="Выбрать" id="36">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="37"/>
+						</Button>
+						<Button name="ФормаНайти" id="43">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<Button name="ФормаОтменитьПоиск" id="45">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="46"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПользовательскихНастроек" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User settings group</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="49"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChoiceMode>true</ChoiceMode>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<HorizontalLocation>Left</HorizontalLocation>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Ссылка" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Assignment</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="НаправлениеДеятельности" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление деятельности</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Line of business</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="Партнер" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Partner</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПартнерКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Договор" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Contract</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="Заказ" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Order</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаказКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ЗаказРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="Организация" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Company</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="56">
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Comment</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes/>
+	<BaseForm version="2.15">
+		<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+		<AutoTitle>false</AutoTitle>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="Шапка" id="34">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Шапка</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Header</v8:content>
+					</v8:item>
+				</Title>
+				<Group>Vertical</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="35"/>
+				<ChildItems>
+					<CheckBoxField name="ТолькоЗаказыОрганизации" id="40">
+						<TitleLocation>Right</TitleLocation>
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="ТолькоЗаказыОрганизацииКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ТолькоЗаказыОрганизацииРасширеннаяПодсказка" id="42"/>
+					</CheckBoxField>
+					<CommandBar name="КоманднаяПанельСписка" id="32">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Командная панель списка</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>List command bar</v8:content>
+							</v8:item>
+						</Title>
+						<CommandSource>Form</CommandSource>
+						<ExtendedTooltip name="КоманднаяПанельСпискаРасширеннаяПодсказка" id="33"/>
+						<ChildItems>
+							<Button name="Выбрать" id="36">
+								<Type>CommandBarButton</Type>
+								<DefaultButton>true</DefaultButton>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="37"/>
+							</Button>
+							<Button name="ФормаНайти" id="43">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="44"/>
+							</Button>
+							<Button name="ФормаОтменитьПоиск" id="45">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="46"/>
+							</Button>
+						</ChildItems>
+					</CommandBar>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ГруппаПользовательскихНастроек" id="48">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа пользовательских настроек</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>User settings group</v8:content>
+					</v8:item>
+				</Title>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаПользовательскихНастроекРасширеннаяПодсказка" id="49"/>
+			</UsualGroup>
+			<Table name="Список" id="1">
+				<ChangeRowSet>false</ChangeRowSet>
+				<ChoiceMode>true</ChoiceMode>
+				<SelectionMode>SingleRow</SelectionMode>
+				<RowSelectionMode>Row</RowSelectionMode>
+				<UseAlternationRowColor>true</UseAlternationRowColor>
+				<EnableStartDrag>true</EnableStartDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Список</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>List</v8:content>
+					</v8:item>
+				</Title>
+				<AutoRefresh>false</AutoRefresh>
+				<AutoRefreshPeriod>60</AutoRefreshPeriod>
+				<Period>
+					<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+					<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+					<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+				</Period>
+				<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+				<RestoreCurrentRow>false</RestoreCurrentRow>
+				<TopLevelParent xsi:nil="true"/>
+				<ShowRoot>true</ShowRoot>
+				<AllowRootChoice>false</AllowRootChoice>
+				<UpdateOnDataChange>Auto</UpdateOnDataChange>
+				<UserSettingsGroup>ГруппаПользовательскихНастроек</UserSettingsGroup>
+				<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+				<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+				<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+					<Autofill>false</Autofill>
+				</AutoCommandBar>
+				<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+				<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<HorizontalLocation>Left</HorizontalLocation>
+					<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+					<AdditionSource>
+						<Item>Список</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="Ссылка" id="23">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Назначение</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Assignment</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="СсылкаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="25"/>
+					</LabelField>
+					<LabelField name="НаправлениеДеятельности" id="17">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Направление деятельности</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Line of business</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="НаправлениеДеятельностиКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="НаправлениеДеятельностиРасширеннаяПодсказка" id="19"/>
+					</LabelField>
+					<LabelField name="Партнер" id="50">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Партнер</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Partner</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ПартнерКонтекстноеМеню" id="51"/>
+						<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="52"/>
+					</LabelField>
+					<LabelField name="Договор" id="53">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Договор</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Contract</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ДоговорКонтекстноеМеню" id="54"/>
+						<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="55"/>
+					</LabelField>
+					<LabelField name="Заказ" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заказ</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Order</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ЗаказКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="ЗаказРасширеннаяПодсказка" id="16"/>
+					</LabelField>
+					<LabelField name="Организация" id="20">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Организация</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Company</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
+						<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="22"/>
+					</LabelField>
+					<LabelField name="Комментарий" id="56">
+						<UserVisible>
+							<xr:Common>false</xr:Common>
+						</UserVisible>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комментарий</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Comment</v8:content>
+							</v8:item>
+						</Title>
+						<ContextMenu name="КомментарийКонтекстноеМеню" id="57"/>
+						<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="58"/>
+					</LabelField>
+				</ChildItems>
+			</Table>
+		</ChildItems>
+		<Attributes/>
+	</BaseForm>
+</Form>

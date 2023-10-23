@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="4be77afa-7270-4cdd-b30c-a0d395e8fb41">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="Record">
+				<xr:TypeId>519f4a19-140b-4a70-bdfc-6f8949077f7c</xr:TypeId>
+				<xr:ValueId>2f623375-6bc7-4b23-accb-403fecacd37f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="Manager">
+				<xr:TypeId>78aa0a7e-0981-4743-9eee-dbdd9c2de41b</xr:TypeId>
+				<xr:ValueId>e44d34f6-40a0-41ab-a80d-8157edc78994</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="Selection">
+				<xr:TypeId>5220d701-4240-4522-b86d-06aa4ade7dde</xr:TypeId>
+				<xr:ValueId>37d61f8c-9dca-4870-bb18-579ee4ff6ff3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="List">
+				<xr:TypeId>c28e254b-88f4-4504-a8c9-a6340606441e</xr:TypeId>
+				<xr:ValueId>3c351b0e-d2f8-4d09-91b5-f788a7334107</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="RecordSet">
+				<xr:TypeId>1cc92e69-8bc7-4fe0-aa15-ee21038fd9d9</xr:TypeId>
+				<xr:ValueId>73006d3d-93cd-4445-964e-7dfbc0686341</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="RecordKey">
+				<xr:TypeId>1f776619-8037-4e61-b599-14513f40ba34</xr:TypeId>
+				<xr:ValueId>29ddcfd0-c2b6-4ce2-aeda-4d46382d4ef4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.B2B_РИ_ИдентификаторыНоменклатурыБитрикс" category="RecordManager">
+				<xr:TypeId>7e3a715f-b1c3-4072-9a6c-451e9eb8c3f5</xr:TypeId>
+				<xr:ValueId>db17d0b1-8fdb-4097-8198-c8d860059a25</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>B2B_РИ_ИдентификаторыНоменклатурыБитрикс</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>e094ea79-92cc-4412-a11c-0f84c66581a7</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="22bbc3e8-5c2d-4995-8229-6f95fba7ef2f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Идентификатор</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c1c2eae0-6572-4bde-854d-c2c8ff350c89</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="80704eed-f4ff-4f4e-91e5-cea6516d892d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>НомерВерсии</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>224c67ba-e05c-47d4-a99d-259eeb5751c7</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="0061a9d6-597f-4665-8b58-f693a26b2278">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Объект</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>09ff698e-ba1d-4a59-8248-15fa4e4bcb6a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

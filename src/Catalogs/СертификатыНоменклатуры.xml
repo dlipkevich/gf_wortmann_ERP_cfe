@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Catalog uuid="beff7796-8d83-4edf-acda-5fe2b529a98d">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.СертификатыНоменклатуры" category="Object">
+				<xr:TypeId>f2daec8f-c468-4d75-b4de-08d4c798b1dd</xr:TypeId>
+				<xr:ValueId>fe09a7aa-63e2-4043-a14a-ff52dc93f29d</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.СертификатыНоменклатуры" category="Ref">
+				<xr:TypeId>f19b8a41-cac8-4f4f-8a8a-319ec4b77442</xr:TypeId>
+				<xr:ValueId>c9f82783-eddb-4864-b11d-f0dac04b04c7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.СертификатыНоменклатуры" category="Selection">
+				<xr:TypeId>a5423222-a8f1-4884-877d-94c94c970bfd</xr:TypeId>
+				<xr:ValueId>6a840390-f10d-4f83-bafc-e9b6837b2236</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.СертификатыНоменклатуры" category="List">
+				<xr:TypeId>6bdb1954-b53e-4660-9988-edf979d2b32f</xr:TypeId>
+				<xr:ValueId>21b94bd6-0f31-44c5-94db-9daaf59f3faa</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.СертификатыНоменклатуры" category="Manager">
+				<xr:TypeId>591b7829-7b4a-477b-9972-c121ac43f6f7</xr:TypeId>
+				<xr:ValueId>b5a0e2fe-9188-45e4-b0bb-6d6f072cb405</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>СертификатыНоменклатуры</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>eaed2162-eaff-4060-b456-c99c51eac5c5</ExtendedConfigurationObject>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="40246a63-df80-456c-a647-46eaf83129d7">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ТипСертификата</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>0b6708af-636d-40f4-8370-4919f407a5da</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="adf468ee-0b98-4c09-afed-398273612c99">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДатаНачалаСрокаДействия</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e47ca63c-51c5-474d-866b-ac54955d7bd6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="4dc48015-a23b-4b06-946f-d6e3cfc7d593">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДатаОкончанияСрокаДействия</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>dbb90009-e0d1-4b1d-a6bc-9498500e4b46</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

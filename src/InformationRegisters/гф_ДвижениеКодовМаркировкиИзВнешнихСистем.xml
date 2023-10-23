@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="31677979-5166-4d88-8f40-878830144af6">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="Record">
+				<xr:TypeId>5b8efa0a-4072-4242-9464-2a7635c56a5a</xr:TypeId>
+				<xr:ValueId>19edf889-d9ac-49c1-ad9d-267346db04be</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="Manager">
+				<xr:TypeId>cfeb6640-725b-4ad2-b52c-0e3a073f9f75</xr:TypeId>
+				<xr:ValueId>d5d8d84d-4276-45e9-938c-f00e0deb559c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="Selection">
+				<xr:TypeId>1f3f4234-90aa-46a3-9314-047ce077385a</xr:TypeId>
+				<xr:ValueId>5c216866-4b9e-4af0-b06a-acc83cb6b0ad</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="List">
+				<xr:TypeId>f43aea23-7195-4e7e-8dd1-a6e9cd34b2ad</xr:TypeId>
+				<xr:ValueId>7e4ec60e-02b1-4239-8f26-4d1b85b445a3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="RecordSet">
+				<xr:TypeId>0c2bf2c2-d025-43b4-8f2f-39eb74855669</xr:TypeId>
+				<xr:ValueId>55f48b8c-af2a-4944-9823-177004b97dbc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="RecordKey">
+				<xr:TypeId>057a8688-ce93-4f73-ae1a-b97f28965dde</xr:TypeId>
+				<xr:ValueId>d30c4fad-737a-4468-947b-f4713175b161</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_ДвижениеКодовМаркировкиИзВнешнихСистем" category="RecordManager">
+				<xr:TypeId>8ffd8400-bd5b-4db6-9dcb-e8daaf679a5b</xr:TypeId>
+				<xr:ValueId>dfbac5c2-4569-4d34-8cb4-e62da47b9933</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_ДвижениеКодовМаркировкиИзВнешнихСистем</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>87caa926-603c-480a-8e8b-66d652a76333</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="b6d59277-29bf-483e-a6b4-5fdc8aac4f1f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>GTIN</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>cd3d4b18-b499-4f05-bfff-c9883d0e6f8a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="fce2215d-ff20-4ac2-9ca3-eac1245bdeac">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>КодМаркировкиСтрока</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>7179411c-a058-45f4-9f7d-be5b5a05a7fa</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="3fe1a952-3c43-411b-88af-3d06cd8bad39">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>95e14d76-1f9c-4a25-892e-a9744facbb66</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Dimension uuid="aa18781b-7328-45b3-bef0-1935adb5489a">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДатаОперации</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c199a734-bf07-4389-9a36-415c7e90aced</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="15a52c08-434c-4802-aee3-2a4da8229ed0">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДатаЗаказа</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>23ed2b3f-fd01-4523-bee0-66cd11731a37</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c76f2293-13df-4b97-97b1-6bda32b346d3">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>НомерЗаказа</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ce10e7ff-8d2b-478a-90a1-ddc55e84589b</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="e0df5265-67ca-43d2-8f32-c37dbb4fb4c5">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>67b98883-0f94-4a11-87dc-b6be853c4d29</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="cabe53cb-feee-474c-87d1-52d42f6c0258">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВнешняяСистема</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f7aa8234-32b8-47e9-8d4a-27da425be7a5</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.гф_ВнешниеСистемы</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c1d49d17-5e76-4980-96de-d2c3dc0ff34c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ШтрихкодУпаковки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f08d1056-b7e4-43b3-9e3e-d01f6511c47e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="10d739be-3606-45e5-91aa-704ad36a572c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Номенклатура</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ec7614bf-3031-4820-b46d-4e8690bc3d2f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="de1f2065-4846-4029-9584-031f329bc8bb">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Характеристика</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>dab19728-f2cc-4149-b227-e73394ee8105</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="59649e38-7d45-4271-b3a3-1ddfc0a47443">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Цена</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a3b25156-6162-494e-929a-78010814b9bb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="04ed6519-d45a-4762-ba5e-edface2ec46e">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Операция</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>5ee61c9b-81e2-48e3-a3e0-6158020f2e04</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыОперацийИСМП</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="97909b09-8a9d-4660-aa27-7b2b8ea23d9d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДокументОперацииКМ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a83e7fb5-9185-4d02-a496-4521fb4dc7af</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

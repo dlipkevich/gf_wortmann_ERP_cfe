@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>гф_СостояниеВыгрузкиНоменклатуры</dataPath>
+			<field>гф_СостояниеВыгрузкиНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрихкод</dataPath>
+			<field>Штрихкод</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+		Номенклатура.Ссылка КАК Номенклатура
+ПОМЕСТИТЬ ВТ_НоменклатураСАрт
+ИЗ
+	Справочник.Номенклатура КАК Номенклатура
+ГДЕ
+	 &amp;ОтборПоСпискуАртикул
+	И Номенклатура.Артикул В (&amp;Список)
+	
+;
+////////////////////////////////////////////////////////////////////////////////
+
+ВЫБРАТЬ
+	ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	ПриобретениеТоваровУслугТовары.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_ТоварыИзПоступлений
+ИЗ
+	Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+ГДЕ
+	&amp;ЕстьОтборПоСпискуПоступлений
+	И ПриобретениеТоваровУслугТовары.Ссылка В(&amp;СписокПоступлений) 
+	И ВЫБОР
+			КОГДА &amp;ОтборПоСпискуАртикул
+				ТОГДА (ПриобретениеТоваровУслугТовары.Номенклатура) В
+						(ВЫБРАТЬ
+							Таб.Номенклатура
+						ИЗ
+							ВТ_НоменклатураСАрт КАК Таб)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	ПриобретениеТоваровУслугТовары.Номенклатура,
+	ПриобретениеТоваровУслугТовары.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+
+ВЫБРАТЬ
+	КомплектующиеНоменклатуры.Номенклатура КАК Комплектующая,
+	КомплектующиеНоменклатуры.Характеристика КАК КомплектующаяХарактеристика
+ПОМЕСТИТЬ ВТ_Комплектующие
+ИЗ
+	Справочник.ВариантыКомплектацииНоменклатуры.Товары КАК КомплектующиеНоменклатуры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ТоварыИзПоступлений КАК ВТ_ТоварыИзПоступлений
+		ПО КомплектующиеНоменклатуры.Ссылка.НоменклатураОсновногоКомпонента = ВТ_ТоварыИзПоступлений.Номенклатура
+			И КомплектующиеНоменклатуры.Ссылка.ХарактеристикаОсновногоКомпонента = ВТ_ТоварыИзПоступлений.Характеристика
+
+СГРУППИРОВАТЬ ПО
+	КомплектующиеНоменклатуры.Номенклатура,
+	КомплектующиеНоменклатуры.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Т.Номенклатура КАК Номенклатура,
+	Т.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_Объединение
+ИЗ
+	(ВЫБРАТЬ
+		ВТ_ТоварыИзПоступлений.Номенклатура КАК Номенклатура,
+		ВТ_ТоварыИзПоступлений.Характеристика КАК Характеристика
+	ИЗ
+		ВТ_ТоварыИзПоступлений КАК ВТ_ТоварыИзПоступлений
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ВТ_Комплектующие.Комплектующая,
+		ВТ_Комплектующие.КомплектующаяХарактеристика
+	ИЗ
+		ВТ_Комплектующие КАК ВТ_Комплектующие) КАК Т
+
+СГРУППИРОВАТЬ ПО
+	Т.Номенклатура,
+	Т.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	а.Штрихкод КАК Штрихкод,
+	а.Номенклатура КАК Номенклатура,
+	а.Характеристика КАК Характеристика,
+	а.гф_СостояниеВыгрузкиНоменклатуры
+{ВЫБРАТЬ
+	Штрихкод,
+	Номенклатура.*,
+	Характеристика.*,
+	гф_СостояниеВыгрузкиНоменклатуры}
+ИЗ
+	РегистрСведений.ШтрихкодыНоменклатуры КАК а
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ЕстьОтборПоСпискуПоступлений
+				ТОГДА (а.Номенклатура, а.Характеристика) В
+						(ВЫБРАТЬ
+							Таб.Номенклатура,
+							Таб.Характеристика
+						ИЗ
+							ВТ_Объединение КАК Таб)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+		И ВЫБОР
+			КОГДА &amp;ОтборПоСпискуАртикул
+				ТОГДА (а.Номенклатура) В
+						(ВЫБРАТЬ
+							Таб.Номенклатура
+						ИЗ
+							ВТ_НоменклатураСАрт КАК Таб)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+        И ВЫБОР
+			КОГДА &amp;ОтборПоСпискуGTIN
+				ТОГДА (а.Штрихкод) В (&amp;Список)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+	И НЕ а.гф_СостояниеВыгрузкиНоменклатуры = ЗНАЧЕНИЕ(Перечисление.гф_СтатусыGTIN_В_НК.НеПубликуется)
+{ГДЕ
+	а.Штрихкод,
+	а.Номенклатура.* КАК Номенклатура,
+	а.Характеристика.* КАК Характеристика,
+	гф_СостояниеВыгрузкиНоменклатуры}
+{ХАРАКТЕРИСТИКИ
+	ТИП(Справочник.Номенклатура)
+	ВИДЫХАРАКТЕРИСТИК (ВЫБРАТЬ
+			СвойстваОбъектов.Ссылка КАК Ссылка,
+			СвойстваОбъектов.Наименование + " (свойство)" КАК Наименование,
+			СвойстваОбъектов.ТипЗначения КАК ТипЗначения
+		ИЗ
+			ПланВидовХарактеристик.ДополнительныеРеквизитыИСведения КАК СвойстваОбъектов
+		ГДЕ
+			НЕ СвойстваОбъектов.ПометкаУдаления)
+	ПОЛЕКЛЮЧА Ссылка
+	ПОЛЕИМЕНИ Наименование
+	ПОЛЕТИПАЗНАЧЕНИЯ ТипЗначения
+	ЗНАЧЕНИЯХАРАКТЕРИСТИК РегистрСведений.ДополнительныеСведения
+	ПОЛЕОБЪЕКТА Объект
+	ПОЛЕВИДА Свойство
+	ПОЛЕЗНАЧЕНИЯ Значение }</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<parameter>
+		<name>ЕстьОтборПоСпискуПоступлений</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Есть отбор по списку поступлений</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>СписокПоступлений</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список поступлений</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Отчет «1С - Национальный каталог»</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет «1С - Национальный каталог»</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Штрихкод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Код</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Артикул</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.[Supplier_season (свойство)]</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.НаименованиеПолное</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование полное</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>гф_СостояниеВыгрузкиНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.КодТНВЭД.Код</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТНВЭД</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.[Material surface (свойство)]</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.[Material bottom (свойство)]</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.[Material lining (свойство)]</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>3cbb812d-c187-49fe-a7d1-36f087619f27</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Характеристика</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>d0e3dea4-fbe3-4a4a-baa9-0dbe8233110a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВидыНоменклатуры.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">гф_СостояниеВыгрузкиНоменклатуры</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.гф_СтатусыGTIN_В_НК.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.[Supplier_season (свойство)]</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ПометкаУдаления</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЕстьОтборПоСпискуПоступлений</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:userSettingID>ccac34cb-b870-4a57-a832-d10594982a58</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть отбор по списку поступлений</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СписокПоступлений</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>4055372d-c64f-4e4b-9922-f5fafe2728a8</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовБежевый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Сравнение состояния товара1 с НК</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:additionalProperties>
+				<v8:Property name="КлючВарианта">
+					<v8:Value xsi:type="xs:string">Основной</v8:Value>
+				</v8:Property>
+				<v8:Property name="ВариантНаименование">
+					<v8:Value xsi:type="xs:string">Основной</v8:Value>
+				</v8:Property>
+				<v8:Property name="КлючПредопределенногоВарианта">
+					<v8:Value xsi:type="xs:string"/>
+				</v8:Property>
+				<v8:Property name="КонтекстВарианта">
+					<v8:Value xsi:type="xs:string"/>
+				</v8:Property>
+				<v8:Property name="ФормаПараметрыОтбор">
+					<v8:Value xsi:type="v8:Structure"/>
+				</v8:Property>
+				<v8:Property name="СтандартныеСвойстваПредопределенныхПараметровВывода">
+					<v8:Value xsi:type="v8:Array">
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLE</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">false</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="xs:string">Сравнение состояния товара1 с НК</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLEOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">DATAPARAMETERSOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">FILTEROUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+					</v8:Value>
+				</v8:Property>
+				<v8:Property name="ПараметрыПодбора">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+				<v8:Property name="РасширенноеОписаниеТипов">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+			</dcsset:additionalProperties>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Основной</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерийныйНомер</dataPath>
+			<field>СерийныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серийный номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковочныйЛист</dataPath>
+			<field>УпаковочныйЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковочный лист</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаИзЗаказа</dataPath>
+			<field>ЦенаИзЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена из заказа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Коэффициент</dataPath>
+			<field>Коэффициент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество пар</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПТУ</dataPath>
+			<field>ПТУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПТУ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодТНВЭД</dataPath>
+			<field>КодТНВЭД</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДоставки</dataPath>
+			<field>АдресДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерАдреса</dataPath>
+			<field>НомерАдреса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодКонтрагента</dataPath>
+			<field>КодКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СертификатНоменклатуры</dataPath>
+			<field>СертификатНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат соответствия</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	УпаковочныйЛист.гф_Заказ КАК Заказ,
+	УпаковочныйЛист.гф_Поставка КАК ПТУ,
+	УпаковочныйЛист.Ссылка КАК УпаковочныйЛист,
+	УпаковочныйЛист.гф_Комплектация КАК ВариантКомплектации
+ПОМЕСТИТЬ ВТ_Документы
+ИЗ
+	Документ.УпаковочныйЛист КАК УпаковочныйЛист
+ГДЕ
+	УпаковочныйЛист.гф_Поставка = &amp;ДокументПоступления
+
+СГРУППИРОВАТЬ ПО
+	УпаковочныйЛист.гф_Заказ,
+	УпаковочныйЛист.гф_Поставка,
+	УпаковочныйЛист.Ссылка,
+	УпаковочныйЛист.гф_Комплектация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	МАКСИМУМ(ПриобретениеТоваровУслугТовары.Цена) КАК Цена
+ПОМЕСТИТЬ ВТ_Цены
+ИЗ
+	ВТ_Документы КАК ВТ_Документы
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+		ПО ВТ_Документы.ПТУ = ПриобретениеТоваровУслугТовары.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ПриобретениеТоваровУслугТовары.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_Документы.УпаковочныйЛист КАК УпаковочныйЛист,
+	МАКСИМУМ(ЗаказКлиентагф_ТоварыВКоробах.ЦенаКороба) КАК ЦенаКороба
+ПОМЕСТИТЬ ВТ_ЦеныЗаказа
+ИЗ
+	ВТ_Документы КАК ВТ_Документы
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента.гф_ТоварыВКоробах КАК ЗаказКлиентагф_ТоварыВКоробах
+		ПО ВТ_Документы.Заказ = ЗаказКлиентагф_ТоварыВКоробах.Ссылка
+			И ВТ_Документы.ВариантКомплектации = ЗаказКлиентагф_ТоварыВКоробах.ВариантКомплектации
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Документы.УпаковочныйЛист
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Документы.ПТУ КАК ПТУ,
+	ВТ_Документы.УпаковочныйЛист КАК УпаковочныйЛист,
+	ВТ_Документы.Заказ КАК Заказ,
+	УпаковочныйЛистТовары.Номенклатура КАК Номенклатура,
+	СУММА(ЕСТЬNULL(УпаковочныйЛистТовары.Количество, 0)) КАК Количество,
+	МАКСИМУМ(ЕСТЬNULL(ВТ_Цены.Цена, 0)) КАК Цена,
+	НоменклатураСправочник.КодТНВЭД КАК КодТНВЭД
+ПОМЕСТИТЬ ВТ_Номенклатура
+ИЗ
+	ВТ_Документы КАК ВТ_Документы
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.УпаковочныйЛист КАК УпаковочныйЛистШапка
+		ПО ВТ_Документы.УпаковочныйЛист = УпаковочныйЛистШапка.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.УпаковочныйЛист.Товары КАК УпаковочныйЛистТовары
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Цены КАК ВТ_Цены
+			ПО УпаковочныйЛистТовары.Номенклатура = ВТ_Цены.Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Номенклатура КАК НоменклатураСправочник
+			ПО УпаковочныйЛистТовары.Номенклатура = НоменклатураСправочник.Ссылка
+		ПО ВТ_Документы.УпаковочныйЛист = УпаковочныйЛистТовары.Ссылка
+ГДЕ
+	НЕ УпаковочныйЛистТовары.ЭтоУпаковочныйЛист
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Документы.ПТУ,
+	ВТ_Документы.УпаковочныйЛист,
+	ВТ_Документы.Заказ,
+	УпаковочныйЛистТовары.Номенклатура,
+	ВТ_Цены.Цена,
+	НоменклатураСправочник.КодТНВЭД
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Подзапрос.Номенклатура КАК Номенклатура,
+	МАКСИМУМ(ОбластиДействияСертификатовНоменклатуры.СертификатНоменклатуры) КАК СертификатНоменклатуры
+ПОМЕСТИТЬ ВТ_СертификатыСоответствия
+ИЗ
+	(ВЫБРАТЬ
+		ПриобретениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+		МАКСИМУМ(ПриобретениеТоваровУслуг.Дата) КАК Дата
+	ИЗ
+		Документ.ПриобретениеТоваровУслуг.Товары КАК ПриобретениеТоваровУслугТовары
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг КАК ПриобретениеТоваровУслуг
+			ПО ПриобретениеТоваровУслугТовары.Ссылка = ПриобретениеТоваровУслуг.Ссылка
+	ГДЕ
+		ПриобретениеТоваровУслугТовары.Ссылка = &amp;ДокументПоступления
+	
+	СГРУППИРОВАТЬ ПО
+		ПриобретениеТоваровУслугТовары.Номенклатура) КАК Подзапрос
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОбластиДействияСертификатовНоменклатуры КАК ОбластиДействияСертификатовНоменклатуры
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СертификатыНоменклатуры КАК СертификатыНоменклатуры
+			ПО ОбластиДействияСертификатовНоменклатуры.СертификатНоменклатуры = СертификатыНоменклатуры.Ссылка
+		ПО Подзапрос.Номенклатура = ОбластиДействияСертификатовНоменклатуры.Номенклатура
+ГДЕ
+	СертификатыНоменклатуры.ТипСертификата = "Декларация о соответствии"
+	И СертификатыНоменклатуры.ДатаНачалаСрокаДействия &lt;= Подзапрос.Дата
+	И (СертификатыНоменклатуры.ДатаОкончанияСрокаДействия &gt;= Подзапрос.Дата
+			ИЛИ СертификатыНоменклатуры.ДатаОкончанияСрокаДействия = ДАТАВРЕМЯ(1, 1, 1))
+
+СГРУППИРОВАТЬ ПО
+	Подзапрос.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Номенклатура.Заказ КАК Заказ,
+	ПриобретениеТоваровУслугШапка.Номер КАК Номер,
+	ВТ_Номенклатура.УпаковочныйЛист КАК УпаковочныйЛист,
+	УпаковочныйЛистШапка.гф_Комплектация КАК Артикул,
+	ВТ_Номенклатура.Номенклатура КАК Номенклатура,
+	УпаковочныйЛистШапка.Код КАК СерийныйНомер,
+	1 КАК Количество,
+	ВТ_Номенклатура.Количество КАК Коэффициент,
+	ВТ_Номенклатура.Цена КАК Цена,
+	ВТ_Номенклатура.ПТУ КАК ПТУ,
+	ПриобретениеТоваровУслугШапка.Контрагент КАК Контрагент,
+	ВТ_Номенклатура.КодТНВЭД КАК КодТНВЭД,
+	ЗаказКлиентаШапка.АдресДоставки КАК АдресДоставки,
+	гф_АдресаДоставки.НомерАдреса КАК НомерАдреса,
+	ПриобретениеТоваровУслугШапка.Партнер КАК Партнер,
+	Партнеры.Код КАК КодКонтрагента,
+	
+	ВЫБОР
+		КОГДА ВТ_СертификатыСоответствия.СертификатНоменклатуры Есть NULL
+				ИЛИ ВТ_СертификатыСоответствия.СертификатНоменклатуры = НЕОПРЕДЕЛЕНО
+				ИЛИ ВТ_СертификатыСоответствия.СертификатНоменклатуры = ЗНАЧЕНИЕ(Справочник.СертификатыНоменклатуры.ПустаяСсылка)
+			ТОГДА ДопСведенения.Значение
+		ИНАЧЕ ВТ_СертификатыСоответствия.СертификатНоменклатуры
+	КОНЕЦ КАК СертификатНоменклатуры,
+
+	
+	ВТ_ЦеныЗаказа.ЦенаКороба КАК ЦенаИзЗаказа
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПриобретениеТоваровУслуг КАК ПриобретениеТоваровУслугШапка
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Партнеры КАК Партнеры
+			ПО ПриобретениеТоваровУслугШапка.Партнер = Партнеры.Ссылка
+		ПО ВТ_Номенклатура.ПТУ = ПриобретениеТоваровУслугШапка.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.УпаковочныйЛист КАК УпаковочныйЛистШапка
+			ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЦеныЗаказа КАК ВТ_ЦеныЗаказа
+			ПО УпаковочныйЛистШапка.Ссылка = ВТ_ЦеныЗаказа.УпаковочныйЛист
+		ПО ВТ_Номенклатура.УпаковочныйЛист = УпаковочныйЛистШапка.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказКлиентаШапка
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.гф_АдресаДоставки КАК гф_АдресаДоставки
+			ПО ЗаказКлиентаШапка.АдресДоставки = гф_АдресаДоставки.Адрес
+		ПО ВТ_Номенклатура.Заказ = ЗаказКлиентаШапка.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_СертификатыСоответствия КАК ВТ_СертификатыСоответствия
+		ПО ВТ_Номенклатура.Номенклатура = ВТ_СертификатыСоответствия.Номенклатура	
+		
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДополнительныеСведения КАК ДопСведенения
+		ПО ВТ_Номенклатура.Номенклатура = ДопСведенения.Объект
+		И ДопСведенения.Свойство = &amp;Свойство</query>
+	</dataSet>
+	<parameter>
+		<name>ДокументПоступления</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ поступления</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПриобретениеТоваровУслуг</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Документ.ПриобретениеТоваровУслуг.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Свойство</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Свойство</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по поставкам товара</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДокументПоступления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">e6c088bc-1194-11ed-811c-ac1f6b69aedf</dcscor:value>
+					<dcsset:userSettingID>54947b93-7750-4d14-9901-8ba35d051d9a</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ поступления</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Номер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УпаковочныйЛист</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Артикул</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СерийныйНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодТНВЭД</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СертификатНоменклатуры</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Коэффициент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Партнер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодКонтрагента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НомерАдреса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Заказ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Цена</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаИзЗаказа</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
