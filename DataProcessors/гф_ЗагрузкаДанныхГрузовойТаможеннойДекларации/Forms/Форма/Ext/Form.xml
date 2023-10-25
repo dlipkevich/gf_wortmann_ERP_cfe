@@ -533,6 +533,29 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="Протокол" id="249">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Протокол</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПротоколРасширеннаяПодсказка" id="250"/>
+					<ChildItems>
+						<TextDocumentField name="Протокол1" id="251">
+							<DataPath>Объект.Протокол</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="Протокол1КонтекстноеМеню" id="252"/>
+							<ExtendedTooltip name="Протокол1РасширеннаяПодсказка" id="253"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<UsualGroup name="ГруппаКнопок" id="129">
@@ -548,29 +571,53 @@
 					<v8:content>Группа кнопок</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Horizontal</Group>
+			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="130"/>
 			<ChildItems>
-				<Button name="ФормаСоздатьДокументы" id="22">
-					<Type>UsualButton</Type>
-					<Enabled>false</Enabled>
-					<CommandName>Form.Command.кСоздатьДокументы</CommandName>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Создать документ</v8:content>
-						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ФормаСоздатьДокументыРасширеннаяПодсказка" id="23"/>
-				</Button>
-				<Button name="Закрыть" id="127">
-					<Type>UsualButton</Type>
-					<CommandName>Form.StandardCommand.Close</CommandName>
-					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="128"/>
-				</Button>
+				<UsualGroup name="Группа5" id="245">
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="246"/>
+					<ChildItems>
+						<CheckBoxField name="ПроверятьКМ" id="242">
+							<DataPath>Объект.ПроверятьКМ</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Switcher</CheckBoxType>
+							<ContextMenu name="ПроверятьКМКонтекстноеМеню" id="243"/>
+							<ExtendedTooltip name="ПроверятьКМРасширеннаяПодсказка" id="244"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа6" id="247">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="248"/>
+					<ChildItems>
+						<Button name="ФормаСоздатьДокументы" id="22">
+							<Type>UsualButton</Type>
+							<Enabled>false</Enabled>
+							<CommandName>Form.Command.кСоздатьДокументы</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать документ</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаСоздатьДокументыРасширеннаяПодсказка" id="23"/>
+						</Button>
+						<Button name="Закрыть" id="127">
+							<Type>UsualButton</Type>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="128"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
