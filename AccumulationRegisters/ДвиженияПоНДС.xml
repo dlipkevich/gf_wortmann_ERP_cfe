@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AccumulationRegister uuid="28a9f3f8-3cb6-4ed7-98aa-124403a85a4b">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.ДвиженияПоНДС" category="Record">
+				<xr:TypeId>fdab4abf-c32d-4749-b8ae-800ca463c2b6</xr:TypeId>
+				<xr:ValueId>1ce25ca7-4c62-4c06-a12f-e0a1474af7e8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.ДвиженияПоНДС" category="Manager">
+				<xr:TypeId>a5eca3d2-1e34-4f9a-90e9-907bd9635aba</xr:TypeId>
+				<xr:ValueId>3b027e0f-ac56-4b24-9b91-a625aa968024</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.ДвиженияПоНДС" category="Selection">
+				<xr:TypeId>91f83915-87d5-4313-87ae-66464c98e0f0</xr:TypeId>
+				<xr:ValueId>539b81be-ebf5-43ee-a83d-8d0f0d9c9294</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.ДвиженияПоНДС" category="List">
+				<xr:TypeId>a48d6725-c4c1-48c0-b71d-e1e5c80ee6a2</xr:TypeId>
+				<xr:ValueId>c7abb1e3-60e7-40cf-ac19-b85ea4a0f330</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.ДвиженияПоНДС" category="RecordSet">
+				<xr:TypeId>5bbe6bf4-696a-42ad-a464-331d50c6dc2c</xr:TypeId>
+				<xr:ValueId>a38178b6-f2f7-4de0-bfeb-bdbba19b6376</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.ДвиженияПоНДС" category="RecordKey">
+				<xr:TypeId>1f51c986-ac91-4fde-a3af-af1c96f597cb</xr:TypeId>
+				<xr:ValueId>09545a16-ccb4-46bb-929b-5e4ad5fb6963</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>ДвиженияПоНДС</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>0004654c-f91f-463d-a529-e23bb363ed21</ExtendedConfigurationObject>
+			<RegisterType>Turnovers</RegisterType>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="a5b55cbc-6625-4f17-90fa-33f5662b5b5b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>НДС</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8c7b5694-47ac-4867-94dc-be0498348f51</ExtendedConfigurationObject>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаЛюбогоЗнака</v8:TypeSet>
+					</Type>
+				</Properties>
+			</Resource>
+			<Attribute uuid="85d211cf-1209-4c40-b3d5-56415fa8fc99">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ИдентификаторФинЗаписи</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>7a265ee1-b0ff-446f-a1b5-2be8c1e19024</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</AccumulationRegister>
+</MetaDataObject>
