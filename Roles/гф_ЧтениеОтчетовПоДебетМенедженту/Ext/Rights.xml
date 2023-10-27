@@ -78,6 +78,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.ОсобыеУсловияПеревозкиОписание</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.TabularSection.гф_ТоварыВКоробах</name>
 		<right>
 			<name>View</name>
@@ -138,6 +145,62 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаявкаНаВозвратТоваровОтКлиента","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ЕженедельныйОтчетПоКоличествуЗаказов</name>
 		<right>
 			<name>Use</name>
@@ -156,7 +219,81 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.гф_ВедомостьПоКоробам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_ВидыБлокировок.TabularSection.БлокируемыТипыЛимитов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.Dimension.Склад</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаказДавальца2_5","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца2_5.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -212,7 +349,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Сборщик</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Сумма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ОсобыеУсловияПеревозки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -227,6 +378,52 @@
 	</object>
 	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Command.гф_Блокировки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.StandardAttribute.Period</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -350,6 +547,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Автор</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЭлектронноеПисьмоИсходящее.TabularSection.ПолучателиПисьма</name>
 		<right>
 			<name>View</name>
@@ -392,7 +596,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.RC_ИмяЗаказа</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.B2B_Сезон</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.НаправлениеДеятельности</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -407,6 +632,76 @@
 	</object>
 	<object>
 		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаОкончанияРедактированияСкидок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаказДавальца","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказДавальца.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента.TabularSection.ВозвращаемыеТовары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.гф_В2ВСтатус</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -640,11 +935,85 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Валюта</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ОтчетПоИсключениям</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.ОтчетПродажиВнешний</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаказПереработчику2_5","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику2_5.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -679,6 +1048,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УпаковочныйЛист.Attribute.Код</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ОтчетПоПлатежнойИстории</name>
 		<right>
 			<name>Use</name>
@@ -691,6 +1067,20 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ЛимитыКонтрагентов.Dimension.ВидЛимита</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Подразделение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.АдресДоставкиПеревозчика</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -716,6 +1106,13 @@
 	</object>
 	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДополнительнаяИнформация</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -790,6 +1187,13 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ВидыЛимитов.Attribute.Бюджет</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.Resource.Количество</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -874,6 +1278,52 @@
 	</object>
 	<object>
 		<name>Catalog.ДоговорыКонтрагентов.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.КартаЛояльности</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета.StandardAttribute.Period</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1092,6 +1542,34 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаказКлиента","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
@@ -1198,6 +1676,13 @@
 	</object>
 	<object>
 		<name>Catalog.Контрагенты.Attribute.гф_Логистика</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_Заказ</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1314,7 +1799,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.СрокВозвратаМногооборотнойТары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>AccumulationRegister.гф_ДвиженияБюджетов.Dimension.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.Attribute.ИдентификаторФинЗаписи</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ГруппаФинансовогоУчета</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1339,6 +1845,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_Поставка</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_СтатусыЛимитов.Attribute.Активный</name>
 		<right>
 			<name>View</name>
@@ -1347,6 +1860,59 @@
 	</object>
 	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Менеджер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.StandardAttribute.RecordType</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.StandardAttribute.Active</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.StandardAttribute.LineNumber</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.StandardAttribute.Recorder</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.StandardAttribute.Period</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1466,6 +2032,27 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_Комплектация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.Attribute.СкладУпаковки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ЦенаВключаетНДС</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ПроцентыПредоплаты</name>
 		<right>
 			<name>Read</name>
@@ -1519,6 +2106,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.КонтактноеЛицо</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Configuration.гф_ОсновныеДоработки</name>
 		<right>
 			<name>MainWindowModeNormal</name>
@@ -1542,6 +2136,20 @@
 		</right>
 		<right>
 			<name>AnalyticsSystemClient</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДатаПоДаннымКлиента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.ДвиженияПоНДС.Resource.НДС</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1712,6 +2320,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.TabularSection.ДополнительныеРеквизиты</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ПереводЗначенийРеквизитовИСвойств</name>
 		<right>
 			<name>Read</name>
@@ -1745,6 +2360,69 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ПереводЗначенийРеквизитовИСвойств.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ЗонаДоставки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.УпаковочныйЛист","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1846,7 +2524,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.гф_ДатаОбновленияИзИ5</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Сделка</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЭлектронноеПисьмоИсходящее.TabularSection.гф_ПрикрепленныеДокументы</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_Агрегация</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1878,11 +2577,32 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_ДатаАгрегации</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.РасчетСтраховыхЛимитов</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.гф_АдресДоставки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДополнительнаяИнформацияПоДоставке</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1939,6 +2659,76 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказПереработчику</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ЗаказПереработчику","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказПереработчику.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.гф_ВидЦены</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ВернутьМногооборотнуюТару</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.TabularSection.гф_АдресаДоставки</name>
 		<right>
 			<name>View</name>
@@ -1954,6 +2744,13 @@
 	</object>
 	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Период</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ХозяйственнаяОперация</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2002,7 +2799,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.АдресДоставки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.Согласовано</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ТребуетсяЗалогЗаТару</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.TabularSection.Товары</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2037,6 +2855,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДатаСогласования</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_АнализКредитногоЛимита</name>
 		<right>
 			<name>Use</name>
@@ -2049,6 +2874,31 @@
 	</object>
 	<object>
 		<name>Catalog.КоллекцииНоменклатуры.Attribute.гф_ДатаНачалаФормированияЗаказов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Report.гф_ОбщийОтчетПоКлиенту</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.Соглашение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УпаковочныйЛист.Attribute.гф_СостояниеКороба</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2123,6 +2973,13 @@
 	</object>
 	<object>
 		<name>Catalog.КоллекцииНоменклатуры.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ВремяДоставкиС</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2295,6 +3152,27 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Курьер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.СпособДоставки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.НомерПоДаннымКлиента</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ПричиныБлокировок.Resource.Заблокирован</name>
 		<right>
 			<name>View</name>
@@ -2330,7 +3208,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.НеОтгружатьЧастями</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.Attribute.РегистрационныйНомер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ДатаОтгрузки</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2369,6 +3261,20 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.НалогообложениеНДС</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ПеревозчикПартнер</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЭлектронноеПисьмоИсходящее.Attribute.Тема</name>
 		<right>
 			<name>View</name>
@@ -2383,7 +3289,28 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаказКлиента.Attribute.Приоритет</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ЗаказКлиента.Attribute.ВремяДоставкиПо</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.ДокументОснование</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.гф_ДвижениеКодовМаркировкиОрганизации.Dimension.КМ</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
