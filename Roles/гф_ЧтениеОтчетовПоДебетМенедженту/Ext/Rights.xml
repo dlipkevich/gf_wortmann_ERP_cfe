@@ -219,6 +219,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.ВыходныеИзделия</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ВедомостьПоКоробам</name>
 		<right>
 			<name>Use</name>
@@ -328,6 +335,115 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПриходныйОрдерНаТовары.Attribute.Отправитель</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ПриобретениеТоваровУслуг","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.Attribute.КодПоОКПО</name>
 		<right>
 			<name>View</name>
@@ -384,7 +500,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Подразделение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Ответственный</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -568,7 +698,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходныйОрдерНаТовары.TabularSection.ОтгружаемыеТовары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.гф_Бюджеты.Attribute.Комментарий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ВидЦены</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -935,6 +1079,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходныйОрдерНаТовары.TabularSection.ШтрихкодыУпаковок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.Валюта</name>
 		<right>
 			<name>View</name>
@@ -1034,6 +1185,20 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПриходныйОрдерНаТовары.TabularSection.Товары</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.Attribute.Распоряжение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Организация</name>
 		<right>
 			<name>View</name>
@@ -1073,6 +1238,69 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПриходныйОрдерНаТовары.Attribute.Статус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ВводОстатковТоваров","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ВводОстатковТоваров.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.Подразделение</name>
 		<right>
 			<name>View</name>
@@ -1106,6 +1334,52 @@
 	</object>
 	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.StandardAttribute.Number</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1159,6 +1433,13 @@
 	</object>
 	<object>
 		<name>Document.гф_УстановкаСнятиеЛимита.Attribute.Контрагент</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ВыпускПодДеятельность</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1324,6 +1605,13 @@
 	</object>
 	<object>
 		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.Attribute.ДатаПоступления</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1510,6 +1798,20 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.НаправлениеДеятельности</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ДекларацияОбОбороте</name>
 		<right>
 			<name>Use</name>
@@ -1612,6 +1914,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПриобретениеТоваровУслуг.Attribute.ХозяйственнаяОперация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Партнеры.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>View</name>
@@ -1675,7 +1984,21 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходныйОрдерНаТовары.Attribute.Получатель</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.Attribute.гф_Логистика</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Комментарий</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1845,6 +2168,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.ДатаПоступления</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УпаковочныйЛист.Attribute.гф_Поставка</name>
 		<right>
 			<name>View</name>
@@ -1927,6 +2257,13 @@
 	</object>
 	<object>
 		<name>Document.гф_БлокировкаРазблокировкаОтгрузок.Attribute.Организация</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.РасходныйОрдерНаТовары.TabularSection.ТоварыПоРаспоряжениям</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2025,6 +2362,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходныйОрдерНаТовары.Attribute.Статус</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Контрагенты.Attribute.НалоговыйНомер</name>
 		<right>
 			<name>View</name>
@@ -2086,6 +2430,13 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ПроцентыПредоплаты.StandardAttribute.Period</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.Attribute.Склад</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2327,6 +2678,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.РасходныйОрдерНаТовары.Attribute.Склад</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.гф_ПереводЗначенийРеквизитовИСвойств</name>
 		<right>
 			<name>Read</name>
@@ -2497,6 +2855,13 @@
 	</object>
 	<object>
 		<name>Catalog.гф_СтатусыЛимитов.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.TabularSection.гф_ПродукцияВКоробах</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -2855,6 +3220,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПриходныйОрдерНаТовары.TabularSection.ШтрихкодыУпаковок</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.ЗаказКлиента.Attribute.ДатаСогласования</name>
 		<right>
 			<name>View</name>
@@ -2880,6 +3252,62 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ПроизводствоБезЗаказа</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Документ.ПроизводствоБезЗаказа","Чтение","",
+"Организации","Организация",
+"","",
+"","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Posted</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Ref</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.DeletionMark</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Date</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.StandardAttribute.Number</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.гф_ОбщийОтчетПоКлиенту</name>
 		<right>
 			<name>Use</name>
@@ -2892,6 +3320,13 @@
 	</object>
 	<object>
 		<name>Document.ЗаказКлиента.Attribute.Соглашение</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПроизводствоБезЗаказа.Attribute.Автор</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3058,6 +3493,20 @@
 	</object>
 	<object>
 		<name>Catalog.гф_Бюджеты.StandardAttribute.Code</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриходныйОрдерНаТовары.Attribute.Склад</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.TabularSection.Товары</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3248,6 +3697,13 @@
 			<name>Use</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.ПриобретениеТоваровУслуг.TabularSection.гф_ПродукцияВКоробах</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
