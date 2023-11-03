@@ -404,6 +404,7 @@
 									<ExtendedTooltip name="ШапкаПравоРасширеннаяПодсказка" id="214"/>
 									<ChildItems>
 										<InputField name="ГруппировкаЗатрат" id="13">
+											<DataPath>Объект.ГруппировкаЗатрат</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>29</MaxWidth>
@@ -412,6 +413,7 @@
 											<ExtendedTooltip name="ГруппировкаЗатратРасширеннаяПодсказка" id="15"/>
 										</InputField>
 										<InputField name="СпособРаспределенияЗатратНаВыходныеИзделия" id="1080">
+											<DataPath>Объект.СпособРаспределенияЗатратНаВыходныеИзделия</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -593,6 +595,13 @@ to products</v8:content>
 												<CommandName>0</CommandName>
 												<ExtendedTooltip name="ВыходныеИзделияКонтекстноеМенюРазбитьСтрокуРасширеннаяПодсказка" id="1098"/>
 											</Button>
+											<Button name="ВыходныеИзделияДополнитьПоСпецификацииКонтекст" id="1172">
+												<Type>CommandBarButton</Type>
+												<CommandName>0</CommandName>
+												<RepresentationInContextMenu>AdditionalInContextMenu</RepresentationInContextMenu>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ВыходныеИзделияДополнитьПоСпецификацииКонтекстРасширеннаяПодсказка" id="1173"/>
+											</Button>
 										</ChildItems>
 									</ContextMenu>
 									<AutoCommandBar name="ВыходныеИзделияКоманднаяПанель" id="308">
@@ -741,6 +750,13 @@ to products</v8:content>
 														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 														<ExtendedTooltip name="ВыходныеИзделияЗаполнитьСпецификациюРасширеннаяПодсказка" id="1120"/>
 													</Button>
+													<Button name="ВыходныеИзделияДополнитьПоСпецификации" id="1170">
+														<Type>CommandBarButton</Type>
+														<CommandName>0</CommandName>
+														<RepresentationInContextMenu>AdditionalInContextMenu</RepresentationInContextMenu>
+														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ВыходныеИзделияДополнитьПоСпецификацииРасширеннаяПодсказка" id="1171"/>
+													</Button>
 												</ChildItems>
 											</ButtonGroup>
 										</ChildItems>
@@ -810,6 +826,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ВыходныеИзделияХарактеристикаРасширеннаяПодсказка" id="330"/>
 										</InputField>
 										<InputField name="ВыходныеИзделияНазначение" id="346">
+											<DataPath>Объект.ВыходныеИзделия.Назначение</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>false</DropListButton>
 											<ChoiceButton>true</ChoiceButton>
@@ -925,6 +942,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ВыходныеИзделияСуммаРасширеннаяПодсказка" id="1148"/>
 										</InputField>
 										<InputField name="ВыходныеИзделияСпецификация" id="340">
+											<DataPath>Объект.ВыходныеИзделия.Спецификация</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>false</DropListButton>
 											<ChoiceButton>true</ChoiceButton>
@@ -1209,6 +1227,7 @@ to products</v8:content>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ПобочныеИзделия</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1396,6 +1415,7 @@ to products</v8:content>
 									</SearchControlAddition>
 									<ChildItems>
 										<LabelField name="ПобочныеИзделияНомерСтроки" id="383">
+											<DataPath>Объект.ПобочныеИзделия.LineNumber</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПобочныеИзделияНомерСтрокиКонтекстноеМеню" id="384"/>
 											<ExtendedTooltip name="ПобочныеИзделияНомерСтрокиРасширеннаяПодсказка" id="385"/>
@@ -1420,6 +1440,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияАртикулРасширеннаяПодсказка" id="599"/>
 										</LabelField>
 										<InputField name="ПобочныеИзделияНоменклатура" id="386">
+											<DataPath>Объект.ПобочныеИзделия.Номенклатура</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>false</DropListButton>
 											<ChoiceButton>true</ChoiceButton>
@@ -1428,6 +1449,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияНоменклатураРасширеннаяПодсказка" id="388"/>
 										</InputField>
 										<InputField name="ПобочныеИзделияХарактеристика" id="389">
+											<DataPath>Объект.ПобочныеИзделия.Характеристика</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>false</DropListButton>
 											<ChoiceButton>true</ChoiceButton>
@@ -1436,6 +1458,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияХарактеристикаРасширеннаяПодсказка" id="391"/>
 										</InputField>
 										<InputField name="ПобочныеИзделияНазначение" id="404">
+											<DataPath>Объект.ПобочныеИзделия.Назначение</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<DropListButton>false</DropListButton>
 											<ChoiceButton>true</ChoiceButton>
@@ -1458,6 +1481,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияГруппаСерияРасширеннаяПодсказка" id="919"/>
 											<ChildItems>
 												<PictureField name="ПобочныеИзделияСтатусУказанияСерий" id="839">
+													<DataPath>Объект.ПобочныеИзделия.СтатусУказанияСерий</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<HeaderPicture>
@@ -1473,6 +1497,7 @@ to products</v8:content>
 													<ExtendedTooltip name="ПобочныеИзделияСтатусУказанияСерийРасширеннаяПодсказка" id="841"/>
 												</PictureField>
 												<InputField name="ПобочныеИзделияСерия" id="836">
+													<DataPath>Объект.ПобочныеИзделия.Серия</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>16</Width>
 													<DropListButton>false</DropListButton>
@@ -1484,6 +1509,7 @@ to products</v8:content>
 											</ChildItems>
 										</ColumnGroup>
 										<InputField name="ПобочныеИзделияКоличествоУпаковок" id="392">
+											<DataPath>Объект.ПобочныеИзделия.КоличествоУпаковок</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>8</Width>
 											<ContextMenu name="ПобочныеИзделияКоличествоУпаковокКонтекстноеМеню" id="393"/>
@@ -1504,6 +1530,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="546"/>
 											<ChildItems>
 												<InputField name="ПобочныеИзделияУпаковка" id="398">
+													<DataPath>Объект.ПобочныеИзделия.Упаковка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -1515,6 +1542,7 @@ to products</v8:content>
 													<ExtendedTooltip name="ПобочныеИзделияУпаковкаРасширеннаяПодсказка" id="400"/>
 												</InputField>
 												<LabelField name="ПобочныеИзделияНоменклатураЕдиницаИзмерения" id="547">
+													<DataPath>Объект.ПобочныеИзделия.Номенклатура.ЕдиницаИзмерения</DataPath>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1534,18 +1562,21 @@ to products</v8:content>
 											</ChildItems>
 										</ColumnGroup>
 										<InputField name="ПобочныеИзделияЦена" id="413">
+											<DataPath>Объект.ПобочныеИзделия.Цена</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>9</Width>
 											<ContextMenu name="ПобочныеИзделияЦенаКонтекстноеМеню" id="414"/>
 											<ExtendedTooltip name="ПобочныеИзделияЦенаРасширеннаяПодсказка" id="415"/>
 										</InputField>
 										<InputField name="ПобочныеИзделияСумма" id="416">
+											<DataPath>Объект.ПобочныеИзделия.Сумма</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>9</Width>
 											<ContextMenu name="ПобочныеИзделияСуммаКонтекстноеМеню" id="417"/>
 											<ExtendedTooltip name="ПобочныеИзделияСуммаРасширеннаяПодсказка" id="418"/>
 										</InputField>
 										<InputField name="ПобочныеИзделияНаправлениеВыпуска" id="938">
+											<DataPath>Объект.ПобочныеИзделия.НаправлениеВыпуска</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ListChoiceMode>true</ListChoiceMode>
 											<ContextMenu name="ПобочныеИзделияНаправлениеВыпускаКонтекстноеМеню" id="939"/>
@@ -1577,6 +1608,7 @@ to products</v8:content>
 											<ExtendedTooltip name="ПобочныеИзделияГруппаПолучательРасширеннаяПодсказка" id="921"/>
 											<ChildItems>
 												<InputField name="ПобочныеИзделияПодразделениеПолучатель" id="1077">
+													<DataPath>Объект.ПобочныеИзделия.ПодразделениеПолучатель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
 													<ShowInFooter>false</ShowInFooter>
@@ -1584,6 +1616,7 @@ to products</v8:content>
 													<ExtendedTooltip name="ПобочныеИзделияПодразделениеПолучательРасширеннаяПодсказка" id="1079"/>
 												</InputField>
 												<InputField name="ПобочныеИзделияПолучатель" id="941">
+													<DataPath>Объект.ПобочныеИзделия.Получатель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ShowInHeader>false</ShowInHeader>
 													<Width>30</Width>
@@ -1608,6 +1641,7 @@ to products</v8:content>
 													<ExtendedTooltip name="ПобочныеИзделияГруппаАналитикаРасширеннаяПодсказка" id="923"/>
 													<ChildItems>
 														<InputField name="ПобочныеИзделияАналитикаРасходов" id="851">
+															<DataPath>Объект.ПобочныеИзделия.АналитикаРасходов</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<ShowInHeader>false</ShowInHeader>
 															<ShowInFooter>false</ShowInFooter>
@@ -1619,6 +1653,7 @@ to products</v8:content>
 															<ExtendedTooltip name="ПобочныеИзделияАналитикаРасходовРасширеннаяПодсказка" id="853"/>
 														</InputField>
 														<InputField name="ПобочныеИзделияАналитикаАктивовПассивов" id="854">
+															<DataPath>Объект.ПобочныеИзделия.АналитикаАктивовПассивов</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<ShowInHeader>false</ShowInHeader>
 															<ShowInFooter>false</ShowInFooter>
@@ -1643,16 +1678,19 @@ to products</v8:content>
 											</ChildItems>
 										</ColumnGroup>
 										<InputField name="ПобочныеИзделияПодразделение" id="830">
+											<DataPath>Объект.ПобочныеИзделия.Подразделение</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПобочныеИзделияПодразделениеКонтекстноеМеню" id="831"/>
 											<ExtendedTooltip name="ПобочныеИзделияПодразделениеРасширеннаяПодсказка" id="832"/>
 										</InputField>
 										<InputField name="ПобочныеИзделияСтатьяКалькуляции" id="428">
+											<DataPath>Объект.ПобочныеИзделия.СтатьяКалькуляции</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ПобочныеИзделияСтатьяКалькуляцииКонтекстноеМеню" id="429"/>
 											<ExtendedTooltip name="ПобочныеИзделияСтатьяКалькуляцииРасширеннаяПодсказка" id="430"/>
 										</InputField>
 										<CheckBoxField name="ПобочныеИзделияОформитьОтчетДавальцу" id="1139">
+											<DataPath>Объект.ПобочныеИзделия.ОформитьОтчетДавальцу</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ПобочныеИзделияОформитьОтчетДавальцуКонтекстноеМеню" id="1140"/>
 											<ExtendedTooltip name="ПобочныеИзделияОформитьОтчетДавальцуРасширеннаяПодсказка" id="1141"/>
@@ -1674,6 +1712,7 @@ to products</v8:content>
 							<v8:content>Materials and works</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.МатериалыИРаботы.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаМатериалыИРаботыРасширеннаяПодсказка" id="121"/>
 					<ChildItems>
 						<Table name="МатериалыИРаботы" id="434">
@@ -1682,6 +1721,7 @@ to products</v8:content>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.МатериалыИРаботы</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1854,6 +1894,7 @@ to products</v8:content>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="МатериалыИРаботыНомерСтроки" id="447">
+									<DataPath>Объект.МатериалыИРаботы.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="МатериалыИРаботыНомерСтрокиКонтекстноеМеню" id="448"/>
 									<ExtendedTooltip name="МатериалыИРаботыНомерСтрокиРасширеннаяПодсказка" id="449"/>
@@ -1878,6 +1919,7 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыАртикулРасширеннаяПодсказка" id="602"/>
 								</LabelField>
 								<InputField name="МатериалыИРаботыНоменклатура" id="456">
+									<DataPath>Объект.МатериалыИРаботы.Номенклатура</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -1886,6 +1928,7 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыНоменклатураРасширеннаяПодсказка" id="458"/>
 								</InputField>
 								<InputField name="МатериалыИРаботыХарактеристика" id="459">
+									<DataPath>Объект.МатериалыИРаботы.Характеристика</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -1894,6 +1937,7 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыХарактеристикаРасширеннаяПодсказка" id="461"/>
 								</InputField>
 								<InputField name="МатериалыИРаботыНазначение" id="654">
+									<DataPath>Объект.МатериалыИРаботы.Назначение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -1916,6 +1960,7 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыГруппаСерияРасширеннаяПодсказка" id="610"/>
 									<ChildItems>
 										<PictureField name="МатериалыИРаботыСтатусУказанияСерий" id="474">
+											<DataPath>Объект.МатериалыИРаботы.СтатусУказанияСерий</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<HeaderPicture>
@@ -1931,6 +1976,7 @@ to products</v8:content>
 											<ExtendedTooltip name="МатериалыИРаботыСтатусУказанияСерийРасширеннаяПодсказка" id="476"/>
 										</PictureField>
 										<InputField name="МатериалыИРаботыСерия" id="471">
+											<DataPath>Объект.МатериалыИРаботы.Серия</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>16</Width>
 											<DropListButton>false</DropListButton>
@@ -1942,6 +1988,7 @@ to products</v8:content>
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="МатериалыИРаботыКоличествоУпаковок" id="620">
+									<DataPath>Объект.МатериалыИРаботы.КоличествоУпаковок</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<ContextMenu name="МатериалыИРаботыКоличествоУпаковокКонтекстноеМеню" id="621"/>
@@ -1962,6 +2009,7 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="551"/>
 									<ChildItems>
 										<InputField name="МатериалыИРаботыУпаковка" id="468">
+											<DataPath>Объект.МатериалыИРаботы.Упаковка</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInHeader>false</ShowInHeader>
 											<AutoMaxWidth>false</AutoMaxWidth>
@@ -1973,6 +2021,7 @@ to products</v8:content>
 											<ExtendedTooltip name="МатериалыИРаботыУпаковкаРасширеннаяПодсказка" id="470"/>
 										</InputField>
 										<LabelField name="МатериалыИРаботыНоменклатураЕдиницаИзмерения" id="552">
+											<DataPath>Объект.МатериалыИРаботы.Номенклатура.ЕдиницаИзмерения</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -1992,6 +2041,7 @@ to products</v8:content>
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="МатериалыИРаботыСклад" id="1063">
+									<DataPath>Объект.МатериалыИРаботы.Склад</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
@@ -2000,11 +2050,13 @@ to products</v8:content>
 									<ExtendedTooltip name="МатериалыИРаботыСкладРасширеннаяПодсказка" id="1065"/>
 								</InputField>
 								<InputField name="МатериалыИРаботыПодразделение" id="1060">
+									<DataPath>Объект.МатериалыИРаботы.Подразделение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="МатериалыИРаботыПодразделениеКонтекстноеМеню" id="1061"/>
 									<ExtendedTooltip name="МатериалыИРаботыПодразделениеРасширеннаяПодсказка" id="1062"/>
 								</InputField>
 								<InputField name="МатериалыИРаботыСтатьяКалькуляции" id="477">
+									<DataPath>Объект.МатериалыИРаботы.СтатьяКалькуляции</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="МатериалыИРаботыСтатьяКалькуляцииКонтекстноеМеню" id="478"/>
 									<ExtendedTooltip name="МатериалыИРаботыСтатьяКалькуляцииРасширеннаяПодсказка" id="479"/>
@@ -2024,6 +2076,7 @@ to products</v8:content>
 							<v8:content>Labor costs</v8:content>
 						</v8:item>
 					</Title>
+					<TitleDataPath>Объект.Трудозатраты.RowsCount</TitleDataPath>
 					<ExtendedTooltip name="ГруппаТрудозатратыРасширеннаяПодсказка" id="172"/>
 					<ChildItems>
 						<Table name="Трудозатраты" id="486">
@@ -2032,6 +2085,7 @@ to products</v8:content>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Трудозатраты</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -2164,6 +2218,7 @@ to products</v8:content>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ТрудозатратыНомерСтроки" id="499">
+									<DataPath>Объект.Трудозатраты.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТрудозатратыНомерСтрокиКонтекстноеМеню" id="500"/>
 									<ExtendedTooltip name="ТрудозатратыНомерСтрокиРасширеннаяПодсказка" id="501"/>
@@ -2179,17 +2234,20 @@ to products</v8:content>
 									<ExtendedTooltip name="ТрудозатратыГруппаЗатратРасширеннаяПодсказка" id="528"/>
 								</InputField>
 								<InputField name="ТрудозатратыВидРабот" id="502">
+									<DataPath>Объект.Трудозатраты.ВидРабот</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТрудозатратыВидРаботКонтекстноеМеню" id="503"/>
 									<ExtendedTooltip name="ТрудозатратыВидРаботРасширеннаяПодсказка" id="504"/>
 								</InputField>
 								<InputField name="ТрудозатратыКоличество" id="505">
+									<DataPath>Объект.Трудозатраты.Количество</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>8</Width>
 									<ContextMenu name="ТрудозатратыКоличествоКонтекстноеМеню" id="506"/>
 									<ExtendedTooltip name="ТрудозатратыКоличествоРасширеннаяПодсказка" id="507"/>
 								</InputField>
 								<LabelField name="ТрудозатратыВидРаботЕдиницаИзмерения" id="962">
+									<DataPath>Объект.Трудозатраты.ВидРабот.ЕдиницаИзмерения</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -2207,17 +2265,20 @@ to products</v8:content>
 									<ExtendedTooltip name="ТрудозатратыВидРаботЕдиницаИзмеренияРасширеннаяПодсказка" id="964"/>
 								</LabelField>
 								<InputField name="ТрудозатратыПодразделение" id="783">
+									<DataPath>Объект.Трудозатраты.Подразделение</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТрудозатратыПодразделениеКонтекстноеМеню" id="784"/>
 									<ExtendedTooltip name="ТрудозатратыПодразделениеРасширеннаяПодсказка" id="785"/>
 								</InputField>
 								<InputField name="ТрудозатратыИсполнитель" id="1040">
+									<DataPath>Объект.Трудозатраты.Исполнитель</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ChooseType>false</ChooseType>
 									<ContextMenu name="ТрудозатратыИсполнительКонтекстноеМеню" id="1041"/>
 									<ExtendedTooltip name="ТрудозатратыИсполнительРасширеннаяПодсказка" id="1042"/>
 								</InputField>
 								<InputField name="ТрудозатратыСтатьяКалькуляции" id="511">
+									<DataPath>Объект.Трудозатраты.СтатьяКалькуляции</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТрудозатратыСтатьяКалькуляцииКонтекстноеМеню" id="512"/>
 									<ExtendedTooltip name="ТрудозатратыСтатьяКалькуляцииРасширеннаяПодсказка" id="513"/>
@@ -2345,6 +2406,7 @@ to products</v8:content>
 									<ExtendedTooltip name="ГруппаДополнительноПравоРасширеннаяПодсказка" id="1026"/>
 									<ChildItems>
 										<InputField name="Валюта" id="1049">
+											<DataPath>Объект.Валюта</DataPath>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>5</MaxWidth>
 											<Wrap>false</Wrap>
@@ -2804,6 +2866,7 @@ to products</v8:content>
 										<ExtendedTooltip name="ШапкаПравоРасширеннаяПодсказка" id="214"/>
 										<ChildItems>
 											<InputField name="ГруппировкаЗатрат" id="13">
+												<DataPath>Объект.ГруппировкаЗатрат</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>29</MaxWidth>
@@ -2812,6 +2875,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ГруппировкаЗатратРасширеннаяПодсказка" id="15"/>
 											</InputField>
 											<InputField name="СпособРаспределенияЗатратНаВыходныеИзделия" id="1080">
+												<DataPath>Объект.СпособРаспределенияЗатратНаВыходныеИзделия</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -2993,6 +3057,13 @@ to products</v8:content>
 													<CommandName>0</CommandName>
 													<ExtendedTooltip name="ВыходныеИзделияКонтекстноеМенюРазбитьСтрокуРасширеннаяПодсказка" id="1098"/>
 												</Button>
+												<Button name="ВыходныеИзделияДополнитьПоСпецификацииКонтекст" id="1172">
+													<Type>CommandBarButton</Type>
+													<CommandName>0</CommandName>
+													<RepresentationInContextMenu>AdditionalInContextMenu</RepresentationInContextMenu>
+													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+													<ExtendedTooltip name="ВыходныеИзделияДополнитьПоСпецификацииКонтекстРасширеннаяПодсказка" id="1173"/>
+												</Button>
 											</ChildItems>
 										</ContextMenu>
 										<AutoCommandBar name="ВыходныеИзделияКоманднаяПанель" id="308">
@@ -3141,6 +3212,13 @@ to products</v8:content>
 															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 															<ExtendedTooltip name="ВыходныеИзделияЗаполнитьСпецификациюРасширеннаяПодсказка" id="1120"/>
 														</Button>
+														<Button name="ВыходныеИзделияДополнитьПоСпецификации" id="1170">
+															<Type>CommandBarButton</Type>
+															<CommandName>0</CommandName>
+															<RepresentationInContextMenu>AdditionalInContextMenu</RepresentationInContextMenu>
+															<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+															<ExtendedTooltip name="ВыходныеИзделияДополнитьПоСпецификацииРасширеннаяПодсказка" id="1171"/>
+														</Button>
 													</ChildItems>
 												</ButtonGroup>
 											</ChildItems>
@@ -3206,6 +3284,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ВыходныеИзделияХарактеристикаРасширеннаяПодсказка" id="330"/>
 											</InputField>
 											<InputField name="ВыходныеИзделияНазначение" id="346">
+												<DataPath>Объект.ВыходныеИзделия.Назначение</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>false</DropListButton>
 												<ChoiceButton>true</ChoiceButton>
@@ -3321,6 +3400,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ВыходныеИзделияСуммаРасширеннаяПодсказка" id="1148"/>
 											</InputField>
 											<InputField name="ВыходныеИзделияСпецификация" id="340">
+												<DataPath>Объект.ВыходныеИзделия.Спецификация</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>false</DropListButton>
 												<ChoiceButton>true</ChoiceButton>
@@ -3605,6 +3685,7 @@ to products</v8:content>
 										<EnableStartDrag>true</EnableStartDrag>
 										<EnableDrag>true</EnableDrag>
 										<FileDragMode>AsFile</FileDragMode>
+										<DataPath>Объект.ПобочныеИзделия</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -3792,6 +3873,7 @@ to products</v8:content>
 										</SearchControlAddition>
 										<ChildItems>
 											<LabelField name="ПобочныеИзделияНомерСтроки" id="383">
+												<DataPath>Объект.ПобочныеИзделия.LineNumber</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<ContextMenu name="ПобочныеИзделияНомерСтрокиКонтекстноеМеню" id="384"/>
 												<ExtendedTooltip name="ПобочныеИзделияНомерСтрокиРасширеннаяПодсказка" id="385"/>
@@ -3816,6 +3898,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияАртикулРасширеннаяПодсказка" id="599"/>
 											</LabelField>
 											<InputField name="ПобочныеИзделияНоменклатура" id="386">
+												<DataPath>Объект.ПобочныеИзделия.Номенклатура</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>false</DropListButton>
 												<ChoiceButton>true</ChoiceButton>
@@ -3824,6 +3907,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияНоменклатураРасширеннаяПодсказка" id="388"/>
 											</InputField>
 											<InputField name="ПобочныеИзделияХарактеристика" id="389">
+												<DataPath>Объект.ПобочныеИзделия.Характеристика</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>false</DropListButton>
 												<ChoiceButton>true</ChoiceButton>
@@ -3832,6 +3916,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияХарактеристикаРасширеннаяПодсказка" id="391"/>
 											</InputField>
 											<InputField name="ПобочныеИзделияНазначение" id="404">
+												<DataPath>Объект.ПобочныеИзделия.Назначение</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<DropListButton>false</DropListButton>
 												<ChoiceButton>true</ChoiceButton>
@@ -3854,6 +3939,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияГруппаСерияРасширеннаяПодсказка" id="919"/>
 												<ChildItems>
 													<PictureField name="ПобочныеИзделияСтатусУказанияСерий" id="839">
+														<DataPath>Объект.ПобочныеИзделия.СтатусУказанияСерий</DataPath>
 														<TitleLocation>None</TitleLocation>
 														<EditMode>EnterOnInput</EditMode>
 														<HeaderPicture>
@@ -3869,6 +3955,7 @@ to products</v8:content>
 														<ExtendedTooltip name="ПобочныеИзделияСтатусУказанияСерийРасширеннаяПодсказка" id="841"/>
 													</PictureField>
 													<InputField name="ПобочныеИзделияСерия" id="836">
+														<DataPath>Объект.ПобочныеИзделия.Серия</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>16</Width>
 														<DropListButton>false</DropListButton>
@@ -3880,6 +3967,7 @@ to products</v8:content>
 												</ChildItems>
 											</ColumnGroup>
 											<InputField name="ПобочныеИзделияКоличествоУпаковок" id="392">
+												<DataPath>Объект.ПобочныеИзделия.КоличествоУпаковок</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>8</Width>
 												<ContextMenu name="ПобочныеИзделияКоличествоУпаковокКонтекстноеМеню" id="393"/>
@@ -3900,6 +3988,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="546"/>
 												<ChildItems>
 													<InputField name="ПобочныеИзделияУпаковка" id="398">
+														<DataPath>Объект.ПобочныеИзделия.Упаковка</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<ShowInHeader>false</ShowInHeader>
 														<AutoMaxWidth>false</AutoMaxWidth>
@@ -3911,6 +4000,7 @@ to products</v8:content>
 														<ExtendedTooltip name="ПобочныеИзделияУпаковкаРасширеннаяПодсказка" id="400"/>
 													</InputField>
 													<LabelField name="ПобочныеИзделияНоменклатураЕдиницаИзмерения" id="547">
+														<DataPath>Объект.ПобочныеИзделия.Номенклатура.ЕдиницаИзмерения</DataPath>
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
@@ -3930,18 +4020,21 @@ to products</v8:content>
 												</ChildItems>
 											</ColumnGroup>
 											<InputField name="ПобочныеИзделияЦена" id="413">
+												<DataPath>Объект.ПобочныеИзделия.Цена</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>9</Width>
 												<ContextMenu name="ПобочныеИзделияЦенаКонтекстноеМеню" id="414"/>
 												<ExtendedTooltip name="ПобочныеИзделияЦенаРасширеннаяПодсказка" id="415"/>
 											</InputField>
 											<InputField name="ПобочныеИзделияСумма" id="416">
+												<DataPath>Объект.ПобочныеИзделия.Сумма</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>9</Width>
 												<ContextMenu name="ПобочныеИзделияСуммаКонтекстноеМеню" id="417"/>
 												<ExtendedTooltip name="ПобочныеИзделияСуммаРасширеннаяПодсказка" id="418"/>
 											</InputField>
 											<InputField name="ПобочныеИзделияНаправлениеВыпуска" id="938">
+												<DataPath>Объект.ПобочныеИзделия.НаправлениеВыпуска</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<ListChoiceMode>true</ListChoiceMode>
 												<ContextMenu name="ПобочныеИзделияНаправлениеВыпускаКонтекстноеМеню" id="939"/>
@@ -3973,6 +4066,7 @@ to products</v8:content>
 												<ExtendedTooltip name="ПобочныеИзделияГруппаПолучательРасширеннаяПодсказка" id="921"/>
 												<ChildItems>
 													<InputField name="ПобочныеИзделияПодразделениеПолучатель" id="1077">
+														<DataPath>Объект.ПобочныеИзделия.ПодразделениеПолучатель</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<ShowInHeader>false</ShowInHeader>
 														<ShowInFooter>false</ShowInFooter>
@@ -3980,6 +4074,7 @@ to products</v8:content>
 														<ExtendedTooltip name="ПобочныеИзделияПодразделениеПолучательРасширеннаяПодсказка" id="1079"/>
 													</InputField>
 													<InputField name="ПобочныеИзделияПолучатель" id="941">
+														<DataPath>Объект.ПобочныеИзделия.Получатель</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<ShowInHeader>false</ShowInHeader>
 														<Width>30</Width>
@@ -4004,6 +4099,7 @@ to products</v8:content>
 														<ExtendedTooltip name="ПобочныеИзделияГруппаАналитикаРасширеннаяПодсказка" id="923"/>
 														<ChildItems>
 															<InputField name="ПобочныеИзделияАналитикаРасходов" id="851">
+																<DataPath>Объект.ПобочныеИзделия.АналитикаРасходов</DataPath>
 																<EditMode>EnterOnInput</EditMode>
 																<ShowInHeader>false</ShowInHeader>
 																<ShowInFooter>false</ShowInFooter>
@@ -4015,6 +4111,7 @@ to products</v8:content>
 																<ExtendedTooltip name="ПобочныеИзделияАналитикаРасходовРасширеннаяПодсказка" id="853"/>
 															</InputField>
 															<InputField name="ПобочныеИзделияАналитикаАктивовПассивов" id="854">
+																<DataPath>Объект.ПобочныеИзделия.АналитикаАктивовПассивов</DataPath>
 																<EditMode>EnterOnInput</EditMode>
 																<ShowInHeader>false</ShowInHeader>
 																<ShowInFooter>false</ShowInFooter>
@@ -4039,16 +4136,19 @@ to products</v8:content>
 												</ChildItems>
 											</ColumnGroup>
 											<InputField name="ПобочныеИзделияПодразделение" id="830">
+												<DataPath>Объект.ПобочныеИзделия.Подразделение</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<ContextMenu name="ПобочныеИзделияПодразделениеКонтекстноеМеню" id="831"/>
 												<ExtendedTooltip name="ПобочныеИзделияПодразделениеРасширеннаяПодсказка" id="832"/>
 											</InputField>
 											<InputField name="ПобочныеИзделияСтатьяКалькуляции" id="428">
+												<DataPath>Объект.ПобочныеИзделия.СтатьяКалькуляции</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<ContextMenu name="ПобочныеИзделияСтатьяКалькуляцииКонтекстноеМеню" id="429"/>
 												<ExtendedTooltip name="ПобочныеИзделияСтатьяКалькуляцииРасширеннаяПодсказка" id="430"/>
 											</InputField>
 											<CheckBoxField name="ПобочныеИзделияОформитьОтчетДавальцу" id="1139">
+												<DataPath>Объект.ПобочныеИзделия.ОформитьОтчетДавальцу</DataPath>
 												<CheckBoxType>Auto</CheckBoxType>
 												<ContextMenu name="ПобочныеИзделияОформитьОтчетДавальцуКонтекстноеМеню" id="1140"/>
 												<ExtendedTooltip name="ПобочныеИзделияОформитьОтчетДавальцуРасширеннаяПодсказка" id="1141"/>
@@ -4070,6 +4170,7 @@ to products</v8:content>
 								<v8:content>Materials and works</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.МатериалыИРаботы.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаМатериалыИРаботыРасширеннаяПодсказка" id="121"/>
 						<ChildItems>
 							<Table name="МатериалыИРаботы" id="434">
@@ -4078,6 +4179,7 @@ to products</v8:content>
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.МатериалыИРаботы</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -4250,6 +4352,7 @@ to products</v8:content>
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="МатериалыИРаботыНомерСтроки" id="447">
+										<DataPath>Объект.МатериалыИРаботы.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="МатериалыИРаботыНомерСтрокиКонтекстноеМеню" id="448"/>
 										<ExtendedTooltip name="МатериалыИРаботыНомерСтрокиРасширеннаяПодсказка" id="449"/>
@@ -4274,6 +4377,7 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыАртикулРасширеннаяПодсказка" id="602"/>
 									</LabelField>
 									<InputField name="МатериалыИРаботыНоменклатура" id="456">
+										<DataPath>Объект.МатериалыИРаботы.Номенклатура</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -4282,6 +4386,7 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыНоменклатураРасширеннаяПодсказка" id="458"/>
 									</InputField>
 									<InputField name="МатериалыИРаботыХарактеристика" id="459">
+										<DataPath>Объект.МатериалыИРаботы.Характеристика</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -4290,6 +4395,7 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыХарактеристикаРасширеннаяПодсказка" id="461"/>
 									</InputField>
 									<InputField name="МатериалыИРаботыНазначение" id="654">
+										<DataPath>Объект.МатериалыИРаботы.Назначение</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -4312,6 +4418,7 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыГруппаСерияРасширеннаяПодсказка" id="610"/>
 										<ChildItems>
 											<PictureField name="МатериалыИРаботыСтатусУказанияСерий" id="474">
+												<DataPath>Объект.МатериалыИРаботы.СтатусУказанияСерий</DataPath>
 												<TitleLocation>None</TitleLocation>
 												<EditMode>EnterOnInput</EditMode>
 												<HeaderPicture>
@@ -4327,6 +4434,7 @@ to products</v8:content>
 												<ExtendedTooltip name="МатериалыИРаботыСтатусУказанияСерийРасширеннаяПодсказка" id="476"/>
 											</PictureField>
 											<InputField name="МатериалыИРаботыСерия" id="471">
+												<DataPath>Объект.МатериалыИРаботы.Серия</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<Width>16</Width>
 												<DropListButton>false</DropListButton>
@@ -4338,6 +4446,7 @@ to products</v8:content>
 										</ChildItems>
 									</ColumnGroup>
 									<InputField name="МатериалыИРаботыКоличествоУпаковок" id="620">
+										<DataPath>Объект.МатериалыИРаботы.КоличествоУпаковок</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<ContextMenu name="МатериалыИРаботыКоличествоУпаковокКонтекстноеМеню" id="621"/>
@@ -4358,6 +4467,7 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="551"/>
 										<ChildItems>
 											<InputField name="МатериалыИРаботыУпаковка" id="468">
+												<DataPath>Объект.МатериалыИРаботы.Упаковка</DataPath>
 												<EditMode>EnterOnInput</EditMode>
 												<ShowInHeader>false</ShowInHeader>
 												<AutoMaxWidth>false</AutoMaxWidth>
@@ -4369,6 +4479,7 @@ to products</v8:content>
 												<ExtendedTooltip name="МатериалыИРаботыУпаковкаРасширеннаяПодсказка" id="470"/>
 											</InputField>
 											<LabelField name="МатериалыИРаботыНоменклатураЕдиницаИзмерения" id="552">
+												<DataPath>Объект.МатериалыИРаботы.Номенклатура.ЕдиницаИзмерения</DataPath>
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
@@ -4388,6 +4499,7 @@ to products</v8:content>
 										</ChildItems>
 									</ColumnGroup>
 									<InputField name="МатериалыИРаботыСклад" id="1063">
+										<DataPath>Объект.МатериалыИРаботы.Склад</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<DropListButton>false</DropListButton>
 										<ChoiceButton>true</ChoiceButton>
@@ -4396,11 +4508,13 @@ to products</v8:content>
 										<ExtendedTooltip name="МатериалыИРаботыСкладРасширеннаяПодсказка" id="1065"/>
 									</InputField>
 									<InputField name="МатериалыИРаботыПодразделение" id="1060">
+										<DataPath>Объект.МатериалыИРаботы.Подразделение</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="МатериалыИРаботыПодразделениеКонтекстноеМеню" id="1061"/>
 										<ExtendedTooltip name="МатериалыИРаботыПодразделениеРасширеннаяПодсказка" id="1062"/>
 									</InputField>
 									<InputField name="МатериалыИРаботыСтатьяКалькуляции" id="477">
+										<DataPath>Объект.МатериалыИРаботы.СтатьяКалькуляции</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="МатериалыИРаботыСтатьяКалькуляцииКонтекстноеМеню" id="478"/>
 										<ExtendedTooltip name="МатериалыИРаботыСтатьяКалькуляцииРасширеннаяПодсказка" id="479"/>
@@ -4420,6 +4534,7 @@ to products</v8:content>
 								<v8:content>Labor costs</v8:content>
 							</v8:item>
 						</Title>
+						<TitleDataPath>Объект.Трудозатраты.RowsCount</TitleDataPath>
 						<ExtendedTooltip name="ГруппаТрудозатратыРасширеннаяПодсказка" id="172"/>
 						<ChildItems>
 							<Table name="Трудозатраты" id="486">
@@ -4428,6 +4543,7 @@ to products</v8:content>
 								<EnableStartDrag>true</EnableStartDrag>
 								<EnableDrag>true</EnableDrag>
 								<FileDragMode>AsFile</FileDragMode>
+								<DataPath>Объект.Трудозатраты</DataPath>
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
@@ -4560,6 +4676,7 @@ to products</v8:content>
 								</SearchControlAddition>
 								<ChildItems>
 									<LabelField name="ТрудозатратыНомерСтроки" id="499">
+										<DataPath>Объект.Трудозатраты.LineNumber</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ТрудозатратыНомерСтрокиКонтекстноеМеню" id="500"/>
 										<ExtendedTooltip name="ТрудозатратыНомерСтрокиРасширеннаяПодсказка" id="501"/>
@@ -4575,17 +4692,20 @@ to products</v8:content>
 										<ExtendedTooltip name="ТрудозатратыГруппаЗатратРасширеннаяПодсказка" id="528"/>
 									</InputField>
 									<InputField name="ТрудозатратыВидРабот" id="502">
+										<DataPath>Объект.Трудозатраты.ВидРабот</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ТрудозатратыВидРаботКонтекстноеМеню" id="503"/>
 										<ExtendedTooltip name="ТрудозатратыВидРаботРасширеннаяПодсказка" id="504"/>
 									</InputField>
 									<InputField name="ТрудозатратыКоличество" id="505">
+										<DataPath>Объект.Трудозатраты.Количество</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<Width>8</Width>
 										<ContextMenu name="ТрудозатратыКоличествоКонтекстноеМеню" id="506"/>
 										<ExtendedTooltip name="ТрудозатратыКоличествоРасширеннаяПодсказка" id="507"/>
 									</InputField>
 									<LabelField name="ТрудозатратыВидРаботЕдиницаИзмерения" id="962">
+										<DataPath>Объект.Трудозатраты.ВидРабот.ЕдиницаИзмерения</DataPath>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -4603,17 +4723,20 @@ to products</v8:content>
 										<ExtendedTooltip name="ТрудозатратыВидРаботЕдиницаИзмеренияРасширеннаяПодсказка" id="964"/>
 									</LabelField>
 									<InputField name="ТрудозатратыПодразделение" id="783">
+										<DataPath>Объект.Трудозатраты.Подразделение</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ТрудозатратыПодразделениеКонтекстноеМеню" id="784"/>
 										<ExtendedTooltip name="ТрудозатратыПодразделениеРасширеннаяПодсказка" id="785"/>
 									</InputField>
 									<InputField name="ТрудозатратыИсполнитель" id="1040">
+										<DataPath>Объект.Трудозатраты.Исполнитель</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ChooseType>false</ChooseType>
 										<ContextMenu name="ТрудозатратыИсполнительКонтекстноеМеню" id="1041"/>
 										<ExtendedTooltip name="ТрудозатратыИсполнительРасширеннаяПодсказка" id="1042"/>
 									</InputField>
 									<InputField name="ТрудозатратыСтатьяКалькуляции" id="511">
+										<DataPath>Объект.Трудозатраты.СтатьяКалькуляции</DataPath>
 										<EditMode>EnterOnInput</EditMode>
 										<ContextMenu name="ТрудозатратыСтатьяКалькуляцииКонтекстноеМеню" id="512"/>
 										<ExtendedTooltip name="ТрудозатратыСтатьяКалькуляцииРасширеннаяПодсказка" id="513"/>
@@ -4741,6 +4864,7 @@ to products</v8:content>
 										<ExtendedTooltip name="ГруппаДополнительноПравоРасширеннаяПодсказка" id="1026"/>
 										<ChildItems>
 											<InputField name="Валюта" id="1049">
+												<DataPath>Объект.Валюта</DataPath>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>5</MaxWidth>
 												<Wrap>false</Wrap>
@@ -4780,7 +4904,7 @@ to products</v8:content>
 								<Behavior>Usual</Behavior>
 								<Representation>NormalSeparation</Representation>
 								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="1012"/>
+								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="1012"/>
 							</UsualGroup>
 						</ChildItems>
 					</Page>
