@@ -2,9 +2,43 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
+		<LabelDecoration name="Декорация1" id="13">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Font ref="style:NormalTextFont" height="8" kind="StyleItem" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временный функционал - эмитация действий от склада</v8:content>
+				</v8:item>
+			</Title>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа2" id="16">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="РасходныйОрдер" id="8">
+					<DataPath>РасходныйОрдер</DataPath>
+					<ContextMenu name="РасходныйОрдерКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="РасходныйОрдерРасширеннаяПодсказка" id="10"/>
+				</InputField>
+				<Button name="ЗаполнитьОтгрузить" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьОтгрузить</CommandName>
+					<ExtendedTooltip name="ЗаполнитьОтгрузитьРасширеннаяПодсказка" id="12"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<Button name="Разбить" id="4">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.Разбить</CommandName>
+			<BackColor>style:ImportantColor</BackColor>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
