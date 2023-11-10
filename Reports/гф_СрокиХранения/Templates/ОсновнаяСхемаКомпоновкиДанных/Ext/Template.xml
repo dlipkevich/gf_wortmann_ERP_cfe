@@ -35,6 +35,9 @@
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Склады</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПоступилНаСклад</dataPath>
@@ -265,6 +268,17 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Адрес</dataPath>
 			<field>Адрес</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РастягиватьПоГоризонтали</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДоговорКонтрагента</dataPath>
@@ -312,6 +326,20 @@
 			<dataPath>ГруппаДоступа</dataPath>
 			<field>ГруппаДоступа</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЛимита</dataPath>
+			<field>ВидЛимита</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДействующийЛимит</dataPath>
+			<field>ДействующийЛимит</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действующий лимит</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	УпаковочныйЛист.Ссылка КАК УпаковочныйЛист,
@@ -321,7 +349,8 @@
 ПОМЕСТИТЬ вт_УпаковочныеЛистыОстатки
 ИЗ
 	Документ.УпаковочныйЛист КАК УпаковочныйЛист
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.гф_ДвижениеКодовМаркировкиОрганизации.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК гф_ДвижениеКодовМаркировкиОрганизацииОстатки
+		//..ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.гф_ДвижениеКодовМаркировкиОрганизации.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК гф_ДвижениеКодовМаркировкиОрганизацииОстатки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.гф_ДвижениеКодовМаркировкиОрганизации.Остатки(&amp;ГраницаДатаОтчета, ) КАК гф_ДвижениеКодовМаркировкиОрганизацииОстатки
 		ПО УпаковочныйЛист.гф_Агрегация = гф_ДвижениеКодовМаркировкиОрганизацииОстатки.КМ
 ГДЕ
 	гф_ДвижениеКодовМаркировкиОрганизацииОстатки.КМ.ТипУпаковки = ЗНАЧЕНИЕ(Перечисление.ТипыУпаковок.МультитоварнаяУпаковка)
@@ -348,7 +377,8 @@
 	ЗаказКлиентаТовары.Номенклатура КАК Номенклатура
 ПОМЕСТИТЬ ВТ_ЗаказыЦены
 ИЗ
-	РегистрНакопления.ЗаказыКлиентов.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК ЗаказыКлиентовОстатки
+	//..РегистрНакопления.ЗаказыКлиентов.Остатки(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК ЗаказыКлиентовОстатки
+	РегистрНакопления.ЗаказыКлиентов.Остатки(&amp;ГраницаДатаОтчета, ) КАК ЗаказыКлиентовОстатки
 		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказКлиента КАК ЗаказКлиентаДокумент
 			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
 			ПО ЗаказКлиентаДокумент.Договор = ДоговорыКонтрагентов.Ссылка
@@ -391,7 +421,8 @@
 		МАКСИМУМ(ЕСТЬNULL(гф_ПричиныБлокировокСрезПоследних.ВидБлокировки, ЗНАЧЕНИЕ(Справочник.гф_ВидыБлокировок.ПустаяСсылка))) КАК ВидБлокировки
 	ИЗ
 		ВТ_ЗаказыЦены КАК ВТ_ЗаказыЦены
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПричиныБлокировок.СрезПоследних(&amp;ДатаОтчета, ) КАК гф_ПричиныБлокировокСрезПоследних
+			//..ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПричиныБлокировок.СрезПоследних(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК гф_ПричиныБлокировокСрезПоследних
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.гф_ПричиныБлокировок.СрезПоследних(&amp;ГраницаДатаОтчета, ) КАК гф_ПричиныБлокировокСрезПоследних
 			ПО ВТ_ЗаказыЦены.Договор = гф_ПричиныБлокировокСрезПоследних.ДоговорКонтрагента
 	
 	СГРУППИРОВАТЬ ПО
@@ -435,7 +466,8 @@
 ИЗ
 	РегистрНакопления.ЗаказыКлиентов.Обороты(
 			,
-			КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ),
+			//..КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ),
+			&amp;ГраницаДатаОтчета,
 			Регистратор,
 			ЗаказКлиента В
 				(ВЫБРАТЬ
@@ -656,6 +688,28 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
+//++ СадомцевСА 09.11.2023
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	а.Контрагент КАК Контрагент,
+	СУММА(а.Сумма) КАК Сумма
+ПОМЕСТИТЬ вт_Лимиты
+ИЗ
+	//..РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(КОНЕЦПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ), ) КАК а
+	РегистрСведений.гф_ЛимитыКонтрагентов.СрезПоследних(&amp;ГраницаДатаОтчета, ) КАК а
+ГДЕ
+	а.Контрагент В
+			(ВЫБРАТЬ РАЗЛИЧНЫЕ
+				Данные.Контрагент
+			ИЗ
+				Данные)
+	И а.Статус = ЗНАЧЕНИЕ(Справочник.гф_СтатусыЛимитов.Действующий)
+
+СГРУППИРОВАТЬ ПО
+	а.Контрагент
+//-- СадомцевСА 09.11.2023
+;
+
+////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	Данные.ЗаказКлиента КАК ЗаказКлиента,
 	Данные.УпаковочныйЛист КАК УпаковочныйЛист,
@@ -675,6 +729,9 @@
 	Данные.СуммаВПути КАК СуммаВПути,
 	вт_УпаковочныеЛистыОстатки.Склад КАК Склад,
 	Данные.Контрагент КАК Контрагент,
+//++ СадомцевСА 09.11.2023
+	ЕСТЬNULL(вт_Лимиты.Сумма, 0)КАК ДействующийЛимит,
+//-- СадомцевСА 09.11.2023
 //++ СадомцевСА 27.10.2023
 	Данные.КППКонтрагента КАК КППКонтрагента,
 	Данные.ГруппаДоступа КАК ГруппаДоступа,
@@ -688,6 +745,10 @@
 	Данные КАК Данные
 		ЛЕВОЕ СОЕДИНЕНИЕ вт_УпаковочныеЛистыОстатки КАК вт_УпаковочныеЛистыОстатки
 		ПО Данные.УпаковочныйЛист = вт_УпаковочныеЛистыОстатки.УпаковочныйЛист
+//++ СадомцевСА 09.11.2023
+		ЛЕВОЕ СОЕДИНЕНИЕ вт_Лимиты КАК вт_Лимиты
+		ПО Данные.Контрагент = вт_Лимиты.Контрагент
+//-- СадомцевСА 09.11.2023
 ГДЕ
 	вт_УпаковочныеЛистыОстатки.Склад ЕСТЬ НЕ NULL
 //++ СадомцевСА 27.10.2023
@@ -1151,6 +1212,67 @@
 		<expression>Максимум(Заблокирован)</expression>
 		<group>УпаковочныйЛист</group>
 	</totalField>
+	<totalField>
+		<dataPath>ДействующийЛимит</dataPath>
+		<expression>Максимум(ДействующийЛимит)</expression>
+		<group>Контрагент</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДействующийЛимит</dataPath>
+		<expression>0</expression>
+		<group>Адрес</group>
+		<group>ВариантКомплектации</group>
+		<group>ВидБлокировки</group>
+		<group>ГруппаДоступа</group>
+		<group>гф_Агрегация</group>
+		<group>гф_Заказ</group>
+		<group>гф_Поставка</group>
+		<group>ДатаОтгрузки</group>
+		<group>ДатаФактическогоПоступленияНаСклад</group>
+		<group>ДействующийЛимит</group>
+		<group>Заблокирован</group>
+		<group>ЗаказКлиента</group>
+		<group>Количество</group>
+		<group>КоличествоВПути</group>
+		<group>КоличествоВсего</group>
+		<group>КоличествоДнейХранения</group>
+		<group>КоличествоНаСкладе</group>
+		<group>КоличествоУпаковокВПути</group>
+		<group>КоличествоУпаковокВсего</group>
+		<group>КоличествоУпаковокНаСкладе</group>
+		<group>КППКонтрагента</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НоменклатураКачество</group>
+		<group>НомерАдреса</group>
+		<group>НомерВходящегоДокумента</group>
+		<group>ОтклонениеПланФакт</group>
+		<group>Партнер</group>
+		<group>Партнер Иерархия</group>
+		<group>ПлановыйИнтервалПоставкиКонец</group>
+		<group>ПлановыйИнтервалПоставкиНачало</group>
+		<group>ПоступилНаСклад</group>
+		<group>ПриходныйОрдер</group>
+		<group>Реализовано</group>
+		<group>СерийныйНомер</group>
+		<group>СертификатНоменклатуры</group>
+		<group>СертификатНоменклатуры Иерархия</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>Ссылка</group>
+		<group>СтатусКороба</group>
+		<group>Сумма</group>
+		<group>СуммаВПути</group>
+		<group>СуммаВсего</group>
+		<group>СуммаНаСкладе</group>
+		<group>УпаковочныйЛист</group>
+		<group>Цена</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДействующийЛимит</dataPath>
+		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив ("Максимум(ДействующийЛимит)", "Контрагент"))</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -1218,6 +1340,36 @@
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>ФорматРедактирования</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДФ=dd.MM.yyyy</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ГраницаДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Граница дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 		<use>Always</use>
 	</parameter>
 	<settingsVariant>
@@ -1233,6 +1385,20 @@
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>398968c5-4a19-4677-98cc-98fcc3767255</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Ссылка</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>76fcafa7-29fe-40d7-8479-df241d1881b8</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
@@ -1396,6 +1562,17 @@
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>Основной (лимит)</dcsset:name>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДействующийЛимит</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
 				<dcsset:row>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
@@ -1406,6 +1583,7 @@
 							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:use>false</dcsset:use>
 							<dcsset:field>УпаковочныйЛист</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
@@ -1427,6 +1605,23 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>УпаковочныйЛист</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
 				</dcsset:row>
 			</dcsset:item>
 		</dcsset:settings>
