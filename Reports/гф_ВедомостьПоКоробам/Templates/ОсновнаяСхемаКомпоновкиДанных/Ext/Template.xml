@@ -51,10 +51,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Резерв</dataPath>
-			<field>Резерв</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
 			<role>
@@ -357,6 +353,38 @@
 ИЗ
 	КоробаРасход КАК КоробаРасход</query>
 	</dataSet>
+	<totalField>
+		<dataPath>КоличествоКонечныйОстаток</dataPath>
+		<expression>Сумма(КоличествоКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНачальныйОстаток</dataPath>
+		<expression>Сумма(КоличествоНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПриход</dataPath>
+		<expression>Сумма(КоличествоПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРасход</dataPath>
+		<expression>Сумма(КоличествоРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКоробовНаНачало</dataPath>
+		<expression>Сумма(КоличествоКоробовНаНачало)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКоробовПриход</dataPath>
+		<expression>Сумма(КоличествоКоробовПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКоробовРасход</dataPath>
+		<expression>Сумма(КоличествоКоробовРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКоробовНаКонец</dataPath>
+		<expression>Сумма(КоличествоКоробовНаКонец)</expression>
+	</totalField>
 	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
