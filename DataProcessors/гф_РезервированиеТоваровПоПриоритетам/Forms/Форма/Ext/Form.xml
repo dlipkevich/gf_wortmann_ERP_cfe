@@ -91,8 +91,16 @@
 									<Button name="ФормаЗаполнитьПриоритеты" id="50">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ЗаполнитьПриоритеты</CommandName>
+										<ToolTipRepresentation>Balloon</ToolTipRepresentation>
 										<Shape>Oval</Shape>
 										<ExtendedTooltip name="ФормаЗаполнитьПриоритетыРасширеннаяПодсказка" id="51"/>
+									</Button>
+									<Button name="ТекущиеПриоритетыЗаполнитьПриоритетыПоПорядкуСтрок" id="173">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПриоритетыПоПорядкуСтрок</CommandName>
+										<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+										<Shape>Oval</Shape>
+										<ExtendedTooltip name="ТекущиеПриоритетыЗаполнитьПриоритетыПоПорядкуСтрокРасширеннаяПодсказка" id="174"/>
 									</Button>
 									<Button name="ТекущиеПриоритетыСохранить" id="55">
 										<Type>CommandBarButton</Type>
@@ -278,15 +286,37 @@
 							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="158"/>
 							<ChildItems>
 								<Table name="УпаковочныеЛисты" id="133">
-									<ChangeRowSet>false</ChangeRowSet>
 									<ChangeRowOrder>false</ChangeRowOrder>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<DataPath>Объект.УпаковочныеЛисты</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="УпаковочныеЛистыКонтекстноеМеню" id="134"/>
-									<AutoCommandBar name="УпаковочныеЛистыКоманднаяПанель" id="135"/>
+									<AutoCommandBar name="УпаковочныеЛистыКоманднаяПанель" id="135">
+										<ChildItems>
+											<Button name="УпаковочныеЛистыУдалить" id="171">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Item.УпаковочныеЛисты.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="УпаковочныеЛистыУдалитьРасширеннаяПодсказка" id="172"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
 									<ExtendedTooltip name="УпаковочныеЛистыРасширеннаяПодсказка" id="136"/>
 									<SearchStringAddition name="УпаковочныеЛистыСтрокаПоиска" id="137">
 										<AdditionSource>
@@ -314,6 +344,7 @@
 									</SearchControlAddition>
 									<Events>
 										<Event name="OnActivateRow">УпаковочныеЛистыПриАктивизацииСтроки</Event>
+										<Event name="OnChange">УпаковочныеЛистыПриИзменении</Event>
 									</Events>
 									<ChildItems>
 										<LabelField name="УпаковочныеЛистыНомерСтроки" id="146">
@@ -790,7 +821,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить приоритеты</v8:content>
+					<v8:content>Заполнить приоритеты из регистра</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПриоритеты</Action>
@@ -805,7 +836,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить</v8:content>
+					<v8:content>Сохранить содержимое таблицы приоритетов в регистр</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Сохранить</Action>
@@ -854,6 +885,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьРезервПоПриоритетам</Action>
+		</Command>
+		<Command name="ЗаполнитьПриоритетыПоПорядкуСтрок" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по порядку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить значения в колонке "Новый приоритет" в соответствии с порядковым номером строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПриоритетыПоПорядкуСтрок</Action>
 		</Command>
 	</Commands>
 </Form>
