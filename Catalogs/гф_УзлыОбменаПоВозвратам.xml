@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Catalog uuid="21feb1c4-d6d4-4b35-b621-717c79981ba4">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.гф_УзлыОбменаПоВозвратам" category="Object">
+				<xr:TypeId>d91c5c11-ed41-4074-bb28-71dba62333c2</xr:TypeId>
+				<xr:ValueId>088a2fc2-3e21-4ba7-a114-adb196b92f51</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogRef.гф_УзлыОбменаПоВозвратам" category="Ref">
+				<xr:TypeId>9c1be656-9ce1-4a80-a84e-84ad08cb33c0</xr:TypeId>
+				<xr:ValueId>a64f3052-e6db-4b78-a341-cbd2fba2d432</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogSelection.гф_УзлыОбменаПоВозвратам" category="Selection">
+				<xr:TypeId>ff455759-37d3-4e58-9aed-d71ff3afbc7f</xr:TypeId>
+				<xr:ValueId>43fb8827-a154-4e28-a642-095eacfdda84</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogList.гф_УзлыОбменаПоВозвратам" category="List">
+				<xr:TypeId>972812ab-40a9-492f-9d8b-5e84d470afb7</xr:TypeId>
+				<xr:ValueId>a67c51e7-7864-49f5-9e3a-eb42d38407bd</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="CatalogManager.гф_УзлыОбменаПоВозвратам" category="Manager">
+				<xr:TypeId>c1e22587-79f6-4a63-b4ca-7e13aa4f5c8e</xr:TypeId>
+				<xr:ValueId>57dd4bfe-aa99-4f92-9400-9ca1c6496d49</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_УзлыОбменаПоВозвратам</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>9a0842dd-88cd-44a0-869c-67212e882610</ExtendedConfigurationObject>
+			<DefaultObjectForm>Catalog.гф_УзлыОбменаПоВозвратам.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultListForm>Catalog.гф_УзлыОбменаПоВозвратам.Form.ФормаСписка</DefaultListForm>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="c9f93e56-2f98-42f5-b025-7b35fa17bafe">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f8dcb3f8-8aff-49d9-a524-a66ad95ec8c9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="c0fddba3-8405-4e9b-b5f1-9cce159cdc6e">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ИмяСервера</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>d3549ef9-98ad-443c-a2cc-3d398c27c3bb</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="dd88b0b5-9785-4693-b002-c5217f462c0a">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ИмяИБНаСервере</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>6d770e0b-a63d-45f7-a881-17e4daebec96</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="41c757f8-1a9c-431e-b123-770096151026">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Пользователь</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>abd206a5-3bf2-4839-bb16-fbff1ec9876f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="e824309f-cc6c-40d8-a36a-d8da2d1f1162">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Пароль</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>cc04b8b6-e00b-4ba3-88e2-3e162fbd5553</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="261f70d2-92f7-4b5b-b93c-71f63e8851d1">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ФайловыйРежим</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8e514851-54fd-48e7-abf5-72af32c5900c</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0b95d57e-dd25-4392-b204-3431c78e2e9a">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>КаталогИБ</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c74033b6-2667-4b3f-8e98-07aa682f7225</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="f9b3d10a-f4e1-4f57-8825-7efc3fdefaef">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ЗавершениеОбмена</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>1ed356da-d3d1-4f25-8c4a-b8ca6691ad29</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаЭлемента</Form>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

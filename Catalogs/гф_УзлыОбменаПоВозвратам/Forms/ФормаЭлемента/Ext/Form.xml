@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверить" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Проверить</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Организация" id="33">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="ЗавершениеОбмена" id="36">
+			<DataPath>Объект.ЗавершениеОбмена</DataPath>
+			<ContextMenu name="ЗавершениеОбменаКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ЗавершениеОбменаРасширеннаяПодсказка" id="38"/>
+		</InputField>
+		<InputField name="ИмяСервера" id="7">
+			<DataPath>Объект.ИмяСервера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяСервераКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИмяСервераРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ИмяИБНаСервере" id="10">
+			<DataPath>Объект.ИмяИБНаСервере</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяИБНаСервереКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИмяИБНаСервереРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Пользователь" id="13">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Пароль" id="16">
+			<DataPath>Объект.Пароль</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<PasswordMode>true</PasswordMode>
+			<ContextMenu name="ПарольКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ВерсияПлатформы" id="22">
+			<EditMode>EnterOnInput</EditMode>
+			<Width>5</Width>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ChoiceButtonRepresentation>ShowInDropList</ChoiceButtonRepresentation>
+			<OpenButton>false</OpenButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">81</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">82</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:decimal">83</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВерсияПлатформыКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВерсияПлатформыРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<CheckBoxField name="ФайловыйРежим" id="25">
+			<DataPath>Объект.ФайловыйРежим</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ФайловыйРежимКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ФайловыйРежимРасширеннаяПодсказка" id="27"/>
+		</CheckBoxField>
+		<InputField name="КаталогИБ" id="28">
+			<DataPath>Объект.КаталогИБ</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КаталогИБКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="КаталогИБРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.гф_УзлыОбменаПоВозвратам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Проверить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Проверить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
