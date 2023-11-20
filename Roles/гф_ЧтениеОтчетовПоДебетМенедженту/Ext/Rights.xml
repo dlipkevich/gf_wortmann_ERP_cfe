@@ -1921,6 +1921,25 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.Партнеры</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Справочник.Партнеры","Чтение","",
+"ГруппыПартнеров","Ссылка", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.Партнеры.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>View</name>
@@ -2731,6 +2750,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.гф_ПричиныБлокировок.Dimension.ВидБлокировки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УпаковочныйЛист</name>
 		<right>
 			<name>Read</name>
@@ -2953,6 +2979,25 @@
 		<right>
 			<name>Use</name>
 			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.Организации</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
+#ДляОбъекта("")
+#Иначе
+#ПоЗначениям( "Справочник.Организации","Чтение","",
+"Организации","Ссылка","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
+#КонецЕсли</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
