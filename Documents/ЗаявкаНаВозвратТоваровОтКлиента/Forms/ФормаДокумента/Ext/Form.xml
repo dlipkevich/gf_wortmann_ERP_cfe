@@ -769,6 +769,9 @@
 													<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 													<ContextMenu name="СкладКонтекстноеМеню" id="16"/>
 													<ExtendedTooltip name="СкладExtendedTooltip" id="1041"/>
+													<Events>
+														<Event name="StartChoice" callType="After">гф_СкладНачалоВыбораПосле</Event>
+													</Events>
 												</InputField>
 												<InputField name="СпособКомпенсации" id="996">
 													<Title>
