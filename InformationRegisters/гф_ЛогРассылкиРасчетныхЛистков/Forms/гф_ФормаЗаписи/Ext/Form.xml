@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="ТабельныйНомер" id="3">
+					<DataPath>Запись.ТабельныйНомер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табельный номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТабельныйНомерКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ТабельныйНомерРасширеннаяПодсказка" id="5"/>
+				</InputField>
+				<InputField name="Период" id="6">
+					<DataPath>Запись.ПериодНачисления</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<InputField name="ДатаОтправки" id="9">
+					<DataPath>Запись.ДатаОтправки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отправки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаОтправкиКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДатаОтправкиРасширеннаяПодсказка" id="11"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НаименованиеФайла" id="12">
+			<DataPath>Запись.НаименованиеФайла</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование файла</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НаименованиеФайлаКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="НаименованиеФайлаРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<UsualGroup name="ГруппаАдреса" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа адреса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа адреса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАдресаРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<InputField name="ЭлектронныйАдресОтправителя" id="17">
+					<DataPath>Запись.ЭлектронныйАдресОтправителя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный адрес отправителя</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЭлектронныйАдресОтправителяКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ЭлектронныйАдресОтправителяРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ЭлектронныйАдресПолучателя" id="20">
+					<DataPath>Запись.ЭлектронныйАдресПолучателя</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный адрес получателя</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЭлектронныйАдресПолучателяКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ЭлектронныйАдресПолучателяРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.гф_ЛогРассылкиРасчетныхЛистков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

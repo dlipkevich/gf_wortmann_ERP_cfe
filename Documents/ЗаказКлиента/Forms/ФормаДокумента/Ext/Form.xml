@@ -2042,8 +2042,9 @@
 													<DataPath>Объект.Товары.ВидЦены</DataPath>
 													<Width>16</Width>
 													<Wrap>false</Wrap>
+													<DropListButton>true</DropListButton>
+													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
-													<QuickChoice>true</QuickChoice>
 													<ChoiceParameterLinks>
 														<xr:Link>
 															<xr:Name>Отбор.ЦенаВключаетНДС</xr:Name>
@@ -2058,7 +2059,17 @@
 														<xr:Link>
 															<xr:Name>Соглашение</xr:Name>
 															<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
-															<xr:ValueChange>DontChange</xr:ValueChange>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+														<xr:Link>
+															<xr:Name>Партнер</xr:Name>
+															<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
+														</xr:Link>
+														<xr:Link>
+															<xr:Name>ИспользуетсяЦенообразование25</xr:Name>
+															<xr:DataPath xsi:type="xs:string">95</xr:DataPath>
+															<xr:ValueChange>Clear</xr:ValueChange>
 														</xr:Link>
 													</ChoiceParameterLinks>
 													<ChoiceParameters>
@@ -2867,7 +2878,7 @@
 																	<MaxWidth>27</MaxWidth>
 																	<DropListButton>true</DropListButton>
 																	<ChoiceButton>true</ChoiceButton>
-																	<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+																	<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
 																	<OpenButton>false</OpenButton>
 																	<ChoiceListButton>true</ChoiceListButton>
 																	<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
@@ -5150,7 +5161,7 @@ notes</v8:content>
 					<Type>CommandBarButton</Type>
 					<CommandName>0</CommandName>
 					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-					<ExtendedTooltip name="СчитатьКартуЛояльностиExtendedTooltip" id="1111"/>
+					<ExtendedTooltip name="СчитатьКартуЛояльностиРасширеннаяПодсказка" id="1111"/>
 				</Button>
 				<Popup name="ПодменюЗаполнить" id="1486">
 					<Title>
@@ -5177,7 +5188,7 @@ notes</v8:content>
 						<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ПодменюДополнительныхОбработокЗаполненияРасширеннаяПодсказка" id="1487"/>
+					<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="1487"/>
 				</Popup>
 				<Button name="ИзменитьФорму" id="1575">
 					<Type>CommandBarButton</Type>
@@ -5259,7 +5270,7 @@ notes</v8:content>
 								<Behavior>Usual</Behavior>
 								<Representation>None</Representation>
 								<ShowTitle>false</ShowTitle>
-								<ExtendedTooltip name="ГруппаСтатусПриоритетExtendedTooltip" id="1122"/>
+								<ExtendedTooltip name="ГруппаСтатусПриоритетРасширеннаяПодсказка" id="1122"/>
 								<ChildItems>
 									<InputField name="Статус" id="620">
 										<DataPath>Объект.Статус</DataPath>
@@ -5271,7 +5282,7 @@ notes</v8:content>
 										<ListChoiceMode>true</ListChoiceMode>
 										<ChooseType>false</ChooseType>
 										<ContextMenu name="СтатусКонтекстноеМеню" id="621"/>
-										<ExtendedTooltip name="СтатусExtendedTooltip" id="1127"/>
+										<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="1127"/>
 									</InputField>
 									<InputField name="Приоритет" id="569">
 										<DataPath>Объект.Приоритет</DataPath>
@@ -5280,7 +5291,7 @@ notes</v8:content>
 										<Wrap>false</Wrap>
 										<OpenButton>false</OpenButton>
 										<ContextMenu name="ПриоритетКонтекстноеМеню" id="570"/>
-										<ExtendedTooltip name="ПриоритетExtendedTooltip" id="1128"/>
+										<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="1128"/>
 									</InputField>
 									<Button name="ПоказатьСообщения" id="976">
 										<Type>Hyperlink</Type>
@@ -5295,7 +5306,7 @@ notes</v8:content>
 												<v8:content>There are messages</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="ПоказатьСообщенияExtendedTooltip" id="1129"/>
+										<ExtendedTooltip name="ПоказатьСообщенияРасширеннаяПодсказка" id="1129"/>
 									</Button>
 									<Button name="ЗакрытьЗаказ" id="1722">
 										<Type>Hyperlink</Type>
@@ -5329,7 +5340,7 @@ notes</v8:content>
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаСостояниеExtendedTooltip" id="1357"/>
+										<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="1357"/>
 										<ChildItems>
 											<LabelField name="Состояние" id="715">
 												<ReadOnly>true</ReadOnly>
@@ -5358,7 +5369,7 @@ notes</v8:content>
 												<HorizontalStretch>true</HorizontalStretch>
 												<Hiperlink>true</Hiperlink>
 												<ContextMenu name="СостояниеКонтекстноеМеню" id="716"/>
-												<ExtendedTooltip name="СостояниеExtendedTooltip" id="1359"/>
+												<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="1359"/>
 											</LabelField>
 										</ChildItems>
 									</UsualGroup>
@@ -5376,7 +5387,7 @@ notes</v8:content>
 									</v8:item>
 								</Title>
 								<PagesRepresentation>TabsOnTop</PagesRepresentation>
-								<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="1145"/>
+								<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="1145"/>
 								<ChildItems>
 									<Page name="ГруппаОсновное" id="1496">
 										<Title>
@@ -5406,7 +5417,7 @@ notes</v8:content>
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<Hiperlink>true</Hiperlink>
 												<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="426"/>
-												<ExtendedTooltip name="ДокументОснованиеExtendedTooltip" id="1112"/>
+												<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="1112"/>
 											</LabelField>
 											<UsualGroup name="ГруппаШапка" id="562">
 												<Title>
@@ -5423,7 +5434,7 @@ notes</v8:content>
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="1113"/>
+												<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="1113"/>
 												<ChildItems>
 													<UsualGroup name="ГруппаШапкаЛево" id="563">
 														<Title>
@@ -5441,7 +5452,7 @@ notes</v8:content>
 														<Representation>None</Representation>
 														<United>false</United>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ГруппаШапкаЛевоExtendedTooltip" id="1114"/>
+														<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="1114"/>
 														<ChildItems>
 															<UsualGroup name="ГруппаНомерДата" id="88">
 																<Title>
@@ -5458,7 +5469,7 @@ notes</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="1115"/>
+																<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="1115"/>
 																<ChildItems>
 																	<InputField name="Номер" id="1">
 																		<DataPath>Объект.Number</DataPath>
@@ -5466,7 +5477,7 @@ notes</v8:content>
 																		<HorizontalStretch>false</HorizontalStretch>
 																		<Wrap>false</Wrap>
 																		<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
-																		<ExtendedTooltip name="НомерExtendedTooltip" id="1116"/>
+																		<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="1116"/>
 																	</InputField>
 																	<InputField name="Дата" id="3">
 																		<DataPath>Объект.Date</DataPath>
@@ -5484,7 +5495,7 @@ notes</v8:content>
 																		<HorizontalStretch>false</HorizontalStretch>
 																		<Wrap>false</Wrap>
 																		<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-																		<ExtendedTooltip name="ДатаExtendedTooltip" id="1117"/>
+																		<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="1117"/>
 																	</InputField>
 																</ChildItems>
 															</UsualGroup>
@@ -5521,7 +5532,7 @@ notes</v8:content>
 																		<ChooseType>false</ChooseType>
 																		<TypeDomainEnabled>false</TypeDomainEnabled>
 																		<ContextMenu name="ПартнерКонтекстноеМеню" id="6"/>
-																		<ExtendedTooltip name="ПартнерExtendedTooltip" id="1118"/>
+																		<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="1118"/>
 																	</InputField>
 																	<Button name="СчитатьКартуЛояльностиКлиент" id="1505">
 																		<Type>UsualButton</Type>
@@ -5537,7 +5548,7 @@ notes</v8:content>
 																<MaxWidth>30</MaxWidth>
 																<Wrap>false</Wrap>
 																<ContextMenu name="КонтрагентКонтекстноеМеню" id="10"/>
-																<ExtendedTooltip name="КонтрагентExtendedTooltip" id="1119"/>
+																<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="1119"/>
 															</InputField>
 															<InputField name="Соглашение" id="331">
 																<DataPath>Объект.Соглашение</DataPath>
@@ -5558,7 +5569,7 @@ notes</v8:content>
 																<ChoiceButton>true</ChoiceButton>
 																<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 																<ContextMenu name="СоглашениеКонтекстноеМеню" id="332"/>
-																<ExtendedTooltip name="СоглашениеExtendedTooltip" id="1120"/>
+																<ExtendedTooltip name="СоглашениеРасширеннаяПодсказка" id="1120"/>
 															</InputField>
 														</ChildItems>
 													</UsualGroup>
@@ -5579,7 +5590,7 @@ notes</v8:content>
 														<United>false</United>
 														<ChildItemsWidth>Equal</ChildItemsWidth>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ГруппаШапкаПравоExtendedTooltip" id="1121"/>
+														<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="1121"/>
 														<ChildItems>
 															<InputField name="ХозяйственнаяОперация" id="794">
 																<DataPath>Объект.ХозяйственнаяОперация</DataPath>
@@ -5591,7 +5602,7 @@ notes</v8:content>
 																<ListChoiceMode>true</ListChoiceMode>
 																<BackColor>style:ЦветФонаВыделения</BackColor>
 																<ContextMenu name="ХозяйственнаяОперацияКонтекстноеМеню" id="795"/>
-																<ExtendedTooltip name="ХозяйственнаяОперацияExtendedTooltip" id="1271"/>
+																<ExtendedTooltip name="ХозяйственнаяОперацияРасширеннаяПодсказка" id="1271"/>
 															</InputField>
 															<UsualGroup name="ГруппаНадписьОрганизация" id="1540">
 																<Title>
@@ -5621,7 +5632,7 @@ notes</v8:content>
 																		<ChoiceButton>false</ChoiceButton>
 																		<DropListWidth>33</DropListWidth>
 																		<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
-																		<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="1132"/>
+																		<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="1132"/>
 																	</InputField>
 																	<PictureDecoration name="КартинкаОтгрузкаПартнеруЗапрещена" id="1100">
 																		<Width>2</Width>
@@ -5641,7 +5652,7 @@ notes</v8:content>
 																		<GroupVerticalAlign>Center</GroupVerticalAlign>
 																		<FileDragMode>AsFile</FileDragMode>
 																		<ContextMenu name="КартинкаОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1101"/>
-																		<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1133"/>
+																		<ExtendedTooltip name="КартинкаОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="1133"/>
 																	</PictureDecoration>
 																	<LabelDecoration name="ТекстОтгрузкаПартнеруЗапрещена" id="1102">
 																		<AutoMaxWidth>false</AutoMaxWidth>
@@ -5659,7 +5670,7 @@ notes</v8:content>
 																		<GroupVerticalAlign>Top</GroupVerticalAlign>
 																		<Hyperlink>true</Hyperlink>
 																		<ContextMenu name="ТекстОтгрузкаПартнеруЗапрещенаКонтекстноеМеню" id="1103"/>
-																		<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаExtendedTooltip" id="1134"/>
+																		<ExtendedTooltip name="ТекстОтгрузкаПартнеруЗапрещенаРасширеннаяПодсказка" id="1134"/>
 																	</LabelDecoration>
 																</ChildItems>
 															</UsualGroup>
@@ -5696,7 +5707,7 @@ notes</v8:content>
 																		</ChoiceParameterLinks>
 																		<DropListWidth>33</DropListWidth>
 																		<ContextMenu name="ДоговорКонтекстноеМеню" id="973"/>
-																		<ExtendedTooltip name="ДоговорExtendedTooltip" id="1137"/>
+																		<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="1137"/>
 																	</InputField>
 																	<PictureDecoration name="КартинкаОтгрузкаЗапрещена" id="1079">
 																		<Width>2</Width>
@@ -5716,7 +5727,7 @@ notes</v8:content>
 																		<GroupVerticalAlign>Center</GroupVerticalAlign>
 																		<FileDragMode>AsFile</FileDragMode>
 																		<ContextMenu name="КартинкаОтгрузкаЗапрещенаКонтекстноеМеню" id="1080"/>
-																		<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаExtendedTooltip" id="1138"/>
+																		<ExtendedTooltip name="КартинкаОтгрузкаЗапрещенаРасширеннаяПодсказка" id="1138"/>
 																	</PictureDecoration>
 																	<LabelDecoration name="ДекорацияОграничениеЗадолженности" id="1754">
 																		<TextColor>web:FireBrick</TextColor>
@@ -5757,7 +5768,7 @@ notes</v8:content>
 																<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 																<DropListWidth>33</DropListWidth>
 																<ContextMenu name="СкладКонтекстноеМеню" id="16"/>
-																<ExtendedTooltip name="СкладExtendedTooltip" id="1142"/>
+																<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="1142"/>
 															</InputField>
 														</ChildItems>
 													</UsualGroup>
@@ -5905,7 +5916,7 @@ notes</v8:content>
 												<VerticalStretch>false</VerticalStretch>
 												<Wrap>false</Wrap>
 												<ContextMenu name="КомментарийКонтекстноеМеню" id="820"/>
-												<ExtendedTooltip name="КомментарийExtendedTooltip" id="1306"/>
+												<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="1306"/>
 											</InputField>
 											<UsualGroup name="ГруппаПодпискаНаОповещения" id="1484">
 												<Title>
@@ -5971,7 +5982,7 @@ notes</v8:content>
 										</Title>
 										<ChildItemsWidth>LeftWide</ChildItemsWidth>
 										<TitleDataPath>Объект.Товары.RowsCount</TitleDataPath>
-										<ExtendedTooltip name="ГруппаТоварыExtendedTooltip" id="1146"/>
+										<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="1146"/>
 										<ChildItems>
 											<Table name="Товары" id="465">
 												<SkipOnInput>false</SkipOnInput>
@@ -5996,22 +6007,22 @@ notes</v8:content>
 														<Button name="ТоварыКонтекстноеМенюСкопироватьСтроки" id="1083">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыКонтекстноеМенюСкопироватьСтрокиExtendedTooltip" id="1147"/>
+															<ExtendedTooltip name="ТоварыКонтекстноеМенюСкопироватьСтрокиРасширеннаяПодсказка" id="1147"/>
 														</Button>
 														<Button name="ТоварыКонтекстноеМенюВставитьСтроки" id="1084">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыКонтекстноеМенюВставитьСтрокиExtendedTooltip" id="1148"/>
+															<ExtendedTooltip name="ТоварыКонтекстноеМенюВставитьСтрокиРасширеннаяПодсказка" id="1148"/>
 														</Button>
 														<Button name="ТоварыКонтекстноеМенюРазбитьСтроку" id="983">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыКонтекстноеМенюРазбитьСтрокуExtendedTooltip" id="1149"/>
+															<ExtendedTooltip name="ТоварыКонтекстноеМенюРазбитьСтрокуРасширеннаяПодсказка" id="1149"/>
 														</Button>
 														<Button name="КонтекстноеМенюТоварыОткрытьИнформациюОСкидках" id="818">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="КонтекстноеМенюТоварыОткрытьИнформациюОСкидкахExtendedTooltip" id="1152"/>
+															<ExtendedTooltip name="КонтекстноеМенюТоварыОткрытьИнформациюОСкидкахРасширеннаяПодсказка" id="1152"/>
 														</Button>
 														<Button name="ТоварыКонтекстноеМенюСоставНабора" id="1394">
 															<Type>CommandBarButton</Type>
@@ -6081,17 +6092,17 @@ notes</v8:content>
 														<Button name="ТоварыСкопироватьСтроки" id="1082">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыСкопироватьСтрокиExtendedTooltip" id="1153"/>
+															<ExtendedTooltip name="ТоварыСкопироватьСтрокиРасширеннаяПодсказка" id="1153"/>
 														</Button>
 														<Button name="ТоварыВставитьСтроки" id="1081">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыВставитьСтрокиExtendedTooltip" id="1154"/>
+															<ExtendedTooltip name="ТоварыВставитьСтрокиРасширеннаяПодсказка" id="1154"/>
 														</Button>
 														<Button name="ТоварыРазбитьСтроку" id="936">
 															<Type>CommandBarButton</Type>
 															<CommandName>0</CommandName>
-															<ExtendedTooltip name="ТоварыРазбитьСтрокуExtendedTooltip" id="1155"/>
+															<ExtendedTooltip name="ТоварыРазбитьСтрокуРасширеннаяПодсказка" id="1155"/>
 														</Button>
 														<Button name="ТоварыСоставНабора" id="1392">
 															<Type>CommandBarButton</Type>
@@ -6109,7 +6120,7 @@ notes</v8:content>
 																	<v8:content>Select goods</v8:content>
 																</v8:item>
 															</Title>
-															<ExtendedTooltip name="ГруппаТоварыПодобратьТоварыExtendedTooltip" id="1156"/>
+															<ExtendedTooltip name="ГруппаТоварыПодобратьТоварыРасширеннаяПодсказка" id="1156"/>
 															<ChildItems>
 																<ButtonGroup name="ГруппаДобавитьСтроки" id="824">
 																	<Title>
@@ -6122,7 +6133,7 @@ notes</v8:content>
 																			<v8:content>Add lines</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ExtendedTooltip name="ГруппаДобавитьСтрокиExtendedTooltip" id="1157"/>
+																	<ExtendedTooltip name="ГруппаДобавитьСтрокиРасширеннаяПодсказка" id="1157"/>
 																	<ChildItems>
 																		<Button name="ТоварыПоискПоШтрихкоду" id="825">
 																			<Type>CommandBarButton</Type>
@@ -6138,7 +6149,7 @@ notes</v8:content>
 																					<v8:content>Find goods by barcode</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ExtendedTooltip name="ТоварыПоискПоШтрихкодуExtendedTooltip" id="1158"/>
+																			<ExtendedTooltip name="ТоварыПоискПоШтрихкодуРасширеннаяПодсказка" id="1158"/>
 																		</Button>
 																		<Button name="ТоварыЗагрузитьДанныеИзТСД" id="826">
 																			<Type>CommandBarButton</Type>
@@ -6155,7 +6166,7 @@ notes</v8:content>
 																					<v8:content>Import goods from PDT</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ExtendedTooltip name="ТоварыЗагрузитьДанныеИзТСДExtendedTooltip" id="1159"/>
+																			<ExtendedTooltip name="ТоварыЗагрузитьДанныеИзТСДРасширеннаяПодсказка" id="1159"/>
 																		</Button>
 																	</ChildItems>
 																</ButtonGroup>
@@ -6176,17 +6187,17 @@ notes</v8:content>
 																			<Type>CommandBarButton</Type>
 																			<SkipOnInput>false</SkipOnInput>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыОткрытьПодборExtendedTooltip" id="1161"/>
+																			<ExtendedTooltip name="ТоварыОткрытьПодборРасширеннаяПодсказка" id="1161"/>
 																		</Button>
 																		<Button name="ТоварыДополнитьМногооборотнойТарой" id="1090">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыДополнитьМногооборотнойТаройExtendedTooltip" id="1162"/>
+																			<ExtendedTooltip name="ТоварыДополнитьМногооборотнойТаройРасширеннаяПодсказка" id="1162"/>
 																		</Button>
 																		<Button name="ТоварыЗагрузитьИзВнешнегоФайла" id="1104">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыЗагрузитьИзВнешнегоФайлаExtendedTooltip" id="1160"/>
+																			<ExtendedTooltip name="ТоварыЗагрузитьИзВнешнегоФайлаРасширеннаяПодсказка" id="1160"/>
 																		</Button>
 																		<ButtonGroup name="ТоварыГруппаЗаполнитьКолонку" id="1853">
 																			<Title>
@@ -6235,18 +6246,18 @@ notes</v8:content>
 																					<v8:content>Cancel lines</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ExtendedTooltip name="ГруппаТоварыОтменаСтрокExtendedTooltip" id="1181"/>
+																			<ExtendedTooltip name="ГруппаТоварыОтменаСтрокРасширеннаяПодсказка" id="1181"/>
 																			<ChildItems>
 																				<Button name="ТоварыОтменитьВыделенныеСтроки" id="726">
 																					<Type>CommandBarButton</Type>
 																					<SkipOnInput>false</SkipOnInput>
 																					<CommandName>0</CommandName>
-																					<ExtendedTooltip name="ТоварыОтменитьВыделенныеСтрокиExtendedTooltip" id="1182"/>
+																					<ExtendedTooltip name="ТоварыОтменитьВыделенныеСтрокиРасширеннаяПодсказка" id="1182"/>
 																				</Button>
 																				<Button name="ТоварыОтменитьНепоставленныеСтроки" id="815">
 																					<Type>CommandBarButton</Type>
 																					<CommandName>0</CommandName>
-																					<ExtendedTooltip name="ТоварыОтменитьНепоставленныеСтрокиExtendedTooltip" id="1183"/>
+																					<ExtendedTooltip name="ТоварыОтменитьНепоставленныеСтрокиРасширеннаяПодсказка" id="1183"/>
 																				</Button>
 																				<ButtonGroup name="ГруппаТоварыОтменаСтрокНастройки" id="816">
 																					<Title>
@@ -6259,13 +6270,13 @@ notes</v8:content>
 																							<v8:content>Goods cancel setting lines</v8:content>
 																						</v8:item>
 																					</Title>
-																					<ExtendedTooltip name="ГруппаТоварыОтменаСтрокНастройкиExtendedTooltip" id="1184"/>
+																					<ExtendedTooltip name="ГруппаТоварыОтменаСтрокНастройкиРасширеннаяПодсказка" id="1184"/>
 																					<ChildItems>
 																						<Button name="ТоварыСкрыватьОтмененныеСтроки" id="800">
 																							<Type>CommandBarButton</Type>
 																							<SkipOnInput>false</SkipOnInput>
 																							<CommandName>0</CommandName>
-																							<ExtendedTooltip name="ТоварыСкрыватьОтмененныеСтрокиExtendedTooltip" id="1185"/>
+																							<ExtendedTooltip name="ТоварыСкрыватьОтмененныеСтрокиРасширеннаяПодсказка" id="1185"/>
 																						</Button>
 																					</ChildItems>
 																				</ButtonGroup>
@@ -6456,13 +6467,13 @@ notes</v8:content>
 																			<v8:content>Prices</v8:content>
 																		</v8:item>
 																	</ToolTip>
-																	<ExtendedTooltip name="ГруппаТоварыЦеныExtendedTooltip" id="1166"/>
+																	<ExtendedTooltip name="ГруппаТоварыЦеныРасширеннаяПодсказка" id="1166"/>
 																	<ChildItems>
 																		<Button name="ТоварыЗаполнитьЦеныПоСоглашению" id="697">
 																			<Type>CommandBarButton</Type>
 																			<SkipOnInput>false</SkipOnInput>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныПоСоглашениюExtendedTooltip" id="1167"/>
+																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныПоСоглашениюРасширеннаяПодсказка" id="1167"/>
 																		</Button>
 																		<Button name="ТоварыЗаполнитьЦеныПоДоговору" id="2382">
 																			<Type>CommandBarButton</Type>
@@ -6473,7 +6484,7 @@ notes</v8:content>
 																			<Type>CommandBarButton</Type>
 																			<SkipOnInput>false</SkipOnInput>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныВыделенныхСтрокПоВидуЦенExtendedTooltip" id="1169"/>
+																			<ExtendedTooltip name="ТоварыЗаполнитьЦеныВыделенныхСтрокПоВидуЦенРасширеннаяПодсказка" id="1169"/>
 																		</Button>
 																	</ChildItems>
 																</ButtonGroup>
@@ -6498,33 +6509,33 @@ notes</v8:content>
 																			<v8:content>Discounts (markups)</v8:content>
 																		</v8:item>
 																	</ToolTip>
-																	<ExtendedTooltip name="ГруппаТоварыСкидкиНаценкиExtendedTooltip" id="1170"/>
+																	<ExtendedTooltip name="ГруппаТоварыСкидкиНаценкиРасширеннаяПодсказка" id="1170"/>
 																	<ChildItems>
 																		<Button name="ТоварыРассчитатьСкидкиНаценки" id="791">
 																			<Type>CommandBarButton</Type>
 																			<SkipOnInput>false</SkipOnInput>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыРассчитатьСкидкиНаценкиExtendedTooltip" id="1171"/>
+																			<ExtendedTooltip name="ТоварыРассчитатьСкидкиНаценкиРасширеннаяПодсказка" id="1171"/>
 																		</Button>
 																		<Button name="ТоварыНазначитьАвтоматическиеСкидки" id="817">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыНазначитьАвтоматическиеСкидкиExtendedTooltip" id="1172"/>
+																			<ExtendedTooltip name="ТоварыНазначитьАвтоматическиеСкидкиРасширеннаяПодсказка" id="1172"/>
 																		</Button>
 																		<Button name="ТоварыНазначитьРучнуюСкидку" id="810">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыНазначитьРучнуюСкидкуExtendedTooltip" id="1173"/>
+																			<ExtendedTooltip name="ТоварыНазначитьРучнуюСкидкуРасширеннаяПодсказка" id="1173"/>
 																		</Button>
 																		<Button name="ТоварыНазначитьРучнуюСкидкуВыделенныхСтрок" id="978">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыНазначитьРучнуюСкидкуВыделенныхСтрокExtendedTooltip" id="1174"/>
+																			<ExtendedTooltip name="ТоварыНазначитьРучнуюСкидкуВыделенныхСтрокРасширеннаяПодсказка" id="1174"/>
 																		</Button>
 																		<Button name="ТоварыОтменитьРучныеСкидки" id="811">
 																			<Type>CommandBarButton</Type>
 																			<CommandName>0</CommandName>
-																			<ExtendedTooltip name="ТоварыОтменитьРучныеСкидкиExtendedTooltip" id="1175"/>
+																			<ExtendedTooltip name="ТоварыОтменитьРучныеСкидкиРасширеннаяПодсказка" id="1175"/>
 																		</Button>
 																		<ButtonGroup name="ГруппаТоварыИнформацияОСкидках" id="812">
 																			<Title>
@@ -6537,12 +6548,12 @@ notes</v8:content>
 																					<v8:content>Goods information on discounts</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ExtendedTooltip name="ГруппаТоварыИнформацияОСкидкахExtendedTooltip" id="1176"/>
+																			<ExtendedTooltip name="ГруппаТоварыИнформацияОСкидкахРасширеннаяПодсказка" id="1176"/>
 																			<ChildItems>
 																				<Button name="ТоварыОткрытьИнформациюОСкидках" id="813">
 																					<Type>CommandBarButton</Type>
 																					<CommandName>0</CommandName>
-																					<ExtendedTooltip name="ТоварыОткрытьИнформациюОСкидкахExtendedTooltip" id="1177"/>
+																					<ExtendedTooltip name="ТоварыОткрытьИнформациюОСкидкахРасширеннаяПодсказка" id="1177"/>
 																				</Button>
 																			</ChildItems>
 																		</ButtonGroup>
@@ -6572,7 +6583,7 @@ notes</v8:content>
 														</Button>
 													</ChildItems>
 												</AutoCommandBar>
-												<ExtendedTooltip name="ТоварыExtendedTooltip" id="1189"/>
+												<ExtendedTooltip name="ТоварыРасширеннаяПодсказка" id="1189"/>
 												<SearchStringAddition name="ТоварыСтрокаПоиска" id="1410">
 													<AdditionSource>
 														<Item>Товары</Item>
@@ -6605,7 +6616,7 @@ notes</v8:content>
 														<HorizontalStretch>false</HorizontalStretch>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыНомерСтрокиКонтекстноеМеню" id="469"/>
-														<ExtendedTooltip name="ТоварыНомерСтрокиExtendedTooltip" id="1190"/>
+														<ExtendedTooltip name="ТоварыНомерСтрокиРасширеннаяПодсказка" id="1190"/>
 													</InputField>
 													<LabelField name="ТоварыНоменклатураТипНоменклатуры" id="1091">
 														<DataPath>Объект.Товары.Номенклатура.ТипНоменклатуры</DataPath>
@@ -6625,7 +6636,7 @@ notes</v8:content>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>7</Width>
 														<ContextMenu name="ТоварыНоменклатураТипНоменклатурыКонтекстноеМеню" id="1092"/>
-														<ExtendedTooltip name="ТоварыНоменклатураТипНоменклатурыExtendedTooltip" id="1191"/>
+														<ExtendedTooltip name="ТоварыНоменклатураТипНоменклатурыРасширеннаяПодсказка" id="1191"/>
 													</LabelField>
 													<InputField name="ТоварыКодСтроки" id="627">
 														<DataPath>Объект.Товары.КодСтроки</DataPath>
@@ -6638,7 +6649,7 @@ notes</v8:content>
 														<HorizontalStretch>false</HorizontalStretch>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыКодСтрокиКонтекстноеМеню" id="628"/>
-														<ExtendedTooltip name="ТоварыКодСтрокиExtendedTooltip" id="1192"/>
+														<ExtendedTooltip name="ТоварыКодСтрокиРасширеннаяПодсказка" id="1192"/>
 													</InputField>
 													<LabelField name="ТоварыНоменклатураКод" id="984">
 														<DataPath>Объект.Товары.Номенклатура.Code</DataPath>
@@ -6648,7 +6659,7 @@ notes</v8:content>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>16</Width>
 														<ContextMenu name="ТоварыНоменклатураКодКонтекстноеМеню" id="985"/>
-														<ExtendedTooltip name="ТоварыНоменклатураКодExtendedTooltip" id="1193"/>
+														<ExtendedTooltip name="ТоварыНоменклатураКодРасширеннаяПодсказка" id="1193"/>
 													</LabelField>
 													<LabelField name="ТоварыНоменклатураАртикул" id="986">
 														<UserVisible>
@@ -6657,7 +6668,7 @@ notes</v8:content>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>16</Width>
 														<ContextMenu name="ТоварыНоменклатураАртикулКонтекстноеМеню" id="987"/>
-														<ExtendedTooltip name="ТоварыНоменклатураАртикулExtendedTooltip" id="1194"/>
+														<ExtendedTooltip name="ТоварыНоменклатураАртикулРасширеннаяПодсказка" id="1194"/>
 													</LabelField>
 													<PictureField name="ТоварыИндексНабора" id="1381">
 														<TitleLocation>None</TitleLocation>
@@ -6731,14 +6742,14 @@ notes</v8:content>
 														<Width>16</Width>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="471"/>
-														<ExtendedTooltip name="ТоварыНоменклатураExtendedTooltip" id="1195"/>
+														<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="1195"/>
 													</InputField>
 													<InputField name="ТоварыХарактеристика" id="472">
 														<DataPath>Объект.Товары.Характеристика</DataPath>
 														<Width>16</Width>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыХарактеристикаКонтекстноеМеню" id="473"/>
-														<ExtendedTooltip name="ТоварыХарактеристикаExtendedTooltip" id="1196"/>
+														<ExtendedTooltip name="ТоварыХарактеристикаРасширеннаяПодсказка" id="1196"/>
 													</InputField>
 													<InputField name="ТоварыВариантОбеспечения" id="1075">
 														<DataPath>Объект.Товары.ВариантОбеспечения</DataPath>
@@ -6759,7 +6770,7 @@ notes</v8:content>
 														<TextEdit>false</TextEdit>
 														<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 														<ContextMenu name="ТоварыВариантОбеспеченияКонтекстноеМеню" id="1076"/>
-														<ExtendedTooltip name="ТоварыВариантОбеспеченияExtendedTooltip" id="1197"/>
+														<ExtendedTooltip name="ТоварыВариантОбеспеченияРасширеннаяПодсказка" id="1197"/>
 													</InputField>
 													<CheckBoxField name="ТоварыОбособленно" id="1828">
 														<DataPath>Объект.Товары.Обособленно</DataPath>
@@ -6790,7 +6801,7 @@ notes</v8:content>
 																<ChoiceButton>true</ChoiceButton>
 																<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 																<ContextMenu name="ТоварыСкладКонтекстноеМеню" id="927"/>
-																<ExtendedTooltip name="ТоварыСкладExtendedTooltip" id="1216"/>
+																<ExtendedTooltip name="ТоварыСкладРасширеннаяПодсказка" id="1216"/>
 															</InputField>
 															<InputField name="ТоварыПодразделение" id="1761">
 																<DataPath>Объект.Товары.Подразделение</DataPath>
@@ -6808,7 +6819,7 @@ notes</v8:content>
 														<HorizontalStretch>false</HorizontalStretch>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыДатаОтгрузкиКонтекстноеМеню" id="582"/>
-														<ExtendedTooltip name="ТоварыДатаОтгрузкиExtendedTooltip" id="1217"/>
+														<ExtendedTooltip name="ТоварыДатаОтгрузкиРасширеннаяПодсказка" id="1217"/>
 													</InputField>
 													<InputField name="ТоварыСерия" id="1098">
 														<DataPath>Объект.Товары.Серия</DataPath>
@@ -6818,7 +6829,7 @@ notes</v8:content>
 														<ChoiceButton>true</ChoiceButton>
 														<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 														<ContextMenu name="ТоварыСерияКонтекстноеМеню" id="1099"/>
-														<ExtendedTooltip name="ТоварыСерияExtendedTooltip" id="1200"/>
+														<ExtendedTooltip name="ТоварыСерияРасширеннаяПодсказка" id="1200"/>
 													</InputField>
 													<InputField name="ТоварыСодержание" id="961">
 														<DataPath>Объект.Товары.Содержание</DataPath>
@@ -6827,7 +6838,7 @@ notes</v8:content>
 														<MultiLine>true</MultiLine>
 														<ChoiceButton>true</ChoiceButton>
 														<ContextMenu name="ТоварыСодержаниеКонтекстноеМеню" id="962"/>
-														<ExtendedTooltip name="ТоварыСодержаниеExtendedTooltip" id="1201"/>
+														<ExtendedTooltip name="ТоварыСодержаниеРасширеннаяПодсказка" id="1201"/>
 													</InputField>
 													<InputField name="ТоварыКоличествоУпаковок" id="476">
 														<DataPath>Объект.Товары.КоличествоУпаковок</DataPath>
@@ -6846,7 +6857,7 @@ notes</v8:content>
 														<HorizontalStretch>false</HorizontalStretch>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыКоличествоУпаковокКонтекстноеМеню" id="477"/>
-														<ExtendedTooltip name="ТоварыКоличествоУпаковокExtendedTooltip" id="1202"/>
+														<ExtendedTooltip name="ТоварыКоличествоУпаковокРасширеннаяПодсказка" id="1202"/>
 													</InputField>
 													<LabelField name="ТоварыДоступно" id="1829">
 														<EditMode>EnterOnInput</EditMode>
@@ -6865,7 +6876,7 @@ notes</v8:content>
 															</v8:item>
 														</Title>
 														<Group>InCell</Group>
-														<ExtendedTooltip name="ТоварыУпаковкаЕдиницаИзмеренияExtendedTooltip" id="1203"/>
+														<ExtendedTooltip name="ТоварыУпаковкаЕдиницаИзмеренияРасширеннаяПодсказка" id="1203"/>
 														<ChildItems>
 															<InputField name="ТоварыУпаковка" id="474">
 																<DataPath>Объект.Товары.Упаковка</DataPath>
@@ -6886,7 +6897,7 @@ notes</v8:content>
 																<ChoiceButton>true</ChoiceButton>
 																<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 																<ContextMenu name="ТоварыУпаковкаКонтекстноеМеню" id="475"/>
-																<ExtendedTooltip name="ТоварыУпаковкаExtendedTooltip" id="1204"/>
+																<ExtendedTooltip name="ТоварыУпаковкаРасширеннаяПодсказка" id="1204"/>
 															</InputField>
 															<LabelField name="ТоварыНоменклатураЕдиницаИзмерения" id="804">
 																<DataPath>Объект.Товары.Номенклатура.ЕдиницаИзмерения</DataPath>
@@ -6903,7 +6914,7 @@ notes</v8:content>
 																<EditMode>EnterOnInput</EditMode>
 																<Width>8</Width>
 																<ContextMenu name="ТоварыНоменклатураЕдиницаИзмеренияКонтекстноеМеню" id="805"/>
-																<ExtendedTooltip name="ТоварыНоменклатураЕдиницаИзмеренияExtendedTooltip" id="1205"/>
+																<ExtendedTooltip name="ТоварыНоменклатураЕдиницаИзмеренияРасширеннаяПодсказка" id="1205"/>
 															</LabelField>
 														</ChildItems>
 													</ColumnGroup>
@@ -6911,8 +6922,9 @@ notes</v8:content>
 														<DataPath>Объект.Товары.ВидЦены</DataPath>
 														<Width>16</Width>
 														<Wrap>false</Wrap>
+														<DropListButton>true</DropListButton>
+														<ChoiceButton>true</ChoiceButton>
 														<ClearButton>true</ClearButton>
-														<QuickChoice>true</QuickChoice>
 														<ChoiceParameterLinks>
 															<xr:Link>
 																<xr:Name>Отбор.ЦенаВключаетНДС</xr:Name>
@@ -6927,7 +6939,17 @@ notes</v8:content>
 															<xr:Link>
 																<xr:Name>Соглашение</xr:Name>
 																<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
-																<xr:ValueChange>DontChange</xr:ValueChange>
+																<xr:ValueChange>Clear</xr:ValueChange>
+															</xr:Link>
+															<xr:Link>
+																<xr:Name>Партнер</xr:Name>
+																<xr:DataPath xsi:type="xs:string">1</xr:DataPath>
+																<xr:ValueChange>Clear</xr:ValueChange>
+															</xr:Link>
+															<xr:Link>
+																<xr:Name>ИспользуетсяЦенообразование25</xr:Name>
+																<xr:DataPath xsi:type="xs:string">95</xr:DataPath>
+																<xr:ValueChange>Clear</xr:ValueChange>
 															</xr:Link>
 														</ChoiceParameterLinks>
 														<ChoiceParameters>
@@ -6951,14 +6973,14 @@ notes</v8:content>
 															</app:item>
 														</ChoiceParameters>
 														<ContextMenu name="ТоварыВидЦеныКонтекстноеМеню" id="481"/>
-														<ExtendedTooltip name="ТоварыВидЦеныExtendedTooltip" id="1206"/>
+														<ExtendedTooltip name="ТоварыВидЦеныРасширеннаяПодсказка" id="1206"/>
 													</InputField>
 													<InputField name="ТоварыЦена" id="482">
 														<DataPath>Объект.Товары.Цена</DataPath>
 														<Width>9</Width>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыЦенаКонтекстноеМеню" id="483"/>
-														<ExtendedTooltip name="ТоварыЦенаExtendedTooltip" id="1207"/>
+														<ExtendedTooltip name="ТоварыЦенаРасширеннаяПодсказка" id="1207"/>
 													</InputField>
 													<InputField name="ТоварыПроцентАвтоматическойСкидки" id="498">
 														<DataPath>Объект.Товары.ПроцентАвтоматическойСкидки</DataPath>
@@ -6967,7 +6989,7 @@ notes</v8:content>
 														<Wrap>false</Wrap>
 														<TextEdit>false</TextEdit>
 														<ContextMenu name="ТоварыПроцентАвтоматическойСкидкиКонтекстноеМеню" id="499"/>
-														<ExtendedTooltip name="ТоварыПроцентАвтоматическойСкидкиExtendedTooltip" id="1208"/>
+														<ExtendedTooltip name="ТоварыПроцентАвтоматическойСкидкиРасширеннаяПодсказка" id="1208"/>
 													</InputField>
 													<InputField name="ТоварыСуммаАвтоматическойСкидки" id="492">
 														<DataPath>Объект.Товары.СуммаАвтоматическойСкидки</DataPath>
@@ -6977,14 +6999,14 @@ notes</v8:content>
 														<Wrap>false</Wrap>
 														<TextEdit>false</TextEdit>
 														<ContextMenu name="ТоварыСуммаАвтоматическойСкидкиКонтекстноеМеню" id="493"/>
-														<ExtendedTooltip name="ТоварыСуммаАвтоматическойСкидкиExtendedTooltip" id="1209"/>
+														<ExtendedTooltip name="ТоварыСуммаАвтоматическойСкидкиРасширеннаяПодсказка" id="1209"/>
 													</InputField>
 													<InputField name="ТоварыПроцентРучнойСкидки" id="496">
 														<DataPath>Объект.Товары.ПроцентРучнойСкидки</DataPath>
 														<Width>6</Width>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыПроцентРучнойСкидкиКонтекстноеМеню" id="497"/>
-														<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиExtendedTooltip" id="1210"/>
+														<ExtendedTooltip name="ТоварыПроцентРучнойСкидкиРасширеннаяПодсказка" id="1210"/>
 													</InputField>
 													<InputField name="ТоварыСуммаРучнойСкидки" id="490">
 														<DataPath>Объект.Товары.СуммаРучнойСкидки</DataPath>
@@ -6993,7 +7015,7 @@ notes</v8:content>
 														<Width>9</Width>
 														<Wrap>false</Wrap>
 														<ContextMenu name="ТоварыСуммаРучнойСкидкиКонтекстноеМеню" id="491"/>
-														<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиExtendedTooltip" id="1211"/>
+														<ExtendedTooltip name="ТоварыСуммаРучнойСкидкиРасширеннаяПодсказка" id="1211"/>
 													</InputField>
 													<InputField name="ТоварыСуммаБонусныхБалловКСписаниюВВалюте" id="2387">
 														<DataPath>Объект.Товары.СуммаБонусныхБалловКСписаниюВВалюте</DataPath>
@@ -7020,7 +7042,7 @@ notes</v8:content>
 														<Wrap>false</Wrap>
 														<ChoiceButton>false</ChoiceButton>
 														<ContextMenu name="ТоварыСуммаКонтекстноеМеню" id="485"/>
-														<ExtendedTooltip name="ТоварыСуммаExtendedTooltip" id="1212"/>
+														<ExtendedTooltip name="ТоварыСуммаРасширеннаяПодсказка" id="1212"/>
 													</InputField>
 													<InputField name="ТоварыСтавкаНДС" id="486">
 														<DataPath>Объект.Товары.СтавкаНДС</DataPath>
@@ -7029,7 +7051,7 @@ notes</v8:content>
 														<Wrap>false</Wrap>
 														<OpenButton>false</OpenButton>
 														<ContextMenu name="ТоварыСтавкаНДСКонтекстноеМеню" id="487"/>
-														<ExtendedTooltip name="ТоварыСтавкаНДСExtendedTooltip" id="1213"/>
+														<ExtendedTooltip name="ТоварыСтавкаНДСРасширеннаяПодсказка" id="1213"/>
 													</InputField>
 													<InputField name="ТоварыСуммаНДС" id="488">
 														<DataPath>Объект.Товары.СуммаНДС</DataPath>
@@ -7050,7 +7072,7 @@ notes</v8:content>
 														<Wrap>false</Wrap>
 														<ChoiceButton>false</ChoiceButton>
 														<ContextMenu name="ТоварыСуммаНДСКонтекстноеМеню" id="489"/>
-														<ExtendedTooltip name="ТоварыСуммаНДСExtendedTooltip" id="1214"/>
+														<ExtendedTooltip name="ТоварыСуммаНДСРасширеннаяПодсказка" id="1214"/>
 													</InputField>
 													<InputField name="ТоварыСуммаСНДС" id="946">
 														<DataPath>Объект.Товары.СуммаСНДС</DataPath>
@@ -7058,14 +7080,14 @@ notes</v8:content>
 														<EditMode>EnterOnInput</EditMode>
 														<Width>9</Width>
 														<ContextMenu name="ТоварыСуммаСНДСКонтекстноеМеню" id="947"/>
-														<ExtendedTooltip name="ТоварыСуммаСНДСExtendedTooltip" id="1215"/>
+														<ExtendedTooltip name="ТоварыСуммаСНДСРасширеннаяПодсказка" id="1215"/>
 													</InputField>
 													<CheckBoxField name="ТоварыОтмененоПричиныОтменыНеИспользуются" id="1095">
 														<DataPath>Объект.Товары.Отменено</DataPath>
 														<EditMode>EnterOnInput</EditMode>
 														<CheckBoxType>Auto</CheckBoxType>
 														<ContextMenu name="ТоварыОтмененоПричиныОтменыНеИспользуютсяКонтекстноеМеню" id="1096"/>
-														<ExtendedTooltip name="ТоварыОтмененоПричиныОтменыНеИспользуютсяExtendedTooltip" id="1218"/>
+														<ExtendedTooltip name="ТоварыОтмененоПричиныОтменыНеИспользуютсяРасширеннаяПодсказка" id="1218"/>
 													</CheckBoxField>
 													<ColumnGroup name="ТоварыГруппаОтмена" id="919">
 														<Title>
@@ -7080,7 +7102,7 @@ notes</v8:content>
 														</Title>
 														<Group>InCell</Group>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ТоварыГруппаОтменаExtendedTooltip" id="1219"/>
+														<ExtendedTooltip name="ТоварыГруппаОтменаРасширеннаяПодсказка" id="1219"/>
 														<ChildItems>
 															<CheckBoxField name="ТоварыОтменено" id="736">
 																<DataPath>Объект.Товары.Отменено</DataPath>
@@ -7089,7 +7111,7 @@ notes</v8:content>
 																<ShowInHeader>false</ShowInHeader>
 																<CheckBoxType>Auto</CheckBoxType>
 																<ContextMenu name="ТоварыОтмененоКонтекстноеМеню" id="737"/>
-																<ExtendedTooltip name="ТоварыОтмененоExtendedTooltip" id="1220"/>
+																<ExtendedTooltip name="ТоварыОтмененоРасширеннаяПодсказка" id="1220"/>
 															</CheckBoxField>
 															<InputField name="ТоварыПричинаОтмены" id="617">
 																<DataPath>Объект.Товары.ПричинаОтмены</DataPath>
@@ -7107,7 +7129,7 @@ notes</v8:content>
 																<Wrap>false</Wrap>
 																<OpenButton>false</OpenButton>
 																<ContextMenu name="ТоварыПричинаОтменыКонтекстноеМеню" id="618"/>
-																<ExtendedTooltip name="ТоварыПричинаОтменыExtendedTooltip" id="1221"/>
+																<ExtendedTooltip name="ТоварыПричинаОтменыРасширеннаяПодсказка" id="1221"/>
 															</InputField>
 														</ChildItems>
 													</ColumnGroup>
@@ -7121,7 +7143,7 @@ notes</v8:content>
 														<Width>8</Width>
 														<HorizontalStretch>false</HorizontalStretch>
 														<ContextMenu name="ТоварыСрокПоставкиКонтекстноеМеню" id="949"/>
-														<ExtendedTooltip name="ТоварыСрокПоставкиExtendedTooltip" id="1222"/>
+														<ExtendedTooltip name="ТоварыСрокПоставкиРасширеннаяПодсказка" id="1222"/>
 													</LabelField>
 													<InputField name="ТоварыСуммаНачисленныхБонусныхБалловВВалюте" id="2388">
 														<DataPath>Объект.Товары.СуммаНачисленныхБонусныхБалловВВалюте</DataPath>
@@ -7179,14 +7201,14 @@ notes</v8:content>
 														<Behavior>Usual</Behavior>
 														<Representation>None</Representation>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ГруппаДатаОтгрузкиНеОтгружатьЧастямиExtendedTooltip" id="1223"/>
+														<ExtendedTooltip name="ГруппаДатаОтгрузкиНеОтгружатьЧастямиРасширеннаяПодсказка" id="1223"/>
 														<ChildItems>
 															<CheckBoxField name="НеОтгружатьЧастями" id="410">
 																<DataPath>Объект.НеОтгружатьЧастями</DataPath>
 																<TitleLocation>Right</TitleLocation>
 																<CheckBoxType>Auto</CheckBoxType>
 																<ContextMenu name="НеОтгружатьЧастямиКонтекстноеМеню" id="411"/>
-																<ExtendedTooltip name="НеОтгружатьЧастямиExtendedTooltip" id="1224"/>
+																<ExtendedTooltip name="НеОтгружатьЧастямиРасширеннаяПодсказка" id="1224"/>
 															</CheckBoxField>
 															<LabelDecoration name="ДекорацияДатаОтгрузки" id="1474">
 																<AutoMaxWidth>false</AutoMaxWidth>
@@ -7232,7 +7254,7 @@ notes</v8:content>
 																<ToolTipRepresentation>Button</ToolTipRepresentation>
 																<AutoMarkIncomplete>false</AutoMarkIncomplete>
 																<ContextMenu name="ДатаОтгрузкиКонтекстноеМеню" id="1005"/>
-																<ExtendedTooltip name="ДатаОтгрузкиExtendedTooltip" id="1225"/>
+																<ExtendedTooltip name="ДатаОтгрузкиРасширеннаяПодсказка" id="1225"/>
 															</InputField>
 														</ChildItems>
 													</UsualGroup>
@@ -7282,14 +7304,14 @@ notes</v8:content>
 																</ToolTip>
 																<FileDragMode>AsFile</FileDragMode>
 																<ContextMenu name="КартинкаНесколькоСкладовКонтекстноеМеню" id="932"/>
-																<ExtendedTooltip name="КартинкаНесколькоСкладовExtendedTooltip" id="1143"/>
+																<ExtendedTooltip name="КартинкаНесколькоСкладовРасширеннаяПодсказка" id="1143"/>
 															</PictureDecoration>
 															<LabelField name="НадписьНесколькоСкладов" id="944">
 																<TitleLocation>None</TitleLocation>
 																<HorizontalStretch>true</HorizontalStretch>
 																<TextColor>#162779</TextColor>
 																<ContextMenu name="НадписьНесколькоСкладовКонтекстноеМеню" id="945"/>
-																<ExtendedTooltip name="НадписьНесколькоСкладовExtendedTooltip" id="1144"/>
+																<ExtendedTooltip name="НадписьНесколькоСкладовРасширеннаяПодсказка" id="1144"/>
 															</LabelField>
 														</ChildItems>
 													</UsualGroup>
@@ -7471,7 +7493,7 @@ notes</v8:content>
 												<v8:content>Delivery</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="СтраницаДоставкаExtendedTooltip" id="1227"/>
+										<ExtendedTooltip name="СтраницаДоставкаРасширеннаяПодсказка" id="1227"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаСервисДоставки" id="1766">
 												<Visible>false</Visible>
@@ -7733,12 +7755,12 @@ notes</v8:content>
 																		<MaxWidth>27</MaxWidth>
 																		<DropListButton>true</DropListButton>
 																		<ChoiceButton>true</ChoiceButton>
-																		<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+																		<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
 																		<OpenButton>false</OpenButton>
 																		<ChoiceListButton>true</ChoiceListButton>
 																		<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 																		<ContextMenu name="ПеревозчикПартнерКонтекстноеМеню" id="1613"/>
-																		<ExtendedTooltip name="ПеревозчикПартнерExtendedTooltip" id="1614"/>
+																		<ExtendedTooltip name="ПеревозчикПартнерРасширеннаяПодсказка" id="1614"/>
 																	</InputField>
 																</ChildItems>
 															</Page>
@@ -7823,7 +7845,7 @@ notes</v8:content>
 													</v8:item>
 												</Title>
 												<PagesRepresentation>None</PagesRepresentation>
-												<ExtendedTooltip name="СтраницыДоставкиExtendedTooltip" id="1621"/>
+												<ExtendedTooltip name="СтраницыДоставкиРасширеннаяПодсказка" id="1621"/>
 												<ChildItems>
 													<Page name="СтраницаСамовывоз" id="1622">
 														<Title>
@@ -7837,7 +7859,7 @@ notes</v8:content>
 															</v8:item>
 														</Title>
 														<Group>Horizontal</Group>
-														<ExtendedTooltip name="СтраницаСамовывозExtendedTooltip" id="1623"/>
+														<ExtendedTooltip name="СтраницаСамовывозРасширеннаяПодсказка" id="1623"/>
 														<ChildItems>
 															<InputField name="АдресДоставкиСамовывоз" id="1627">
 																<DataPath>Объект.АдресДоставки</DataPath>
@@ -7861,7 +7883,7 @@ notes</v8:content>
 																<AutoMarkIncomplete>false</AutoMarkIncomplete>
 																<ChoiceListButton>true</ChoiceListButton>
 																<ContextMenu name="АдресДоставкиСамовывозКонтекстноеМеню" id="1628"/>
-																<ExtendedTooltip name="АдресДоставкиСамовывозExtendedTooltip" id="1629"/>
+																<ExtendedTooltip name="АдресДоставкиСамовывозРасширеннаяПодсказка" id="1629"/>
 															</InputField>
 														</ChildItems>
 													</Page>
@@ -7876,7 +7898,7 @@ notes</v8:content>
 																<v8:content>Page delivery to recipient</v8:content>
 															</v8:item>
 														</Title>
-														<ExtendedTooltip name="СтраницаДоставкаДоПолучателяExtendedTooltip" id="1631"/>
+														<ExtendedTooltip name="СтраницаДоставкаДоПолучателяРасширеннаяПодсказка" id="1631"/>
 														<ChildItems>
 															<InputField name="АдресДоставкиПолучателя" id="1632">
 																<DataPath>Объект.АдресДоставки</DataPath>
@@ -7897,7 +7919,7 @@ notes</v8:content>
 																<ClearButton>true</ClearButton>
 																<ChoiceListButton>true</ChoiceListButton>
 																<ContextMenu name="АдресДоставкиПолучателяКонтекстноеМеню" id="1633"/>
-																<ExtendedTooltip name="АдресДоставкиПолучателяExtendedTooltip" id="1634"/>
+																<ExtendedTooltip name="АдресДоставкиПолучателяРасширеннаяПодсказка" id="1634"/>
 															</InputField>
 															<UsualGroup name="ГруппаЗонаВремя" id="1635">
 																<Title>
@@ -7932,7 +7954,7 @@ notes</v8:content>
 																		<MaxWidth>30</MaxWidth>
 																		<OpenButton>false</OpenButton>
 																		<ContextMenu name="ЗонаДоставкиПолучателяКонтекстноеМеню" id="1638"/>
-																		<ExtendedTooltip name="ЗонаДоставкиПолучателяExtendedTooltip" id="1639"/>
+																		<ExtendedTooltip name="ЗонаДоставкиПолучателяРасширеннаяПодсказка" id="1639"/>
 																	</InputField>
 																	<InputField name="ВремяДоставкиС" id="1640">
 																		<DataPath>Объект.ВремяДоставкиС</DataPath>
@@ -7953,7 +7975,7 @@ notes</v8:content>
 																		<DropListButton>true</DropListButton>
 																		<ChoiceListButton>true</ChoiceListButton>
 																		<ContextMenu name="ВремяДоставкиСКонтекстноеМеню" id="1641"/>
-																		<ExtendedTooltip name="ВремяДоставкиСExtendedTooltip" id="1642"/>
+																		<ExtendedTooltip name="ВремяДоставкиСРасширеннаяПодсказка" id="1642"/>
 																	</InputField>
 																	<InputField name="ВремяДоставкиПо" id="1643">
 																		<DataPath>Объект.ВремяДоставкиПо</DataPath>
@@ -7972,7 +7994,7 @@ notes</v8:content>
 																		<DropListButton>true</DropListButton>
 																		<ChoiceListButton>true</ChoiceListButton>
 																		<ContextMenu name="ВремяДоставкиПоКонтекстноеМеню" id="1644"/>
-																		<ExtendedTooltip name="ВремяДоставкиПоExtendedTooltip" id="1645"/>
+																		<ExtendedTooltip name="ВремяДоставкиПоРасширеннаяПодсказка" id="1645"/>
 																	</InputField>
 																</ChildItems>
 															</UsualGroup>
@@ -8083,7 +8105,7 @@ details</v8:content>
 																<v8:content>Page delivery to address</v8:content>
 															</v8:item>
 														</Title>
-														<ExtendedTooltip name="СтраницаДоставкаПеревозчикомПоАдресуExtendedTooltip" id="1662"/>
+														<ExtendedTooltip name="СтраницаДоставкаПеревозчикомПоАдресуРасширеннаяПодсказка" id="1662"/>
 														<ChildItems>
 															<InputField name="АдресДоставкиПеревозчика" id="1663">
 																<DataPath>Объект.АдресДоставкиПеревозчика</DataPath>
@@ -8107,7 +8129,7 @@ to carrier</v8:content>
 																<ClearButton>true</ClearButton>
 																<ChoiceListButton>true</ChoiceListButton>
 																<ContextMenu name="АдресДоставкиПеревозчикаКонтекстноеМеню" id="1664"/>
-																<ExtendedTooltip name="АдресДоставкиПеревозчикаExtendedTooltip" id="1665"/>
+																<ExtendedTooltip name="АдресДоставкиПеревозчикаРасширеннаяПодсказка" id="1665"/>
 															</InputField>
 															<UsualGroup name="ГруппаЗонаВремя1" id="1666">
 																<Title>
@@ -8145,7 +8167,7 @@ to carrier</v8:content>
 																		<MaxWidth>30</MaxWidth>
 																		<OpenButton>false</OpenButton>
 																		<ContextMenu name="ЗонаДоставкиПеревозчикаКонтекстноеМеню" id="1669"/>
-																		<ExtendedTooltip name="ЗонаДоставкиПеревозчикаExtendedTooltip" id="1670"/>
+																		<ExtendedTooltip name="ЗонаДоставкиПеревозчикаРасширеннаяПодсказка" id="1670"/>
 																	</InputField>
 																	<InputField name="ВремяДоставкиС1" id="1671">
 																		<DataPath>Объект.ВремяДоставкиС</DataPath>
@@ -8166,7 +8188,7 @@ to carrier</v8:content>
 																		<DropListButton>true</DropListButton>
 																		<ChoiceListButton>true</ChoiceListButton>
 																		<ContextMenu name="ВремяДоставкиС1КонтекстноеМеню" id="1672"/>
-																		<ExtendedTooltip name="ВремяДоставкиС1ExtendedTooltip" id="1673"/>
+																		<ExtendedTooltip name="ВремяДоставкиС1РасширеннаяПодсказка" id="1673"/>
 																	</InputField>
 																	<InputField name="ВремяДоставкиПо1" id="1674">
 																		<DataPath>Объект.ВремяДоставкиПо</DataPath>
@@ -8185,7 +8207,7 @@ to carrier</v8:content>
 																		<DropListButton>true</DropListButton>
 																		<ChoiceListButton>true</ChoiceListButton>
 																		<ContextMenu name="ВремяДоставкиПо1КонтекстноеМеню" id="1675"/>
-																		<ExtendedTooltip name="ВремяДоставкиПо1ExtendedTooltip" id="1676"/>
+																		<ExtendedTooltip name="ВремяДоставкиПо1РасширеннаяПодсказка" id="1676"/>
 																	</InputField>
 																</ChildItems>
 															</UsualGroup>
@@ -8312,7 +8334,7 @@ address</v8:content>
 																<v8:content>Page delivery by carrier</v8:content>
 															</v8:item>
 														</Title>
-														<ExtendedTooltip name="СтраницаДоставкаПеревозчикомExtendedTooltip" id="1696"/>
+														<ExtendedTooltip name="СтраницаДоставкаПеревозчикомРасширеннаяПодсказка" id="1696"/>
 														<ChildItems>
 															<UsualGroup name="ГруппаАдресДоставкиПолучателя" id="1697">
 																<Title>
@@ -8329,7 +8351,7 @@ address</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаАдресДоставкиПолучателяExtendedTooltip" id="1698"/>
+																<ExtendedTooltip name="ГруппаАдресДоставкиПолучателяРасширеннаяПодсказка" id="1698"/>
 																<ChildItems>
 																	<InputField name="АдресДоставкиПолучателя2" id="1699">
 																		<DataPath>Объект.АдресДоставки</DataPath>
@@ -8672,7 +8694,7 @@ details</v8:content>
 												<v8:content>More</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="ГруппаДополнительноExtendedTooltip" id="1260"/>
+										<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="1260"/>
 										<ChildItems>
 											<UsualGroup name="ГруппаПараметры" id="779">
 												<Title>
@@ -8714,7 +8736,7 @@ details</v8:content>
 																<MaxWidth>28</MaxWidth>
 																<Wrap>false</Wrap>
 																<ContextMenu name="СделкаКонтекстноеМеню" id="330"/>
-																<ExtendedTooltip name="СделкаExtendedTooltip" id="1270"/>
+																<ExtendedTooltip name="СделкаРасширеннаяПодсказка" id="1270"/>
 															</InputField>
 															<InputField name="Менеджер" id="21">
 																<DataPath>Объект.Менеджер</DataPath>
@@ -8722,7 +8744,7 @@ details</v8:content>
 																<MaxWidth>28</MaxWidth>
 																<Wrap>false</Wrap>
 																<ContextMenu name="МенеджерКонтекстноеМеню" id="22"/>
-																<ExtendedTooltip name="МенеджерExtendedTooltip" id="1281"/>
+																<ExtendedTooltip name="МенеджерРасширеннаяПодсказка" id="1281"/>
 															</InputField>
 															<InputField name="Сборщик" id="1784">
 																<DataPath>Объект.Сборщик</DataPath>
@@ -8741,7 +8763,7 @@ details</v8:content>
 																<MaxWidth>28</MaxWidth>
 																<AutoMarkIncomplete>false</AutoMarkIncomplete>
 																<ContextMenu name="ПодразделениеКонтекстноеМеню" id="989"/>
-																<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="1283"/>
+																<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="1283"/>
 															</InputField>
 															<InputField name="КонтактноеЛицо" id="1077">
 																<DataPath>Объект.КонтактноеЛицо</DataPath>
@@ -8755,7 +8777,7 @@ details</v8:content>
 																	</xr:Link>
 																</ChoiceParameterLinks>
 																<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="1078"/>
-																<ExtendedTooltip name="КонтактноеЛицоExtendedTooltip" id="1282"/>
+																<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="1282"/>
 															</InputField>
 															<InputField name="КартаЛояльности" id="970">
 																<DataPath>Объект.КартаЛояльности</DataPath>
@@ -8769,7 +8791,7 @@ details</v8:content>
 																	</xr:Link>
 																</ChoiceParameterLinks>
 																<ContextMenu name="КартаЛояльностиКонтекстноеМеню" id="971"/>
-																<ExtendedTooltip name="КартаЛояльностиExtendedTooltip" id="1284"/>
+																<ExtendedTooltip name="КартаЛояльностиРасширеннаяПодсказка" id="1284"/>
 															</InputField>
 															<InputField name="ГруппаФинансовогоУчета" id="963">
 																<DataPath>Объект.ГруппаФинансовогоУчета</DataPath>
@@ -8789,7 +8811,7 @@ accounting group</v8:content>
 																<AutoMaxWidth>false</AutoMaxWidth>
 																<MaxWidth>28</MaxWidth>
 																<ContextMenu name="ГруппаФинансовогоУчетаКонтекстноеМеню" id="964"/>
-																<ExtendedTooltip name="ГруппаФинансовогоУчетаExtendedTooltip" id="1300"/>
+																<ExtendedTooltip name="ГруппаФинансовогоУчетаРасширеннаяПодсказка" id="1300"/>
 															</InputField>
 															<InputField name="НаправлениеДеятельности" id="1597">
 																<DataPath>Объект.НаправлениеДеятельности</DataPath>
@@ -8892,7 +8914,7 @@ business</v8:content>
 																<Width>11</Width>
 																<HorizontalStretch>false</HorizontalStretch>
 																<ContextMenu name="ДатаСогласованияКонтекстноеМеню" id="690"/>
-																<ExtendedTooltip name="ДатаСогласованияExtendedTooltip" id="1263"/>
+																<ExtendedTooltip name="ДатаСогласованияРасширеннаяПодсказка" id="1263"/>
 															</InputField>
 															<UsualGroup name="ГруппаВалюта" id="793">
 																<Title>
@@ -8909,7 +8931,7 @@ business</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаВалютаExtendedTooltip" id="1266"/>
+																<ExtendedTooltip name="ГруппаВалютаРасширеннаяПодсказка" id="1266"/>
 																<ChildItems>
 																	<InputField name="Валюта" id="19">
 																		<DataPath>Объект.Валюта</DataPath>
@@ -8919,7 +8941,7 @@ business</v8:content>
 																		<OpenButton>false</OpenButton>
 																		<QuickChoice>true</QuickChoice>
 																		<ContextMenu name="ВалютаКонтекстноеМеню" id="20"/>
-																		<ExtendedTooltip name="ВалютаExtendedTooltip" id="1267"/>
+																		<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="1267"/>
 																	</InputField>
 																	<CheckBoxField name="ЦенаВключаетНДС" id="419">
 																		<DataPath>Объект.ЦенаВключаетНДС</DataPath>
@@ -8937,7 +8959,7 @@ business</v8:content>
 																		</WarningOnEdit>
 																		<CheckBoxType>Auto</CheckBoxType>
 																		<ContextMenu name="ЦенаВключаетНДСКонтекстноеМеню" id="420"/>
-																		<ExtendedTooltip name="ЦенаВключаетНДСExtendedTooltip" id="1268"/>
+																		<ExtendedTooltip name="ЦенаВключаетНДСРасширеннаяПодсказка" id="1268"/>
 																	</CheckBoxField>
 																</ChildItems>
 															</UsualGroup>
@@ -8983,7 +9005,7 @@ business</v8:content>
 																	</xr:Item>
 																</ChoiceList>
 																<ContextMenu name="НалогообложениеНДСКонтекстноеМеню" id="781"/>
-																<ExtendedTooltip name="НалогообложениеНДСExtendedTooltip" id="1265"/>
+																<ExtendedTooltip name="НалогообложениеНДСРасширеннаяПодсказка" id="1265"/>
 															</InputField>
 															<UsualGroup name="ГруппаТара" id="1085">
 																<Title>
@@ -9000,7 +9022,7 @@ business</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаТараExtendedTooltip" id="1273"/>
+																<ExtendedTooltip name="ГруппаТараРасширеннаяПодсказка" id="1273"/>
 																<ChildItems>
 																	<CheckBoxField name="ВернутьМногооборотнуюТару" id="1086">
 																		<DataPath>Объект.ВернутьМногооборотнуюТару</DataPath>
@@ -9017,7 +9039,7 @@ business</v8:content>
 																		<TitleLocation>Right</TitleLocation>
 																		<CheckBoxType>Auto</CheckBoxType>
 																		<ContextMenu name="ВернутьМногооборотнуюТаруКонтекстноеМеню" id="1087"/>
-																		<ExtendedTooltip name="ВернутьМногооборотнуюТаруExtendedTooltip" id="1274"/>
+																		<ExtendedTooltip name="ВернутьМногооборотнуюТаруРасширеннаяПодсказка" id="1274"/>
 																	</CheckBoxField>
 																	<InputField name="СрокВозвратаМногооборотнойТары" id="1088">
 																		<DataPath>Объект.СрокВозвратаМногооборотнойТары</DataPath>
@@ -9036,7 +9058,7 @@ business</v8:content>
 																		<ChoiceButton>true</ChoiceButton>
 																		<SpinButton>true</SpinButton>
 																		<ContextMenu name="СрокВозвратаМногооборотнойТарыКонтекстноеМеню" id="1089"/>
-																		<ExtendedTooltip name="СрокВозвратаМногооборотнойТарыExtendedTooltip" id="1275"/>
+																		<ExtendedTooltip name="СрокВозвратаМногооборотнойТарыРасширеннаяПодсказка" id="1275"/>
 																	</InputField>
 																</ChildItems>
 															</UsualGroup>
@@ -9055,18 +9077,18 @@ business</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаТребуетсяЗалогЗаТаруExtendedTooltip" id="1276"/>
+																<ExtendedTooltip name="ГруппаТребуетсяЗалогЗаТаруРасширеннаяПодсказка" id="1276"/>
 																<ChildItems>
 																	<LabelDecoration name="ДекорацияОтступТребуетсяЗалогЗаТару" id="1106">
 																		<ContextMenu name="ДекорацияОтступТребуетсяЗалогЗаТаруКонтекстноеМеню" id="1107"/>
-																		<ExtendedTooltip name="ДекорацияОтступТребуетсяЗалогЗаТаруExtendedTooltip" id="1277"/>
+																		<ExtendedTooltip name="ДекорацияОтступТребуетсяЗалогЗаТаруРасширеннаяПодсказка" id="1277"/>
 																	</LabelDecoration>
 																	<CheckBoxField name="ТребуетсяЗалогЗаТару" id="1108">
 																		<DataPath>Объект.ТребуетсяЗалогЗаТару</DataPath>
 																		<TitleLocation>Right</TitleLocation>
 																		<CheckBoxType>Auto</CheckBoxType>
 																		<ContextMenu name="ТребуетсяЗалогЗаТаруКонтекстноеМеню" id="1109"/>
-																		<ExtendedTooltip name="ТребуетсяЗалогЗаТаруExtendedTooltip" id="1278"/>
+																		<ExtendedTooltip name="ТребуетсяЗалогЗаТаруРасширеннаяПодсказка" id="1278"/>
 																	</CheckBoxField>
 																</ChildItems>
 															</UsualGroup>
@@ -9085,7 +9107,7 @@ business</v8:content>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
 																<ShowTitle>false</ShowTitle>
-																<ExtendedTooltip name="ГруппаЗаказПоДаннымКлиентаExtendedTooltip" id="1286"/>
+																<ExtendedTooltip name="ГруппаЗаказПоДаннымКлиентаРасширеннаяПодсказка" id="1286"/>
 																<ChildItems>
 																	<InputField name="НомерПоДаннымКлиента" id="938">
 																		<DataPath>Объект.НомерПоДаннымКлиента</DataPath>
@@ -9105,7 +9127,7 @@ on customer side</v8:content>
 																		<Width>13</Width>
 																		<HorizontalStretch>false</HorizontalStretch>
 																		<ContextMenu name="НомерПоДаннымКлиентаКонтекстноеМеню" id="939"/>
-																		<ExtendedTooltip name="НомерПоДаннымКлиентаExtendedTooltip" id="1287"/>
+																		<ExtendedTooltip name="НомерПоДаннымКлиентаРасширеннаяПодсказка" id="1287"/>
 																	</InputField>
 																	<InputField name="ДатаПоДаннымКлиента" id="940">
 																		<DataPath>Объект.ДатаПоДаннымКлиента</DataPath>
@@ -9121,7 +9143,7 @@ on customer side</v8:content>
 																		</Title>
 																		<Width>9</Width>
 																		<ContextMenu name="ДатаПоДаннымКлиентаКонтекстноеМеню" id="941"/>
-																		<ExtendedTooltip name="ДатаПоДаннымКлиентаExtendedTooltip" id="1288"/>
+																		<ExtendedTooltip name="ДатаПоДаннымКлиентаРасширеннаяПодсказка" id="1288"/>
 																	</InputField>
 																</ChildItems>
 															</UsualGroup>
@@ -9150,7 +9172,7 @@ notes</v8:content>
 												<Wrap>false</Wrap>
 												<ExtendedEdit>true</ExtendedEdit>
 												<ContextMenu name="ДополнительнаяИнформацияКонтекстноеМеню" id="336"/>
-												<ExtendedTooltip name="ДополнительнаяИнформацияExtendedTooltip" id="1301"/>
+												<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="1301"/>
 											</InputField>
 											<UsualGroup name="ГруппаДополнительныеРеквизиты" id="651">
 												<Title>
@@ -9167,7 +9189,7 @@ notes</v8:content>
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="1302"/>
+												<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="1302"/>
 											</UsualGroup>
 											<UsualGroup name="ГруппаПечать" id="950">
 												<Title>
@@ -9184,12 +9206,12 @@ notes</v8:content>
 												<Behavior>Usual</Behavior>
 												<Representation>NormalSeparation</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="ГруппаПечатьExtendedTooltip" id="1303"/>
+												<ExtendedTooltip name="ГруппаПечатьРасширеннаяПодсказка" id="1303"/>
 												<ChildItems>
 													<Button name="РеквизитыПечати" id="990">
 														<Type>Hyperlink</Type>
 														<CommandName>0</CommandName>
-														<ExtendedTooltip name="РеквизитыПечатиExtendedTooltip" id="1304"/>
+														<ExtendedTooltip name="РеквизитыПечатиРасширеннаяПодсказка" id="1304"/>
 													</Button>
 												</ChildItems>
 											</UsualGroup>
@@ -9453,7 +9475,7 @@ notes</v8:content>
 															</v8:item>
 														</Title>
 														<PagesRepresentation>None</PagesRepresentation>
-														<ExtendedTooltip name="ГруппаСтраницыНДСExtendedTooltip" id="1510"/>
+														<ExtendedTooltip name="ГруппаСтраницыНДСРасширеннаяПодсказка" id="1510"/>
 														<ChildItems>
 															<Page name="СтраницаСНДС" id="1511">
 																<Title>
@@ -9466,7 +9488,7 @@ notes</v8:content>
 																		<v8:content>Page including VAT</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="СтраницаСНДСExtendedTooltip" id="1512"/>
+																<ExtendedTooltip name="СтраницаСНДСРасширеннаяПодсказка" id="1512"/>
 																<ChildItems>
 																	<InputField name="СуммаНДС" id="1513">
 																		<ReadOnly>true</ReadOnly>
@@ -9493,7 +9515,7 @@ notes</v8:content>
 																			</v8:item>
 																		</Format>
 																		<ContextMenu name="СуммаНДСКонтекстноеМеню" id="1514"/>
-																		<ExtendedTooltip name="СуммаНДСExtendedTooltip" id="1515"/>
+																		<ExtendedTooltip name="СуммаНДСРасширеннаяПодсказка" id="1515"/>
 																	</InputField>
 																</ChildItems>
 															</Page>
@@ -9511,7 +9533,7 @@ notes</v8:content>
 																<VerticalStretch>true</VerticalStretch>
 																<Group>Horizontal</Group>
 																<VerticalAlign>Center</VerticalAlign>
-																<ExtendedTooltip name="СтраницаБезНДСExtendedTooltip" id="1738"/>
+																<ExtendedTooltip name="СтраницаБезНДСРасширеннаяПодсказка" id="1738"/>
 																<ChildItems>
 																	<LabelField name="ПолеБезНДС" id="1739">
 																		<ReadOnly>true</ReadOnly>
@@ -9539,7 +9561,7 @@ notes</v8:content>
 																			</v8:item>
 																		</Format>
 																		<ContextMenu name="ПолеБезНДСКонтекстноеМеню" id="1740"/>
-																		<ExtendedTooltip name="ПолеБезНДСExtendedTooltip" id="1741"/>
+																		<ExtendedTooltip name="ПолеБезНДСРасширеннаяПодсказка" id="1741"/>
 																	</LabelField>
 																</ChildItems>
 															</Page>

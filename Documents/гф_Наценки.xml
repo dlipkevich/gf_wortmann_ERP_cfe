@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Document uuid="9b1fc0dd-1473-4064-9bd7-839e5ff40fcd">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentObject.гф_Наценки" category="Object">
+				<xr:TypeId>cb4179e1-1b7a-44c6-9cb5-72f10dafc284</xr:TypeId>
+				<xr:ValueId>c0313467-bf91-4dba-b0b6-b83a3515620a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentRef.гф_Наценки" category="Ref">
+				<xr:TypeId>9b3ca47e-2ece-4ae7-b542-8d4611b50d16</xr:TypeId>
+				<xr:ValueId>902ec91f-0f05-4713-8987-5bfcb1ab220f</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentSelection.гф_Наценки" category="Selection">
+				<xr:TypeId>3815c76b-cdda-4d4b-9ddb-42d9b3a55b2f</xr:TypeId>
+				<xr:ValueId>e3a0b127-5002-46a3-86c2-fb2cc8495437</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentList.гф_Наценки" category="List">
+				<xr:TypeId>7e00a4cb-a004-4f7c-a25d-489656fca01c</xr:TypeId>
+				<xr:ValueId>3e8cc6bf-3669-40c0-8bc5-1f76da04e644</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentManager.гф_Наценки" category="Manager">
+				<xr:TypeId>3324c1de-1aa0-4fbe-b53e-38eabd0e0f9d</xr:TypeId>
+				<xr:ValueId>84c13c35-ae44-47ae-a49c-2ae90d1ebf10</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_Наценки</Name>
+			<Comment>#wortmann #Наценки Галфинд Окунев 2023/11/12</Comment>
+			<ExtendedConfigurationObject>f3ed07cc-6050-4647-b8dd-49071bde6096</ExtendedConfigurationObject>
+			<DefaultObjectForm>Document.гф_Наценки.Form.гф_ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.гф_Наценки.Form.гф_ФормаСписка</DefaultListForm>
+			<RegisterRecords/>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="d81368cb-4da2-4da9-9052-4b5de6de0544">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Сезон</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>f26ccb85-892f-4f24-b3d0-c6b5f4eecd4a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="921ab07b-15d9-4874-91d4-e3433a7d44f7">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Ответственный</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e0b8f9a6-adfd-4c42-92cf-5e3d1ed362c4</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="627bd0b0-7892-4327-b0a5-83c07b23572b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Комментарий</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>fc7b9974-09ca-4780-bddd-af1735ac1d94</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>гф_ФормаДокумента</Form>
+			<Form>гф_ФормаСписка</Form>
+			<TabularSection uuid="e9cd3e51-0a00-46ff-874c-1d69beedebf1">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.гф_Наценки.Наценки" category="TabularSection">
+						<xr:TypeId>91fea61a-c332-4876-9d20-3956512e7585</xr:TypeId>
+						<xr:ValueId>e9ac640f-dff1-48bc-9dbe-7b6c22dbfead</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.гф_Наценки.Наценки" category="TabularSectionRow">
+						<xr:TypeId>a74cc449-5491-4ad3-9269-ffab708b7b3e</xr:TypeId>
+						<xr:ValueId>50202bbb-1542-46af-90bf-8d2cc9f6016e</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Наценки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8a4db040-ba1c-449b-a52a-5b99f335104e</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="f6014abc-21b2-4fb6-90ab-39890aa62645">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>КурсДо</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>0481e6f9-af0d-4377-8b8a-9ea6e1099969</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>14</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="f9352f4e-861c-4261-8459-20904a5f16d0">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>ПроцентНаценки</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>bcf1a8b5-ea16-4430-9dea-793eac6a29ed</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>14</v8:Digits>
+									<v8:FractionDigits>2</v8:FractionDigits>
+									<v8:AllowedSign>Any</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
+		</ChildObjects>
+	</Document>
+</MetaDataObject>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="247cdab8-2131-4620-85a5-2fb73821b444">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.гф_НаценкиЗаКурс" category="Record">
+				<xr:TypeId>9de956fa-5507-426d-a4c0-2af544d0bd3d</xr:TypeId>
+				<xr:ValueId>ea16a3d7-635c-4924-9b4d-69b3d2dc4c29</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.гф_НаценкиЗаКурс" category="Manager">
+				<xr:TypeId>656e4783-c10a-4ade-aa61-0e699aa3756b</xr:TypeId>
+				<xr:ValueId>63016629-6e2d-4283-ada1-5d6b0236c272</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.гф_НаценкиЗаКурс" category="Selection">
+				<xr:TypeId>c0c9f65b-f58c-4ee4-be85-1da42ec0bf10</xr:TypeId>
+				<xr:ValueId>5159bba6-871f-4649-bb26-e0f4d894a506</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.гф_НаценкиЗаКурс" category="List">
+				<xr:TypeId>00dc5658-e6d9-4c30-9103-76c33e72a7e6</xr:TypeId>
+				<xr:ValueId>db318cd5-ff3d-40e1-9f7a-1f3603f50959</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.гф_НаценкиЗаКурс" category="RecordSet">
+				<xr:TypeId>9991d6cd-7474-4022-bc8f-ee43886112b9</xr:TypeId>
+				<xr:ValueId>4ebffc71-43a3-4aff-89bc-e31043b8d3f1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.гф_НаценкиЗаКурс" category="RecordKey">
+				<xr:TypeId>489e260d-b744-4fd3-adbf-ff50b1f76698</xr:TypeId>
+				<xr:ValueId>a84c28f7-14f6-45d7-a176-2030d9f46561</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.гф_НаценкиЗаКурс" category="RecordManager">
+				<xr:TypeId>d94246c7-82f1-4888-b970-2847c3384d6e</xr:TypeId>
+				<xr:ValueId>d4d8f473-bab9-4be6-8d83-4a8d1f199675</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>гф_НаценкиЗаКурс</Name>
+			<Comment>#wortmann #Наценки за курс Галфинд Окунев 2023/11/12</Comment>
+			<ExtendedConfigurationObject>606f2043-9512-4b79-bba4-bb4f21cd9714</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>RecorderPosition</InformationRegisterPeriodicity>
+			<WriteMode>RecorderSubordinate</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="2e2f8f2e-5b75-4c45-88e0-ed744fd95858">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПроцентНаценки</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c55d8290-89a8-4565-8639-84cdcf93a421</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="d41b46b0-1162-454a-9848-5287e6c6bec7">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Сезон</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8186a348-0acc-4d79-8919-ebdf35822574</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="32da2d30-51ee-4122-bd9f-0d94f65a919f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>КурсДо</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>0c7ccce5-cc64-475f-8673-7a186ae13792</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>14</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

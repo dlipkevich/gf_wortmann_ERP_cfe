@@ -3,7 +3,7 @@
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Установить скидки</v8:content>
+			<v8:content>Установить скидки и наценки</v8:content>
 		</v8:item>
 	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
@@ -102,11 +102,78 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<Table name="Наценки" id="108">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeightInTableRows>1</HeightInTableRows>
+			<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Наценки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаценкиКонтекстноеМеню" id="109"/>
+			<AutoCommandBar name="НаценкиКоманднаяПанель" id="110">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НаценкиРасширеннаяПодсказка" id="111"/>
+			<SearchStringAddition name="НаценкиСтрокаПоиска" id="112">
+				<AdditionSource>
+					<Item>Наценки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаценкиСтрокаПоискаКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="НаценкиСтрокаПоискаРасширеннаяПодсказка" id="114"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаценкиСостояниеПросмотра" id="115">
+				<AdditionSource>
+					<Item>Наценки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаценкиСостояниеПросмотраКонтекстноеМеню" id="116"/>
+				<ExtendedTooltip name="НаценкиСостояниеПросмотраРасширеннаяПодсказка" id="117"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаценкиУправлениеПоиском" id="118">
+				<AdditionSource>
+					<Item>Наценки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаценкиУправлениеПоискомКонтекстноеМеню" id="119"/>
+				<ExtendedTooltip name="НаценкиУправлениеПоискомРасширеннаяПодсказка" id="120"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="НаценкиВидНаценки" id="124">
+					<DataPath>Объект.Наценки.ВидНаценки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>40</Width>
+					<ContextMenu name="НаценкиВидНаценкиКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="НаценкиВидНаценкиРасширеннаяПодсказка" id="126"/>
+				</InputField>
+				<InputField name="НаценкиНаценкаРасчетная" id="127">
+					<DataPath>Объект.Наценки.НаценкаРасчетная</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаценкиНаценкаРасчетнаяКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="НаценкиНаценкаРасчетнаяРасширеннаяПодсказка" id="129"/>
+				</InputField>
+				<InputField name="НаценкиНаценкаДляРТУ" id="130">
+					<DataPath>Объект.Наценки.НаценкаДляРТУ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаценкиНаценкаДляРТУКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="НаценкиНаценкаДляРТУРасширеннаяПодсказка" id="132"/>
+					<Events>
+						<Event name="OnChange">НаценкиНаценкаДляРТУПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
 		<Table name="Скидки" id="4">
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
+			<HeightControlVariant>UseContentHeight</HeightControlVariant>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -302,6 +369,9 @@
 				<v8:Type>cfg:DataProcessorObject.гф_ОтгрузкаПоЗаказам</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.ВидЦены</Field>
+			</Save>
 			<Columns>
 				<AdditionalColumns table="Объект.СкидкиПоЗаказам">
 					<Column name="СезонныйЗаказ" id="1">

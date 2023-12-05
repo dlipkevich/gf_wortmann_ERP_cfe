@@ -61,45 +61,159 @@
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="20">
+							<Group>AlwaysHorizontal</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="21"/>
 							<ChildItems>
-								<UsualGroup name="Группа2" id="18">
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
-									<ChildItems>
-										<InputField name="СтоимостьОтмеченныхКОтгрузкеТоваров" id="10">
-											<DataPath>Объект.СтоимостьОтмеченныхКОтгрузкеТоваров</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Стоимость отмеченных к отгрузке товаров</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="СтоимостьОтмеченныхКОтгрузкеТоваровКонтекстноеМеню" id="11"/>
-											<ExtendedTooltip name="СтоимостьОтмеченныхКОтгрузкеТоваровРасширеннаяПодсказка" id="12"/>
-										</InputField>
-										<InputField name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробах" id="13">
-											<DataPath>Объект.КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробах</DataPath>
-											<Visible>false</Visible>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Количество отмеченных к отгрузке единиц номенклатуры в парах и в коробах</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахКонтекстноеМеню" id="14"/>
-											<ExtendedTooltip name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахРасширеннаяПодсказка" id="15"/>
-										</InputField>
-									</ChildItems>
-								</UsualGroup>
+								<RadioButtonField name="РасчетЦен" id="258">
+									<DataPath>РасчетЦен</DataPath>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По заказам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По прайс-листу</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="РасчетЦенКонтекстноеМеню" id="259"/>
+									<ExtendedTooltip name="РасчетЦенРасширеннаяПодсказка" id="260"/>
+									<Events>
+										<Event name="OnChange">РасчетЦенПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<CheckBoxField name="ПрименятьНаценки" id="253">
+									<DataPath>Объект.ПрименятьНаценки</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПрименятьНаценкиКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="ПрименятьНаценкиРасширеннаяПодсказка" id="255"/>
+								</CheckBoxField>
+								<InputField name="ОтборПредоплатныхКлиентов" id="261">
+									<DataPath>ОтборПредоплатныхКлиентов</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не отбирать</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Предоплатные</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не предоплатные</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ОтборПредоплатныхКлиентовКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="ОтборПредоплатныхКлиентовРасширеннаяПодсказка" id="263"/>
+									<Events>
+										<Event name="OnChange">ОтборПредоплатныхКлиентовПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="18">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<InputField name="СтоимостьОтмеченныхКОтгрузкеТоваров" id="10">
+									<DataPath>Объект.СтоимостьОтмеченныхКОтгрузкеТоваров</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Стоимость отмеченных к отгрузке товаров</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтоимостьОтмеченныхКОтгрузкеТоваровКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="СтоимостьОтмеченныхКОтгрузкеТоваровРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробах" id="13">
+									<DataPath>Объект.КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробах</DataPath>
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество отмеченных к отгрузке единиц номенклатуры в парах и в коробах</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахРасширеннаяПодсказка" id="15"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРасчетЦен" id="256">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расчет цен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расчет цен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасчетЦенРасширеннаяПодсказка" id="257"/>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
@@ -542,6 +656,7 @@
 			<Save>
 				<Field>Объект.ВидЦены</Field>
 				<Field>Объект.Клиент</Field>
+				<Field>Объект.ПрименятьНаценки</Field>
 				<Field>Объект.Склад</Field>
 			</Save>
 		</Attribute>
@@ -1401,6 +1516,49 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="РасчетЦен" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет цен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПредоплатныхКлиентов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор предоплатных клиентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойствоДоговораПредоплата" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство договора предоплата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

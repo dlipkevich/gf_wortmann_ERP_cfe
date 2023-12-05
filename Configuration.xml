@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>1916</Version>
+			<Version>1840</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -76,6 +76,7 @@
 			<Subsystem>Производство</Subsystem>
 			<Subsystem>гф_Маркировка</Subsystem>
 			<Subsystem>Закупки</Subsystem>
+			<Subsystem>Зарплата</Subsystem>
 			<StyleItem>ПоясняющийТекст</StyleItem>
 			<StyleItem>ПолеСОшибкойФон</StyleItem>
 			<StyleItem>ЦветФонаУдачнойОтправки</StyleItem>
@@ -260,6 +261,11 @@
 			<Role>гф_ИспользованиеОбработкиЗагрузкаПБЗ</Role>
 			<Role>гф_ДобавлениеИзменениеИсторияСтатусовПриходныхОрдеров</Role>
 			<Role>гф_ДобавлениеИзменениеИсторияСтатусовРасходныхОрдеров</Role>
+			<Role>гф_ЧтениеНаценок</Role>
+			<Role>гф_ДобавлениеНаценок</Role>
+			<Role>гф_РассылкаРЛ</Role>
+			<Role>гф_ПечатьЭтикетокБрендКлиента</Role>
+			<CommonTemplate>гф_ПФ_MXL_РасчетныйЛистокНастраиваемыйДляРассылки</CommonTemplate>
 			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
 			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
@@ -513,6 +519,7 @@
 			<Document>ЗаказПереработчику</Document>
 			<Document>ЗаказПереработчику2_5</Document>
 			<Document>ВводОстатковТоваров</Document>
+			<Document>гф_Наценки</Document>
 			<Enum>ИсточникиИнформацииОЦенахДляПечати</Enum>
 			<Enum>СпособыПолученияИзготовленныхКИЗГИСМ</Enum>
 			<Enum>ТипыСкладов</Enum>
@@ -668,6 +675,8 @@
 			<DataProcessor>ПечатьЭтикетокИЦенников</DataProcessor>
 			<DataProcessor>АктСверкиПоГруппеКлиентов</DataProcessor>
 			<DataProcessor>гф_ЗагрузкаПБЗ_ИзТабличногоДокументаWMN</DataProcessor>
+			<DataProcessor>гф_РассылкаРасчетныхЛистков</DataProcessor>
+			<DataProcessor>гф_ПечатьЭтикетокБрендКлиента</DataProcessor>
 			<InformationRegister>гф_ОтслеживаемыеОригиналыПервичныхДокументов</InformationRegister>
 			<InformationRegister>B2B_w_СкидкиКлиентаПоДоговору</InformationRegister>
 			<InformationRegister>гф_ПриоритетыРезервов</InformationRegister>
@@ -722,6 +731,8 @@
 			<InformationRegister>ОбластиДействияСертификатовНоменклатуры</InformationRegister>
 			<InformationRegister>ОчередьСообщенийИСМП</InformationRegister>
 			<InformationRegister>ПорядокОтраженияНаСчетахУчета</InformationRegister>
+			<InformationRegister>гф_НаценкиЗаКурс</InformationRegister>
+			<InformationRegister>гф_ЛогРассылкиРасчетныхЛистков</InformationRegister>
 			<AccumulationRegister>гф_ДвижениеКодовМаркировкиОрганизации</AccumulationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>гф_ДвиженияБюджетов</AccumulationRegister>
