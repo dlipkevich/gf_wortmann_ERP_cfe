@@ -127,6 +127,50 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<TabularSection uuid="f64c2b76-d367-4a8a-9222-82098e8aa116">
+				<InternalInfo>
+					<xr:GeneratedType name="ChartOfCharacteristicTypesTabularSection.гф_ГлобальныеЗначения.ДоговорыДляРоялти" category="TabularSection">
+						<xr:TypeId>cd080b7d-1ff6-4688-a857-e898fb0b071e</xr:TypeId>
+						<xr:ValueId>9488aaee-948f-4501-a985-0bc81b2dbd42</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="ChartOfCharacteristicTypesTabularSectionRow.гф_ГлобальныеЗначения.ДоговорыДляРоялти" category="TabularSectionRow">
+						<xr:TypeId>2ade23ff-750a-48db-af61-75baeed20191</xr:TypeId>
+						<xr:ValueId>32017963-334f-4484-afa6-fbd42a77dee6</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДоговорыДляРоялти</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>33c6cb5b-0d64-40ba-b61d-3114d8004b11</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="22eeb613-1a88-464b-a8e6-d78613715113">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Организация</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>f80af07b-c5a6-4804-8c91-70f4568e06c6</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="d00bcba2-08fb-46d9-ba8c-98b4197c71de">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Договор</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>8d044fde-5cb9-4add-b1a5-55867d0d3326</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаЭлементаСАвторизацией</Form>

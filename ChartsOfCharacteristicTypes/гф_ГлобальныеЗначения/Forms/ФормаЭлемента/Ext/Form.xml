@@ -55,67 +55,184 @@
 			<ContextMenu name="ЗначениеКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ЗначениеРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<Table name="Список" id="19">
-			<Representation>List</Representation>
-			<TitleLocation>Top</TitleLocation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
-			<DataPath>Объект.Список</DataPath>
+		<Pages name="ГруппаСтраницы" id="50">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Список значений</v8:content>
+					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</Title>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СписокКонтекстноеМеню" id="20"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="21"/>
-			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="22"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="23">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="25"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="26">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="29">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="30"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
-			</SearchControlAddition>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="51"/>
 			<ChildItems>
-				<LabelField name="СписокНомерСтроки" id="32">
-					<DataPath>Объект.Список.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СписокНомерСтрокиКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="СписокНомерСтрокиРасширеннаяПодсказка" id="34"/>
-				</LabelField>
-				<InputField name="СписокЗначение" id="35">
-					<DataPath>Объект.Список.Значение</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<TypeLink>
-						<xr:DataPath>Объект.ValueType</xr:DataPath>
-						<xr:LinkItem>0</xr:LinkItem>
-					</TypeLink>
-					<ContextMenu name="СписокЗначениеКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="СписокЗначениеРасширеннаяПодсказка" id="37"/>
-				</InputField>
+				<Page name="ГруппаСписок" id="52">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список значений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСписокРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<Table name="Список" id="19">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Список</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список значений</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="21"/>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокНомерСтроки" id="32">
+									<DataPath>Объект.Список.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СписокНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="СписокЗначение" id="35">
+									<DataPath>Объект.Список.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<TypeLink>
+										<xr:DataPath>Объект.ValueType</xr:DataPath>
+										<xr:LinkItem>0</xr:LinkItem>
+									</TypeLink>
+									<ContextMenu name="СписокЗначениеКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="СписокЗначениеРасширеннаяПодсказка" id="37"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДоговоры" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа договоры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДоговорыРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="ДоговорыДляРоялти" id="56">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДоговорыДляРоялти</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоговорыДляРоялтиКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="ДоговорыДляРоялтиКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="ДоговорыДляРоялтиРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="ДоговорыДляРоялтиСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>ДоговорыДляРоялти</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыДляРоялтиСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ДоговорыДляРоялтиСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыДляРоялтиСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>ДоговорыДляРоялти</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыДляРоялтиСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ДоговорыДляРоялтиСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыДляРоялтиУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>ДоговорыДляРоялти</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыДляРоялтиУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ДоговорыДляРоялтиУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДоговорыДляРоялтиНомерСтроки" id="69">
+									<DataPath>Объект.ДоговорыДляРоялти.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговорыДляРоялтиНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ДоговорыДляРоялтиНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="ДоговорыДляРоялтиОрганизация" id="72">
+									<DataPath>Объект.ДоговорыДляРоялти.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговорыДляРоялтиОрганизацияКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ДоговорыДляРоялтиОрганизацияРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ДоговорыДляРоялтиДоговорДляРоялти" id="75">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговорыДляРоялтиДоговорДляРоялтиКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ДоговорыДляРоялтиДоговорДляРоялтиРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ДоговорыДляРоялтиДоговор" id="78">
+									<DataPath>Объект.ДоговорыДляРоялти.Договор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Организация</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.ДоговорыДляРоялти.CurrentData.Организация</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ДоговорыДляРоялтиДоговорКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ДоговорыДляРоялтиДоговорРасширеннаяПодсказка" id="80"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 		<TextDocumentField name="Комментарий" id="47">
 			<DataPath>Объект.Комментарий</DataPath>
 			<Height>3</Height>
