@@ -137,6 +137,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="BeforeAddRow">ТекущиеПриоритетыПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТекущиеПриоритетыПередУдалением</Event>
 								<Event name="BeforeEditEnd">ТекущиеПриоритетыПередОкончаниемРедактирования</Event>
 								<Event name="OnChange">ТекущиеПриоритетыПриИзменении</Event>
 							</Events>
@@ -252,19 +253,26 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="160"/>
 							<ChildItems>
-								<CheckBoxField name="РежимОтладки" id="163">
-									<DataPath>РежимОтладки</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Отладка</v8:content>
-										</v8:item>
-									</Title>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="164"/>
-									<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="165"/>
-								</CheckBoxField>
+								<UsualGroup name="Группа3" id="175">
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="176"/>
+									<ChildItems>
+										<CheckBoxField name="РежимОтладки" id="163">
+											<DataPath>РежимОтладки</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отладка</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="164"/>
+											<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="165"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 								<Button name="ЗаполнитьНераспределеннымиОстатками" id="155">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ЗаполнитьНераспределеннымиОстатками</CommandName>
