@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.15">
-	<Item id="81e01224-fb8a-40b1-8285-4c32db3c666d">
-		<Name>ОбщегоНазначения</Name>
-		<Code>00001</Code>
-		<Description>Общего назначения</Description>
-		<Type/>
-		<IsFolder>true</IsFolder>
-		<ExtensionState>AdoptedCheck</ExtensionState>
-	</Item>
 	<Item id="1cdaa77a-ba89-48e2-bde3-f5d83abe4073">
 		<Name>ОбменДанными</Name>
 		<Code>00005</Code>
@@ -26,6 +18,22 @@
 			</Item>
 		</ChildItems>
 	</Item>
+	<Item id="81e01224-fb8a-40b1-8285-4c32db3c666d">
+		<Name>ОбщегоНазначения</Name>
+		<Code>00001</Code>
+		<Description>Общего назначения</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ExtensionState>AdoptedCheck</ExtensionState>
+	</Item>
+	<Item id="730ae07f-b952-4892-be4c-12de56007a95">
+		<Name>гф_ГлобальныеЗначенияНоменклатураДляРоялти</Name>
+		<Code>00008</Code>
+		<Description>Номенклатура для роялти</Description>
+		<Type/>
+		<IsFolder>false</IsFolder>
+		<ExtensionState>AdoptedCheck</ExtensionState>
+	</Item>
 	<Item id="47f34496-9165-4b9b-a5fd-dc07fd0d7b7b">
 		<Name>гф_ГлобальныеЗначенияПарольДляРЛ</Name>
 		<Code>00007</Code>
@@ -40,25 +48,27 @@
 		<IsFolder>false</IsFolder>
 		<ExtensionState>AdoptedCheck</ExtensionState>
 	</Item>
-	<Item id="730ae07f-b952-4892-be4c-12de56007a95">
-		<Name>гф_ГлобальныеЗначенияНоменклатураДляРоялти</Name>
-		<Code>00008</Code>
-		<Description>Номенклатура для роялти</Description>
+	<Item id="8354a82b-603c-4895-ab7e-c0624f64f441">
+		<Name>гф_СатьяРасходовДляРоялти</Name>
+		<Code>00011</Code>
+		<Description>гф_СатьяРасходовДляРоялти</Description>
 		<Type/>
 		<IsFolder>false</IsFolder>
 		<ExtensionState>AdoptedCheck</ExtensionState>
 	</Item>
-	<Item id="cfd77551-942c-4215-ad5b-3f8232250391">
-		<Name>гф_ГлобальныеЗначенияДоговорДляРоялти</Name>
+	<Item id="f71bdddf-5cbc-49f9-9cde-48d4e59941ea">
+		<Name>гф_ПодразделениеСтатьяДляРоялти</Name>
+		<Code>00012</Code>
+		<Description>гф_ПодразделениеСтатьяДляРоялти</Description>
+		<Type/>
+		<IsFolder>false</IsFolder>
+		<ExtensionState>AdoptedCheck</ExtensionState>
+	</Item>
+	<Item id="a501f706-cc57-410b-8d0b-3b2eafb71993">
+		<Name>гф_ДоговорДляРоялти</Name>
 		<Code>00009</Code>
-		<Description>Договоры для роялти</Description>
-		<Type>
-			<v8:Type>xs:string</v8:Type>
-			<v8:StringQualifiers>
-				<v8:Length>256</v8:Length>
-				<v8:AllowedLength>Variable</v8:AllowedLength>
-			</v8:StringQualifiers>
-		</Type>
+		<Description>гф_ДогоговорДляРоялти</Description>
+		<Type/>
 		<IsFolder>false</IsFolder>
 		<ExtensionState>AdoptedCheck</ExtensionState>
 	</Item>

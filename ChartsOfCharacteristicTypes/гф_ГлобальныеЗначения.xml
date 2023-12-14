@@ -183,6 +183,68 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<TabularSection uuid="65534150-90bd-418b-97bf-274d8282f97f">
+				<InternalInfo>
+					<xr:GeneratedType name="ChartOfCharacteristicTypesTabularSection.гф_ГлобальныеЗначения.ПодразделенияСтатьиДляРоялти" category="TabularSection">
+						<xr:TypeId>26bd7af8-1a10-449b-a78e-3435320c38dd</xr:TypeId>
+						<xr:ValueId>dae8e132-08cc-4e9a-aa1c-6e569f42ec92</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="ChartOfCharacteristicTypesTabularSectionRow.гф_ГлобальныеЗначения.ПодразделенияСтатьиДляРоялти" category="TabularSectionRow">
+						<xr:TypeId>9591949e-6b3b-4103-8bb6-ae43229f8467</xr:TypeId>
+						<xr:ValueId>c2fc692d-72dc-454c-847d-6285c2c7ade3</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПодразделенияСтатьиДляРоялти</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>2d2e86f0-d63e-4a91-b076-2e2661919c62</ExtendedConfigurationObject>
+				</Properties>
+				<ChildObjects>
+					<Attribute uuid="737d612e-0f14-4c6c-b9bb-67fe50ce61c9">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Организация</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>c9c64f5b-c5fa-4361-92e9-b4f3adaf5ec3</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="f09ea28b-49db-48bc-9694-b3908d2db73a">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>Подразделение</Name>
+							<Comment/>
+							<ExtendedConfigurationObject>dc071534-d179-44a2-a059-3219b9ed8fd7</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="9859c9a6-c336-4f32-af0f-168865be1df7">
+						<InternalInfo/>
+						<Properties>
+							<ObjectBelonging>Adopted</ObjectBelonging>
+							<Name>СтатьяРасходов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статья расходов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<ExtendedConfigurationObject>29bfb624-03cb-449c-9a97-f78aaee5ad8b</ExtendedConfigurationObject>
+							<Type>
+								<v8:Type>cfg:ChartOfCharacteristicTypesRef.СтатьиРасходов</v8:Type>
+							</Type>
+						</Properties>
+					</Attribute>
+				</ChildObjects>
+			</TabularSection>
 			<Form>ФормаСписка</Form>
 			<Form>ФормаЭлемента</Form>
 			<Form>ФормаЭлементаСАвторизацией</Form>

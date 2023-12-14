@@ -232,6 +232,89 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаПодразделения" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подразделения и статьи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подразделения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПодразделенияРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<Table name="ПодразделенияСтатьиДляРоялти" id="86">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПодразделенияСтатьиДляРоялти</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПодразделенияСтатьиДляРоялтиКонтекстноеМеню" id="87"/>
+							<AutoCommandBar name="ПодразделенияСтатьиДляРоялтиКоманднаяПанель" id="88"/>
+							<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиРасширеннаяПодсказка" id="89"/>
+							<SearchStringAddition name="ПодразделенияСтатьиДляРоялтиСтрокаПоиска" id="90">
+								<AdditionSource>
+									<Item>ПодразделенияСтатьиДляРоялти</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодразделенияСтатьиДляРоялтиСтрокаПоискаКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПодразделенияСтатьиДляРоялтиСостояниеПросмотра" id="93">
+								<AdditionSource>
+									<Item>ПодразделенияСтатьиДляРоялти</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодразделенияСтатьиДляРоялтиСостояниеПросмотраКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПодразделенияСтатьиДляРоялтиУправлениеПоиском" id="96">
+								<AdditionSource>
+									<Item>ПодразделенияСтатьиДляРоялти</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПодразделенияСтатьиДляРоялтиУправлениеПоискомКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПодразделенияСтатьиДляРоялтиНомерСтроки" id="99">
+									<DataPath>Объект.ПодразделенияСтатьиДляРоялти.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПодразделенияСтатьиДляРоялтиНомерСтрокиКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиНомерСтрокиРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<InputField name="ПодразделенияСтатьиДляРоялтиОрганизация" id="102">
+									<DataPath>Объект.ПодразделенияСтатьиДляРоялти.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПодразделенияСтатьиДляРоялтиОрганизацияКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиОрганизацияРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<InputField name="ПодразделенияСтатьиДляРоялтиПодразделение" id="105">
+									<DataPath>Объект.ПодразделенияСтатьиДляРоялти.Подразделение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПодразделенияСтатьиДляРоялтиПодразделениеКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиПодразделениеРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ПодразделенияСтатьиДляРоялтиСтатья" id="108">
+									<DataPath>Объект.ПодразделенияСтатьиДляРоялти.СтатьяРасходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статья затрат</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПодразделенияСтатьиДляРоялтиСтатьяКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ПодразделенияСтатьиДляРоялтиСтатьяРасширеннаяПодсказка" id="110"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<TextDocumentField name="Комментарий" id="47">
