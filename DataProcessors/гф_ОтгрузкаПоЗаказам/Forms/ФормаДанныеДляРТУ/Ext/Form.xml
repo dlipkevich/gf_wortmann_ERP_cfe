@@ -310,12 +310,40 @@
 						<Event name="StartChoice">СкидкиПоЗаказамЗаказНачалоВыбора</Event>
 					</Events>
 				</InputField>
-				<InputField name="СкидкиПоЗаказамСкидкаДляРТУ" id="68">
-					<DataPath>Объект.СкидкиПоЗаказам.СкидкаДляРТУ</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкидкиПоЗаказамСкидкаДляРТУКонтекстноеМеню" id="69"/>
-					<ExtendedTooltip name="СкидкиПоЗаказамСкидкаДляРТУРасширеннаяПодсказка" id="70"/>
-				</InputField>
+				<ColumnGroup name="СкидкиПоЗаказамГруппа1" id="142">
+					<ExtendedTooltip name="СкидкиПоЗаказамГруппа1РасширеннаяПодсказка" id="143"/>
+					<ChildItems>
+						<InputField name="СкидкиПоЗаказамРучнаяСкидка" id="133">
+							<DataPath>Объект.СкидкиПоЗаказам.РучнаяСкидка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкидкиПоЗаказамРучнаяСкидкаКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="СкидкиПоЗаказамРучнаяСкидкаРасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<InputField name="СкидкиПоЗаказамСкидкаДляРТУ" id="68">
+							<DataPath>Объект.СкидкиПоЗаказам.СкидкаДляРТУ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкидкиПоЗаказамСкидкаДляРТУКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="СкидкиПоЗаказамСкидкаДляРТУРасширеннаяПодсказка" id="70"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СкидкиПоЗаказамГруппа2" id="144">
+					<ExtendedTooltip name="СкидкиПоЗаказамГруппа2РасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<InputField name="СкидкиПоЗаказамНаценкаДляРТУ" id="136">
+							<DataPath>Объект.СкидкиПоЗаказам.НаценкаДляРТУ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкидкиПоЗаказамНаценкаДляРТУКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="СкидкиПоЗаказамНаценкаДляРТУРасширеннаяПодсказка" id="138"/>
+						</InputField>
+						<InputField name="СкидкиПоЗаказамИтоговаяСкидкаДляРТУ" id="139">
+							<DataPath>Объект.СкидкиПоЗаказам.ИтоговаяСкидкаДляРТУ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкидкиПоЗаказамИтоговаяСкидкаДляРТУКонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="СкидкиПоЗаказамИтоговаяСкидкаДляРТУРасширеннаяПодсказка" id="141"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 				<CheckBoxField name="СкидкиПоЗаказамфлСезонныйЗаказ" id="71">
 					<DataPath>Объект.СкидкиПоЗаказам.СезонныйЗаказ</DataPath>
 					<ReadOnly>true</ReadOnly>
