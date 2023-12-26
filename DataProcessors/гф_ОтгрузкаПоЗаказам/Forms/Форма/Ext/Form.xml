@@ -58,6 +58,10 @@
 									<ContextMenu name="ВидЦеныКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="9"/>
 								</InputField>
+								<InputField name="КомплектацияАртикул" id="264">
+									<ContextMenu name="КомплектацияАртикулКонтекстноеМеню" id="265"/>
+									<ExtendedTooltip name="КомплектацияАртикулРасширеннаяПодсказка" id="266"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="20">
@@ -654,6 +658,7 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Save>
+				<Field>1/0:0b7e79aa-96d1-4348-8ac8-6f1be3ffa14c</Field>
 				<Field>Объект.ВидЦены</Field>
 				<Field>Объект.Клиент</Field>
 				<Field>Объект.ПрименятьНаценки</Field>
@@ -1155,6 +1160,22 @@
 					</Title>
 					<Type>
 						<v8:Type>cfg:CatalogRef.СтавкиНДС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СкидкаИзЗаказа" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скидка из заказа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
