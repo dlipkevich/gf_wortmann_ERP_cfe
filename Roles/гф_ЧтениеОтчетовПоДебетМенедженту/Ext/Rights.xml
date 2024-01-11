@@ -4,17 +4,6 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Catalog.Контрагенты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.Контрагенты.StandardAttribute.PredefinedDataName</name>
 		<right>
 			<name>View</name>
@@ -148,7 +137,7 @@
 		<name>Document.ЗаявкаНаВозвратТоваровОтКлиента</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -159,10 +148,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -254,7 +239,7 @@
 		<name>Document.ЗаказДавальца2_5</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -265,10 +250,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -342,17 +323,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.ПриходныйОрдерНаТовары</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.ПриходныйОрдерНаТовары.StandardAttribute.Posted</name>
 		<right>
 			<name>View</name>
@@ -391,7 +361,7 @@
 		<name>Document.ПриобретениеТоваровУслуг</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -402,10 +372,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -521,17 +487,6 @@
 		</right>
 	</object>
 	<object>
-		<name>AccumulationRegister.ДвиженияПоНДС</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>AccumulationRegister.ДвиженияПоНДС.StandardAttribute.Active</name>
 		<right>
 			<name>View</name>
@@ -593,17 +548,6 @@
 	</object>
 	<object>
 		<name>InformationRegister.гф_ЛимитыКонтрагентов.StandardAttribute.Period</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccountingRegister.Хозрасчетный</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -785,7 +729,7 @@
 		<name>Document.ЗаказДавальца</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -796,10 +740,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1118,7 +1058,7 @@
 		<name>Document.ЗаказПереработчику2_5</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -1129,10 +1069,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1248,7 +1184,7 @@
 		<name>Document.ВводОстатковТоваров</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -1259,10 +1195,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1334,17 +1266,6 @@
 	</object>
 	<object>
 		<name>Document.гф_БюджетнаяОперация.Attribute.Контрагент</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.РасходныйОрдерНаТовары</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1484,7 +1405,7 @@
 		<name>Catalog.ДоговорыКонтрагентов</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -1495,10 +1416,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1566,17 +1483,6 @@
 	</object>
 	<object>
 		<name>Document.ЗаказКлиента.Attribute.КартаЛояльности</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.ПорядокОтраженияНаСчетахУчета</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -1854,7 +1760,7 @@
 		<name>Document.ЗаказКлиента</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -1865,10 +1771,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1924,7 +1826,7 @@
 		<name>Catalog.Партнеры</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -1933,10 +1835,6 @@
 "ГруппыПартнеров","Ссылка", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2760,7 +2658,7 @@
 		<name>Document.УпаковочныйЛист</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -2771,10 +2669,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -2989,7 +2883,7 @@
 		<name>Catalog.Организации</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -2998,10 +2892,6 @@
 "Организации","Ссылка","","","","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3015,21 +2905,6 @@
 		<name>Document.ЗаказКлиента.Attribute.ДополнительнаяИнформацияПоДоставке</name>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.ЭлектронноеПисьмоИсходящее</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>InputByString</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -3072,7 +2947,7 @@
 		<name>Document.ЗаказПереработчику</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -3083,10 +2958,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3300,7 +3171,7 @@
 		<name>Document.ПроизводствоБезЗаказа</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
+			<value>false</value>
 			<restrictionByCondition>
 				<condition>#Если &amp;ОграничениеДоступаНаУровнеЗаписейУниверсально #Тогда
 #ДляОбъекта("")
@@ -3311,10 +3182,6 @@
 "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","", "","" )
 #КонецЕсли</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -3379,17 +3246,6 @@
 	</object>
 	<object>
 		<name>Document.УпаковочныйЛист.Attribute.гф_СостояниеКороба</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.КоллекцииНоменклатуры</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -3682,13 +3538,6 @@
 	</object>
 	<object>
 		<name>Catalog.гф_ВидыБлокировок.Attribute.Комментарий</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Subsystem.гф_ДебетМенеджент</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
