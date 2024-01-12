@@ -293,7 +293,11 @@
 		ОпцииСессии.UserName = СокрЛП(Настройки.Пользователь);
 		ОпцииСессии.Password = СокрЛП(Настройки.Пароль);
 		
-		ОпцииСессии.SshHostKeyFingerprint = "ssh-rsa 1024 U7gTHqAEWWcc9s4RaafFus7Ijsdvqbd/3IS8Juih3ys";
+		// ++ Галфинд_ДомнышеваКР_12_01_2024
+		// Изменено на ключ для сервера заказчика
+		//ОпцииСессии.SshHostKeyFingerprint = "ssh-rsa 1024 U7gTHqAEWWcc9s4RaafFus7Ijsdvqbd/3IS8Juih3ys";
+		ОпцииСессии.SshHostKeyFingerprint = "ssh-rsa 2048 4QC6Wsnsu6Hp7wUM3FfTKf+7X/N8dUig5SCv1FADfv4=";
+		// -- Галфинд_ДомнышеваКР_12_01_2024
 		
 		ОпцииСессии.TimeoutInMilliseconds = 5000;
 		
