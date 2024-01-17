@@ -775,6 +775,11 @@
 											<CommandName>Form.Command.ИзменитьСтатусыРО</CommandName>
 											<ExtendedTooltip name="ИзменитьСтатусыРОРасширеннаяПодсказка" id="317"/>
 										</Button>
+										<Button name="ВыгрузитьРеестрОтгрузки" id="1266">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ВыгрузитьРеестрОтгрузки</CommandName>
+											<ExtendedTooltip name="ВыгрузитьРеестрОтгрузкиРасширеннаяПодсказка" id="1267"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 							</ChildItems>
@@ -4391,6 +4396,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаТест</Action>
+		</Command>
+		<Command name="ВыгрузитьРеестрОтгрузки" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить реестр отгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить реестр отгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьРеестрОтгрузки</Action>
 		</Command>
 	</Commands>
 </Form>
