@@ -556,6 +556,40 @@
 						</TextDocumentField>
 					</ChildItems>
 				</Page>
+				<Page name="ДозагрузкаНомераГТД" id="254">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дозагрузка номера ГТД в КМ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дозагрузка номера ГТД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДозагрузкаНомераГТДРасширеннаяПодсказка" id="255"/>
+					<ChildItems>
+						<LabelDecoration name="Необходимость" id="258">
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо выбрать файл для загрузки и ПТУ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НеобходимостьКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="НеобходимостьРасширеннаяПодсказка" id="260"/>
+						</LabelDecoration>
+						<Button name="ЗагрузитьНомераГТД" id="256">
+							<Type>UsualButton</Type>
+							<Enabled>false</Enabled>
+							<CommandName>Form.Command.ЗагрузитьНомераГТД</CommandName>
+							<ExtendedTooltip name="ЗагрузитьНомераГТДРасширеннаяПодсказка" id="257"/>
+						</Button>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<UsualGroup name="ГруппаКнопок" id="129">
@@ -915,6 +949,21 @@
 			</ToolTip>
 			<Action>кСоздатьДокументы</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьНомераГТД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить номера ГТД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить номера ГТД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНомераГТД</Action>
 		</Command>
 	</Commands>
 </Form>
