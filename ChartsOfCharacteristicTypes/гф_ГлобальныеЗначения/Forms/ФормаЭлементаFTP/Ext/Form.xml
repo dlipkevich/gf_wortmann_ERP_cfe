@@ -45,6 +45,12 @@
 			<ContextMenu name="ПортКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ПортРасширеннаяПодсказка" id="12"/>
 		</InputField>
+		<CheckBoxField name="SSL" id="39">
+			<DataPath>SSL</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="SSLКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="SSLРасширеннаяПодсказка" id="41"/>
+		</CheckBoxField>
 		<InputField name="Пользователь" id="13">
 			<DataPath>Пользователь</DataPath>
 			<ContextMenu name="ПользовательКонтекстноеМеню" id="14"/>
@@ -224,6 +230,17 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="SSL" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>SSL</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
