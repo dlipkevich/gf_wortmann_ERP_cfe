@@ -585,11 +585,23 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РеализацияТоваровУслуггф_ТоварыВКоробах.УпаковочныйЛист.гф_Комплектация.Владелец КАК Номенклатура,
+	РеализацияТоваровУслуггф_ТоварыВКоробах.УпаковочныйЛист.гф_Комплектация.Характеристика КАК Характеристика
+ПОМЕСТИТЬ ВТ_ПереченьНоменклатуры
+ИЗ
+	Документ.РеализацияТоваровУслуг.гф_ТоварыВКоробах КАК РеализацияТоваровУслуггф_ТоварыВКоробах
+ГДЕ
+	РеализацияТоваровУслуггф_ТоварыВКоробах.Ссылка В(&amp;СписокДокументов)
+;
+
+////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	РегистрЦеныНоменклатуры.Номенклатура,
 	МАКСИМУМ(РегистрЦеныНоменклатуры.Цена) КАК Цена
 ПОМЕСТИТЬ ВтЦеныЗакупочные
-	ИЗ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенЗакупочная) КАК РегистрЦеныНоменклатуры
+	ИЗ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенЗакупочная 
+		И Номенклатура В (ВЫБРАТЬ Т.Номенклатура ИЗ ВТ_ПереченьНоменклатуры КАК Т)) КАК РегистрЦеныНоменклатуры
 СГРУППИРОВАТЬ ПО
 	РегистрЦеныНоменклатуры.Номенклатура
 ;
@@ -599,7 +611,8 @@
 	РегистрЦеныНоменклатуры.Номенклатура,
 	МАКСИМУМ(РегистрЦеныНоменклатуры.Цена) КАК Цена
 ПОМЕСТИТЬ ВтЦеныРозничные
-	ИЗ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенРозничная) КАК РегистрЦеныНоменклатуры
+	ИЗ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенРозничная
+		И Номенклатура В (ВЫБРАТЬ Т.Номенклатура ИЗ ВТ_ПереченьНоменклатуры КАК Т)) КАК РегистрЦеныНоменклатуры
 СГРУППИРОВАТЬ ПО
 	РегистрЦеныНоменклатуры.Номенклатура
 ;
@@ -2122,16 +2135,6 @@
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Комплектующая</dcsset:field>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>КоличествоКоробов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПарВКоробе</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоПар</dcsset:field>
-				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>6a507589-3d53-46af-8add-80336a61f4ef</dcsset:userSettingID>
 			</dcsset:selection>
@@ -2550,14 +2553,6 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>Комплектующая</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:use>false</dcsset:use>
-							<dcsset:field>КоличествоКоробов</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
