@@ -6,6 +6,7 @@
 			<v8:content>Установить скидки и наценки</v8:content>
 		</v8:item>
 	</Title>
+	<Width>120</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
@@ -384,50 +385,85 @@
 						</InputField>
 					</ChildItems>
 				</ColumnGroup>
-				<CheckBoxField name="СкидкиПоЗаказамфлСезонныйЗаказ" id="71">
-					<DataPath>Объект.СкидкиПоЗаказам.СезонныйЗаказ</DataPath>
-					<ReadOnly>true</ReadOnly>
+				<ColumnGroup name="СкидкиПоЗаказамГруппаДетали" id="154">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сезонный
+							<v8:content>Скидки по заказам группа детали</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скидки по заказам группа детали</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СкидкиПоЗаказамГруппаДеталиРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<ColumnGroup name="СкидкиПоЗаказамГруппаСезонный" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скидки по заказам группа сезонный</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скидки по заказам группа сезонный</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СкидкиПоЗаказамГруппаСезонныйРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<CheckBoxField name="СкидкиПоЗаказамфлСезонныйЗаказ" id="71">
+									<DataPath>Объект.СкидкиПоЗаказам.СезонныйЗаказ</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сезонный
 заказ</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СкидкиПоЗаказамфлСезонныйЗаказКонтекстноеМеню" id="72"/>
-					<ExtendedTooltip name="СкидкиПоЗаказамфлСезонныйЗаказРасширеннаяПодсказка" id="73"/>
-				</CheckBoxField>
-				<CheckBoxField name="СкидкиПоЗаказамфлКоробнойСклад" id="74">
-					<DataPath>Объект.СкидкиПоЗаказам.КоробнойСклад</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Коробной
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкидкиПоЗаказамфлСезонныйЗаказКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="СкидкиПоЗаказамфлСезонныйЗаказРасширеннаяПодсказка" id="73"/>
+								</CheckBoxField>
+								<CheckBoxField name="СкидкиПоЗаказамфлКоробнойСклад" id="74">
+									<DataPath>Объект.СкидкиПоЗаказам.КоробнойСклад</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коробной
 склад</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СкидкиПоЗаказамфлКоробнойСкладКонтекстноеМеню" id="75"/>
-					<ExtendedTooltip name="СкидкиПоЗаказамфлКоробнойСкладРасширеннаяПодсказка" id="76"/>
-				</CheckBoxField>
-				<InputField name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежа" id="77">
-					<DataPath>Объект.СкидкиПоЗаказам.КоличествоДнейОтсрочкиПлатежа</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество дней
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СкидкиПоЗаказамфлКоробнойСкладКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СкидкиПоЗаказамфлКоробнойСкладРасширеннаяПодсказка" id="76"/>
+								</CheckBoxField>
+							</ChildItems>
+						</ColumnGroup>
+						<InputField name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежа" id="77">
+							<DataPath>Объект.СкидкиПоЗаказам.КоличествоДнейОтсрочкиПлатежа</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество дней
 отсрочки платежа</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаКонтекстноеМеню" id="78"/>
-					<ExtendedTooltip name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаРасширеннаяПодсказка" id="79"/>
-				</InputField>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="СкидкиПоЗаказамКоличествоДнейОтсрочкиПлатежаРасширеннаяПодсказка" id="79"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -808,7 +844,7 @@
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
 							<v8:Digits>15</v8:Digits>
-							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:FractionDigits>5</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
