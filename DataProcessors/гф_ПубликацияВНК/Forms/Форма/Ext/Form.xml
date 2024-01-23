@@ -1,0 +1,1382 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<VerticalScroll>use</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer" callType="After">гф_ПриСозданииНаСервереПосле</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="261">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="262"/>
+			<ChildItems>
+				<CheckBoxField name="МС_ЗаказатьGTINДляРусскойЗимы" id="199">
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="МС_ЗаказатьGTINДляРусскойЗимыКонтекстноеМеню" id="200"/>
+					<ExtendedTooltip name="МС_ЗаказатьGTINДляРусскойЗимыРасширеннаяПодсказка" id="201"/>
+				</CheckBoxField>
+				<LabelDecoration name="Декорация3" id="146">
+					<Visible>false</Visible>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:NormalTextFont" height="18" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Публикация в национальном каталоге</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="148"/>
+				</LabelDecoration>
+				<InputField name="Организация" id="258">
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="259"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="260"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОперацииПубликации" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Публикация в национальном каталоге</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операции публикации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОперацииПубликацииРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Button name="ПолучитьGTIN" id="77">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьGTINРасширеннаяПодсказка" id="78"/>
+				</Button>
+				<PictureDecoration name="Декорация5" id="157">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация5КонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="159"/>
+				</PictureDecoration>
+				<Button name="ОтправитьНаЧЕРНОВИК" id="83">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтправитьНаЧЕРНОВИКРасширеннаяПодсказка" id="84"/>
+				</Button>
+				<PictureDecoration name="Декорация1" id="154">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="156"/>
+				</PictureDecoration>
+				<Button name="ПолучитьСтатусFeed_id" id="95">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьСтатусFeed_idРасширеннаяПодсказка" id="96"/>
+				</Button>
+				<PictureDecoration name="Декорация7" id="163">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация7КонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="165"/>
+				</PictureDecoration>
+				<Button name="ПолучитьСтатусGTIN" id="91">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьСтатусGTINРасширеннаяПодсказка" id="92"/>
+				</Button>
+				<PictureDecoration name="Декорация8" id="166">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация8КонтекстноеМеню" id="167"/>
+					<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="168"/>
+				</PictureDecoration>
+				<Button name="Доописать" id="85">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ДоописатьРасширеннаяПодсказка" id="86"/>
+				</Button>
+				<PictureDecoration name="Декорация11" id="180">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация11КонтекстноеМеню" id="181"/>
+					<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="182"/>
+				</PictureDecoration>
+				<Button name="ПолучитьСтатусFeed_id_Доописание" id="183">
+					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьСтатусFeed_id_ДоописаниеРасширеннаяПодсказка" id="184"/>
+				</Button>
+				<PictureDecoration name="Декорация9" id="169">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация9КонтекстноеМеню" id="170"/>
+					<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="171"/>
+				</PictureDecoration>
+				<Button name="ОтправитьНаМОДЕРАЦИЮ" id="79">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтправитьНаМОДЕРАЦИЮРасширеннаяПодсказка" id="80"/>
+				</Button>
+				<PictureDecoration name="Декорация12" id="188">
+					<Visible>false</Visible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация12КонтекстноеМеню" id="189"/>
+					<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="190"/>
+				</PictureDecoration>
+				<Button name="ПолучитьСтатусGTIN1" id="191">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьСтатусGTIN1РасширеннаяПодсказка" id="192"/>
+				</Button>
+				<PictureDecoration name="Декорация6" id="160">
+					<Visible>false</Visible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация6КонтекстноеМеню" id="161"/>
+					<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="162"/>
+				</PictureDecoration>
+				<Button name="ОПУБЛИКОВАТЬ" id="89">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОПУБЛИКОВАТЬРасширеннаяПодсказка" id="90"/>
+				</Button>
+				<PictureDecoration name="Декорация10" id="172">
+					<Visible>false</Visible>
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация10КонтекстноеМеню" id="173"/>
+					<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="174"/>
+				</PictureDecoration>
+				<Button name="ОбновитьСтатусКИС" id="58">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОбновитьСтатусКИСРасширеннаяПодсказка" id="59"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОперацииПубликации1" id="209">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Публикация в национальном каталоге</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операции публикации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОперацииПубликации1РасширеннаяПодсказка" id="210"/>
+			<ChildItems>
+				<Button name="ОбновитьСтатусКИС1" id="256">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОбновитьСтатусКИС1РасширеннаяПодсказка" id="257"/>
+				</Button>
+				<PictureDecoration name="Декорация20" id="253">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация20КонтекстноеМеню" id="254"/>
+					<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="255"/>
+				</PictureDecoration>
+				<Button name="ОПУБЛИКОВАТЬ1" id="251">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОПУБЛИКОВАТЬ1РасширеннаяПодсказка" id="252"/>
+				</Button>
+				<PictureDecoration name="Декорация19" id="248">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация19КонтекстноеМеню" id="249"/>
+					<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="250"/>
+				</PictureDecoration>
+				<Button name="ПолучитьСтатусGTIN3" id="246">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ПолучитьСтатусGTIN3РасширеннаяПодсказка" id="247"/>
+				</Button>
+				<PictureDecoration name="Декорация18" id="243">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация18КонтекстноеМеню" id="244"/>
+					<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="245"/>
+				</PictureDecoration>
+				<Button name="ОтправитьНаМОДЕРАЦИЮ1" id="241">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<HorizontalStretch>true</HorizontalStretch>
+					<CommandName>0</CommandName>
+					<ExtendedTooltip name="ОтправитьНаМОДЕРАЦИЮ1РасширеннаяПодсказка" id="242"/>
+				</Button>
+				<PictureDecoration name="Декорация17" id="238">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="Декорация17КонтекстноеМеню" id="239"/>
+					<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="240"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="49">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<UsualGroup name="ЕжемесячныеОграничения" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ежемесячные ограничения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ежемесячные ограничения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ЕжемесячныеОграниченияРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<LabelField name="ЛимитВМесяц" id="7">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Лимит</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ЛимитВМесяцКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ЛимитВМесяцРасширеннаяПодсказка" id="9"/>
+						</LabelField>
+						<LabelField name="Использованно" id="4">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ИспользованноКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИспользованноРасширеннаяПодсказка" id="6"/>
+						</LabelField>
+						<LabelField name="Осталось" id="10">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<GroupVerticalAlign>Top</GroupVerticalAlign>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ОсталосьКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОсталосьРасширеннаяПодсказка" id="12"/>
+						</LabelField>
+						<LabelField name="Сверхлимита" id="177">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<GroupVerticalAlign>Top</GroupVerticalAlign>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="СверхлимитаКонтекстноеМеню" id="178"/>
+							<ExtendedTooltip name="СверхлимитаРасширеннаяПодсказка" id="179"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПубликацияВНК" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Публикация в НК</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа публикация ВНК</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПубликацияВНКРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<LabelField name="GTINкзаказу" id="1">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="GTINкзаказуКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="GTINкзаказуРасширеннаяПодсказка" id="3"/>
+						</LabelField>
+						<LabelField name="GTINкчерновику" id="16">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="GTINкчерновикуКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="GTINкчерновикуРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<LabelField name="ТребуетДоописания" id="22">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ТребуетДоописанияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ТребуетДоописанияРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="GTINКМодерации" id="13">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="GTINКМодерацииКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="GTINКМодерацииРасширеннаяПодсказка" id="15"/>
+						</LabelField>
+						<LabelField name="GTINкПубликации" id="19">
+							<TitleTextColor>#0000FF</TitleTextColor>
+							<TitleHeight>1</TitleHeight>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Hiperlink>true</Hiperlink>
+							<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="GTINкПубликацииКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="GTINкПубликацииРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПубликуемыеТовары" id="97">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПубликуемыеТоварыКонтекстноеМеню" id="98"/>
+			<AutoCommandBar name="ПубликуемыеТоварыКоманднаяПанель" id="99">
+				<ChildItems>
+					<Popup name="ПубликуемыеТоварыЗаполнить" id="136">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Публикуемые товары заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ПубликуемыеТоварыЗаполнитьРасширеннаяПодсказка" id="137"/>
+						<ChildItems>
+							<Button name="ЗаполнитьПоОтбору" id="56">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>по отбору</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ЗаполнитьПоОтборуРасширеннаяПодсказка" id="57"/>
+							</Button>
+							<Popup name="ПубликуемыеТоварыГруппаПоДокументу" id="205">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>по документу</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Публикуемые товары группа по документу</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПубликуемыеТоварыГруппаПоДокументуРасширеннаяПодсказка" id="206"/>
+								<ChildItems>
+									<Button name="ЗаполнитьПоДокументу" id="60">
+										<Type>CommandBarButton</Type>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<AutoMaxHeight>false</AutoMaxHeight>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заказ на эмиссию</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЗаполнитьПоДокументуРасширеннаяПодсказка" id="61"/>
+									</Button>
+									<Button name="ЗаполнитьПоДокументуПриобретение" id="207">
+										<Type>CommandBarButton</Type>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<AutoMaxHeight>false</AutoMaxHeight>
+										<CommandName>0</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Приобретение товаров</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЗаполнитьПоДокументуПриобретениеРасширеннаяПодсказка" id="208"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="ЗаполнитьПоFeed_id" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>0</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>по feed id</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ЗаполнитьПоFeed_idРасширеннаяПодсказка" id="55"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="ПубликуемыеТоварыОбновить" id="175">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПубликуемыеТоварыОбновитьРасширеннаяПодсказка" id="176"/>
+					</Button>
+					<Button name="ПубликуемыеТоварыОчиститьДанные" id="263">
+						<Type>CommandBarButton</Type>
+						<CommandName>0</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ПубликуемыеТоварыОчиститьДанныеРасширеннаяПодсказка" id="264"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПубликуемыеТоварыРасширеннаяПодсказка" id="100"/>
+			<SearchStringAddition name="ПубликуемыеТоварыСтрокаПоиска" id="101">
+				<AdditionSource>
+					<Item>ПубликуемыеТовары</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликуемыеТоварыСтрокаПоискаКонтекстноеМеню" id="102"/>
+				<ExtendedTooltip name="ПубликуемыеТоварыСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПубликуемыеТоварыСостояниеПросмотра" id="104">
+				<AdditionSource>
+					<Item>ПубликуемыеТовары</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликуемыеТоварыСостояниеПросмотраКонтекстноеМеню" id="105"/>
+				<ExtendedTooltip name="ПубликуемыеТоварыСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПубликуемыеТоварыУправлениеПоиском" id="107">
+				<AdditionSource>
+					<Item>ПубликуемыеТовары</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликуемыеТоварыУправлениеПоискомКонтекстноеМеню" id="108"/>
+				<ExtendedTooltip name="ПубликуемыеТоварыУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПубликуемыеТоварыНомерСтроки" id="110">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыНомерСтрокиКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыНомерСтрокиРасширеннаяПодсказка" id="112"/>
+				</LabelField>
+				<LabelField name="ПубликуемыеТоварыНоменклатураАртикул" id="196">
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>10</MaxWidth>
+					<ContextMenu name="ПубликуемыеТоварыНоменклатураАртикулКонтекстноеМеню" id="197"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыНоменклатураАртикулРасширеннаяПодсказка" id="198"/>
+				</LabelField>
+				<InputField name="ПубликуемыеТоварыНоменклатура" id="113">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыНоменклатураКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыНоменклатураРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыХарактеристика" id="202">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыХарактеристикаКонтекстноеМеню" id="203"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыХарактеристикаРасширеннаяПодсказка" id="204"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыGTIN" id="116">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыGTINКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыGTINРасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыСтатус_В_НК" id="119">
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыСтатус_В_НККонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыСтатус_В_НКРасширеннаяПодсказка" id="121"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыСтатусВКИС" id="122">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыСтатусВКИСКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыСтатусВКИСРасширеннаяПодсказка" id="124"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыFeed_id" id="128">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыFeed_idКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыFeed_idРасширеннаяПодсказка" id="130"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыСтатусFeed_id" id="131">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыСтатусFeed_idКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыСтатусFeed_idРасширеннаяПодсказка" id="133"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыGood_id" id="185">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыGood_idКонтекстноеМеню" id="186"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыGood_idРасширеннаяПодсказка" id="187"/>
+				</InputField>
+				<InputField name="ПубликуемыеТоварыКомментарииПоОписанию" id="125">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликуемыеТоварыКомментарииПоОписаниюКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыКомментарииПоОписаниюРасширеннаяПодсказка" id="127"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="Комментарий" id="193">
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="194"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="195"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОперацииПубликации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ОперацииПубликации1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПубликуемыеТовары</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПубликуемыеТоварыЗаполнитьРасширеннаяПодсказка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Организация</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<BaseForm version="2.15">
+		<VerticalScroll>use</VerticalScroll>
+		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+			<Autofill>false</Autofill>
+		</AutoCommandBar>
+		<ChildItems>
+			<UsualGroup name="ГруппаШапка" id="261">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа шапка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа шапка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Group>AlwaysHorizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="262"/>
+				<ChildItems>
+					<CheckBoxField name="МС_ЗаказатьGTINДляРусскойЗимы" id="199">
+						<CheckBoxType>Auto</CheckBoxType>
+						<ContextMenu name="МС_ЗаказатьGTINДляРусскойЗимыКонтекстноеМеню" id="200"/>
+						<ExtendedTooltip name="МС_ЗаказатьGTINДляРусскойЗимыРасширеннаяПодсказка" id="201"/>
+					</CheckBoxField>
+					<LabelDecoration name="Декорация3" id="146">
+						<Visible>false</Visible>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<HorizontalStretch>true</HorizontalStretch>
+						<Font ref="style:NormalTextFont" height="18" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Публикация в национальном каталоге</v8:content>
+							</v8:item>
+						</Title>
+						<HorizontalAlign>Center</HorizontalAlign>
+						<ContextMenu name="Декорация3КонтекстноеМеню" id="147"/>
+						<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="148"/>
+					</LabelDecoration>
+					<InputField name="Организация" id="258">
+						<AutoMarkIncomplete>true</AutoMarkIncomplete>
+						<ContextMenu name="ОрганизацияКонтекстноеМеню" id="259"/>
+						<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="260"/>
+					</InputField>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ОперацииПубликации" id="62">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Публикация в национальном каталоге</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Операции публикации</v8:content>
+					</v8:item>
+				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
+				<VerticalStretch>true</VerticalStretch>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ОперацииПубликацииРасширеннаяПодсказка" id="63"/>
+				<ChildItems>
+					<Button name="ПолучитьGTIN" id="77">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьGTINРасширеннаяПодсказка" id="78"/>
+					</Button>
+					<PictureDecoration name="Декорация5" id="157">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация5КонтекстноеМеню" id="158"/>
+						<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="159"/>
+					</PictureDecoration>
+					<Button name="ОтправитьНаЧЕРНОВИК" id="83">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОтправитьНаЧЕРНОВИКРасширеннаяПодсказка" id="84"/>
+					</Button>
+					<PictureDecoration name="Декорация1" id="154">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация1КонтекстноеМеню" id="155"/>
+						<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="156"/>
+					</PictureDecoration>
+					<Button name="ПолучитьСтатусFeed_id" id="95">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьСтатусFeed_idРасширеннаяПодсказка" id="96"/>
+					</Button>
+					<PictureDecoration name="Декорация7" id="163">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация7КонтекстноеМеню" id="164"/>
+						<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="165"/>
+					</PictureDecoration>
+					<Button name="ПолучитьСтатусGTIN" id="91">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьСтатусGTINРасширеннаяПодсказка" id="92"/>
+					</Button>
+					<PictureDecoration name="Декорация8" id="166">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация8КонтекстноеМеню" id="167"/>
+						<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="168"/>
+					</PictureDecoration>
+					<Button name="Доописать" id="85">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ДоописатьРасширеннаяПодсказка" id="86"/>
+					</Button>
+					<PictureDecoration name="Декорация11" id="180">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация11КонтекстноеМеню" id="181"/>
+						<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="182"/>
+					</PictureDecoration>
+					<Button name="ПолучитьСтатусFeed_id_Доописание" id="183">
+						<Type>UsualButton</Type>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьСтатусFeed_id_ДоописаниеРасширеннаяПодсказка" id="184"/>
+					</Button>
+					<PictureDecoration name="Декорация9" id="169">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация9КонтекстноеМеню" id="170"/>
+						<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="171"/>
+					</PictureDecoration>
+					<Button name="ОтправитьНаМОДЕРАЦИЮ" id="79">
+						<Type>UsualButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОтправитьНаМОДЕРАЦИЮРасширеннаяПодсказка" id="80"/>
+					</Button>
+					<PictureDecoration name="Декорация12" id="188">
+						<Visible>false</Visible>
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация12КонтекстноеМеню" id="189"/>
+						<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="190"/>
+					</PictureDecoration>
+					<Button name="ПолучитьСтатусGTIN1" id="191">
+						<Type>UsualButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьСтатусGTIN1РасширеннаяПодсказка" id="192"/>
+					</Button>
+					<PictureDecoration name="Декорация6" id="160">
+						<Visible>false</Visible>
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация6КонтекстноеМеню" id="161"/>
+						<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="162"/>
+					</PictureDecoration>
+					<Button name="ОПУБЛИКОВАТЬ" id="89">
+						<Type>UsualButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОПУБЛИКОВАТЬРасширеннаяПодсказка" id="90"/>
+					</Button>
+					<PictureDecoration name="Декорация10" id="172">
+						<Visible>false</Visible>
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация10КонтекстноеМеню" id="173"/>
+						<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="174"/>
+					</PictureDecoration>
+					<Button name="ОбновитьСтатусКИС" id="58">
+						<Type>UsualButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОбновитьСтатусКИСРасширеннаяПодсказка" id="59"/>
+					</Button>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="ОперацииПубликации1" id="209">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Публикация в национальном каталоге</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Операции публикации</v8:content>
+					</v8:item>
+				</ToolTip>
+				<HorizontalStretch>true</HorizontalStretch>
+				<VerticalStretch>true</VerticalStretch>
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="ОперацииПубликации1РасширеннаяПодсказка" id="210"/>
+				<ChildItems>
+					<Button name="ОбновитьСтатусКИС1" id="256">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОбновитьСтатусКИС1РасширеннаяПодсказка" id="257"/>
+					</Button>
+					<PictureDecoration name="Декорация20" id="253">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация20КонтекстноеМеню" id="254"/>
+						<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="255"/>
+					</PictureDecoration>
+					<Button name="ОПУБЛИКОВАТЬ1" id="251">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОПУБЛИКОВАТЬ1РасширеннаяПодсказка" id="252"/>
+					</Button>
+					<PictureDecoration name="Декорация19" id="248">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация19КонтекстноеМеню" id="249"/>
+						<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="250"/>
+					</PictureDecoration>
+					<Button name="ПолучитьСтатусGTIN3" id="246">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ПолучитьСтатусGTIN3РасширеннаяПодсказка" id="247"/>
+					</Button>
+					<PictureDecoration name="Декорация18" id="243">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация18КонтекстноеМеню" id="244"/>
+						<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="245"/>
+					</PictureDecoration>
+					<Button name="ОтправитьНаМОДЕРАЦИЮ1" id="241">
+						<Type>UsualButton</Type>
+						<Representation>PictureAndText</Representation>
+						<HorizontalStretch>true</HorizontalStretch>
+						<CommandName>0</CommandName>
+						<ExtendedTooltip name="ОтправитьНаМОДЕРАЦИЮ1РасширеннаяПодсказка" id="242"/>
+					</Button>
+					<PictureDecoration name="Декорация17" id="238">
+						<HorizontalStretch>false</HorizontalStretch>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<FileDragMode>AsFile</FileDragMode>
+						<ContextMenu name="Декорация17КонтекстноеМеню" id="239"/>
+						<ExtendedTooltip name="Декорация17РасширеннаяПодсказка" id="240"/>
+					</PictureDecoration>
+				</ChildItems>
+			</UsualGroup>
+			<UsualGroup name="Группа5" id="49">
+				<Group>Horizontal</Group>
+				<Behavior>Usual</Behavior>
+				<Representation>None</Representation>
+				<ShowTitle>false</ShowTitle>
+				<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="50"/>
+				<ChildItems>
+					<UsualGroup name="ЕжемесячныеОграничения" id="66">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ежемесячные ограничения</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ежемесячные ограничения</v8:content>
+							</v8:item>
+						</ToolTip>
+						<HorizontalStretch>false</HorizontalStretch>
+						<VerticalStretch>false</VerticalStretch>
+						<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+						<GroupVerticalAlign>Center</GroupVerticalAlign>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>StrongSeparation</Representation>
+						<ExtendedTooltip name="ЕжемесячныеОграниченияРасширеннаяПодсказка" id="67"/>
+						<ChildItems>
+							<LabelField name="ЛимитВМесяц" id="7">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Лимит</v8:content>
+									</v8:item>
+								</Title>
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ЛимитВМесяцКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ЛимитВМесяцРасширеннаяПодсказка" id="9"/>
+							</LabelField>
+							<LabelField name="Использованно" id="4">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ИспользованноКонтекстноеМеню" id="5"/>
+								<ExtendedTooltip name="ИспользованноРасширеннаяПодсказка" id="6"/>
+							</LabelField>
+							<LabelField name="Осталось" id="10">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<GroupVerticalAlign>Top</GroupVerticalAlign>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ОсталосьКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="ОсталосьРасширеннаяПодсказка" id="12"/>
+							</LabelField>
+							<LabelField name="Сверхлимита" id="177">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<GroupVerticalAlign>Top</GroupVerticalAlign>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="СверхлимитаКонтекстноеМеню" id="178"/>
+								<ExtendedTooltip name="СверхлимитаРасширеннаяПодсказка" id="179"/>
+							</LabelField>
+						</ChildItems>
+					</UsualGroup>
+					<UsualGroup name="ГруппаПубликацияВНК" id="29">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Публикация в НК</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа публикация ВНК</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Group>Horizontal</Group>
+						<Behavior>Usual</Behavior>
+						<Representation>StrongSeparation</Representation>
+						<ExtendedTooltip name="ГруппаПубликацияВНКРасширеннаяПодсказка" id="30"/>
+						<ChildItems>
+							<LabelField name="GTINкзаказу" id="1">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="GTINкзаказуКонтекстноеМеню" id="2"/>
+								<ExtendedTooltip name="GTINкзаказуРасширеннаяПодсказка" id="3"/>
+							</LabelField>
+							<LabelField name="GTINкчерновику" id="16">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="GTINкчерновикуКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="GTINкчерновикуРасширеннаяПодсказка" id="18"/>
+							</LabelField>
+							<LabelField name="ТребуетДоописания" id="22">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="ТребуетДоописанияКонтекстноеМеню" id="23"/>
+								<ExtendedTooltip name="ТребуетДоописанияРасширеннаяПодсказка" id="24"/>
+							</LabelField>
+							<LabelField name="GTINКМодерации" id="13">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="GTINКМодерацииКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="GTINКМодерацииРасширеннаяПодсказка" id="15"/>
+							</LabelField>
+							<LabelField name="GTINкПубликации" id="19">
+								<TitleTextColor>#0000FF</TitleTextColor>
+								<TitleHeight>1</TitleHeight>
+								<HorizontalStretch>false</HorizontalStretch>
+								<VerticalStretch>false</VerticalStretch>
+								<Hiperlink>true</Hiperlink>
+								<Font ref="sys:SystemFont" faceName="Arial" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+								<ContextMenu name="GTINкПубликацииКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="GTINкПубликацииРасширеннаяПодсказка" id="21"/>
+							</LabelField>
+						</ChildItems>
+					</UsualGroup>
+				</ChildItems>
+			</UsualGroup>
+			<Table name="ПубликуемыеТовары" id="97">
+				<AutoInsertNewRow>true</AutoInsertNewRow>
+				<EnableStartDrag>true</EnableStartDrag>
+				<EnableDrag>true</EnableDrag>
+				<FileDragMode>AsFile</FileDragMode>
+				<RowFilter xsi:nil="true"/>
+				<ContextMenu name="ПубликуемыеТоварыКонтекстноеМеню" id="98"/>
+				<AutoCommandBar name="ПубликуемыеТоварыКоманднаяПанель" id="99">
+					<ChildItems>
+						<Popup name="ПубликуемыеТоварыЗаполнить" id="136">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Публикуемые товары заполнить</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПубликуемыеТоварыЗаполнитьРасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<Button name="ЗаполнитьПоОтбору" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по отбору</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗаполнитьПоОтборуРасширеннаяПодсказка" id="57"/>
+								</Button>
+								<Popup name="ПубликуемыеТоварыГруппаПоДокументу" id="205">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по документу</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Публикуемые товары группа по документу</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПубликуемыеТоварыГруппаПоДокументуРасширеннаяПодсказка" id="206"/>
+									<ChildItems>
+										<Button name="ЗаполнитьПоДокументу" id="60">
+											<Type>CommandBarButton</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заказ на эмиссию</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаполнитьПоДокументуРасширеннаяПодсказка" id="61"/>
+										</Button>
+										<Button name="ЗаполнитьПоДокументуПриобретение" id="207">
+											<Type>CommandBarButton</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>0</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Приобретение товаров</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаполнитьПоДокументуПриобретениеРасширеннаяПодсказка" id="208"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+								<Button name="ЗаполнитьПоFeed_id" id="54">
+									<Type>CommandBarButton</Type>
+									<CommandName>0</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по feed id</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗаполнитьПоFeed_idРасширеннаяПодсказка" id="55"/>
+								</Button>
+							</ChildItems>
+						</Popup>
+						<Button name="ПубликуемыеТоварыОбновить" id="175">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<ExtendedTooltip name="ПубликуемыеТоварыОбновитьРасширеннаяПодсказка" id="176"/>
+						</Button>
+						<Button name="ПубликуемыеТоварыОчиститьДанные" id="263">
+							<Type>CommandBarButton</Type>
+							<CommandName>0</CommandName>
+							<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ПубликуемыеТоварыОчиститьДанныеРасширеннаяПодсказка" id="264"/>
+						</Button>
+					</ChildItems>
+				</AutoCommandBar>
+				<ExtendedTooltip name="ПубликуемыеТоварыРасширеннаяПодсказка" id="100"/>
+				<SearchStringAddition name="ПубликуемыеТоварыСтрокаПоиска" id="101">
+					<AdditionSource>
+						<Item>ПубликуемыеТовары</Item>
+						<Type>SearchStringRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ПубликуемыеТоварыСтрокаПоискаКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+				</SearchStringAddition>
+				<ViewStatusAddition name="ПубликуемыеТоварыСостояниеПросмотра" id="104">
+					<AdditionSource>
+						<Item>ПубликуемыеТовары</Item>
+						<Type>ViewStatusRepresentation</Type>
+					</AdditionSource>
+					<ContextMenu name="ПубликуемыеТоварыСостояниеПросмотраКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+				</ViewStatusAddition>
+				<SearchControlAddition name="ПубликуемыеТоварыУправлениеПоиском" id="107">
+					<AdditionSource>
+						<Item>ПубликуемыеТовары</Item>
+						<Type>SearchControl</Type>
+					</AdditionSource>
+					<ContextMenu name="ПубликуемыеТоварыУправлениеПоискомКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ПубликуемыеТоварыУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+				</SearchControlAddition>
+				<ChildItems>
+					<LabelField name="ПубликуемыеТоварыНомерСтроки" id="110">
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыНомерСтрокиКонтекстноеМеню" id="111"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыНомерСтрокиРасширеннаяПодсказка" id="112"/>
+					</LabelField>
+					<LabelField name="ПубликуемыеТоварыНоменклатураАртикул" id="196">
+						<EditMode>EnterOnInput</EditMode>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>10</MaxWidth>
+						<ContextMenu name="ПубликуемыеТоварыНоменклатураАртикулКонтекстноеМеню" id="197"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыНоменклатураАртикулРасширеннаяПодсказка" id="198"/>
+					</LabelField>
+					<InputField name="ПубликуемыеТоварыНоменклатура" id="113">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыНоменклатураКонтекстноеМеню" id="114"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыНоменклатураРасширеннаяПодсказка" id="115"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыХарактеристика" id="202">
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыХарактеристикаКонтекстноеМеню" id="203"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыХарактеристикаРасширеннаяПодсказка" id="204"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыGTIN" id="116">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыGTINКонтекстноеМеню" id="117"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыGTINРасширеннаяПодсказка" id="118"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыСтатус_В_НК" id="119">
+						<Visible>false</Visible>
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыСтатус_В_НККонтекстноеМеню" id="120"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыСтатус_В_НКРасширеннаяПодсказка" id="121"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыСтатусВКИС" id="122">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыСтатусВКИСКонтекстноеМеню" id="123"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыСтатусВКИСРасширеннаяПодсказка" id="124"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыFeed_id" id="128">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыFeed_idКонтекстноеМеню" id="129"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыFeed_idРасширеннаяПодсказка" id="130"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыСтатусFeed_id" id="131">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыСтатусFeed_idКонтекстноеМеню" id="132"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыСтатусFeed_idРасширеннаяПодсказка" id="133"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыGood_id" id="185">
+						<ReadOnly>true</ReadOnly>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыGood_idКонтекстноеМеню" id="186"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыGood_idРасширеннаяПодсказка" id="187"/>
+					</InputField>
+					<InputField name="ПубликуемыеТоварыКомментарииПоОписанию" id="125">
+						<ReadOnly>true</ReadOnly>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комментарий</v8:content>
+							</v8:item>
+						</Title>
+						<EditMode>EnterOnInput</EditMode>
+						<ContextMenu name="ПубликуемыеТоварыКомментарииПоОписаниюКонтекстноеМеню" id="126"/>
+						<ExtendedTooltip name="ПубликуемыеТоварыКомментарииПоОписаниюРасширеннаяПодсказка" id="127"/>
+					</InputField>
+				</ChildItems>
+			</Table>
+			<LabelField name="Комментарий" id="193">
+				<TitleLocation>None</TitleLocation>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<AutoMaxHeight>false</AutoMaxHeight>
+				<ContextMenu name="КомментарийКонтекстноеМеню" id="194"/>
+				<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="195"/>
+			</LabelField>
+		</ChildItems>
+		<Attributes>
+			<ConditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОперацииПубликации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОперацииПубликации1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПубликуемыеТовары</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПубликуемыеТоварыЗаполнитьРасширеннаяПодсказка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.Организация</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Доступность</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</ConditionalAppearance>
+		</Attributes>
+	</BaseForm>
+</Form>
