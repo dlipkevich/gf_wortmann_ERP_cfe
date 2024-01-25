@@ -734,7 +734,7 @@
 		<text>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Артикул</v8:content>
+				<v8:content>АРТИКУЛ</v8:content>
 			</v8:item>
 		</text>
 		<beginRow>26</beginRow>
@@ -742,7 +742,7 @@
 		<endRow>26</endRow>
 		<endRowOffset>123</endRowOffset>
 		<beginColumn>7</beginColumn>
-		<beginColumnOffset>186</beginColumnOffset>
+		<beginColumnOffset>117</beginColumnOffset>
 		<endColumn>9</endColumn>
 		<endColumnOffset>171</endColumnOffset>
 		<autoSize>false</autoSize>
@@ -1066,17 +1066,19 @@
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentDrawingLineType">None</v8ui:style>
 	</line>
-	<font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="5" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="3" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="20" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="18" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="20" bold="true" italic="true" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="14" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="20" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-	<font faceName="Arial" height="16" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="18" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
 		<width>32</width>
 	</format>
@@ -1268,7 +1270,7 @@
 		<bySelectedColumns>true</bySelectedColumns>
 	</format>
 	<format>
-		<font>4</font>
+		<font>0</font>
 		<height>48</height>
 		<width>48</width>
 		<fillType>Parameter</fillType>
@@ -1278,7 +1280,7 @@
 		<height>69</height>
 	</format>
 	<format>
-		<font>0</font>
+		<font>5</font>
 		<height>48</height>
 		<width>48</width>
 		<horizontalAlignment>Center</horizontalAlignment>
@@ -1288,26 +1290,26 @@
 		<height>112</height>
 	</format>
 	<format>
-		<font>0</font>
+		<font>5</font>
 		<height>48</height>
 		<width>48</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 	</format>
 	<format>
-		<font>5</font>
+		<font>6</font>
 		<height>48</height>
 		<width>48</width>
-		<verticalAlignment>Center</verticalAlignment>
-	</format>
-	<format>
-		<font>5</font>
-		<height>48</height>
-		<width>48</width>
-		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
 		<font>6</font>
+		<height>48</height>
+		<width>48</width>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+	</format>
+	<format>
+		<font>7</font>
 		<height>48</height>
 		<width>48</width>
 		<verticalAlignment>Center</verticalAlignment>
@@ -1321,7 +1323,7 @@
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
-		<font>7</font>
+		<font>8</font>
 		<height>48</height>
 		<width>48</width>
 		<horizontalAlignment>Right</horizontalAlignment>
@@ -1329,7 +1331,7 @@
 		<bySelectedColumns>false</bySelectedColumns>
 	</format>
 	<format>
-		<font>5</font>
+		<font>9</font>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Cut</textPlacement>
@@ -1345,24 +1347,6 @@
 	</format>
 	<format>
 		<drawingBorder>2</drawingBorder>
-		<font>8</font>
-		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Top</verticalAlignment>
-		<backColor>style:FieldBackColor</backColor>
-		<textPlacement>Cut</textPlacement>
-		<fillType>Parameter</fillType>
-	</format>
-	<format>
-		<drawingBorder>2</drawingBorder>
-		<font>9</font>
-		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Top</verticalAlignment>
-		<backColor>style:FieldBackColor</backColor>
-		<textPlacement>Cut</textPlacement>
-		<fillType>Parameter</fillType>
-	</format>
-	<format>
-		<drawingBorder>2</drawingBorder>
 		<font>10</font>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
@@ -1372,34 +1356,36 @@
 	</format>
 	<format>
 		<drawingBorder>2</drawingBorder>
-		<font>9</font>
+		<font>11</font>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:FieldBackColor</backColor>
+		<textPlacement>Cut</textPlacement>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<drawingBorder>2</drawingBorder>
+		<font>8</font>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:FieldBackColor</backColor>
+		<textPlacement>Cut</textPlacement>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<drawingBorder>2</drawingBorder>
+		<font>12</font>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:FieldBackColor</backColor>
 		<pattern>WithoutPattern</pattern>
 	</format>
 	<format>
 		<drawingBorder>2</drawingBorder>
-		<font>0</font>
+		<font>5</font>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:FieldBackColor</backColor>
 		<textPlacement>Cut</textPlacement>
-		<fillType>Parameter</fillType>
-	</format>
-	<format>
-		<drawingBorder>2</drawingBorder>
-		<font>8</font>
-		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Top</verticalAlignment>
-		<backColor>style:FieldBackColor</backColor>
-		<fillType>Parameter</fillType>
-	</format>
-	<format>
-		<drawingBorder>2</drawingBorder>
-		<font>9</font>
-		<horizontalAlignment>Center</horizontalAlignment>
-		<verticalAlignment>Top</verticalAlignment>
-		<backColor>style:FieldBackColor</backColor>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
@@ -1412,7 +1398,23 @@
 	</format>
 	<format>
 		<drawingBorder>2</drawingBorder>
-		<font>0</font>
+		<font>11</font>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:FieldBackColor</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<drawingBorder>2</drawingBorder>
+		<font>8</font>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:FieldBackColor</backColor>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<drawingBorder>2</drawingBorder>
+		<font>5</font>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<backColor>style:FieldBackColor</backColor>
