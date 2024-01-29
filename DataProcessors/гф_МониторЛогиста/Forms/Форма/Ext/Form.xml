@@ -77,6 +77,11 @@
 							<CommandName>Form.Command.ЗагрузитьWMS</CommandName>
 							<ExtendedTooltip name="ФормаЗагрузитьWMSРасширеннаяПодсказка" id="484"/>
 						</Button>
+						<Button name="ФормаПротоколОбмена" id="1268">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПротоколОбмена</CommandName>
+							<ExtendedTooltip name="ФормаПротоколОбменаРасширеннаяПодсказка" id="1269"/>
+						</Button>
 					</ChildItems>
 				</CommandBar>
 			</ChildItems>
@@ -4411,6 +4416,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьРеестрОтгрузки</Action>
+		</Command>
+		<Command name="ПротоколОбмена" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПротоколОбмена</Action>
 		</Command>
 	</Commands>
 </Form>
