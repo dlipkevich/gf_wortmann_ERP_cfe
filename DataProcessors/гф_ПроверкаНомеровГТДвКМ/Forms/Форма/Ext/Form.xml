@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ГТД" id="1">
+			<DataPath>Объект.ГТД</DataPath>
+			<ContextMenu name="ГТДКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ГТДРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПТУ" id="4">
+			<DataPath>Объект.ПТУ</DataPath>
+			<ContextMenu name="ПТУКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПТУРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Button name="ПроверитьНомераГТД" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПроверитьНомераГТД</CommandName>
+			<ExtendedTooltip name="ПроверитьНомераГТДРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Table name="Отличия" id="9">
+			<Representation>List</Representation>
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Отличия</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОтличияКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ОтличияКоманднаяПанель" id="11">
+				<ChildItems>
+					<Button name="ИзменитьНомераГТД" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИзменитьНомераГТД</CommandName>
+						<ExtendedTooltip name="ИзменитьНомераГТДРасширеннаяПодсказка" id="41"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОтличияРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ОтличияСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>Отличия</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтличияСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ОтличияСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОтличияСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>Отличия</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтличияСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ОтличияСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОтличияУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>Отличия</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОтличияУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ОтличияУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ОтличияАгрегат" id="22">
+					<DataPath>Отличия.Агрегат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияАгрегатКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОтличияАгрегатРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ОтличияШтрихкод" id="25">
+					<DataPath>Отличия.Штрихкод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияШтрихкодКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОтличияШтрихкодРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ОтличияНоменклатура" id="28">
+					<DataPath>Отличия.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияНоменклатураКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОтличияНоменклатураРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ОтличияХарактеристика" id="31">
+					<DataPath>Отличия.Характеристика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияХарактеристикаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОтличияХарактеристикаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="ОтличияНомерГТДШтрихкода" id="34">
+					<DataPath>Отличия.НомерГТДШтрихкода</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияНомерГТДШтрихкодаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОтличияНомерГТДШтрихкодаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ОтличияНомерГТД" id="37">
+					<DataPath>Отличия.НомерГТД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОтличияНомерГТДКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОтличияНомерГТДРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ПроверкаНомеровГТДвКМ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Отличия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отличия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Агрегат" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Агрегат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Штрихкод" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШтрихкодыУпаковокТоваров</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Характеристика" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Характеристика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ХарактеристикиНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерГТДШтрихкода" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ГТД (Штрихкода)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерГТД" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ГТД (таможня)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.НомераГТД</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьНомераГТД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить номера ГТД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить номера ГТД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьНомераГТД</Action>
+		</Command>
+		<Command name="ИзменитьНомераГТД" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить номера ГТД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить номера ГТД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьНомераГТД</Action>
+		</Command>
+	</Commands>
+</Form>
