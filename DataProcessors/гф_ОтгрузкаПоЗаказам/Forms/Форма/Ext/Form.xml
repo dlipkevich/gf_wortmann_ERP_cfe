@@ -176,7 +176,6 @@
 							<ChildItems>
 								<InputField name="СтоимостьОтмеченныхКОтгрузкеТоваров" id="10">
 									<DataPath>Объект.СтоимостьОтмеченныхКОтгрузкеТоваров</DataPath>
-									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -197,24 +196,6 @@
 									</Title>
 									<ContextMenu name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="КоличествоОтмеченныхКОтгрузкеЕдНомВПарахИВКоробахРасширеннаяПодсказка" id="15"/>
-								</InputField>
-								<InputField name="КоличествоОтмеченныхКОтгрузкеТоваров" id="273">
-									<DataPath>Объект.КоличествоОтмеченныхКОтгрузкеТоваров</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоОтмеченныхКОтгрузкеТоваровКонтекстноеМеню" id="274"/>
-									<ExtendedTooltip name="КоличествоОтмеченныхКОтгрузкеТоваровРасширеннаяПодсказка" id="275"/>
-								</InputField>
-								<InputField name="КоличествоКоробов" id="276">
-									<DataPath>Объект.КоличествоКоробов</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоКоробовКонтекстноеМеню" id="277"/>
-									<ExtendedTooltip name="КоличествоКоробовРасширеннаяПодсказка" id="278"/>
-								</InputField>
-								<InputField name="КоличествоПарВКоробах" id="279">
-									<DataPath>Объект.КоличествоПарВКоробах</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<ContextMenu name="КоличествоПарВКоробахКонтекстноеМеню" id="280"/>
-									<ExtendedTooltip name="КоличествоПарВКоробахРасширеннаяПодсказка" id="281"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -654,18 +635,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовКоличествоДнейХраненияКонтекстноеМеню" id="48"/>
 									<ExtendedTooltip name="ДеревоДокументовКоличествоДнейХраненияРасширеннаяПодсказка" id="49"/>
-								</InputField>
-								<InputField name="ДеревоДокументовСтавкаНДС" id="267">
-									<DataPath>ДеревоДокументов.СтавкаНДС</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовСтавкаНДСКонтекстноеМеню" id="268"/>
-									<ExtendedTooltip name="ДеревоДокументовСтавкаНДСРасширеннаяПодсказка" id="269"/>
-								</InputField>
-								<InputField name="ДеревоДокументовСкидкаИзЗаказа" id="270">
-									<DataPath>ДеревоДокументов.СкидкаИзЗаказа</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовСкидкаИзЗаказаКонтекстноеМеню" id="271"/>
-									<ExtendedTooltip name="ДеревоДокументовСкидкаИзЗаказаРасширеннаяПодсказка" id="272"/>
 								</InputField>
 								<InputField name="ДеревоДокументовСтатусКМ" id="50">
 									<DataPath>ДеревоДокументов.СтатусКМ</DataPath>
@@ -1207,17 +1176,6 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="ВидЦены" id="37">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Вид цены</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>cfg:CatalogRef.ВидыЦен</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
