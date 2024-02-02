@@ -7,6 +7,15 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
+		<CheckBoxField name="ЗагрузкаОбразцов" id="261">
+			<DataPath>Объект.ЗагрузкаОбразцов</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗагрузкаОбразцовКонтекстноеМеню" id="262"/>
+			<ExtendedTooltip name="ЗагрузкаОбразцовРасширеннаяПодсказка" id="263"/>
+			<Events>
+				<Event name="OnChange">ЗагрузкаОбразцовПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
 		<InputField name="ИмяФайлаОбмена" id="131">
 			<DataPath>Объект.ИмяФайлаОбмена</DataPath>
 			<Title>
