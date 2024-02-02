@@ -49,6 +49,9 @@
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
+			<valueType>
+				<v8:TypeSet xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef</v8:TypeSet>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Партнер</dataPath>
@@ -355,7 +358,10 @@
 		ПО втДанные.ИдентификаторФинЗаписи = втДвиженияПоНДС.ИдентификаторФинЗаписи
 		ЛЕВОЕ СОЕДИНЕНИЕ втРеализацияТоваровУслуг КАК втРеализацияТоваровУслуг
 		ПО втДанные.Регистратор = втРеализацияТоваровУслуг.Ссылка
-			И втДанные.АналитикаУчетаНоменклатуры = втРеализацияТоваровУслуг.АналитикаУчетаНоменклатуры}</query>
+			И втДанные.АналитикаУчетаНоменклатуры = втРеализацияТоваровУслуг.АналитикаУчетаНоменклатуры}
+{ГДЕ
+	Регистратор.*}
+			</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Количество</dataPath>
@@ -490,16 +496,6 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ПериодН</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ПериодК</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
