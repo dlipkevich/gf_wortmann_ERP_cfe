@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Документ" id="1">
+			<DataPath>Объект.Документ</DataPath>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ДокументПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Button name="СменитьНазначение" id="4">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СменитьНазначение</CommandName>
+			<ExtendedTooltip name="СменитьНазначениеРасширеннаяПодсказка" id="5"/>
+		</Button>
+		<Table name="ДанныеУЛ" id="6">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДанныеУЛ</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеУЛКонтекстноеМеню" id="7"/>
+			<AutoCommandBar name="ДанныеУЛКоманднаяПанель" id="8">
+				<ChildItems>
+					<ButtonGroup name="ДанныеУЛГруппа1" id="34">
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ДанныеУЛГруппа1РасширеннаяПодсказка" id="35"/>
+						<ChildItems>
+							<Button name="ДанныеУЛОтметитьВсе" id="32">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ОтметитьВсе</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.CheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ДанныеУЛОтметитьВсеРасширеннаяПодсказка" id="33"/>
+							</Button>
+							<Button name="ДанныеУЛСнятьВсеМетки" id="30">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.СнятьВсеМетки</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ДанныеУЛСнятьВсеМеткиРасширеннаяПодсказка" id="31"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="ОбработатьВыбранные" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбработатьВыбранные</CommandName>
+						<ExtendedTooltip name="ОбработатьВыбранныеРасширеннаяПодсказка" id="29"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеУЛРасширеннаяПодсказка" id="9"/>
+			<SearchStringAddition name="ДанныеУЛСтрокаПоиска" id="10">
+				<AdditionSource>
+					<Item>ДанныеУЛ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеУЛСтрокаПоискаКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ДанныеУЛСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеУЛСостояниеПросмотра" id="13">
+				<AdditionSource>
+					<Item>ДанныеУЛ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеУЛСостояниеПросмотраКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДанныеУЛСостояниеПросмотраРасширеннаяПодсказка" id="15"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеУЛУправлениеПоиском" id="16">
+				<AdditionSource>
+					<Item>ДанныеУЛ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеУЛУправлениеПоискомКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ДанныеУЛУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ДанныеУЛФлаг" id="19">
+					<DataPath>ДанныеУЛ.Флаг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДанныеУЛФлагКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДанныеУЛФлагРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+				<InputField name="ДанныеУЛУпаковочныйЛист" id="22">
+					<DataPath>ДанныеУЛ.УпаковочныйЛист</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеУЛУпаковочныйЛистКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДанныеУЛУпаковочныйЛистРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<CheckBoxField name="ДанныеУЛЕстьНеТехническоеНазначение" id="25">
+					<DataPath>ДанныеУЛ.ЕстьНеТехническоеНазначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДанныеУЛЕстьНеТехническоеНазначениеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДанныеУЛЕстьНеТехническоеНазначениеРасширеннаяПодсказка" id="27"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.гф_ЗаполнитьТехническоеНазначение</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Назначение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Назначения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеУЛ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные УЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Флаг" id="1">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="УпаковочныйЛист" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Упаковочный лист</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УпаковочныйЛист</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьНеТехническоеНазначение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть не техническое назначение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СменитьНазначение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить назначение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить назначение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СменитьНазначение</Action>
+		</Command>
+		<Command name="ОтметитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьМетки</Action>
+		</Command>
+		<Command name="СнятьВсеМетки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все метки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все метки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьМетки</Action>
+		</Command>
+		<Command name="ОбработатьВыбранные" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать выбранные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать выбранные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбработатьВыбранные</Action>
+		</Command>
+	</Commands>
+</Form>
