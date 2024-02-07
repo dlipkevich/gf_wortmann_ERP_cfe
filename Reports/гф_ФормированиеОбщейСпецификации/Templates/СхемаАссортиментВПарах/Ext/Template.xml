@@ -101,6 +101,10 @@
 					<v8:content>Сезон</v8:content>
 				</v8:item>
 			</title>
+			<presentationExpression>Сезон.Код</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>НомерЦвета</dataPath>
@@ -542,6 +546,20 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидНоменклатуры</dataPath>
+			<field>ВидНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеНоменклатуры</dataPath>
+			<field>НаименованиеНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование номенклатуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	гф_ПереводЗначенийРеквизитовИСвойств.Объект КАК Объект,
@@ -599,12 +617,8 @@
 	ВариантыКомплектацииНоменклатурыТовары.Количество * 1 КАК КоличествоПар,
 	1 КАК КоличествоКоробов,
 	ВариантыКомплектацииНоменклатурыТовары.Количество КАК КоличествоПарВКоробе,
-	//.. СадомцевСА 14.02.2023
-	//ЦеныНоменклатурыОптовая.Цена / ВариантыКомплектацииНоменклатурыТовары.Количество КАК ЦенаЗаПару,
 	ЕСТЬNULL(ЦеныНоменклатурыОптовая.Цена, 0) КАК ЦенаЗаПару,
 	0 КАК ЦенаСоСкидкойБезНДС,
-	//.. СадомцевСА 14.02.2023 "Розничная цена" - из регистра с отбором по "Розничной цене" (параметр ВидЦеныРозничная)
-	//ЦеныНоменклатурыОптовая.Цена КАК ЦенаРозничная,
 	ЕСТЬNULL(ЦеныНоменклатурыРозничная.Цена, 0) КАК ЦенаРозничная,
 	ВариантыКомплектацииНоменклатурыТовары.Ссылка.гф_Штрихкод КАК ШтрихкодКороба,
 	ВариантыКомплектацииНоменклатурыТовары.Ссылка.Владелец.Артикул КАК Артикул,
@@ -613,13 +627,8 @@
 	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
 	ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК Контрагент,
 	ЦеныНоменклатурыОптовая.Цена КАК ЦенаЗакупочная,
-	//.. СадомцевСА 14.02.2023
-	//ВариантыКомплектацииНоменклатурыТовары.Ссылка.Характеристика КАК ВариантКомплектации,
 	ВариантыКомплектацииНоменклатурыТовары.Ссылка КАК ВариантКомплектации,
 	0 КАК ЦенаСоСкидкойСНДС,
-	//.. СадомцевСА 14.02.2023
-	//ЦеныНоменклатурыОптоваяКороба.Цена КАК ЦенаКоробаБезНДС,
-	//ЦеныНоменклатурыОптоваяКороба.Цена * 1.2 КАК ЦенаКоробаСНДС
 	ЕСТЬNULL(ЦеныНоменклатурыОптовая.Цена, 0) * ВариантыКомплектацииНоменклатурыТовары.Ссылка.КоличествоУпаковок КАК ЦенаКоробаБезНДС,
 	ЕСТЬNULL(ЦеныНоменклатурыОптовая.Цена, 0) * ВариантыКомплектацииНоменклатурыТовары.Ссылка.КоличествоУпаковок * (1 + ЕСТЬNULL(ВариантыКомплектацииНоменклатурыТовары.Ссылка.Владелец.СтавкаНДС.Ставка, 0) / 100) КАК ЦенаКоробаСНДС
 ПОМЕСТИТЬ ВТ_ДанныеНоменклатуры
@@ -1733,13 +1742,13 @@
 	ВТ_ДопРеквизитыНоменклатуры.ШиринаПолнота КАК ШиринаПолнота,
 	ВТ_ДопРеквизитыНоменклатуры.Технология КАК Технология,
 	ВТ_ДанныеНоменклатуры.Номенклатура КАК Номенклатура,
-	ВТ_ДанныеНоменклатуры.Номенклатура.ГруппаДоступа КАК ГруппаДоступа,
+	СпрНоменклатура.ГруппаДоступа КАК ГруппаДоступа,
 	ВТ_ДопРеквизитыНоменклатуры.ДатаИзготовления КАК ДатаИзготовления,
 	ВТ_ДопРеквизитыНоменклатуры.Пол КАК Пол,
-	ВТ_ДанныеНоменклатуры.Номенклатура.КодТНВЭД КАК КодТНВЭД,
-	ВТ_ДанныеНоменклатуры.Номенклатура.СтранаПроисхождения КАК СтранаПроисхождения,
-	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Код КАК Сезон,
-	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Наименование КАК Коллекция,
+	СпрНоменклатура.КодТНВЭД КАК КодТНВЭД,
+	СпрНоменклатура.СтранаПроисхождения КАК СтранаПроисхождения,
+	СпрНоменклатура.КоллекцияНоменклатуры КАК Сезон,
+	СпрНоменклатура.КоллекцияНоменклатуры.Наименование КАК Коллекция,
 	ВТ_ДанныеНоменклатуры.Качество КАК Качество,
 	ДвоичныеДанныеФайлов.ДвоичныеДанныеФайла КАК Фотография,
 	ВТ_ДанныеНоменклатуры.ЦенаЗаПару КАК ЦенаЗаПару,
@@ -1775,7 +1784,9 @@
 		ИНАЧЕ ""
 	КОНЕЦ КАК Возраст,
 	ВТ_ДанныеНоменклатуры.ЦенаКоробаБезНДС КАК ЦенаКоробаБезНДС,
-	ВТ_ДанныеНоменклатуры.ЦенаКоробаСНДС КАК ЦенаКоробаСНДС
+	ВТ_ДанныеНоменклатуры.ЦенаКоробаСНДС КАК ЦенаКоробаСНДС,
+	СпрНоменклатура.ВидНоменклатуры КАК ВидНоменклатуры,
+	СпрНоменклатура.Наименование КАК НаименованиеНоменклатуры
 ИЗ
 	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопРеквизитыНоменклатуры КАК ВТ_ДопРеквизитыНоменклатуры
@@ -1787,7 +1798,12 @@
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НоменклатураКонтрагентовБЭД КАК НоменклатураКонтрагентовБЭД
 		ПО ВТ_ДанныеНоменклатуры.Номенклатура = НоменклатураКонтрагентовБЭД.Номенклатура
 			И ВТ_ДанныеНоменклатуры.РазмерныйРяд = НоменклатураКонтрагентовБЭД.Характеристика
-			И ВТ_ДанныеНоменклатуры.Контрагент.Партнер = НоменклатураКонтрагентовБЭД.Владелец</query>
+			И ВТ_ДанныеНоменклатуры.Контрагент.Партнер = НоменклатураКонтрагентовБЭД.Владелец
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Номенклатура КАК СпрНоменклатура
+		ПО ВТ_ДанныеНоменклатуры.Номенклатура = СпрНоменклатура.Ссылка
+{ГДЕ
+	СпрНоменклатура.КоллекцияНоменклатуры.* КАК Сезон,
+	СпрНоменклатура.ВидНоменклатуры.*}</query>
 	</dataSet>
 	<calculatedField>
 		<dataPath>_200</dataPath>
@@ -2290,7 +2306,6 @@
 					<dcsset:field>КоличествоПарВКоробе</dcsset:field>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
-				<dcsset:userSettingID>6a507589-3d53-46af-8add-80336a61f4ef</dcsset:userSettingID>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -2298,12 +2313,14 @@
 					<dcsset:left xsi:type="dcscor:Field">ГруппаДоступа</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>27a6f647-5418-44e5-812c-f3eca2d02d17</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>3b83264a-0fd1-4782-a539-628595156faa</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
@@ -2311,26 +2328,29 @@
 					<dcsset:comparisonType>Contains</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:string"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c801dc7c-555a-4e7e-bcc9-f683f602f5f0</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Наименование</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">НаименованиеНоменклатуры</dcsset:left>
 					<dcsset:comparisonType>Contains</dcsset:comparisonType>
 					<dcsset:right xsi:type="xs:string"/>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ee5fcadd-3ffb-40a9-a0cc-7cfdb0627f65</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Номенклатура.ВидНоменклатуры</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">ВидНоменклатуры</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>777d6e1c-365c-44ca-a733-78e726591e77</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
-					<dcsset:comparisonType>Contains</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:Field"/>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c5ced7ca-6d01-4b1e-8395-bf05c7a41d7b</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
 				<dcsset:userSettingID>c32ba308-fb4d-4c9b-9329-3367982e1bc9</dcsset:userSettingID>
@@ -2357,7 +2377,6 @@
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
-				<dcsset:userSettingID>897a7768-8609-4ba7-b3c1-b00263c6c788</dcsset:userSettingID>
 			</dcsset:order>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
@@ -2387,7 +2406,6 @@
 					</dcsset:appearance>
 				</dcsset:item>
 				<dcsset:viewMode>Normal</dcsset:viewMode>
-				<dcsset:userSettingID>5ac5fe58-1c1e-489b-8d62-56d7fbfcf9d0</dcsset:userSettingID>
 			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -2412,7 +2430,6 @@
 				</dcsset:selection>
 			</dcsset:item>
 			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
-			<dcsset:itemsUserSettingID>ab2594f1-aca8-4687-9752-11d37cdb0c7c</dcsset:itemsUserSettingID>
 		</dcsset:settings>
 	</settingsVariant>
 </DataCompositionSchema>
