@@ -272,16 +272,31 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаНаПоставкуРасширеннаяПодсказка" id="61"/>
 					<ChildItems>
-						<InputField name="НомерПоставки" id="62">
-							<DataPath>НомерПоставки</DataPath>
-							<HorizontalStretch>true</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="НомерПоставкиКонтекстноеМеню" id="63"/>
-							<ExtendedTooltip name="НомерПоставкиРасширеннаяПодсказка" id="64"/>
-							<Events>
-								<Event name="OnChange">НомерПоставкиПриИзменении</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="Группа4" id="192">
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="193"/>
+							<ChildItems>
+								<InputField name="НомерПоставки" id="62">
+									<DataPath>НомерПоставки</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="НомерПоставкиКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="НомерПоставкиРасширеннаяПодсказка" id="64"/>
+									<Events>
+										<Event name="OnChange">НомерПоставкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="флВключаяОтгруженныеУЛ" id="194">
+									<DataPath>флВключаяОтгруженныеУЛ</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="флВключаяОтгруженныеУЛКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="флВключаяОтгруженныеУЛРасширеннаяПодсказка" id="196"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="Группа2" id="151">
 							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
@@ -1183,6 +1198,17 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.БанковскиеСчетаОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="флВключаяОтгруженныеУЛ" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включая отгруженные УЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
