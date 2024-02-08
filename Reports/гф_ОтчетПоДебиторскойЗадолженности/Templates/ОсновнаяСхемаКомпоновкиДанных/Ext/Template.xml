@@ -1224,6 +1224,13 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЛимита</dataPath>
+			<field>ВидЛимита</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>// Галфинд СадомцевСА 05.02.2024 Исправил запрос в наборе данных ДокументыЛимита
 // Использую РН РасчетыСКлиентамиПоСрокам вместо РБ Хозрасчетный для корректного соединения с Основным набором данных
@@ -1298,12 +1305,16 @@
 	ПериодыЛимитов.Контрагент КАК Контрагент,
 	ПериодыЛимитов.Договор КАК Договор,
 	ПериодыЛимитов.Документ КАК Документ,
+	// СадомцевСА 05.02.2024 Добавил поле Вид лимита
+	ПериодыЛимитов.ВидЛимита КАК ВидЛимита,
 	Лимиты.Сумма КАК СуммаЛимитаНаДатуДокумента,
 	Лимиты.Организация КАК Организация
 {ВЫБРАТЬ
 	Контрагент.*,
 	Договор.*,
 	Документ.*,
+	// СадомцевСА 05.02.2024 Добавил поле Вид лимита
+	ВидЛимита.*,
 	СуммаЛимитаНаДатуДокумента,
 	Организация.*}
 ИЗ
@@ -1317,6 +1328,8 @@
 	ПериодыЛимитов.Контрагент.*,
 	ПериодыЛимитов.Договор.*,
 	ПериодыЛимитов.Документ.*,
+	// СадомцевСА 05.02.2024 Добавил поле Вид лимита
+	ПериодыЛимитов.ВидЛимита.*,
 	Лимиты.Сумма КАК СуммаЛимитаНаДатуДокумента,
 	Лимиты.Организация.*}
 
@@ -2028,9 +2041,6 @@
 						</dcsset:order>
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ЛокальныйЛимит</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
 								<dcsset:field>КВ</dcsset:field>
 								<dcsset:lwsTitle>
 									<v8:item>
@@ -2038,6 +2048,9 @@
 										<v8:content>KV</v8:content>
 									</v8:item>
 								</dcsset:lwsTitle>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЛокальныйЛимит</dcsset:field>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:SelectedItemField">
 								<dcsset:field>ПрочийЛимит</dcsset:field>
