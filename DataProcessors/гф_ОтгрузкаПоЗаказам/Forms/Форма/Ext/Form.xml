@@ -386,6 +386,11 @@
 										<CommandName>Form.Command.УстановитьСкидки</CommandName>
 										<ExtendedTooltip name="ДеревоДокументовУстановитьСкидкиРасширеннаяПодсказка" id="220"/>
 									</Button>
+									<Button name="ДеревоДокументовВыставитьСчета" id="282">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыставитьСчета</CommandName>
+										<ExtendedTooltip name="ДеревоДокументовВыставитьСчетаРасширеннаяПодсказка" id="283"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ДеревоДокументовРасширеннаяПодсказка" id="25"/>
@@ -1904,6 +1909,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>РазвернутьСтрокиДереваПомеченных</Action>
+		</Command>
+		<Command name="ВыставитьСчета" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выставить счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выставить счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataProcessor</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыставитьСчета</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
