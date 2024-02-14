@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2270</Version>
+			<Version>2273</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -282,6 +282,8 @@
 			<Role>ИспользованиеОбработкиПечатьЭтикетокИЦенников</Role>
 			<Role>гф_ЧтениеРазделовДатЗапретаИзменения</Role>
 			<Role>гф_ИспользованиеОбработкиЗаполнитьТехническоеНазначение</Role>
+			<Role>БазовыеПраваБСП</Role>
+			<Role>БФД_ДополнительныеНастройкиИзменение</Role>
 			<CommonTemplate>гф_ПФ_MXL_РасчетныйЛистокНастраиваемыйДляРассылки</CommonTemplate>
 			<CommonTemplate>гф_КомпонентаПечатиШтрихкодов_изУПП</CommonTemplate>
 			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
@@ -348,6 +350,8 @@
 			<CommonModule>НоменклатураКлиентСервер</CommonModule>
 			<CommonModule>СозданиеНаОснованииУТКлиент</CommonModule>
 			<CommonModule>гф_СчетНаОплатуВызовСервера</CommonModule>
+			<CommonModule>БФД_ОбщегоНазначенияСервер</CommonModule>
+			<CommonModule>БФД_ПовторногоИспользования</CommonModule>
 			<ExchangePlan>ОбменССайтом</ExchangePlan>
 			<XDTOPackage>гф_ОбменДаннымиWMS</XDTOPackage>
 			<HTTPService>БУС_Обмен</HTTPService>
@@ -772,6 +776,7 @@
 			<InformationRegister>гф_НаценкиЗаКурс</InformationRegister>
 			<InformationRegister>гф_ЛогРассылкиРасчетныхЛистков</InformationRegister>
 			<InformationRegister>гф_СтраныМежоператорскогоВзаимодействия</InformationRegister>
+			<InformationRegister>БФД_ДополнительныеНастройки</InformationRegister>
 			<AccumulationRegister>гф_ДвижениеКодовМаркировкиОрганизации</AccumulationRegister>
 			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<AccumulationRegister>гф_ДвиженияБюджетов</AccumulationRegister>
