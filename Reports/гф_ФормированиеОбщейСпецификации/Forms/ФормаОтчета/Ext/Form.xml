@@ -5,7 +5,7 @@
 	<DetailsData>ДанныеРасшифровки</DetailsData>
 	<ReportFormType>Main</ReportFormType>
 	<AutoShowState>Auto</AutoShowState>
-	<CustomSettingsFolder>КомпоновщикНастроекПользовательскиеНастройки</CustomSettingsFolder>
+	<CustomSettingsFolder>3:02023637-7868-4a5f-8576-835a76e0c9ba</CustomSettingsFolder>
 	<ReportResultViewMode>Auto</ReportResultViewMode>
 	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -49,19 +49,6 @@
 				</Button>
 			</ChildItems>
 		</CommandBar>
-		<UsualGroup name="КомпоновщикНастроекПользовательскиеНастройки" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа пользовательских настроек</v8:content>
-				</v8:item>
-			</Title>
-			<VerticalStretch>false</VerticalStretch>
-			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="4"/>
-		</UsualGroup>
 		<UsualGroup name="ГруппаОтборы" id="93">
 			<Title>
 				<v8:item>
@@ -242,6 +229,12 @@
 							<Events>
 								<Event name="OnChange">ФормироватьВПарахПриИзменении</Event>
 							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ВыводитьNVE" id="131">
+							<DataPath>Отчет.ВыводитьNVE</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыводитьNVEКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="ВыводитьNVEРасширеннаяПодсказка" id="133"/>
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
@@ -483,6 +476,13 @@
 							<ContextMenu name="ТаблицаДокументыПометкаКонтекстноеМеню" id="55"/>
 							<ExtendedTooltip name="ТаблицаДокументыПометкаРасширеннаяПодсказка" id="56"/>
 						</CheckBoxField>
+						<PictureField name="ТаблицаДокументыПроведен" id="134">
+							<DataPath>Отчет.ТаблицаДокументы.Проведен</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаДокументыПроведенКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ТаблицаДокументыПроведенРасширеннаяПодсказка" id="136"/>
+						</PictureField>
 						<InputField name="ТаблицаДокументыДокумент" id="57">
 							<DataPath>Отчет.ТаблицаДокументы.Документ</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -522,6 +522,7 @@
 			<DefaultItem>true</DefaultItem>
 			<TitleLocation>None</TitleLocation>
 			<Width>100</Width>
+			<ShowHeaders>true</ShowHeaders>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
 		</SpreadSheetDocumentField>
