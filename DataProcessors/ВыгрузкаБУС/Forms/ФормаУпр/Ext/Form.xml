@@ -1249,7 +1249,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница загрузка свойств</v8:content>
+							<v8:content>Загрузка свойств</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -1269,6 +1269,43 @@
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ЗагрузитьСвойства</CommandName>
 							<ExtendedTooltip name="ЗагрузитьСвойстваРасширеннаяПодсказка" id="357"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗагрузкаГруппНаСайте" id="361">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка групп на сайте</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница загрузка групп на сайте</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗагрузкаГруппНаСайтеРасширеннаяПодсказка" id="362"/>
+					<ChildItems>
+						<InputField name="РодительПользовательскихГрупп" id="365">
+							<DataPath>РодительПользовательскихГрупп</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Поиск по наименованию в этой группе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ContextMenu name="РодительПользовательскихГруппКонтекстноеМеню" id="366"/>
+							<ExtendedTooltip name="РодительПользовательскихГруппРасширеннаяПодсказка" id="367"/>
+						</InputField>
+						<Button name="ЗагрузитьГруппыНаСайте" id="363">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьГруппыНаСайте</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ЗагрузитьГруппыНаСайтеРасширеннаяПодсказка" id="364"/>
 						</Button>
 					</ChildItems>
 				</Page>
@@ -1351,6 +1388,17 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="РодительПользовательскихГрупп" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Родитель пользовательских групп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.B2B_Б_ПользовательскиеГруппыТоваров</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1893,6 +1941,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьСвойства</Action>
+		</Command>
+		<Command name="ЗагрузитьГруппыНаСайте" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить группы на сайте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение реквизита «Группа на сайте (основная)» у номенклатуры. Данные для заполнения берутся из файла, две колонки артикул (поиск номенклатуры по артикулу) и наименование группы в справочнике «(Битрикс) Пользовательские группы товаров».</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьГруппыНаСайте</Action>
 		</Command>
 	</Commands>
 </Form>
