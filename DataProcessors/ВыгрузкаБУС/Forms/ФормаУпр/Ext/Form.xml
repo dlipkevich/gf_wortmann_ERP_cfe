@@ -1297,16 +1297,29 @@
 								</v8:item>
 							</ToolTip>
 							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
 							<ContextMenu name="РодительПользовательскихГруппКонтекстноеМеню" id="366"/>
 							<ExtendedTooltip name="РодительПользовательскихГруппРасширеннаяПодсказка" id="367"/>
 						</InputField>
 						<Button name="ЗагрузитьГруппыНаСайте" id="363">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ЗагрузитьГруппыНаСайте</CommandName>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 							<ExtendedTooltip name="ЗагрузитьГруппыНаСайтеРасширеннаяПодсказка" id="364"/>
 						</Button>
+						<LabelDecoration name="Декорация2" id="368">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузка из Excel файла, в котором данные начинаются со 2-ой строки, колонки файла:
+    #1 артикул (поиск номенклатуры по артикулу);
+    #2 реквизит "Группа на сайте (основная)";
+    #3&lt;fontsize 7&gt; &lt;/&gt;реквизит "B2 b название web (для сайта)".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="369"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="370"/>
+						</LabelDecoration>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1949,12 +1962,6 @@
 					<v8:content>Загрузить группы на сайте</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнение реквизита «Группа на сайте (основная)» у номенклатуры. Данные для заполнения берутся из файла, две колонки артикул (поиск номенклатуры по артикулу) и наименование группы в справочнике «(Битрикс) Пользовательские группы товаров».</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Action>ЗагрузитьГруппыНаСайте</Action>
 		</Command>
 	</Commands>
