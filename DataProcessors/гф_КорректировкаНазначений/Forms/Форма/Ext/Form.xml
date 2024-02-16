@@ -161,7 +161,6 @@
 									</Button>
 									<Button name="ФормаВыполнитьОбработку" id="65">
 										<Type>CommandBarButton</Type>
-										<DefaultButton>true</DefaultButton>
 										<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
 										<Title>
 											<v8:item>
@@ -226,6 +225,13 @@
 									<ContextMenu name="ДанныеСостояниеКоробаКонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="ДанныеСостояниеКоробаРасширеннаяПодсказка" id="61"/>
 								</InputField>
+								<LabelField name="ДанныеОбработан" id="161">
+									<DataPath>Объект.ДанныеДляОтображения.Обработан</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеОбработанКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ДанныеОбработанРасширеннаяПодсказка" id="163"/>
+								</LabelField>
 								<InputField name="ДанныеНазначение" id="62">
 									<DataPath>Объект.ДанныеДляОтображения.Назначение</DataPath>
 									<ReadOnly>true</ReadOnly>
