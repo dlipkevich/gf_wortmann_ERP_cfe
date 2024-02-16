@@ -7,188 +7,473 @@
 		</v8:item>
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаВыполнитьОбработку" id="65">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
-				<ExtendedTooltip name="ФормаВыполнитьОбработкуРасширеннаяПодсказка" id="66"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаПериод" id="1">
+		<UsualGroup name="ГруппаШапка" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа период</v8:content>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаЛево" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<InputField name="Период" id="80">
+							<DataPath>Объект.Период</DataPath>
+							<ContextMenu name="ПериодКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="82"/>
+						</InputField>
+						<InputField name="Организация" id="11">
+							<DataPath>Объект.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаПраво" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка право</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<InputField name="Склад" id="14">
+							<DataPath>Объект.Склад</DataPath>
+							<CreateButton>false</CreateButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.гф_Организация</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="СкладКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа период</v8:content>
+					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="2"/>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="84"/>
 			<ChildItems>
-				<InputField name="ДатаНачала" id="3">
-					<DataPath>Объект.ДатаНачала</DataPath>
+				<Page name="СтраницаСоздание" id="85">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Период с</v8:content>
+							<v8:content>Создание</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="4"/>
-					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="5"/>
-				</InputField>
-				<InputField name="ДатаОкончания" id="6">
-					<DataPath>Объект.ДатаОкончания</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница создание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСозданиеРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<InputField name="Поставка" id="17">
+							<DataPath>Объект.Поставка</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Организация</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ПоставкаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ПоставкаРасширеннаяПодсказка" id="19"/>
+							<Events>
+								<Event name="StartChoice">ПоставкаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<Table name="Данные" id="20">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДанныеДляОтображения</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДанныеКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="ДанныеКоманднаяПанель" id="22">
+								<ChildItems>
+									<Button name="ДанныеЗаполнить" id="48">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Заполнить</CommandName>
+										<ExtendedTooltip name="ДанныеЗаполнитьРасширеннаяПодсказка" id="49"/>
+									</Button>
+									<Button name="ДанныеУстановитьФлажки" id="67">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлажки</CommandName>
+										<ExtendedTooltip name="ДанныеУстановитьФлажкиРасширеннаяПодсказка" id="68"/>
+									</Button>
+									<Button name="ДанныеСнятьФлажки" id="69">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлажки</CommandName>
+										<ExtendedTooltip name="ДанныеСнятьФлажкиРасширеннаяПодсказка" id="70"/>
+									</Button>
+									<Button name="ФормаВыполнитьОбработку" id="65">
+										<Type>CommandBarButton</Type>
+										<DefaultButton>true</DefaultButton>
+										<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать корректировки</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаВыполнитьОбработкуРасширеннаяПодсказка" id="66"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="ДанныеСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ДанныеСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДанныеСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="ДанныеСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДанныеУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>Данные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДанныеУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ДанныеУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДанныеВыбор</Event>
+								<Event name="BeforeAddRow">ДанныеПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДанныеПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ДанныеОтметка" id="53">
+									<DataPath>Объект.ДанныеДляОтображения.Отметка</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДанныеОтметкаКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ДанныеОтметкаРасширеннаяПодсказка" id="55"/>
+								</CheckBoxField>
+								<InputField name="ДанныеУпаковочныйЛист" id="56">
+									<DataPath>Объект.ДанныеДляОтображения.УпаковочныйЛист</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеУпаковочныйЛистКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ДанныеУпаковочныйЛистРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<InputField name="ДанныеСостояниеКороба" id="59">
+									<DataPath>Объект.ДанныеДляОтображения.СостояниеКороба</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеСостояниеКоробаКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ДанныеСостояниеКоробаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="ДанныеНазначение" id="62">
+									<DataPath>Объект.ДанныеДляОтображения.Назначение</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДанныеНазначениеКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ДанныеНазначениеРасширеннаяПодсказка" id="64"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаУдаление" id="87">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>по</v8:content>
+							<v8:content>Отмена</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="8"/>
-				</InputField>
-				<Button name="УстановитьИнтервал" id="9">
-					<Type>UsualButton</Type>
-					<SkipOnInput>false</SkipOnInput>
-					<CommandName>Form.Command.УстановитьИнтервал</CommandName>
-					<ExtendedTooltip name="УстановитьИнтервалExtendedTooltip" id="10"/>
-				</Button>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница удаление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаУдалениеРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШапкаУдаление" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка удаление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шапка удаление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаУдалениеРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<InputField name="ПоставкаУдаление" id="131">
+									<DataPath>Объект.ПоставкаУдаление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поставка</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ПоставкаУдалениеКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ПоставкаУдалениеРасширеннаяПодсказка" id="133"/>
+									<Events>
+										<Event name="StartChoice">ПоставкаУдалениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="НеОтбиратьПриПозиционировании" id="158">
+									<DataPath>НеОтбиратьПриПозиционировании</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеОтбиратьПриПозиционированииКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="НеОтбиратьПриПозиционированииРасширеннаяПодсказка" id="160"/>
+									<Events>
+										<Event name="OnChange">НеОтбиратьПриПозиционированииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ОтменаКорректировок" id="89">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОтменаКорректировок</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтменаКорректировокКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="ОтменаКорректировокКоманднаяПанель" id="91">
+								<ChildItems>
+									<Button name="ОтменаКорректировокЗаполнитьУдаление" id="120">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьУдаление</CommandName>
+										<ExtendedTooltip name="ОтменаКорректировокЗаполнитьУдалениеРасширеннаяПодсказка" id="121"/>
+									</Button>
+									<Button name="ОтменаКорректировокСнятьФлажкиУдаление" id="125">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлажкиУдаление</CommandName>
+										<ExtendedTooltip name="ОтменаКорректировокСнятьФлажкиУдалениеРасширеннаяПодсказка" id="126"/>
+									</Button>
+									<Button name="ОтменаКорректировокУстановитьФлажкиУдаление" id="127">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлажкиУдаление</CommandName>
+										<ExtendedTooltip name="ОтменаКорректировокУстановитьФлажкиУдалениеРасширеннаяПодсказка" id="128"/>
+									</Button>
+									<Button name="ОтменаКорректировокВыполнитьУдаление" id="129">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыполнитьУдаление</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отменить корректировки</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОтменаКорректировокВыполнитьУдалениеРасширеннаяПодсказка" id="130"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОтменаКорректировокРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="ОтменаКорректировокСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>ОтменаКорректировок</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтменаКорректировокСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ОтменаКорректировокСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтменаКорректировокСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>ОтменаКорректировок</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтменаКорректировокСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ОтменаКорректировокСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтменаКорректировокУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>ОтменаКорректировок</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтменаКорректировокУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ОтменаКорректировокУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ОтменаКорректировокВыбор</Event>
+								<Event name="BeforeAddRow">ОтменаКорректировокПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ОтменаКорректировокПередУдалением</Event>
+								<Event name="OnActivateRow">ОтменаКорректировокПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ОтменаКорректировокОтметка" id="122">
+									<DataPath>Объект.ОтменаКорректировок.Отметка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтменаКорректировокОтметкаКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="ОтменаКорректировокОтметкаРасширеннаяПодсказка" id="124"/>
+								</CheckBoxField>
+								<InputField name="ОтменаКорректировокДокументКорректировки" id="105">
+									<DataPath>Объект.ОтменаКорректировок.ДокументКорректировки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтменаКорректировокДокументКорректировкиКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ОтменаКорректировокДокументКорректировкиРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ОтменаКорректировокВидОперации" id="108">
+									<DataPath>Объект.ОтменаКорректировок.ВидОперации</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтменаКорректировокВидОперацииКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ОтменаКорректировокВидОперацииРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<InputField name="ОтменаКорректировокДокументОснование" id="111">
+									<DataPath>Объект.ОтменаКорректировок.ДокументОснование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтменаКорректировокДокументОснованиеКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ОтменаКорректировокДокументОснованиеРасширеннаяПодсказка" id="113"/>
+								</InputField>
+								<InputField name="ОтменаКорректировокКомментарий" id="114">
+									<DataPath>Объект.ОтменаКорректировок.Комментарий</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтменаКорректировокКомментарийКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ОтменаКорректировокКомментарийРасширеннаяПодсказка" id="116"/>
+								</InputField>
+								<InputField name="ОтменаКорректировокОтветственный" id="117">
+									<DataPath>Объект.ОтменаКорректировок.Ответственный</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтменаКорректировокОтветственныйКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ОтменаКорректировокОтветственныйРасширеннаяПодсказка" id="119"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="УпаковочныеЛисты" id="134">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.УпаковочныеЛисты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УпаковочныеЛистыКонтекстноеМеню" id="135"/>
+							<AutoCommandBar name="УпаковочныеЛистыКоманднаяПанель" id="136">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="УпаковочныеЛистыРасширеннаяПодсказка" id="137"/>
+							<SearchStringAddition name="УпаковочныеЛистыСтрокаПоиска" id="138">
+								<AdditionSource>
+									<Item>УпаковочныеЛисты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УпаковочныеЛистыСтрокаПоискаКонтекстноеМеню" id="139"/>
+								<ExtendedTooltip name="УпаковочныеЛистыСтрокаПоискаРасширеннаяПодсказка" id="140"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УпаковочныеЛистыСостояниеПросмотра" id="141">
+								<AdditionSource>
+									<Item>УпаковочныеЛисты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УпаковочныеЛистыСостояниеПросмотраКонтекстноеМеню" id="142"/>
+								<ExtendedTooltip name="УпаковочныеЛистыСостояниеПросмотраРасширеннаяПодсказка" id="143"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УпаковочныеЛистыУправлениеПоиском" id="144">
+								<AdditionSource>
+									<Item>УпаковочныеЛисты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УпаковочныеЛистыУправлениеПоискомКонтекстноеМеню" id="145"/>
+								<ExtendedTooltip name="УпаковочныеЛистыУправлениеПоискомРасширеннаяПодсказка" id="146"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">УпаковочныеЛистыВыбор</Event>
+								<Event name="BeforeAddRow">УпаковочныеЛистыПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">УпаковочныеЛистыПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="УпаковочныеЛистыДокументКорректировки" id="150">
+									<DataPath>Объект.УпаковочныеЛисты.ДокументКорректировки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпаковочныеЛистыДокументКорректировкиКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="УпаковочныеЛистыДокументКорректировкиРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<InputField name="УпаковочныеЛистыУпаковочныйЛист" id="153">
+									<DataPath>Объект.УпаковочныеЛисты.УпаковочныйЛист</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпаковочныеЛистыУпаковочныйЛистКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="УпаковочныеЛистыУпаковочныйЛистРасширеннаяПодсказка" id="155"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
-		<InputField name="Организация" id="11">
-			<DataPath>Объект.Организация</DataPath>
-			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="12"/>
-			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="13"/>
-			<Events>
-				<Event name="OnChange">ОрганизацияПриИзменении</Event>
-			</Events>
-		</InputField>
-		<InputField name="Склад" id="14">
-			<DataPath>Объект.Склад</DataPath>
-			<CreateButton>false</CreateButton>
-			<ListChoiceMode>true</ListChoiceMode>
-			<ChoiceParameterLinks>
-				<xr:Link>
-					<xr:Name>Отбор.гф_Организация</xr:Name>
-					<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
-					<xr:ValueChange>Clear</xr:ValueChange>
-				</xr:Link>
-			</ChoiceParameterLinks>
-			<ContextMenu name="СкладКонтекстноеМеню" id="15"/>
-			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="16"/>
-		</InputField>
-		<InputField name="Поставка" id="17">
-			<DataPath>Объект.Поставка</DataPath>
-			<ChoiceParameterLinks>
-				<xr:Link>
-					<xr:Name>Организация</xr:Name>
-					<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
-					<xr:ValueChange>Clear</xr:ValueChange>
-				</xr:Link>
-			</ChoiceParameterLinks>
-			<ContextMenu name="ПоставкаКонтекстноеМеню" id="18"/>
-			<ExtendedTooltip name="ПоставкаРасширеннаяПодсказка" id="19"/>
-			<Events>
-				<Event name="StartChoice">ПоставкаНачалоВыбора</Event>
-			</Events>
-		</InputField>
-		<Table name="Данные" id="20">
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.ДанныеДляОтображения</DataPath>
-			<CommandSet>
-				<ExcludedCommand>Add</ExcludedCommand>
-				<ExcludedCommand>Change</ExcludedCommand>
-				<ExcludedCommand>Copy</ExcludedCommand>
-			</CommandSet>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ДанныеКонтекстноеМеню" id="21"/>
-			<AutoCommandBar name="ДанныеКоманднаяПанель" id="22">
-				<ChildItems>
-					<Button name="ДанныеЗаполнить" id="48">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.Заполнить</CommandName>
-						<ExtendedTooltip name="ДанныеЗаполнитьРасширеннаяПодсказка" id="49"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="23"/>
-			<SearchStringAddition name="ДанныеСтрокаПоиска" id="24">
-				<AdditionSource>
-					<Item>Данные</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДанныеСтрокаПоискаКонтекстноеМеню" id="25"/>
-				<ExtendedTooltip name="ДанныеСтрокаПоискаРасширеннаяПодсказка" id="26"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ДанныеСостояниеПросмотра" id="27">
-				<AdditionSource>
-					<Item>Данные</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДанныеСостояниеПросмотраКонтекстноеМеню" id="28"/>
-				<ExtendedTooltip name="ДанныеСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ДанныеУправлениеПоиском" id="30">
-				<AdditionSource>
-					<Item>Данные</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ДанныеУправлениеПоискомКонтекстноеМеню" id="31"/>
-				<ExtendedTooltip name="ДанныеУправлениеПоискомРасширеннаяПодсказка" id="32"/>
-			</SearchControlAddition>
-			<Events>
-				<Event name="Selection">ДанныеВыбор</Event>
-			</Events>
-			<ChildItems>
-				<CheckBoxField name="ДанныеОтметка" id="53">
-					<DataPath>Объект.ДанныеДляОтображения.Отметка</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ДанныеОтметкаКонтекстноеМеню" id="54"/>
-					<ExtendedTooltip name="ДанныеОтметкаРасширеннаяПодсказка" id="55"/>
-				</CheckBoxField>
-				<InputField name="ДанныеУпаковочныйЛист" id="56">
-					<DataPath>Объект.ДанныеДляОтображения.УпаковочныйЛист</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДанныеУпаковочныйЛистКонтекстноеМеню" id="57"/>
-					<ExtendedTooltip name="ДанныеУпаковочныйЛистРасширеннаяПодсказка" id="58"/>
-				</InputField>
-				<InputField name="ДанныеСостояниеКороба" id="59">
-					<DataPath>Объект.ДанныеДляОтображения.СостояниеКороба</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДанныеСостояниеКоробаКонтекстноеМеню" id="60"/>
-					<ExtendedTooltip name="ДанныеСостояниеКоробаРасширеннаяПодсказка" id="61"/>
-				</InputField>
-				<InputField name="ДанныеНазначение" id="62">
-					<DataPath>Объект.ДанныеДляОтображения.Назначение</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДанныеНазначениеКонтекстноеМеню" id="63"/>
-					<ExtendedTooltip name="ДанныеНазначениеРасширеннаяПодсказка" id="64"/>
-				</InputField>
-			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -201,38 +486,19 @@
 				<Field>Объект.Склад</Field>
 			</Save>
 		</Attribute>
-	</Attributes>
-	<Commands>
-		<Command name="УстановитьИнтервал" id="1">
+		<Attribute name="НеОтбиратьПриПозиционировании" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить интервал</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Set interval</v8:content>
+					<v8:content>Не отбирать УЛ при позиционировании</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Установить интервал</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Set interval</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>УстановитьИнтервал</Action>
-			<Representation>Picture</Representation>
-			<ModifiesSavedData>true</ModifiesSavedData>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
 		<Command name="Заполнить" id="2">
 			<Title>
 				<v8:item>
@@ -262,6 +528,106 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьОбработку</Action>
+		</Command>
+		<Command name="УстановитьФлажки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+		</Command>
+		<Command name="СнятьФлажки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="ЗаполнитьУдаление" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьУдаление</Action>
+		</Command>
+		<Command name="СнятьФлажкиУдаление" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиУдаление</Action>
+		</Command>
+		<Command name="УстановитьФлажкиУдаление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиУдаление</Action>
+		</Command>
+		<Command name="ВыполнитьУдаление" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить удаление</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьУдаление</Action>
 		</Command>
 	</Commands>
 </Form>
