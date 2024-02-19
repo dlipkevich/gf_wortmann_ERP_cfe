@@ -90,6 +90,42 @@
 			<ContextMenu name="ПассивноеСоединениеКонтекстноеМеню" id="32"/>
 			<ExtendedTooltip name="ПассивноеСоединениеРасширеннаяПодсказка" id="33"/>
 		</CheckBoxField>
+		<UsualGroup name="ДляWMS" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для WMS</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" height="9" kind="StyleItem" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для WMS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ДляWMSРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<InputField name="IN" id="44">
+					<DataPath>IN</DataPath>
+					<ContextMenu name="INКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="INРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="OUT" id="47">
+					<DataPath>OUT</DataPath>
+					<ContextMenu name="OUTКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="OUTРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="LOG" id="50">
+					<DataPath>LOG</DataPath>
+					<ContextMenu name="LOGКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="LOGРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -241,6 +277,51 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IN" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IN</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="LOG" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>LOG</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="OUT" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>OUT</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
