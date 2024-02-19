@@ -235,16 +235,6 @@
 			<field>ВидБлокировки</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>УИ</dataPath>
-			<field>УИ</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>УИ</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ПредоплатныйДоговор</dataPath>
 			<field>ПредоплатныйДоговор</field>
 			<title xsi:type="v8:LocalStringType">
@@ -277,6 +267,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВидЦены</dataPath>
 			<field>ВидЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УИСтрокиДереваЗначений</dataPath>
+			<field>УИСтрокиДереваЗначений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УИСтроки дерева значений</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
@@ -566,7 +566,7 @@
 	0 КАК ДействующийЛимит,
 	ЗаказНоменклатураХарактеристика.НомерАдреса КАК НомерАдреса,
 	NULL КАК Блокировка,
-	NULL КАК УИ,
+	NULL КАК УИСтрокиДереваЗначений,
 	ЗаказНоменклатураХарактеристика.СтавкаНДС КАК СтавкаНДС,
 	УпаковочныйЛистДанныеЗаказов.КоличествоНоменклатурыВУпаковочномЛисте КАК КоличествоНоменклатуры,
 	УпаковочныйЛистДанныеЗаказов.ЦенаУпаковочногоЛиста * УпаковочныйЛистДанныеЗаказов.КоличествоОстаток * (1 + ЗаказНоменклатураХарактеристика.СтавкаНДС / 100) * (1 - УпаковочныйЛистДанныеЗаказов.Скидка / 100) КАК Стоимость,
@@ -745,9 +745,6 @@
 					<dcsset:field>КоличествоНоменклатуры</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДатаПрайсЛиста</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Скидка</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -787,7 +784,7 @@
 					<dcsset:field>СтавкаНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>УИ</dcsset:field>
+					<dcsset:field>УИСтрокиДереваЗначений</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВидЦены</dcsset:field>
