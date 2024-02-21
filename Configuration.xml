@@ -54,7 +54,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.гф_ОсновнаяРоль</xr:Item>
 			</DefaultRoles>
 			<Vendor/>
-			<Version>2321</Version>
+			<Version>2334</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -289,7 +289,6 @@
 			<CommonTemplate>гф_КомпонентаПечатиШтрихкодов_изУПП</CommonTemplate>
 			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
 			<CommonModule>ПартнерыИКонтрагентыЛокализация</CommonModule>
-			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
 			<CommonModule>гф_МенеджерПечатиКлиент</CommonModule>
 			<CommonModule>УправлениеДоступомПереопределяемый</CommonModule>
 			<CommonModule>гф_РегламентныеЗадания</CommonModule>
@@ -351,8 +350,10 @@
 			<CommonModule>НоменклатураКлиентСервер</CommonModule>
 			<CommonModule>СозданиеНаОснованииУТКлиент</CommonModule>
 			<CommonModule>гф_СчетНаОплатуВызовСервера</CommonModule>
+			<CommonModule>_омОбщегоНазначенияВызовСервера</CommonModule>
 			<CommonModule>БФД_ОбщегоНазначенияСервер</CommonModule>
 			<CommonModule>БФД_ПовторногоИспользования</CommonModule>
+			<CommonModule>ВерсионированиеОбъектовСобытия</CommonModule>
 			<ExchangePlan>ОбменССайтом</ExchangePlan>
 			<XDTOPackage>гф_ОбменДаннымиWMS</XDTOPackage>
 			<HTTPService>БУС_Обмен</HTTPService>
@@ -368,6 +369,7 @@
 			<EventSubscription>гф_СтатусыДокументовИСМППриЗаписиПоПереоценке</EventSubscription>
 			<EventSubscription>гф_СтатусыДокументовИСМППриЗаписи</EventSubscription>
 			<EventSubscription>гф_ЗаполнитьВидыЗапасовПередЗаписью</EventSubscription>
+			<EventSubscription>гф_ЗаписатьВерсиюДокумента</EventSubscription>
 			<ScheduledJob>гф_ПочтаРоссии_ЗапросКТрекеру</ScheduledJob>
 			<ScheduledJob>ОбменССайтом</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
