@@ -114,22 +114,48 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаСозданиеРасширеннаяПодсказка" id="86"/>
 					<ChildItems>
-						<InputField name="Поставка" id="17">
-							<DataPath>Объект.Поставка</DataPath>
-							<AutoMarkIncomplete>true</AutoMarkIncomplete>
-							<ChoiceParameterLinks>
-								<xr:Link>
-									<xr:Name>Организация</xr:Name>
-									<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
-									<xr:ValueChange>Clear</xr:ValueChange>
-								</xr:Link>
-							</ChoiceParameterLinks>
-							<ContextMenu name="ПоставкаКонтекстноеМеню" id="18"/>
-							<ExtendedTooltip name="ПоставкаРасширеннаяПодсказка" id="19"/>
-							<Events>
-								<Event name="StartChoice">ПоставкаНачалоВыбора</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="ГруппаПоставка" id="167">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа поставка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа поставка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоставкаРасширеннаяПодсказка" id="168"/>
+							<ChildItems>
+								<InputField name="Поставка" id="17">
+									<DataPath>Объект.Поставка</DataPath>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Организация</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПоставкаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ПоставкаРасширеннаяПодсказка" id="19"/>
+									<Events>
+										<Event name="StartChoice">ПоставкаНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ПоКоробам" id="164">
+									<DataPath>Объект.ПоКоробам</DataPath>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ПоКоробамКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ПоКоробамРасширеннаяПодсказка" id="166"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="Данные" id="20">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
