@@ -706,6 +706,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мКоличествоСИзменениямиПоЗаказу</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыКоличествоСИзменениямиКонтекстноеМеню" id="63"/>
@@ -1080,6 +1081,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мКоличествоСИзменениямиПоЗаказу</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="ТоварыВКоробахКоличествоСИзменениямиКонтекстноеМеню" id="179"/>
@@ -1455,6 +1457,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мКоличествоСИзменениямиПоЗаказу</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>1</MaxWidth>
 									<ContextMenu name="РезервыКоличествоСИзменениямиКонтекстноеМеню" id="237"/>
@@ -1473,6 +1476,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мТоварВРезерве</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>1</MaxWidth>
 									<ContextMenu name="РезервыТоварВРезервеКонтекстноеМеню" id="291"/>
@@ -1740,6 +1744,12 @@
 											</Button>
 										</ChildItems>
 									</Popup>
+									<Button name="РезервыВКоробахТЕСТ" id="565">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.ТЕСТ</CommandName>
+										<ExtendedTooltip name="РезервыВКоробахТЕСТРасширеннаяПодсказка" id="566"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="РезервыВКоробахРасширеннаяПодсказка" id="339"/>
@@ -1851,6 +1861,14 @@
 								<InputField name="РезервыВКоробахУдалено" id="364">
 									<DataPath>Объект.РезервыВКоробах.Удалено</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалено
+/
+Отгружено</v8:content>
+										</v8:item>
+									</Title>
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
@@ -1872,6 +1890,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мКоличествоСИзменениямиПоЗаказу</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>9</MaxWidth>
 									<ContextMenu name="РезервыВКоробахКоличествоСИзменениямиКонтекстноеМеню" id="368"/>
@@ -1890,6 +1909,7 @@
 									<TitleBackColor>#CCFFCC</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>мТоварВРезерве</FooterDataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>6</MaxWidth>
 									<ContextMenu name="РезервыВКоробахТоварВРезервеКонтекстноеМеню" id="386"/>
@@ -3555,6 +3575,22 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="Порядок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="мУпаковочныеЛисты" id="26">
@@ -3867,6 +3903,54 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мКоличествоСИзменениямиПоЗаказу" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М количество с изменениями по заказу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мТоварВРезерве" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М товар в резерве</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мНомерВерсииЗаказа" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М номер версии заказа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -4528,6 +4612,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьСписокКорректировок</Action>
+		</Command>
+		<Command name="ТЕСТ" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЕСТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЕСТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТЕСТ</Action>
 		</Command>
 	</Commands>
 </Form>
