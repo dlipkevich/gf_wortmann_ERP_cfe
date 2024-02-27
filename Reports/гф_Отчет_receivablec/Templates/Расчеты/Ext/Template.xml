@@ -1,0 +1,1011 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Контрагенты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Бюджет</dataPath>
+			<field>Бюджет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.гф_Бюджеты</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЛимита</dataPath>
+			<field>СуммаЛимита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма лимита</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДолга</dataPath>
+			<field>СуммаДолга</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма долга</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СегментПартнеров</dataPath>
+			<field>СегментПартнеров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегмент партнеров</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле2</dataPath>
+			<field>Поле2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельности</dataPath>
+			<field>НаправлениеДеятельности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетныйДокументСтатус</dataPath>
+			<field>РасчетныйДокументСтатус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДниПросрочки</dataPath>
+			<field>ДниПросрочки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дни просрочки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВозникновения</dataPath>
+			<field>ДатаВозникновения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорДопустимаяСуммаЗадолженности</dataPath>
+			<field>ДоговорДопустимаяСуммаЗадолженности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектРасчетов</dataPath>
+			<field>ОбъектРасчетов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетныйДокумент</dataPath>
+			<field>РасчетныйДокумент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПлановогоПогашения</dataPath>
+			<field>ДатаПлановогоПогашения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КрайняяДатаОплаты</dataPath>
+			<field>КрайняяДатаОплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Крайняя дата оплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгКлиента</dataPath>
+			<field>ДолгКлиента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг клиента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгКлиентаВВалюте</dataPath>
+			<field>ДолгКлиентаВВалюте</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг клиента в валюте</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДолгКлиентаПросрочено</dataPath>
+			<field>ДолгКлиентаПросрочено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг клиента просрочено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле1</dataPath>
+			<field>Поле1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле3</dataPath>
+			<field>Поле3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле3</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договоргф_Заблокирован</dataPath>
+			<field>Договоргф_Заблокирован</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле4</dataPath>
+			<field>Поле4</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле4</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РасчетныйДокументДата</dataPath>
+			<field>РасчетныйДокументДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПартнерКод</dataPath>
+			<field>ПартнерКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договоргф_ОписаниеБлокировки</dataPath>
+			<field>Договоргф_ОписаниеБлокировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокПлатежа</dataPath>
+			<field>СрокПлатежа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок платежа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сезон</dataPath>
+			<field>Сезон</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сезон</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЛимита</dataPath>
+			<field>ВидЛимита</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЛимита</dataPath>
+			<field>ТипЛимита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип лимита</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Сегменты.Партнер КАК Партнер,
+	ИСТИНА КАК ИспользуетсяОтборПоСегментуПартнеров
+ПОМЕСТИТЬ ОтборПоСегментуПартнеров
+ИЗ
+	РегистрСведений.ПартнерыСегмента КАК Сегменты
+{ГДЕ
+	Сегменты.Сегмент.* КАК СегментПартнеров,
+	Сегменты.Партнер.* КАК Партнер}
+
+ИНДЕКСИРОВАТЬ ПО
+	Партнер,
+	ИспользуетсяОтборПоСегментуПартнеров
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Организации.Ссылка КАК Организация,
+	КурсВалюты.Валюта КАК Валюта,
+	ЕСТЬNULL(КурсВалюты.КурсЧислитель, 1) * ЕСТЬNULL(КурсВалютыУпр.КурсЗнаменатель, 1) / (ЕСТЬNULL(КурсВалюты.КурсЗнаменатель, 1) * ЕСТЬNULL(КурсВалютыУпр.КурсЧислитель, 1)) КАК Коэффициент
+ПОМЕСТИТЬ КурсыВалют
+ИЗ
+	Справочник.Организации КАК Организации
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних({(&amp;ДатаОтчета)}, БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалюты
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтносительныеКурсыВалют.СрезПоследних(
+				{(&amp;ДатаОтчета)},
+				Валюта = &amp;ВалютаУправленческогоУчета
+					И БазоваяВалюта = &amp;БазоваяВалюта) КАК КурсВалютыУпр
+		ПО (ИСТИНА)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	АналитикаУчета.Организация КАК Организация,
+	АналитикаУчета.Партнер КАК Партнер,
+	АналитикаУчета.Контрагент КАК Контрагент,
+	АналитикаУчета.Договор КАК Договор,
+	РасчетыПоСрокам.ОбъектРасчетов КАК ОбъектРасчетов,
+	&amp;ВалютаУправленческогоУчета КАК Валюта,
+	РасчетыПоСрокам.РасчетныйДокумент КАК РасчетныйДокумент,
+	РасчетыПоСрокам.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	РасчетыПоСрокам.ДатаВозникновения КАК ДатаВозникновения,
+	РасчетыПоСрокам.ДолгРеглОстаток КАК ДолгКлиента,
+	РасчетыПоСрокам.ДолгОстаток КАК ДолгКлиентаВВалюте,
+	ВЫБОР
+		КОГДА РасчетыПоСрокам.ДатаПлановогоПогашения &lt; НАЧАЛОПЕРИОДА(&amp;ДатаОтчета, ДЕНЬ)
+			ТОГДА РасчетыПоСрокам.ДолгРеглОстаток
+		ИНАЧЕ 0
+	КОНЕЦ КАК ДолгКлиентаПросрочено,
+	РасчетыПоСрокам.ПредоплатаУпрОстаток КАК ПредоплатаУпрОстаток
+ПОМЕСТИТЬ ТаблицаЗадолженностей_
+ИЗ
+	РегистрНакопления.РасчетыСКлиентамиПоСрокам.Остатки({(&amp;ДатаОтчетаГраница)}, ) КАК РасчетыПоСрокам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаПоПартнерам КАК АналитикаУчета
+		ПО РасчетыПоСрокам.АналитикаУчетаПоПартнерам = АналитикаУчета.КлючАналитики
+		ЛЕВОЕ СОЕДИНЕНИЕ КурсыВалют КАК КурсВалюты
+		ПО (КурсВалюты.Валюта = РасчетыПоСрокам.Валюта)
+			И (КурсВалюты.Организация = АналитикаУчета.Организация)
+ГДЕ
+	АналитикаУчета.Партнер &lt;&gt; ЗНАЧЕНИЕ(Справочник.Партнеры.НашеПредприятие)
+{ГДЕ
+	АналитикаУчета.Организация.* КАК Организация,
+	АналитикаУчета.Партнер.* КАК Партнер,
+	АналитикаУчета.Контрагент.* КАК Контрагент,
+	АналитикаУчета.Договор.* КАК Договор,
+	АналитикаУчета.НаправлениеДеятельности.* КАК НаправлениеДеятельности,
+	(АналитикаУчета.Партнер В
+			(ВЫБРАТЬ
+				ОтборПоСегментуПартнеров.Партнер
+			ИЗ
+				ОтборПоСегментуПартнеров
+			ГДЕ
+				ОтборПоСегментуПартнеров.ИспользуетсяОтборПоСегментуПартнеров = &amp;ИспользуетсяОтборПоСегментуПартнеров)) КАК Поле2}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ТаблицаЗадолженностей_.Организация КАК Организация,
+	ТаблицаЗадолженностей_.Партнер КАК Партнер,
+	ТаблицаЗадолженностей_.Контрагент КАК Контрагент,
+	ТаблицаЗадолженностей_.Договор КАК Договор,
+	ТаблицаЗадолженностей_.ОбъектРасчетов КАК ОбъектРасчетов,
+	ТаблицаЗадолженностей_.Валюта КАК Валюта,
+	ТаблицаЗадолженностей_.РасчетныйДокумент КАК РасчетныйДокумент,
+	ТаблицаЗадолженностей_.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	ТаблицаЗадолженностей_.ДатаВозникновения КАК ДатаВозникновения,
+	ТаблицаЗадолженностей_.ДолгКлиента КАК ДолгКлиента,
+	ТаблицаЗадолженностей_.ДолгКлиентаВВалюте КАК ДолгКлиентаВВалюте,
+	ТаблицаЗадолженностей_.ДолгКлиентаПросрочено КАК ДолгКлиентаПросрочено,
+	ТаблицаЗадолженностей_.ПредоплатаУпрОстаток КАК ПредоплатаУпрОстаток,
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК СрокПлатежа,
+	ДОБАВИТЬКДАТЕ(ТаблицаЗадолженностей_.РасчетныйДокумент.Дата, ДЕНЬ, ВЫРАЗИТЬ(ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ЧИСЛО)) КАК КрайняяДатаОплаты,
+	-РАЗНОСТЬДАТ(&amp;ДатаОтчета, ДОБАВИТЬКДАТЕ(ТаблицаЗадолженностей_.РасчетныйДокумент.Дата, ДЕНЬ, ВЫРАЗИТЬ(ДоговорыКонтрагентовДополнительныеРеквизиты.Значение КАК ЧИСЛО)), ДЕНЬ) КАК ДниПросрочки
+ПОМЕСТИТЬ ТаблицаЗадолженностейДниПросрочкиИтог
+ИЗ
+	ТаблицаЗадолженностей_ КАК ТаблицаЗадолженностей_
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов.ДополнительныеРеквизиты КАК ДоговорыКонтрагентовДополнительныеРеквизиты
+		ПО ТаблицаЗадолженностей_.Договор = ДоговорыКонтрагентовДополнительныеРеквизиты.Ссылка
+ГДЕ
+	ДоговорыКонтрагентовДополнительныеРеквизиты.Свойство.Наименование = "Количество дней отсрочки платежа"
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаЗадолженностей_.Организация КАК Организация,
+	ТаблицаЗадолженностей_.Партнер КАК Партнер,
+	ТаблицаЗадолженностей_.Контрагент КАК Контрагент,
+	ТаблицаЗадолженностей_.Договор КАК Договор,
+	ТаблицаЗадолженностей_.ОбъектРасчетов КАК ОбъектРасчетов,
+	ТаблицаЗадолженностей_.Валюта КАК Валюта,
+	ТаблицаЗадолженностей_.РасчетныйДокумент КАК РасчетныйДокумент,
+	ТаблицаЗадолженностей_.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	ТаблицаЗадолженностей_.ДатаВозникновения КАК ДатаВозникновения,
+	ТаблицаЗадолженностей_.ДолгКлиента КАК ДолгКлиента,
+	ТаблицаЗадолженностей_.ДолгКлиентаВВалюте КАК ДолгКлиентаВВалюте,
+	ТаблицаЗадолженностей_.ДолгКлиентаПросрочено КАК ДолгКлиентаПросрочено,
+	ТаблицаЗадолженностей_.ПредоплатаУпрОстаток КАК ПредоплатаУпрОстаток,
+	ТаблицаЗадолженностейДниПросрочкиИтог.СрокПлатежа КАК СрокПлатежа,
+	ТаблицаЗадолженностейДниПросрочкиИтог.КрайняяДатаОплаты КАК КрайняяДатаОплаты,
+	ТаблицаЗадолженностейДниПросрочкиИтог.ДниПросрочки КАК ДниПросрочки
+ПОМЕСТИТЬ ТаблицаЗадолженностей
+ИЗ
+	ТаблицаЗадолженностей_ КАК ТаблицаЗадолженностей_
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаЗадолженностейДниПросрочкиИтог КАК ТаблицаЗадолженностейДниПросрочкиИтог
+		ПО ТаблицаЗадолженностей_.Договор = ТаблицаЗадолженностейДниПросрочкиИтог.Договор
+			И ТаблицаЗадолженностей_.Контрагент = ТаблицаЗадолженностейДниПросрочкиИтог.Контрагент
+			И ТаблицаЗадолженностей_.РасчетныйДокумент = ТаблицаЗадолженностейДниПросрочкиИтог.РасчетныйДокумент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТаблицаЗадолженностей.Организация КАК Организация,
+	ТаблицаЗадолженностей.Партнер КАК Партнер,
+	ТаблицаЗадолженностей.Контрагент КАК Контрагент,
+	ТаблицаЗадолженностей.Договор КАК Договор,
+	ТаблицаЗадолженностей.ОбъектРасчетов КАК ОбъектРасчетов,
+	ТаблицаЗадолженностей.Валюта КАК Валюта,
+	ТаблицаЗадолженностей.РасчетныйДокумент КАК РасчетныйДокумент,
+	ТаблицаЗадолженностей.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	ТаблицаЗадолженностей.ДатаВозникновения КАК ДатаВозникновения,
+	ВЫБОР
+		КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
+			ТОГДА 0
+		ИНАЧЕ ТаблицаЗадолженностей.ДолгКлиента
+	КОНЕЦ КАК ДолгКлиента,
+	ВЫБОР
+		КОГДА ТаблицаЗадолженностей.ДолгКлиентаВВалюте = 0
+			ТОГДА 0
+		ИНАЧЕ ТаблицаЗадолженностей.ДолгКлиентаВВалюте
+	КОНЕЦ КАК ДолгКлиентаВВалюте,
+	ТаблицаЗадолженностей.ДолгКлиентаПросрочено КАК ДолгКлиентаПросрочено,
+	ВЫБОР
+		КОГДА НЕ РазностиДат.КоличествоДней ЕСТЬ NULL
+			ТОГДА ВЫБОР
+					КОГДА РазностиДат.КоличествоДней &gt; 0
+						ТОГДА РазностиДат.КоличествоДней
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
+						ИЛИ ТаблицаЗадолженностей.ДатаПлановогоПогашения = ДАТАВРЕМЯ(1, 1, 1)
+					ТОГДА 0
+				ИНАЧЕ ВЫБОР
+						КОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.ДатаПлановогоПогашения, &amp;ДатаОтчета, ДЕНЬ) &gt; 0
+							ТОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.ДатаПлановогоПогашения, &amp;ДатаОтчета, ДЕНЬ)
+						ИНАЧЕ 0
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоДней,
+	ЕСТЬNULL(Интервалы.НаименованиеИнтервала, &amp;СтрокаДолгНеПросрочен) КАК НаименованиеИнтервала,
+	ЕСТЬNULL(Интервалы.НомерСтроки, 0) КАК НомерИнтервала,
+	ЕСТЬNULL(Интервалы.НижняяГраницаИнтервала, 0) КАК НижняяГраницаИнтервала,
+	ТаблицаЗадолженностей.РасчетныйДокумент.Дата КАК ДатаДокумента,
+	ТаблицаЗадолженностей.Партнер.Код КАК ПартнерКод,
+	ТаблицаЗадолженностей.Договор.ДопустимаяСуммаЗадолженности КАК ДоговорДопустимаяСуммаЗадолженности,
+	ТаблицаЗадолженностей.Договор.гф_Заблокирован КАК Заблокирован,
+	ТаблицаЗадолженностей.Договор.гф_ОписаниеБлокировки КАК ОписаниеБлокировки,
+	ТаблицаЗадолженностей.РасчетныйДокумент.Статус КАК ДокументСтатус,
+	ТаблицаЗадолженностей.СрокПлатежа КАК ДниОтсрочки,
+	ТаблицаЗадолженностей.КрайняяДатаОплаты КАК КрайняяДатаОплаты,
+	ТаблицаЗадолженностей.ДниПросрочки КАК ДниПросрочки,
+	ВЫБОР
+		КОГДА СостоянияПоОбъектамУчетаЭДО.СостояниеЭДО = НЕОПРЕДЕЛЕНО
+			ТОГДА " Не ЭДО"
+		ИНАЧЕ "Не ЭДО"
+	КОНЕЦ КАК ЭДО,
+	ТаблицаЗадолженностей.ПредоплатаУпрОстаток КАК Депозит
+ПОМЕСТИТЬ ВТ1
+{ВЫБРАТЬ
+	Организация.*,
+	Партнер.*,
+	Контрагент.*,
+	Договор.*,
+	ОбъектРасчетов.*,
+	Валюта,
+	РасчетныйДокумент.*,
+	ДатаПлановогоПогашения,
+	ДатаВозникновения,
+	ДолгКлиента,
+	ДолгКлиентаВВалюте,
+	ДолгКлиентаПросрочено,
+	КоличествоДней,
+	НаименованиеИнтервала,
+	НомерИнтервала,
+	НижняяГраницаИнтервала,
+	ДатаДокумента,
+	ПартнерКод,
+	ДоговорДопустимаяСуммаЗадолженности,
+	Заблокирован,
+	ОписаниеБлокировки,
+	ДокументСтатус.*,
+	ДниОтсрочки.*,
+	КрайняяДатаОплаты,
+	ДниПросрочки,
+	ЭДО,
+	Депозит}
+ИЗ
+	ТаблицаЗадолженностей КАК ТаблицаЗадолженностей
+		{ЛЕВОЕ СОЕДИНЕНИЕ РазностиДат КАК РазностиДат
+		ПО (РазностиДат.ДатаНачала = ТаблицаЗадолженностей.ДатаПлановогоПогашения)}
+		{ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВариантыКлассификацииЗадолженности.Интервалы КАК Интервалы
+		ПО (Интервалы.Ссылка = &amp;ВариантКлассификацииЗадолженности)
+			И (ВЫБОР
+				КОГДА НЕ ТаблицаЗадолженностей.ДниПросрочки ЕСТЬ NULL
+					ТОГДА ВЫБОР
+							КОГДА ТаблицаЗадолженностей.ДниПросрочки &gt; 0
+								ТОГДА ТаблицаЗадолженностей.ДниПросрочки
+							ИНАЧЕ 0
+						КОНЕЦ
+				ИНАЧЕ ВЫБОР
+						КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
+								ИЛИ ТаблицаЗадолженностей.КрайняяДатаОплаты = ДАТАВРЕМЯ(1, 1, 1)
+							ТОГДА 0
+						ИНАЧЕ ВЫБОР
+								КОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.КрайняяДатаОплаты, &amp;ДатаОтчета, ДЕНЬ) &gt; 0
+									ТОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.КрайняяДатаОплаты, &amp;ДатаОтчета, ДЕНЬ)
+								ИНАЧЕ 0
+							КОНЕЦ
+					КОНЕЦ
+			КОНЕЦ МЕЖДУ Интервалы.НижняяГраницаИнтервала И Интервалы.ВерхняяГраницаИнтервала)}
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияПоОбъектамУчетаЭДО КАК СостоянияПоОбъектамУчетаЭДО
+		ПО ТаблицаЗадолженностей.РасчетныйДокумент = СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект
+ГДЕ
+	(ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.РеализацияТоваровУслуг
+			ИЛИ ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.ПервичныйДокумент
+			ИЛИ ТаблицаЗадолженностей.РасчетныйДокумент ССЫЛКА Документ.КорректировкаЗадолженности)
+	И ТаблицаЗадолженностей.Партнер В
+			(ВЫБРАТЬ
+				Справочник.Партнеры.Ссылка
+			ИЗ
+				Справочник.Партнеры)
+{ГДЕ
+	ТаблицаЗадолженностей.Организация.*,
+	ТаблицаЗадолженностей.Партнер.*,
+	ТаблицаЗадолженностей.Контрагент.*,
+	ТаблицаЗадолженностей.Договор.*,
+	ТаблицаЗадолженностей.ОбъектРасчетов.*,
+	ТаблицаЗадолженностей.Валюта,
+	ТаблицаЗадолженностей.РасчетныйДокумент.*,
+	ТаблицаЗадолженностей.ДатаПлановогоПогашения,
+	ТаблицаЗадолженностей.ДатаВозникновения,
+	ТаблицаЗадолженностей.ДолгКлиента,
+	ТаблицаЗадолженностей.ДолгКлиентаВВалюте,
+	ТаблицаЗадолженностей.ДолгКлиентаПросрочено,
+	(ВЫБОР
+			КОГДА НЕ РазностиДат.КоличествоДней ЕСТЬ NULL
+				ТОГДА ВЫБОР
+						КОГДА РазностиДат.КоличествоДней &gt; 0
+							ТОГДА РазностиДат.КоличествоДней
+						ИНАЧЕ 0
+					КОНЕЦ
+			ИНАЧЕ ВЫБОР
+					КОГДА ТаблицаЗадолженностей.ДолгКлиента = 0
+							ИЛИ ТаблицаЗадолженностей.ДатаПлановогоПогашения = ДАТАВРЕМЯ(1, 1, 1)
+						ТОГДА 0
+					ИНАЧЕ ВЫБОР
+							КОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.ДатаПлановогоПогашения, &amp;ДатаОтчета, ДЕНЬ) &gt; 0
+								ТОГДА РАЗНОСТЬДАТ(ТаблицаЗадолженностей.ДатаПлановогоПогашения, &amp;ДатаОтчета, ДЕНЬ)
+							ИНАЧЕ 0
+						КОНЕЦ
+				КОНЕЦ
+		КОНЕЦ) КАК Поле1,
+	(ЕСТЬNULL(Интервалы.НаименованиеИнтервала, &amp;СтрокаДолгНеПросрочен)) КАК Поле2,
+	(ЕСТЬNULL(Интервалы.НомерСтроки, 0)) КАК Поле3,
+	(ЕСТЬNULL(Интервалы.НижняяГраницаИнтервала, 0)) КАК Поле4,
+	ТаблицаЗадолженностей.РасчетныйДокумент.Дата,
+	ТаблицаЗадолженностей.Партнер.Код,
+	ТаблицаЗадолженностей.Договор.ДопустимаяСуммаЗадолженности,
+	ТаблицаЗадолженностей.Договор.гф_Заблокирован,
+	ТаблицаЗадолженностей.Договор.гф_ОписаниеБлокировки,
+	ТаблицаЗадолженностей.РасчетныйДокумент.Статус.*,
+	ТаблицаЗадолженностей.СрокПлатежа.*,
+	ТаблицаЗадолженностей.КрайняяДатаОплаты,
+	ТаблицаЗадолженностей.ДниПросрочки}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ1.Организация КАК Организация,
+	ВТ1.Партнер КАК Партнер,
+	ВТ1.Контрагент КАК Контрагент,
+	ВТ1.Договор КАК Договор,
+	ВТ1.РасчетныйДокумент КАК РасчетныйДокумент,
+	ВТ1.ДолгКлиента КАК ДолгКлиента,
+	ВТ1.ДолгКлиентаВВалюте КАК ДолгКлиентаВВалюте,
+	ВТ1.ПартнерКод КАК ПартнерКод,
+	ВТ1.Заблокирован КАК Заблокирован,
+	ВТ1.ОписаниеБлокировки КАК ОписаниеБлокировки,
+	ВТ1.ДниОтсрочки КАК ДниОтсрочки,
+	ВТ1.КрайняяДатаОплаты КАК КрайняяДатаОплаты,
+	ВТ1.ДниПросрочки КАК ДниПросрочки,
+	ВТ1.ЭДО КАК ЭДО,
+	ВТ1.Депозит КАК Депозит,
+	НАЧАЛОПЕРИОДА(ВТ1.ДатаВозникновения, ДЕНЬ) КАК Период,
+	ВТ1.РасчетныйДокумент КАК Документ,
+	ВТ1.ДолгКлиента КАК СуммаДолга
+ПОМЕСТИТЬ Буфер
+ИЗ
+	ВТ1 КАК ВТ1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Буфер.Организация КАК Организация,
+	Буфер.Контрагент КАК Контрагент,
+	Буфер.Договор КАК Договор,
+	Буфер.Документ КАК Документ,
+	гф_ЛимитыКонтрагентов.ВидЛимита КАК ВидЛимита,
+	МАКСИМУМ(гф_ЛимитыКонтрагентов.Период) КАК Период,
+	гф_ЛимитыКонтрагентов.ВидЛимита.ТипЛимита КАК ТипЛимита
+ПОМЕСТИТЬ ПериодыЛимитов
+ИЗ
+	Буфер КАК Буфер
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов КАК гф_ЛимитыКонтрагентов
+		ПО Буфер.Контрагент = гф_ЛимитыКонтрагентов.Контрагент
+			И (гф_ЛимитыКонтрагентов.Период &lt;= Буфер.Период)
+			И (гф_ЛимитыКонтрагентов.Организация = Буфер.Организация)
+ГДЕ
+	гф_ЛимитыКонтрагентов.Статус.Активный
+
+СГРУППИРОВАТЬ ПО
+	Буфер.Организация,
+	Буфер.Контрагент,
+	Буфер.Договор,
+	Буфер.Документ,
+	гф_ЛимитыКонтрагентов.ВидЛимита,
+	гф_ЛимитыКонтрагентов.ВидЛимита.ТипЛимита
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПериодыЛимитов.Организация КАК Организация,
+	ПериодыЛимитов.Контрагент КАК Контрагент,
+	ПериодыЛимитов.Договор КАК Договор,
+	ПериодыЛимитов.Документ.Дата КАК Дата,
+	ПериодыЛимитов.Документ КАК Документ,
+	ПериодыЛимитов.ВидЛимита.Бюджет КАК Бюджет,
+	СУММА(ЕСТЬNULL(гф_ЛимитыКонтрагентов.Сумма, 0)) КАК СуммаЛимита,
+	ПериодыЛимитов.ВидЛимита КАК ВидЛимита,
+	ПериодыЛимитов.ТипЛимита КАК ТипЛимита
+ПОМЕСТИТЬ выборка
+ИЗ
+	ПериодыЛимитов КАК ПериодыЛимитов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.гф_ЛимитыКонтрагентов КАК гф_ЛимитыКонтрагентов
+		ПО ПериодыЛимитов.Контрагент = гф_ЛимитыКонтрагентов.Контрагент
+			И ПериодыЛимитов.ВидЛимита = гф_ЛимитыКонтрагентов.ВидЛимита
+			И ПериодыЛимитов.Период = гф_ЛимитыКонтрагентов.Период
+			И (НЕ гф_ЛимитыКонтрагентов.Сумма = 0)
+			И ПериодыЛимитов.Организация = гф_ЛимитыКонтрагентов.Организация
+
+СГРУППИРОВАТЬ ПО
+	ПериодыЛимитов.Организация,
+	ПериодыЛимитов.Контрагент,
+	ПериодыЛимитов.Договор,
+	ПериодыЛимитов.Документ.Дата,
+	ПериодыЛимитов.Документ,
+	ПериодыЛимитов.ВидЛимита.Бюджет,
+	ПериодыЛимитов.ВидЛимита,
+	ПериодыЛимитов.ТипЛимита
+
+ИМЕЮЩИЕ
+	НЕ СУММА(ЕСТЬNULL(гф_ЛимитыКонтрагентов.Сумма, 0)) = 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Буфер.Организация КАК Организация,
+	Буфер.Контрагент КАК Контрагент,
+	Буфер.Договор КАК Договор,
+	Буфер.Документ КАК Документ,
+	выборка.Бюджет КАК Бюджет,
+	Буфер.Период КАК Период,
+	Буфер.СуммаДолга КАК СуммаДолга,
+	ЕСТЬNULL(выборка.СуммаЛимита, 0) КАК СуммаЛимита,
+	Буфер.Договор.гф_Сезон КАК Сезон,
+	выборка.ВидЛимита КАК ВидЛимита,
+	выборка.ТипЛимита КАК ТипЛимита
+{ВЫБРАТЬ
+	Организация.*,
+	Контрагент.*,
+	Договор.*,
+	Документ.*,
+	Бюджет.*,
+	Период,
+	СуммаДолга,
+	СуммаЛимита,
+	Сезон.*,
+	ВидЛимита.*,
+	ТипЛимита.*}
+ИЗ
+	Буфер КАК Буфер
+		ЛЕВОЕ СОЕДИНЕНИЕ выборка КАК выборка
+		ПО Буфер.Документ = выборка.Документ
+			И Буфер.Контрагент = выборка.Контрагент
+{ГДЕ
+	Буфер.Организация.*,
+	Буфер.Контрагент.*,
+	Буфер.Договор.*,
+	Буфер.Документ.*,
+	выборка.Бюджет.*,
+	Буфер.Период,
+	Буфер.СуммаДолга,
+	выборка.СуммаЛимита,
+	Буфер.Договор.гф_Сезон.* КАК Сезон,
+	выборка.ВидЛимита.*,
+	выборка.ТипЛимита.*}
+
+УПОРЯДОЧИТЬ ПО
+	Бюджет,
+	Контрагент,
+	Договор,
+	Документ</query>
+		<autoFillFields>false</autoFillFields>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Бюджет</dataPath>
+		<expression>выбор когда СуммаЛимита = 0 тогда значение(Справочник.гф_Бюджеты.ПустаяСсылка) иначе Бюджет конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Бюджет</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<field>true</field>
+		</useRestriction>
+	</calculatedField>
+	<parameter>
+		<name>БазоваяВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Базовая валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.БазоваяВалютаПоУмолчанию.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>ВалютаУправленческогоУчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта управленческого учета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Константы.БазоваяВалютаПоУмолчанию.Получить()</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ДатаОтчетаГраница</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета граница</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоСегментуПартнеров</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по сегменту партнеров</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВариантКлассификацииЗадолженности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вариант классификации задолженности</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ВариантыКлассификацииЗадолженности.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СтрокаДолгНеПросрочен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Строка долг не просрочен</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>40</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+		<expression>"Не просрочено"</expression>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Бюджет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДолга</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЛимита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сезон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Договор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидЛимита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЛимита</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сезон</dcsset:left>
+					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КоллекцииНоменклатуры.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>a80c2679-5ba3-454e-b7ea-a97f026a49fa</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Договор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c8fec9f3-242b-427a-9436-7b915372385f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>67f2546d-f68c-42e1-a43f-443372169716</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчетаГраница</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>09022783-6bce-4a98-a50b-f9258177032c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВариантКлассификацииЗадолженности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>d7701631-70c3-4a29-83cc-6b70f1698cac</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Бюджет</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Документ</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
