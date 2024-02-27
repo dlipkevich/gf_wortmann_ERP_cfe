@@ -67,7 +67,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа настройки</v8:content>
+							<v8:content>Настройки</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -136,11 +136,51 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
-								<InputField name="ЛистНоменклатуры" id="359">
-									<DataPath>Объект.ЛистНоменклатуры</DataPath>
-									<ContextMenu name="ЛистНоменклатурыКонтекстноеМеню" id="360"/>
-									<ExtendedTooltip name="ЛистНоменклатурыРасширеннаяПодсказка" id="361"/>
-								</InputField>
+								<UsualGroup name="Группа6" id="448">
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="449"/>
+									<ChildItems>
+										<InputField name="ЛистНоменклатуры" id="359">
+											<DataPath>Объект.ЛистНоменклатуры</DataPath>
+											<ContextMenu name="ЛистНоменклатурыКонтекстноеМеню" id="360"/>
+											<ExtendedTooltip name="ЛистНоменклатурыРасширеннаяПодсказка" id="361"/>
+										</InputField>
+										<RadioButtonField name="ПоискНоменклатуры" id="450">
+											<DataPath>Объект.ПоискНоменклатуры</DataPath>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Артикул + Сезон</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Артикул</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПоискНоменклатурыКонтекстноеМеню" id="451"/>
+											<ExtendedTooltip name="ПоискНоменклатурыРасширеннаяПодсказка" id="452"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
 								<Table name="НастройкиНоменклатуры" id="297">
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -209,6 +249,19 @@
 											<Events>
 												<Event name="OnChange">НастройкиНоменклатурыПриИзменении</Event>
 											</Events>
+										</InputField>
+										<InputField name="НастройкиНоменклатурыИмяВЭксель" id="394">
+											<DataPath>Объект.НастройкиНоменклатуры.ИмяВЭксель</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиНоменклатурыИмяВЭксельКонтекстноеМеню" id="395"/>
+											<ExtendedTooltip name="НастройкиНоменклатурыИмяВЭксельРасширеннаяПодсказка" id="396"/>
+										</InputField>
+										<InputField name="НастройкиНоменклатурыТипДопСведения" id="397">
+											<DataPath>Объект.НастройкиНоменклатуры.ТипДопСведения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиНоменклатурыТипДопСведенияКонтекстноеМеню" id="398"/>
+											<ExtendedTooltip name="НастройкиНоменклатурыТипДопСведенияРасширеннаяПодсказка" id="399"/>
 										</InputField>
 										<CheckBoxField name="НастройкиНоменклатурыИзНастройки" id="319">
 											<DataPath>Объект.НастройкиНоменклатуры.ИзНастройки</DataPath>
@@ -352,6 +405,148 @@
 						</v8:item>
 					</ToolTip>
 					<ExtendedTooltip name="ВыборExcelРасширеннаяПодсказка" id="84"/>
+				</Page>
+				<Page name="СтраницаРезультат" id="400">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРезультатРасширеннаяПодсказка" id="401"/>
+					<ChildItems>
+						<UsualGroup name="Группа5" id="446">
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="447"/>
+							<ChildItems>
+								<Table name="НоменклатураСозданная" id="424">
+									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>НоменклатураСозданная</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НоменклатураСозданнаяКонтекстноеМеню" id="425"/>
+									<AutoCommandBar name="НоменклатураСозданнаяКоманднаяПанель" id="426"/>
+									<ExtendedTooltip name="НоменклатураСозданнаяРасширеннаяПодсказка" id="427"/>
+									<SearchStringAddition name="НоменклатураСозданнаяСтрокаПоиска" id="428">
+										<AdditionSource>
+											<Item>НоменклатураСозданная</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураСозданнаяСтрокаПоискаКонтекстноеМеню" id="429"/>
+										<ExtendedTooltip name="НоменклатураСозданнаяСтрокаПоискаРасширеннаяПодсказка" id="430"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НоменклатураСозданнаяСостояниеПросмотра" id="431">
+										<AdditionSource>
+											<Item>НоменклатураСозданная</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураСозданнаяСостояниеПросмотраКонтекстноеМеню" id="432"/>
+										<ExtendedTooltip name="НоменклатураСозданнаяСостояниеПросмотраРасширеннаяПодсказка" id="433"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НоменклатураСозданнаяУправлениеПоиском" id="434">
+										<AdditionSource>
+											<Item>НоменклатураСозданная</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураСозданнаяУправлениеПоискомКонтекстноеМеню" id="435"/>
+										<ExtendedTooltip name="НоменклатураСозданнаяУправлениеПоискомРасширеннаяПодсказка" id="436"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">НоменклатураРезультатВыбор</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="НоменклатураСозданнаяАртикул" id="437">
+											<DataPath>НоменклатураСозданная.Артикул</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураСозданнаяАртикулКонтекстноеМеню" id="438"/>
+											<ExtendedTooltip name="НоменклатураСозданнаяАртикулРасширеннаяПодсказка" id="439"/>
+										</InputField>
+										<InputField name="НоменклатураСозданнаяКоллекция" id="443">
+											<DataPath>НоменклатураСозданная.Коллекция</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураСозданнаяКоллекцияКонтекстноеМеню" id="444"/>
+											<ExtendedTooltip name="НоменклатураСозданнаяКоллекцияРасширеннаяПодсказка" id="445"/>
+										</InputField>
+										<InputField name="НоменклатураСозданнаяНоменклатура" id="440">
+											<DataPath>НоменклатураСозданная.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураСозданнаяНоменклатураКонтекстноеМеню" id="441"/>
+											<ExtendedTooltip name="НоменклатураСозданнаяНоменклатураРасширеннаяПодсказка" id="442"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="НоменклатураИзмененная" id="402">
+									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>НоменклатураИзмененная</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="НоменклатураИзмененнаяКонтекстноеМеню" id="403"/>
+									<AutoCommandBar name="НоменклатураИзмененнаяКоманднаяПанель" id="404"/>
+									<ExtendedTooltip name="НоменклатураИзмененнаяРасширеннаяПодсказка" id="405"/>
+									<SearchStringAddition name="НоменклатураИзмененнаяСтрокаПоиска" id="406">
+										<AdditionSource>
+											<Item>НоменклатураИзмененная</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураИзмененнаяСтрокаПоискаКонтекстноеМеню" id="407"/>
+										<ExtendedTooltip name="НоменклатураИзмененнаяСтрокаПоискаРасширеннаяПодсказка" id="408"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="НоменклатураИзмененнаяСостояниеПросмотра" id="409">
+										<AdditionSource>
+											<Item>НоменклатураИзмененная</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураИзмененнаяСостояниеПросмотраКонтекстноеМеню" id="410"/>
+										<ExtendedTooltip name="НоменклатураИзмененнаяСостояниеПросмотраРасширеннаяПодсказка" id="411"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="НоменклатураИзмененнаяУправлениеПоиском" id="412">
+										<AdditionSource>
+											<Item>НоменклатураИзмененная</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="НоменклатураИзмененнаяУправлениеПоискомКонтекстноеМеню" id="413"/>
+										<ExtendedTooltip name="НоменклатураИзмененнаяУправлениеПоискомРасширеннаяПодсказка" id="414"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">НоменклатураРезультатВыбор</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="НоменклатураИзмененнаяАртикул" id="415">
+											<DataPath>НоменклатураИзмененная.Артикул</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураИзмененнаяАртикулКонтекстноеМеню" id="416"/>
+											<ExtendedTooltip name="НоменклатураИзмененнаяАртикулРасширеннаяПодсказка" id="417"/>
+										</InputField>
+										<InputField name="НоменклатураИзмененнаяКоллекция" id="421">
+											<DataPath>НоменклатураИзмененная.Коллекция</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураИзмененнаяКоллекцияКонтекстноеМеню" id="422"/>
+											<ExtendedTooltip name="НоменклатураИзмененнаяКоллекцияРасширеннаяПодсказка" id="423"/>
+										</InputField>
+										<InputField name="НоменклатураИзмененнаяНоменклатура" id="418">
+											<DataPath>НоменклатураИзмененная.Номенклатура</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НоменклатураИзмененнаяНоменклатураКонтекстноеМеню" id="419"/>
+											<ExtendedTooltip name="НоменклатураИзмененнаяНоменклатураРасширеннаяПодсказка" id="420"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
 				</Page>
 				<Page name="ГруппаПротокол" id="243">
 					<Title>
@@ -844,6 +1039,181 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Адрес рост</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяКолонкиАртикул" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя колонки артикул</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НоменклатураСозданная" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура созданная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Артикул" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Коллекция" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коллекция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НоменклатураИзмененная" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура измененная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Артикул" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Коллекция" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коллекция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КоллекцииНоменклатуры</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяКолонкиСезон" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя колонки сезон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФормыНачало" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя формы начало</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяКолонкиШтрихКод" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя колонки штрих-код</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяКолонкиРостовка" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя колонки ростовка</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
