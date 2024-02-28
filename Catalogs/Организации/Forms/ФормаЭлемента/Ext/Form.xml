@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
@@ -822,7 +823,7 @@
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>RNCEA</v8:content>
+																			<v8:content>OKVED</v8:content>
 																		</v8:item>
 																	</Title>
 																	<Width>15</Width>
@@ -845,7 +846,7 @@
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>NCBO</v8:content>
+																			<v8:content>OKPO</v8:content>
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Left</TitleLocation>
@@ -1075,7 +1076,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>RNCEA</v8:content>
+																	<v8:content>OKVED</v8:content>
 																</v8:item>
 															</Title>
 															<TitleLocation>Left</TitleLocation>
@@ -1093,7 +1094,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>RNCEA 2</v8:content>
+																	<v8:content>OKVED 2</v8:content>
 																</v8:item>
 															</Title>
 															<Width>15</Width>
@@ -1110,7 +1111,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>NCBO</v8:content>
+																	<v8:content>OKPO</v8:content>
 																</v8:item>
 															</Title>
 															<TitleLocation>Left</TitleLocation>
@@ -1127,7 +1128,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>PSRNIE</v8:content>
+																	<v8:content>OGRNIP</v8:content>
 																</v8:item>
 															</Title>
 															<TitleLocation>Left</TitleLocation>
@@ -1355,7 +1356,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>RNCEA</v8:content>
+																	<v8:content>OKVED</v8:content>
 																</v8:item>
 															</Title>
 															<TitleLocation>Left</TitleLocation>
@@ -1373,7 +1374,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>RNCEA 2</v8:content>
+																	<v8:content>OKVED 2</v8:content>
 																</v8:item>
 															</Title>
 															<Width>15</Width>
@@ -1390,7 +1391,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>NCBO</v8:content>
+																	<v8:content>OKPO</v8:content>
 																</v8:item>
 															</Title>
 															<TitleLocation>Left</TitleLocation>
@@ -1547,6 +1548,30 @@
 										</Page>
 									</ChildItems>
 								</Pages>
+								<UsualGroup name="ЛокализацияПараметрыНСПК" id="1176">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры подключения с сервису НСПК</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>NSPK service connection parameters</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<United>false</United>
+									<ThroughAlign>DontUse</ThroughAlign>
+									<ExtendedTooltip name="ЛокализацияПараметрыНСПКРасширеннаяПодсказка" id="1177"/>
+									<ChildItems>
+										<InputField name="КлючОрганизацииНСПК" id="1178">
+											<ContextMenu name="КлючОрганизацииНСПККонтекстноеМеню" id="1179"/>
+											<ExtendedTooltip name="КлючОрганизацииНСПКРасширеннаяПодсказка" id="1180"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаКонтактнаяИнформация" id="250">
@@ -3245,7 +3270,7 @@
 											<Title formatted="true">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроекИзДругойОрганизации&gt;Из другой организации&lt;/&gt;</v8:content>
+													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроекИзДругойОрганизации&gt;Из другой организации&lt;/&gt;</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
@@ -3259,11 +3284,13 @@
 											<Title formatted="true">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;В другие организации&lt;/&gt;</v8:content>
+													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;В другие организации&lt;/&gt;
+</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
-													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;To other companies&lt;/&gt;</v8:content>
+													<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;To other companies&lt;/&gt;
+</v8:content>
 												</v8:item>
 											</Title>
 											<ContextMenu name="СкопироватьНастройкиУчетаВсеКонтекстноеМеню" id="1112"/>
@@ -3773,7 +3800,7 @@
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
-																<v8:content>Logo will be used in print forms of documents "Commercial invoice", "Sales quotation", "Sales order", and "Sales receipt".</v8:content>
+																<v8:content>Логотип будет использоваться в печатных формах документов "Счет на оплату", "Коммерческое предложение", "Заказ клиента", "Товарный чек".</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -3971,6 +3998,7 @@
 	</ChildItems>
 	<Attributes/>
 	<BaseForm version="2.15">
+		<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 		<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 			<Autofill>false</Autofill>
 			<ChildItems>
@@ -4048,7 +4076,7 @@
 						<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ПодменюДополнительныхОбработокЗаполненияРасширеннаяПодсказка" id="833"/>
+					<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="833"/>
 				</Popup>
 				<Popup name="ПодменюПечать" id="834">
 					<Title>
@@ -4138,7 +4166,7 @@
 				<Behavior>Usual</Behavior>
 				<Representation>NormalSeparation</Representation>
 				<ShowTitle>false</ShowTitle>
-				<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="494"/>
+				<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="494"/>
 				<ChildItems>
 					<Pages name="СтраницыПараметрыОрганизации" id="61">
 						<Title>
@@ -4153,7 +4181,7 @@
 						</Title>
 						<VerticalStretch>true</VerticalStretch>
 						<PagesRepresentation>TabsOnTop</PagesRepresentation>
-						<ExtendedTooltip name="СтраницыПараметрыОрганизацииExtendedTooltip" id="495"/>
+						<ExtendedTooltip name="СтраницыПараметрыОрганизацииРасширеннаяПодсказка" id="495"/>
 						<ChildItems>
 							<Page name="ГруппаОбщаяИнформация" id="594">
 								<Title>
@@ -4286,7 +4314,7 @@
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаГоловнаяОрганизацияExtendedTooltip" id="390"/>
+										<ExtendedTooltip name="ГруппаГоловнаяОрганизацияРасширеннаяПодсказка" id="390"/>
 										<ChildItems>
 											<InputField name="ГоловнаяОрганизация" id="32">
 												<TitleLocation>Left</TitleLocation>
@@ -4294,7 +4322,7 @@
 												<MaxWidth>28</MaxWidth>
 												<ListChoiceMode>true</ListChoiceMode>
 												<ContextMenu name="ГоловнаяОрганизацияКонтекстноеМеню" id="33"/>
-												<ExtendedTooltip name="ГоловнаяОрганизацияExtendedTooltip" id="391"/>
+												<ExtendedTooltip name="ГоловнаяОрганизацияРасширеннаяПодсказка" id="391"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
@@ -4313,7 +4341,7 @@
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаИндивидуальныйПредпринимательExtendedTooltip" id="392"/>
+										<ExtendedTooltip name="ГруппаИндивидуальныйПредпринимательРасширеннаяПодсказка" id="392"/>
 										<ChildItems>
 											<InputField name="ИндивидуальныйПредприниматель" id="4">
 												<Title>
@@ -4344,7 +4372,7 @@
 												<ChoiceButton>true</ChoiceButton>
 												<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 												<ContextMenu name="ИндивидуальныйПредпринимательКонтекстноеМеню" id="5"/>
-												<ExtendedTooltip name="ИндивидуальныйПредпринимательExtendedTooltip" id="393"/>
+												<ExtendedTooltip name="ИндивидуальныйПредпринимательРасширеннаяПодсказка" id="393"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
@@ -4352,13 +4380,13 @@
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="1128"/>
+										<ExtendedTooltip name="ГруппаСтранаРегистрацииРасширеннаяПодсказка" id="1128"/>
 										<ChildItems>
 											<InputField name="СтранаРегистрации" id="1124">
 												<AutoMaxWidth>false</AutoMaxWidth>
 												<MaxWidth>28</MaxWidth>
-												<ContextMenu name="КонтекстноеМеню" id="1125"/>
-												<ExtendedTooltip name="РасширеннаяПодсказка" id="1126"/>
+												<ContextMenu name="СтранаРегистрацииКонтекстноеМеню" id="1125"/>
+												<ExtendedTooltip name="СтранаРегистрацииРасширеннаяПодсказка" id="1126"/>
 											</InputField>
 										</ChildItems>
 									</UsualGroup>
@@ -4376,7 +4404,7 @@
 										<Group>Vertical</Group>
 										<Behavior>Usual</Behavior>
 										<United>false</United>
-										<ExtendedTooltip name="НаименованияExtendedTooltip" id="396"/>
+										<ExtendedTooltip name="НаименованияРасширеннаяПодсказка" id="396"/>
 										<ChildItems>
 											<UsualGroup name="СокращенноеНаименование" id="15">
 												<Title>
@@ -4393,7 +4421,7 @@
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="СокращенноеНаименованиеExtendedTooltip" id="402"/>
+												<ExtendedTooltip name="СокращенноеНаименованиеРасширеннаяПодсказка" id="402"/>
 												<ChildItems>
 													<InputField name="НаименованиеСокращенное" id="20">
 														<DefaultItem>true</DefaultItem>
@@ -4432,7 +4460,7 @@
 															</v8:item>
 														</InputHint>
 														<ContextMenu name="НаименованиеСокращенноеКонтекстноеМеню" id="21"/>
-														<ExtendedTooltip name="НаименованиеСокращенноеExtendedTooltip" id="406"/>
+														<ExtendedTooltip name="НаименованиеСокращенноеРасширеннаяПодсказка" id="406"/>
 													</InputField>
 												</ChildItems>
 											</UsualGroup>
@@ -4451,7 +4479,7 @@
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="ПолноеНаименованиеExtendedTooltip" id="408"/>
+												<ExtendedTooltip name="ПолноеНаименованиеРасширеннаяПодсказка" id="408"/>
 												<ChildItems>
 													<InputField name="НаименованиеПолное" id="25">
 														<Title>
@@ -4490,7 +4518,7 @@
 															</v8:item>
 														</InputHint>
 														<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="26"/>
-														<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="409"/>
+														<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="409"/>
 													</InputField>
 												</ChildItems>
 											</UsualGroup>
@@ -4509,7 +4537,7 @@
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
 												<ShowTitle>false</ShowTitle>
-												<ExtendedTooltip name="РабочееНаименованиеExtendedTooltip" id="397"/>
+												<ExtendedTooltip name="РабочееНаименованиеРасширеннаяПодсказка" id="397"/>
 												<ChildItems>
 													<InputField name="Наименование" id="8">
 														<Title>
@@ -4547,7 +4575,7 @@
 															</v8:item>
 														</InputHint>
 														<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
-														<ExtendedTooltip name="НаименованиеExtendedTooltip" id="398"/>
+														<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="398"/>
 													</InputField>
 												</ChildItems>
 											</UsualGroup>
@@ -4668,7 +4696,7 @@
 											</v8:item>
 										</Title>
 										<PagesRepresentation>None</PagesRepresentation>
-										<ExtendedTooltip name="ЛокализацияГруппаСтраницОсновныхКодовРасширеннаяПодсказка" id="416"/>
+										<ExtendedTooltip name="ГруппаСтраницОсновныхКодовРасширеннаяПодсказка" id="416"/>
 										<ChildItems>
 											<Page name="ОсновныеКоды" id="1138">
 												<Title>
@@ -4681,23 +4709,23 @@
 														<v8:content>Main codes</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="1139"/>
+												<ExtendedTooltip name="ОсновныеКодыРасширеннаяПодсказка" id="1139"/>
 												<ChildItems>
 													<InputField name="ПрефиксОсновная" id="1135">
 														<TitleLocation>Left</TitleLocation>
 														<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 														<Width>6</Width>
 														<HorizontalStretch>false</HorizontalStretch>
-														<ContextMenu name="ПрефиксИндивидуальногоПредпринимателяКонтекстноеМеню1" id="1136"/>
-														<ExtendedTooltip name="ПрефиксИндивидуальногоПредпринимателяРасширеннаяПодсказка1" id="1137"/>
+														<ContextMenu name="ПрефиксОсновнаяКонтекстноеМеню" id="1136"/>
+														<ExtendedTooltip name="ПрефиксОсновнаяРасширеннаяПодсказка" id="1137"/>
 													</InputField>
 													<InputField name="ИННОсновная" id="1140">
-														<ContextMenu name="КонтекстноеМеню" id="1142"/>
-														<ExtendedTooltip name="РасширеннаяПодсказка" id="1143"/>
+														<ContextMenu name="ИННОсновнаяКонтекстноеМеню" id="1142"/>
+														<ExtendedTooltip name="ИННОсновнаяРасширеннаяПодсказка" id="1143"/>
 													</InputField>
 													<InputField name="ОГРНОсновная" id="1129">
-														<ContextMenu name="ПолеКонтекстноеМеню" id="1130"/>
-														<ExtendedTooltip name="ПолеРасширеннаяПодсказка" id="1131"/>
+														<ContextMenu name="ОГРНОсновнаяКонтекстноеМеню" id="1130"/>
+														<ExtendedTooltip name="ОГРНОсновнаяРасширеннаяПодсказка" id="1131"/>
 													</InputField>
 													<InputField name="ДатаРегистрацииОсновная" id="1173">
 														<TitleLocation>Left</TitleLocation>
@@ -4790,7 +4818,7 @@
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>RNCEA</v8:content>
+																				<v8:content>OKVED</v8:content>
 																			</v8:item>
 																		</Title>
 																		<Width>15</Width>
@@ -4813,7 +4841,7 @@
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>NCBO</v8:content>
+																				<v8:content>OKPO</v8:content>
 																			</v8:item>
 																		</Title>
 																		<TitleLocation>Left</TitleLocation>
@@ -5043,7 +5071,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>RNCEA</v8:content>
+																		<v8:content>OKVED</v8:content>
 																	</v8:item>
 																</Title>
 																<TitleLocation>Left</TitleLocation>
@@ -5061,7 +5089,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>RNCEA 2</v8:content>
+																		<v8:content>OKVED 2</v8:content>
 																	</v8:item>
 																</Title>
 																<Width>15</Width>
@@ -5078,7 +5106,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>NCBO</v8:content>
+																		<v8:content>OKPO</v8:content>
 																	</v8:item>
 																</Title>
 																<TitleLocation>Left</TitleLocation>
@@ -5095,7 +5123,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>PSRNIE</v8:content>
+																		<v8:content>OGRNIP</v8:content>
 																	</v8:item>
 																</Title>
 																<TitleLocation>Left</TitleLocation>
@@ -5323,7 +5351,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>RNCEA</v8:content>
+																		<v8:content>OKVED</v8:content>
 																	</v8:item>
 																</Title>
 																<TitleLocation>Left</TitleLocation>
@@ -5341,7 +5369,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>RNCEA 2</v8:content>
+																		<v8:content>OKVED 2</v8:content>
 																	</v8:item>
 																</Title>
 																<Width>15</Width>
@@ -5358,7 +5386,7 @@
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>NCBO</v8:content>
+																		<v8:content>OKPO</v8:content>
 																	</v8:item>
 																</Title>
 																<TitleLocation>Left</TitleLocation>
@@ -5515,6 +5543,30 @@
 											</Page>
 										</ChildItems>
 									</Pages>
+									<UsualGroup name="ЛокализацияПараметрыНСПК" id="1176">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Параметры подключения с сервису НСПК</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>NSPK service connection parameters</v8:content>
+											</v8:item>
+										</Title>
+										<Group>Vertical</Group>
+										<Behavior>Usual</Behavior>
+										<Representation>None</Representation>
+										<United>false</United>
+										<ThroughAlign>DontUse</ThroughAlign>
+										<ExtendedTooltip name="ЛокализацияПараметрыНСПКРасширеннаяПодсказка" id="1177"/>
+										<ChildItems>
+											<InputField name="КлючОрганизацииНСПК" id="1178">
+												<ContextMenu name="КлючОрганизацииНСПККонтекстноеМеню" id="1179"/>
+												<ExtendedTooltip name="КлючОрганизацииНСПКРасширеннаяПодсказка" id="1180"/>
+											</InputField>
+										</ChildItems>
+									</UsualGroup>
 								</ChildItems>
 							</Page>
 							<Page name="ГруппаКонтактнаяИнформация" id="250">
@@ -5529,7 +5581,7 @@
 										<v8:content>Addresses and phones</v8:content>
 									</v8:item>
 								</Title>
-								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияExtendedTooltip" id="496"/>
+								<ExtendedTooltip name="ГруппаКонтактнаяИнформацияРасширеннаяПодсказка" id="496"/>
 								<ChildItems>
 									<LabelDecoration name="ПустаяДекорацияКонтактнаяИнформация" id="836">
 										<ContextMenu name="ПустаяДекорацияКонтактнаяИнформацияКонтекстноеМеню" id="837"/>
@@ -6428,7 +6480,7 @@
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаПеременнойДоступностиExtendedTooltip" id="782"/>
+										<ExtendedTooltip name="ГруппаПеременнойДоступностиРасширеннаяПодсказка" id="782"/>
 										<ChildItems>
 											<LabelDecoration name="ДекорацияПредупреждениеУчетнаяПолитика" id="806">
 												<Visible>false</Visible>
@@ -6969,12 +7021,12 @@
 																<Group>Horizontal</Group>
 																<Behavior>Usual</Behavior>
 																<Representation>None</Representation>
-																<ExtendedTooltip name="ГруппаОтступПрименениеЕНВДExtendedTooltip" id="784"/>
+																<ExtendedTooltip name="ГруппаОтступПрименениеЕНВДРасширеннаяПодсказка" id="784"/>
 																<ChildItems>
 																	<LabelDecoration name="ОтступПрименениеЕНВД" id="785">
 																		<Width>1</Width>
 																		<ContextMenu name="ОтступПрименениеЕНВДКонтекстноеМеню" id="786"/>
-																		<ExtendedTooltip name="ОтступПрименениеЕНВДExtendedTooltip" id="787"/>
+																		<ExtendedTooltip name="ОтступПрименениеЕНВДРасширеннаяПодсказка" id="787"/>
 																	</LabelDecoration>
 																	<UsualGroup name="ГруппаПрименениеЕНВД" id="788">
 																		<Title>
@@ -6991,7 +7043,7 @@
 																		<Behavior>Usual</Behavior>
 																		<Representation>None</Representation>
 																		<ShowTitle>false</ShowTitle>
-																		<ExtendedTooltip name="ГруппаПрименениеЕНВДExtendedTooltip" id="789"/>
+																		<ExtendedTooltip name="ГруппаПрименениеЕНВДРасширеннаяПодсказка" id="789"/>
 																		<ChildItems>
 																			<LabelField name="СтрокаЕНВД" id="951">
 																				<TitleLocation>None</TitleLocation>
@@ -7213,7 +7265,7 @@
 												<Title formatted="true">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроекИзДругойОрганизации&gt;Из другой организации&lt;/&gt;</v8:content>
+														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроекИзДругойОрганизации&gt;Из другой организации&lt;/&gt;</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
@@ -7227,11 +7279,13 @@
 												<Title formatted="true">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;В другие организации&lt;/&gt;</v8:content>
+														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;В другие организации&lt;/&gt;
+</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;To other companies&lt;/&gt;</v8:content>
+														<v8:content>&lt;link ЗапуститьОбработкуКопированияНастроек&gt;To other companies&lt;/&gt;
+</v8:content>
 													</v8:item>
 												</Title>
 												<ContextMenu name="СкопироватьНастройкиУчетаВсеКонтекстноеМеню" id="1112"/>
@@ -7627,7 +7681,7 @@
 										<v8:content>Print settings</v8:content>
 									</v8:item>
 								</Title>
-								<ExtendedTooltip name="НастройкаЛоготипаДляПечатиExtendedTooltip" id="618"/>
+								<ExtendedTooltip name="НастройкаЛоготипаДляПечатиРасширеннаяПодсказка" id="618"/>
 								<ChildItems>
 									<UsualGroup name="ГруппаВертикальнаяКомпоновка" id="619">
 										<Title>
@@ -7664,7 +7718,7 @@
 												<Group>Vertical</Group>
 												<Behavior>Usual</Behavior>
 												<Representation>None</Representation>
-												<ExtendedTooltip name="ГруппаЛоготипExtendedTooltip" id="622"/>
+												<ExtendedTooltip name="ГруппаЛоготипРасширеннаяПодсказка" id="622"/>
 												<ChildItems>
 													<CommandBar name="ГруппаКоманднаяПанельЛоготип" id="623">
 														<Title>
@@ -7730,7 +7784,7 @@
 														<TextColor>style:ЦветТекстаНевыбраннойКартинки</TextColor>
 														<FileDragMode>AsFile</FileDragMode>
 														<ContextMenu name="АдресЛоготипаКонтекстноеМеню" id="636"/>
-														<ExtendedTooltip name="АдресЛоготипаExtendedTooltip" id="637">
+														<ExtendedTooltip name="АдресЛоготипаРасширеннаяПодсказка" id="637">
 															<Width>40</Width>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<HorizontalStretch>false</HorizontalStretch>
@@ -7741,7 +7795,7 @@
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Logo will be used in print forms of documents "Commercial invoice", "Sales quotation", "Sales order", and "Sales receipt".</v8:content>
+																	<v8:content>Логотип будет использоваться в печатных формах документов "Счет на оплату", "Коммерческое предложение", "Заказ клиента", "Товарный чек".</v8:content>
 																</v8:item>
 															</Title>
 														</ExtendedTooltip>
@@ -7761,7 +7815,7 @@
 														<Behavior>Usual</Behavior>
 														<Representation>None</Representation>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ГруппаАдресЛоготипаПояснениеExtendedTooltip" id="639"/>
+														<ExtendedTooltip name="ГруппаАдресЛоготипаПояснениеРасширеннаяПодсказка" id="639"/>
 													</UsualGroup>
 												</ChildItems>
 											</UsualGroup>
@@ -7782,7 +7836,7 @@
 												<Group>Vertical</Group>
 												<Behavior>Usual</Behavior>
 												<Representation>NormalSeparation</Representation>
-												<ExtendedTooltip name="ГруппаФаксимильнаяПечатьExtendedTooltip" id="644"/>
+												<ExtendedTooltip name="ГруппаФаксимильнаяПечатьРасширеннаяПодсказка" id="644"/>
 												<ChildItems>
 													<CommandBar name="ГруппаКоманднаяПанельФаксимиле" id="645">
 														<Title>
@@ -7847,7 +7901,7 @@
 														<TextColor>style:ЦветТекстаНевыбраннойКартинки</TextColor>
 														<FileDragMode>AsFile</FileDragMode>
 														<ContextMenu name="АдресФаксимильнойПечатиКонтекстноеМеню" id="658"/>
-														<ExtendedTooltip name="АдресФаксимильнойПечатиExtendedTooltip" id="659"/>
+														<ExtendedTooltip name="АдресФаксимильнойПечатиРасширеннаяПодсказка" id="659"/>
 													</PictureField>
 													<UsualGroup name="ГруппаАдресПечатиПояснение" id="660">
 														<Title>
@@ -7864,7 +7918,7 @@
 														<Behavior>Usual</Behavior>
 														<Representation>None</Representation>
 														<ShowTitle>false</ShowTitle>
-														<ExtendedTooltip name="ГруппаАдресПечатиПояснениеExtendedTooltip" id="661"/>
+														<ExtendedTooltip name="ГруппаАдресПечатиПояснениеРасширеннаяПодсказка" id="661"/>
 														<ChildItems>
 															<Button name="ПомощникРаботыФаксимильнойПечати" id="662">
 																<Type>Hyperlink</Type>
@@ -7908,7 +7962,7 @@
 										<Behavior>Usual</Behavior>
 										<Representation>None</Representation>
 										<ShowTitle>false</ShowTitle>
-										<ExtendedTooltip name="ГруппаПроверкиExtendedTooltip" id="668"/>
+										<ExtendedTooltip name="ГруппаПроверкиРасширеннаяПодсказка" id="668"/>
 										<ChildItems>
 											<Button name="ПредварительныйПросмотрСчетаНаОплату" id="669">
 												<Type>Hyperlink</Type>
@@ -7930,7 +7984,7 @@
 										<v8:content>More</v8:content>
 									</v8:item>
 								</Title>
-								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="810"/>
+								<ExtendedTooltip name="ГруппаДополнительныеРеквизитыРасширеннаяПодсказка" id="810"/>
 							</Page>
 						</ChildItems>
 					</Pages>
