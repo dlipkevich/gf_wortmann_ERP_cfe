@@ -1022,13 +1022,34 @@
 												</InputField>
 											</ChildItems>
 										</ColumnGroup>
-										<InputField name="ОтгрузкаРасходныйОрдер" id="299">
-											<DataPath>Объект.Отгрузка.РасходныйОрдер</DataPath>
-											<Visible>false</Visible>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ОтгрузкаРасходныйОрдерКонтекстноеМеню" id="300"/>
-											<ExtendedTooltip name="ОтгрузкаРасходныйОрдерРасширеннаяПодсказка" id="301"/>
-										</InputField>
+										<ColumnGroup name="ОтгрузкаГруппаРО_док" id="1273">
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отгрузка группа РО документ</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОтгрузкаГруппаРО_докРасширеннаяПодсказка" id="1274"/>
+											<ChildItems>
+												<InputField name="ОтгрузкаРасходныйОрдер" id="299">
+													<DataPath>Объект.Отгрузка.РасходныйОрдер</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОтгрузкаРасходныйОрдерКонтекстноеМеню" id="300"/>
+													<ExtendedTooltip name="ОтгрузкаРасходныйОрдерРасширеннаяПодсказка" id="301"/>
+												</InputField>
+												<CheckBoxField name="ОтгрузкаСозданаЗаявкаВ_ТК" id="1270">
+													<DataPath>Объект.Отгрузка.СозданаЗаявкаВ_ТК</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОтгрузкаСозданаЗаявкаВ_ТККонтекстноеМеню" id="1271"/>
+													<ExtendedTooltip name="ОтгрузкаСозданаЗаявкаВ_ТКРасширеннаяПодсказка" id="1272"/>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
 										<ColumnGroup name="ОтгрузкаГруппаСтатусДатаОтгрузки" id="452">
 											<Title>
 												<v8:item>
@@ -4105,6 +4126,26 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Отгрузка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Отгрузка.СозданаЗаявкаВ_ТК</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
