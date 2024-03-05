@@ -59,11 +59,6 @@
 			</title>
 			<valueType>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.гф_Бюджеты</v8:Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -306,23 +301,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сезон</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ВидЛимита</dataPath>
-			<field>ВидЛимита</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТипЛимита</dataPath>
-			<field>ТипЛимита</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Тип лимита</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -685,9 +663,7 @@
 	ПериодыЛимитов.Документ.Дата КАК Дата,
 	ПериодыЛимитов.Документ КАК Документ,
 	ПериодыЛимитов.ВидЛимита.Бюджет КАК Бюджет,
-	СУММА(ЕСТЬNULL(гф_ЛимитыКонтрагентов.Сумма, 0)) КАК СуммаЛимита,
-	ПериодыЛимитов.ВидЛимита КАК ВидЛимита,
-	ПериодыЛимитов.ТипЛимита КАК ТипЛимита
+	СУММА(ЕСТЬNULL(гф_ЛимитыКонтрагентов.Сумма, 0)) КАК СуммаЛимита
 ПОМЕСТИТЬ выборка
 ИЗ
 	ПериодыЛимитов КАК ПериодыЛимитов
@@ -704,9 +680,7 @@
 	ПериодыЛимитов.Договор,
 	ПериодыЛимитов.Документ.Дата,
 	ПериодыЛимитов.Документ,
-	ПериодыЛимитов.ВидЛимита.Бюджет,
-	ПериодыЛимитов.ВидЛимита,
-	ПериодыЛимитов.ТипЛимита
+	ПериодыЛимитов.ВидЛимита.Бюджет
 
 ИМЕЮЩИЕ
 	НЕ СУММА(ЕСТЬNULL(гф_ЛимитыКонтрагентов.Сумма, 0)) = 0
@@ -718,13 +692,11 @@
 	Буфер.Контрагент КАК Контрагент,
 	Буфер.Договор КАК Договор,
 	Буфер.Документ КАК Документ,
-	выборка.Бюджет КАК Бюджет,
+	ЕСТЬNULL(выборка.Бюджет, ЗНАЧЕНИЕ(Справочник.гф_Бюджеты.ПустаяСсылка)) КАК Бюджет,
 	Буфер.Период КАК Период,
 	Буфер.СуммаДолга КАК СуммаДолга,
 	ЕСТЬNULL(выборка.СуммаЛимита, 0) КАК СуммаЛимита,
-	Буфер.Договор.гф_Сезон КАК Сезон,
-	выборка.ВидЛимита КАК ВидЛимита,
-	выборка.ТипЛимита КАК ТипЛимита
+	Буфер.Договор.гф_Сезон КАК Сезон
 {ВЫБРАТЬ
 	Организация.*,
 	Контрагент.*,
@@ -734,9 +706,7 @@
 	Период,
 	СуммаДолга,
 	СуммаЛимита,
-	Сезон.*,
-	ВидЛимита.*,
-	ТипЛимита.*}
+	Сезон.*}
 ИЗ
 	Буфер КАК Буфер
 		ЛЕВОЕ СОЕДИНЕНИЕ выборка КАК выборка
@@ -751,9 +721,7 @@
 	Буфер.Период,
 	Буфер.СуммаДолга,
 	выборка.СуммаЛимита,
-	Буфер.Договор.гф_Сезон.* КАК Сезон,
-	выборка.ВидЛимита.*,
-	выборка.ТипЛимита.*}
+	Буфер.Договор.гф_Сезон.* КАК Сезон}
 
 УПОРЯДОЧИТЬ ПО
 	Бюджет,
@@ -886,21 +854,6 @@
 		<useRestriction>true</useRestriction>
 		<expression>"Не просрочено"</expression>
 	</parameter>
-	<parameter>
-		<name>Организация</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Организация</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
-		</valueType>
-		<value xsi:nil="true"/>
-		<useRestriction>false</useRestriction>
-		<use>Always</use>
-	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -928,12 +881,6 @@
 					<dcsset:field>Договор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ВидЛимита</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ТипЛимита</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Организация</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
@@ -958,6 +905,13 @@
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
 				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>18e413cb-4853-48bb-b63f-2a118ddecb68</dcsset:userSettingID>
+				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -976,12 +930,6 @@
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВариантКлассификацииЗадолженности</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Организация</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:userSettingID>d7701631-70c3-4a29-83cc-6b70f1698cac</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
