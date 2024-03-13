@@ -315,6 +315,11 @@
 									<CommandName>Form.Command.ПредыдущееПримечание</CommandName>
 									<ExtendedTooltip name="ПредыдущееПримечаниеExtendedTooltip" id="149"/>
 								</Button>
+								<Button name="ОчиститьНастройку" id="208">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ОчиститьНастройку</CommandName>
+									<ExtendedTooltip name="ОчиститьНастройкуРасширеннаяПодсказка" id="209"/>
+								</Button>
 							</ChildItems>
 						</CommandBar>
 						<SpreadSheetDocumentField name="ТабДокумент" id="27">
@@ -1555,6 +1560,26 @@
 			</Picture>
 			<Action>КомандаУстановитьФлажки</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьНастройку" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить настройку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить настройку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardCreateTempTableDropQuery</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьНастройку</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
