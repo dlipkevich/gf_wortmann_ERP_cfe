@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="6dc2220f-0bd5-44c4-a7dc-8d393ac28edc">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.бф_ШаблоныСообщенийДЗ" category="Record">
+				<xr:TypeId>0c70c57d-c646-45a0-a3f7-bcfb06ad29b8</xr:TypeId>
+				<xr:ValueId>47298121-30b0-42de-b401-4a8732f7d4ba</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.бф_ШаблоныСообщенийДЗ" category="Manager">
+				<xr:TypeId>0d28937d-10d6-45f9-8728-b339c1ba325e</xr:TypeId>
+				<xr:ValueId>049cf0ba-f65e-471a-a514-f07035663969</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.бф_ШаблоныСообщенийДЗ" category="Selection">
+				<xr:TypeId>767e61bb-dded-4fbc-95b8-e8801f7d7c4b</xr:TypeId>
+				<xr:ValueId>fc06f2c6-c1be-4ac3-bac9-2333b325694a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.бф_ШаблоныСообщенийДЗ" category="List">
+				<xr:TypeId>1e218967-6b7c-441c-bda6-5ea8c2a9418f</xr:TypeId>
+				<xr:ValueId>f6b38933-d227-4469-82d4-8ee6b4be85f8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.бф_ШаблоныСообщенийДЗ" category="RecordSet">
+				<xr:TypeId>63780c05-56c8-469f-b7f5-aee108f537dd</xr:TypeId>
+				<xr:ValueId>1df24e04-b75e-4ce0-b1da-d9c63523d520</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.бф_ШаблоныСообщенийДЗ" category="RecordKey">
+				<xr:TypeId>f6ce4ad2-9daa-464f-b6c8-9508002711bd</xr:TypeId>
+				<xr:ValueId>de283683-f7ba-4e8b-9136-3fe6083e3353</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.бф_ШаблоныСообщенийДЗ" category="RecordManager">
+				<xr:TypeId>ef14c363-6484-48cc-b9f9-1ea34313b5bf</xr:TypeId>
+				<xr:ValueId>4298d48f-4c32-4fdf-97e0-a7d8c96a1cef</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>бф_ШаблоныСообщенийДЗ</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>0c2f8998-e53f-40c4-b287-0745d131e32c</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="b801b3d5-5c47-4d24-8803-fc89b5c42aca">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ШаблонСообщения</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>40a5da2f-eeba-4e59-9cf8-4dbd8cee5902</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ШаблоныСообщений</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="d8f9b445-d8d9-4f54-ab17-c7d3e348bdca">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>c08eb10f-6053-42fc-97f4-98f442dcde2e</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="c1931ad7-b692-43f5-b1e3-b84f3ce90093">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>НижняяГраницаИнтервала</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>b299053a-839e-4b01-bef1-a3ec8560d846</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="6d16594f-6f5a-448b-b79f-c12ebd3ec75d">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВерхняяГраницаИнтервала</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>8f24999b-0682-4a92-bc88-343062fa08c6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>

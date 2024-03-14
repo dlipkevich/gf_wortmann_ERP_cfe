@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<InformationRegister uuid="991916c5-452c-4abf-8641-26ddb547a780">
+		<InternalInfo>
+			<xr:GeneratedType name="InformationRegisterRecord.бф_НастройкиРассылкиДЗ" category="Record">
+				<xr:TypeId>583a9327-0e3d-42cd-8f72-d52130cf2f3f</xr:TypeId>
+				<xr:ValueId>72ca8b1f-5fe8-4a73-9587-a478eb6c7653</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterManager.бф_НастройкиРассылкиДЗ" category="Manager">
+				<xr:TypeId>4f579cbe-3377-47c3-b1c2-c4b8b494b1b2</xr:TypeId>
+				<xr:ValueId>9fdc1619-ab90-4695-ab5d-4defecfe0b33</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterSelection.бф_НастройкиРассылкиДЗ" category="Selection">
+				<xr:TypeId>49dd02fa-54c4-436a-afb5-6c6cb0b66176</xr:TypeId>
+				<xr:ValueId>dc4d07bc-be3f-461c-bab2-58a6981709e9</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterList.бф_НастройкиРассылкиДЗ" category="List">
+				<xr:TypeId>f6ad3092-d1ce-485f-b54c-351fdd129be8</xr:TypeId>
+				<xr:ValueId>f5be8d68-3351-48a0-9ea4-3acad59839a8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordSet.бф_НастройкиРассылкиДЗ" category="RecordSet">
+				<xr:TypeId>03054f80-19b3-49ee-962d-2f70dddd50c3</xr:TypeId>
+				<xr:ValueId>e5ac3a3b-0ea8-4139-a434-0efe126b9de6</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordKey.бф_НастройкиРассылкиДЗ" category="RecordKey">
+				<xr:TypeId>300d5ef4-f16c-49a5-896d-741542bf3284</xr:TypeId>
+				<xr:ValueId>02d6c5b7-571f-4c26-b506-a54e61fd7f3a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.бф_НастройкиРассылкиДЗ" category="RecordManager">
+				<xr:TypeId>adf11295-91c7-4c0b-8ab6-84f9a263329c</xr:TypeId>
+				<xr:ValueId>018ae95c-70fb-4f1d-b462-6271196960bd</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<ObjectBelonging>Adopted</ObjectBelonging>
+			<Name>бф_НастройкиРассылкиДЗ</Name>
+			<Comment/>
+			<ExtendedConfigurationObject>2687bd8d-1ed6-436c-923c-504335ebf83f</ExtendedConfigurationObject>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+		</Properties>
+		<ChildObjects>
+			<Resource uuid="3c98bc08-5be8-4e2c-96f1-502bba5f3316">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>УчетнаяЗаписьЭлПочты</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ccf599cc-5ffd-4100-ac93-9d203c36ce60</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="79df6b60-945e-4b6b-b8e0-81011d20e1ab">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ФорматВложений</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>4acbdb5c-c702-4db3-8b1b-a97074877df4</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:EnumRef.ФорматыСохраненияОтчетов</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="99ed58cc-5fa8-4043-9d7b-0c80a679720b">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>АдресОтправителя</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>9f427002-bc56-4b2e-9d67-25018f2dbdc9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="ddecfb3a-8b2b-4439-9f7f-4c49e333b27c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ПоставитьВКопию</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>3d945ad8-cdcf-4e60-b9eb-4ee9e663adac</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>300</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="0170a38c-c99e-46ea-8230-ff9651bda54f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ГруппироватьПисьма</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>2c9e40bc-d7a9-49b9-a72e-35e0497e8c62</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="af823401-829d-4b2e-8bf4-a1fbf90d7fd1">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Организация</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>cef68b12-ba1e-4416-833f-f47609c4a163</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="58ca5c20-5eda-4e13-9f7f-1cf2e6b6e738">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Пользователь</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>5e483c14-f053-4a20-88ce-0d412a122de9</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Dimension>
+		</ChildObjects>
+	</InformationRegister>
+</MetaDataObject>
