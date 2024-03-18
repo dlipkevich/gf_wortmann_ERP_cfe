@@ -4,15 +4,11 @@
 	<ScalingMode>Compact</ScalingMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаЗаполнить" id="47">
+			<Button name="ФормаЗаполнить" id="68">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.Заполнить</CommandName>
-				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="48"/>
-			</Button>
-			<Button name="ФормаСоздатьДокументы" id="45">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.СоздатьДокументы</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьДокументыРасширеннаяПодсказка" id="46"/>
+				<Shape>Oval</Shape>
+				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="69"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -23,137 +19,378 @@
 			<ContextMenu name="ОтладкаКонтекстноеМеню" id="50"/>
 			<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="51"/>
 		</CheckBoxField>
-		<Table name="ИсправляемыеДокументы" id="1">
-			<TitleLocation>Top</TitleLocation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.ИсправляемыеДокументы</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ИсправляемыеДокументыКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="ИсправляемыеДокументыКоманднаяПанель" id="3">
-				<ChildItems>
-					<Button name="УстановитьПометку" id="52">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.УстановитьПометку</CommandName>
-						<ExtendedTooltip name="УстановитьПометкуРасширеннаяПодсказка" id="53"/>
-					</Button>
-					<Button name="ИсправляемыеДокументыСнятьПометку" id="54">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СнятьПометку</CommandName>
-						<ExtendedTooltip name="ИсправляемыеДокументыСнятьПометкуРасширеннаяПодсказка" id="55"/>
-					</Button>
-					<Button name="ИсправляемыеДокументыИнвертироватьПометку" id="56">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ИнвертироватьПометку</CommandName>
-						<ExtendedTooltip name="ИсправляемыеДокументыИнвертироватьПометкуРасширеннаяПодсказка" id="57"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ИсправляемыеДокументыРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="ИсправляемыеДокументыСтрокаПоиска" id="5">
-				<AdditionSource>
-					<Item>ИсправляемыеДокументы</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ИсправляемыеДокументыСтрокаПоискаКонтекстноеМеню" id="6"/>
-				<ExtendedTooltip name="ИсправляемыеДокументыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ИсправляемыеДокументыСостояниеПросмотра" id="8">
-				<AdditionSource>
-					<Item>ИсправляемыеДокументы</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ИсправляемыеДокументыСостояниеПросмотраКонтекстноеМеню" id="9"/>
-				<ExtendedTooltip name="ИсправляемыеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ИсправляемыеДокументыУправлениеПоиском" id="11">
-				<AdditionSource>
-					<Item>ИсправляемыеДокументы</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ИсправляемыеДокументыУправлениеПоискомКонтекстноеМеню" id="12"/>
-				<ExtendedTooltip name="ИсправляемыеДокументыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
-			</SearchControlAddition>
+		<Pages name="ГруппаСтраницы" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="59"/>
 			<ChildItems>
-				<LabelField name="ИсправляемыеДокументыНомерСтроки" id="14">
-					<DataPath>Объект.ИсправляемыеДокументы.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ИсправляемыеДокументыНомерСтрокиКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ИсправляемыеДокументыНомерСтрокиРасширеннаяПодсказка" id="16"/>
-				</LabelField>
-				<CheckBoxField name="ИсправляемыеДокументыПометка" id="23">
-					<DataPath>Объект.ИсправляемыеДокументы.Пометка</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ИсправляемыеДокументыПометкаКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ИсправляемыеДокументыПометкаРасширеннаяПодсказка" id="25"/>
-				</CheckBoxField>
-				<InputField name="ИсправляемыеДокументыЗаказНаЭмиссию" id="17">
-					<DataPath>Объект.ИсправляемыеДокументы.ЗаказНаЭмиссию</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ИсправляемыеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ИсправляемыеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="19"/>
-				</InputField>
-				<InputField name="ИсправляемыеДокументыДокументОснование" id="20">
-					<DataPath>Объект.ИсправляемыеДокументы.ДокументОснование</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ИсправляемыеДокументыДокументОснованиеКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ИсправляемыеДокументыДокументОснованиеРасширеннаяПодсказка" id="22"/>
-				</InputField>
+				<Page name="СтраницаИсправляемые" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправляемые документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница исправляемые</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаИсправляемыеРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<CommandBar name="ИсправляемыеКоманднаяПанель" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исправляемые командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исправляемые командная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ИсправляемыеКоманднаяПанельРасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<Button name="СоздатьДокументы" id="66">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СоздатьДокументы</CommandName>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="СоздатьДокументыРасширеннаяПодсказка" id="67"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ИсправляемыеДокументы" id="1">
+							<TitleLocation>Top</TitleLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ИсправляемыеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсправляемыеДокументыКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ИсправляемыеДокументыКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="УстановитьПометку" id="52">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьПометку</CommandName>
+										<ExtendedTooltip name="УстановитьПометкуРасширеннаяПодсказка" id="53"/>
+									</Button>
+									<Button name="ИсправляемыеДокументыСнятьПометку" id="54">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьПометку</CommandName>
+										<ExtendedTooltip name="ИсправляемыеДокументыСнятьПометкуРасширеннаяПодсказка" id="55"/>
+									</Button>
+									<Button name="ИсправляемыеДокументыИнвертироватьПометку" id="56">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИнвертироватьПометку</CommandName>
+										<ExtendedTooltip name="ИсправляемыеДокументыИнвертироватьПометкуРасширеннаяПодсказка" id="57"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсправляемыеДокументыРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ИсправляемыеДокументыСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ИсправляемыеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсправляемыеДокументыСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ИсправляемыеДокументыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсправляемыеДокументыСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>ИсправляемыеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсправляемыеДокументыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ИсправляемыеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсправляемыеДокументыУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>ИсправляемыеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИсправляемыеДокументыУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ИсправляемыеДокументыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИсправляемыеДокументыНомерСтроки" id="14">
+									<DataPath>Объект.ИсправляемыеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсправляемыеДокументыНомерСтрокиКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ИсправляемыеДокументыНомерСтрокиРасширеннаяПодсказка" id="16"/>
+								</LabelField>
+								<CheckBoxField name="ИсправляемыеДокументыПометка" id="23">
+									<DataPath>Объект.ИсправляемыеДокументы.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИсправляемыеДокументыПометкаКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ИсправляемыеДокументыПометкаРасширеннаяПодсказка" id="25"/>
+								</CheckBoxField>
+								<InputField name="ИсправляемыеДокументыЗаказНаЭмиссию" id="17">
+									<DataPath>Объект.ИсправляемыеДокументы.ЗаказНаЭмиссию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсправляемыеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ИсправляемыеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="ИсправляемыеДокументыДокументОснование" id="20">
+									<DataPath>Объект.ИсправляемыеДокументы.ДокументОснование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсправляемыеДокументыДокументОснованиеКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ИсправляемыеДокументыДокументОснованиеРасширеннаяПодсказка" id="22"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="СозданныеДокументы" id="26">
+							<TitleLocation>Top</TitleLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СозданныеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СозданныеДокументыКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="СозданныеДокументыКоманднаяПанель" id="28"/>
+							<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>СозданныеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СозданныеДокументыНомерСтроки" id="39">
+									<DataPath>Объект.СозданныеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СозданныеДокументыНомерСтрокиКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="СозданныеДокументыНомерСтрокиРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<InputField name="СозданныеДокументыЗаказНаЭмиссию" id="42">
+									<DataPath>Объект.СозданныеДокументы.ЗаказНаЭмиссию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СозданныеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="СозданныеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПересоздаваемые" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пересоздаваемые документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница пересоздаваемые</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПересоздаваемыеРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<CommandBar name="ПересоздаваемыеКоманднаяПанель" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пересоздаваемые командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пересоздаваемые командная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПересоздаваемыеКоманднаяПанельРасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<Button name="СоздатьДокументыПересоздаваемые" id="124">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СоздатьДокументыПересоздаваемые</CommandName>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="СоздатьДокументыПересоздаваемыеРасширеннаяПодсказка" id="125"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="ПересоздаваемыеДокументы" id="72">
+							<TitleLocation>Top</TitleLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПересоздаваемыеДокументы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пересоздаваемые документы</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПересоздаваемыеДокументыКонтекстноеМеню" id="73"/>
+							<AutoCommandBar name="ПересоздаваемыеДокументыКоманднаяПанель" id="74">
+								<ChildItems>
+									<Button name="ПересоздаваемыеДокументыУстановитьПометкуПересоздаваемые" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьПометкуПересоздаваемые</CommandName>
+										<ExtendedTooltip name="ПересоздаваемыеДокументыУстановитьПометкуПересоздаваемыеРасширеннаяПодсказка" id="117"/>
+									</Button>
+									<Button name="ПересоздаваемыеДокументыСнятьПометкуПересоздаваемые" id="118">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьПометкуПересоздаваемые</CommandName>
+										<ExtendedTooltip name="ПересоздаваемыеДокументыСнятьПометкуПересоздаваемыеРасширеннаяПодсказка" id="119"/>
+									</Button>
+									<Button name="ПересоздаваемыеДокументыИнвертироватьПометкуПересоздаваемые" id="120">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИнвертироватьПометкуПересоздаваемые</CommandName>
+										<ExtendedTooltip name="ПересоздаваемыеДокументыИнвертироватьПометкуПересоздаваемыеРасширеннаяПодсказка" id="121"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПересоздаваемыеДокументыРасширеннаяПодсказка" id="75"/>
+							<SearchStringAddition name="ПересоздаваемыеДокументыСтрокаПоиска" id="76">
+								<AdditionSource>
+									<Item>ПересоздаваемыеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересоздаваемыеДокументыСтрокаПоискаКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="ПересоздаваемыеДокументыСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПересоздаваемыеДокументыСостояниеПросмотра" id="79">
+								<AdditionSource>
+									<Item>ПересоздаваемыеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересоздаваемыеДокументыСостояниеПросмотраКонтекстноеМеню" id="80"/>
+								<ExtendedTooltip name="ПересоздаваемыеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПересоздаваемыеДокументыУправлениеПоиском" id="82">
+								<AdditionSource>
+									<Item>ПересоздаваемыеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересоздаваемыеДокументыУправлениеПоискомКонтекстноеМеню" id="83"/>
+								<ExtendedTooltip name="ПересоздаваемыеДокументыУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПересоздаваемыеДокументыНомерСтроки" id="85">
+									<DataPath>Объект.ПересоздаваемыеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПересоздаваемыеДокументыНомерСтрокиКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ПересоздаваемыеДокументыНомерСтрокиРасширеннаяПодсказка" id="87"/>
+								</LabelField>
+								<CheckBoxField name="ПересоздаваемыеДокументыПометка" id="94">
+									<DataPath>Объект.ПересоздаваемыеДокументы.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПересоздаваемыеДокументыПометкаКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ПересоздаваемыеДокументыПометкаРасширеннаяПодсказка" id="96"/>
+								</CheckBoxField>
+								<InputField name="ПересоздаваемыеДокументыЗаказНаЭмиссию" id="88">
+									<DataPath>Объект.ПересоздаваемыеДокументы.ЗаказНаЭмиссию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПересоздаваемыеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ПересоздаваемыеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="90"/>
+								</InputField>
+								<InputField name="ПересоздаваемыеДокументыДокументОснование" id="91">
+									<DataPath>Объект.ПересоздаваемыеДокументы.ДокументОснование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПересоздаваемыеДокументыДокументОснованиеКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ПересоздаваемыеДокументыДокументОснованиеРасширеннаяПодсказка" id="93"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ПересозданныеДокументы" id="97">
+							<TitleLocation>Top</TitleLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПересозданныеДокументы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пересозданные документы</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПересозданныеДокументыКонтекстноеМеню" id="98"/>
+							<AutoCommandBar name="ПересозданныеДокументыКоманднаяПанель" id="99"/>
+							<ExtendedTooltip name="ПересозданныеДокументыРасширеннаяПодсказка" id="100"/>
+							<SearchStringAddition name="ПересозданныеДокументыСтрокаПоиска" id="101">
+								<AdditionSource>
+									<Item>ПересозданныеДокументы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="ПересозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПересозданныеДокументыСостояниеПросмотра" id="104">
+								<AdditionSource>
+									<Item>ПересозданныеДокументы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ПересозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПересозданныеДокументыУправлениеПоиском" id="107">
+								<AdditionSource>
+									<Item>ПересозданныеДокументы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПересозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="ПересозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПересозданныеДокументыНомерСтроки" id="110">
+									<DataPath>Объект.ПересозданныеДокументы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПересозданныеДокументыНомерСтрокиКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ПересозданныеДокументыНомерСтрокиРасширеннаяПодсказка" id="112"/>
+								</LabelField>
+								<InputField name="ПересозданныеДокументыЗаказНаЭмиссию" id="113">
+									<DataPath>Объект.ПересозданныеДокументы.ЗаказНаЭмиссию</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПересозданныеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ПересозданныеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="115"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
-		<Table name="СозданныеДокументы" id="26">
-			<TitleLocation>Top</TitleLocation>
-			<ChangeRowSet>false</ChangeRowSet>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.СозданныеДокументы</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СозданныеДокументыКонтекстноеМеню" id="27"/>
-			<AutoCommandBar name="СозданныеДокументыКоманднаяПанель" id="28"/>
-			<ExtendedTooltip name="СозданныеДокументыРасширеннаяПодсказка" id="29"/>
-			<SearchStringAddition name="СозданныеДокументыСтрокаПоиска" id="30">
-				<AdditionSource>
-					<Item>СозданныеДокументы</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СозданныеДокументыСтрокаПоискаКонтекстноеМеню" id="31"/>
-				<ExtendedTooltip name="СозданныеДокументыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СозданныеДокументыСостояниеПросмотра" id="33">
-				<AdditionSource>
-					<Item>СозданныеДокументы</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СозданныеДокументыСостояниеПросмотраКонтекстноеМеню" id="34"/>
-				<ExtendedTooltip name="СозданныеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СозданныеДокументыУправлениеПоиском" id="36">
-				<AdditionSource>
-					<Item>СозданныеДокументы</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СозданныеДокументыУправлениеПоискомКонтекстноеМеню" id="37"/>
-				<ExtendedTooltip name="СозданныеДокументыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
-			</SearchControlAddition>
-			<ChildItems>
-				<LabelField name="СозданныеДокументыНомерСтроки" id="39">
-					<DataPath>Объект.СозданныеДокументы.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СозданныеДокументыНомерСтрокиКонтекстноеМеню" id="40"/>
-					<ExtendedTooltip name="СозданныеДокументыНомерСтрокиРасширеннаяПодсказка" id="41"/>
-				</LabelField>
-				<InputField name="СозданныеДокументыЗаказНаЭмиссию" id="42">
-					<DataPath>Объект.СозданныеДокументы.ЗаказНаЭмиссию</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="СозданныеДокументыЗаказНаЭмиссиюКонтекстноеМеню" id="43"/>
-					<ExtendedTooltip name="СозданныеДокументыЗаказНаЭмиссиюРасширеннаяПодсказка" id="44"/>
-				</InputField>
-			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -268,6 +505,81 @@
 			</Picture>
 			<Action>ИнвертироватьПометку</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УстановитьПометкуПересоздаваемые" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьПометкуПересоздаваемые</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СнятьПометкуПересоздаваемые" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьПометкуПересоздаваемые</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИнвертироватьПометкуПересоздаваемые" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвертировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвертировать пометку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИнвертироватьФлажки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИнвертироватьПометкуПересоздаваемые</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="СоздатьДокументыПересоздаваемые" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьДокументыПересоздаваемые</Action>
 		</Command>
 	</Commands>
 </Form>
