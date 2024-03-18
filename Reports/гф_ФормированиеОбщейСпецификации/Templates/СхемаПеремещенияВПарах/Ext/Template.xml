@@ -401,16 +401,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Фотография</dataPath>
-			<field>Фотография</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Картинка</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Сезон</dataPath>
 			<field>Сезон</field>
 			<title xsi:type="v8:LocalStringType">
@@ -480,6 +470,16 @@
 				</v8:item>
 			</title>
 			<presentationExpression>УпаковочныйЛист.Код</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Картинка</dataPath>
+			<field>Картинка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
@@ -1796,7 +1796,7 @@
 	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Код КАК Сезон,
 	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Наименование КАК Коллекция,
 	ВТ_ДанныеНоменклатуры.Качество КАК Качество,
-	ДвоичныеДанныеФайлов.ДвоичныеДанныеФайла КАК Фотография,
+	ВТ_ДанныеНоменклатуры.Номенклатура.ФайлКартинки КАК Картинка,
 	ВТ_ДанныеНоменклатуры.ЦенаЗаПару КАК ЦенаЗаПару,
 	ВТ_ДанныеНоменклатуры.Штрихкод КАК Штрихкод,
 	ВТ_ДанныеНоменклатуры.ШтрихкодКороба КАК ШтрихкодКороба,
@@ -1817,8 +1817,6 @@
 	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопРеквизитыНоменклатуры КАК ВТ_ДопРеквизитыНоменклатуры
 		ПО ВТ_ДанныеНоменклатуры.Номенклатура = ВТ_ДопРеквизитыНоменклатуры.Номенклатура
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДвоичныеДанныеФайлов КАК ДвоичныеДанныеФайлов
-		ПО ВТ_ДанныеНоменклатуры.Номенклатура.ФайлКартинки = ДвоичныеДанныеФайлов.Файл
 		ЛЕВОЕ СОЕДИНЕНИЕ втПереводы КАК втПереводы
 		ПО (втПереводы.Объект = ВТ_ДанныеНоменклатуры.РазмерныйРяд.Наименование)
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НоменклатураКонтрагентовБЭД КАК НоменклатураКонтрагентовБЭД
@@ -1940,7 +1938,7 @@
 					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Фотография</dcsset:field>
+					<dcsset:field>Картинка</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Марка</dcsset:field>
@@ -2092,9 +2090,10 @@
 			</dcsset:order>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
 					<dcsset:selection>
 						<dcsset:item>
-							<dcsset:field>Фотография</dcsset:field>
+							<dcsset:field>Картинка</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>

@@ -411,16 +411,6 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Фотография</dataPath>
-			<field>Фотография</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Картинка</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Качество</dataPath>
 			<field>Качество</field>
 			<title xsi:type="v8:LocalStringType">
@@ -502,6 +492,16 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Номер ГТД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Картинка</dataPath>
+			<field>Картинка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -1848,7 +1848,7 @@
 	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Код КАК Сезон,
 	ВТ_ДанныеНоменклатуры.Номенклатура.КоллекцияНоменклатуры.Наименование КАК Коллекция,
 	ВТ_ДанныеНоменклатуры.Качество КАК Качество,
-	ДвоичныеДанныеФайлов.ДвоичныеДанныеФайла КАК Фотография,
+	ВТ_ДанныеНоменклатуры.Номенклатура.ФайлКартинки КАК Картинка,
 	ВТ_ДанныеНоменклатуры.ЦенаЗаПару КАК ЦенаЗаПару,
 	ВТ_ДанныеНоменклатуры.Штрихкод КАК Штрихкод,
 	ВТ_ДанныеНоменклатуры.ШтрихкодКороба КАК ШтрихкодКороба,
@@ -2030,7 +2030,7 @@
 					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Фотография</dcsset:field>
+					<dcsset:field>Картинка</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Марка</dcsset:field>
@@ -2185,9 +2185,10 @@
 			</dcsset:order>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
+					<dcsset:use>false</dcsset:use>
 					<dcsset:selection>
 						<dcsset:item>
-							<dcsset:field>Фотография</dcsset:field>
+							<dcsset:field>Картинка</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 					<dcsset:filter/>
