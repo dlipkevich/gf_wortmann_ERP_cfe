@@ -780,6 +780,17 @@
 											<CommandName>Form.Command.ИзменитьСтатусыРО</CommandName>
 											<ExtendedTooltip name="ИзменитьСтатусыРОРасширеннаяПодсказка" id="317"/>
 										</Button>
+										<Button name="ИзменитьРО" id="1275">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИзменитьРО</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отмена отгрузки</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ИзменитьРОРасширеннаяПодсказка" id="1276"/>
+										</Button>
 										<Button name="ВыгрузитьРеестрОтгрузки" id="1266">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.Command.ВыгрузитьРеестрОтгрузки</CommandName>
@@ -4472,6 +4483,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПротоколОбмена</Action>
+		</Command>
+		<Command name="ИзменитьРО" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить РО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить РО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьРО</Action>
 		</Command>
 	</Commands>
 </Form>
