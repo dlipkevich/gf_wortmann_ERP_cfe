@@ -341,6 +341,39 @@
 									<ContextMenu name="КолонкаНомерАдресаДоставкиКонтекстноеМеню" id="243"/>
 									<ExtendedTooltip name="КолонкаНомерАдресаДоставкиРасширеннаяПодсказка" id="244"/>
 								</InputField>
+								<UsualGroup name="бф_Цена" id="295">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Бф цена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Бф цена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="бф_ЦенаРасширеннаяПодсказка" id="296"/>
+									<ChildItems>
+										<InputField name="бф_КолонкаЦена" id="289">
+											<DataPath>Объект.бф_КолонкаЦена</DataPath>
+											<ContextMenu name="бф_КолонкаЦенаКонтекстноеМеню" id="290"/>
+											<ExtendedTooltip name="бф_КолонкаЦенаРасширеннаяПодсказка" id="291"/>
+										</InputField>
+										<CheckBoxField name="бф_ЦенаИзФайла" id="292">
+											<DataPath>Объект.бф_ЦенаИзФайла</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="бф_ЦенаИзФайлаКонтекстноеМеню" id="293"/>
+											<ExtendedTooltip name="бф_ЦенаИзФайлаРасширеннаяПодсказка" id="294"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
 								<Button name="Установить" id="245">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.Установить</CommandName>
