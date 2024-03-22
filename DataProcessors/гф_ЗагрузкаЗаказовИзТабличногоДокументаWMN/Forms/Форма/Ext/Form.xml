@@ -195,6 +195,17 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаНастройкаExtendedTooltip" id="151"/>
 					<ChildItems>
+						<InputField name="ПерваяСтрокаДанныхТабличногоДокумента" id="31">
+							<DataPath>Объект.ПерваяСтрокаДанныхТабличногоДокумента</DataPath>
+							<ContextMenu name="ПерваяСтрокаДанныхТабличногоДокументаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ПерваяСтрокаДанныхТабличногоДокументаExtendedTooltip" id="153"/>
+						</InputField>
+						<CheckBoxField name="ОбновлятьДокументы" id="208">
+							<DataPath>Объект.ОбновлятьДокументы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбновлятьДокументыКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ОбновлятьДокументыРасширеннаяПодсказка" id="210"/>
+						</CheckBoxField>
 						<UsualGroup name="ГруппаПараметрыЗагрузкиОбщие" id="30">
 							<Title>
 								<v8:item>
@@ -214,17 +225,21 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПараметрыЗагрузкиОбщиеExtendedTooltip" id="152"/>
 							<ChildItems>
-								<InputField name="ПерваяСтрокаДанныхТабличногоДокумента" id="31">
-									<DataPath>Объект.ПерваяСтрокаДанныхТабличногоДокумента</DataPath>
-									<ContextMenu name="ПерваяСтрокаДанныхТабличногоДокументаКонтекстноеМеню" id="32"/>
-									<ExtendedTooltip name="ПерваяСтрокаДанныхТабличногоДокументаExtendedTooltip" id="153"/>
+								<InputField name="бф_ИнтервалПоиска" id="297">
+									<DataPath>Объект.бф_ИнтервалПоиска</DataPath>
+									<ContextMenu name="бф_ИнтервалПоискаКонтекстноеМеню" id="298"/>
+									<ExtendedTooltip name="бф_ИнтервалПоискаРасширеннаяПодсказка" id="299"/>
 								</InputField>
-								<CheckBoxField name="ОбновлятьДокументы" id="208">
-									<DataPath>Объект.ОбновлятьДокументы</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ОбновлятьДокументыКонтекстноеМеню" id="209"/>
-									<ExtendedTooltip name="ОбновлятьДокументыРасширеннаяПодсказка" id="210"/>
-								</CheckBoxField>
+								<LabelDecoration name="Декорация1" id="300">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дней</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="301"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="302"/>
+								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="НумерацияКолонок" id="213">
@@ -407,7 +422,9 @@
 				<Field>Объект.Организация</Field>
 				<Field>Объект.СезонныйЗаказ</Field>
 				<Field>Объект.Склад</Field>
+				<Field>Объект.бф_ИнтервалПоиска</Field>
 				<Field>Объект.бф_КолонкаАртикул</Field>
+				<Field>Объект.бф_КолонкаЦена</Field>
 			</Save>
 		</Attribute>
 		<Attribute name="ТаблицаЗагружаемыхРеквизитов" id="2">
