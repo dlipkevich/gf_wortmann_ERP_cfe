@@ -496,6 +496,30 @@
 					<v8:content>Картинка</v8:content>
 				</v8:item>
 			</title>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КМ</dataPath>
+			<field>КМ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковочныйЛист</dataPath>
+			<field>УпаковочныйЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковочный лист</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
@@ -547,46 +571,154 @@
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
-	Склады.Ссылка КАК Склад
-ПОМЕСТИТЬ втСклады
-ИЗ
-	Справочник.Склады КАК Склады
-;
-
-////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	Склады.Склад КАК Склад,
-	ЕСТЬNULL(СкладыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК ТоварыВКоробах
+	Склады.Ссылка КАК Склад,
+	ЕСТЬNULL(ВЫРАЗИТЬ(СкладыДополнительныеРеквизиты.Значение КАК БУЛЕВО), ЛОЖЬ) КАК ТоварыВКоробах
 ПОМЕСТИТЬ втСкладыТоварыВКоробах
 ИЗ
-	втСклады КАК Склады
+	Справочник.Склады КАК Склады
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Склады.ДополнительныеРеквизиты КАК СкладыДополнительныеРеквизиты
-		ПО Склады.Склад = СкладыДополнительныеРеквизиты.Ссылка
+		ПО Склады.Ссылка = СкладыДополнительныеРеквизиты.Ссылка
 			И (СкладыДополнительныеРеквизиты.Свойство = &amp;ДопРеквизитТоварыВКоробах)
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	КлючиАналитикиУчетаНоменклатуры.Номенклатура КАК Номенклатура,
-	КлючиАналитикиУчетаНоменклатуры.Номенклатура.Качество КАК Качество,
-	КлючиАналитикиУчетаНоменклатуры.Характеристика КАК РазмерныйРяд,
-	ТоварыОрганизацийОстатки.КоличествоОстаток КАК КоличествоПар,
-	0 КАК КоличествоКоробов,
-	0 КАК КоличествоПарВКоробе,
-	ЦеныНоменклатурыЗакупочная.Цена КАК ЦенаЗаПару,
-	ЦеныНоменклатурыСоСкидкой.Цена КАК ЦенаСоСкидкой,
-	ЦеныНоменклатурыРозничная.Цена КАК ЦенаРозничная,
-	"" КАК ШтрихкодКороба,
-	КлючиАналитикиУчетаНоменклатуры.Номенклатура.Артикул КАК Артикул,
-	КлючиАналитикиУчетаНоменклатуры.Номенклатура.СтавкаНДС КАК СтавкаНДС,
-	ПОДСТРОКА(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, 0, СТРНАЙТИ(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, " ")) КАК ВидТовара,
-	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
-	ЦеныНоменклатурыЗакупочная.Цена КАК ЦенаЗакупочная,
-	ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК Контрагент
+ВЫБРАТЬ
+	ВложенныйЗапрос.Номенклатура КАК Номенклатура,
+	ВложенныйЗапрос.Качество КАК Качество,
+	ВложенныйЗапрос.РазмерныйРяд КАК РазмерныйРяд,
+	СУММА(ВложенныйЗапрос.КоличествоПарВКоробе * ВложенныйЗапрос.КоличествоКоробов) КАК КоличествоПар,
+	СУММА(ВложенныйЗапрос.КоличествоКоробов) КАК КоличествоКоробов,
+	ВложенныйЗапрос.КоличествоПарВКоробе КАК КоличествоПарВКоробе,
+	ВложенныйЗапрос.ЦенаЗаПару КАК ЦенаЗаПару,
+	ВложенныйЗапрос.ЦенаСоСкидкой КАК ЦенаСоСкидкой,
+	ВложенныйЗапрос.ЦенаРозничная КАК ЦенаРозничная,
+	ВложенныйЗапрос.ШтрихкодКороба КАК ШтрихкодКороба,
+	ВложенныйЗапрос.Артикул КАК Артикул,
+	ВложенныйЗапрос.СтавкаНДС КАК СтавкаНДС,
+	ВложенныйЗапрос.ВидТовара КАК ВидТовара,
+	ВложенныйЗапрос.Штрихкод КАК Штрихкод,
+	ВложенныйЗапрос.ЦенаЗакупочная КАК ЦенаЗакупочная,
+	ВложенныйЗапрос.Контрагент КАК Контрагент,
+	ВложенныйЗапрос.МестоХранения КАК МестоХранения,
+	ВложенныйЗапрос.УЛ КАК УпаковочныйЛист
 ПОМЕСТИТЬ ВТ_ДанныеНоменклатуры
 ИЗ
-	РегистрНакопления.ТоварыОрганизаций.Остатки(&amp;КонецПериода, Организация = &amp;Организация) КАК ТоварыОрганизацийОстатки
+	(ВЫБРАТЬ
+		тчУЛТовары.Номенклатура КАК Номенклатура,
+		тчУЛТовары.Номенклатура.Качество КАК Качество,
+		тчУЛТовары.Характеристика КАК РазмерныйРяд,
+		СУММА(тчУЛТовары.КоличествоУпаковок) КАК КоличествоПар,
+		СУММА(рнДвижениеКодов.КоличествоОстаток) КАК КоличествоКоробов,
+		докУЛ.Ссылка КАК УЛ,
+		тчУЛТовары.КоличествоУпаковок КАК КоличествоПарВКоробе,
+		ЦеныНоменклатурыЗакупочная.Цена КАК ЦенаЗаПару,
+		ЦеныНоменклатурыСоСкидкой.Цена КАК ЦенаСоСкидкой,
+		ЦеныНоменклатурыРозничная.Цена КАК ЦенаРозничная,
+		докУЛ.гф_Комплектация.гф_Штрихкод КАК ШтрихкодКороба,
+		докУЛ.гф_Комплектация КАК Артикул,
+		тчУЛТовары.Номенклатура.СтавкаНДС КАК СтавкаНДС,
+		ВЫРАЗИТЬ(ПОДСТРОКА(тчУЛТовары.Номенклатура.Наименование, 0, СТРНАЙТИ(тчУЛТовары.Номенклатура.Наименование, " ")) КАК СТРОКА(100)) КАК ВидТовара,
+		ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
+		ЦеныНоменклатурыЗакупочная.Цена КАК ЦенаЗакупочная,
+		ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК Контрагент,
+		рнДвижениеКодов.Склад КАК МестоХранения,
+		МАКСИМУМ(тчУЛТовары.Назначение) КАК Назначение
+	ИЗ
+		РегистрНакопления.гф_ДвижениеКодовМаркировкиОрганизации.Остатки(
+				&amp;КонецПериода,
+				Организация В (&amp;Организация)
+					И Склад В (&amp;Склад)
+					И КМ.ТипУпаковки = ЗНАЧЕНИЕ(Перечисление.ТипыУпаковок.МультитоварнаяУпаковка)) КАК рнДвижениеКодов
+			ЛЕВОЕ СОЕДИНЕНИЕ втСкладыТоварыВКоробах КАК втСкладыТоварыВКоробах
+			ПО рнДвижениеКодов.Склад = втСкладыТоварыВКоробах.Склад
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.УпаковочныйЛист КАК докУЛ
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.УпаковочныйЛист.Товары КАК тчУЛТовары
+				ПО докУЛ.Ссылка = тчУЛТовары.Ссылка
+					И (НЕ тчУЛТовары.ЭтоУпаковочныйЛист)
+			ПО рнДвижениеКодов.КМ = докУЛ.гф_Агрегация
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенЗакупочная) КАК ЦеныНоменклатурыЗакупочная
+			ПО (тчУЛТовары.Номенклатура = ЦеныНоменклатурыЗакупочная.Номенклатура)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенСоСкидкой) КАК ЦеныНоменклатурыСоСкидкой
+			ПО (тчУЛТовары.Номенклатура = ЦеныНоменклатурыСоСкидкой.Номенклатура)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенРозничная) КАК ЦеныНоменклатурыРозничная
+			ПО (тчУЛТовары.Номенклатура = ЦеныНоменклатурыРозничная.Номенклатура)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ШтрихкодыНоменклатуры КАК ШтрихкодыНоменклатуры
+			ПО (тчУЛТовары.Номенклатура = ШтрихкодыНоменклатуры.Номенклатура)
+				И (тчУЛТовары.Характеристика = ШтрихкодыНоменклатуры.Характеристика)
+	ГДЕ
+		втСкладыТоварыВКоробах.ТоварыВКоробах
+		И рнДвижениеКодов.КоличествоОстаток &gt; 0
+		И докУЛ.гф_Заказ = ЗНАЧЕНИЕ(Документ.ЗаказКлиента.ПустаяСсылка)
+	
+	СГРУППИРОВАТЬ ПО
+		рнДвижениеКодов.Организация,
+		рнДвижениеКодов.Склад,
+		рнДвижениеКодов.КМ,
+		докУЛ.гф_Комплектация.Наименование,
+		докУЛ.гф_Комплектация.гф_Штрихкод,
+		докУЛ.гф_Комплектация,
+		тчУЛТовары.Номенклатура,
+		тчУЛТовары.Характеристика,
+		тчУЛТовары.Номенклатура.Качество,
+		ЦеныНоменклатурыЗакупочная.Цена,
+		ЦеныНоменклатурыСоСкидкой.Цена,
+		ЦеныНоменклатурыРозничная.Цена,
+		тчУЛТовары.Номенклатура.СтавкаНДС,
+		ВЫРАЗИТЬ(ПОДСТРОКА(тчУЛТовары.Номенклатура.Наименование, 0, СТРНАЙТИ(тчУЛТовары.Номенклатура.Наименование, " ")) КАК СТРОКА(100)),
+		ШтрихкодыНоменклатуры.Штрихкод,
+		тчУЛТовары.КоличествоУпаковок,
+		докУЛ.Ссылка,
+		ЦеныНоменклатурыЗакупочная.Цена
+	
+	ИМЕЮЩИЕ
+		МАКСИМУМ(тчУЛТовары.Назначение) = ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Качество,
+	ВложенныйЗапрос.РазмерныйРяд,
+	ВложенныйЗапрос.ЦенаЗаПару,
+	ВложенныйЗапрос.КоличествоПарВКоробе,
+	ВложенныйЗапрос.ЦенаСоСкидкой,
+	ВложенныйЗапрос.ЦенаРозничная,
+	ВложенныйЗапрос.ШтрихкодКороба,
+	ВложенныйЗапрос.Артикул,
+	ВложенныйЗапрос.СтавкаНДС,
+	ВложенныйЗапрос.ВидТовара,
+	ВложенныйЗапрос.Штрихкод,
+	ВложенныйЗапрос.ЦенаЗакупочная,
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.МестоХранения,
+	ВложенныйЗапрос.УЛ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура,
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура.Качество,
+	КлючиАналитикиУчетаНоменклатуры.Характеристика,
+	ТоварыОрганизацийОстатки.КоличествоОстаток,
+	0,
+	0,
+	ЦеныНоменклатурыЗакупочная.Цена,
+	ЦеныНоменклатурыСоСкидкой.Цена,
+	ЦеныНоменклатурыРозничная.Цена,
+	"",
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура.Артикул,
+	КлючиАналитикиУчетаНоменклатуры.Номенклатура.СтавкаНДС,
+	ПОДСТРОКА(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, 0, СТРНАЙТИ(КлючиАналитикиУчетаНоменклатуры.Номенклатура.Наименование, " ")),
+	ШтрихкодыНоменклатуры.Штрихкод,
+	ЦеныНоменклатурыЗакупочная.Цена,
+	ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка),
+	КлючиАналитикиУчетаНоменклатуры.МестоХранения,
+	NULL
+ИЗ
+	РегистрНакопления.ТоварыОрганизаций.Остатки(
+			&amp;КонецПериода,
+			Организация = &amp;Организация
+				И АналитикаУчетаНоменклатуры.МестоХранения В (&amp;Склад)
+				И АналитикаУчетаНоменклатуры.Назначение = ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)) КАК ТоварыОрганизацийОстатки
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.КлючиАналитикиУчетаНоменклатуры КАК КлючиАналитикиУчетаНоменклатуры
 			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры25.СрезПоследних(&amp;КонецПериода, ВидЦены = &amp;ВидЦенРозничная) КАК ЦеныНоменклатурыРозничная
 			ПО КлючиАналитикиУчетаНоменклатуры.Номенклатура = ЦеныНоменклатурыРозничная.Номенклатура
@@ -602,9 +734,10 @@
 		ПО ТоварыОрганизацийОстатки.АналитикаУчетаНоменклатуры = КлючиАналитикиУчетаНоменклатуры.Ссылка
 		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВидыЗапасов КАК ВидыЗапасов
 		ПО ТоварыОрганизацийОстатки.ВидЗапасов = ВидыЗапасов.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ втСкладыТоварыВКоробах КАК втСкладыТоварыВКоробах
+		ПО (КлючиАналитикиУчетаНоменклатуры.МестоХранения = втСкладыТоварыВКоробах.Склад)
 ГДЕ
-	КлючиАналитикиУчетаНоменклатуры.Назначение = ЗНАЧЕНИЕ(Справочник.Назначения.ПустаяСсылка)
-	И КлючиАналитикиУчетаНоменклатуры.МестоХранения = &amp;Склад
+	НЕ втСкладыТоварыВКоробах.ТоварыВКоробах
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1725,7 +1858,8 @@
 	ВТ_ДанныеНоменклатуры.ЦенаРозничная КАК ЦенаРозничная,
 	ВТ_ДанныеНоменклатуры.ВидТовара КАК ВидТовара,
 	НоменклатураКонтрагентовБЭД.Артикул КАК КодНоменклатурыКонтрагента,
-	ВТ_ДанныеНоменклатуры.ЦенаЗакупочная КАК ЦенаЗакупочная
+	ВТ_ДанныеНоменклатуры.ЦенаЗакупочная КАК ЦенаЗакупочная,
+	ВТ_ДанныеНоменклатуры.УпаковочныйЛист КАК УпаковочныйЛист
 ИЗ
 	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
 		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ДопРеквизитыНоменклатуры КАК ВТ_ДопРеквизитыНоменклатуры
@@ -1739,26 +1873,6 @@
 			И ВТ_ДанныеНоменклатуры.РазмерныйРяд = НоменклатураКонтрагентовБЭД.Характеристика
 			И ВТ_ДанныеНоменклатуры.Контрагент.Партнер = НоменклатураКонтрагентовБЭД.Владелец</query>
 	</dataSet>
-	<calculatedField>
-		<dataPath>КоличествоКоробов</dataPath>
-		<expression>0</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Количество коробов</v8:content>
-			</v8:item>
-		</title>
-	</calculatedField>
-	<calculatedField>
-		<dataPath>КоличествоПарВКоробе</dataPath>
-		<expression>0</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Количество пар в коробе</v8:content>
-			</v8:item>
-		</title>
-	</calculatedField>
 	<calculatedField>
 		<dataPath>КодНоменклатурыКонтрагента</dataPath>
 		<expression/>
@@ -1776,6 +1890,11 @@
 	<totalField>
 		<dataPath>КоличествоКоробов</dataPath>
 		<expression>Сумма(КоличествоКоробов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоКоробов</dataPath>
+		<expression>Количество(Различные УпаковочныйЛист)</expression>
+		<group>ОбщийИтог</group>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -1913,9 +2032,6 @@
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
-				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Картинка</dcsset:field>
 				</dcsset:item>
@@ -2135,10 +2251,308 @@
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Картинка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Марка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ШтрихкодКороба</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Артикул</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Качество</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Сезон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>НомерЦвета</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Цвет</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Штрихкод</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодНоменклатурыКонтрагента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МатериалОсновной</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МатериалПодклада</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МатериалПодкладаДополнительно</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>МатериалВерха</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Стелька</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подошва</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Технология</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВысотаКаблука</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтранаПроисхождения</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РазмерныйРяд</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СоответствиеРоссийскимРазмерам</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЦенаЗаПару</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЦенаСоСкидкойБезНДС</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЦенаСоСкидкойСНДС</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЦенаРозничная</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЦенаЗакупочная</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодТНВЭД</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Декларация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВидТовара</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Коллекция</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтавкаНДС</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВидЗастежки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВысотаГоленища</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОбхватГоленища</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВидКаблука</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ФормаИВидМыска</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ШиринаПолнота</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаИзготовления</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Комплектующая</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КоличествоПарВКоробе</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>N п/п</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
 			</dcsset:item>
