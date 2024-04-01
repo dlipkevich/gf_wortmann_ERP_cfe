@@ -59,7 +59,15 @@
 							<DataPath>СписокУЛ</DataPath>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="СписокУЛКонтекстноеМеню" id="94"/>
-							<AutoCommandBar name="СписокУЛКоманднаяПанель" id="95"/>
+							<AutoCommandBar name="СписокУЛКоманднаяПанель" id="95">
+								<ChildItems>
+									<Button name="СписокУЛбф_ОтметитьПоСписку" id="121">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.бф_ОтметитьПоСписку</CommandName>
+										<ExtendedTooltip name="СписокУЛбф_ОтметитьПоСпискуРасширеннаяПодсказка" id="122"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="СписокУЛРасширеннаяПодсказка" id="96"/>
 							<SearchStringAddition name="СписокУЛСтрокаПоиска" id="97">
 								<AdditionSource>
@@ -355,6 +363,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗавершитьПодбор</Action>
+		</Command>
+		<Command name="бф_ОтметитьПоСписку" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить по списку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бф отметить по списку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>бф_ОтметитьПоСписку</Action>
 		</Command>
 	</Commands>
 </Form>
