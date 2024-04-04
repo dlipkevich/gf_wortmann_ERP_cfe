@@ -251,6 +251,19 @@
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Организации</v8:Type>
 			</valueType>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Бюджет</dataPath>
+			<field>Бюджет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.гф_Бюджеты</v8:Type>
+			</valueType>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<objectName>Данные</objectName>
 	</dataSet>
@@ -409,16 +422,12 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>ДниПросрочки</dcsset:field>
 						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>СуммаЛимита</dcsset:field>
-						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:column>
 				<dcsset:column>
-					<dcsset:use>false</dcsset:use>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>ТипЛимита</dcsset:field>
+							<dcsset:field>Бюджет</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -427,9 +436,8 @@
 					</dcsset:groupItems>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТипЛимита</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.гф_ТипыЛимитов.KV</dcsset:right>
+							<dcsset:left xsi:type="dcscor:Field">Бюджет</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
 						</dcsset:item>
 					</dcsset:filter>
 					<dcsset:order>
@@ -440,7 +448,7 @@
 							<dcsset:use>false</dcsset:use>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>ТипЛимита</dcsset:field>
+							<dcsset:field>Бюджет</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>СуммаЛимита</dcsset:field>
@@ -448,9 +456,8 @@
 					</dcsset:selection>
 					<dcsset:outputParameters>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
 							<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
