@@ -520,6 +520,16 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяЗаказа</dataPath>
+			<field>ИмяЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя заказа</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
 	гф_ПереводЗначенийРеквизитовИСвойств.Объект КАК Объект,
@@ -702,7 +712,8 @@
 	ШтрихкодыНоменклатуры.Штрихкод КАК Штрихкод,
 	ВТ_ДанныеЗаказов.ВариантКомплектации.Владелец.СтавкаНДС КАК СтавкаНДС,
 	вт_ЦеныНоменклатурыСоСкидкой.ЦенаСоСкидкойБезНДС КАК ЦенаСоСкидкойБезНДС,
-	вт_ЦеныНоменклатурыСоСкидкой.ЦенаСоСкидкойСНДС КАК ЦенаСоСкидкойСНДС
+	вт_ЦеныНоменклатурыСоСкидкой.ЦенаСоСкидкойСНДС КАК ЦенаСоСкидкойСНДС,
+	ВТ_ДанныеЗаказов.Ссылка.гф_ИмяЗаказа КАК ИмяЗаказа
 ПОМЕСТИТЬ ВТ_ДанныеНоменклатуры
 ИЗ
 	ВТ_ДанныеЗаказов КАК ВТ_ДанныеЗаказов
@@ -1860,7 +1871,8 @@
 	ВТ_ДанныеНоменклатуры.ВидТовара КАК ВидТовара,
 	НоменклатураКонтрагентовБЭД.Артикул КАК КодНоменклатурыКонтрагента,
 	ВТ_ДанныеНоменклатуры.ЦенаСоСкидкойБезНДС КАК ЦенаСоСкидкойБезНДС,
-	ВТ_ДанныеНоменклатуры.ЦенаСоСкидкойСНДС КАК ЦенаСоСкидкойСНДС
+	ВТ_ДанныеНоменклатуры.ЦенаСоСкидкойСНДС КАК ЦенаСоСкидкойСНДС,
+	ВТ_ДанныеНоменклатуры.ИмяЗаказа КАК ИмяЗаказа
 ПОМЕСТИТЬ ВТ_ДанныеНоменклатурыРасширенные
 ИЗ
 	ВТ_ДанныеНоменклатуры КАК ВТ_ДанныеНоменклатуры
@@ -1924,7 +1936,8 @@
 	ВТ_ДанныеНоменклатурыРасширенные.ЦенаСоСкидкойБезНДС КАК ЦенаСоСкидкойБезНДС,
 	ВТ_СоставКомплектации.КоличествоПар * ВТ_ДанныеНоменклатурыРасширенные.КоличествоКоробов КАК КоличествоПар,
 	ВТ_ДанныеНоменклатурыРасширенные.ЦенаСоСкидкойСНДС КАК ЦенаСоСкидкойСНДС,
-	втТоварыВКоробахКоличествоКоробов.КоличествоКоробов КАК КоличествоКоробовВсего
+	втТоварыВКоробахКоличествоКоробов.КоличествоКоробов КАК КоличествоКоробовВсего,
+	ВТ_ДанныеНоменклатурыРасширенные.ИмяЗаказа КАК ИмяЗаказа
 ИЗ
 	ВТ_ДанныеНоменклатурыРасширенные КАК ВТ_ДанныеНоменклатурыРасширенные
 		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_СоставКомплектации КАК ВТ_СоставКомплектации
@@ -2057,172 +2070,133 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>НомерСтроки</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Картинка</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Марка</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ШтрихкодКороба</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Артикул</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ИмяЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ВариантКомплектации</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Качество</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Сезон</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>НомерЦвета</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Цвет</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Штрихкод</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>КодНоменклатурыКонтрагента</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Номенклатура</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Характеристика</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>МатериалОсновной</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>МатериалПодклада</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>МатериалПодкладаДополнительно</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>МатериалВерха</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Стелька</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Подошва</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Технология</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ВысотаКаблука</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>СтранаПроисхождения</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаЗаПару</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаСоСкидкойБезНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаЗакупочная</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаСоСкидкойСНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ЦенаРозничная</dcsset:field>
 					<dcsset:title>Розничная цена</dcsset:title>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>КодТНВЭД</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Декларация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ВидТовара</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Пол</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Коллекция</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>СтавкаНДС</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ВидЗастежки</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ВысотаГоленища</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ОбхватГоленища</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ВидКаблука</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ФормаИВидМыска</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ШиринаПолнота</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>ДатаИзготовления</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Комплектующая</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -2414,6 +2388,13 @@
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
 							<dcsset:field>Артикул</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ИмяЗаказа</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
