@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Информация из настройки поддержки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ФайлИнформацияПоддержки" id="1">
+			<DataPath>ФайлИнформацияПоддержки</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Json-файл для всех метаданных, которые могут быть изменены и не находятся в режиме чтения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ФайлИнформацияПоддержкиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ФайлИнформацияПоддержкиРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">ФайлИнформацияПоддержкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="Декорация2" id="4">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>https://github.com/vanessa-opensource/vanessa-support</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="Декорация2КонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="Click">Декорация2Нажатие</Event>
+				<Event name="URLProcessing">Декорация2ОбработкаНавигационнойСсылки</Event>
+			</Events>
+		</LabelDecoration>
+		<Table name="ДанныеПоддержки" id="7">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДанныеПоддержки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеПоддержкиКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДанныеПоддержкиКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ДанныеПоддержкиРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДанныеПоддержкиСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДанныеПоддержки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоддержкиСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДанныеПоддержкиСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеПоддержкиСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ДанныеПоддержки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоддержкиСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДанныеПоддержкиСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеПоддержкиУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ДанныеПоддержки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеПоддержкиУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДанныеПоддержкиУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ДанныеПоддержкиКласс" id="20">
+					<DataPath>ДанныеПоддержки.Класс</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеПоддержкиКлассКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДанныеПоддержкиКлассРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДанныеПоддержкиОбъект" id="23">
+					<DataPath>ДанныеПоддержки.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеПоддержкиОбъектКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДанныеПоддержкиОбъектРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Button name="ВыбратьОбъекты" id="26">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<CommandName>Form.Command.ВыбратьОбъекты</CommandName>
+			<ExtendedTooltip name="ВыбратьОбъектыРасширеннаяПодсказка" id="27"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТестерВышелПодымить</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФайлИнформацияПоддержки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл с информацией о поддержке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ФайлИнформацияПоддержки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДанныеПоддержки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные поддержки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Класс" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Класс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>128</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Объект" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>128</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьОбъекты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьОбъекты</Action>
+		</Command>
+	</Commands>
+</Form>
