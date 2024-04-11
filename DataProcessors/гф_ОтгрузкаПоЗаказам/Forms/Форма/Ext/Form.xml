@@ -391,6 +391,16 @@
 										</Title>
 										<ExtendedTooltip name="ДеревоДокументовСписокКоробовРасширеннаяПодсказка" id="218"/>
 									</Button>
+									<Button name="ДеревоДокументовбф_ЗагрузкаСпискаАртикулов" id="292">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.бф_ЗагрузкаСпискаАртикулов</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.DataCompositionNewNestedScheme</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ДеревоДокументовбф_ЗагрузкаСпискаАртикуловРасширеннаяПодсказка" id="293"/>
+									</Button>
 									<Button name="ДеревоДокументовСоздатьПеремещениеТоваров" id="247">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
@@ -458,12 +468,66 @@
 									<ContextMenu name="ДеревоДокументовОтгрузитьКонтекстноеМеню" id="57"/>
 									<ExtendedTooltip name="ДеревоДокументовОтгрузитьРасширеннаяПодсказка" id="58"/>
 								</CheckBoxField>
-								<InputField name="ДеревоДокументовКлиент" id="61">
-									<DataPath>ДеревоДокументов.Клиент</DataPath>
-									<ReadOnly>true</ReadOnly>
+								<ColumnGroup name="ДеревоДокументовГруппа1" id="294">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Клиент / Адрес / Заказ / Артикул</v8:content>
+										</v8:item>
+									</Title>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ДеревоДокументовГруппа1РасширеннаяПодсказка" id="295"/>
+									<ChildItems>
+										<InputField name="ДеревоДокументовКлиент" id="61">
+											<DataPath>ДеревоДокументов.Клиент</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ДеревоДокументовКлиентКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="ДеревоДокументовКлиентРасширеннаяПодсказка" id="63"/>
+										</InputField>
+										<InputField name="ДеревоДокументовНомерАдреса" id="214">
+											<DataPath>ДеревоДокументов.НомерАдреса</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес Доставки</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ДеревоДокументовНомерАдресаКонтекстноеМеню" id="215"/>
+											<ExtendedTooltip name="ДеревоДокументовНомерАдресаРасширеннаяПодсказка" id="216"/>
+										</InputField>
+										<InputField name="ДеревоДокументовЗаказ" id="155">
+											<DataPath>ДеревоДокументов.Заказ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ДеревоДокументовЗаказКонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ДеревоДокументовЗаказРасширеннаяПодсказка" id="157"/>
+										</InputField>
+										<InputField name="ДеревоДокументовАртикул" id="202">
+											<DataPath>ДеревоДокументов.Артикул</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Артикул</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInHeader>false</ShowInHeader>
+											<ContextMenu name="ДеревоДокументовАртикулКонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="ДеревоДокументовАртикулРасширеннаяПодсказка" id="204"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ДеревоДокументовНомерАдреса1" id="296">
+									<DataPath>ДеревоДокументов.НомерАдреса</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовКлиентКонтекстноеМеню" id="62"/>
-									<ExtendedTooltip name="ДеревоДокументовКлиентРасширеннаяПодсказка" id="63"/>
+									<ContextMenu name="ДеревоДокументовНомерАдреса1КонтекстноеМеню" id="297"/>
+									<ExtendedTooltip name="ДеревоДокументовНомерАдреса1РасширеннаяПодсказка" id="298"/>
 								</InputField>
 								<InputField name="ДеревоДокументовБлокировка" id="223">
 									<DataPath>ДеревоДокументов.Блокировка</DataPath>
@@ -506,19 +570,6 @@
 									<ContextMenu name="ДеревоДокументовДействующийЛимитКонтекстноеМеню" id="54"/>
 									<ExtendedTooltip name="ДеревоДокументовДействующийЛимитРасширеннаяПодсказка" id="55"/>
 								</InputField>
-								<InputField name="ДеревоДокументовНомерАдреса" id="214">
-									<DataPath>ДеревоДокументов.НомерАдреса</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Адрес Доставки</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовНомерАдресаКонтекстноеМеню" id="215"/>
-									<ExtendedTooltip name="ДеревоДокументовНомерАдресаРасширеннаяПодсказка" id="216"/>
-								</InputField>
 								<InputField name="ДеревоДокументовАдресДоставки" id="64">
 									<DataPath>ДеревоДокументов.АдресДоставки</DataPath>
 									<Visible>false</Visible>
@@ -547,12 +598,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовДокументПоступленияКонтекстноеМеню" id="168"/>
 									<ExtendedTooltip name="ДеревоДокументовДокументПоступленияРасширеннаяПодсказка" id="169"/>
-								</InputField>
-								<InputField name="ДеревоДокументовЗаказ" id="155">
-									<DataPath>ДеревоДокументов.Заказ</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовЗаказКонтекстноеМеню" id="156"/>
-									<ExtendedTooltip name="ДеревоДокументовЗаказРасширеннаяПодсказка" id="157"/>
 								</InputField>
 								<InputField name="ДеревоДокументовНоменклатура" id="152">
 									<DataPath>ДеревоДокументов.Номенклатура</DataPath>
@@ -611,19 +656,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДеревоДокументовСостояниеКоробаКонтекстноеМеню" id="159"/>
 									<ExtendedTooltip name="ДеревоДокументовСостояниеКоробаРасширеннаяПодсказка" id="160"/>
-								</InputField>
-								<InputField name="ДеревоДокументовАртикул" id="202">
-									<DataPath>ДеревоДокументов.Артикул</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Артикул</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДеревоДокументовАртикулКонтекстноеМеню" id="203"/>
-									<ExtendedTooltip name="ДеревоДокументовАртикулРасширеннаяПодсказка" id="204"/>
 								</InputField>
 								<InputField name="ДеревоДокументовКоличествоВНаличии" id="38">
 									<DataPath>ДеревоДокументов.КоличествоОстаток</DataPath>
@@ -1292,6 +1324,21 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="бф_НомерЗаказа" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бф номер заказа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -2149,6 +2196,154 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовНомерАдреса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовЗаказ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовАртикул</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Клиент</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.НомерАдреса</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Заказ</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Артикул</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовКлиент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовЗаказ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовАртикул</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Клиент</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.НомерАдреса</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Заказ</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Артикул</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовНомерАдреса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовКлиент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовАртикул</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Клиент</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.НомерАдреса</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Заказ</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Артикул</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовНомерАдреса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовКлиент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДокументовЗаказ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Клиент</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.НомерАдреса</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Заказ</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДокументов.Артикул</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -2337,6 +2532,21 @@
 			</Picture>
 			<Action>ВыставитьСчета</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="бф_ЗагрузкаСпискаАртикулов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка списка артикулов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бф загрузка списка артикулов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>бф_ЗагрузкаСпискаАртикулов</Action>
 		</Command>
 	</Commands>
 </Form>
