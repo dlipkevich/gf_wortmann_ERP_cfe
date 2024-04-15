@@ -115,7 +115,7 @@
 											</Picture>
 											<ExtendedTooltip name="РежимыУстановитьФлажкиРасширеннаяПодсказка" id="496"/>
 										</Button>
-										<Button name="РежимыСнятьГалку" id="493">
+										<Button name="РежимыСнятьФлажки" id="493">
 											<Type>UsualButton</Type>
 											<Representation>Picture</Representation>
 											<CommandName>Form.Command.Режимы_СнятьФлажки</CommandName>
@@ -123,7 +123,7 @@
 												<xr:Ref>StdPicture.UncheckAll</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="РежимыСнятьГалкуРасширеннаяПодсказка" id="494"/>
+											<ExtendedTooltip name="РежимыСнятьФлажкиРасширеннаяПодсказка" id="494"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -248,6 +248,10 @@
 													<v8:content>Страница формы</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Picture>
+												<xr:Ref>StdPicture.Form</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
 											<ExtendedTooltip name="Страница_ФормыРасширеннаяПодсказка" id="79"/>
 											<ChildItems>
 												<LabelDecoration name="Формы_Справка" id="149">
@@ -255,7 +259,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверяем открытие форм объектов</v8:content>
+															<v8:content>Проверка открытия форм объектов</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Формы_СправкаКонтекстноеМеню" id="150"/>
@@ -309,7 +313,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверяемые объекты</v8:content>
+															<v8:content>Проверяемые формы</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -318,9 +322,10 @@
 															<v8:content>Формы объекты</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Формы_ОбъектыРасширеннаяПодсказка" id="107"/>
 													<ChildItems>
-														<Table name="Формы_ДеревоОбъектов" id="3">
+														<Table name="ФормыОбъектов" id="3">
 															<Representation>Tree</Representation>
 															<ChangeRowSet>false</ChangeRowSet>
 															<ChangeRowOrder>false</ChangeRowOrder>
@@ -329,7 +334,7 @@
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
 															<FileDragMode>AsFile</FileDragMode>
-															<DataPath>Формы_ДеревоОбъектов</DataPath>
+															<DataPath>ФормыОбъектов</DataPath>
 															<CommandSet>
 																<ExcludedCommand>Add</ExcludedCommand>
 																<ExcludedCommand>Change</ExcludedCommand>
@@ -350,107 +355,107 @@
 																<ExcludedCommand>Tree</ExcludedCommand>
 															</CommandSet>
 															<SearchStringLocation>CommandBar</SearchStringLocation>
-															<ContextMenu name="Формы_ДеревоОбъектовКонтекстноеМеню" id="4"/>
-															<AutoCommandBar name="Формы_ДеревоОбъектовКоманднаяПанель" id="5">
+															<ContextMenu name="ФормыОбъектовКонтекстноеМеню" id="4"/>
+															<AutoCommandBar name="ФормыОбъектовКоманднаяПанель" id="5">
 																<ChildItems>
-																	<Button name="Формы_ДеревоОбъектовФормы_Заполнить" id="216">
+																	<Button name="Формы_Заполнить" id="216">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_Заполнить</CommandName>
-																		<ExtendedTooltip name="Формы_ДеревоОбъектовФормы_ЗаполнитьРасширеннаяПодсказка" id="217"/>
+																		<ExtendedTooltip name="Формы_ЗаполнитьРасширеннаяПодсказка" id="217"/>
 																	</Button>
-																	<Button name="ОткрытиеФорм_ДеревоОбъектовУстановитьФлажки" id="63">
+																	<Button name="Формы_УстановитьФлажки" id="63">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_УстановитьФлажки</CommandName>
 																		<Picture>
 																			<xr:Ref>StdPicture.CheckAll</xr:Ref>
 																			<xr:LoadTransparent>true</xr:LoadTransparent>
 																		</Picture>
-																		<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовУстановитьФлажкиРасширеннаяПодсказка" id="64"/>
+																		<ExtendedTooltip name="Формы_УстановитьФлажкиРасширеннаяПодсказка" id="64"/>
 																	</Button>
-																	<Button name="ОткрытиеФорм_ДеревоОбъектовСнятьГалку" id="61">
+																	<Button name="Формы_СнятьФлажки" id="61">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_СнятьФлажки</CommandName>
 																		<Picture>
 																			<xr:Ref>StdPicture.UncheckAll</xr:Ref>
 																			<xr:LoadTransparent>true</xr:LoadTransparent>
 																		</Picture>
-																		<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовСнятьГалкуРасширеннаяПодсказка" id="62"/>
+																		<ExtendedTooltip name="Формы_СнятьФлажкиРасширеннаяПодсказка" id="62"/>
 																	</Button>
-																	<Button name="ФормаРазвернутьВсеГруппы" id="147">
+																	<Button name="Формы_РазвернутьВсеГруппы" id="147">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_РазвернутьВсеГруппы</CommandName>
 																		<Picture>
 																			<xr:Ref>StdPicture.ExpandAll</xr:Ref>
 																			<xr:LoadTransparent>true</xr:LoadTransparent>
 																		</Picture>
-																		<ExtendedTooltip name="ФормаРазвернутьВсеГруппыРасширеннаяПодсказка" id="148"/>
+																		<ExtendedTooltip name="Формы_РазвернутьВсеГруппыРасширеннаяПодсказка" id="148"/>
 																	</Button>
-																	<Button name="ФормаСвернутьВсеГруппы" id="145">
+																	<Button name="Формы_СвернутьВсеГруппы" id="145">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_СвернутьВсеГруппы</CommandName>
 																		<Picture>
 																			<xr:Ref>StdPicture.CollapseAll</xr:Ref>
 																			<xr:LoadTransparent>true</xr:LoadTransparent>
 																		</Picture>
-																		<ExtendedTooltip name="ФормаСвернутьВсеГруппыРасширеннаяПодсказка" id="146"/>
+																		<ExtendedTooltip name="Формы_СвернутьВсеГруппыРасширеннаяПодсказка" id="146"/>
 																	</Button>
 																</ChildItems>
 															</AutoCommandBar>
-															<ExtendedTooltip name="Формы_ДеревоОбъектовРасширеннаяПодсказка" id="6"/>
-															<SearchStringAddition name="Формы_ДеревоОбъектовСтрокаПоиска" id="7" DisplayImportance="VeryHigh">
+															<ExtendedTooltip name="ФормыОбъектовРасширеннаяПодсказка" id="6"/>
+															<SearchStringAddition name="ФормыОбъектовСтрокаПоиска" id="7" DisplayImportance="VeryHigh">
 																<AdditionSource>
-																	<Item>Формы_ДеревоОбъектов</Item>
+																	<Item>ФормыОбъектов</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Формы_ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="8"/>
-																<ExtendedTooltip name="Формы_ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+																<ContextMenu name="ФормыОбъектовСтрокаПоискаКонтекстноеМеню" id="8"/>
+																<ExtendedTooltip name="ФормыОбъектовСтрокаПоискаРасширеннаяПодсказка" id="9"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="Формы_ДеревоОбъектовСостояниеПросмотра" id="10">
+															<ViewStatusAddition name="ФормыОбъектовСостояниеПросмотра" id="10">
 																<AdditionSource>
-																	<Item>Формы_ДеревоОбъектов</Item>
+																	<Item>ФормыОбъектов</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Формы_ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="11"/>
-																<ExtendedTooltip name="Формы_ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+																<ContextMenu name="ФормыОбъектовСостояниеПросмотраКонтекстноеМеню" id="11"/>
+																<ExtendedTooltip name="ФормыОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="Формы_ДеревоОбъектовУправлениеПоиском" id="13">
+															<SearchControlAddition name="ФормыОбъектовУправлениеПоиском" id="13">
 																<AdditionSource>
-																	<Item>Формы_ДеревоОбъектов</Item>
+																	<Item>ФормыОбъектов</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="Формы_ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="14"/>
-																<ExtendedTooltip name="Формы_ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+																<ContextMenu name="ФормыОбъектовУправлениеПоискомКонтекстноеМеню" id="14"/>
+																<ExtendedTooltip name="ФормыОбъектовУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 															</SearchControlAddition>
 															<ChildItems>
-																<CheckBoxField name="ОткрытиеФорм_ДеревоОбъектовТестировать" id="30">
-																	<DataPath>Формы_ДеревоОбъектов.Тестировать</DataPath>
+																<CheckBoxField name="ФормыОбъектовТестировать" id="30">
+																	<DataPath>ФормыОбъектов.Тестировать</DataPath>
 																	<TitleLocation>None</TitleLocation>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ThreeState>true</ThreeState>
-																	<ContextMenu name="ОткрытиеФорм_ДеревоОбъектовТестироватьКонтекстноеМеню" id="31"/>
-																	<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовТестироватьРасширеннаяПодсказка" id="32"/>
+																	<ContextMenu name="ФормыОбъектовТестироватьКонтекстноеМеню" id="31"/>
+																	<ExtendedTooltip name="ФормыОбъектовТестироватьРасширеннаяПодсказка" id="32"/>
 																	<Events>
-																		<Event name="OnChange">ОткрытиеФорм_ДеревоОбъектовТестироватьПриИзменении</Event>
+																		<Event name="OnChange">ФормыОбъектовТестироватьПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<ColumnGroup name="ОткрытиеФорм_ДеревоОбъектовГруппаКартинки" id="28">
+																<ColumnGroup name="ФормыОбъектовГруппаПроверяемыйОбъект" id="28">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Открытие форм дерево объектов группа картинки</v8:content>
+																			<v8:content>Формы объектов группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Открытие форм дерево объектов группа картинки</v8:content>
+																			<v8:content>Формы объектов группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>InCell</Group>
-																	<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовГруппаКартинкиРасширеннаяПодсказка" id="29"/>
+																	<ExtendedTooltip name="ФормыОбъектовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="29"/>
 																	<ChildItems>
-																		<PictureField name="ОткрытиеФорм_ДеревоОбъектовКартинка" id="19">
-																			<DataPath>Формы_ДеревоОбъектов.Картинка</DataPath>
+																		<PictureField name="ФормыОбъектовКартинка" id="19">
+																			<DataPath>ФормыОбъектов.Картинка</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<Title>
 																				<v8:item>
@@ -461,25 +466,25 @@
 																			<EditMode>EnterOnInput</EditMode>
 																			<HorizontalStretch>false</HorizontalStretch>
 																			<FileDragMode>AsFile</FileDragMode>
-																			<ContextMenu name="ОткрытиеФорм_ДеревоОбъектовКартинкаКонтекстноеМеню" id="20"/>
-																			<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовКартинкаРасширеннаяПодсказка" id="21"/>
+																			<ContextMenu name="ФормыОбъектовКартинкаКонтекстноеМеню" id="20"/>
+																			<ExtendedTooltip name="ФормыОбъектовКартинкаРасширеннаяПодсказка" id="21"/>
 																		</PictureField>
-																		<InputField name="ОткрытиеФорм_ДеревоОбъектовИмя" id="16">
-																			<DataPath>Формы_ДеревоОбъектов.Имя</DataPath>
+																		<InputField name="ФормыОбъектовИмя" id="16">
+																			<DataPath>ФормыОбъектов.Имя</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ОткрытиеФорм_ДеревоОбъектовИмяКонтекстноеМеню" id="17"/>
-																			<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовИмяРасширеннаяПодсказка" id="18"/>
+																			<ContextMenu name="ФормыОбъектовИмяКонтекстноеМеню" id="17"/>
+																			<ExtendedTooltip name="ФормыОбъектовИмяРасширеннаяПодсказка" id="18"/>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
-																<InputField name="ОткрытиеФорм_ДеревоОбъектовПараметрыФормы" id="48">
-																	<DataPath>Формы_ДеревоОбъектов.ПараметрыФормы</DataPath>
+																<InputField name="ФормыОбъектовПараметрыФормы" id="48">
+																	<DataPath>ФормыОбъектов.ПараметрыФормы</DataPath>
 																	<Visible>false</Visible>
 																	<EditMode>EnterOnInput</EditMode>
-																	<ContextMenu name="ОткрытиеФорм_ДеревоОбъектовПараметрыФормыКонтекстноеМеню" id="49"/>
-																	<ExtendedTooltip name="ОткрытиеФорм_ДеревоОбъектовПараметрыФормыРасширеннаяПодсказка" id="50"/>
+																	<ContextMenu name="ФормыОбъектовПараметрыФормыКонтекстноеМеню" id="49"/>
+																	<ExtendedTooltip name="ФормыОбъектовПараметрыФормыРасширеннаяПодсказка" id="50"/>
 																</InputField>
 															</ChildItems>
 														</Table>
@@ -500,6 +505,10 @@
 													<v8:content>Страница документы</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Picture>
+												<xr:Ref>StdPicture.Document</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
 											<ExtendedTooltip name="Страница_ДокументыРасширеннаяПодсказка" id="116"/>
 											<ChildItems>
 												<LabelDecoration name="Документы_Справка" id="158">
@@ -507,7 +516,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проводим документы</v8:content>
+															<v8:content>Проведение документов</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Документы_СправкаКонтекстноеМеню" id="159"/>
@@ -540,27 +549,13 @@
 															<ContextMenu name="Документы_КоличествоОбъектовКонтекстноеМеню" id="409"/>
 															<ExtendedTooltip name="Документы_КоличествоОбъектовРасширеннаяПодсказка" id="410"/>
 														</InputField>
-														<CheckBoxField name="ОчиститьДатыЗапрета" id="488">
-															<DataPath>ОчиститьДатыЗапрета</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Перед проведением  документов будут очищены даты запрета</v8:content>
-																</v8:item>
-															</ToolTip>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОчиститьДатыЗапретаКонтекстноеМеню" id="489"/>
-															<ExtendedTooltip name="ОчиститьДатыЗапретаРасширеннаяПодсказка" id="490"/>
-														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="Документы_Объекты" id="135">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверяемые объекты</v8:content>
+															<v8:content>Проверяемые документы</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -569,9 +564,10 @@
 															<v8:content>Отчеты объекты</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Документы_ОбъектыРасширеннаяПодсказка" id="136"/>
 													<ChildItems>
-														<Table name="Документы_ДеревоОбъектов" id="347">
+														<Table name="ДокументыКонфигурации" id="347">
 															<Representation>Tree</Representation>
 															<ChangeRowSet>false</ChangeRowSet>
 															<ChangeRowOrder>false</ChangeRowOrder>
@@ -580,7 +576,7 @@
 															<InitialTreeView>ExpandAllLevels</InitialTreeView>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
-															<DataPath>Документы_ДеревоОбъектов</DataPath>
+															<DataPath>ДокументыКонфигурации</DataPath>
 															<CommandSet>
 																<ExcludedCommand>Add</ExcludedCommand>
 																<ExcludedCommand>Change</ExcludedCommand>
@@ -601,8 +597,8 @@
 																<ExcludedCommand>Tree</ExcludedCommand>
 															</CommandSet>
 															<SearchStringLocation>CommandBar</SearchStringLocation>
-															<ContextMenu name="Документы_ДеревоОбъектовКонтекстноеМеню" id="348"/>
-															<AutoCommandBar name="Документы_ДеревоОбъектовКоманднаяПанель" id="349">
+															<ContextMenu name="ДокументыКонфигурацииКонтекстноеМеню" id="348"/>
+															<AutoCommandBar name="ДокументыКонфигурацииКоманднаяПанель" id="349">
 																<ChildItems>
 																	<Button name="Документы_Заполнить" id="400">
 																		<Type>CommandBarButton</Type>
@@ -639,77 +635,77 @@
 																	</Button>
 																</ChildItems>
 															</AutoCommandBar>
-															<ExtendedTooltip name="Документы_ДеревоОбъектовРасширеннаяПодсказка" id="350"/>
-															<SearchStringAddition name="Документы_ДеревоОбъектовСтрокаПоиска" id="351">
+															<ExtendedTooltip name="ДокументыКонфигурацииРасширеннаяПодсказка" id="350"/>
+															<SearchStringAddition name="ДокументыКонфигурацииСтрокаПоиска" id="351">
 																<AdditionSource>
-																	<Item>Документы_ДеревоОбъектов</Item>
+																	<Item>ДокументыКонфигурации</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Документы_ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="352"/>
-																<ExtendedTooltip name="Документы_ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="353"/>
+																<ContextMenu name="ДокументыКонфигурацииСтрокаПоискаКонтекстноеМеню" id="352"/>
+																<ExtendedTooltip name="ДокументыКонфигурацииСтрокаПоискаРасширеннаяПодсказка" id="353"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="Документы_ДеревоОбъектовСостояниеПросмотра" id="354">
+															<ViewStatusAddition name="ДокументыКонфигурацииСостояниеПросмотра" id="354">
 																<AdditionSource>
-																	<Item>Документы_ДеревоОбъектов</Item>
+																	<Item>ДокументыКонфигурации</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Документы_ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="355"/>
-																<ExtendedTooltip name="Документы_ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="356"/>
+																<ContextMenu name="ДокументыКонфигурацииСостояниеПросмотраКонтекстноеМеню" id="355"/>
+																<ExtendedTooltip name="ДокументыКонфигурацииСостояниеПросмотраРасширеннаяПодсказка" id="356"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="Документы_ДеревоОбъектовУправлениеПоиском" id="357">
+															<SearchControlAddition name="ДокументыКонфигурацииУправлениеПоиском" id="357">
 																<AdditionSource>
-																	<Item>Документы_ДеревоОбъектов</Item>
+																	<Item>ДокументыКонфигурации</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="Документы_ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="358"/>
-																<ExtendedTooltip name="Документы_ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="359"/>
+																<ContextMenu name="ДокументыКонфигурацииУправлениеПоискомКонтекстноеМеню" id="358"/>
+																<ExtendedTooltip name="ДокументыКонфигурацииУправлениеПоискомРасширеннаяПодсказка" id="359"/>
 															</SearchControlAddition>
 															<ChildItems>
-																<CheckBoxField name="Документы_ДеревоОбъектов_Тестировать" id="372">
-																	<DataPath>Документы_ДеревоОбъектов.Тестировать</DataPath>
+																<CheckBoxField name="ДокументыКонфигурацииТестировать" id="372">
+																	<DataPath>ДокументыКонфигурации.Тестировать</DataPath>
 																	<TitleLocation>None</TitleLocation>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ThreeState>true</ThreeState>
-																	<ContextMenu name="Документы_ДеревоОбъектов_ТестироватьКонтекстноеМеню" id="373"/>
-																	<ExtendedTooltip name="Документы_ДеревоОбъектов_ТестироватьРасширеннаяПодсказка" id="374"/>
+																	<ContextMenu name="ДокументыКонфигурацииТестироватьКонтекстноеМеню" id="373"/>
+																	<ExtendedTooltip name="ДокументыКонфигурацииТестироватьРасширеннаяПодсказка" id="374"/>
 																	<Events>
-																		<Event name="OnChange">Документы_ДеревоОбъектов_ТестироватьПриИзменении</Event>
+																		<Event name="OnChange">ДокументыКонфигурацииТестироватьПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<ColumnGroup name="Документы_ДеревоОбъектовГруппа_ПроверяемыйОбъект" id="406">
+																<ColumnGroup name="ДокументыКонфигурацииГруппаПроверяемыйОбъект" id="406">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Документы дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Документы конфигурации группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Документы дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Документы конфигурации группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>InCell</Group>
-																	<ExtendedTooltip name="Документы_ДеревоОбъектовГруппа_ПроверяемыйОбъектРасширеннаяПодсказка" id="407"/>
+																	<ExtendedTooltip name="ДокументыКонфигурацииГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="407"/>
 																	<ChildItems>
-																		<PictureField name="Документы_ДеревоОбъектов_Картинка" id="363">
-																			<DataPath>Документы_ДеревоОбъектов.Картинка</DataPath>
+																		<PictureField name="ДокументыКонфигурацииКартинка" id="363">
+																			<DataPath>ДокументыКонфигурации.Картинка</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Документы_ДеревоОбъектов_КартинкаКонтекстноеМеню" id="364"/>
-																			<ExtendedTooltip name="Документы_ДеревоОбъектов_КартинкаРасширеннаяПодсказка" id="365"/>
+																			<ContextMenu name="ДокументыКонфигурацииКартинкаКонтекстноеМеню" id="364"/>
+																			<ExtendedTooltip name="ДокументыКонфигурацииКартинкаРасширеннаяПодсказка" id="365"/>
 																		</PictureField>
-																		<InputField name="Документы_ДеревоОбъектовИмя" id="522">
-																			<DataPath>Документы_ДеревоОбъектов.Имя</DataPath>
+																		<InputField name="ДокументыКонфигурацииИмя" id="522">
+																			<DataPath>ДокументыКонфигурации.Имя</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Документы_ДеревоОбъектовИмяКонтекстноеМеню" id="523"/>
-																			<ExtendedTooltip name="Документы_ДеревоОбъектовИмяРасширеннаяПодсказка" id="524"/>
+																			<ContextMenu name="ДокументыКонфигурацииИмяКонтекстноеМеню" id="523"/>
+																			<ExtendedTooltip name="ДокументыКонфигурацииИмяРасширеннаяПодсказка" id="524"/>
 																		</InputField>
-																		<InputField name="Документы_ДеревоОбъектов_Синоним" id="369">
-																			<DataPath>Документы_ДеревоОбъектов.Синоним</DataPath>
+																		<InputField name="ДокументыКонфигурацииСиноним" id="369">
+																			<DataPath>ДокументыКонфигурации.Синоним</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<Title>
 																				<v8:item>
@@ -718,8 +714,8 @@
 																				</v8:item>
 																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Документы_ДеревоОбъектов_СинонимКонтекстноеМеню" id="370"/>
-																			<ExtendedTooltip name="Документы_ДеревоОбъектов_СинонимРасширеннаяПодсказка" id="371"/>
+																			<ContextMenu name="ДокументыКонфигурацииСинонимКонтекстноеМеню" id="370"/>
+																			<ExtendedTooltip name="ДокументыКонфигурацииСинонимРасширеннаяПодсказка" id="371"/>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
@@ -729,7 +725,7 @@
 												</UsualGroup>
 											</ChildItems>
 										</Page>
-										<Page name="Страница_СправочникиИПВХ" id="117">
+										<Page name="Страница_Справочники" id="117">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -739,23 +735,27 @@
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Страница справочники ИПВХ</v8:content>
+													<v8:content>Страница справочники</v8:content>
 												</v8:item>
 											</ToolTip>
-											<ExtendedTooltip name="Страница_СправочникиИПВХРасширеннаяПодсказка" id="118"/>
+											<Picture>
+												<xr:Ref>StdPicture.Catalog</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="Страница_СправочникиРасширеннаяПодсказка" id="118"/>
 											<ChildItems>
-												<LabelDecoration name="СправочникиИПВХ_Справка" id="161">
+												<LabelDecoration name="Справочники_Справка" id="161">
 													<TextColor>style:ПоясняющийТекст</TextColor>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Записываем справочники</v8:content>
+															<v8:content>Запись справочников</v8:content>
 														</v8:item>
 													</Title>
-													<ContextMenu name="СправочникиИПВХ_СправкаКонтекстноеМеню" id="162"/>
-													<ExtendedTooltip name="СправочникиИПВХ_СправкаРасширеннаяПодсказка" id="163"/>
+													<ContextMenu name="Справочники_СправкаКонтекстноеМеню" id="162"/>
+													<ExtendedTooltip name="Справочники_СправкаРасширеннаяПодсказка" id="163"/>
 												</LabelDecoration>
-												<UsualGroup name="СправочникиИПВХ_Настройка" id="139">
+												<UsualGroup name="Справочники_Настройка" id="139">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -768,7 +768,7 @@
 															<v8:content>Отчеты настройка</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ExtendedTooltip name="СправочникиИПВХ_НастройкаРасширеннаяПодсказка" id="140"/>
+													<ExtendedTooltip name="Справочники_НастройкаРасширеннаяПодсказка" id="140"/>
 													<ChildItems>
 														<InputField name="Справочники_КоличествоОбъектов" id="328">
 															<DataPath>Справочники_КоличествоОбъектов</DataPath>
@@ -778,7 +778,7 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="СправочникиИПВХ_Объекты" id="141">
+												<UsualGroup name="Справочники_Объекты" id="141">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -791,9 +791,10 @@
 															<v8:content>Отчеты объекты</v8:content>
 														</v8:item>
 													</ToolTip>
-													<ExtendedTooltip name="СправочникиИПВХ_ОбъектыРасширеннаяПодсказка" id="142"/>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Справочники_ОбъектыРасширеннаяПодсказка" id="142"/>
 													<ChildItems>
-														<Table name="Справочники_ДеревоОбъектов" id="288">
+														<Table name="СправочникиКонфигурации" id="288">
 															<Representation>Tree</Representation>
 															<ChangeRowSet>false</ChangeRowSet>
 															<ChangeRowOrder>false</ChangeRowOrder>
@@ -802,7 +803,7 @@
 															<InitialTreeView>ExpandAllLevels</InitialTreeView>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
-															<DataPath>Справочники_ДеревоОбъектов</DataPath>
+															<DataPath>СправочникиКонфигурации</DataPath>
 															<CommandSet>
 																<ExcludedCommand>Add</ExcludedCommand>
 																<ExcludedCommand>Change</ExcludedCommand>
@@ -823,8 +824,8 @@
 																<ExcludedCommand>Tree</ExcludedCommand>
 															</CommandSet>
 															<SearchStringLocation>CommandBar</SearchStringLocation>
-															<ContextMenu name="Справочники_ДеревоОбъектовКонтекстноеМеню" id="289"/>
-															<AutoCommandBar name="Справочники_ДеревоОбъектовКоманднаяПанель" id="290">
+															<ContextMenu name="СправочникиКонфигурацииКонтекстноеМеню" id="289"/>
+															<AutoCommandBar name="СправочникиКонфигурацииКоманднаяПанель" id="290">
 																<ChildItems>
 																	<Button name="Справочники_Заполнить" id="339">
 																		<Type>CommandBarButton</Type>
@@ -869,76 +870,76 @@
 																	</Button>
 																</ChildItems>
 															</AutoCommandBar>
-															<ExtendedTooltip name="Справочники_ДеревоОбъектовРасширеннаяПодсказка" id="291"/>
-															<SearchStringAddition name="Справочники_ДеревоОбъектовСтрокаПоиска" id="292">
+															<ExtendedTooltip name="СправочникиКонфигурацииРасширеннаяПодсказка" id="291"/>
+															<SearchStringAddition name="СправочникиКонфигурацииСтрокаПоиска" id="292">
 																<AdditionSource>
-																	<Item>Справочники_ДеревоОбъектов</Item>
+																	<Item>СправочникиКонфигурации</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Справочники_ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="293"/>
-																<ExtendedTooltip name="Справочники_ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="294"/>
+																<ContextMenu name="СправочникиКонфигурацииСтрокаПоискаКонтекстноеМеню" id="293"/>
+																<ExtendedTooltip name="СправочникиКонфигурацииСтрокаПоискаРасширеннаяПодсказка" id="294"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="Справочники_ДеревоОбъектовСостояниеПросмотра" id="295">
+															<ViewStatusAddition name="СправочникиКонфигурацииСостояниеПросмотра" id="295">
 																<AdditionSource>
-																	<Item>Справочники_ДеревоОбъектов</Item>
+																	<Item>СправочникиКонфигурации</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Справочники_ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="296"/>
-																<ExtendedTooltip name="Справочники_ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="297"/>
+																<ContextMenu name="СправочникиКонфигурацииСостояниеПросмотраКонтекстноеМеню" id="296"/>
+																<ExtendedTooltip name="СправочникиКонфигурацииСостояниеПросмотраРасширеннаяПодсказка" id="297"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="Справочники_ДеревоОбъектовУправлениеПоиском" id="298">
+															<SearchControlAddition name="СправочникиКонфигурацииУправлениеПоиском" id="298">
 																<AdditionSource>
-																	<Item>Справочники_ДеревоОбъектов</Item>
+																	<Item>СправочникиКонфигурации</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="Справочники_ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="299"/>
-																<ExtendedTooltip name="Справочники_ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="300"/>
+																<ContextMenu name="СправочникиКонфигурацииУправлениеПоискомКонтекстноеМеню" id="299"/>
+																<ExtendedTooltip name="СправочникиКонфигурацииУправлениеПоискомРасширеннаяПодсказка" id="300"/>
 															</SearchControlAddition>
 															<ChildItems>
-																<CheckBoxField name="Справочники_ДеревоОбъектов_Тестировать" id="313">
-																	<DataPath>Справочники_ДеревоОбъектов.Тестировать</DataPath>
+																<CheckBoxField name="СправочникиКонфигурацииТестировать" id="313">
+																	<DataPath>СправочникиКонфигурации.Тестировать</DataPath>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ThreeState>true</ThreeState>
-																	<ContextMenu name="Справочники_ДеревоОбъектов_ТестироватьКонтекстноеМеню" id="314"/>
-																	<ExtendedTooltip name="Справочники_ДеревоОбъектов_ТестироватьРасширеннаяПодсказка" id="315"/>
+																	<ContextMenu name="СправочникиКонфигурацииТестироватьКонтекстноеМеню" id="314"/>
+																	<ExtendedTooltip name="СправочникиКонфигурацииТестироватьРасширеннаяПодсказка" id="315"/>
 																	<Events>
-																		<Event name="OnChange">Справочники_ДеревоОбъектов_ТестироватьПриИзменении</Event>
+																		<Event name="OnChange">СправочникиКонфигурацииТестироватьПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<ColumnGroup name="Справочники_ДеревоОбъектовГруппаПроверяемыйОбъект" id="345">
+																<ColumnGroup name="СправочникиКонфигурацииГруппаПроверяемыйОбъект" id="345">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Справочники дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Справочники конфигурации группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Справочники дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Справочники конфигурации группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>InCell</Group>
-																	<ExtendedTooltip name="Справочники_ДеревоОбъектовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="346"/>
+																	<ExtendedTooltip name="СправочникиКонфигурацииГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="346"/>
 																	<ChildItems>
-																		<PictureField name="Справочники_ДеревоОбъектов_Картинка" id="304">
-																			<DataPath>Справочники_ДеревоОбъектов.Картинка</DataPath>
+																		<PictureField name="СправочникиКонфигурацииКартинка" id="304">
+																			<DataPath>СправочникиКонфигурации.Картинка</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Справочники_ДеревоОбъектов_КартинкаКонтекстноеМеню" id="305"/>
-																			<ExtendedTooltip name="Справочники_ДеревоОбъектов_КартинкаРасширеннаяПодсказка" id="306"/>
+																			<ContextMenu name="СправочникиКонфигурацииКартинкаКонтекстноеМеню" id="305"/>
+																			<ExtendedTooltip name="СправочникиКонфигурацииКартинкаРасширеннаяПодсказка" id="306"/>
 																		</PictureField>
-																		<InputField name="Справочники_ДеревоОбъектовИмя" id="538">
-																			<DataPath>Справочники_ДеревоОбъектов.Имя</DataPath>
+																		<InputField name="СправочникиКонфигурацииИмя" id="538">
+																			<DataPath>СправочникиКонфигурации.Имя</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Справочники_ДеревоОбъектовИмяКонтекстноеМеню" id="539"/>
-																			<ExtendedTooltip name="Справочники_ДеревоОбъектовИмяРасширеннаяПодсказка" id="540"/>
+																			<ContextMenu name="СправочникиКонфигурацииИмяКонтекстноеМеню" id="539"/>
+																			<ExtendedTooltip name="СправочникиКонфигурацииИмяРасширеннаяПодсказка" id="540"/>
 																		</InputField>
-																		<InputField name="Справочники_ДеревоОбъектов_Синоним" id="310">
-																			<DataPath>Справочники_ДеревоОбъектов.Синоним</DataPath>
+																		<InputField name="СправочникиКонфигурацииСиноним" id="310">
+																			<DataPath>СправочникиКонфигурации.Синоним</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<Title>
 																				<v8:item>
@@ -947,8 +948,8 @@
 																				</v8:item>
 																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Справочники_ДеревоОбъектов_СинонимКонтекстноеМеню" id="311"/>
-																			<ExtendedTooltip name="Справочники_ДеревоОбъектов_СинонимРасширеннаяПодсказка" id="312"/>
+																			<ContextMenu name="СправочникиКонфигурацииСинонимКонтекстноеМеню" id="311"/>
+																			<ExtendedTooltip name="СправочникиКонфигурацииСинонимРасширеннаяПодсказка" id="312"/>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
@@ -971,6 +972,10 @@
 													<v8:content>Страница отчеты</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Picture>
+												<xr:Ref>StdPicture.Report</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
 											<ExtendedTooltip name="Страница_ОтчетыРасширеннаяПодсказка" id="120"/>
 											<ChildItems>
 												<LabelDecoration name="Отчеты_Справка" id="152">
@@ -978,7 +983,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Формируем отчеты с настройками по умолчанию</v8:content>
+															<v8:content>Формирование отчетов с настройками по умолчанию</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Отчеты_СправкаКонтекстноеМеню" id="153"/>
@@ -1003,7 +1008,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверяемые объекты</v8:content>
+															<v8:content>Проверяемые отчеты</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -1012,16 +1017,17 @@
 															<v8:content>Отчеты объекты</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Отчеты_ОбъектыРасширеннаяПодсказка" id="124"/>
 													<ChildItems>
-														<Table name="Отчеты_ДеревоОбъектов" id="235">
+														<Table name="ВариантыОтчетов" id="235">
 															<Representation>Tree</Representation>
 															<AutoInsertNewRow>true</AutoInsertNewRow>
 															<SearchOnInput>Use</SearchOnInput>
 															<InitialTreeView>ExpandAllLevels</InitialTreeView>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
-															<DataPath>Отчеты_ДеревоОбъектов</DataPath>
+															<DataPath>ВариантыОтчетов</DataPath>
 															<CommandSet>
 																<ExcludedCommand>Add</ExcludedCommand>
 																<ExcludedCommand>Change</ExcludedCommand>
@@ -1042,13 +1048,13 @@
 																<ExcludedCommand>Tree</ExcludedCommand>
 															</CommandSet>
 															<SearchStringLocation>CommandBar</SearchStringLocation>
-															<ContextMenu name="Отчеты_ДеревоОбъектовКонтекстноеМеню" id="236"/>
-															<AutoCommandBar name="Отчеты_ДеревоОбъектовКоманднаяПанель" id="237">
+															<ContextMenu name="ВариантыОтчетовКонтекстноеМеню" id="236"/>
+															<AutoCommandBar name="ВариантыОтчетовКоманднаяПанель" id="237">
 																<ChildItems>
-																	<Button name="ОтчетыКТестированиюОтчеты_Заполнить" id="278">
+																	<Button name="Отчеты_Заполнить" id="278">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Отчеты_Заполнить</CommandName>
-																		<ExtendedTooltip name="ОтчетыКТестированиюОтчеты_ЗаполнитьРасширеннаяПодсказка" id="279"/>
+																		<ExtendedTooltip name="Отчеты_ЗаполнитьРасширеннаяПодсказка" id="279"/>
 																	</Button>
 																	<Button name="Отчеты_ПроставитьВсеФлажки" id="286">
 																		<Type>CommandBarButton</Type>
@@ -1088,69 +1094,69 @@
 																	</Button>
 																</ChildItems>
 															</AutoCommandBar>
-															<ExtendedTooltip name="Отчеты_ДеревоОбъектовРасширеннаяПодсказка" id="238"/>
-															<SearchStringAddition name="Отчеты_ДеревоОбъектовСтрокаПоиска" id="239">
+															<ExtendedTooltip name="ВариантыОтчетовРасширеннаяПодсказка" id="238"/>
+															<SearchStringAddition name="ВариантыОтчетовСтрокаПоиска" id="239">
 																<AdditionSource>
-																	<Item>Отчеты_ДеревоОбъектов</Item>
+																	<Item>ВариантыОтчетов</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Отчеты_ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="240"/>
-																<ExtendedTooltip name="Отчеты_ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="241"/>
+																<ContextMenu name="ВариантыОтчетовСтрокаПоискаКонтекстноеМеню" id="240"/>
+																<ExtendedTooltip name="ВариантыОтчетовСтрокаПоискаРасширеннаяПодсказка" id="241"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="Отчеты_ДеревоОбъектовСостояниеПросмотра" id="242">
+															<ViewStatusAddition name="ВариантыОтчетовСостояниеПросмотра" id="242">
 																<AdditionSource>
-																	<Item>Отчеты_ДеревоОбъектов</Item>
+																	<Item>ВариантыОтчетов</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Отчеты_ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="243"/>
-																<ExtendedTooltip name="Отчеты_ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="244"/>
+																<ContextMenu name="ВариантыОтчетовСостояниеПросмотраКонтекстноеМеню" id="243"/>
+																<ExtendedTooltip name="ВариантыОтчетовСостояниеПросмотраРасширеннаяПодсказка" id="244"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="Отчеты_ДеревоОбъектовУправлениеПоиском" id="245">
+															<SearchControlAddition name="ВариантыОтчетовУправлениеПоиском" id="245">
 																<AdditionSource>
-																	<Item>Отчеты_ДеревоОбъектов</Item>
+																	<Item>ВариантыОтчетов</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="Отчеты_ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="246"/>
-																<ExtendedTooltip name="Отчеты_ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="247"/>
+																<ContextMenu name="ВариантыОтчетовУправлениеПоискомКонтекстноеМеню" id="246"/>
+																<ExtendedTooltip name="ВариантыОтчетовУправлениеПоискомРасширеннаяПодсказка" id="247"/>
 															</SearchControlAddition>
 															<ChildItems>
-																<CheckBoxField name="Отчеты_ДеревоОбъектов_Тестировать" id="251">
-																	<DataPath>Отчеты_ДеревоОбъектов.Тестировать</DataPath>
+																<CheckBoxField name="ВариантыОтчетовТестировать" id="251">
+																	<DataPath>ВариантыОтчетов.Тестировать</DataPath>
 																	<TitleLocation>None</TitleLocation>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ThreeState>true</ThreeState>
-																	<ContextMenu name="Отчеты_ДеревоОбъектов_ТестироватьКонтекстноеМеню" id="252"/>
-																	<ExtendedTooltip name="Отчеты_ДеревоОбъектов_ТестироватьРасширеннаяПодсказка" id="253"/>
+																	<ContextMenu name="ВариантыОтчетовТестироватьКонтекстноеМеню" id="252"/>
+																	<ExtendedTooltip name="ВариантыОтчетовТестироватьРасширеннаяПодсказка" id="253"/>
 																	<Events>
-																		<Event name="OnChange">Отчеты_ДеревоОбъектов_ТестироватьПриИзменении</Event>
+																		<Event name="OnChange">ВариантыОтчетовТестироватьПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<ColumnGroup name="Отчеты_ДеревоОбъектовГруппаПроверяемыйОбъект" id="536">
+																<ColumnGroup name="ВариантыОтчетовГруппаПроверяемыйОбъект" id="536">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Отчеты дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Варианты отчетов группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Отчеты дерево объектов группа проверяемый объект</v8:content>
+																			<v8:content>Варианты отчетов группа проверяемый объект</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>InCell</Group>
-																	<ExtendedTooltip name="Отчеты_ДеревоОбъектовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="537"/>
+																	<ExtendedTooltip name="ВариантыОтчетовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="537"/>
 																	<ChildItems>
-																		<InputField name="Отчеты_ДеревоОбъектовИмяОтчета" id="533">
-																			<DataPath>Отчеты_ДеревоОбъектов.ИмяОтчета</DataPath>
+																		<InputField name="ВариантыОтчетовИмяОтчета" id="533">
+																			<DataPath>ВариантыОтчетов.ИмяОтчета</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Отчеты_ДеревоОбъектовИмяОтчетаКонтекстноеМеню" id="534"/>
-																			<ExtendedTooltip name="Отчеты_ДеревоОбъектовИмяОтчетаРасширеннаяПодсказка" id="535"/>
+																			<ContextMenu name="ВариантыОтчетовИмяОтчетаКонтекстноеМеню" id="534"/>
+																			<ExtendedTooltip name="ВариантыОтчетовИмяОтчетаРасширеннаяПодсказка" id="535"/>
 																		</InputField>
-																		<InputField name="Отчеты_ДеревоОбъектов_Представление" id="257">
-																			<DataPath>Отчеты_ДеревоОбъектов.Представление</DataPath>
+																		<InputField name="ВариантыОтчетовПредставление" id="257">
+																			<DataPath>ВариантыОтчетов.Представление</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<Title>
 																				<v8:item>
@@ -1159,8 +1165,8 @@
 																				</v8:item>
 																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Отчеты_ДеревоОбъектов_ПредставлениеКонтекстноеМеню" id="258"/>
-																			<ExtendedTooltip name="Отчеты_ДеревоОбъектов_ПредставлениеРасширеннаяПодсказка" id="259"/>
+																			<ContextMenu name="ВариантыОтчетовПредставлениеКонтекстноеМеню" id="258"/>
+																			<ExtendedTooltip name="ВариантыОтчетовПредставлениеРасширеннаяПодсказка" id="259"/>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
@@ -1183,6 +1189,10 @@
 													<v8:content>Страница печать</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Picture>
+												<xr:Ref>StdPicture.Print</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
 											<ExtendedTooltip name="Страница_ПечатьРасширеннаяПодсказка" id="114"/>
 											<ChildItems>
 												<LabelDecoration name="Печать_Справка" id="155">
@@ -1190,7 +1200,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Формируем печатные формы с настройками по умолчанию</v8:content>
+															<v8:content>Формирование печатных форм с настройками по умолчанию</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Печать_СправкаКонтекстноеМеню" id="156"/>
@@ -1215,7 +1225,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверяемые объекты</v8:content>
+															<v8:content>Проверяемые печатные формы</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -1224,9 +1234,10 @@
 															<v8:content>Отчеты объекты</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Печать_ОбъектыРасширеннаяПодсказка" id="130"/>
 													<ChildItems>
-														<Table name="Печать_ДеревоОбъектов" id="164">
+														<Table name="ПечатныеФормы" id="164">
 															<Representation>Tree</Representation>
 															<ChangeRowOrder>false</ChangeRowOrder>
 															<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -1235,7 +1246,7 @@
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
 															<FileDragMode>AsFile</FileDragMode>
-															<DataPath>Печать_ДеревоОбъектов</DataPath>
+															<DataPath>ПечатныеФормы</DataPath>
 															<CommandSet>
 																<ExcludedCommand>Add</ExcludedCommand>
 																<ExcludedCommand>Change</ExcludedCommand>
@@ -1256,8 +1267,8 @@
 																<ExcludedCommand>Tree</ExcludedCommand>
 															</CommandSet>
 															<SearchStringLocation>CommandBar</SearchStringLocation>
-															<ContextMenu name="Печать_ДеревоОбъектовКонтекстноеМеню" id="165"/>
-															<AutoCommandBar name="Печать_ДеревоОбъектовКоманднаяПанель" id="166">
+															<ContextMenu name="ПечатныеФормыКонтекстноеМеню" id="165"/>
+															<AutoCommandBar name="ПечатныеФормыКоманднаяПанель" id="166">
 																<ChildItems>
 																	<Button name="Печать_Заполнить" id="218">
 																		<Type>CommandBarButton</Type>
@@ -1302,76 +1313,76 @@
 																	</Button>
 																</ChildItems>
 															</AutoCommandBar>
-															<ExtendedTooltip name="Печать_ДеревоОбъектовРасширеннаяПодсказка" id="167"/>
-															<SearchStringAddition name="Печать_ДеревоОбъектовСтрокаПоиска" id="168">
+															<ExtendedTooltip name="ПечатныеФормыРасширеннаяПодсказка" id="167"/>
+															<SearchStringAddition name="ПечатныеФормыСтрокаПоиска" id="168">
 																<AdditionSource>
-																	<Item>Печать_ДеревоОбъектов</Item>
+																	<Item>ПечатныеФормы</Item>
 																	<Type>SearchStringRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Печать_ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="169"/>
-																<ExtendedTooltip name="Печать_ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="170"/>
+																<ContextMenu name="ПечатныеФормыСтрокаПоискаКонтекстноеМеню" id="169"/>
+																<ExtendedTooltip name="ПечатныеФормыСтрокаПоискаРасширеннаяПодсказка" id="170"/>
 															</SearchStringAddition>
-															<ViewStatusAddition name="Печать_ДеревоОбъектовСостояниеПросмотра" id="171">
+															<ViewStatusAddition name="ПечатныеФормыСостояниеПросмотра" id="171">
 																<AdditionSource>
-																	<Item>Печать_ДеревоОбъектов</Item>
+																	<Item>ПечатныеФормы</Item>
 																	<Type>ViewStatusRepresentation</Type>
 																</AdditionSource>
-																<ContextMenu name="Печать_ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="172"/>
-																<ExtendedTooltip name="Печать_ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="173"/>
+																<ContextMenu name="ПечатныеФормыСостояниеПросмотраКонтекстноеМеню" id="172"/>
+																<ExtendedTooltip name="ПечатныеФормыСостояниеПросмотраРасширеннаяПодсказка" id="173"/>
 															</ViewStatusAddition>
-															<SearchControlAddition name="Печать_ДеревоОбъектовУправлениеПоиском" id="174">
+															<SearchControlAddition name="ПечатныеФормыУправлениеПоиском" id="174">
 																<AdditionSource>
-																	<Item>Печать_ДеревоОбъектов</Item>
+																	<Item>ПечатныеФормы</Item>
 																	<Type>SearchControl</Type>
 																</AdditionSource>
-																<ContextMenu name="Печать_ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="175"/>
-																<ExtendedTooltip name="Печать_ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="176"/>
+																<ContextMenu name="ПечатныеФормыУправлениеПоискомКонтекстноеМеню" id="175"/>
+																<ExtendedTooltip name="ПечатныеФормыУправлениеПоискомРасширеннаяПодсказка" id="176"/>
 															</SearchControlAddition>
 															<ChildItems>
-																<CheckBoxField name="Печать_ДеревоОбъектов_Тестировать" id="204">
-																	<DataPath>Печать_ДеревоОбъектов.Тестировать</DataPath>
+																<CheckBoxField name="ПечатныеФормыТестировать" id="204">
+																	<DataPath>ПечатныеФормы.Тестировать</DataPath>
 																	<TitleLocation>None</TitleLocation>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ThreeState>true</ThreeState>
-																	<ContextMenu name="Печать_ДеревоОбъектов_ТестироватьКонтекстноеМеню" id="205"/>
-																	<ExtendedTooltip name="Печать_ДеревоОбъектов_ТестироватьРасширеннаяПодсказка" id="206"/>
+																	<ContextMenu name="ПечатныеФормыТестироватьКонтекстноеМеню" id="205"/>
+																	<ExtendedTooltip name="ПечатныеФормыТестироватьРасширеннаяПодсказка" id="206"/>
 																	<Events>
-																		<Event name="OnChange">ПечатныеФормыКТестированиюТестироватьПриИзменении</Event>
+																		<Event name="OnChange">ПечатныеФормыТестироватьПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<ColumnGroup name="Печать_ДеревоОбъектовГруппаПроверямыйОбъект" id="528">
+																<ColumnGroup name="ПечатныеФормыГруппаПроверямыйОбъект" id="528">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Печать дерево объектов группа проверямый объект</v8:content>
+																			<v8:content>Печатные формы группа проверямый объект</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Печать дерево объектов группа проверямый объект</v8:content>
+																			<v8:content>Печатные формы группа проверямый объект</v8:content>
 																		</v8:item>
 																	</ToolTip>
 																	<Group>InCell</Group>
-																	<ExtendedTooltip name="Печать_ДеревоОбъектовГруппаПроверямыйОбъектРасширеннаяПодсказка" id="529"/>
+																	<ExtendedTooltip name="ПечатныеФормыГруппаПроверямыйОбъектРасширеннаяПодсказка" id="529"/>
 																	<ChildItems>
-																		<PictureField name="Печать_ДеревоОбъектовКартинка" id="551">
-																			<DataPath>Печать_ДеревоОбъектов.Картинка</DataPath>
+																		<PictureField name="ПечатныеФормыКартинка" id="551">
+																			<DataPath>ПечатныеФормы.Картинка</DataPath>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Печать_ДеревоОбъектовКартинкаКонтекстноеМеню" id="552"/>
-																			<ExtendedTooltip name="Печать_ДеревоОбъектовКартинкаРасширеннаяПодсказка" id="553"/>
+																			<ContextMenu name="ПечатныеФормыКартинкаКонтекстноеМеню" id="552"/>
+																			<ExtendedTooltip name="ПечатныеФормыКартинкаРасширеннаяПодсказка" id="553"/>
 																		</PictureField>
-																		<InputField name="Печать_ДеревоОбъектовИмя" id="541">
-																			<DataPath>Печать_ДеревоОбъектов.Имя</DataPath>
+																		<InputField name="ПечатныеФормыИмя" id="541">
+																			<DataPath>ПечатныеФормы.Имя</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<TitleLocation>None</TitleLocation>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Печать_ДеревоОбъектовИмяКонтекстноеМеню" id="542"/>
-																			<ExtendedTooltip name="Печать_ДеревоОбъектовИмяРасширеннаяПодсказка" id="543"/>
+																			<ContextMenu name="ПечатныеФормыИмяКонтекстноеМеню" id="542"/>
+																			<ExtendedTooltip name="ПечатныеФормыИмяРасширеннаяПодсказка" id="543"/>
 																		</InputField>
-																		<InputField name="Печать_ДеревоОбъектов_Представление" id="207">
-																			<DataPath>Печать_ДеревоОбъектов.Представление</DataPath>
+																		<InputField name="ПечатныеФормыПредставление" id="207">
+																			<DataPath>ПечатныеФормы.Представление</DataPath>
 																			<ReadOnly>true</ReadOnly>
 																			<Title>
 																				<v8:item>
@@ -1380,13 +1391,13 @@
 																				</v8:item>
 																			</Title>
 																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="Печать_ДеревоОбъектов_ПредставлениеКонтекстноеМеню" id="208"/>
-																			<ExtendedTooltip name="Печать_ДеревоОбъектов_ПредставлениеРасширеннаяПодсказка" id="209"/>
+																			<ContextMenu name="ПечатныеФормыПредставлениеКонтекстноеМеню" id="208"/>
+																			<ExtendedTooltip name="ПечатныеФормыПредставлениеРасширеннаяПодсказка" id="209"/>
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
-																<InputField name="Печать_ДеревоОбъектов_ОбъектПечати" id="210">
-																	<DataPath>Печать_ДеревоОбъектов.ОбъектПечати</DataPath>
+																<InputField name="ПечатныеФормыОбъектПечати" id="210">
+																	<DataPath>ПечатныеФормы.ОбъектПечати</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -1394,10 +1405,10 @@
 																		</v8:item>
 																	</Title>
 																	<EditMode>EnterOnInput</EditMode>
-																	<ContextMenu name="Печать_ДеревоОбъектов_ОбъектПечатиКонтекстноеМеню" id="211"/>
-																	<ExtendedTooltip name="Печать_ДеревоОбъектов_ОбъектПечатиРасширеннаяПодсказка" id="212"/>
+																	<ContextMenu name="ПечатныеФормыОбъектПечатиКонтекстноеМеню" id="211"/>
+																	<ExtendedTooltip name="ПечатныеФормыОбъектПечатиРасширеннаяПодсказка" id="212"/>
 																	<Events>
-																		<Event name="OnChange">ПечатныеФормыКТестированиюОбъектПечатиПриИзменении</Event>
+																		<Event name="OnChange">ПечатныеФормыОбъектПечатиПриИзменении</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
@@ -1416,7 +1427,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Результат</v8:content>
+							<v8:content>Результаты</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -1427,7 +1438,7 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаРезультатаРасширеннаяПодсказка" id="433"/>
 					<ChildItems>
-						<Table name="ДеревоИнформации" id="452">
+						<Table name="РезультатыТестов" id="452">
 							<Representation>Tree</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
@@ -1436,7 +1447,7 @@
 							<InitialTreeView>ExpandAllLevels</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
-							<DataPath>ДеревоИнформации</DataPath>
+							<DataPath>РезультатыТестов</DataPath>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
 								<ExcludedCommand>Change</ExcludedCommand>
@@ -1456,130 +1467,130 @@
 								<ExcludedCommand>Tree</ExcludedCommand>
 							</CommandSet>
 							<SearchStringLocation>CommandBar</SearchStringLocation>
-							<ContextMenu name="ДеревоИнформацииКонтекстноеМеню" id="453"/>
-							<AutoCommandBar name="ДеревоИнформацииКоманднаяПанель" id="454">
+							<ContextMenu name="РезультатыТестовКонтекстноеМеню" id="453"/>
+							<AutoCommandBar name="РезультатыТестовКоманднаяПанель" id="454">
 								<ChildItems>
-									<Button name="ДеревоИнформацииВывестиСписок" id="477" DisplayImportance="VeryHigh">
+									<Button name="РезультатыТестовВывестиСписок" id="477" DisplayImportance="VeryHigh">
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
-										<CommandName>Form.Item.ДеревоИнформации.StandardCommand.OutputList</CommandName>
+										<CommandName>Form.Item.РезультатыТестов.StandardCommand.OutputList</CommandName>
 										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
-										<ExtendedTooltip name="ДеревоИнформацииВывестиСписокРасширеннаяПодсказка" id="478"/>
+										<ExtendedTooltip name="РезультатыТестовВывестиСписокРасширеннаяПодсказка" id="478"/>
 									</Button>
-									<Button name="_Информация_Информация_Очистить" id="223">
+									<Button name="Результаты_Очистить" id="223">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command._Информация_Очистить</CommandName>
-										<ExtendedTooltip name="_Информация_Информация_ОчиститьРасширеннаяПодсказка" id="224"/>
+										<CommandName>Form.Command.Результаты_Очистить</CommandName>
+										<ExtendedTooltip name="Результаты_ОчиститьРасширеннаяПодсказка" id="224"/>
 									</Button>
-									<Button name="Информация_РазвернутьВсеГруппы" id="479">
+									<Button name="Результаты_РазвернутьВсеГруппы" id="479">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Информация_РазвернутьВсеГруппы</CommandName>
+										<CommandName>Form.Command.Результаты_РазвернутьВсеГруппы</CommandName>
 										<Picture>
 											<xr:Ref>StdPicture.ExpandAll</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="Информация_РазвернутьВсеГруппыРасширеннаяПодсказка" id="480"/>
+										<ExtendedTooltip name="Результаты_РазвернутьВсеГруппыРасширеннаяПодсказка" id="480"/>
 									</Button>
-									<Button name="Информация_СвернутьВсеГруппы" id="481">
+									<Button name="Результаты_СвернутьВсеГруппы" id="481">
 										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Информация_СвернутьВсеГруппы</CommandName>
+										<CommandName>Form.Command.Результаты_СвернутьВсеГруппы</CommandName>
 										<Picture>
 											<xr:Ref>StdPicture.CollapseAll</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="Информация_СвернутьВсеГруппыРасширеннаяПодсказка" id="482"/>
+										<ExtendedTooltip name="Результаты_СвернутьВсеГруппыРасширеннаяПодсказка" id="482"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ДеревоИнформацииРасширеннаяПодсказка" id="455"/>
-							<SearchStringAddition name="ДеревоИнформацииСтрокаПоиска" id="456">
+							<ExtendedTooltip name="РезультатыТестовРасширеннаяПодсказка" id="455"/>
+							<SearchStringAddition name="РезультатыТестовСтрокаПоиска" id="456">
 								<AdditionSource>
-									<Item>ДеревоИнформации</Item>
+									<Item>РезультатыТестов</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоИнформацииСтрокаПоискаКонтекстноеМеню" id="457"/>
-								<ExtendedTooltip name="ДеревоИнформацииСтрокаПоискаРасширеннаяПодсказка" id="458"/>
+								<ContextMenu name="РезультатыТестовСтрокаПоискаКонтекстноеМеню" id="457"/>
+								<ExtendedTooltip name="РезультатыТестовСтрокаПоискаРасширеннаяПодсказка" id="458"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ДеревоИнформацииСостояниеПросмотра" id="459">
+							<ViewStatusAddition name="РезультатыТестовСостояниеПросмотра" id="459">
 								<AdditionSource>
-									<Item>ДеревоИнформации</Item>
+									<Item>РезультатыТестов</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоИнформацииСостояниеПросмотраКонтекстноеМеню" id="460"/>
-								<ExtendedTooltip name="ДеревоИнформацииСостояниеПросмотраРасширеннаяПодсказка" id="461"/>
+								<ContextMenu name="РезультатыТестовСостояниеПросмотраКонтекстноеМеню" id="460"/>
+								<ExtendedTooltip name="РезультатыТестовСостояниеПросмотраРасширеннаяПодсказка" id="461"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ДеревоИнформацииУправлениеПоиском" id="462">
+							<SearchControlAddition name="РезультатыТестовУправлениеПоиском" id="462">
 								<AdditionSource>
-									<Item>ДеревоИнформации</Item>
+									<Item>РезультатыТестов</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ДеревоИнформацииУправлениеПоискомКонтекстноеМеню" id="463"/>
-								<ExtendedTooltip name="ДеревоИнформацииУправлениеПоискомРасширеннаяПодсказка" id="464"/>
+								<ContextMenu name="РезультатыТестовУправлениеПоискомКонтекстноеМеню" id="463"/>
+								<ExtendedTooltip name="РезультатыТестовУправлениеПоискомРасширеннаяПодсказка" id="464"/>
 							</SearchControlAddition>
 							<Events>
-								<Event name="Selection">Формы_ОшибкиВыбор</Event>
+								<Event name="Selection">РезультатыТестовВыбор</Event>
 							</Events>
 							<ChildItems>
-								<ColumnGroup name="ДеревоИнформацииГруппаОписание" id="483">
+								<ColumnGroup name="РезультатыТестовГруппаОписание" id="483">
 									<EnableContentChange>true</EnableContentChange>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Дерево информации группа описание</v8:content>
+											<v8:content>Результаты тестов группа описание</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Дерево информации группа описание</v8:content>
+											<v8:content>Результаты тестов группа описание</v8:content>
 										</v8:item>
 									</ToolTip>
 									<Group>InCell</Group>
-									<ExtendedTooltip name="ДеревоИнформацииГруппаОписаниеРасширеннаяПодсказка" id="484"/>
+									<ExtendedTooltip name="РезультатыТестовГруппаОписаниеРасширеннаяПодсказка" id="484"/>
 									<ChildItems>
-										<PictureField name="ДеревоИнформацииКартинка" id="485">
-											<DataPath>ДеревоИнформации.Картинка</DataPath>
+										<PictureField name="РезультатыТестовКартинка" id="485">
+											<DataPath>РезультатыТестов.Картинка</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInHeader>false</ShowInHeader>
-											<ContextMenu name="ДеревоИнформацииКартинкаКонтекстноеМеню" id="486"/>
-											<ExtendedTooltip name="ДеревоИнформацииКартинкаРасширеннаяПодсказка" id="487"/>
+											<ContextMenu name="РезультатыТестовКартинкаКонтекстноеМеню" id="486"/>
+											<ExtendedTooltip name="РезультатыТестовКартинкаРасширеннаяПодсказка" id="487"/>
 										</PictureField>
-										<InputField name="ДеревоИнформацииРежимПроверки" id="474">
-											<DataPath>ДеревоИнформации.РежимПроверки</DataPath>
+										<InputField name="РезультатыТестовПроверки" id="474">
+											<DataPath>РезультатыТестов.РежимПроверки</DataPath>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>1</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<ContextMenu name="ДеревоИнформацииРежимПроверкиКонтекстноеМеню" id="475"/>
-											<ExtendedTooltip name="ДеревоИнформацииРежимПроверкиРасширеннаяПодсказка" id="476"/>
+											<ContextMenu name="РезультатыТестовПроверкиКонтекстноеМеню" id="475"/>
+											<ExtendedTooltip name="РезультатыТестовПроверкиРасширеннаяПодсказка" id="476"/>
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<InputField name="ДеревоИнформацииОписание" id="468">
-									<DataPath>ДеревоИнформации.Описание</DataPath>
+								<InputField name="РезультатыТестовОписание" id="468">
+									<DataPath>РезультатыТестов.Описание</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<MultiLine>true</MultiLine>
-									<ContextMenu name="ДеревоИнформацииОписаниеКонтекстноеМеню" id="469"/>
-									<ExtendedTooltip name="ДеревоИнформацииОписаниеРасширеннаяПодсказка" id="470"/>
+									<ContextMenu name="РезультатыТестовОписаниеКонтекстноеМеню" id="469"/>
+									<ExtendedTooltip name="РезультатыТестовОписаниеРасширеннаяПодсказка" id="470"/>
 								</InputField>
-								<InputField name="ДеревоИнформацииПроверяемыйОбъект" id="465">
-									<DataPath>ДеревоИнформации.ПроверяемыйОбъект</DataPath>
+								<InputField name="РезультатыТестовПроверяемыйОбъект" id="465">
+									<DataPath>РезультатыТестов.ПроверяемыйОбъект</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<EditMode>EnterOnInput</EditMode>
 									<CellHyperlink>true</CellHyperlink>
-									<ContextMenu name="ДеревоИнформацииПроверяемыйОбъектКонтекстноеМеню" id="466"/>
-									<ExtendedTooltip name="ДеревоИнформацииПроверяемыйОбъектРасширеннаяПодсказка" id="467"/>
+									<ContextMenu name="РезультатыТестовПроверяемыйОбъектКонтекстноеМеню" id="466"/>
+									<ExtendedTooltip name="РезультатыТестовПроверяемыйОбъектРасширеннаяПодсказка" id="467"/>
 								</InputField>
-								<InputField name="ДеревоИнформацииДанные" id="471">
-									<DataPath>ДеревоИнформации.Данные</DataPath>
+								<InputField name="РезультатыТестовДанные" id="471">
+									<DataPath>РезультатыТестов.Данные</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<DropListButton>false</DropListButton>
 									<ChoiceButton>false</ChoiceButton>
 									<ClearButton>false</ClearButton>
 									<OpenButton>true</OpenButton>
 									<TextEdit>false</TextEdit>
-									<ContextMenu name="ДеревоИнформацииДанныеКонтекстноеМеню" id="472"/>
-									<ExtendedTooltip name="ДеревоИнформацииДанныеРасширеннаяПодсказка" id="473"/>
+									<ContextMenu name="РезультатыТестовДанныеКонтекстноеМеню" id="472"/>
+									<ExtendedTooltip name="РезультатыТестовДанныеРасширеннаяПодсказка" id="473"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1639,18 +1650,18 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
-		<Attribute name="Формы_ДеревоОбъектов" id="2">
+		<Attribute name="ФормыОбъектов" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы дерево объектов</v8:content>
+					<v8:content>Формы объектов</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>Формы_ДеревоОбъектов</Field>
+				<Field>ФормыОбъектов</Field>
 			</Save>
 			<Columns>
 				<Column name="Имя" id="1">
@@ -1798,18 +1809,18 @@
 				<Field>Формы_КоличествоОбъектов</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="_Информация" id="10">
+		<Attribute name="ВыполненныеПроверки" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Информация</v8:content>
+					<v8:content>Выполненные проверки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
 			<Save>
-				<Field>_Информация</Field>
+				<Field>ВыполненныеПроверки</Field>
 			</Save>
 			<Columns>
 				<Column name="ПроверяемыйОбъект" id="1">
@@ -1909,18 +1920,18 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="Печать_ДеревоОбъектов" id="12">
+		<Attribute name="ПечатныеФормы" id="12">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать дерево объектов</v8:content>
+					<v8:content>Печатные формы</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>Печать_ДеревоОбъектов</Field>
+				<Field>ПечатныеФормы</Field>
 			</Save>
 			<Columns>
 				<Column name="Тестировать" id="1">
@@ -2067,18 +2078,18 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="Отчеты_ДеревоОбъектов" id="13">
+		<Attribute name="ВариантыОтчетов" id="13">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты дерево объектов</v8:content>
+					<v8:content>Варианты отчетов</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>Отчеты_ДеревоОбъектов</Field>
+				<Field>ВариантыОтчетов</Field>
 			</Save>
 			<Columns>
 				<Column name="ОтчетВариант" id="1">
@@ -2242,18 +2253,18 @@
 				<Field>Справочники_КоличествоОбъектов</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="Справочники_ДеревоОбъектов" id="15">
+		<Attribute name="СправочникиКонфигурации" id="15">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники дерево объектов</v8:content>
+					<v8:content>Справочники конфигурации</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>Справочники_ДеревоОбъектов</Field>
+				<Field>СправочникиКонфигурации</Field>
 			</Save>
 			<Columns>
 				<Column name="Имя" id="1">
@@ -2346,18 +2357,18 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="Документы_ДеревоОбъектов" id="16">
+		<Attribute name="ДокументыКонфигурации" id="16">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы дерево объектов</v8:content>
+					<v8:content>Документы конфигурации</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>Документы_ДеревоОбъектов</Field>
+				<Field>ДокументыКонфигурации</Field>
 			</Save>
 			<Columns>
 				<Column name="Имя" id="1">
@@ -2582,18 +2593,18 @@
 				<Field>КаталогВыгрузкиAllure</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="ДеревоИнформации" id="19">
+		<Attribute name="РезультатыТестов" id="19">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Информация</v8:content>
+					<v8:content>Результаты тестов</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>ДеревоИнформации</Field>
+				<Field>РезультатыТестов</Field>
 			</Save>
 			<Columns>
 				<Column name="ПроверяемыйОбъект" id="1">
@@ -2693,20 +2704,6 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="ОчиститьДатыЗапрета" id="20">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Очистить даты запрета</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-			<Save>
-				<Field>ОчиститьДатыЗапрета</Field>
-			</Save>
-		</Attribute>
 		<Attribute name="ТолькоВыбранные" id="21">
 			<Title>
 				<v8:item>
@@ -2744,34 +2741,28 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>ОткрытиеФорм_ДеревоОбъектовИмя</dcsset:field>
+						<dcsset:field>ФормыОбъектовИмя</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ОткрытиеФорм_КоличествоСсылок</dcsset:field>
+						<dcsset:field>ФормыОбъектовТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ОткрытиеФорм_ДеревоОбъектовТестировать</dcsset:field>
+						<dcsset:field>ФормыОбъектовКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ОткрытиеФорм_ДеревоОбъектовКартинка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ОткрытиеФорм_ДеревоОбъектовПараметрыФормы</dcsset:field>
+						<dcsset:field>ФормыОбъектовПараметрыФормы</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Формы_ДеревоОбъектов.Тестировать</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ФормыОбъектов.Тестировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -2789,28 +2780,25 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Отчеты_ДеревоОбъектов_Тестировать</dcsset:field>
+						<dcsset:field>ВариантыОтчетовТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Отчеты_ДеревоОбъектов_Представление</dcsset:field>
+						<dcsset:field>ВариантыОтчетовПредставление</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Отчеты_ДеревоОбъектовИмяОтчета</dcsset:field>
+						<dcsset:field>ВариантыОтчетовИмяОтчета</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Отчеты_ДеревоОбъектов.Тестировать</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВариантыОтчетов.Тестировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -2828,34 +2816,31 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Печать_ДеревоОбъектов_Тестировать</dcsset:field>
+						<dcsset:field>ПечатныеФормыТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Печать_ДеревоОбъектов_ОбъектПечати</dcsset:field>
+						<dcsset:field>ПечатныеФормыОбъектПечати</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Печать_ДеревоОбъектов_Представление</dcsset:field>
+						<dcsset:field>ПечатныеФормыПредставление</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Печать_ДеревоОбъектовИмя</dcsset:field>
+						<dcsset:field>ПечатныеФормыИмя</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Печать_ДеревоОбъектовКартинка</dcsset:field>
+						<dcsset:field>ПечатныеФормыКартинка</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Печать_ДеревоОбъектов.Тестировать</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПечатныеФормы.Тестировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -2873,31 +2858,28 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Документы_ДеревоОбъектов_Тестировать</dcsset:field>
+						<dcsset:field>ДокументыКонфигурацииТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Документы_ДеревоОбъектов_Картинка</dcsset:field>
+						<dcsset:field>ДокументыКонфигурацииКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Документы_ДеревоОбъектов_Синоним</dcsset:field>
+						<dcsset:field>ДокументыКонфигурацииСиноним</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Документы_ДеревоОбъектовИмя</dcsset:field>
+						<dcsset:field>ДокументыКонфигурацииИмя</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Документы_ДеревоОбъектов.Тестировать</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДокументыКонфигурации.Тестировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -2915,31 +2897,28 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>Справочники_ДеревоОбъектов_Тестировать</dcsset:field>
+						<dcsset:field>СправочникиКонфигурацииТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Справочники_ДеревоОбъектов_Картинка</dcsset:field>
+						<dcsset:field>СправочникиКонфигурацииКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Справочники_ДеревоОбъектов_Синоним</dcsset:field>
+						<dcsset:field>СправочникиКонфигурацииСиноним</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>Справочники_ДеревоОбъектовИмя</dcsset:field>
+						<dcsset:field>СправочникиКонфигурацииИмя</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Справочники_ДеревоОбъектов.Тестировать</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
-							<dcsset:comparisonType>Equal</dcsset:comparisonType>
-							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-						</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СправочникиКонфигурации.Тестировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТолькоВыбранные</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
@@ -2961,7 +2940,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Проверить (прогнать тесты)</v8:content>
+					<v8:content>Проверить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2983,7 +2962,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы снять флажки</v8:content>
+					<v8:content>Снять флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Формы_СнятьФлажки</Action>
@@ -2999,7 +2978,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы установить флажки</v8:content>
+					<v8:content>Установить флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Формы_УстановитьФлажки</Action>
@@ -3009,7 +2988,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы свернуть все группы</v8:content>
+					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -3031,7 +3010,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы развернуть все группы</v8:content>
+					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Формы_РазвернутьВсеГруппы</Action>
@@ -3047,7 +3026,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать развернуть все группы</v8:content>
+					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Печать_РазвернутьВсеГруппы</Action>
@@ -3063,7 +3042,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать свернуть все группы</v8:content>
+					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Печать_СвернутьВсеГруппы</Action>
@@ -3079,7 +3058,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать снять все флажки</v8:content>
+					<v8:content>Снять все флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Печать_СнятьВсеФлажки</Action>
@@ -3095,7 +3074,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать проставить все флажки</v8:content>
+					<v8:content>Установить флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Печать_ПроставитьВсеФлажки</Action>
@@ -3111,7 +3090,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Формы заполнить</v8:content>
+					<v8:content>Заполнить формы объектов</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Формы_Заполнить</Action>
@@ -3126,12 +3105,12 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать заполнить</v8:content>
+					<v8:content>Заполнить печатные формы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Печать_Заполнить</Action>
 		</Command>
-		<Command name="_Информация_Очистить" id="10">
+		<Command name="Результаты_Очистить" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3141,10 +3120,10 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Информация очистить</v8:content>
+					<v8:content>Очистить</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>_Информация_Очистить</Action>
+			<Action>Результаты_Очистить</Action>
 		</Command>
 		<Command name="Отчеты_РазвернутьВсеГруппы" id="13">
 			<Title>
@@ -3156,7 +3135,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты развернуть все группы</v8:content>
+					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отчеты_РазвернутьВсеГруппы</Action>
@@ -3172,7 +3151,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты свернуть все группы</v8:content>
+					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отчеты_СвернутьВсеГруппы</Action>
@@ -3188,7 +3167,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты снять все флажки</v8:content>
+					<v8:content>Снять все флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отчеты_СнятьВсеФлажки</Action>
@@ -3204,7 +3183,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты проставить все флажки</v8:content>
+					<v8:content>Установить флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отчеты_ПроставитьВсеФлажки</Action>
@@ -3220,7 +3199,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчеты заполнить</v8:content>
+					<v8:content>Заполнить варианты отчетов</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Отчеты_Заполнить</Action>
@@ -3235,7 +3214,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники снять флажки</v8:content>
+					<v8:content>Снять флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Справочники_СнятьФлажки</Action>
@@ -3251,7 +3230,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники проставить флажки</v8:content>
+					<v8:content>Установить флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Справочники_УстановитьФлажки</Action>
@@ -3267,7 +3246,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники заполнить</v8:content>
+					<v8:content>Заполнить справочники (ПВХ и т.д.) из метаданных</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Справочники_Заполнить</Action>
@@ -3282,7 +3261,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники свернуть все группы</v8:content>
+					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Справочники_СвернутьВсеГруппы</Action>
@@ -3298,7 +3277,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники развернуть все группы</v8:content>
+					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Справочники_РазвернутьВсеГруппы</Action>
@@ -3314,7 +3293,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы установить флажки</v8:content>
+					<v8:content>Утановить флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -3334,7 +3313,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы снять флажки</v8:content>
+					<v8:content>Снять флажки</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -3354,7 +3333,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы заполнить</v8:content>
+					<v8:content>Заполнить документы из метаданных</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Документы_Заполнить</Action>
@@ -3369,7 +3348,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы развернуть все группы</v8:content>
+					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Документы_РазвернутьВсеГруппы</Action>
@@ -3385,7 +3364,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы свернуть все группы</v8:content>
+					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>Документы_СвернутьВсеГруппы</Action>
@@ -3406,7 +3385,7 @@
 			</ToolTip>
 			<Action>Проверки_Заполнить</Action>
 		</Command>
-		<Command name="Информация_РазвернутьВсеГруппы" id="30">
+		<Command name="Результаты_РазвернутьВсеГруппы" id="30">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3419,10 +3398,10 @@
 					<v8:content>Развернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Информация_РазвернутьВсеГруппы</Action>
+			<Action>Результаты_РазвернутьВсеГруппы</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="Информация_СвернутьВсеГруппы" id="31">
+		<Command name="Результаты_СвернутьВсеГруппы" id="31">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3435,7 +3414,7 @@
 					<v8:content>Свернуть все группы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Информация_СвернутьВсеГруппы</Action>
+			<Action>Результаты_СвернутьВсеГруппы</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Режимы_УстановитьФлажки" id="32">
