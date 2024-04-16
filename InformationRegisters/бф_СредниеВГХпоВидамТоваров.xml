@@ -36,9 +36,113 @@
 			<Name>бф_СредниеВГХпоВидамТоваров</Name>
 			<Comment/>
 			<ExtendedConfigurationObject>5cca76c8-18e0-475b-beba-019d24538d4b</ExtendedConfigurationObject>
+			<DefaultListForm>InformationRegister.бф_СредниеВГХпоВидамТоваров.Form.ФормаСписка</DefaultListForm>
 			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
 			<WriteMode>Independent</WriteMode>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Resource uuid="a6b48b2c-c143-45a7-8f36-2b3e0fcd6efd">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ДлинаКороба</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>2538dbcd-111d-475c-bc2e-ccc290c49a2a</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="344e0d41-3944-45ee-82b2-7de2eea79d1c">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>Вес</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>fa0d7627-916b-45bc-b2e7-0ece35f18ff6</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="1229ee01-5664-4441-8257-08fd6426f7b4">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ШиринаКороба</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>a128e96c-28cf-4384-aba5-d7fea36ca1da</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Resource uuid="10c4220f-219c-438e-9136-37102abe2e8f">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВысотаКороба</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>dce711f7-9668-4f87-9831-3b99000c9226</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Resource>
+			<Dimension uuid="e7fec47c-8b0e-4967-a31b-eada386fc747">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>ВидТовара</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>e71edcd5-9e5a-47c0-acaa-d1907a203c3f</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Dimension uuid="cce6f990-4d26-4f5a-9417-8d5c36d58b00">
+				<InternalInfo/>
+				<Properties>
+					<ObjectBelonging>Adopted</ObjectBelonging>
+					<Name>КоличествоПар</Name>
+					<Comment/>
+					<ExtendedConfigurationObject>ee6bf2dd-7df5-4bfd-90fe-0fac4d0f2e70</ExtendedConfigurationObject>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Properties>
+			</Dimension>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>
