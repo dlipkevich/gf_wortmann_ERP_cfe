@@ -27,7 +27,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Smoke test (дымовой тест) - &lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;термин из радиоэлектроники,&lt;/&gt;
+							<v8:content>&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Smoke test (дымовой тест)&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; - термин из радиоэлектроники,&lt;/&gt;
 &lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;первое включение нового устройства, задымится или нет.&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
@@ -259,7 +259,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Проверка открытия форм объектов</v8:content>
+															<v8:content>Открытие форм объектов</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Формы_СправкаКонтекстноеМеню" id="150"/>
@@ -280,18 +280,6 @@
 													</ToolTip>
 													<ExtendedTooltip name="Формы_НастройкаРасширеннаяПодсказка" id="105"/>
 													<ChildItems>
-														<InputField name="ОткрытиеФорм_КоличествоСсылок" id="45">
-															<DataPath>Формы_КоличествоОбъектов</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Сколько объектов одного типа проверять</v8:content>
-																</v8:item>
-															</Title>
-															<SpinButton>true</SpinButton>
-															<ContextMenu name="ОткрытиеФорм_КоличествоСсылокКонтекстноеМеню" id="46"/>
-															<ExtendedTooltip name="ОткрытиеФорм_КоличествоСсылокРасширеннаяПодсказка" id="47"/>
-														</InputField>
 														<CheckBoxField name="Формы_ОткрыватьМодально" id="519">
 															<DataPath>Формы_ОткрыватьМодально</DataPath>
 															<ToolTip>
@@ -983,7 +971,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Формирование отчетов с настройками по умолчанию</v8:content>
+															<v8:content>Формирование отчетов с текущими настройками пользоваетля</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Отчеты_СправкаКонтекстноеМеню" id="153"/>
@@ -1396,21 +1384,6 @@
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
-																<InputField name="ПечатныеФормыОбъектПечати" id="210">
-																	<DataPath>ПечатныеФормы.ОбъектПечати</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Данные</v8:content>
-																		</v8:item>
-																	</Title>
-																	<EditMode>EnterOnInput</EditMode>
-																	<ContextMenu name="ПечатныеФормыОбъектПечатиКонтекстноеМеню" id="211"/>
-																	<ExtendedTooltip name="ПечатныеФормыОбъектПечатиРасширеннаяПодсказка" id="212"/>
-																	<Events>
-																		<Event name="OnChange">ПечатныеФормыОбъектПечатиПриИзменении</Event>
-																	</Events>
-																</InputField>
 															</ChildItems>
 														</Table>
 													</ChildItems>
@@ -1438,162 +1411,227 @@
 					</ToolTip>
 					<ExtendedTooltip name="СтраницаРезультатаРасширеннаяПодсказка" id="433"/>
 					<ChildItems>
-						<Table name="РезультатыТестов" id="452">
-							<Representation>Tree</Representation>
-							<ChangeRowSet>false</ChangeRowSet>
-							<ChangeRowOrder>false</ChangeRowOrder>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<SearchOnInput>Use</SearchOnInput>
-							<InitialTreeView>ExpandAllLevels</InitialTreeView>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>РезультатыТестов</DataPath>
-							<CommandSet>
-								<ExcludedCommand>Add</ExcludedCommand>
-								<ExcludedCommand>Change</ExcludedCommand>
-								<ExcludedCommand>Copy</ExcludedCommand>
-								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
-								<ExcludedCommand>Delete</ExcludedCommand>
-								<ExcludedCommand>EndEdit</ExcludedCommand>
-								<ExcludedCommand>HierarchicalList</ExcludedCommand>
-								<ExcludedCommand>List</ExcludedCommand>
-								<ExcludedCommand>MoveDown</ExcludedCommand>
-								<ExcludedCommand>MoveUp</ExcludedCommand>
-								<ExcludedCommand>SelectAll</ExcludedCommand>
-								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
-								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
-								<ExcludedCommand>SortListAsc</ExcludedCommand>
-								<ExcludedCommand>SortListDesc</ExcludedCommand>
-								<ExcludedCommand>Tree</ExcludedCommand>
-							</CommandSet>
-							<SearchStringLocation>CommandBar</SearchStringLocation>
-							<ContextMenu name="РезультатыТестовКонтекстноеМеню" id="453"/>
-							<AutoCommandBar name="РезультатыТестовКоманднаяПанель" id="454">
-								<ChildItems>
-									<Button name="РезультатыТестовВывестиСписок" id="477" DisplayImportance="VeryHigh">
-										<Type>CommandBarButton</Type>
-										<Representation>PictureAndText</Representation>
-										<CommandName>Form.Item.РезультатыТестов.StandardCommand.OutputList</CommandName>
-										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
-										<ExtendedTooltip name="РезультатыТестовВывестиСписокРасширеннаяПодсказка" id="478"/>
-									</Button>
-									<Button name="Результаты_Очистить" id="223">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Результаты_Очистить</CommandName>
-										<ExtendedTooltip name="Результаты_ОчиститьРасширеннаяПодсказка" id="224"/>
-									</Button>
-									<Button name="Результаты_РазвернутьВсеГруппы" id="479">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Результаты_РазвернутьВсеГруппы</CommandName>
-										<Picture>
-											<xr:Ref>StdPicture.ExpandAll</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="Результаты_РазвернутьВсеГруппыРасширеннаяПодсказка" id="480"/>
-									</Button>
-									<Button name="Результаты_СвернутьВсеГруппы" id="481">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.Результаты_СвернутьВсеГруппы</CommandName>
-										<Picture>
-											<xr:Ref>StdPicture.CollapseAll</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="Результаты_СвернутьВсеГруппыРасширеннаяПодсказка" id="482"/>
-									</Button>
-								</ChildItems>
-							</AutoCommandBar>
-							<ExtendedTooltip name="РезультатыТестовРасширеннаяПодсказка" id="455"/>
-							<SearchStringAddition name="РезультатыТестовСтрокаПоиска" id="456">
-								<AdditionSource>
-									<Item>РезультатыТестов</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="РезультатыТестовСтрокаПоискаКонтекстноеМеню" id="457"/>
-								<ExtendedTooltip name="РезультатыТестовСтрокаПоискаРасширеннаяПодсказка" id="458"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="РезультатыТестовСостояниеПросмотра" id="459">
-								<AdditionSource>
-									<Item>РезультатыТестов</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="РезультатыТестовСостояниеПросмотраКонтекстноеМеню" id="460"/>
-								<ExtendedTooltip name="РезультатыТестовСостояниеПросмотраРасширеннаяПодсказка" id="461"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="РезультатыТестовУправлениеПоиском" id="462">
-								<AdditionSource>
-									<Item>РезультатыТестов</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="РезультатыТестовУправлениеПоискомКонтекстноеМеню" id="463"/>
-								<ExtendedTooltip name="РезультатыТестовУправлениеПоискомРасширеннаяПодсказка" id="464"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="Selection">РезультатыТестовВыбор</Event>
-							</Events>
+						<Pages name="СтраницыРезульатов" id="562">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы резульатов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы резульатов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыРезульатовРасширеннаяПодсказка" id="563"/>
 							<ChildItems>
-								<ColumnGroup name="РезультатыТестовГруппаОписание" id="483">
-									<EnableContentChange>true</EnableContentChange>
+								<Page name="СтраницаОшибок" id="564">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Результаты тестов группа описание</v8:content>
+											<v8:content>Ошибки</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Результаты тестов группа описание</v8:content>
+											<v8:content>Страница ошибок</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>InCell</Group>
-									<ExtendedTooltip name="РезультатыТестовГруппаОписаниеРасширеннаяПодсказка" id="484"/>
+									<TitleDataPath>КоличествоОшибок</TitleDataPath>
+									<ExtendedTooltip name="СтраницаОшибокРасширеннаяПодсказка" id="565"/>
 									<ChildItems>
-										<PictureField name="РезультатыТестовКартинка" id="485">
-											<DataPath>РезультатыТестов.Картинка</DataPath>
+										<Table name="НайденныеОшибки" id="452">
+											<Representation>Tree</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<SearchOnInput>Use</SearchOnInput>
+											<InitialTreeView>ExpandAllLevels</InitialTreeView>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>НайденныеОшибки</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>HierarchicalList</ExcludedCommand>
+												<ExcludedCommand>List</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+												<ExcludedCommand>Tree</ExcludedCommand>
+											</CommandSet>
+											<SearchStringLocation>CommandBar</SearchStringLocation>
+											<ContextMenu name="НайденныеОшибкиКонтекстноеМеню" id="453"/>
+											<AutoCommandBar name="НайденныеОшибкиКоманднаяПанель" id="454">
+												<ChildItems>
+													<Button name="РезультатыТестовВывестиСписок" id="477" DisplayImportance="VeryHigh">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Item.НайденныеОшибки.StandardCommand.OutputList</CommandName>
+														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="РезультатыТестовВывестиСписокРасширеннаяПодсказка" id="478"/>
+													</Button>
+													<Button name="Результаты_Очистить" id="223">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Результаты_Очистить</CommandName>
+														<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="Результаты_ОчиститьРасширеннаяПодсказка" id="224"/>
+													</Button>
+													<Button name="Результаты_РазвернутьВсеГруппы" id="479">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Результаты_РазвернутьВсеГруппы</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Результаты_РазвернутьВсеГруппыРасширеннаяПодсказка" id="480"/>
+													</Button>
+													<Button name="Результаты_СвернутьВсеГруппы" id="481">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.Результаты_СвернутьВсеГруппы</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="Результаты_СвернутьВсеГруппыРасширеннаяПодсказка" id="482"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="НайденныеОшибкиРасширеннаяПодсказка" id="455"/>
+											<SearchStringAddition name="НайденныеОшибкиСтрокаПоиска" id="456">
+												<AdditionSource>
+													<Item>НайденныеОшибки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НайденныеОшибкиСтрокаПоискаКонтекстноеМеню" id="457"/>
+												<ExtendedTooltip name="НайденныеОшибкиСтрокаПоискаРасширеннаяПодсказка" id="458"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="НайденныеОшибкиСостояниеПросмотра" id="459">
+												<AdditionSource>
+													<Item>НайденныеОшибки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="НайденныеОшибкиСостояниеПросмотраКонтекстноеМеню" id="460"/>
+												<ExtendedTooltip name="НайденныеОшибкиСостояниеПросмотраРасширеннаяПодсказка" id="461"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="НайденныеОшибкиУправлениеПоиском" id="462">
+												<AdditionSource>
+													<Item>НайденныеОшибки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="НайденныеОшибкиУправлениеПоискомКонтекстноеМеню" id="463"/>
+												<ExtendedTooltip name="НайденныеОшибкиУправлениеПоискомРасширеннаяПодсказка" id="464"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">НайденныеОшибкиВыбор</Event>
+											</Events>
+											<ChildItems>
+												<ColumnGroup name="РезультатыТестовГруппаОписание" id="483">
+													<EnableContentChange>true</EnableContentChange>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Результаты тестов группа описание</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Результаты тестов группа описание</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="РезультатыТестовГруппаОписаниеРасширеннаяПодсказка" id="484"/>
+													<ChildItems>
+														<PictureField name="РезультатыТестовКартинка" id="485">
+															<DataPath>НайденныеОшибки.Картинка</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<ShowInHeader>false</ShowInHeader>
+															<ContextMenu name="РезультатыТестовКартинкаКонтекстноеМеню" id="486"/>
+															<ExtendedTooltip name="РезультатыТестовКартинкаРасширеннаяПодсказка" id="487"/>
+														</PictureField>
+														<InputField name="РезультатыТестовПроверки" id="474">
+															<DataPath>НайденныеОшибки.РежимПроверки</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>1</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="РезультатыТестовПроверкиКонтекстноеМеню" id="475"/>
+															<ExtendedTooltip name="РезультатыТестовПроверкиРасширеннаяПодсказка" id="476"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
+												<InputField name="РезультатыТестовОписание" id="468">
+													<DataPath>НайденныеОшибки.Описание</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<MultiLine>true</MultiLine>
+													<ContextMenu name="РезультатыТестовОписаниеКонтекстноеМеню" id="469"/>
+													<ExtendedTooltip name="РезультатыТестовОписаниеРасширеннаяПодсказка" id="470"/>
+												</InputField>
+												<InputField name="РезультатыТестовПроверяемыйОбъект" id="465">
+													<DataPath>НайденныеОшибки.ПолноеИмяОбъекта</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<CellHyperlink>true</CellHyperlink>
+													<ContextMenu name="РезультатыТестовПроверяемыйОбъектКонтекстноеМеню" id="466"/>
+													<ExtendedTooltip name="РезультатыТестовПроверяемыйОбъектРасширеннаяПодсказка" id="467"/>
+												</InputField>
+												<InputField name="РезультатыТестовДанные" id="471">
+													<DataPath>НайденныеОшибки.Данные</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>false</ChoiceButton>
+													<ClearButton>false</ClearButton>
+													<OpenButton>true</OpenButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="РезультатыТестовДанныеКонтекстноеМеню" id="472"/>
+													<ExtendedTooltip name="РезультатыТестовДанныеРасширеннаяПодсказка" id="473"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаПротокола" id="566">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Протокол</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница протокола</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаПротоколаРасширеннаяПодсказка" id="567"/>
+									<ChildItems>
+										<InputField name="ТекстПротокола" id="568">
+											<DataPath>ТекстПротокола</DataPath>
 											<TitleLocation>None</TitleLocation>
-											<EditMode>EnterOnInput</EditMode>
-											<ShowInHeader>false</ShowInHeader>
-											<ContextMenu name="РезультатыТестовКартинкаКонтекстноеМеню" id="486"/>
-											<ExtendedTooltip name="РезультатыТестовКартинкаРасширеннаяПодсказка" id="487"/>
-										</PictureField>
-										<InputField name="РезультатыТестовПроверки" id="474">
-											<DataPath>РезультатыТестов.РежимПроверки</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
-											<ContextMenu name="РезультатыТестовПроверкиКонтекстноеМеню" id="475"/>
-											<ExtendedTooltip name="РезультатыТестовПроверкиРасширеннаяПодсказка" id="476"/>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<MultiLine>true</MultiLine>
+											<ExtendedEdit>true</ExtendedEdit>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ТекстПротоколаКонтекстноеМеню" id="569"/>
+											<ExtendedTooltip name="ТекстПротоколаРасширеннаяПодсказка" id="570"/>
 										</InputField>
 									</ChildItems>
-								</ColumnGroup>
-								<InputField name="РезультатыТестовОписание" id="468">
-									<DataPath>РезультатыТестов.Описание</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<MultiLine>true</MultiLine>
-									<ContextMenu name="РезультатыТестовОписаниеКонтекстноеМеню" id="469"/>
-									<ExtendedTooltip name="РезультатыТестовОписаниеРасширеннаяПодсказка" id="470"/>
-								</InputField>
-								<InputField name="РезультатыТестовПроверяемыйОбъект" id="465">
-									<DataPath>РезультатыТестов.ПроверяемыйОбъект</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<CellHyperlink>true</CellHyperlink>
-									<ContextMenu name="РезультатыТестовПроверяемыйОбъектКонтекстноеМеню" id="466"/>
-									<ExtendedTooltip name="РезультатыТестовПроверяемыйОбъектРасширеннаяПодсказка" id="467"/>
-								</InputField>
-								<InputField name="РезультатыТестовДанные" id="471">
-									<DataPath>РезультатыТестов.Данные</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>false</ChoiceButton>
-									<ClearButton>false</ClearButton>
-									<OpenButton>true</OpenButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="РезультатыТестовДанныеКонтекстноеМеню" id="472"/>
-									<ExtendedTooltip name="РезультатыТестовДанныеРасширеннаяПодсказка" id="473"/>
-								</InputField>
+								</Page>
 							</ChildItems>
-						</Table>
+						</Pages>
 						<UsualGroup name="ГруппаAllure" id="442">
 							<Title>
 								<v8:item>
@@ -1788,134 +1826,15 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-			</Columns>
-		</Attribute>
-		<Attribute name="Формы_КоличествоОбъектов" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Формы количество объектов</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>2</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-			<Save>
-				<Field>Формы_КоличествоОбъектов</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="ВыполненныеПроверки" id="10">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выполненные проверки</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8:ValueTable</v8:Type>
-			</Type>
-			<Save>
-				<Field>ВыполненныеПроверки</Field>
-			</Save>
-			<Columns>
-				<Column name="ПроверяемыйОбъект" id="1">
+				<Column name="ЕстьСсылки" id="10">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Проверяемый объект</v8:content>
+							<v8:content>Есть ссылки</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Описание" id="2">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Описание</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Данные" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Данные</v8:content>
-						</v8:item>
-					</Title>
-					<Type/>
-				</Column>
-				<Column name="РежимПроверки" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Режим проверки</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="Картинка" id="5">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Картинка</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>v8ui:Picture</v8:Type>
-					</Type>
-				</Column>
-				<Column name="КраткоеОписание" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Краткое описание</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="СтатусАллюр" id="7">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус аллюр</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>10</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -2014,26 +1933,6 @@
 						</v8:item>
 					</Title>
 					<Type/>
-				</Column>
-				<Column name="ОбъектПечати" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Объект печати</v8:content>
-						</v8:item>
-					</Title>
-					<Type/>
-				</Column>
-				<Column name="БылаОшибкаПриФормировании" id="9">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Была ошибка при формировании</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
 				</Column>
 				<Column name="Имя" id="12">
 					<Title>
@@ -2206,17 +2105,6 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="БылаОшибкаПриФормировании" id="10">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Была ошибка при формировании</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
 				<Column name="ПолноеИмя" id="11">
 					<Title>
 						<v8:item>
@@ -2339,22 +2227,6 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-				<Column name="КоличествоСсылок" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество тестируемых объектов</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ДокументыКонфигурации" id="16">
@@ -2441,33 +2313,6 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="Количество" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Количество тестируемых ссылок</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-				</Column>
-				<Column name="СписокСсылок" id="9">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Список ссылок</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>v8:ValueListType</v8:Type>
 					</Type>
 				</Column>
 			</Columns>
@@ -2593,25 +2438,25 @@
 				<Field>КаталогВыгрузкиAllure</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="РезультатыТестов" id="19">
+		<Attribute name="НайденныеОшибки" id="19">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Результаты тестов</v8:content>
+					<v8:content>Найденные ошибки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
 			</Type>
 			<Save>
-				<Field>РезультатыТестов</Field>
+				<Field>НайденныеОшибки</Field>
 			</Save>
 			<Columns>
-				<Column name="ПроверяемыйОбъект" id="1">
+				<Column name="ПолноеИмяОбъекта" id="1">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Проверяемый объект</v8:content>
+							<v8:content>Полное имя объекта</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -2644,7 +2489,9 @@
 							<v8:content>Данные</v8:content>
 						</v8:item>
 					</Title>
-					<Type/>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
 				</Column>
 				<Column name="РежимПроверки" id="4">
 					<Title>
@@ -2672,11 +2519,11 @@
 						<v8:Type>v8ui:Picture</v8:Type>
 					</Type>
 				</Column>
-				<Column name="СтатусАллюр" id="6">
+				<Column name="СтатусПроверки" id="6">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Статус аллюр</v8:content>
+							<v8:content>Статус проверки</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -2736,6 +2583,104 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ТекстПротокола" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст протокола</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ТекстПротокола</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоОшибок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ошибок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>КоличествоОшибок</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СсылкиНаОбъекты" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылки на объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПолноеИмя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Проведен" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
