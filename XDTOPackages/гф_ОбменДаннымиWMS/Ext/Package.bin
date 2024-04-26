@@ -116,6 +116,12 @@
 		<property name="Цена" localName="price">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
+		<property name="Вариант" localName="reference1">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Номенклатура" localName="reference2">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
 	</objectType>
 	<objectType name="СтрокаТовара2">
 		<property name="НомерСтроки" localName="line_no">
@@ -236,6 +242,18 @@
 		<property xmlns:d3p1="WMS" name="Комментарии" type="d3p1:Комментарии" localName="comments"/>
 		<property xmlns:d3p1="WMS" name="Атрибуты" type="d3p1:Атрибуты" localName="attributes"/>
 		<property xmlns:d3p1="WMS" name="СерийныеНомера" type="d3p1:СерийныеНомера" localName="expected_serials"/>
+		<property name="Цена" localName="price">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Вариант" localName="reference1">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Номенклатура" localName="reference2">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Места" localName="reference3">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
 	</objectType>
 	<objectType name="Атрибуты">
 		<property name="Атрибут" upperBound="10" localName="attribute"/>
@@ -378,6 +396,12 @@
 		</property>
 		<property xmlns:d3p1="WMS" name="Комментарии" type="d3p1:Комментарии" localName="comments"/>
 		<property name="Сумма" localName="Summa">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Вариант" localName="reference1">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="Номенклатура" localName="reference2">
 			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
 		</property>
 	</objectType>
