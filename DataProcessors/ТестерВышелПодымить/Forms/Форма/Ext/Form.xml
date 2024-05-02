@@ -87,7 +87,7 @@
 								<Table name="РежимыПроверок" id="574">
 									<Representation>List</Representation>
 									<ChangeRowSet>false</ChangeRowSet>
-									<Width>16</Width>
+									<Width>17</Width>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<Height>6</Height>
 									<AutoMaxHeight>false</AutoMaxHeight>
@@ -198,33 +198,18 @@
 										</InputField>
 									</ChildItems>
 								</Table>
-								<UsualGroup name="ГруппаВключитьВыключить" id="491">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ГруппаВключитьВыключить</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа включить выключить</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаВключитьВыключитьРасширеннаяПодсказка" id="492"/>
-								</UsualGroup>
 								<Button name="ФормаПроверки_Заполнить" id="426">
 									<Type>UsualButton</Type>
+									<Width>17</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<CommandName>Form.Command.Проверки_Заполнить</CommandName>
 									<ExtendedTooltip name="ФормаПроверки_ЗаполнитьРасширеннаяПодсказка" id="427"/>
 								</Button>
 								<Button name="ФормаНастроитьВыбранныеОбъекты" id="544">
 									<Type>UsualButton</Type>
 									<Representation>PictureAndText</Representation>
+									<Width>17</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<CommandName>Form.Command.НастроитьВыбранныеОбъекты</CommandName>
 									<ExtendedTooltip name="ФормаНастроитьВыбранныеОбъектыРасширеннаяПодсказка" id="545"/>
 								</Button>
@@ -237,15 +222,11 @@
 								<Button name="НастройкиПроверок" id="593">
 									<Type>UsualButton</Type>
 									<Representation>PictureAndText</Representation>
+									<Width>17</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<CommandName>Form.Command.НастройкиПроверки</CommandName>
 									<ExtendedTooltip name="НастройкиПроверокРасширеннаяПодсказка" id="594"/>
 								</Button>
-								<UsualGroup name="Группа2" id="598">
-									<Behavior>Usual</Behavior>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="599"/>
-								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаТестов" id="434">
@@ -362,6 +343,7 @@
 																	<Button name="Документы_Заполнить" id="400">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Документы_Заполнить</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 																		<ExtendedTooltip name="Документы_ЗаполнитьРасширеннаяПодсказка" id="401"/>
 																	</Button>
 																	<Button name="Документы_УстановитьФлажки" id="396">
@@ -436,18 +418,6 @@
 																	</Events>
 																</CheckBoxField>
 																<ColumnGroup name="ДокументыКонфигурацииГруппаПроверяемыйОбъект" id="406">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Документы конфигурации группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Документы конфигурации группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</ToolTip>
 																	<Group>InCell</Group>
 																	<ExtendedTooltip name="ДокументыКонфигурацииГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="407"/>
 																	<ChildItems>
@@ -482,6 +452,15 @@
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
+																<InputField name="ДокументыКонфигурацииСтатусТеста" id="618">
+																	<DataPath>ДокументыКонфигурации.СтатусТеста</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>8</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ДокументыКонфигурацииСтатусТестаКонтекстноеМеню" id="619"/>
+																	<ExtendedTooltip name="ДокументыКонфигурацииСтатусТестаРасширеннаяПодсказка" id="620"/>
+																</InputField>
 															</ChildItems>
 														</Table>
 													</ChildItems>
@@ -568,6 +547,7 @@
 																	<Button name="Справочники_Заполнить" id="339">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Справочники_Заполнить</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 																		<ExtendedTooltip name="Справочники_ЗаполнитьРасширеннаяПодсказка" id="340"/>
 																	</Button>
 																	<Button name="Справочники_ПроставитьФлажки" id="335">
@@ -649,18 +629,6 @@
 																	</Events>
 																</CheckBoxField>
 																<ColumnGroup name="СправочникиКонфигурацииГруппаПроверяемыйОбъект" id="345">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Справочники конфигурации группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Справочники конфигурации группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</ToolTip>
 																	<Group>InCell</Group>
 																	<ExtendedTooltip name="СправочникиКонфигурацииГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="346"/>
 																	<ChildItems>
@@ -695,6 +663,15 @@
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
+																<InputField name="СправочникиКонфигурацииСтатусТеста" id="621">
+																	<DataPath>СправочникиКонфигурации.СтатусТеста</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>8</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="СправочникиКонфигурацииСтатусТестаКонтекстноеМеню" id="622"/>
+																	<ExtendedTooltip name="СправочникиКонфигурацииСтатусТестаРасширеннаяПодсказка" id="623"/>
+																</InputField>
 															</ChildItems>
 														</Table>
 													</ChildItems>
@@ -798,6 +775,7 @@
 																	<Button name="Отчеты_Заполнить" id="278">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Отчеты_Заполнить</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 																		<ExtendedTooltip name="Отчеты_ЗаполнитьРасширеннаяПодсказка" id="279"/>
 																	</Button>
 																	<Button name="Отчеты_ПроставитьВсеФлажки" id="286">
@@ -880,18 +858,6 @@
 																	</Events>
 																</CheckBoxField>
 																<ColumnGroup name="ВариантыОтчетовГруппаПроверяемыйОбъект" id="536">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Варианты отчетов группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Варианты отчетов группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</ToolTip>
 																	<Group>InCell</Group>
 																	<ExtendedTooltip name="ВариантыОтчетовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="537"/>
 																	<ChildItems>
@@ -925,6 +891,15 @@
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
+																<InputField name="ВариантыОтчетовСтатусТеста" id="624">
+																	<DataPath>ВариантыОтчетов.СтатусТеста</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>8</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ВариантыОтчетовСтатусТестаКонтекстноеМеню" id="625"/>
+																	<ExtendedTooltip name="ВариантыОтчетовСтатусТестаРасширеннаяПодсказка" id="626"/>
+																</InputField>
 															</ChildItems>
 														</Table>
 													</ChildItems>
@@ -956,7 +931,7 @@
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Формирование печатных форм с настройками по умолчанию.</v8:content>
+															<v8:content>Формирование печатных форм.</v8:content>
 														</v8:item>
 													</Title>
 													<ContextMenu name="Печать_СправкаКонтекстноеМеню" id="156"/>
@@ -1030,6 +1005,7 @@
 																	<Button name="Печать_Заполнить" id="218">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Печать_Заполнить</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 																		<ExtendedTooltip name="Печать_ЗаполнитьРасширеннаяПодсказка" id="219"/>
 																	</Button>
 																	<Button name="Печать_ПроставитьВсеФлажки" id="190">
@@ -1112,18 +1088,6 @@
 																	</Events>
 																</CheckBoxField>
 																<ColumnGroup name="ПечатныеФормыГруппаПроверямыйОбъект" id="528">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Печатные формы группа проверямый объект</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Печатные формы группа проверямый объект</v8:content>
-																		</v8:item>
-																	</ToolTip>
 																	<Group>InCell</Group>
 																	<ExtendedTooltip name="ПечатныеФормыГруппаПроверямыйОбъектРасширеннаяПодсказка" id="529"/>
 																	<ChildItems>
@@ -1157,6 +1121,15 @@
 																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
+																<InputField name="ПечатныеФормыСтатусТеста" id="627">
+																	<DataPath>ПечатныеФормы.СтатусТеста</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<Width>8</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ПечатныеФормыСтатусТестаКонтекстноеМеню" id="628"/>
+																	<ExtendedTooltip name="ПечатныеФормыСтатусТестаРасширеннаяПодсказка" id="629"/>
+																</InputField>
 															</ChildItems>
 														</Table>
 													</ChildItems>
@@ -1243,6 +1216,7 @@
 																	<Button name="Формы_Заполнить" id="216">
 																		<Type>CommandBarButton</Type>
 																		<CommandName>Form.Command.Формы_Заполнить</CommandName>
+																		<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 																		<ExtendedTooltip name="Формы_ЗаполнитьРасширеннаяПодсказка" id="217"/>
 																	</Button>
 																	<Button name="Формы_УстановитьФлажки" id="63">
@@ -1325,18 +1299,6 @@
 																	</Events>
 																</CheckBoxField>
 																<ColumnGroup name="ФормыОбъектовГруппаПроверяемыйОбъект" id="28">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Формы объектов группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Формы объектов группа проверяемый объект</v8:content>
-																		</v8:item>
-																	</ToolTip>
 																	<Group>InCell</Group>
 																	<ExtendedTooltip name="ФормыОбъектовГруппаПроверяемыйОбъектРасширеннаяПодсказка" id="29"/>
 																	<ChildItems>
@@ -1363,14 +1325,23 @@
 																			<ContextMenu name="ФормыОбъектовИмяКонтекстноеМеню" id="17"/>
 																			<ExtendedTooltip name="ФормыОбъектовИмяРасширеннаяПодсказка" id="18"/>
 																		</InputField>
+																		<InputField name="ФормыОбъектовСиноним" id="609">
+																			<DataPath>ФормыОбъектов.Синоним</DataPath>
+																			<TitleLocation>None</TitleLocation>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ФормыОбъектовСинонимКонтекстноеМеню" id="610"/>
+																			<ExtendedTooltip name="ФормыОбъектовСинонимРасширеннаяПодсказка" id="611"/>
+																		</InputField>
 																	</ChildItems>
 																</ColumnGroup>
-																<InputField name="ФормыОбъектовПараметрыФормы" id="48">
-																	<DataPath>ФормыОбъектов.ПараметрыФормы</DataPath>
-																	<Visible>false</Visible>
+																<InputField name="ФормыОбъектовСтатусТеста" id="630">
+																	<DataPath>ФормыОбъектов.СтатусТеста</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<EditMode>EnterOnInput</EditMode>
-																	<ContextMenu name="ФормыОбъектовПараметрыФормыКонтекстноеМеню" id="49"/>
-																	<ExtendedTooltip name="ФормыОбъектовПараметрыФормыРасширеннаяПодсказка" id="50"/>
+																	<Width>8</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ФормыОбъектовСтатусТестаКонтекстноеМеню" id="631"/>
+																	<ExtendedTooltip name="ФормыОбъектовСтатусТестаРасширеннаяПодсказка" id="632"/>
 																</InputField>
 															</ChildItems>
 														</Table>
@@ -1529,18 +1500,6 @@
 											<ChildItems>
 												<ColumnGroup name="РезультатыТестовГруппаОписание" id="483">
 													<EnableContentChange>true</EnableContentChange>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Результаты тестов группа описание</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Результаты тестов группа описание</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>InCell</Group>
 													<ExtendedTooltip name="РезультатыТестовГруппаОписаниеРасширеннаяПодсказка" id="484"/>
 													<ChildItems>
@@ -1552,13 +1511,19 @@
 															<ContextMenu name="РезультатыТестовКартинкаКонтекстноеМеню" id="486"/>
 															<ExtendedTooltip name="РезультатыТестовКартинкаРасширеннаяПодсказка" id="487"/>
 														</PictureField>
-														<InputField name="РезультатыТестовПроверки" id="474">
+														<InputField name="РезультатыТестовРежимПроверки" id="474">
 															<DataPath>НайденныеОшибки.РежимПроверки</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Проверка</v8:content>
+																</v8:item>
+															</Title>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>1</Width>
 															<AutoMaxWidth>false</AutoMaxWidth>
-															<ContextMenu name="РезультатыТестовПроверкиКонтекстноеМеню" id="475"/>
-															<ExtendedTooltip name="РезультатыТестовПроверкиРасширеннаяПодсказка" id="476"/>
+															<ContextMenu name="РезультатыТестовРежимПроверкиКонтекстноеМеню" id="475"/>
+															<ExtendedTooltip name="РезультатыТестовРежимПроверкиРасширеннаяПодсказка" id="476"/>
 														</InputField>
 													</ChildItems>
 												</ColumnGroup>
@@ -1581,12 +1546,14 @@
 													<ContextMenu name="РезультатыТестовДанныеКонтекстноеМеню" id="472"/>
 													<ExtendedTooltip name="РезультатыТестовДанныеРасширеннаяПодсказка" id="473"/>
 												</InputField>
-												<InputField name="РезультатыТестовОписание" id="468">
-													<DataPath>НайденныеОшибки.Описание</DataPath>
+												<InputField name="РезультатыТестовОписаниеРезультата" id="468">
+													<DataPath>НайденныеОшибки.ОписаниеРезультата</DataPath>
+													<ReadOnly>true</ReadOnly>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>32</Width>
 													<MultiLine>true</MultiLine>
-													<ContextMenu name="РезультатыТестовОписаниеКонтекстноеМеню" id="469"/>
-													<ExtendedTooltip name="РезультатыТестовОписаниеРасширеннаяПодсказка" id="470"/>
+													<ContextMenu name="РезультатыТестовОписаниеРезультатаКонтекстноеМеню" id="469"/>
+													<ExtendedTooltip name="РезультатыТестовОписаниеРезультатаРасширеннаяПодсказка" id="470"/>
 												</InputField>
 											</ChildItems>
 										</Table>
@@ -1607,6 +1574,24 @@
 									</ToolTip>
 									<ExtendedTooltip name="СтраницаПротоколаРасширеннаяПодсказка" id="567"/>
 									<ChildItems>
+										<CommandBar name="КоманднаяПанелПротокола" id="616" DisplayImportance="Low">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панел протокола</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КоманднаяПанелПротоколаРасширеннаяПодсказка" id="617"/>
+											<ChildItems>
+												<Button name="Протокол_СохранитьВФайл" id="614" DisplayImportance="Low">
+													<Type>CommandBarButton</Type>
+													<SkipOnInput>true</SkipOnInput>
+													<CommandName>Form.Command.Протокол_СохранитьВФайл</CommandName>
+													<ShapeRepresentation>WhenActive</ShapeRepresentation>
+													<ExtendedTooltip name="Протокол_СохранитьВФайлРасширеннаяПодсказка" id="615"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
 										<InputField name="ТекстПротокола" id="568">
 											<DataPath>ТекстПротокола</DataPath>
 											<TitleLocation>None</TitleLocation>
@@ -1622,50 +1607,6 @@
 								</Page>
 							</ChildItems>
 						</Pages>
-						<UsualGroup name="ГруппаAllure" id="442">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Allure</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа allure</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
-							<ExtendedTooltip name="ГруппаAllureРасширеннаяПодсказка" id="443"/>
-							<ChildItems>
-								<CheckBoxField name="ДелатьОтчетВФорматеАллюр" id="444">
-									<DataPath>ДелатьОтчетВФорматеАллюр</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<ToolTipRepresentation>Button</ToolTipRepresentation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ДелатьОтчетВФорматеАллюрКонтекстноеМеню" id="445"/>
-									<ExtendedTooltip name="ДелатьОтчетВФорматеАллюрРасширеннаяПодсказка" id="446"/>
-								</CheckBoxField>
-								<InputField name="КаталогВыгрузкиAllure" id="449">
-									<DataPath>КаталогВыгрузкиAllure</DataPath>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Каталог, куда выгружаются данные в формате Allure</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ToolTipRepresentation>Button</ToolTipRepresentation>
-									<ChoiceButton>true</ChoiceButton>
-									<ClearButton>true</ClearButton>
-									<ContextMenu name="КаталогВыгрузкиAllureКонтекстноеМеню" id="450"/>
-									<ExtendedTooltip name="КаталогВыгрузкиAllureРасширеннаяПодсказка" id="451"/>
-									<Events>
-										<Event name="StartChoice">КаталогВыгрузкиАллюреНачалоВыбора</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1781,21 +1722,6 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
-				<Column name="ПараметрыФормы" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Параметры формы</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
 				<Column name="ИмяОсновнойФормы" id="8">
 					<Title>
 						<v8:item>
@@ -1831,6 +1757,21 @@
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусТеста" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус теста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -1969,6 +1910,21 @@
 					</Title>
 					<Type>
 						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатусТеста" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус теста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -2127,6 +2083,21 @@
 						<v8:Type>v8ui:Picture</v8:Type>
 					</Type>
 				</Column>
+				<Column name="СтатусТеста" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус теста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="СправочникиКонфигурации" id="15">
@@ -2213,6 +2184,21 @@
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусТеста" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус теста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -2303,39 +2289,22 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
+				<Column name="СтатусТеста" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус теста</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
-		</Attribute>
-		<Attribute name="ДелатьОтчетВФорматеАллюр" id="11">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сохраниять результаты для отчета Allure</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-			<Save>
-				<Field>ДелатьОтчетВФорматеАллюр</Field>
-			</Save>
-		</Attribute>
-		<Attribute name="КаталогВыгрузкиAllure" id="18">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Каталог выгрузки файлов для Allure</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-			<Save>
-				<Field>КаталогВыгрузкиAllure</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="НайденныеОшибки" id="19">
 			<Title>
@@ -2366,11 +2335,11 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="Описание" id="2">
+				<Column name="ОписаниеРезультата" id="2">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Описание</v8:content>
+							<v8:content>Описание результата</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -2418,26 +2387,26 @@
 						<v8:Type>v8ui:Picture</v8:Type>
 					</Type>
 				</Column>
-				<Column name="СтатусПроверки" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус проверки</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>10</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
 				<Column name="КраткоеОписание" id="7">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Краткое описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СутьПроверки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суть проверки</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -2627,12 +2596,26 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДатаОкончания" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>ДатаОкончания</Field>
+			</Save>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>ФормыОбъектовИмя</dcsset:field>
-					</dcsset:item>
 					<dcsset:item>
 						<dcsset:field>ФормыОбъектовТестировать</dcsset:field>
 					</dcsset:item>
@@ -2640,7 +2623,13 @@
 						<dcsset:field>ФормыОбъектовКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ФормыОбъектовПараметрыФормы</dcsset:field>
+						<dcsset:field>ФормыОбъектовИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФормыОбъектовСиноним</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ФормыОбъектовСтатусТеста</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2673,10 +2662,16 @@
 						<dcsset:field>ВариантыОтчетовТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ВариантыОтчетовПредставление</dcsset:field>
+						<dcsset:field>ВариантыОтчетовКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
 						<dcsset:field>ВариантыОтчетовИмяОтчета</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтчетовПредставление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ВариантыОтчетовСтатусТеста</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2709,16 +2704,16 @@
 						<dcsset:field>ПечатныеФормыТестировать</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ПечатныеФормыОбъектПечати</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>ПечатныеФормыПредставление</dcsset:field>
+						<dcsset:field>ПечатныеФормыКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
 						<dcsset:field>ПечатныеФормыИмя</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ПечатныеФормыКартинка</dcsset:field>
+						<dcsset:field>ПечатныеФормыПредставление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПечатныеФормыСтатусТеста</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2754,10 +2749,13 @@
 						<dcsset:field>ДокументыКонфигурацииКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
+						<dcsset:field>ДокументыКонфигурацииИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
 						<dcsset:field>ДокументыКонфигурацииСиноним</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>ДокументыКонфигурацииИмя</dcsset:field>
+						<dcsset:field>ДокументыКонфигурацииСтатусТеста</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -2793,10 +2791,13 @@
 						<dcsset:field>СправочникиКонфигурацииКартинка</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
+						<dcsset:field>СправочникиКонфигурацииИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
 						<dcsset:field>СправочникиКонфигурацииСиноним</dcsset:field>
 					</dcsset:item>
 					<dcsset:item>
-						<dcsset:field>СправочникиКонфигурацииИмя</dcsset:field>
+						<dcsset:field>СправочникиКонфигурацииСтатусТеста</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -3386,6 +3387,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НастройкиПроверки</Action>
+		</Command>
+		<Command name="Протокол_СохранитьВФайл" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол сохранить в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить протокол в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Протокол_СохранитьВФайл</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

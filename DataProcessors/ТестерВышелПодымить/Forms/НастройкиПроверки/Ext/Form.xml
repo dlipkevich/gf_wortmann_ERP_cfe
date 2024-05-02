@@ -29,11 +29,11 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаНастройкиДокументов" id="29">
+		<UsualGroup name="ГруппаНастройкиДокументовСправочников" id="29">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы</v8:content>
+					<v8:content>Документы, справочники и другие ссылки</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -42,10 +42,6 @@
 			</Title>
 			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настройки форм</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Financial instruments</v8:content>
 				</v8:item>
@@ -53,8 +49,26 @@
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаНастройкиДокументовРасширеннаяПодсказка" id="30"/>
+			<ExtendedTooltip name="ГруппаНастройкиДокументовСправочниковРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
+				<LabelDecoration name="ОписанииеПроверкиДокументов" id="31">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;- &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Перезапись&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; ссылочных объектов - проверка таких событий как:&lt;/&gt;
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;   &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ОбработкаПроверкиЗаполнения&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ПередЗаписью&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ПриЗаписи&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;,&lt;/&gt;
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;   &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ОбработкаУдаленияПроведения&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ОбработкаПроведения&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; (для документов с проведением);&lt;/&gt;
+
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;- &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Копирование&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; и &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;создание&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; новых объектов – проверка событий &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ПриКопировании&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ОбработкаЗаполнения&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;.&lt;/&gt;
+
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Все изменения производятся в транзакции, которая в последствии отменяется&lt;/&gt;
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;(тест можно запускать даже на рабочей базе).&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписанииеПроверкиДокументовКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОписанииеПроверкиДокументовРасширеннаяПодсказка" id="33"/>
+				</LabelDecoration>
 				<InputField name="СколькоОднотипныхДокументовПроверять" id="3">
 					<DataPath>Объект.СколькоПроверятьОднотипныхДокументов</DataPath>
 					<Title>
@@ -67,13 +81,25 @@
 					<ContextMenu name="СколькоОднотипныхДокументовПроверятьКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="СколькоОднотипныхДокументовПроверятьРасширеннаяПодсказка" id="5"/>
 				</InputField>
+				<InputField name="СколькоОднотипныхОбъектовПроверять" id="8">
+					<DataPath>Объект.СколькоПроверятьОднотипныхОбъектов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сколько прочих объектов одного типа проверять</v8:content>
+						</v8:item>
+					</Title>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="СколькоОднотипныхОбъектовПроверятьКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СколькоОднотипныхОбъектовПроверятьРасширеннаяПодсказка" id="10"/>
+				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаНастройкиСправочников" id="27">
+		<UsualGroup name="ГруппаНастройкиОтчетовПечатныхФорм" id="40">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Справочники</v8:content>
+					<v8:content>Отчеты и печатные формы</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -82,31 +108,38 @@
 			</Title>
 			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настройки форм</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Financial instruments</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки отчетов печатных форм</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаНастройкиСправочниковРасширеннаяПодсказка" id="28"/>
+			<ExtendedTooltip name="ГруппаНастройкиОтчетовПечатныхФормРасширеннаяПодсказка" id="41"/>
 			<ChildItems>
-				<InputField name="СколькоОднотипныхОбъектовПроверять" id="8">
-					<DataPath>Объект.СколькоПроверятьОднотипныхОбъектов</DataPath>
-					<Title>
+				<LabelDecoration name="ОписанииеПроверкиОтчетов" id="42">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сколько элементов справочника одного типа проверять</v8:content>
+							<v8:content>&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Формирование вариантов &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;отчетов&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt; и &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;печатных форм&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, как встроенных, так и внешних, подключенных к базе.&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
-					<SpinButton>true</SpinButton>
-					<ContextMenu name="СколькоОднотипныхОбъектовПроверятьКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="СколькоОднотипныхОбъектовПроверятьРасширеннаяПодсказка" id="10"/>
-				</InputField>
+					<ContextMenu name="ОписанииеПроверкиОтчетовКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ОписанииеПроверкиОтчетовРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+				<LabelField name="НастройкиПользователя" id="48">
+					<DataPath>НастройкиПользователя</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<ContextMenu name="НастройкиПользователяКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="НастройкиПользователяРасширеннаяПодсказка" id="50"/>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаНастройкиФорм" id="25">
@@ -122,10 +155,6 @@
 			</Title>
 			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настройки форм</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Financial instruments</v8:content>
 				</v8:item>
@@ -135,6 +164,17 @@
 			<Representation>StrongSeparation</Representation>
 			<ExtendedTooltip name="ГруппаНастройкиФормРасширеннаяПодсказка" id="26"/>
 			<ChildItems>
+				<LabelDecoration name="ОписанииеНастройкиФорм" id="45">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Попытка &lt;/&gt;&lt;b&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;открытия форм&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;, как форм ссылок, так и пустых.&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписанииеНастройкиФормКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ОписанииеНастройкиФормРасширеннаяПодсказка" id="47"/>
+				</LabelDecoration>
 				<CheckBoxField name="ПроверятьТолькоОсновныеФормыОбъектов" id="13">
 					<DataPath>Объект.ПроверятьТолькоОсновныеФормыОбъектов</DataPath>
 					<TitleLocation>Right</TitleLocation>
@@ -149,22 +189,26 @@
 					<ContextMenu name="ПроверятьТолькоОсновныеФормыОбъектовКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="ПроверятьТолькоОсновныеФормыОбъектовРасширеннаяПодсказка" id="15"/>
 				</CheckBoxField>
-				<CheckBoxField name="ОткрыватьФормыМодально" id="16">
+				<CheckBoxField name="ОткрыватьФормыМодально" id="34">
 					<DataPath>Объект.ОткрыватьФормыМодально</DataPath>
 					<TitleLocation>Right</TitleLocation>
-					<ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОткрыватьФормыМодальноКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОткрыватьФормыМодальноРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<LabelDecoration name="ОписанииеОткрыватьФормыМодально" id="37">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Запрещённое модальное открытие формы на секунду.
-При этом отработают события, когда форма становится видимой (например ПриАктивизацииСтроки).
-При такой настройке нужно контролировать ход выполнения теста.</v8:content>
+							<v8:content>&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;Запрещённое модальное открытие формы на секунду.&lt;/&gt;
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;При этом отработают события, когда форма становится видимой (например &lt;/&gt;&lt;i&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;ПриАктивизацииСтроки&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;).&lt;/&gt;
+&lt;colorstyle 0:7fe8420b-1370-422f-aaf8-5608ba27031a&gt;При такой настройке нужно контролировать ход выполнения теста.&lt;/&gt;</v8:content>
 						</v8:item>
-					</ToolTip>
-					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОткрыватьФормыМодальноКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ОткрыватьФормыМодальноРасширеннаяПодсказка" id="18"/>
-				</CheckBoxField>
+					</Title>
+					<ContextMenu name="ОписанииеОткрыватьФормыМодальноКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОписанииеОткрыватьФормыМодальноРасширеннаяПодсказка" id="39"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -174,6 +218,21 @@
 				<v8:Type>cfg:DataProcessorObject.ТестерВышелПодымить</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НастройкиПользователя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
